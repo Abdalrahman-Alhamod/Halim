@@ -12,9 +12,9 @@ class SplashBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
-        AppColors.primaryColor.withAlpha(180),
+        // AppColors.primaryColor.withAlpha(180),
         AppColors.primaryColor,
       ])),
       child: Column(
