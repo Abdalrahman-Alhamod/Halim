@@ -13,10 +13,8 @@ class SplashBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: [
-        // AppColors.primaryColor.withAlpha(180),
-        AppColors.primaryColor,
-      ])),
+        color: AppColors.primaryColor,
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
