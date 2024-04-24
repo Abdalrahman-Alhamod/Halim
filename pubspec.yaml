@@ -1,5 +1,5 @@
 name: halim
-description: "A new Flutter project."
+description: "Online courses app"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -30,15 +30,89 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
 
+  # For caching online images
+  cached_network_image:
+  # For using Equatable
+  dartz:
+  # For linking the api
+  dio:
+  # For state manegment
+  flutter_bloc:
+  # For fonts and icons
+  font_awesome_flutter:
+  # Service Locator For using singleton pattern
+  get_it:
+  # For navigation
+  go_router:
+  # For using fonts
+  google_fonts:
+  # For using storage and caching
+  hive:
+  # For using storage and caching
+  hive_flutter:
+  # For opening links
+  url_launcher:
+  # For using animations
+  animations:
+  # For responsive text size
+  auto_size_text:
+  # For firebase services
+  firebase_core: 
+  # For notifactions
+  firebase_messaging: 
+  # For local notifications
+  awesome_notifications:
+  # For viewing svg images
+  flutter_svg:
+  # For printing to the console
+  logger:
+  # For using animated umages
+  lottie:
+  # For picking images
+  image_picker:
+  # For storing data
+  shared_preferences:
+  # For loading animation
+  shimmer:
+  # For loading indicator
+  flutter_spinkit:
+  # For page indicator
+  smooth_page_indicator:
+  # For form validation
+  form_field_validator:
+  # For easy form building
+  flutter_form_builder:
+  # For onbaording screen
+  introduction_screen:
+  # For splash screen
+  flutter_native_splash:
+  # For tracking progress
+  percent_indicator:
+  # For sliding ads
+  carousel_slider:
+  # For fingerprint auth
+  local_auth:
+  # For entering verifying key
+  # pinput:
+  # For rating
+  flutter_rating_bar:
+
 dev_dependencies:
+  flutter_launcher_icons: 
+  build_runner: 
+  hive_generator:
+
   flutter_test:
     sdk: flutter
+  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -46,6 +120,13 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_logo.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -58,10 +139,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
