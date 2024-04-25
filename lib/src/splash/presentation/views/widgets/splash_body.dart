@@ -12,8 +12,16 @@ class SplashBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppColors.primaryColor,
+        gradient: LinearGradient(
+          colors: [
+            AppColors.primaryColor.withOpacity(.7),
+            AppColors.primaryColor
+          ],
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+        ),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -24,7 +32,7 @@ class SplashBody extends StatelessWidget {
           Center(
             child: Image.asset(
               AppImages.logoWhite,
-              width: 250,
+              width: 150,
             ),
           ),
           const Spacer(
