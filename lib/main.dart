@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/constants/app_theme.dart';
@@ -30,12 +29,9 @@ class HalimApp extends StatefulWidget {
 }
 
 class _HalimAppState extends State<HalimApp> {
-  VoidCallback rebuildOnLocaleChange() => () => setState(() {});
 
   @override
   Widget build(BuildContext context) {
-    // To rebuild ui (change font) when changing language
-    PlatformDispatcher.instance.onLocaleChanged = rebuildOnLocaleChange();
     return MaterialApp.router(
       routerConfig: AppRoute.router,
       debugShowCheckedModeBanner: false,
