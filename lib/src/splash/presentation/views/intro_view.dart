@@ -43,29 +43,28 @@ class _IntroViewState extends State<IntroView> {
               ),
             ],
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              IntroPageIndicator(
-                controller: _controller,
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: IntroButton(
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  IntroPageIndicator(
+                    controller: _controller,
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  IntroButton(
                     controller: _controller,
                     title: _isLastPage ? 'get_started'.tr() : 'next'.tr(),
                   ),
-                ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                ],
               ),
-              const SizedBox(
-                height: 50,
-              ),
-            ],
+            ),
           )
         ],
       ),

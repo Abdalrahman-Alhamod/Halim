@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
-
-import '../../../../../core/constants/app_colors.dart';
+import 'package:halim/core/widgets/custome_elevated_button.dart';
 
 class IntroButton extends StatelessWidget {
   const IntroButton({
@@ -15,27 +13,14 @@ class IntroButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return CustomElevatedButton(
       onPressed: () {
         controller.nextPage(
           duration: const Duration(milliseconds: 500),
           curve: Curves.easeInOut,
         );
       },
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primaryColor,
-        padding: const EdgeInsets.symmetric(
-          vertical: 18,
-        ),
-      ),
-      child: Text(
-        title,
-        style: const TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-        ),
-      ),
+      title: title,
     );
   }
 }
