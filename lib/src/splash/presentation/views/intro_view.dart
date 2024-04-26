@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/assets/app_images.dart';
 
@@ -27,19 +28,18 @@ class _IntroViewState extends State<IntroView> {
                 _isLastPage = value == 2;
               });
             },
-            children: const [
+            children: [
               IntroPage(
                 image: AppImages.intro1,
-                title: 'We provide the best learning courses & greate mentors',
+                title: 'intro_1'.tr(),
               ),
               IntroPage(
                 image: AppImages.intro2,
-                title: 'Learning anytime and anywhere easily and conveniently',
+                title: 'intro_2'.tr(),
               ),
               IntroPage(
                 image: AppImages.intro3,
-                title:
-                    'Let\'s improve your skills together with Halim right now!',
+                title: 'intro_3'.tr(),
               ),
             ],
           ),
@@ -58,7 +58,7 @@ class _IntroViewState extends State<IntroView> {
                   width: double.infinity,
                   child: IntroButton(
                     controller: _controller,
-                    title: _isLastPage ? 'Get Started' : 'Next',
+                    title: _isLastPage ? 'get_started'.tr() : 'next'.tr(),
                   ),
                 ),
               ),

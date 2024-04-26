@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({
@@ -21,7 +22,7 @@ class IntroPage extends StatelessWidget {
           ),
           Image.asset(
             image,
-            width: MediaQuery.of(context).size.width * .75,
+            width: context.width * .75,
           ),
           const Spacer(
             flex: 1,
@@ -35,7 +36,7 @@ class IntroPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * .25,
+            height: context.height * .25,
           ),
         ],
       ),

@@ -1,31 +1,48 @@
+import 'dart:ui';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:halim/core/constants/app_theme.dart';
 import 'package:halim/core/utils/app_route.dart';
 
-void main() {
-  runApp(const HalimApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ar'),
+      ],
+      path: 'assets/translations',
+      // startLocale: const Locale('en'),
+      fallbackLocale: const Locale('en'),
+      child: const HalimApp(),
+    ),
+  );
 }
 
-class HalimApp extends StatelessWidget {
+class HalimApp extends StatefulWidget {
   const HalimApp({super.key});
 
   @override
+  State<HalimApp> createState() => _HalimAppState();
+}
+
+class _HalimAppState extends State<HalimApp> {
+  VoidCallback rebuildOnLocaleChange() => () => setState(() {});
+
+  @override
   Widget build(BuildContext context) {
+    // To rebuild ui (change font) when changing language
+    PlatformDispatcher.instance.onLocaleChanged = rebuildOnLocaleChange();
     return MaterialApp.router(
       routerConfig: AppRoute.router,
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('ar'), // Arabic
-        Locale('en'), // English
-      ],
-      locale: const Locale('en'),
-      theme: appTheme,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      theme: getThemeData(context),
     );
   }
 }
