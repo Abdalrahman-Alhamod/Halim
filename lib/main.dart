@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/constants/app_theme.dart';
+import 'package:halim/core/themes/dark_theme.dart';
+import 'package:halim/core/themes/light_theme.dart';
 import 'package:halim/core/utils/app_route.dart';
 
 void main() async {
@@ -14,7 +15,7 @@ void main() async {
         Locale('ar'),
       ],
       path: 'assets/translations',
-      // startLocale: const Locale('en'),
+      startLocale: const Locale('en'),
       fallbackLocale: const Locale('en'),
       child: const HalimApp(),
     ),
@@ -29,7 +30,6 @@ class HalimApp extends StatefulWidget {
 }
 
 class _HalimAppState extends State<HalimApp> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
@@ -38,7 +38,8 @@ class _HalimAppState extends State<HalimApp> {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      theme: getThemeData(context),
+      theme: getLightThemeData(context),
+      darkTheme: getDarkThemeData(context),
     );
   }
 }
