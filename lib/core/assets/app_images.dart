@@ -2,7 +2,15 @@ class AppImages {
   static const mainPath = 'assets/images';
   static const appLogo = '$mainPath/app_logo.png';
   static const logoWhite = '$mainPath/logo_white.png';
+  static const logoBlue = '$mainPath/logo_blue.png';
   static const intro1 = '$mainPath/intro_1.png';
   static const intro2 = '$mainPath/intro_2.png';
   static const intro3 = '$mainPath/intro_3.png';
+  static const start = '$mainPath/start.png';
+  static const accountDone = '$mainPath/account_done.png';
+  static const enrollDone = '$mainPath/enroll_done.png';
+  static const profileDone = '$mainPath/profile_done.png';
+  static const notFound = '$mainPath/not_found.png';
+  static const newPassword = '$mainPath/new_password.png';
+  static const forgotPassword = '$mainPath/forgot_password.png';
 }
