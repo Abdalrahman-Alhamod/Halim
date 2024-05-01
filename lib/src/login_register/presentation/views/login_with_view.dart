@@ -1,25 +1,14 @@
 import 'package:flutter/material.dart';
-
-import 'widgets/login_with_app_bar.dart';
-import 'widgets/login_with_body.dart';
+import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/auth_layout.dart';
+import 'widgets/login_with_view_widgets/login_with_body.dart';
 
 class LoginWithView extends StatelessWidget {
   const LoginWithView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.only(left: 24, right: 24, top: 24),
-          child: Stack(
-            children: [
-              LoginWithAppBar(),
-              LoginWithBody(),
-            ],
-          ),
-        ),
-      ),
+    return const AuthLayout(
+      body: LoginWithBody(),
     );
   }
 }

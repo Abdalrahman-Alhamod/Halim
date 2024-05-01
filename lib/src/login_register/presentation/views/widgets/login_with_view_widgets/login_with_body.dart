@@ -1,10 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/src/login_register/presentation/views/widgets/or_divider.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/app_route.dart';
+import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/divider_with_text.dart';
 
-import '../../../../../core/assets/app_images.dart';
-import '../../../../../core/translations/local_keys.g.dart';
-import '../../../../../core/widgets/custome_elevated_button.dart';
+import '../../../../../../core/assets/app_images.dart';
+import '../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/widgets/custome_elevated_button.dart';
 import 'login_with_button.dart';
 
 class LoginWithBody extends StatelessWidget {
@@ -52,7 +54,9 @@ class LoginWithBody extends StatelessWidget {
             ),
             label: LocaleKeys.continueWithApple.tr(),
           ),
-          const OrDivider(),
+          DividerWithText(
+            title: LocaleKeys.or.tr(),
+          ),
           CustomElevatedButton(
             onPressed: () {},
             title: LocaleKeys.signInWithPassword.tr(),
@@ -62,7 +66,14 @@ class LoginWithBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(LocaleKeys.dontHaveAnAccount.tr()),
-              TextButton(onPressed: () {}, child: Text(LocaleKeys.signUp.tr()))
+              TextButton(
+                onPressed: () {
+                  GoRouter.of(context).push(AppRoute.kRegisterView);
+                },
+                child: Text(
+                  LocaleKeys.signUp.tr(),
+                ),
+              ),
             ],
           )
         ],

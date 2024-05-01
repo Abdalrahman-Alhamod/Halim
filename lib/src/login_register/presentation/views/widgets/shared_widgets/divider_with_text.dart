@@ -1,15 +1,14 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
-import '../../../../../core/constants/app_colors.dart';
-import '../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/themes/app_colors.dart';
 
-class OrDivider extends StatelessWidget {
-  const OrDivider({
+class DividerWithText extends StatelessWidget {
+  const DividerWithText({
     super.key,
+    required this.title,
   });
-
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,7 +26,7 @@ class OrDivider extends StatelessWidget {
         const SizedBox(
           width: 15,
         ),
-        Text(LocaleKeys.or.tr()),
+        Text(title),
         const SizedBox(
           width: 15,
         ),

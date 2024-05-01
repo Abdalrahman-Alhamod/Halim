@@ -20,7 +20,7 @@ class IntroButton extends StatelessWidget {
     return CustomElevatedButton(
       onPressed: () {
         if (isLastPage) {
-          GoRouter.of(context).pushReplacement(AppRoute.kLoginWithView);
+          GoRouter.of(context).push(AppRoute.kLoginWithView);
         } else {
           pageController.nextPage(
             duration: const Duration(milliseconds: 500),
