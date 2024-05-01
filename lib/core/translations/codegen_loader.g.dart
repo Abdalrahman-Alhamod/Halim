@@ -15,34 +15,56 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> ar = {
-  "next": "التالي",
-  "getStarted": "البدء",
-  "intro1": "نحن نقدم أفضل الدورات التعليمية والموجهين العظماء",
-  "intro2": "التعلم في أي وقت وفي أي مكان بسهولة ويسر",
-  "intro3": "دعنا نحسن مهاراتك مع حليم الآن!",
-  "startMessage": "لنسمح لك بالولوج",
-  "continueWithGoogle": "سجل باستخدام Google",
-  "continueWithFacebook": "سجل باستخدام Facebook",
-  "continueWithApple": "سجل باستخدام Apple",
-  "signInWithPassword": "تسجيل الدخول بكلمة المرور",
-  "signUp": "أنشئ حسابًا",
-  "dontHaveAnAccount": "لا تملك حسابًا؟",
-  "or": "أو"
+  "Auth": {
+    "email": "البريد الإلكتروني",
+    "orContinueWith": "أو سجل باستخدام",
+    "password": "كلمة المرور",
+    "rememberMe": "تذكّرني",
+    "signInWithPassword": "تسجيل الدخول بكلمة المرور",
+    "or": "أو",
+    "signUp": "إنشاء حساب",
+    "continueWithApple": "سجل باستخدام Apple",
+    "continueWithFacebook": "سجل باستخدام Facebook",
+    "continueWithGoogle": "سجل باستخدام Google",
+    "createYourAccount": "أنشئ حسابك",
+    "dontHaveAnAccount": "لا تملك حسابًا؟",
+    "startMessage": "لنسمح لك بالولوج"
+  },
+  "Intro": {
+    "getStarted": "البدء",
+    "intro1": "نحن نقدم أفضل الدورات التعليمية والموجهين العظماء",
+    "intro2": "التعلم في أي وقت وفي أي مكان بسهولة ويسر",
+    "intro3": "دعنا نحسن مهاراتك مع حليم الآن!"
+  },
+  "Buttons": {
+    "next": "التالي"
+  }
 };
 static const Map<String,dynamic> en = {
-  "next": "Next",
-  "getStarted": "Get Started",
-  "intro1": "We provide the best learning courses & greate mentors",
-  "intro2": "Learning anytime and anywhere easily and conveniently",
-  "intro3": "Let's improve your skills together with Halim right now!",
-  "startMessage": "Let's you in",
-  "continueWithGoogle": "Continue with Google",
-  "continueWithFacebook": "Continue with Facebook",
-  "continueWithApple": "Continue with Apple",
-  "signInWithPassword": "Sign in with password",
-  "signUp": "Sign up",
-  "dontHaveAnAccount": "Don't have an account?",
-  "or": "or"
+  "Auth": {
+    "email": "Email",
+    "orContinueWith": "or continue with",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "signInWithPassword": "Sign in with password",
+    "or": "or",
+    "signUp": "Sign up",
+    "continueWithApple": "Continue with Apple",
+    "continueWithFacebook": "Continue with Facebook",
+    "continueWithGoogle": "Continue with Google",
+    "createYourAccount": "Create your Account",
+    "dontHaveAnAccount": "Don't have an account?",
+    "startMessage": "Let's you in"
+  },
+  "Intro": {
+    "getStarted": "Get Started",
+    "intro1": "We provide the best learning courses & greate mentors",
+    "intro2": "Learning anytime and anywhere easily and conveniently",
+    "intro3": "Let's improve your skills together with Halim right now!"
+  },
+  "Buttons": {
+    "next": "Next"
+  }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

@@ -28,7 +28,9 @@ class IntroButton extends StatelessWidget {
           );
         }
       },
-      title: isLastPage ? LocaleKeys.getStarted.tr() : LocaleKeys.next.tr(),
+      title: isLastPage
+          ? LocaleKeys.Intro_getStarted.tr()
+          : LocaleKeys.Buttons_next.tr(),
     );
   }
 }

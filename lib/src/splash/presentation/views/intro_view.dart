@@ -31,15 +31,15 @@ class _IntroViewState extends State<IntroView> {
             children: [
               IntroPage(
                 image: AppImages.intro1,
-                title: LocaleKeys.intro1.tr(),
+                title: LocaleKeys.Intro_intro1.tr(),
               ),
               IntroPage(
                 image: AppImages.intro2,
-                title: LocaleKeys.intro2.tr(),
+                title: LocaleKeys.Intro_intro2.tr(),
               ),
               IntroPage(
                 image: AppImages.intro3,
-                title: LocaleKeys.intro3.tr(),
+                title: LocaleKeys.Intro_intro3.tr(),
               ),
             ],
           ),

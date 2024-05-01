@@ -26,7 +26,7 @@ class LoginWithBody extends StatelessWidget {
             width: 250,
           ),
           Text(
-            LocaleKeys.startMessage.tr(),
+            LocaleKeys.Auth_startMessage.tr(),
             style: const TextStyle(
               fontSize: 36,
               fontWeight: FontWeight.bold,
@@ -37,14 +37,14 @@ class LoginWithBody extends StatelessWidget {
               AppImages.facebook,
               width: 24,
             ),
-            label: LocaleKeys.continueWithFacebook.tr(),
+            label: LocaleKeys.Auth_continueWithFacebook.tr(),
           ),
           LoginWithButton(
             icon: Image.asset(
               AppImages.google,
               width: 24,
             ),
-            label: LocaleKeys.continueWithGoogle.tr(),
+            label: LocaleKeys.Auth_continueWithGoogle.tr(),
           ),
           LoginWithButton(
             icon: Icon(
@@ -52,26 +52,26 @@ class LoginWithBody extends StatelessWidget {
               size: 32,
               color: Theme.of(context).colorScheme.inverseSurface,
             ),
-            label: LocaleKeys.continueWithApple.tr(),
+            label: LocaleKeys.Auth_continueWithApple.tr(),
           ),
           DividerWithText(
-            title: LocaleKeys.or.tr(),
+            title: LocaleKeys.Auth_or.tr(),
           ),
           CustomElevatedButton(
             onPressed: () {},
-            title: LocaleKeys.signInWithPassword.tr(),
+            title: LocaleKeys.Auth_signInWithPassword.tr(),
             width: 380,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(LocaleKeys.dontHaveAnAccount.tr()),
+              Text(LocaleKeys.Auth_dontHaveAnAccount.tr()),
               TextButton(
                 onPressed: () {
                   GoRouter.of(context).push(AppRoute.kRegisterView);
                 },
                 child: Text(
-                  LocaleKeys.signUp.tr(),
+                  LocaleKeys.Auth_signUp.tr(),
                 ),
               ),
             ],
