@@ -21,18 +21,10 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
+    preCacheAppImages();
     return const Scaffold(
       body: SplashBody(),
     );
-  }
-
-  @override
-  void didChangeDependencies() async {
-    for (var image in AppImages.allImages) {
-      await precacheImage(AssetImage(image), context);
-    }
-
-    super.didChangeDependencies();
   }
 
   void navigateToIntroView() {
@@ -42,5 +34,11 @@ class _SplashViewState extends State<SplashView> {
         GoRouter.of(context).pushReplacement(AppRoute.kIntroView);
       },
     );
+  }
+
+  Future<void> preCacheAppImages() async {
+    for (var image in AppImages.allImages) {
+      await precacheImage(AssetImage(image), context);
+    }
   }
 }
