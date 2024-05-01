@@ -1,26 +1,34 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/translations/local_keys.g.dart';
 import 'package:halim/core/widgets/custome_elevated_button.dart';
+
+import '../../../../../core/utils/app_route.dart';
 
 class IntroButton extends StatelessWidget {
   const IntroButton({
     super.key,
-    required this.controller,
-    required this.title,
+    required this.pageController,
+    required this.isLastPage,
   });
 
-  final PageController controller;
-  final String title;
-
+  final PageController pageController;
+  final bool isLastPage;
   @override
   Widget build(BuildContext context) {
     return CustomElevatedButton(
       onPressed: () {
-        controller.nextPage(
-          duration: const Duration(milliseconds: 500),
-          curve: Curves.easeInOut,
-        );
+        if (isLastPage) {
+          GoRouter.of(context).pushReplacement(AppRoute.kLoginWithView);
+        } else {
+          pageController.nextPage(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.easeInOut,
+          );
+        }
       },
-      title: title,
+      title: isLastPage ? LocaleKeys.getStarted.tr() : LocaleKeys.next.tr(),
     );
   }
 }

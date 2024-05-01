@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/assets/app_images.dart';
-
+import 'package:halim/core/translations/local_keys.g.dart';
 import 'widgets/intro_button.dart';
 import 'widgets/intro_page.dart';
 import 'widgets/intro_page_indicator.dart';
@@ -14,7 +14,7 @@ class IntroView extends StatefulWidget {
 }
 
 class _IntroViewState extends State<IntroView> {
-  final _controller = PageController();
+  final _pageController = PageController();
   bool _isLastPage = false;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class _IntroViewState extends State<IntroView> {
       body: Stack(
         children: [
           PageView(
-            controller: _controller,
+            controller: _pageController,
             onPageChanged: (value) {
               setState(() {
                 _isLastPage = value == 2;
@@ -31,15 +31,15 @@ class _IntroViewState extends State<IntroView> {
             children: [
               IntroPage(
                 image: AppImages.intro1,
-                title: 'intro_1'.tr(),
+                title: LocaleKeys.intro1.tr(),
               ),
               IntroPage(
                 image: AppImages.intro2,
-                title: 'intro_2'.tr(),
+                title: LocaleKeys.intro2.tr(),
               ),
               IntroPage(
                 image: AppImages.intro3,
-                title: 'intro_3'.tr(),
+                title: LocaleKeys.intro3.tr(),
               ),
             ],
           ),
@@ -50,14 +50,14 @@ class _IntroViewState extends State<IntroView> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   IntroPageIndicator(
-                    controller: _controller,
+                    controller: _pageController,
                   ),
                   const SizedBox(
                     height: 50,
                   ),
                   IntroButton(
-                    controller: _controller,
-                    title: _isLastPage ? 'get_started'.tr() : 'next'.tr(),
+                    pageController: _pageController,
+                    isLastPage: _isLastPage,
                   ),
                   const SizedBox(
                     height: 50,
