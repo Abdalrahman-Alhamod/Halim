@@ -1,7 +1,15 @@
 {
-    "intro_1": "We provide the best learning courses & greate mentors",
-    "intro_2": "Learning anytime and anywhere easily and conveniently",
-    "intro_3": "Let's improve your skills together with Halim right now!",
-    "next":"Next",
-    "get_started":"Get Started"
+  "next": "Next",
+  "getStarted": "Get Started",
+  "intro1": "We provide the best learning courses & greate mentors",
+  "intro2": "Learning anytime and anywhere easily and conveniently",
+  "intro3": "Let's improve your skills together with Halim right now!",
+  "startMessage": "Let's you in",
+  "continueWithGoogle": "Continue with Google",
+  "continueWithFacebook": "Continue with Facebook",
+  "continueWithApple": "Continue with Apple",
+  "signInWithPassword": "Sign in with password",
+  "signUp": "Sign up",
+  "dontHaveAnAccount": "Don't have an account?",
+  "or": "or"
 }
