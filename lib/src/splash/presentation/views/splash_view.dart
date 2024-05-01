@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/utils/app_route.dart';
 
 import 'widgets/splash_body.dart';
@@ -25,11 +26,20 @@ class _SplashViewState extends State<SplashView> {
     );
   }
 
+  @override
+  void didChangeDependencies() async {
+    for (var image in AppImages.allImages) {
+      await precacheImage(AssetImage(image), context);
+    }
+
+    super.didChangeDependencies();
+  }
+
   void navigateToIntroView() {
     Future.delayed(
-      const Duration(seconds: 5),
+      const Duration(seconds: 3),
       () {
-        GoRouter.of(context).push(AppRoute.kIntroView);
+        GoRouter.of(context).pushReplacement(AppRoute.kIntroView);
       },
     );
   }

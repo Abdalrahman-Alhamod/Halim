@@ -13,4 +13,24 @@ class AppImages {
   static const notFound = '$mainPath/not_found.png';
   static const newPassword = '$mainPath/new_password.png';
   static const forgotPassword = '$mainPath/forgot_password.png';
+  static const google = '$mainPath/google.png';
+  static const facebook = '$mainPath/facebook.png';
+
+  static const List<String> allImages = [
+    appLogo,
+    logoWhite,
+    logoBlue,
+    intro1,
+    intro2,
+    intro3,
+    start,
+    accountDone,
+    enrollDone,
+    profileDone,
+    notFound,
+    newPassword,
+    forgotPassword,
+    google,
+    facebook,
+  ];
 }
