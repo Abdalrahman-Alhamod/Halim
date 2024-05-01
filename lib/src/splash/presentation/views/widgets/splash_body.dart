@@ -16,11 +16,11 @@ class SplashBody extends StatelessWidget {
         color: AppColors.primaryColor,
         gradient: LinearGradient(
           colors: [
+            AppColors.primaryColor,
             AppColors.primaryColor.withOpacity(.7),
-            AppColors.primaryColor
           ],
-          begin: Alignment.bottomLeft,
-          end: Alignment.topRight,
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
         ),
       ),
       child: Column(
