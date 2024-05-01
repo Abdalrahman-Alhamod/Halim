@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:halim/core/widgets/custom_loading_indicator.dart';
 
 import '../../../../../core/assets/app_images.dart';
-import '../../../../../core/constants/app_colors.dart';
+import '../../../../../core/themes/app_colors.dart';
 
 class SplashBody extends StatelessWidget {
   const SplashBody({

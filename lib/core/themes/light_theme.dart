@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/assets/app_font.dart';
-import 'package:halim/core/constants/app_colors.dart';
+import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 ThemeData getLightThemeData(BuildContext context) {

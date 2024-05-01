@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/constants/app_colors.dart';
+import 'package:halim/core/themes/app_colors.dart';
 
 class CustomFlatButton extends StatelessWidget {
   const CustomFlatButton({

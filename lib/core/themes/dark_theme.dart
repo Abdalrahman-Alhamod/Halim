@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../assets/app_font.dart';
-import '../constants/app_colors.dart';
+import 'app_colors.dart';
 
 ThemeData getDarkThemeData(BuildContext context) {
   final ColorScheme colorScheme = const ColorScheme.dark().copyWith(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../../../core/constants/app_colors.dart';
+import '../../../../../core/themes/app_colors.dart';
 
 class IntroPageIndicator extends StatelessWidget {
   const IntroPageIndicator({
