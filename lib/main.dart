@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:halim/core/themes/dark_theme.dart';
 import 'package:halim/core/themes/light_theme.dart';
+import 'package:halim/core/translations/codegen_loader.g.dart';
 import 'package:halim/core/utils/app_route.dart';
 
 void main() async {
@@ -19,6 +20,7 @@ void main() async {
       path: 'assets/translations',
       // startLocale: const Locale('en'),
       fallbackLocale: const Locale('en'),
+      assetLoader: const CodegenLoader(),
       child: const HalimApp(),
     ),
   );

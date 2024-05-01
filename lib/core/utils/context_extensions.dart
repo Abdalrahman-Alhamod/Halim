@@ -6,5 +6,7 @@ extension ContextExtensions on BuildContext {
 
   double get width => MediaQuery.sizeOf(this).width;
 
+  bool get isDarkMode => Theme.of(this).brightness == Brightness.dark;
+
   bool get isEnglish => locale.languageCode == 'en';
 }

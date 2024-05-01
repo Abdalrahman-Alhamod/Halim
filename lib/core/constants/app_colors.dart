@@ -6,4 +6,5 @@ class AppColors {
   static const lightFlatButtonColor = Color(0xffEBEFFE);
   static const darkFlatButtonColor = Color(0xff35383F);
   static const disabledButtonColor = Color(0xff4360C9);
+  static const loginWithButtonDarkColor = Color(0xff1F222A);
 }
