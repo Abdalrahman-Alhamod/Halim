@@ -4,8 +4,7 @@ import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
 import 'package:halim/src/splash/presentation/views/intro_view.dart';
-
-import '../../src/splash/presentation/views/splash_view.dart';
+import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
 class AppRoute {
   static const kIntroView = '/intro';
@@ -17,8 +16,8 @@ class AppRoute {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
+          // return const SplashView();
           return const SplashView();
-          // return const RegisterView();
         },
       ),
       GoRoute(

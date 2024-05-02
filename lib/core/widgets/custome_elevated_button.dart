@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/constants/app_constrains.dart';
 
 import '../themes/app_colors.dart';
 
@@ -25,15 +26,18 @@ class CustomElevatedButton extends StatelessWidget {
         foregroundColor: Colors.black,
         disabledBackgroundColor: AppColors.disabledButtonColor,
         shadowColor: AppColors.primaryColor,
-        maximumSize: const Size(550, 100),
+        maximumSize: const Size(
+          AppConstrains.maxWidth,
+          AppConstrains.maxHeight,
+        ),
         fixedSize: Size(width, height),
-        elevation: 15,
+        elevation: 10,
       ),
       child: Text(
         title,
         style: const TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.bold,
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
           color: Colors.white,
         ),
       ),

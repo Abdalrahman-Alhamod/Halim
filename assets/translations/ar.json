@@ -1,7 +1,7 @@
 {
   "Auth": {
     "email": "البريد الإلكتروني",
-    "orContinueWith": "أو سجل باستخدام",
+    "orContinueWith": "أو سجّل باستخدام",
     "password": "كلمة المرور",
     "rememberMe": "تذكّرني",
     "signInWithPassword": "تسجيل الدخول بكلمة المرور",
@@ -10,9 +10,17 @@
     "continueWithApple": "سجل باستخدام Apple",
     "continueWithFacebook": "سجل باستخدام Facebook",
     "continueWithGoogle": "سجل باستخدام Google",
-    "createYourAccount": "أنشئ حسابك",
+    "createYourAccount": "قم بإنشاء حسابك",
     "dontHaveAnAccount": "لا تملك حسابًا؟",
-    "startMessage": "لنسمح لك بالولوج"
+    "startMessage": "لنسمح لك بالولوج",
+    "signIn": "تسجيل الدخول",
+    "alreadyHaveAnAccount": "هل تملك حساباً بالفعل؟",
+    "forgotThePassword": "هل نسيت كلمة المرور؟",
+    "thisFieldIsRequired": "هذا الحقل مطلوب",
+    "enterValidEmail": "الرجاء إدخال بريد إلكتروني صالح",
+    "passWordMustBe8Digit": "يجب أن تكون كلمة المرور مكوّنة من ما لا يقل عن 8 أحرف",
+    "passwordShouldContainSpecialCharacter": "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل",
+    "loginToYourAccount": "سجِّل الدخول إلى حسابك"
   },
   "Intro": {
     "getStarted": "البدء",

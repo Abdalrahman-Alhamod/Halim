@@ -2,7 +2,7 @@
 
 // ignore_for_file: constant_identifier_names
 
-abstract class LocaleKeys {
+abstract class  LocaleKeys {
   static const Auth_email = 'Auth.email';
   static const Auth_orContinueWith = 'Auth.orContinueWith';
   static const Auth_password = 'Auth.password';
@@ -16,6 +16,14 @@ abstract class LocaleKeys {
   static const Auth_createYourAccount = 'Auth.createYourAccount';
   static const Auth_dontHaveAnAccount = 'Auth.dontHaveAnAccount';
   static const Auth_startMessage = 'Auth.startMessage';
+  static const Auth_signIn = 'Auth.signIn';
+  static const Auth_alreadyHaveAnAccount = 'Auth.alreadyHaveAnAccount';
+  static const Auth_forgotThePassword = 'Auth.forgotThePassword';
+  static const Auth_thisFieldIsRequired = 'Auth.thisFieldIsRequired';
+  static const Auth_enterValidEmail = 'Auth.enterValidEmail';
+  static const Auth_passWordMustBe8Digit = 'Auth.passWordMustBe8Digit';
+  static const Auth_passwordShouldContainSpecialCharacter = 'Auth.passwordShouldContainSpecialCharacter';
+  static const Auth_loginToYourAccount = 'Auth.loginToYourAccount';
   static const Auth = 'Auth';
   static const Intro_getStarted = 'Intro.getStarted';
   static const Intro_intro1 = 'Intro.intro1';
@@ -24,4 +32,5 @@ abstract class LocaleKeys {
   static const Intro = 'Intro';
   static const Buttons_next = 'Buttons.next';
   static const Buttons = 'Buttons';
+
 }

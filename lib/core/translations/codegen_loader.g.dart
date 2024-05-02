@@ -17,7 +17,7 @@ class CodegenLoader extends AssetLoader{
   static const Map<String,dynamic> ar = {
   "Auth": {
     "email": "البريد الإلكتروني",
-    "orContinueWith": "أو سجل باستخدام",
+    "orContinueWith": "أو سجّل باستخدام",
     "password": "كلمة المرور",
     "rememberMe": "تذكّرني",
     "signInWithPassword": "تسجيل الدخول بكلمة المرور",
@@ -26,9 +26,17 @@ class CodegenLoader extends AssetLoader{
     "continueWithApple": "سجل باستخدام Apple",
     "continueWithFacebook": "سجل باستخدام Facebook",
     "continueWithGoogle": "سجل باستخدام Google",
-    "createYourAccount": "أنشئ حسابك",
+    "createYourAccount": "قم بإنشاء حسابك",
     "dontHaveAnAccount": "لا تملك حسابًا؟",
-    "startMessage": "لنسمح لك بالولوج"
+    "startMessage": "لنسمح لك بالولوج",
+    "signIn": "تسجيل الدخول",
+    "alreadyHaveAnAccount": "هل تملك حساباً بالفعل؟",
+    "forgotThePassword": "هل نسيت كلمة المرور؟",
+    "thisFieldIsRequired": "هذا الحقل مطلوب",
+    "enterValidEmail": "الرجاء إدخال بريد إلكتروني صالح",
+    "passWordMustBe8Digit": "يجب أن تكون كلمة المرور مكوّنة من ما لا يقل عن 8 أحرف",
+    "passwordShouldContainSpecialCharacter": "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل",
+    "loginToYourAccount": "سجِّل الدخول إلى حسابك"
   },
   "Intro": {
     "getStarted": "البدء",
@@ -54,7 +62,15 @@ static const Map<String,dynamic> en = {
     "continueWithGoogle": "Continue with Google",
     "createYourAccount": "Create your Account",
     "dontHaveAnAccount": "Don't have an account?",
-    "startMessage": "Let's you in"
+    "startMessage": "Let's you in",
+    "signIn": "Sign in",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "forgotThePassword": "Forgot the password?",
+    "thisFieldIsRequired": "This field is required",
+    "enterValidEmail": "Please enter a valid email",
+    "passWordMustBe8Digit": "Password must be at least 8 digits long",
+    "passwordShouldContainSpecialCharacter": "Passwords must have at least one special character",
+    "loginToYourAccount": "Login to your Account"
   },
   "Intro": {
     "getStarted": "Get Started",

@@ -26,7 +26,16 @@ class DividerWithText extends StatelessWidget {
         const SizedBox(
           width: 15,
         ),
-        Text(title),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: context.isDarkMode
+                ? Colors.grey.shade300
+                : Colors.grey.shade700,
+          ),
+        ),
         const SizedBox(
           width: 15,
         ),

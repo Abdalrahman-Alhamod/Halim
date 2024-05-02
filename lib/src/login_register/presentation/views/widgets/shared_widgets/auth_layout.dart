@@ -14,7 +14,10 @@ class AuthLayout extends StatelessWidget {
           child: Stack(
             children: [
               const AuthAppBar(),
-              body,
+              Padding(
+                padding: const EdgeInsets.only(top: 50.0),
+                child: body,
+              ),
             ],
           ),
         ),

@@ -29,7 +29,7 @@ class _SplashViewState extends State<SplashView> {
 
   void navigateToIntroView() {
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 5),
       () {
         GoRouter.of(context).pushReplacement(AppRoute.kIntroView);
       },

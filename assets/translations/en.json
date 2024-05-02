@@ -12,7 +12,15 @@
     "continueWithGoogle": "Continue with Google",
     "createYourAccount": "Create your Account",
     "dontHaveAnAccount": "Don't have an account?",
-    "startMessage": "Let's you in"
+    "startMessage": "Let's you in",
+    "signIn": "Sign in",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "forgotThePassword": "Forgot the password?",
+    "thisFieldIsRequired": "This field is required",
+    "enterValidEmail": "Please enter a valid email",
+    "passWordMustBe8Digit": "Password must be at least 8 digits long",
+    "passwordShouldContainSpecialCharacter": "Passwords must have at least one special character",
+    "loginToYourAccount": "Login to your Account"
   },
   "Intro": {
     "getStarted": "Get Started",
