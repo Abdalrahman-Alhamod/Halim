@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/translations/local_keys.g.dart';
@@ -12,11 +13,13 @@ class CourseTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return AutoSizeText(
       LocaleKeys.CourseDetails_Test_courseTitle.tr(),
       style: context.isEnglish
-          ? AppTextStyles.largeTitle
+          ? AppTextStyles.largeTitle.copyWith(fontSize: 28)
           : AppTextStyles.largeTitle.copyWith(fontSize: 20),
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
     );
   }
 }

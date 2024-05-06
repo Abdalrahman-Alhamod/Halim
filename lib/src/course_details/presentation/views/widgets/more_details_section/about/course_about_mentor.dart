@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,39 +17,49 @@ class CourseAboutMentor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const CircleAvatar(
-          backgroundImage: AssetImage(
-            AppImages.testMentor,
+        Expanded(
+          child: Row(
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage(
+                  AppImages.testMentor,
+                ),
+                radius: 24,
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              Flexible(
+                flex: 1,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    AutoSizeText(
+                      LocaleKeys.CourseDetails_Test_courseMentorName.tr(),
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    AutoSizeText(
+                      LocaleKeys.CourseDetails_Test_courseMentorTitle.tr(),
+                      style: TextStyle(
+                        color: context.isDarkMode
+                            ? Colors.grey.shade400
+                            : Colors.grey.shade600,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-          radius: 24,
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              LocaleKeys.CourseDetails_Test_courseMentorName.tr(),
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              LocaleKeys.CourseDetails_Test_courseMentorTitle.tr(),
-              style: TextStyle(
-                color: context.isDarkMode
-                    ? Colors.grey.shade400
-                    : Colors.grey.shade600,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        ),
-        const Spacer(
-          flex: 1,
         ),
         IconButton(
           onPressed: () {},

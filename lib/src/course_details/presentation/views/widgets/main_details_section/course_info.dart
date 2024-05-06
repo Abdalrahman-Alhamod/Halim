@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -11,56 +12,96 @@ class CourseInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var autoSizeGroup = AutoSizeGroup();
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Row(
-          children: [
-            const Icon(
-              Icons.groups,
-              color: AppColors.primaryColor,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Text(
-              '9,839 ${LocaleKeys.CourseDetails_students.tr()}',
-              style: const TextStyle(fontSize: 18),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            const Icon(
-              Icons.watch_later,
-              color: AppColors.primaryColor,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Text(
-              '2,5 ${LocaleKeys.CourseDetails_hours.tr()}',
-              style: const TextStyle(fontSize: 18),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Transform.flip(
-              flipY: true,
-              child: const Icon(
-                Icons.article,
-                color: AppColors.primaryColor,
+        Flexible(
+          flex: 3,
+          child: Row(
+            children: [
+              const Flexible(
+                flex: 1,
+                child: Icon(
+                  Icons.groups,
+                  color: AppColors.primaryColor,
+                ),
               ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Text(
-              LocaleKeys.CourseDetails_certificate.tr(),
-              style: const TextStyle(fontSize: 18),
-            ),
-          ],
+              const SizedBox(
+                width: 10,
+              ),
+              Flexible(
+                flex: 5,
+                child: AutoSizeText(
+                  '9,839 ${LocaleKeys.CourseDetails_students.tr()}',
+                  style: const TextStyle(fontSize: 18),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  group: autoSizeGroup,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Flexible(
+          flex: 2,
+          child: Row(
+            children: [
+              const Flexible(
+                flex: 1,
+                child: Icon(
+                  Icons.watch_later,
+                  color: AppColors.primaryColor,
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Flexible(
+                flex: 5,
+                child: AutoSizeText(
+                  '2,5 ${LocaleKeys.CourseDetails_hours.tr()}',
+                  style: const TextStyle(fontSize: 18),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  group: autoSizeGroup,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(
+          width: 20,
+        ),
+        Flexible(
+          flex: 2,
+          child: Row(
+            children: [
+              Flexible(
+                flex: 1,
+                child: Transform.flip(
+                  flipY: true,
+                  child: const Icon(
+                    Icons.article,
+                    color: AppColors.primaryColor,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Flexible(
+                flex: 5,
+                child: AutoSizeText(
+                  LocaleKeys.CourseDetails_certificate.tr(),
+                  style: const TextStyle(fontSize: 18),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  group: autoSizeGroup,
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );

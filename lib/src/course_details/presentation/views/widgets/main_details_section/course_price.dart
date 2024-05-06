@@ -32,6 +32,7 @@ class CoursePrice extends StatelessWidget {
                 : Colors.grey.shade500,
             fontWeight: FontWeight.bold,
             decoration: TextDecoration.lineThrough,
+            decorationThickness: context.isEnglish ? 2 : 10,
           ),
         )
       ],

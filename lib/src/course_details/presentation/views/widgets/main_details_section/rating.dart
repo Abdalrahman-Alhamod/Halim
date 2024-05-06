@@ -1,5 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:halim/core/translations/local_keys.g.dart';
 
@@ -12,7 +15,9 @@ class Rating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var autoSizeGroup = AutoSizeGroup();
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SvgPicture.asset(
           AppSVGs.stars,
@@ -21,16 +26,26 @@ class Rating extends StatelessWidget {
         const SizedBox(
           width: 10,
         ),
-        const Text(
-          '4.8',
-          style: TextStyle(fontSize: 18),
+        Flexible(
+          flex: 1,
+          child: AutoSizeText(
+            '4.8',
+            style: const TextStyle(fontSize: 18),
+            maxLines: 1,
+            group: autoSizeGroup,
+          ),
         ),
         const SizedBox(
           width: 5,
         ),
-        Text(
-          '(4,479 ${LocaleKeys.CourseDetails_reviews.tr()})',
-          style: const TextStyle(fontSize: 18),
+        Flexible(
+          flex: 4,
+          child: AutoSizeText(
+            '(4,479 ${LocaleKeys.CourseDetails_reviews.tr()})',
+            style: const TextStyle(fontSize: 18),
+            maxLines: 1,
+            group: autoSizeGroup,
+          ),
         ),
       ],
     );

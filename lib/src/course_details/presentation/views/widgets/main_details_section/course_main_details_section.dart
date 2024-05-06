@@ -1,5 +1,6 @@
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'bookmark_button.dart';
 import 'course_category_box.dart';
@@ -18,10 +19,11 @@ class CourseMainDetailsSection extends StatelessWidget {
     return const Column(
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CourseTitle(),
-            Spacer(
-              flex: 1,
+            Flexible(
+              flex: 20,
+              child: CourseTitle(),
             ),
             BookmarkButton(),
           ],
@@ -31,11 +33,17 @@ class CourseMainDetailsSection extends StatelessWidget {
         ),
         Row(
           children: [
-            CourseCategoryBox(),
+            Flexible(
+              flex: 1,
+              child: CourseCategoryBox(),
+            ),
             SizedBox(
               width: 20,
             ),
-            Rating(),
+            Flexible(
+              flex: 1,
+              child: Rating(),
+            ),
           ],
         ),
         SizedBox(
