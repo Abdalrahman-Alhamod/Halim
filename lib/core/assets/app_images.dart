@@ -16,6 +16,10 @@ class AppImages {
   static const google = '$mainPath/google.png';
   static const facebook = '$mainPath/facebook.png';
 
+  static const testPath = 'assets/images/test';
+  static const testCourseCover = '$testPath/course_cover.png';
+  static const testMentor = '$testPath/mentor.png';
+
   static const List<String> allImages = [
     appLogo,
     logoWhite,
@@ -32,5 +36,9 @@ class AppImages {
     forgotPassword,
     google,
     facebook,
+
+    // Test
+    testCourseCover,
+    testMentor
   ];
 }

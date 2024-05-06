@@ -1,5 +1,8 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
@@ -8,16 +11,17 @@ import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
 class AppRoute {
   static const kIntroView = '/intro';
-  static const kLoginWithView = '/loginWith';
+  static const kLoginWithView = '/login With';
   static const kLoginView = '/login';
   static const kRegisterView = '/register';
+  static const kCourseDetailsView = '/course details';
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           // return const SplashView();
-          return const SplashView();
+          return const CourseDetailsView();
         },
       ),
       GoRoute(
@@ -42,6 +46,12 @@ class AppRoute {
         path: kRegisterView,
         builder: (BuildContext context, GoRouterState state) {
           return const RegisterView();
+        },
+      ),
+      GoRoute(
+        path: kCourseDetailsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const CourseDetailsView();
         },
       ),
     ],

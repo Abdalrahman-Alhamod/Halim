@@ -45,7 +45,33 @@ class CodegenLoader extends AssetLoader{
     "intro3": "دعنا نحسن مهاراتك مع حليم الآن!"
   },
   "Buttons": {
-    "next": "التالي"
+    "next": "التالي",
+    "readMore": "اقرأ المزيد",
+    "showLess": "أظهر أقل"
+  },
+  "CourseDetails": {
+    "reviews": "مراجعة",
+    "students": "طالب",
+    "hours": "ساعة",
+    "certificate": "شهادة",
+    "Sections": {
+      "about": "حول",
+      "lessons": "الدروس",
+      "reviews": "المراجعات",
+      "community": "المجتمع"
+    },
+    "About": {
+      "mentor": "المعلّم",
+      "aboutCourse": " نبذة عن الدورة",
+      "tools": "الأدوات"
+    },
+    "Test": {
+      "courseTitle": "مقدمة في تصميم واجهة المستخدم",
+      "courseMentorName": "يوسف عبد الرحمن",
+      "courseMentorTitle": "خبير تصميم واجهة مستخدم في غوغل",
+      "courseCategory": "تصميم واجهة مستخدم",
+      "courseAbout": "انطلق في رحلة استكشاف غامرة في مجال تصميم واجهة المستخدم وتجربة المستخدم من خلال دورتنا الشاملة. اغمر في عالم نظرية التصميم الدقيق، وفهم علم النفس وراء تفاعلات المستخدمين وعمليات اتخاذ القرار. تعلم كيفية إجراء أبحاث شاملة حول المستخدم، وتحليل البيانات بفعالية، وترجمة النتائج إلى حلول تصميم مقنعة. قم بتجربة مجموعة واسعة من الأدوات والمنهجيات التصميمية، مما يدعم تطوير مهارتك وتوسيع آفاق إبداعك. تعاون مع المحترفين في الصناعة والأقران، مكتسبًا تغذية راجعة وأفكارًا لا تقدر بثمن على طول الطريق. بحلول نهاية الدورة، ستخرج كمصمم ماهر مجهز بالمعرفة والمهارات اللازمة لإنشاء تجارب رقمية مبتكرة ومؤثرة تتفاعل مع المستخدمين على مستوى عميق."
+    }
   }
 };
 static const Map<String,dynamic> en = {
@@ -79,7 +105,33 @@ static const Map<String,dynamic> en = {
     "intro3": "Let's improve your skills together with Halim right now!"
   },
   "Buttons": {
-    "next": "Next"
+    "next": "Next",
+    "readMore": "Read more",
+    "showLess": "Show less"
+  },
+  "CourseDetails": {
+    "reviews": "reviews",
+    "students": "Students",
+    "hours": "Hours",
+    "certificate": "Certificate",
+    "Sections": {
+      "about": "About",
+      "lessons": "Lessons",
+      "reviews": "Reviews",
+      "community": "Community"
+    },
+    "About": {
+      "mentor": "Mentor",
+      "aboutCourse": "About Course",
+      "tools": "Tools"
+    },
+    "Test": {
+      "courseTitle": "Intro to UI/UX Desgin",
+      "courseMentorName": "Johanathan Wiliams",
+      "courseMentorTitle": "Senior UI/UX Designer at Google",
+      "courseCategory": "UI/UX Design",
+      "courseAbout": "Embark on an immersive exploration of the dynamic field of user interface and user experience design through our comprehensive course. Delve deep into the intricate world of design theory, understanding the psychology behind user interactions and decision-making processes. Learn how to conduct comprehensive user research, analyze data effectively, and translate insights into compelling design solutions. Experiment with a wide range of design tools and methodologies, honing your craft and expanding your creative horizons. Collaborate with industry professionals and peers, gaining invaluable feedback and insights along the way. By the end of the course, you'll emerge as a proficient designer equipped with the knowledge and skills to create innovative and impactful digital experiences that resonate with users on a profound level"
+    }
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
