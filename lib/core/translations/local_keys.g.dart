@@ -33,6 +33,7 @@ abstract class  LocaleKeys {
   static const Buttons_next = 'Buttons.next';
   static const Buttons_readMore = 'Buttons.readMore';
   static const Buttons_showLess = 'Buttons.showLess';
+  static const Buttons_seeAll = 'Buttons.seeAll';
   static const Buttons = 'Buttons';
   static const CourseDetails_reviews = 'CourseDetails.reviews';
   static const CourseDetails_students = 'CourseDetails.students';
@@ -52,7 +53,25 @@ abstract class  LocaleKeys {
   static const CourseDetails_Test_courseMentorTitle = 'CourseDetails.Test.courseMentorTitle';
   static const CourseDetails_Test_courseCategory = 'CourseDetails.Test.courseCategory';
   static const CourseDetails_Test_courseAbout = 'CourseDetails.Test.courseAbout';
+  static const CourseDetails_Test_Lessons_title1 = 'CourseDetails.Test.Lessons.title1';
+  static const CourseDetails_Test_Lessons_title2 = 'CourseDetails.Test.Lessons.title2';
+  static const CourseDetails_Test_Lessons_title3 = 'CourseDetails.Test.Lessons.title3';
+  static const CourseDetails_Test_Lessons_title4 = 'CourseDetails.Test.Lessons.title4';
+  static const CourseDetails_Test_Lessons_title5 = 'CourseDetails.Test.Lessons.title5';
+  static const CourseDetails_Test_Lessons_title6 = 'CourseDetails.Test.Lessons.title6';
+  static const CourseDetails_Test_Lessons_title7 = 'CourseDetails.Test.Lessons.title7';
+  static const CourseDetails_Test_Lessons_title8 = 'CourseDetails.Test.Lessons.title8';
+  static const CourseDetails_Test_Lessons_title9 = 'CourseDetails.Test.Lessons.title9';
+  static const CourseDetails_Test_Lessons_title10 = 'CourseDetails.Test.Lessons.title10';
+  static const CourseDetails_Test_Lessons_section1 = 'CourseDetails.Test.Lessons.section1';
+  static const CourseDetails_Test_Lessons_section2 = 'CourseDetails.Test.Lessons.section2';
+  static const CourseDetails_Test_Lessons_section3 = 'CourseDetails.Test.Lessons.section3';
+  static const CourseDetails_Test_Lessons = 'CourseDetails.Test.Lessons';
   static const CourseDetails_Test = 'CourseDetails.Test';
+  static const CourseDetails_enrollCourse = 'CourseDetails.enrollCourse';
+  static const CourseDetails_Lessons_lesson = 'CourseDetails.Lessons.lesson';
+  static const CourseDetails_Lessons_min = 'CourseDetails.Lessons.min';
+  static const CourseDetails_Lessons = 'CourseDetails.Lessons';
   static const CourseDetails = 'CourseDetails';
 
 }

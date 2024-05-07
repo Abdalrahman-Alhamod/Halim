@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
+import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
@@ -11,10 +12,11 @@ import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
 class AppRoute {
   static const kIntroView = '/intro';
-  static const kLoginWithView = '/login With';
+  static const kLoginWithView = '/loginWith';
   static const kLoginView = '/login';
   static const kRegisterView = '/register';
-  static const kCourseDetailsView = '/course details';
+  static const kCourseDetailsView = '/courseDetails';
+  static const kCourseLessonsView = '/courseLessons';
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
@@ -52,6 +54,12 @@ class AppRoute {
         path: kCourseDetailsView,
         builder: (BuildContext context, GoRouterState state) {
           return const CourseDetailsView();
+        },
+      ),
+      GoRoute(
+        path: kCourseLessonsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const CourseLessonsView();
         },
       ),
     ],

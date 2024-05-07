@@ -5,5 +5,6 @@ class AppSVGs {
   static const bookmarkOutlined = '$mainPath/bookmark_outlined.svg';
   static const stars = '$mainPath/stars.svg';
   static const chat = '$mainPath/chat.svg';
-   static const figma = '$mainPath/figma.svg';
+  static const figma = '$mainPath/figma.svg';
+  static const lock = '$mainPath/lock.svg';
 }

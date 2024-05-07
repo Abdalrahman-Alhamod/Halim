@@ -1,5 +1,6 @@
-
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/translations/local_keys.g.dart';
 
 import '../../../../../core/widgets/custome_elevated_button.dart';
 
@@ -31,7 +32,7 @@ class CourseEnrollButtomSheet extends StatelessWidget {
         ),
         child: CustomElevatedButton(
           onPressed: () {},
-          title: 'Enroll Course - \$40',
+          title: '${LocaleKeys.CourseDetails_enrollCourse.tr()} - \$40',
         ),
       ),
     );

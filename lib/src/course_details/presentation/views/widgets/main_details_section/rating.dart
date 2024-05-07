@@ -17,7 +17,7 @@ class Rating extends StatelessWidget {
   Widget build(BuildContext context) {
     var autoSizeGroup = AutoSizeGroup();
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SvgPicture.asset(
           AppSVGs.stars,

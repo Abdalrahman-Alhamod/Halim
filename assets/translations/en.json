@@ -31,7 +31,8 @@
   "Buttons": {
     "next": "Next",
     "readMore": "Read more",
-    "showLess": "Show less"
+    "showLess": "Show less",
+    "seeAll": "See All"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -54,7 +55,27 @@
       "courseMentorName": "Johanathan Wiliams",
       "courseMentorTitle": "Senior UI/UX Designer at Google",
       "courseCategory": "UI/UX Design",
-      "courseAbout": "Embark on an immersive exploration of the dynamic field of user interface and user experience design through our comprehensive course. Delve deep into the intricate world of design theory, understanding the psychology behind user interactions and decision-making processes. Learn how to conduct comprehensive user research, analyze data effectively, and translate insights into compelling design solutions. Experiment with a wide range of design tools and methodologies, honing your craft and expanding your creative horizons. Collaborate with industry professionals and peers, gaining invaluable feedback and insights along the way. By the end of the course, you'll emerge as a proficient designer equipped with the knowledge and skills to create innovative and impactful digital experiences that resonate with users on a profound level"
+      "courseAbout": "Embark on an immersive exploration of the dynamic field of user interface and user experience design through our comprehensive course. Delve deep into the intricate world of design theory, understanding the psychology behind user interactions and decision-making processes. Learn how to conduct comprehensive user research, analyze data effectively, and translate insights into compelling design solutions. Experiment with a wide range of design tools and methodologies, honing your craft and expanding your creative horizons. Collaborate with industry professionals and peers, gaining invaluable feedback and insights along the way. By the end of the course, you'll emerge as a proficient designer equipped with the knowledge and skills to create innovative and impactful digital experiences that resonate with users on a profound level",
+      "Lessons": {
+        "title1": "Why Using Figma",
+        "title2": "Set up Your Figma Account",
+        "title3": "Take a Look Figma Interface",
+        "title4": "Working with Frame & Layer",
+        "title5": "Working with Text & Grids",
+        "title6": "Using Figma Plugins",
+        "title7": "Let's Design a Sign-Up Form",
+        "title8": "Let's Create a Prototype",
+        "title9": "Sharing Work with Team",
+        "title10": "Exporting Assets",
+        "section1": "Section 1 - Introduction",
+        "section2": "Section 2 - Figma Basic",
+        "section3": "Section 3 - Let's Practice"
+      }
+    },
+    "enrollCourse": "Enroll Course",
+    "Lessons": {
+      "lesson": "Lesson",
+      "min": "min"
     }
   }
 }

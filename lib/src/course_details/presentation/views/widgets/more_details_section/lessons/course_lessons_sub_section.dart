@@ -1,0 +1,48 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:halim/core/translations/local_keys.g.dart';
+
+import '../../../../../../../core/themes/app_colors.dart';
+
+class CourseLessonsSubSection extends StatelessWidget {
+  const CourseLessonsSubSection({
+    super.key,
+    required this.title,
+    required this.duration,
+    required this.widgets,
+  });
+  final String title;
+  final int duration;
+  final List<Widget> widgets;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              title,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            Text(
+              '$duration ${LocaleKeys.CourseDetails_Lessons_min.tr()}',
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w800,
+                color: AppColors.primaryColor,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        ...widgets,
+      ],
+    );
+  }
+}

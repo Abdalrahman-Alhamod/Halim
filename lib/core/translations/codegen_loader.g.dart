@@ -47,7 +47,8 @@ class CodegenLoader extends AssetLoader{
   "Buttons": {
     "next": "التالي",
     "readMore": "اقرأ المزيد",
-    "showLess": "أظهر أقل"
+    "showLess": "أظهر أقل",
+    "seeAll": "عرض الكل"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -70,7 +71,27 @@ class CodegenLoader extends AssetLoader{
       "courseMentorName": "يوسف عبد الرحمن",
       "courseMentorTitle": "خبير تصميم واجهة مستخدم في غوغل",
       "courseCategory": "تصميم واجهة مستخدم",
-      "courseAbout": "انطلق في رحلة استكشاف غامرة في مجال تصميم واجهة المستخدم وتجربة المستخدم من خلال دورتنا الشاملة. اغمر في عالم نظرية التصميم الدقيق، وفهم علم النفس وراء تفاعلات المستخدمين وعمليات اتخاذ القرار. تعلم كيفية إجراء أبحاث شاملة حول المستخدم، وتحليل البيانات بفعالية، وترجمة النتائج إلى حلول تصميم مقنعة. قم بتجربة مجموعة واسعة من الأدوات والمنهجيات التصميمية، مما يدعم تطوير مهارتك وتوسيع آفاق إبداعك. تعاون مع المحترفين في الصناعة والأقران، مكتسبًا تغذية راجعة وأفكارًا لا تقدر بثمن على طول الطريق. بحلول نهاية الدورة، ستخرج كمصمم ماهر مجهز بالمعرفة والمهارات اللازمة لإنشاء تجارب رقمية مبتكرة ومؤثرة تتفاعل مع المستخدمين على مستوى عميق."
+      "courseAbout": "انطلق في رحلة استكشاف غامرة في مجال تصميم واجهة المستخدم وتجربة المستخدم من خلال دورتنا الشاملة. اغمر في عالم نظرية التصميم الدقيق، وفهم علم النفس وراء تفاعلات المستخدمين وعمليات اتخاذ القرار. تعلم كيفية إجراء أبحاث شاملة حول المستخدم، وتحليل البيانات بفعالية، وترجمة النتائج إلى حلول تصميم مقنعة. قم بتجربة مجموعة واسعة من الأدوات والمنهجيات التصميمية، مما يدعم تطوير مهارتك وتوسيع آفاق إبداعك. تعاون مع المحترفين في الصناعة والأقران، مكتسبًا تغذية راجعة وأفكارًا لا تقدر بثمن على طول الطريق. بحلول نهاية الدورة، ستخرج كمصمم ماهر مجهز بالمعرفة والمهارات اللازمة لإنشاء تجارب رقمية مبتكرة ومؤثرة تتفاعل مع المستخدمين على مستوى عميق.",
+      "Lessons": {
+        "title1": "لماذا استخدام فيغما",
+        "title2": "أنشئ حسابك على فيغما",
+        "title3": "إلقاء نظرة على واجهة فيغما",
+        "title4": "العمل مع الإطار والطبقة",
+        "title5": "العمل مع النصوص والشبكات",
+        "title6": "استخدام ملحقات فيغما",
+        "title7": "لنقم بتصميم نموذج تسجيل الدخول",
+        "title8": "لنقم بإنشاء نموذج تجريبي",
+        "title9": "مشاركة العمل مع الفريق",
+        "title10": "تصدير العناصر",
+        "section1": "القسم الأول - المقدمة",
+        "section2": "القسم الثاني - أساسيات فيغما",
+        "section3": "القسم الثالث - هيّا نمارس"
+      }
+    },
+    "enrollCourse": "سجِّل في الدورة",
+    "Lessons": {
+      "lesson": "درس",
+      "min": "دقيقة"
     }
   }
 };
@@ -107,7 +128,8 @@ static const Map<String,dynamic> en = {
   "Buttons": {
     "next": "Next",
     "readMore": "Read more",
-    "showLess": "Show less"
+    "showLess": "Show less",
+    "seeAll": "See All"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -130,7 +152,27 @@ static const Map<String,dynamic> en = {
       "courseMentorName": "Johanathan Wiliams",
       "courseMentorTitle": "Senior UI/UX Designer at Google",
       "courseCategory": "UI/UX Design",
-      "courseAbout": "Embark on an immersive exploration of the dynamic field of user interface and user experience design through our comprehensive course. Delve deep into the intricate world of design theory, understanding the psychology behind user interactions and decision-making processes. Learn how to conduct comprehensive user research, analyze data effectively, and translate insights into compelling design solutions. Experiment with a wide range of design tools and methodologies, honing your craft and expanding your creative horizons. Collaborate with industry professionals and peers, gaining invaluable feedback and insights along the way. By the end of the course, you'll emerge as a proficient designer equipped with the knowledge and skills to create innovative and impactful digital experiences that resonate with users on a profound level"
+      "courseAbout": "Embark on an immersive exploration of the dynamic field of user interface and user experience design through our comprehensive course. Delve deep into the intricate world of design theory, understanding the psychology behind user interactions and decision-making processes. Learn how to conduct comprehensive user research, analyze data effectively, and translate insights into compelling design solutions. Experiment with a wide range of design tools and methodologies, honing your craft and expanding your creative horizons. Collaborate with industry professionals and peers, gaining invaluable feedback and insights along the way. By the end of the course, you'll emerge as a proficient designer equipped with the knowledge and skills to create innovative and impactful digital experiences that resonate with users on a profound level",
+      "Lessons": {
+        "title1": "Why Using Figma",
+        "title2": "Set up Your Figma Account",
+        "title3": "Take a Look Figma Interface",
+        "title4": "Working with Frame & Layer",
+        "title5": "Working with Text & Grids",
+        "title6": "Using Figma Plugins",
+        "title7": "Let's Design a Sign-Up Form",
+        "title8": "Let's Create a Prototype",
+        "title9": "Sharing Work with Team",
+        "title10": "Exporting Assets",
+        "section1": "Section 1 - Introduction",
+        "section2": "Section 2 - Figma Basic",
+        "section3": "Section 3 - Let's Practice"
+      }
+    },
+    "enrollCourse": "Enroll Course",
+    "Lessons": {
+      "lesson": "Lesson",
+      "min": "min"
     }
   }
 };

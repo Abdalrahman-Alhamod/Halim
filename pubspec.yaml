@@ -103,6 +103,8 @@ dependencies:
   # For collapsing text
   readmore:
 
+  expandable_page_view:
+
 dev_dependencies:
   flutter_launcher_icons: 
   build_runner: 
