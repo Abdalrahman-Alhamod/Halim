@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_super_html_viewer/flutter_super_html_viewer.dart';
-import 'package:halim/core/test/test_course.dart';
+// import 'package:flutter_super_html_viewer/flutter_super_html_viewer.dart';
+// import 'package:halim/core/test/test_course.dart';
 import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/widgets/custome_elevated_button.dart';
 
@@ -21,12 +21,13 @@ class CourseReadingView extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Expanded(
-              child: HtmlContentViewer(
-                htmlContent: TestCourse.readingHTML,
-                initialContentHeight: MediaQuery.of(context).size.height,
-                initialContentWidth: MediaQuery.of(context).size.width,
-              ),
+            const Expanded(
+              // child: HtmlContentViewer(
+              //   htmlContent: TestCourse.readingHTML,
+              //   initialContentHeight: MediaQuery.of(context).size.height,
+              //   initialContentWidth: MediaQuery.of(context).size.width,
+              // ),
+              child:Text('HTML CONTENT'),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
