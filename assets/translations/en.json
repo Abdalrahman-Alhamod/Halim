@@ -32,7 +32,8 @@
     "next": "Next",
     "readMore": "Read more",
     "showLess": "Show less",
-    "seeAll": "See All"
+    "seeAll": "See All",
+    "download": "Download"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -69,13 +70,22 @@
         "title10": "Exporting Assets",
         "section1": "Section 1 - Introduction",
         "section2": "Section 2 - Figma Basic",
-        "section3": "Section 3 - Let's Practice"
+        "section3": "Section 3 - Let's Practice",
+        "desc1": "Explore the foundational concepts of UI/UX design and their practical implications in the digital world",
+        "desc2": "Learn the basics of Figma, from navigating the interface to creating and editing designs collaboratively",
+        "desc3": "Put theory into action with practical exercises and design challenges that reinforce your learning"
       }
     },
     "enrollCourse": "Enroll Course",
     "Lessons": {
       "lesson": "Lesson",
-      "min": "min"
+      "min": "min",
+      "Type": {
+        "video": "Video",
+        "reading": "Reading",
+        "quiz": "Quiz"
+      },
+      "questions": "Questions"
     }
   }
 }

@@ -41,6 +41,7 @@ class _CourseMoreDetailsSectionState extends State<CourseMoreDetailsSection> {
           index: _index,
         ),
         ExpandablePageView(
+          physics: const NeverScrollableScrollPhysics(),
           onPageChanged: (value) {
             setState(() {
               _index = value;

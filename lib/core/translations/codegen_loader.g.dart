@@ -48,7 +48,8 @@ class CodegenLoader extends AssetLoader{
     "next": "التالي",
     "readMore": "اقرأ المزيد",
     "showLess": "أظهر أقل",
-    "seeAll": "عرض الكل"
+    "seeAll": "عرض الكل",
+    "download": "تنزيل"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -85,13 +86,22 @@ class CodegenLoader extends AssetLoader{
         "title10": "تصدير العناصر",
         "section1": "القسم الأول - المقدمة",
         "section2": "القسم الثاني - أساسيات فيغما",
-        "section3": "القسم الثالث - هيّا نمارس"
+        "section3": "القسم الثالث - هيّا نمارس",
+        "desc1": "استكشاف المفاهيم الأساسية في تصميم واجهة المستخدم وتجربة المستخدم وتأثيرها العملي في العالم الرقمي",
+        "desc2": "تعلم الأساسيات في فيغما، من التنقل في الواجهة إلى إنشاء وتحرير التصاميم بشكل تعاوني",
+        "desc3": "تطبيق النظريات في التصميم العملي من خلال تمارين وتحديات تقوي فهمك ومهاراتك"
       }
     },
     "enrollCourse": "سجِّل في الدورة",
     "Lessons": {
       "lesson": "درس",
-      "min": "دقيقة"
+      "min": "دقيقة",
+      "Type": {
+        "video": "فيديو",
+        "reading": "قراءة",
+        "quiz": "اختبار"
+      },
+      "questions": "سؤال"
     }
   }
 };
@@ -129,7 +139,8 @@ static const Map<String,dynamic> en = {
     "next": "Next",
     "readMore": "Read more",
     "showLess": "Show less",
-    "seeAll": "See All"
+    "seeAll": "See All",
+    "download": "Download"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -166,13 +177,22 @@ static const Map<String,dynamic> en = {
         "title10": "Exporting Assets",
         "section1": "Section 1 - Introduction",
         "section2": "Section 2 - Figma Basic",
-        "section3": "Section 3 - Let's Practice"
+        "section3": "Section 3 - Let's Practice",
+        "desc1": "Explore the foundational concepts of UI/UX design and their practical implications in the digital world",
+        "desc2": "Learn the basics of Figma, from navigating the interface to creating and editing designs collaboratively",
+        "desc3": "Put theory into action with practical exercises and design challenges that reinforce your learning"
       }
     },
     "enrollCourse": "Enroll Course",
     "Lessons": {
       "lesson": "Lesson",
-      "min": "min"
+      "min": "min",
+      "Type": {
+        "video": "Video",
+        "reading": "Reading",
+        "quiz": "Quiz"
+      },
+      "questions": "Questions"
     }
   }
 };

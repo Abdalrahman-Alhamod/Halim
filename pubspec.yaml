@@ -102,8 +102,12 @@ dependencies:
   easy_localization:
   # For collapsing text
   readmore:
-
+  # for course details section
   expandable_page_view:
+  # for course reading section
+  flutter_super_html_viewer:
+  # Slide to donwload\delete
+  flutter_slidable:
 
 dev_dependencies:
   flutter_launcher_icons: 

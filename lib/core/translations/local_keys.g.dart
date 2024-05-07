@@ -34,6 +34,7 @@ abstract class  LocaleKeys {
   static const Buttons_readMore = 'Buttons.readMore';
   static const Buttons_showLess = 'Buttons.showLess';
   static const Buttons_seeAll = 'Buttons.seeAll';
+  static const Buttons_download = 'Buttons.download';
   static const Buttons = 'Buttons';
   static const CourseDetails_reviews = 'CourseDetails.reviews';
   static const CourseDetails_students = 'CourseDetails.students';
@@ -66,11 +67,19 @@ abstract class  LocaleKeys {
   static const CourseDetails_Test_Lessons_section1 = 'CourseDetails.Test.Lessons.section1';
   static const CourseDetails_Test_Lessons_section2 = 'CourseDetails.Test.Lessons.section2';
   static const CourseDetails_Test_Lessons_section3 = 'CourseDetails.Test.Lessons.section3';
+  static const CourseDetails_Test_Lessons_desc1 = 'CourseDetails.Test.Lessons.desc1';
+  static const CourseDetails_Test_Lessons_desc2 = 'CourseDetails.Test.Lessons.desc2';
+  static const CourseDetails_Test_Lessons_desc3 = 'CourseDetails.Test.Lessons.desc3';
   static const CourseDetails_Test_Lessons = 'CourseDetails.Test.Lessons';
   static const CourseDetails_Test = 'CourseDetails.Test';
   static const CourseDetails_enrollCourse = 'CourseDetails.enrollCourse';
   static const CourseDetails_Lessons_lesson = 'CourseDetails.Lessons.lesson';
   static const CourseDetails_Lessons_min = 'CourseDetails.Lessons.min';
+  static const CourseDetails_Lessons_Type_video = 'CourseDetails.Lessons.Type.video';
+  static const CourseDetails_Lessons_Type_reading = 'CourseDetails.Lessons.Type.reading';
+  static const CourseDetails_Lessons_Type_quiz = 'CourseDetails.Lessons.Type.quiz';
+  static const CourseDetails_Lessons_Type = 'CourseDetails.Lessons.Type';
+  static const CourseDetails_Lessons_questions = 'CourseDetails.Lessons.questions';
   static const CourseDetails_Lessons = 'CourseDetails.Lessons';
   static const CourseDetails = 'CourseDetails';
 

@@ -9,9 +9,10 @@ class CourseLessonsSubSection extends StatelessWidget {
     super.key,
     required this.title,
     required this.duration,
-    required this.widgets,
+    required this.widgets, required this.description,
   });
   final String title;
+  final String description;
   final int duration;
   final List<Widget> widgets;
   @override
@@ -38,6 +39,10 @@ class CourseLessonsSubSection extends StatelessWidget {
             ),
           ],
         ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(description),
         const SizedBox(
           height: 20,
         ),
