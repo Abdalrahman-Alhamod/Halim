@@ -77,14 +77,11 @@ class CourseInfo extends StatelessWidget {
           flex: 2,
           child: Row(
             children: [
-              Flexible(
+              const Flexible(
                 flex: 1,
-                child: Transform.flip(
-                  flipY: true,
-                  child: const Icon(
-                    Icons.article,
-                    color: AppColors.primaryColor,
-                  ),
+                child: Icon(
+                  Icons.signal_cellular_alt,
+                  color: AppColors.primaryColor,
                 ),
               ),
               const SizedBox(
@@ -93,7 +90,7 @@ class CourseInfo extends StatelessWidget {
               Flexible(
                 flex: 5,
                 child: AutoSizeText(
-                  LocaleKeys.CourseDetails_certificate.tr(),
+                  LocaleKeys.CourseDetails_Level_beginner.tr(),
                   style: const TextStyle(fontSize: 18),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,

@@ -48,6 +48,7 @@ abstract class  LocaleKeys {
   static const CourseDetails_About_mentor = 'CourseDetails.About.mentor';
   static const CourseDetails_About_aboutCourse = 'CourseDetails.About.aboutCourse';
   static const CourseDetails_About_tools = 'CourseDetails.About.tools';
+  static const CourseDetails_About_keywords = 'CourseDetails.About.keywords';
   static const CourseDetails_About = 'CourseDetails.About';
   static const CourseDetails_Test_courseTitle = 'CourseDetails.Test.courseTitle';
   static const CourseDetails_Test_courseMentorName = 'CourseDetails.Test.courseMentorName';
@@ -81,6 +82,10 @@ abstract class  LocaleKeys {
   static const CourseDetails_Lessons_Type = 'CourseDetails.Lessons.Type';
   static const CourseDetails_Lessons_questions = 'CourseDetails.Lessons.questions';
   static const CourseDetails_Lessons = 'CourseDetails.Lessons';
+  static const CourseDetails_Level_beginner = 'CourseDetails.Level.beginner';
+  static const CourseDetails_Level_intermediate = 'CourseDetails.Level.intermediate';
+  static const CourseDetails_Level_advanced = 'CourseDetails.Level.advanced';
+  static const CourseDetails_Level = 'CourseDetails.Level';
   static const CourseDetails = 'CourseDetails';
 
 }

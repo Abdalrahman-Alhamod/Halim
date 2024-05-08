@@ -6,7 +6,7 @@ import 'package:readmore/readmore.dart';
 import '../../../../../../../core/themes/app_colors.dart';
 import '../../../../../../../core/translations/local_keys.g.dart';
 import 'course_about_mentor.dart';
-import 'tool_box.dart';
+import 'course_keywords.dart';
 
 class CourseAboutSection extends StatelessWidget {
   const CourseAboutSection({
@@ -72,17 +72,7 @@ class CourseAboutSection extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        Text(
-          LocaleKeys.CourseDetails_About_tools.tr(),
-          style: const TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        const ToolBox(),
+        const CourseKeywords(),
       ],
     );
   }

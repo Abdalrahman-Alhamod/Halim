@@ -65,7 +65,8 @@ class CodegenLoader extends AssetLoader{
     "About": {
       "mentor": "المعلّم",
       "aboutCourse": " نبذة عن الدورة",
-      "tools": "الأدوات"
+      "tools": "الأدوات",
+      "keywords": "كلمات مفتاحية"
     },
     "Test": {
       "courseTitle": "مقدمة في تصميم واجهة المستخدم",
@@ -102,6 +103,11 @@ class CodegenLoader extends AssetLoader{
         "quiz": "اختبار"
       },
       "questions": "سؤال"
+    },
+    "Level": {
+      "beginner": "مبتدئ",
+      "intermediate": "متوسط",
+      "advanced": "متقدم"
     }
   }
 };
@@ -156,7 +162,8 @@ static const Map<String,dynamic> en = {
     "About": {
       "mentor": "Mentor",
       "aboutCourse": "About Course",
-      "tools": "Tools"
+      "tools": "Tools",
+      "keywords": "Keywords"
     },
     "Test": {
       "courseTitle": "Intro to UI/UX Desgin",
@@ -193,6 +200,11 @@ static const Map<String,dynamic> en = {
         "quiz": "Quiz"
       },
       "questions": "Questions"
+    },
+    "Level": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
     }
   }
 };
