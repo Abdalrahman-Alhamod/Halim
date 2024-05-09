@@ -107,6 +107,17 @@ class CodegenLoader extends AssetLoader{
         "review4": "دورة جيدة، ولكن ليست بالتمام كما كنت أتوقع. 😕 السرعة كانت بطيئة، وشعرت بفقدان الاهتمام في بعض الأحيان. ⏳",
         "review5": "تجربة مخيبة للآمال. 👎 كان المحتوى قديمًا، وكان المدربون يفتقرون إلى الحماس. لا أوصي بها. 🚫",
         "reviewDate": "منذ اسبوعين"
+      },
+      "Community": {
+        "comment1": "هاد تعليق",
+        "reply1": "لا هاد منشور",
+        "reply2": "و هاد رد",
+        "comment2": "هاد سؤال ما كان حدا يجاوب عليه",
+        "comment3": "حدا بيعرف كتاب ظريف عن Figma ؟",
+        "reply3": "شوف كتاب \"Designing User Interfaces\", أنا لقيتو جداً مفيد",
+        "reply4": "عملك نظرة على ال docs الرسمية",
+        "reply5": "مافي حاجة للكتب, بس مارس",
+        "comment4": "هناك بعض التحديثات على القسم الثالث, من فضلك تفقده و لا تنسى أن تقوم بتقييم الدورة ❤️"
       }
     },
     "enrollCourse": "سجِّل في الدورة",
@@ -124,6 +135,9 @@ class CodegenLoader extends AssetLoader{
       "beginner": "مبتدئ",
       "intermediate": "متوسط",
       "advanced": "متقدم"
+    },
+    "Community": {
+      "reply": "رد"
     }
   }
 };
@@ -220,6 +234,17 @@ static const Map<String,dynamic> en = {
         "review4": "Decent course, but not quite what I expected. 😕 The pacing felt slow, and I found myself losing interest at times. ⏳",
         "review5": "Disappointing experience. 👎 The material was outdated, and the instructors lacked enthusiasm. Wouldn't recommend. 🚫",
         "reviewDate": "2 weeks ago"
+      },
+      "Community": {
+        "comment1": "This is a comment",
+        "reply1": "No this is a post",
+        "reply2": "And this is a reply",
+        "comment2": "This is a question with no answer",
+        "comment3": "Does anyone knows a good book about Figma?",
+        "reply3": "See the \"Designing User Interfaces\" book, i found it very useful",
+        "reply4": "Take a look at the official docs",
+        "reply5": "No need for books, just practice",
+        "comment4": "There is some updates on section 3, please check it and don't forget to review the course ❤️"
       }
     },
     "enrollCourse": "Enroll Course",
@@ -237,6 +262,9 @@ static const Map<String,dynamic> en = {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
       "advanced": "Advanced"
+    },
+    "Community": {
+      "reply": "Reply"
     }
   }
 };

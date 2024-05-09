@@ -86,6 +86,16 @@ abstract class  LocaleKeys {
   static const CourseDetails_Test_Reviews_review5 = 'CourseDetails.Test.Reviews.review5';
   static const CourseDetails_Test_Reviews_reviewDate = 'CourseDetails.Test.Reviews.reviewDate';
   static const CourseDetails_Test_Reviews = 'CourseDetails.Test.Reviews';
+  static const CourseDetails_Test_Community_comment1 = 'CourseDetails.Test.Community.comment1';
+  static const CourseDetails_Test_Community_reply1 = 'CourseDetails.Test.Community.reply1';
+  static const CourseDetails_Test_Community_reply2 = 'CourseDetails.Test.Community.reply2';
+  static const CourseDetails_Test_Community_comment2 = 'CourseDetails.Test.Community.comment2';
+  static const CourseDetails_Test_Community_comment3 = 'CourseDetails.Test.Community.comment3';
+  static const CourseDetails_Test_Community_reply3 = 'CourseDetails.Test.Community.reply3';
+  static const CourseDetails_Test_Community_reply4 = 'CourseDetails.Test.Community.reply4';
+  static const CourseDetails_Test_Community_reply5 = 'CourseDetails.Test.Community.reply5';
+  static const CourseDetails_Test_Community_comment4 = 'CourseDetails.Test.Community.comment4';
+  static const CourseDetails_Test_Community = 'CourseDetails.Test.Community';
   static const CourseDetails_Test = 'CourseDetails.Test';
   static const CourseDetails_enrollCourse = 'CourseDetails.enrollCourse';
   static const CourseDetails_Lessons_lesson = 'CourseDetails.Lessons.lesson';
@@ -100,6 +110,8 @@ abstract class  LocaleKeys {
   static const CourseDetails_Level_intermediate = 'CourseDetails.Level.intermediate';
   static const CourseDetails_Level_advanced = 'CourseDetails.Level.advanced';
   static const CourseDetails_Level = 'CourseDetails.Level';
+  static const CourseDetails_Community_reply = 'CourseDetails.Community.reply';
+  static const CourseDetails_Community = 'CourseDetails.Community';
   static const CourseDetails = 'CourseDetails';
 
 }

@@ -110,6 +110,8 @@ dependencies:
   flutter_slidable:
   # For collapsing sub section in lessons
   flutter_expand_view:
+  # For community comments
+  provider:
 
 dev_dependencies:
   flutter_launcher_icons: 
