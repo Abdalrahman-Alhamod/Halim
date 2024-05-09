@@ -35,6 +35,7 @@ abstract class  LocaleKeys {
   static const Buttons_showLess = 'Buttons.showLess';
   static const Buttons_seeAll = 'Buttons.seeAll';
   static const Buttons_download = 'Buttons.download';
+  static const Buttons_all = 'Buttons.all';
   static const Buttons = 'Buttons';
   static const CourseDetails_reviews = 'CourseDetails.reviews';
   static const CourseDetails_students = 'CourseDetails.students';
@@ -72,6 +73,19 @@ abstract class  LocaleKeys {
   static const CourseDetails_Test_Lessons_desc2 = 'CourseDetails.Test.Lessons.desc2';
   static const CourseDetails_Test_Lessons_desc3 = 'CourseDetails.Test.Lessons.desc3';
   static const CourseDetails_Test_Lessons = 'CourseDetails.Test.Lessons';
+  static const CourseDetails_Test_Reviews_Names_abd = 'CourseDetails.Test.Reviews.Names.abd';
+  static const CourseDetails_Test_Reviews_Names_alaa = 'CourseDetails.Test.Reviews.Names.alaa';
+  static const CourseDetails_Test_Reviews_Names_yassin = 'CourseDetails.Test.Reviews.Names.yassin';
+  static const CourseDetails_Test_Reviews_Names_obada = 'CourseDetails.Test.Reviews.Names.obada';
+  static const CourseDetails_Test_Reviews_Names_ahmad = 'CourseDetails.Test.Reviews.Names.ahmad';
+  static const CourseDetails_Test_Reviews_Names = 'CourseDetails.Test.Reviews.Names';
+  static const CourseDetails_Test_Reviews_review1 = 'CourseDetails.Test.Reviews.review1';
+  static const CourseDetails_Test_Reviews_review2 = 'CourseDetails.Test.Reviews.review2';
+  static const CourseDetails_Test_Reviews_review3 = 'CourseDetails.Test.Reviews.review3';
+  static const CourseDetails_Test_Reviews_review4 = 'CourseDetails.Test.Reviews.review4';
+  static const CourseDetails_Test_Reviews_review5 = 'CourseDetails.Test.Reviews.review5';
+  static const CourseDetails_Test_Reviews_reviewDate = 'CourseDetails.Test.Reviews.reviewDate';
+  static const CourseDetails_Test_Reviews = 'CourseDetails.Test.Reviews';
   static const CourseDetails_Test = 'CourseDetails.Test';
   static const CourseDetails_enrollCourse = 'CourseDetails.enrollCourse';
   static const CourseDetails_Lessons_lesson = 'CourseDetails.Lessons.lesson';

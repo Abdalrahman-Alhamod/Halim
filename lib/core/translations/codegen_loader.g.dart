@@ -49,7 +49,8 @@ class CodegenLoader extends AssetLoader{
     "readMore": "اقرأ المزيد",
     "showLess": "أظهر أقل",
     "seeAll": "عرض الكل",
-    "download": "تنزيل"
+    "download": "تنزيل",
+    "all": "الكل"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -91,6 +92,21 @@ class CodegenLoader extends AssetLoader{
         "desc1": "استكشاف المفاهيم الأساسية في تصميم واجهة المستخدم وتجربة المستخدم وتأثيرها العملي في العالم الرقمي",
         "desc2": "تعلم الأساسيات في فيغما، من التنقل في الواجهة إلى إنشاء وتحرير التصاميم بشكل تعاوني",
         "desc3": "تطبيق النظريات في التصميم العملي من خلال تمارين وتحديات تقوي فهمك ومهاراتك"
+      },
+      "Reviews": {
+        "Names": {
+          "abd": "عبدالرحمن الحامض",
+          "alaa": "علاء لبابيدي",
+          "yassin": "محمد ياسين",
+          "obada": "عبادة المصري",
+          "ahmad": "أحمد اسماعيل"
+        },
+        "review1": "دورة رائعة جداً! 🌟 المحتوى مرتب ومشوق، وتقديمها من قبل مدربين متخصصين عظماء. أنصح بها بشدة! 👍",
+        "review2": "أنا مذهول بعمق المعلومات المغطاة في هذه الدورة. 🚀 إنها مثالية للمبتدئين والمصممين ذوي الخبرة على حد سواء. لا يمكنني الانتظار لتطبيق ما تعلمته! 💡",
+        "review3": "دورة رائعة بشكل عام. 👌 المحتوى ذو رؤية واضحة ومفيدة، ولكن بعض الأقسام يمكن أن تكون أكثر اختصارًا. 📚",
+        "review4": "دورة جيدة، ولكن ليست بالتمام كما كنت أتوقع. 😕 السرعة كانت بطيئة، وشعرت بفقدان الاهتمام في بعض الأحيان. ⏳",
+        "review5": "تجربة مخيبة للآمال. 👎 كان المحتوى قديمًا، وكان المدربون يفتقرون إلى الحماس. لا أوصي بها. 🚫",
+        "reviewDate": "منذ اسبوعين"
       }
     },
     "enrollCourse": "سجِّل في الدورة",
@@ -146,7 +162,8 @@ static const Map<String,dynamic> en = {
     "readMore": "Read more",
     "showLess": "Show less",
     "seeAll": "See All",
-    "download": "Download"
+    "download": "Download",
+    "all": "All"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -188,6 +205,21 @@ static const Map<String,dynamic> en = {
         "desc1": "Explore the foundational concepts of UI/UX design and their practical implications in the digital world",
         "desc2": "Learn the basics of Figma, from navigating the interface to creating and editing designs collaboratively",
         "desc3": "Put theory into action with practical exercises and design challenges that reinforce your learning"
+      },
+      "Reviews": {
+        "Names": {
+          "abd": "Abdalrahman Alhamod",
+          "alaa": "Alaa Lababedi",
+          "yassin": "Mohammad Yassin",
+          "obada": "Obadaa Almasri",
+          "ahmad": "Ahmad Esmail"
+        },
+        "review1": "Absolutely fantastic course! 🌟 The content is well-structured, engaging, and delivered by knowledgeable instructors. Highly recommend! 👍",
+        "review2": "I'm blown away by the depth of information covered in this course. 🚀 It's perfect for beginners and experienced designers alike. Can't wait to apply what I've learned! 💡",
+        "review3": "Great course overall. 👌 The content is insightful and informative, but some sections could be more concise. 📚",
+        "review4": "Decent course, but not quite what I expected. 😕 The pacing felt slow, and I found myself losing interest at times. ⏳",
+        "review5": "Disappointing experience. 👎 The material was outdated, and the instructors lacked enthusiasm. Wouldn't recommend. 🚫",
+        "reviewDate": "2 weeks ago"
       }
     },
     "enrollCourse": "Enroll Course",

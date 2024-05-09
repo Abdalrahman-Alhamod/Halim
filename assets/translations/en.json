@@ -33,7 +33,8 @@
     "readMore": "Read more",
     "showLess": "Show less",
     "seeAll": "See All",
-    "download": "Download"
+    "download": "Download",
+    "all": "All"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -75,6 +76,21 @@
         "desc1": "Explore the foundational concepts of UI/UX design and their practical implications in the digital world",
         "desc2": "Learn the basics of Figma, from navigating the interface to creating and editing designs collaboratively",
         "desc3": "Put theory into action with practical exercises and design challenges that reinforce your learning"
+      },
+      "Reviews": {
+        "Names": {
+          "abd": "Abdalrahman Alhamod",
+          "alaa": "Alaa Lababedi",
+          "yassin": "Mohammad Yassin",
+          "obada": "Obadaa Almasri",
+          "ahmad": "Ahmad Esmail"
+        },
+        "review1": "Absolutely fantastic course! 🌟 The content is well-structured, engaging, and delivered by knowledgeable instructors. Highly recommend! 👍",
+        "review2": "I'm blown away by the depth of information covered in this course. 🚀 It's perfect for beginners and experienced designers alike. Can't wait to apply what I've learned! 💡",
+        "review3": "Great course overall. 👌 The content is insightful and informative, but some sections could be more concise. 📚",
+        "review4": "Decent course, but not quite what I expected. 😕 The pacing felt slow, and I found myself losing interest at times. ⏳",
+        "review5": "Disappointing experience. 👎 The material was outdated, and the instructors lacked enthusiasm. Wouldn't recommend. 🚫",
+        "reviewDate": "2 weeks ago"
       }
     },
     "enrollCourse": "Enroll Course",
