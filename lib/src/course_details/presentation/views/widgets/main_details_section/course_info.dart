@@ -17,7 +17,7 @@ class CourseInfo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Flexible(
-          flex: 3,
+          flex: 1,
           child: Row(
             children: [
               const Flexible(
@@ -43,8 +43,11 @@ class CourseInfo extends StatelessWidget {
             ],
           ),
         ),
+        const SizedBox(
+          width: 10,
+        ),
         Flexible(
-          flex: 2,
+          flex: 1,
           child: Row(
             children: [
               const Flexible(
@@ -70,11 +73,8 @@ class CourseInfo extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(
-          width: 20,
-        ),
         Flexible(
-          flex: 2,
+          flex: 1,
           child: Row(
             children: [
               const Flexible(
