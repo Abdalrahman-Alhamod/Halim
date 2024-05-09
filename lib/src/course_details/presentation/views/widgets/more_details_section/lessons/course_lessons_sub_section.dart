@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_expand_view/expand_child_widget.dart';
 import 'package:halim/core/translations/local_keys.g.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';
@@ -9,7 +10,8 @@ class CourseLessonsSubSection extends StatelessWidget {
     super.key,
     required this.title,
     required this.duration,
-    required this.widgets, required this.description,
+    required this.widgets,
+    required this.description,
   });
   final String title;
   final String description;
@@ -46,7 +48,11 @@ class CourseLessonsSubSection extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        ...widgets,
+        ExpandChildWidget(
+          child: Column(
+            children: widgets,
+          ),
+        )
       ],
     );
   }

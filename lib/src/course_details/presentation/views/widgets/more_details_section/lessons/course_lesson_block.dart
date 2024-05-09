@@ -313,10 +313,7 @@ class LockIcon extends StatelessWidget {
       child: SvgPicture.asset(
         AppSVGs.lock,
         width: 32,
-        colorFilter: ColorFilter.mode(
-          context.isDarkMode ? Colors.grey.shade400 : Colors.grey.shade500,
-          BlendMode.srcIn,
-        ),
+        color: context.isDarkMode ? Colors.grey.shade400 : Colors.grey.shade500,
       ),
     );
   }
@@ -334,10 +331,7 @@ class PlayIconButton extends StatelessWidget {
       icon: SvgPicture.asset(
         AppSVGs.playCircle,
         width: 36,
-        colorFilter: const ColorFilter.mode(
-          AppColors.primaryColor,
-          BlendMode.srcIn,
-        ),
+        color: AppColors.primaryColor,
       ),
       style: IconButton.styleFrom(
         padding: EdgeInsets.zero,

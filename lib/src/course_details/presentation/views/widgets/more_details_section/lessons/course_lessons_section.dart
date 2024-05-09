@@ -19,7 +19,6 @@ class CourseLessonsSection extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        // ignore: prefer_const_constructors
         CourseLessonsSectionSample(),
       ],
     );
