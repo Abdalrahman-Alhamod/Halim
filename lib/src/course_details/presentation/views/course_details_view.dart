@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/course_details_app_bar.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/course_details_bottom_sheet.dart';
 import 'widgets/course_details_body.dart';
-import 'widgets/course_enroll_bottom_sheet.dart';
 
 class CourseDetailsView extends StatelessWidget {
   const CourseDetailsView({super.key});
@@ -9,7 +9,7 @@ class CourseDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      bottomSheet: CourseEnrollButtomSheet(),
+      bottomSheet: CourseDetailsBottomSheet(),
       body: Stack(
         children: [
           CourseDetailsBody(),
