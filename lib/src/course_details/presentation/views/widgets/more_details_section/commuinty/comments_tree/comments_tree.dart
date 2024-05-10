@@ -29,8 +29,13 @@ class CommentsTree extends StatelessWidget {
       avatarChild: (context, data) =>
           buildCommentAvatar(data: data, radius: 24),
       contentChild: (context, data) {
-        return CommentBox(
-          data: data,
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CommentBox(
+              data: data,
+            ),
+          ],
         );
       },
       contentRoot: (context, data) {
