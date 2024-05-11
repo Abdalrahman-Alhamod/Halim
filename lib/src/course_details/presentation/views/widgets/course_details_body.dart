@@ -31,8 +31,8 @@ class CourseDetailsBody extends StatelessWidget {
               ),
               Divider(
                 color: context.isDarkMode
-                    ? Colors.grey.shade400
-                    : Colors.grey.shade200,
+                    ? Colors.grey.shade800
+                    : Colors.grey.shade700,
               ),
               const CourseMoreDetailsSection(),
               const SizedBox(

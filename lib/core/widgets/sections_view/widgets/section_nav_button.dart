@@ -1,11 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+part of '../sections_view.dart';
 
-import '../../../../../../core/themes/app_colors.dart';
-
-class CourseMoreDetailsNavButton extends StatelessWidget {
-  const CourseMoreDetailsNavButton({
-    super.key,
+class _SectionNavButton extends StatelessWidget {
+  const _SectionNavButton({
     required this.isSelected,
     required this.title,
     required this.onPressed,
@@ -26,9 +22,9 @@ class CourseMoreDetailsNavButton extends StatelessWidget {
                 )
               : BorderSide(
                   color: context.isDarkMode
-                      ? Colors.grey.shade700
-                      : Colors.grey.shade400,
-                  width: 1,
+                      ? Colors.grey.shade800
+                      : Colors.grey.shade500,
+                  width: 2,
                 ),
         ),
       ),
