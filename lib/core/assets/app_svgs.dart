@@ -8,4 +8,6 @@ class AppSVGs {
   static const figma = '$mainPath/figma.svg';
   static const lock = '$mainPath/lock.svg';
   static const coupon = '$mainPath/coupon.svg';
+  static const chatFilled = '$mainPath/chat_filled.svg';
+  static const compass = '$mainPath/compass.svg';
 }

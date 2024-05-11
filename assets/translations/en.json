@@ -103,6 +103,10 @@
         "reply4": "Take a look at the official docs",
         "reply5": "No need for books, just practice",
         "comment4": "There is some updates on section 3, please check it and don't forget to review the course ❤️"
+      },
+      "Mentor": {
+        "aboutMeTitle": "Senior UI/UX Designer | Google Design System Expert | Product Design Specialist in San Francisco | Halim Instructor",
+        "aboutMeDesc": "Hello, I'm Johanathan Williams, a seasoned UI/UX designer with a passion for creating intuitive and visually appealing digital experiences. With years of experience at Google, I specialize in crafting user-centric design solutions and optimizing user interfaces for maximum usability and engagement. Based in the vibrant city of San Francisco, I thrive on collaborating with cross-functional teams to bring innovative product ideas to life. As an avid learner and educator, I also enjoy sharing my knowledge and insights as a Halim instructor, empowering aspiring designers to hone their skills and excel in the dynamic field of UI/UX design."
       }
     },
     "enrollCourse": "Enroll Course",
@@ -136,6 +140,13 @@
       "enrollSuccessDesc": "You have successfully made payment and enrolled the course.",
       "viewEReceipt": "View E-Receipt"
     },
-    "viewCourse": "View Course"
+    "viewCourse": "View Course",
+    "Mentor": {
+      "courses": "Courses",
+      "coursesNum": "Courses",
+      "aboutMe": "About Me",
+      "message": "Message",
+      "website": "Website"
+    }
   }
 }

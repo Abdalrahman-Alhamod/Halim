@@ -119,6 +119,10 @@ class CodegenLoader extends AssetLoader{
         "reply4": "عملك نظرة على ال docs الرسمية",
         "reply5": "مافي حاجة للكتب, بس مارس",
         "comment4": "هناك بعض التحديثات على القسم الثالث, من فضلك تفقده و لا تنسى أن تقوم بتقييم الدورة ❤️"
+      },
+      "Mentor": {
+        "aboutMeTitle": "مصمم واجهات مستخدم محترف | خبير في نظام التصميم بغوغل | متخصص في تصميم المنتجات في سان فرانسيسكو | مدرب في منصة حليم",
+        "aboutMeDesc": "مرحبًا، أنا يوسف عبدالرحمن، مصمم واجهات مستخدم بخبرة وشغف لخلق تجارب رقمية سلسة وجذابة. بعد سنوات من الخبرة في غوغل، أتخصص في صياغة حلول تصميم موجهة للمستخدم وتحسين واجهات المستخدم لتحقيق أقصى قدر من الاستخدامية والمشاركة. مقره في مدينة سان فرانسيسكو النابضة بالحياة، أجد الإلهام في التعاون مع فرق متعددة التخصصات لتحقيق أفكار المنتجات المبتكرة. كمتعلم متحمس ومدرب، أستمتع أيضًا بمشاركة معرفتي وتجاربي كمدرب على منصة حليم، لتمكين المصممين الطموحين من اتقان مهاراتهم والتفوق في مجال تصميم واجهات المستخدم وتجربة المستخدم الديناميكي."
       }
     },
     "enrollCourse": "سجِّل في الدورة",
@@ -152,7 +156,14 @@ class CodegenLoader extends AssetLoader{
       "enrollSuccessDesc": "لقد قمت بإنجاز عملية الشراء بنجاح و الاشتراك بالدورة.",
       "viewEReceipt": "عرض الإيصال الإلكتروني"
     },
-    "viewCourse": "عرض الدورة"
+    "viewCourse": "عرض الدورة",
+    "Mentor": {
+      "courses": "الدورات",
+      "coursesNum": "دورة",
+      "aboutMe": "عنِّي",
+      "message": "مراسلة",
+      "website": "ويب"
+    }
   }
 };
 static const Map<String,dynamic> en = {
@@ -260,6 +271,10 @@ static const Map<String,dynamic> en = {
         "reply4": "Take a look at the official docs",
         "reply5": "No need for books, just practice",
         "comment4": "There is some updates on section 3, please check it and don't forget to review the course ❤️"
+      },
+      "Mentor": {
+        "aboutMeTitle": "Senior UI/UX Designer | Google Design System Expert | Product Design Specialist in San Francisco | Halim Instructor",
+        "aboutMeDesc": "Hello, I'm Johanathan Williams, a seasoned UI/UX designer with a passion for creating intuitive and visually appealing digital experiences. With years of experience at Google, I specialize in crafting user-centric design solutions and optimizing user interfaces for maximum usability and engagement. Based in the vibrant city of San Francisco, I thrive on collaborating with cross-functional teams to bring innovative product ideas to life. As an avid learner and educator, I also enjoy sharing my knowledge and insights as a Halim instructor, empowering aspiring designers to hone their skills and excel in the dynamic field of UI/UX design."
       }
     },
     "enrollCourse": "Enroll Course",
@@ -293,7 +308,14 @@ static const Map<String,dynamic> en = {
       "enrollSuccessDesc": "You have successfully made payment and enrolled the course.",
       "viewEReceipt": "View E-Receipt"
     },
-    "viewCourse": "View Course"
+    "viewCourse": "View Course",
+    "Mentor": {
+      "courses": "Courses",
+      "coursesNum": "Courses",
+      "aboutMe": "About Me",
+      "message": "Message",
+      "website": "Website"
+    }
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

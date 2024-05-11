@@ -1,7 +1,5 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
-// ignore_for_file: constant_identifier_names
-
 abstract class  LocaleKeys {
   static const Auth_email = 'Auth.email';
   static const Auth_orContinueWith = 'Auth.orContinueWith';
@@ -97,6 +95,9 @@ abstract class  LocaleKeys {
   static const CourseDetails_Test_Community_reply5 = 'CourseDetails.Test.Community.reply5';
   static const CourseDetails_Test_Community_comment4 = 'CourseDetails.Test.Community.comment4';
   static const CourseDetails_Test_Community = 'CourseDetails.Test.Community';
+  static const CourseDetails_Test_Mentor_aboutMeTitle = 'CourseDetails.Test.Mentor.aboutMeTitle';
+  static const CourseDetails_Test_Mentor_aboutMeDesc = 'CourseDetails.Test.Mentor.aboutMeDesc';
+  static const CourseDetails_Test_Mentor = 'CourseDetails.Test.Mentor';
   static const CourseDetails_Test = 'CourseDetails.Test';
   static const CourseDetails_enrollCourse = 'CourseDetails.enrollCourse';
   static const CourseDetails_Lessons_lesson = 'CourseDetails.Lessons.lesson';
@@ -125,6 +126,12 @@ abstract class  LocaleKeys {
   static const CourseDetails_Enroll_viewEReceipt = 'CourseDetails.Enroll.viewEReceipt';
   static const CourseDetails_Enroll = 'CourseDetails.Enroll';
   static const CourseDetails_viewCourse = 'CourseDetails.viewCourse';
+  static const CourseDetails_Mentor_courses = 'CourseDetails.Mentor.courses';
+  static const CourseDetails_Mentor_coursesNum = 'CourseDetails.Mentor.coursesNum';
+  static const CourseDetails_Mentor_aboutMe = 'CourseDetails.Mentor.aboutMe';
+  static const CourseDetails_Mentor_message = 'CourseDetails.Mentor.message';
+  static const CourseDetails_Mentor_website = 'CourseDetails.Mentor.website';
+  static const CourseDetails_Mentor = 'CourseDetails.Mentor';
   static const CourseDetails = 'CourseDetails';
 
 }

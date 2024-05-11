@@ -15,42 +15,50 @@ part 'widgets/rating_with_students.dart';
 part 'widgets/course_category_box.dart';
 
 class CourseBox extends StatelessWidget {
-  const CourseBox({
-    super.key,
-  });
-
+  const CourseBox({super.key, this.onPressed});
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 450),
-      child: AspectRatio(
-        aspectRatio: 1,
-        child: Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: context.isDarkMode
-                ? AppColors.loginWithButtonDarkColor
-                : Colors.white,
-            borderRadius: BorderRadius.circular(
-              40,
-            ),
-            boxShadow: context.isDarkMode
-                ? []
-                : [
-                    const BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 25,
-                      spreadRadius: -10,
-                    )
-                  ],
-            border: context.isDarkMode
-                ? null
-                : Border.all(
-                    color: Colors.grey.shade300,
-                  ),
+    return IconButton(
+      style: IconButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            40,
           ),
-          padding: const EdgeInsets.all(16),
-          child: const CourseBoxContent(),
+        ),
+      ),
+      onPressed: onPressed,
+      icon: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 450),
+        child: AspectRatio(
+          aspectRatio: 1.1,
+          child: Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: context.isDarkMode
+                  ? AppColors.loginWithButtonDarkColor
+                  : Colors.white,
+              borderRadius: BorderRadius.circular(
+                40,
+              ),
+              boxShadow: context.isDarkMode
+                  ? []
+                  : [
+                      const BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 25,
+                        spreadRadius: -10,
+                      )
+                    ],
+              border: context.isDarkMode
+                  ? null
+                  : Border.all(
+                      color: Colors.grey.shade300,
+                    ),
+            ),
+            padding: const EdgeInsets.all(16),
+            child: const CourseBoxContent(),
+          ),
         ),
       ),
     );

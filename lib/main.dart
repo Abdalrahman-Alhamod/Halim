@@ -18,7 +18,7 @@ void main() async {
         Locale('ar'),
       ],
       path: 'assets/translations',
-      startLocale: const Locale('en'),
+      startLocale: const Locale('ar'),
       fallbackLocale: const Locale('en'),
       assetLoader: const CodegenLoader(),
       child: const HalimApp(),
