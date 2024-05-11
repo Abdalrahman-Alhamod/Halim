@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_reading_view.dart';
+import 'package:halim/src/course_details/presentation/views/enroll_course_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
@@ -22,6 +23,7 @@ class AppRoute {
   static const kCourseLessonsView = '/courseLessons';
   static const kCourseReadingView = '/courseReading';
   static const kCourseReviewsView = '/courseReviews';
+  static const kEnrollCourseView = '/enrollCourse';
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
@@ -77,6 +79,12 @@ class AppRoute {
         path: kCourseReviewsView,
         builder: (BuildContext context, GoRouterState state) {
           return const CourseReviewsView();
+        },
+      ),
+      GoRoute(
+        path: kEnrollCourseView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const EnrollCourseView();
         },
       ),
     ],

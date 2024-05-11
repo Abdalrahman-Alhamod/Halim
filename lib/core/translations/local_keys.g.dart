@@ -36,6 +36,7 @@ abstract class  LocaleKeys {
   static const Buttons_seeAll = 'Buttons.seeAll';
   static const Buttons_download = 'Buttons.download';
   static const Buttons_all = 'Buttons.all';
+  static const Buttons_apply = 'Buttons.apply';
   static const Buttons = 'Buttons';
   static const CourseDetails_reviews = 'CourseDetails.reviews';
   static const CourseDetails_students = 'CourseDetails.students';
@@ -112,6 +113,18 @@ abstract class  LocaleKeys {
   static const CourseDetails_Level = 'CourseDetails.Level';
   static const CourseDetails_Community_reply = 'CourseDetails.Community.reply';
   static const CourseDetails_Community = 'CourseDetails.Community';
+  static const CourseDetails_Enroll_couponCode = 'CourseDetails.Enroll.couponCode';
+  static const CourseDetails_Enroll_wallet = 'CourseDetails.Enroll.wallet';
+  static const CourseDetails_Enroll_price = 'CourseDetails.Enroll.price';
+  static const CourseDetails_Enroll_discount = 'CourseDetails.Enroll.discount';
+  static const CourseDetails_Enroll_total = 'CourseDetails.Enroll.total';
+  static const CourseDetails_Enroll_enroll = 'CourseDetails.Enroll.enroll';
+  static const CourseDetails_Enroll_enterYourPinToConfirm = 'CourseDetails.Enroll.enterYourPinToConfirm';
+  static const CourseDetails_Enroll_enrollSuccess = 'CourseDetails.Enroll.enrollSuccess';
+  static const CourseDetails_Enroll_enrollSuccessDesc = 'CourseDetails.Enroll.enrollSuccessDesc';
+  static const CourseDetails_Enroll_viewEReceipt = 'CourseDetails.Enroll.viewEReceipt';
+  static const CourseDetails_Enroll = 'CourseDetails.Enroll';
+  static const CourseDetails_viewCourse = 'CourseDetails.viewCourse';
   static const CourseDetails = 'CourseDetails';
 
 }

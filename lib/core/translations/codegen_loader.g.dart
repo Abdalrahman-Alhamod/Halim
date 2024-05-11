@@ -50,7 +50,8 @@ class CodegenLoader extends AssetLoader{
     "showLess": "أظهر أقل",
     "seeAll": "عرض الكل",
     "download": "تنزيل",
-    "all": "الكل"
+    "all": "الكل",
+    "apply": "تطبيق"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -138,7 +139,20 @@ class CodegenLoader extends AssetLoader{
     },
     "Community": {
       "reply": "رد"
-    }
+    },
+    "Enroll": {
+      "couponCode": "رمز القسيمة",
+      "wallet": "المحفظة",
+      "price": "السعر",
+      "discount": "الخصم",
+      "total": "الإجمالي",
+      "enroll": "اشتراك",
+      "enterYourPinToConfirm": "ادخل رمزك السرّي لإكمال عملية الشراء",
+      "enrollSuccess": "تم الاشتراك بالكورس بنجاح!",
+      "enrollSuccessDesc": "لقد قمت بإنجاز عملية الشراء بنجاح و الاشتراك بالدورة.",
+      "viewEReceipt": "عرض الإيصال الإلكتروني"
+    },
+    "viewCourse": "عرض الدورة"
   }
 };
 static const Map<String,dynamic> en = {
@@ -177,7 +191,8 @@ static const Map<String,dynamic> en = {
     "showLess": "Show less",
     "seeAll": "See All",
     "download": "Download",
-    "all": "All"
+    "all": "All",
+    "apply": "Apply"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -265,7 +280,20 @@ static const Map<String,dynamic> en = {
     },
     "Community": {
       "reply": "Reply"
-    }
+    },
+    "Enroll": {
+      "couponCode": "Coupon Code",
+      "wallet": "Wallet",
+      "price": "Price",
+      "discount": "Discount",
+      "total": "Total",
+      "enroll": "Enroll",
+      "enterYourPinToConfirm": "Enter your PIN to confirm payment",
+      "enrollSuccess": "Enroll Course Successful!",
+      "enrollSuccessDesc": "You have successfully made payment and enrolled the course.",
+      "viewEReceipt": "View E-Receipt"
+    },
+    "viewCourse": "View Course"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

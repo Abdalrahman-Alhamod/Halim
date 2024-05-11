@@ -24,7 +24,7 @@ class CustomFlatButton extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-          fontSize: 14,
+          fontSize: 16,
           fontWeight: FontWeight.bold,
           color: MediaQuery.of(context).platformBrightness == Brightness.dark
               ? Colors.white
