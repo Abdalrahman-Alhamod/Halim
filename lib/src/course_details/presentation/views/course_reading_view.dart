@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:halim/core/widgets/bottom_sheet_button.dart';
 
 import '../../../../core/translations/local_keys.g.dart';
-import 'widgets/more_details_section/lessons/course_reading_app_bar.dart';
+import 'widgets/course_reading_view/course_reading_app_bar.dart';
 
 class CourseReadingView extends StatelessWidget {
   const CourseReadingView({super.key});

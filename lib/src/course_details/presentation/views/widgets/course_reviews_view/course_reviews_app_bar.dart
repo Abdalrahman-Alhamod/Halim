@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/translations/local_keys.g.dart';
 
+import '../../../../../../core/constants/app_constrains.dart';
+import '../../../../../../core/widgets/back_arrow_icon.dart';
+
 class CourseReviewsAppBar extends StatelessWidget
     implements PreferredSizeWidget {
   const CourseReviewsAppBar({super.key});
@@ -10,17 +13,11 @@ class CourseReviewsAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: IconButton(
-        onPressed: () {
-          GoRouter.of(context).pop();
-        },
-        icon: const Icon(
-          Icons.arrow_back,
-          size: 32,
-        ),
-      ),
-      leadingWidth: 75,
-      toolbarHeight: 75,
+      leading: BackArrowIcon(onPressed: () {
+        GoRouter.of(context).pop();
+      }),
+      leadingWidth: AppConstrains.maxWidthAppBarIcon,
+      toolbarHeight: AppConstrains.maxWidthAppBarIcon,
       title: Text(
         LocaleKeys.CourseDetails_Sections_reviews.tr(),
         style: const TextStyle(
@@ -33,5 +30,5 @@ class CourseReviewsAppBar extends StatelessWidget
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(75);
+  Size get preferredSize => const Size.fromHeight(AppConstrains.maxAppBarHeight);
 }

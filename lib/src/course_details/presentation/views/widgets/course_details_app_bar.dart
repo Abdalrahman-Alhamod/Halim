@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/widgets/back_arrow_icon.dart';
 
 class CourseDetailsAppBar extends StatelessWidget {
   const CourseDetailsAppBar({
@@ -11,15 +12,9 @@ class CourseDetailsAppBar extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: IconButton(
-          onPressed: () {
-            GoRouter.of(context).pop();
-          },
-          icon: const Icon(
-            Icons.arrow_back,
-            size: 32,
-          ),
-        ),
+        child: BackArrowIcon(onPressed: () {
+          GoRouter.of(context).pop();
+        }),
       ),
     );
   }

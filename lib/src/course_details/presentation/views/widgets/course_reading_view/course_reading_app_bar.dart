@@ -3,8 +3,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../../../core/themes/app_colors.dart';
-import '../../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/constants/app_constrains.dart';
+import '../../../../../../core/themes/app_colors.dart';
+import '../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/widgets/back_arrow_icon.dart';
 
 class CourseReadingAppBar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -13,17 +15,11 @@ class CourseReadingAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: IconButton(
-        onPressed: () {
-          GoRouter.of(context).pop();
-        },
-        icon: const Icon(
-          Icons.arrow_back,
-          size: 32,
-        ),
-      ),
-      leadingWidth: 75,
-      toolbarHeight: 75,
+      leading: BackArrowIcon(onPressed: () {
+        GoRouter.of(context).pop();
+      }),
+      leadingWidth: AppConstrains.maxWidthAppBarIcon,
+      toolbarHeight: AppConstrains.maxWidthAppBarIcon,
       title: Text(
         LocaleKeys.CourseDetails_Lessons_Type_reading.tr(),
         style: const TextStyle(
@@ -36,5 +32,5 @@ class CourseReadingAppBar extends StatelessWidget
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(75);
+  Size get preferredSize => const Size.fromHeight(AppConstrains.maxAppBarHeight);
 }

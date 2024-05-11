@@ -2,6 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/translations/local_keys.g.dart';
+import 'package:halim/core/widgets/back_arrow_icon.dart';
+
+import '../../../../../../core/constants/app_constrains.dart';
 
 class EnrollCourseAppBar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -10,17 +13,11 @@ class EnrollCourseAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: IconButton(
-        onPressed: () {
-          GoRouter.of(context).pop();
-        },
-        icon: const Icon(
-          Icons.arrow_back,
-          size: 32,
-        ),
-      ),
-      leadingWidth: 75,
-      toolbarHeight: 75,
+      leading: BackArrowIcon(onPressed: () {
+        GoRouter.of(context).pop();
+      }),
+      leadingWidth: AppConstrains.maxWidthAppBarIcon,
+      toolbarHeight: AppConstrains.maxWidthAppBarIcon,
       title: Text(
         LocaleKeys.CourseDetails_enrollCourse.tr(),
         style: const TextStyle(
@@ -33,5 +30,5 @@ class EnrollCourseAppBar extends StatelessWidget
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(75);
+  Size get preferredSize => const Size.fromHeight(AppConstrains.maxAppBarHeight);
 }
