@@ -19,14 +19,7 @@ class CourseReadingView extends StatelessWidget {
         onPressed: () {},
       ),
       body: const Center(
-        child: Expanded(
-          // child: HtmlContentViewer(
-          //   htmlContent: TestCourse.readingHTML,
-          //   initialContentHeight: MediaQuery.of(context).size.height,
-          //   initialContentWidth: MediaQuery.of(context).size.width,
-          // ),
-          child: Text('HTML CONTENT'),
-        ),
+        child: Text('HTML CONTENT'),
       ),
     );
   }
