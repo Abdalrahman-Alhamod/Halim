@@ -9,7 +9,7 @@ import 'package:halim/src/course_details/presentation/views/enroll_course_view.d
 import 'package:halim/src/course_details/presentation/views/mentor_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/my_course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
-import 'package:halim/src/home/home_view.dart';
+import 'package:halim/src/home/presentation/views/home_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
@@ -18,11 +18,11 @@ import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
 
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
-import '../../src/home/notifications_view.dart';
-import '../../src/home/popular_courses_view.dart';
-import '../../src/home/search_view.dart';
-import '../../src/home/top_mentors_view.dart';
-import '../../src/home/widgets/bottom_bar.dart';
+import '../../src/home/presentation/views/notifications_view.dart';
+import '../../src/home/presentation/views/popular_courses_view.dart';
+import '../../src/home/presentation/views/search_view.dart';
+import '../../src/home/presentation/views/top_mentors_view.dart';
+import '../../src/home/presentation/views/widgets/bottom_bar.dart';
 
 class AppRoute {
   static const kIntroView = '/intro';

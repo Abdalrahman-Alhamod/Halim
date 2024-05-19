@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import '../../../core/themes/app_colors.dart';
+import '../../../../../core/themes/app_colors.dart';
 import '../home_view.dart';
 
 class BottomBar extends StatefulWidget {

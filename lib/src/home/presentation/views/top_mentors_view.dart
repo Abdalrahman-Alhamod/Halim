@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../core/themes/app_colors.dart';
-import '../../core/utils/app_route.dart';
+import '../../../../core/themes/app_colors.dart';
+import '../../../../core/utils/app_route.dart';
 import 'widgets/teacher_card.dart';
 
 class TopMonetorsView extends StatefulWidget {

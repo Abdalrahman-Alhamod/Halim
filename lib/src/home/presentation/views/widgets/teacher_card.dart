@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/themes/app_colors.dart';
+import '../../../../../core/themes/app_colors.dart';
 
 class TeacherCard extends StatelessWidget {
   const TeacherCard({super.key});

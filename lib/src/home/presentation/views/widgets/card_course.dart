@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/home/functions/remove_bookmark_bottom_sheet.dart';
+import 'package:halim/src/home/presentation/views/functions/remove_bookmark_bottom_sheet.dart';
 
-import '../../../core/themes/app_colors.dart';
+import '../../../../../core/themes/app_colors.dart';
 
 class CardCourse extends StatefulWidget {
   final double followers;

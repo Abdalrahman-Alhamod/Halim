@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
 
-import '../../core/themes/app_colors.dart';
-import '../../core/utils/app_route.dart';
+import '../../../../core/themes/app_colors.dart';
+import '../../../../core/utils/app_route.dart';
 import 'widgets/notifications_card.dart';
 
 class NotificationsView extends StatefulWidget {
