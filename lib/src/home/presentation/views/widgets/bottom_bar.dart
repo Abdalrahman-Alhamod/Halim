@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import '../../../../../core/themes/app_colors.dart';
+import '../../../../my_courses/presentation/views/browse_sections_view.dart';
 import '../home_view.dart';
 
 class BottomBar extends StatefulWidget {
@@ -17,7 +18,7 @@ class BottomBarState extends State<BottomBar> {
 
   final List<Widget> _pages = [
     const HomeView(),
-    // BrowseSectionsCourses(),
+    const BrowseSectionsCourses(),
     const Icon(Icons.power_input_sharp, size: 150),
     const Icon(Icons.more_horiz_outlined, size: 150),
   ];

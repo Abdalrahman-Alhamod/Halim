@@ -93,7 +93,9 @@ class _CardCourseState extends State<CardCourse> {
                             color: isBookmarked ? Colors.blue : Colors.blue,
                           ),
                           onPressed: () {
-                            showRemoveBookmarkBottomSheet(context);
+                            if (isBookmarked) {
+                              showRemoveBookmarkBottomSheet(context);
+                            }
                             setState(() {
                               isBookmarked = !isBookmarked;
                             });

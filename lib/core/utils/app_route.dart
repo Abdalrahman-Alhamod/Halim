@@ -16,13 +16,14 @@ import 'package:halim/src/login_register/presentation/views/register_view.dart';
 import 'package:halim/src/splash/presentation/views/intro_view.dart';
 import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
-
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
 import '../../src/home/presentation/views/notifications_view.dart';
 import '../../src/home/presentation/views/popular_courses_view.dart';
 import '../../src/home/presentation/views/search_view.dart';
 import '../../src/home/presentation/views/top_mentors_view.dart';
 import '../../src/home/presentation/views/widgets/bottom_bar.dart';
+import '../../src/my_courses/presentation/views/bookmark_view.dart';
+import '../../src/my_courses/presentation/views/browse_sections_view.dart';
 
 class AppRoute {
   static const kIntroView = '/intro';
@@ -174,12 +175,12 @@ class AppRoute {
           return const NotificationsView();
         },
       ),
-      // GoRoute(
-      //   path: kBookMark,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return BookMarkView();
-      //   },
-      // ),
+      GoRoute(
+        path: kBookMark,
+        builder: (BuildContext context, GoRouterState state) {
+          return const BookMarkView();
+        },
+      ),
       GoRoute(
         path: kPopularCourses,
         builder: (BuildContext context, GoRouterState state) {
@@ -198,12 +199,12 @@ class AppRoute {
           return const SearchView();
         },
       ),
-      // GoRoute(
-      //   path: kBrowseSectionsCourses,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return BrowseSectionsCourses();
-      //   },
-      // ),
+      GoRoute(
+        path: kBrowseSectionsCourses,
+        builder: (BuildContext context, GoRouterState state) {
+          return const BrowseSectionsCourses();
+        },
+      ),
     ],
   );
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/assets/app_images.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -23,7 +24,7 @@ class TeacherCard extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: CircleAvatar(
                 radius: 30,
-                backgroundImage: AssetImage('images/Alaa.jpg'),
+                backgroundImage: AssetImage(AppImages.testAvatarAlaa),
               ),
             ),
             Padding(

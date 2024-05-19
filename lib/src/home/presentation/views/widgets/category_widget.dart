@@ -48,7 +48,7 @@ class CategoryWidgetState extends State<CategoryWidget> {
               widget.category,
               style: TextStyle(
                 color: isSelected ? Colors.white : Colors.blue.withOpacity(0.9),
-                fontSize: MediaQuery.of(context).size.width * 0.035,
+                fontSize: 18,
                 fontWeight: FontWeight.w400,
               ),
             ),

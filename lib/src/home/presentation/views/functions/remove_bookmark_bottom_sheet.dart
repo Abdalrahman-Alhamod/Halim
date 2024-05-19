@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/utils/app_route.dart';
 
 import '../../../../../core/themes/app_colors.dart';
@@ -49,7 +50,7 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
               followers: 8.289,
               name: '3D Design illustation',
               price: 48,
-              imageUrl: 'images/p1.jpg',
+              imageUrl: AppImages.testCourseCover,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
