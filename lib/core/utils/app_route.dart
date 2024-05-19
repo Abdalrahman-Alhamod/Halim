@@ -9,13 +9,20 @@ import 'package:halim/src/course_details/presentation/views/enroll_course_view.d
 import 'package:halim/src/course_details/presentation/views/mentor_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/my_course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
+import 'package:halim/src/home/home_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
 import 'package:halim/src/splash/presentation/views/intro_view.dart';
 import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
+
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
+import '../../src/home/notifications_view.dart';
+import '../../src/home/popular_courses_view.dart';
+import '../../src/home/search_view.dart';
+import '../../src/home/top_mentors_view.dart';
+import '../../src/home/widgets/bottom_bar.dart';
 
 class AppRoute {
   static const kIntroView = '/intro';
@@ -29,13 +36,28 @@ class AppRoute {
   static const kEnrollCourseView = '/enrollCourse';
   static const kMentorDetailsView = '/mentorDetails';
   static const kMyCourseDetailsView = '/myCourseDetails';
+
+  static const kFillProfile = '/fillProfile';
+  static const kCreatePin = '/kCreatePin';
+  static const kBiomatric = '/biomatric';
+  static const kHome = '/home';
+  static const kSendCode = '/kSendCode';
+  static const kEnterCode = '/kEnterCode';
+  static const kNewPass = '/kNewPass';
+  static const kTopMentors = '/kTopMentors';
+  static const kPopularCourses = '/kPopularCourses';
+  static const kNotifications = '/kNotifications';
+  static const kBookMark = '/kBookMark';
+  static const kSearch = '/kSearch';
+  static const kBrowseSectionsCourses = '/kBrowseSectionsCourses';
+
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           // return const SplashView();
-          return const SplashView();
+          return const HomeView();
         },
       ),
       GoRoute(
@@ -104,6 +126,84 @@ class AppRoute {
           return const MyCourseDetailsView();
         },
       ),
+      // GoRoute(
+      //   path: kFillProfile,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return FillProfilView();
+      //   },
+      // ),
+      // GoRoute(
+      //   path: kCreatePin,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return CreatePinView();
+      //   },
+      // ),
+      // GoRoute(
+      //   path: kBiomatric,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return const BiometricView();
+      //   },
+      // ),
+      GoRoute(
+        path: kHome,
+        builder: (BuildContext context, GoRouterState state) {
+          return const BottomBar();
+        },
+      ),
+      // GoRoute(
+      //   path: kSendCode,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return const SendCodeview();
+      //   },
+      // ),
+      // GoRoute(
+      //   path: kEnterCode,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return const EnterCodeView();
+      //   },
+      // ),
+      // GoRoute(
+      //   path: kNewPass,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return NewPassView();
+      //   },
+      // ),
+      GoRoute(
+        path: kNotifications,
+        builder: (BuildContext context, GoRouterState state) {
+          return const NotificationsView();
+        },
+      ),
+      // GoRoute(
+      //   path: kBookMark,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return BookMarkView();
+      //   },
+      // ),
+      GoRoute(
+        path: kPopularCourses,
+        builder: (BuildContext context, GoRouterState state) {
+          return const PopularCoursesView();
+        },
+      ),
+      GoRoute(
+        path: kTopMentors,
+        builder: (BuildContext context, GoRouterState state) {
+          return const TopMonetorsView();
+        },
+      ),
+      GoRoute(
+        path: kSearch,
+        builder: (BuildContext context, GoRouterState state) {
+          return const SearchView();
+        },
+      ),
+      // GoRoute(
+      //   path: kBrowseSectionsCourses,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return BrowseSectionsCourses();
+      //   },
+      // ),
     ],
   );
 }

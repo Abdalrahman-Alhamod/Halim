@@ -112,6 +112,7 @@ dependencies:
   flutter_expand_view:
   # For community comments
   provider:
+  salomon_bottom_bar: ^3.3.2
 
 dev_dependencies:
   flutter_launcher_icons: 
