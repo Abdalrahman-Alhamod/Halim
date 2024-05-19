@@ -1,5 +1,6 @@
 part of '../../my_course_details_view.dart';
 
+// ignore: unused_element
 class _MyCourseBottomSheet extends StatelessWidget {
   const _MyCourseBottomSheet();
 

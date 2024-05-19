@@ -1,13 +1,14 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
 
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
-import 'services/Image_serves.dart';
+
 import 'widgets/drop_button.dart';
 
 class FillProfilView extends StatefulWidget {
@@ -28,14 +29,18 @@ class _FillProfilViewState extends State<FillProfilView> {
   // ignore: unused_field
   String? _selectedOption;
 
-  late ImageServes _imageServes;
+  late ImageServices _imageServices;
 
-  File? get imageFile => _imageServes.imageFile;
+  File? get imageFile => _imageServices.imageFile;
 
   @override
   void initState() {
     super.initState();
-    _imageServes = ImageServes(this);
+    _imageServices = ImageServices(this, refresh);
+  }
+
+  void refresh() {
+    setState(() {});
   }
 
   @override
@@ -70,7 +75,7 @@ class _FillProfilViewState extends State<FillProfilView> {
                 : Colors.black,
           ),
           onPressed: () {
-            GoRouter.of(context).push(AppRoute.kFillProfile);
+            GoRouter.of(context).pop();
           },
         ),
       ),
@@ -92,7 +97,7 @@ class _FillProfilViewState extends State<FillProfilView> {
                       ? FileImage(imageFile!)
                       : const AssetImage(AppImages.emptyAvatar)
                           as ImageProvider,
-                  fit: BoxFit.contain,
+                  fit: BoxFit.cover,
                 ),
               ),
               child: Container(
@@ -108,7 +113,7 @@ class _FillProfilViewState extends State<FillProfilView> {
                       child: const Icon(
                           size: 25, Icons.edit, color: Colors.white)),
                   onPressed: () {
-                    _imageServes.showOptionImage(context);
+                    _imageServices.showOptionImage(context);
                   },
                 ),
               ),

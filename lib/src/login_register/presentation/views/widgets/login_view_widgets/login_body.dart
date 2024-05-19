@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/app_route.dart';
 
 import '../../../../../../core/themes/app_text_styles.dart';
 import '../../../../../../core/translations/local_keys.g.dart';
@@ -31,7 +33,9 @@ class LoginBody extends StatelessWidget {
             ),
             AuthForm(
               buttonTitle: LocaleKeys.Auth_signIn.tr(),
-              onTap: (email, password, rememberMe) {},
+              onTap: (email, password, rememberMe) {
+                GoRouter.of(context).push(AppRoute.kFillProfile);
+              },
             ),
             const SizedBox(
               height: 20,

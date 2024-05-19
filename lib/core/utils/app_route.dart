@@ -64,7 +64,7 @@ class AppRoute {
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           // return const SplashView();
-          return const FillProfilView();
+          return const SplashView();
         },
       ),
       GoRoute(
