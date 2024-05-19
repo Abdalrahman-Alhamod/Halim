@@ -9,6 +9,7 @@ import 'package:halim/src/course_details/presentation/views/enroll_course_view.d
 import 'package:halim/src/course_details/presentation/views/mentor_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/my_course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
+import 'package:halim/src/forgot_password/presentation/views/new_pass_view.dart';
 import 'package:halim/src/home/presentation/views/home_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
@@ -17,6 +18,8 @@ import 'package:halim/src/splash/presentation/views/intro_view.dart';
 import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
+import '../../src/forgot_password/presentation/views/enter_code_view.dart';
+import '../../src/forgot_password/presentation/views/send_code_view.dart';
 import '../../src/home/presentation/views/notifications_view.dart';
 import '../../src/home/presentation/views/popular_courses_view.dart';
 import '../../src/home/presentation/views/search_view.dart';
@@ -58,7 +61,7 @@ class AppRoute {
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           // return const SplashView();
-          return const HomeView();
+          return const NewPassView();
         },
       ),
       GoRoute(
@@ -151,24 +154,24 @@ class AppRoute {
           return const BottomBar();
         },
       ),
-      // GoRoute(
-      //   path: kSendCode,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return const SendCodeview();
-      //   },
-      // ),
-      // GoRoute(
-      //   path: kEnterCode,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return const EnterCodeView();
-      //   },
-      // ),
-      // GoRoute(
-      //   path: kNewPass,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return NewPassView();
-      //   },
-      // ),
+      GoRoute(
+        path: kSendCode,
+        builder: (BuildContext context, GoRouterState state) {
+          return const SendCodeview();
+        },
+      ),
+      GoRoute(
+        path: kEnterCode,
+        builder: (BuildContext context, GoRouterState state) {
+          return const EnterCodeView();
+        },
+      ),
+      GoRoute(
+        path: kNewPass,
+        builder: (BuildContext context, GoRouterState state) {
+          return const NewPassView();
+        },
+      ),
       GoRoute(
         path: kNotifications,
         builder: (BuildContext context, GoRouterState state) {

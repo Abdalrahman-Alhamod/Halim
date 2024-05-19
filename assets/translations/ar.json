@@ -155,5 +155,8 @@
       "certificate": "الشهادة",
       "downloadCertificate": "تنزيل الشهادة"
     }
+  },
+  "ForgotPassword": {
+    "confirmPassword": "تأكيد كلمة المرور"
   }
 }

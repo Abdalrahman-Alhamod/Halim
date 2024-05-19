@@ -155,5 +155,8 @@
       "certificate": "Certificate",
       "downloadCertificate": "Download Certificate"
     }
+  },
+  "ForgotPassword": {
+    "confirmPassword": "Confirm Password"
   }
 }

@@ -171,6 +171,9 @@ class CodegenLoader extends AssetLoader{
       "certificate": "الشهادة",
       "downloadCertificate": "تنزيل الشهادة"
     }
+  },
+  "ForgotPassword": {
+    "confirmPassword": "تأكيد كلمة المرور"
   }
 };
 static const Map<String,dynamic> en = {
@@ -330,6 +333,9 @@ static const Map<String,dynamic> en = {
       "certificate": "Certificate",
       "downloadCertificate": "Download Certificate"
     }
+  },
+  "ForgotPassword": {
+    "confirmPassword": "Confirm Password"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
