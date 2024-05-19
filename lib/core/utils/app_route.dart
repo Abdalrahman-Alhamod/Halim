@@ -17,6 +17,9 @@ import 'package:halim/src/login_register/presentation/views/register_view.dart';
 import 'package:halim/src/splash/presentation/views/intro_view.dart';
 import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
+import '../../src/account_setup/presentation/views/biometric_view.dart';
+import '../../src/account_setup/presentation/views/create_pin_view.dart';
+import '../../src/account_setup/presentation/views/fill_profile_view.dart';
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
 import '../../src/forgot_password/presentation/views/enter_code_view.dart';
 import '../../src/forgot_password/presentation/views/send_code_view.dart';
@@ -61,7 +64,7 @@ class AppRoute {
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           // return const SplashView();
-          return const NewPassView();
+          return const FillProfilView();
         },
       ),
       GoRoute(
@@ -130,24 +133,24 @@ class AppRoute {
           return const MyCourseDetailsView();
         },
       ),
-      // GoRoute(
-      //   path: kFillProfile,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return FillProfilView();
-      //   },
-      // ),
-      // GoRoute(
-      //   path: kCreatePin,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return CreatePinView();
-      //   },
-      // ),
-      // GoRoute(
-      //   path: kBiomatric,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return const BiometricView();
-      //   },
-      // ),
+      GoRoute(
+        path: kFillProfile,
+        builder: (BuildContext context, GoRouterState state) {
+          return const FillProfilView();
+        },
+      ),
+      GoRoute(
+        path: kCreatePin,
+        builder: (BuildContext context, GoRouterState state) {
+          return const CreatePinView();
+        },
+      ),
+      GoRoute(
+        path: kBiomatric,
+        builder: (BuildContext context, GoRouterState state) {
+          return const BiometricView();
+        },
+      ),
       GoRoute(
         path: kHome,
         builder: (BuildContext context, GoRouterState state) {

@@ -76,7 +76,7 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   physics: const ScrollPhysics(),
-                  children: [
+                  children: const [
                     CategoryWidget('🔥 All'),
                     CategoryWidget('💡 AI'),
                     CategoryWidget('🖋 3D Design'),
