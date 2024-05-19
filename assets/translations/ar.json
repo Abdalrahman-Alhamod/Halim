@@ -147,6 +147,13 @@
       "aboutMe": "عنِّي",
       "message": "مراسلة",
       "website": "ويب"
+    },
+    "MyCourse": {
+      "continueTheCourse": "أكمل الدورة",
+      "startCourseAgain": "ابدأ الدورة من جديد",
+      "announcements": "إعلانات",
+      "certificate": "الشهادة",
+      "downloadCertificate": "تنزيل الشهادة"
     }
   }
 }

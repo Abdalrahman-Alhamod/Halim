@@ -24,6 +24,7 @@ class AppImages {
   static const testAvatarObada = '$testPath/obada.png';
   static const testAvatarYassin = '$testPath/yassin.png';
   static const testAvatarAlaa = '$testPath/alaa.png';
+  static const testCertificate = '$testPath/certificate.png';
 
   static const List<String> allImages = [
     appLogo,
@@ -49,6 +50,7 @@ class AppImages {
     testAvatarAbd,
     testAvatarAlaa,
     testAvatarObada,
-    testAvatarYassin
+    testAvatarYassin,
+    testCertificate
   ];
 }

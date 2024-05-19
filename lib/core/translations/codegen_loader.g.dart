@@ -163,6 +163,13 @@ class CodegenLoader extends AssetLoader{
       "aboutMe": "عنِّي",
       "message": "مراسلة",
       "website": "ويب"
+    },
+    "MyCourse": {
+      "continueTheCourse": "أكمل الدورة",
+      "startCourseAgain": "ابدأ الدورة من جديد",
+      "announcements": "إعلانات",
+      "certificate": "الشهادة",
+      "downloadCertificate": "تنزيل الشهادة"
     }
   }
 };
@@ -315,6 +322,13 @@ static const Map<String,dynamic> en = {
       "aboutMe": "About Me",
       "message": "Message",
       "website": "Website"
+    },
+    "MyCourse": {
+      "continueTheCourse": "Continue The Course",
+      "startCourseAgain": "Start Course Again",
+      "announcements": "Announcements",
+      "certificate": "Certificate",
+      "downloadCertificate": "Download Certificate"
     }
   }
 };

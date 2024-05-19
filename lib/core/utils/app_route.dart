@@ -7,6 +7,7 @@ import 'package:halim/src/course_details/presentation/views/course_lessons_view.
 import 'package:halim/src/course_details/presentation/views/course_reading_view.dart';
 import 'package:halim/src/course_details/presentation/views/enroll_course_view.dart';
 import 'package:halim/src/course_details/presentation/views/mentor_details_view.dart';
+import 'package:halim/src/course_details/presentation/views/my_course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
@@ -27,13 +28,14 @@ class AppRoute {
   static const kCourseReviewsView = '/courseReviews';
   static const kEnrollCourseView = '/enrollCourse';
   static const kMentorDetailsView = '/mentorDetails';
+  static const kMyCourseDetailsView = '/myCourseDetails';
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           // return const SplashView();
-          return const CourseDetailsView();
+          return const SplashView();
         },
       ),
       GoRoute(
@@ -94,6 +96,12 @@ class AppRoute {
         path: kMentorDetailsView,
         builder: (BuildContext context, GoRouterState state) {
           return const MentorDetailsView();
+        },
+      ),
+      GoRoute(
+        path: kMyCourseDetailsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const MyCourseDetailsView();
         },
       ),
     ],

@@ -147,6 +147,13 @@
       "aboutMe": "About Me",
       "message": "Message",
       "website": "Website"
+    },
+    "MyCourse": {
+      "continueTheCourse": "Continue The Course",
+      "startCourseAgain": "Start Course Again",
+      "announcements": "Announcements",
+      "certificate": "Certificate",
+      "downloadCertificate": "Download Certificate"
     }
   }
 }
