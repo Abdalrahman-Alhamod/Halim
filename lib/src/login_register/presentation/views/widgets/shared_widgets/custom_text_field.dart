@@ -7,19 +7,19 @@ import '../../../../../../core/themes/app_colors.dart';
 class CustomTextField extends StatefulWidget {
   const CustomTextField({
     super.key,
-    required this.obscureText,
+    this.obscureText = false,
     required this.hintText,
     required this.onChanged,
-    required this.validator,
-    required this.keyboardType,
-    required this.prefixIcon,
+    this.validator,
+    this.keyboardType = TextInputType.text,
+    this.prefixIcon,
   });
   final bool obscureText;
   final String hintText;
   final void Function(String) onChanged;
-  final String? Function(String?) validator;
+  final String? Function(String?)? validator;
   final TextInputType keyboardType;
-  final IconData prefixIcon;
+  final IconData? prefixIcon;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -82,12 +82,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
             : _isFocused
                 ? AppColors.primaryColor.withAlpha(30)
                 : Colors.grey.shade200,
-        prefixIcon: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Icon(
-            widget.prefixIcon,
-          ),
-        ),
+        prefixIcon: widget.prefixIcon != null
+            ? Padding(
+                padding: const EdgeInsets.all(24),
+                child: Icon(
+                  widget.prefixIcon,
+                ),
+              )
+            : null,
         prefixIconColor:
             _isFocused ? AppColors.primaryColor : Colors.grey.shade500,
         suffixIcon: widget.obscureText

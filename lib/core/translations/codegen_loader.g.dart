@@ -45,7 +45,135 @@ class CodegenLoader extends AssetLoader{
     "intro3": "دعنا نحسن مهاراتك مع حليم الآن!"
   },
   "Buttons": {
-    "next": "التالي"
+    "next": "التالي",
+    "readMore": "اقرأ المزيد",
+    "showLess": "أظهر أقل",
+    "seeAll": "عرض الكل",
+    "download": "تنزيل",
+    "all": "الكل",
+    "apply": "تطبيق"
+  },
+  "CourseDetails": {
+    "reviews": "مراجعة",
+    "students": "طالب",
+    "hours": "ساعة",
+    "certificate": "شهادة",
+    "Sections": {
+      "about": "حول",
+      "lessons": "الدروس",
+      "reviews": "المراجعات",
+      "community": "المجتمع"
+    },
+    "About": {
+      "mentor": "المعلّم",
+      "aboutCourse": " نبذة عن الدورة",
+      "tools": "الأدوات",
+      "keywords": "كلمات مفتاحية"
+    },
+    "Test": {
+      "courseTitle": "مقدمة في تصميم واجهة المستخدم",
+      "courseMentorName": "يوسف عبد الرحمن",
+      "courseMentorTitle": "خبير تصميم واجهة مستخدم في غوغل",
+      "courseCategory": "تصميم واجهة مستخدم",
+      "courseAbout": "انطلق في رحلة استكشاف غامرة في مجال تصميم واجهة المستخدم وتجربة المستخدم من خلال دورتنا الشاملة. اغمر في عالم نظرية التصميم الدقيق، وفهم علم النفس وراء تفاعلات المستخدمين وعمليات اتخاذ القرار. تعلم كيفية إجراء أبحاث شاملة حول المستخدم، وتحليل البيانات بفعالية، وترجمة النتائج إلى حلول تصميم مقنعة. قم بتجربة مجموعة واسعة من الأدوات والمنهجيات التصميمية، مما يدعم تطوير مهارتك وتوسيع آفاق إبداعك. تعاون مع المحترفين في الصناعة والأقران، مكتسبًا تغذية راجعة وأفكارًا لا تقدر بثمن على طول الطريق. بحلول نهاية الدورة، ستخرج كمصمم ماهر مجهز بالمعرفة والمهارات اللازمة لإنشاء تجارب رقمية مبتكرة ومؤثرة تتفاعل مع المستخدمين على مستوى عميق.",
+      "Lessons": {
+        "title1": "لماذا استخدام فيغما",
+        "title2": "أنشئ حسابك على فيغما",
+        "title3": "إلقاء نظرة على واجهة فيغما",
+        "title4": "العمل مع الإطار والطبقة",
+        "title5": "العمل مع النصوص والشبكات",
+        "title6": "استخدام ملحقات فيغما",
+        "title7": "لنقم بتصميم نموذج تسجيل الدخول",
+        "title8": "لنقم بإنشاء نموذج تجريبي",
+        "title9": "مشاركة العمل مع الفريق",
+        "title10": "تصدير العناصر",
+        "section1": "القسم الأول - المقدمة",
+        "section2": "القسم الثاني - أساسيات فيغما",
+        "section3": "القسم الثالث - هيّا نمارس",
+        "desc1": "استكشاف المفاهيم الأساسية في تصميم واجهة المستخدم وتجربة المستخدم وتأثيرها العملي في العالم الرقمي",
+        "desc2": "تعلم الأساسيات في فيغما، من التنقل في الواجهة إلى إنشاء وتحرير التصاميم بشكل تعاوني",
+        "desc3": "تطبيق النظريات في التصميم العملي من خلال تمارين وتحديات تقوي فهمك ومهاراتك"
+      },
+      "Reviews": {
+        "Names": {
+          "abd": "عبدالرحمن الحامض",
+          "alaa": "علاء لبابيدي",
+          "yassin": "محمد ياسين",
+          "obada": "عبادة المصري",
+          "ahmad": "أحمد اسماعيل"
+        },
+        "review1": "دورة رائعة جداً! 🌟 المحتوى مرتب ومشوق، وتقديمها من قبل مدربين متخصصين عظماء. أنصح بها بشدة! 👍",
+        "review2": "أنا مذهول بعمق المعلومات المغطاة في هذه الدورة. 🚀 إنها مثالية للمبتدئين والمصممين ذوي الخبرة على حد سواء. لا يمكنني الانتظار لتطبيق ما تعلمته! 💡",
+        "review3": "دورة رائعة بشكل عام. 👌 المحتوى ذو رؤية واضحة ومفيدة، ولكن بعض الأقسام يمكن أن تكون أكثر اختصارًا. 📚",
+        "review4": "دورة جيدة، ولكن ليست بالتمام كما كنت أتوقع. 😕 السرعة كانت بطيئة، وشعرت بفقدان الاهتمام في بعض الأحيان. ⏳",
+        "review5": "تجربة مخيبة للآمال. 👎 كان المحتوى قديمًا، وكان المدربون يفتقرون إلى الحماس. لا أوصي بها. 🚫",
+        "reviewDate": "منذ اسبوعين"
+      },
+      "Community": {
+        "comment1": "هاد تعليق",
+        "reply1": "لا هاد منشور",
+        "reply2": "و هاد رد",
+        "comment2": "هاد سؤال ما كان حدا يجاوب عليه",
+        "comment3": "حدا بيعرف كتاب ظريف عن Figma ؟",
+        "reply3": "شوف كتاب \"Designing User Interfaces\", أنا لقيتو جداً مفيد",
+        "reply4": "عملك نظرة على ال docs الرسمية",
+        "reply5": "مافي حاجة للكتب, بس مارس",
+        "comment4": "هناك بعض التحديثات على القسم الثالث, من فضلك تفقده و لا تنسى أن تقوم بتقييم الدورة ❤️"
+      },
+      "Mentor": {
+        "aboutMeTitle": "مصمم واجهات مستخدم محترف | خبير في نظام التصميم بغوغل | متخصص في تصميم المنتجات في سان فرانسيسكو | مدرب في منصة حليم",
+        "aboutMeDesc": "مرحبًا، أنا يوسف عبدالرحمن، مصمم واجهات مستخدم بخبرة وشغف لخلق تجارب رقمية سلسة وجذابة. بعد سنوات من الخبرة في غوغل، أتخصص في صياغة حلول تصميم موجهة للمستخدم وتحسين واجهات المستخدم لتحقيق أقصى قدر من الاستخدامية والمشاركة. مقره في مدينة سان فرانسيسكو النابضة بالحياة، أجد الإلهام في التعاون مع فرق متعددة التخصصات لتحقيق أفكار المنتجات المبتكرة. كمتعلم متحمس ومدرب، أستمتع أيضًا بمشاركة معرفتي وتجاربي كمدرب على منصة حليم، لتمكين المصممين الطموحين من اتقان مهاراتهم والتفوق في مجال تصميم واجهات المستخدم وتجربة المستخدم الديناميكي."
+      }
+    },
+    "enrollCourse": "سجِّل في الدورة",
+    "Lessons": {
+      "lesson": "درس",
+      "min": "دقيقة",
+      "Type": {
+        "video": "فيديو",
+        "reading": "قراءة",
+        "quiz": "اختبار"
+      },
+      "questions": "سؤال"
+    },
+    "Level": {
+      "beginner": "مبتدئ",
+      "intermediate": "متوسط",
+      "advanced": "متقدم"
+    },
+    "Community": {
+      "reply": "رد"
+    },
+    "Enroll": {
+      "couponCode": "رمز القسيمة",
+      "wallet": "المحفظة",
+      "price": "السعر",
+      "discount": "الخصم",
+      "total": "الإجمالي",
+      "enroll": "اشتراك",
+      "enterYourPinToConfirm": "ادخل رمزك السرّي لإكمال عملية الشراء",
+      "enrollSuccess": "تم الاشتراك بالكورس بنجاح!",
+      "enrollSuccessDesc": "لقد قمت بإنجاز عملية الشراء بنجاح و الاشتراك بالدورة.",
+      "viewEReceipt": "عرض الإيصال الإلكتروني"
+    },
+    "viewCourse": "عرض الدورة",
+    "Mentor": {
+      "courses": "الدورات",
+      "coursesNum": "دورة",
+      "aboutMe": "عنِّي",
+      "message": "مراسلة",
+      "website": "ويب"
+    },
+    "MyCourse": {
+      "continueTheCourse": "أكمل الدورة",
+      "startCourseAgain": "ابدأ الدورة من جديد",
+      "announcements": "إعلانات",
+      "certificate": "الشهادة",
+      "downloadCertificate": "تنزيل الشهادة"
+    }
+  },
+  "ForgotPassword": {
+    "confirmPassword": "تأكيد كلمة المرور"
   }
 };
 static const Map<String,dynamic> en = {
@@ -79,7 +207,135 @@ static const Map<String,dynamic> en = {
     "intro3": "Let's improve your skills together with Halim right now!"
   },
   "Buttons": {
-    "next": "Next"
+    "next": "Next",
+    "readMore": "Read more",
+    "showLess": "Show less",
+    "seeAll": "See All",
+    "download": "Download",
+    "all": "All",
+    "apply": "Apply"
+  },
+  "CourseDetails": {
+    "reviews": "reviews",
+    "students": "Students",
+    "hours": "Hours",
+    "certificate": "Certificate",
+    "Sections": {
+      "about": "About",
+      "lessons": "Lessons",
+      "reviews": "Reviews",
+      "community": "Community"
+    },
+    "About": {
+      "mentor": "Mentor",
+      "aboutCourse": "About Course",
+      "tools": "Tools",
+      "keywords": "Keywords"
+    },
+    "Test": {
+      "courseTitle": "Intro to UI/UX Desgin",
+      "courseMentorName": "Johanathan Wiliams",
+      "courseMentorTitle": "Senior UI/UX Designer at Google",
+      "courseCategory": "UI/UX Design",
+      "courseAbout": "Embark on an immersive exploration of the dynamic field of user interface and user experience design through our comprehensive course. Delve deep into the intricate world of design theory, understanding the psychology behind user interactions and decision-making processes. Learn how to conduct comprehensive user research, analyze data effectively, and translate insights into compelling design solutions. Experiment with a wide range of design tools and methodologies, honing your craft and expanding your creative horizons. Collaborate with industry professionals and peers, gaining invaluable feedback and insights along the way. By the end of the course, you'll emerge as a proficient designer equipped with the knowledge and skills to create innovative and impactful digital experiences that resonate with users on a profound level",
+      "Lessons": {
+        "title1": "Why Using Figma",
+        "title2": "Set up Your Figma Account",
+        "title3": "Take a Look Figma Interface",
+        "title4": "Working with Frame & Layer",
+        "title5": "Working with Text & Grids",
+        "title6": "Using Figma Plugins",
+        "title7": "Let's Design a Sign-Up Form",
+        "title8": "Let's Create a Prototype",
+        "title9": "Sharing Work with Team",
+        "title10": "Exporting Assets",
+        "section1": "Section 1 - Introduction",
+        "section2": "Section 2 - Figma Basic",
+        "section3": "Section 3 - Let's Practice",
+        "desc1": "Explore the foundational concepts of UI/UX design and their practical implications in the digital world",
+        "desc2": "Learn the basics of Figma, from navigating the interface to creating and editing designs collaboratively",
+        "desc3": "Put theory into action with practical exercises and design challenges that reinforce your learning"
+      },
+      "Reviews": {
+        "Names": {
+          "abd": "Abdalrahman Alhamod",
+          "alaa": "Alaa Lababedi",
+          "yassin": "Mohammad Yassin",
+          "obada": "Obadaa Almasri",
+          "ahmad": "Ahmad Esmail"
+        },
+        "review1": "Absolutely fantastic course! 🌟 The content is well-structured, engaging, and delivered by knowledgeable instructors. Highly recommend! 👍",
+        "review2": "I'm blown away by the depth of information covered in this course. 🚀 It's perfect for beginners and experienced designers alike. Can't wait to apply what I've learned! 💡",
+        "review3": "Great course overall. 👌 The content is insightful and informative, but some sections could be more concise. 📚",
+        "review4": "Decent course, but not quite what I expected. 😕 The pacing felt slow, and I found myself losing interest at times. ⏳",
+        "review5": "Disappointing experience. 👎 The material was outdated, and the instructors lacked enthusiasm. Wouldn't recommend. 🚫",
+        "reviewDate": "2 weeks ago"
+      },
+      "Community": {
+        "comment1": "This is a comment",
+        "reply1": "No this is a post",
+        "reply2": "And this is a reply",
+        "comment2": "This is a question with no answer",
+        "comment3": "Does anyone knows a good book about Figma?",
+        "reply3": "See the \"Designing User Interfaces\" book, i found it very useful",
+        "reply4": "Take a look at the official docs",
+        "reply5": "No need for books, just practice",
+        "comment4": "There is some updates on section 3, please check it and don't forget to review the course ❤️"
+      },
+      "Mentor": {
+        "aboutMeTitle": "Senior UI/UX Designer | Google Design System Expert | Product Design Specialist in San Francisco | Halim Instructor",
+        "aboutMeDesc": "Hello, I'm Johanathan Williams, a seasoned UI/UX designer with a passion for creating intuitive and visually appealing digital experiences. With years of experience at Google, I specialize in crafting user-centric design solutions and optimizing user interfaces for maximum usability and engagement. Based in the vibrant city of San Francisco, I thrive on collaborating with cross-functional teams to bring innovative product ideas to life. As an avid learner and educator, I also enjoy sharing my knowledge and insights as a Halim instructor, empowering aspiring designers to hone their skills and excel in the dynamic field of UI/UX design."
+      }
+    },
+    "enrollCourse": "Enroll Course",
+    "Lessons": {
+      "lesson": "Lesson",
+      "min": "min",
+      "Type": {
+        "video": "Video",
+        "reading": "Reading",
+        "quiz": "Quiz"
+      },
+      "questions": "Questions"
+    },
+    "Level": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "Community": {
+      "reply": "Reply"
+    },
+    "Enroll": {
+      "couponCode": "Coupon Code",
+      "wallet": "Wallet",
+      "price": "Price",
+      "discount": "Discount",
+      "total": "Total",
+      "enroll": "Enroll",
+      "enterYourPinToConfirm": "Enter your PIN to confirm payment",
+      "enrollSuccess": "Enroll Course Successful!",
+      "enrollSuccessDesc": "You have successfully made payment and enrolled the course.",
+      "viewEReceipt": "View E-Receipt"
+    },
+    "viewCourse": "View Course",
+    "Mentor": {
+      "courses": "Courses",
+      "coursesNum": "Courses",
+      "aboutMe": "About Me",
+      "message": "Message",
+      "website": "Website"
+    },
+    "MyCourse": {
+      "continueTheCourse": "Continue The Course",
+      "startCourseAgain": "Start Course Again",
+      "announcements": "Announcements",
+      "certificate": "Certificate",
+      "downloadCertificate": "Download Certificate"
+    }
+  },
+  "ForgotPassword": {
+    "confirmPassword": "Confirm Password"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

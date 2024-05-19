@@ -15,6 +15,16 @@ class AppImages {
   static const forgotPassword = '$mainPath/forgot_password.png';
   static const google = '$mainPath/google.png';
   static const facebook = '$mainPath/facebook.png';
+   static const emptyAvatar = '$mainPath/emptyAvatar.png';
+
+  static const testPath = 'assets/images/test';
+  static const testCourseCover = '$testPath/course_cover.png';
+  static const testMentor = '$testPath/mentor.png';
+  static const testAvatarAbd = '$testPath/abd.png';
+  static const testAvatarObada = '$testPath/obada.png';
+  static const testAvatarYassin = '$testPath/yassin.png';
+  static const testAvatarAlaa = '$testPath/alaa.png';
+  static const testCertificate = '$testPath/certificate.png';
 
   static const List<String> allImages = [
     appLogo,
@@ -32,5 +42,15 @@ class AppImages {
     forgotPassword,
     google,
     facebook,
+    emptyAvatar,
+
+    // Test
+    testCourseCover,
+    testMentor,
+    testAvatarAbd,
+    testAvatarAlaa,
+    testAvatarObada,
+    testAvatarYassin,
+    testCertificate
   ];
 }

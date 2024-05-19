@@ -11,18 +11,22 @@ class CustomElevatedButton extends StatelessWidget {
     this.width = double.infinity,
     this.height = 60,
     this.isEnabled = true,
+    this.elevation = 10,
+    this.backgroundColor = AppColors.primaryColor,
   });
-  final void Function() onPressed;
+  final void Function()? onPressed;
   final String title;
   final double width;
   final double height;
   final bool isEnabled;
+  final double elevation;
+  final Color backgroundColor;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: isEnabled ? onPressed : null,
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primaryColor,
+        backgroundColor: backgroundColor,
         foregroundColor: Colors.black,
         disabledBackgroundColor: AppColors.disabledButtonColor,
         shadowColor: AppColors.primaryColor,
@@ -31,7 +35,7 @@ class CustomElevatedButton extends StatelessWidget {
           AppConstrains.maxHeight,
         ),
         fixedSize: Size(width, height),
-        elevation: 10,
+        elevation: elevation,
       ),
       child: Text(
         title,

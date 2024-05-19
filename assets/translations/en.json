@@ -29,6 +29,134 @@
     "intro3": "Let's improve your skills together with Halim right now!"
   },
   "Buttons": {
-    "next": "Next"
+    "next": "Next",
+    "readMore": "Read more",
+    "showLess": "Show less",
+    "seeAll": "See All",
+    "download": "Download",
+    "all": "All",
+    "apply": "Apply"
+  },
+  "CourseDetails": {
+    "reviews": "reviews",
+    "students": "Students",
+    "hours": "Hours",
+    "certificate": "Certificate",
+    "Sections": {
+      "about": "About",
+      "lessons": "Lessons",
+      "reviews": "Reviews",
+      "community": "Community"
+    },
+    "About": {
+      "mentor": "Mentor",
+      "aboutCourse": "About Course",
+      "tools": "Tools",
+      "keywords": "Keywords"
+    },
+    "Test": {
+      "courseTitle": "Intro to UI/UX Desgin",
+      "courseMentorName": "Johanathan Wiliams",
+      "courseMentorTitle": "Senior UI/UX Designer at Google",
+      "courseCategory": "UI/UX Design",
+      "courseAbout": "Embark on an immersive exploration of the dynamic field of user interface and user experience design through our comprehensive course. Delve deep into the intricate world of design theory, understanding the psychology behind user interactions and decision-making processes. Learn how to conduct comprehensive user research, analyze data effectively, and translate insights into compelling design solutions. Experiment with a wide range of design tools and methodologies, honing your craft and expanding your creative horizons. Collaborate with industry professionals and peers, gaining invaluable feedback and insights along the way. By the end of the course, you'll emerge as a proficient designer equipped with the knowledge and skills to create innovative and impactful digital experiences that resonate with users on a profound level",
+      "Lessons": {
+        "title1": "Why Using Figma",
+        "title2": "Set up Your Figma Account",
+        "title3": "Take a Look Figma Interface",
+        "title4": "Working with Frame & Layer",
+        "title5": "Working with Text & Grids",
+        "title6": "Using Figma Plugins",
+        "title7": "Let's Design a Sign-Up Form",
+        "title8": "Let's Create a Prototype",
+        "title9": "Sharing Work with Team",
+        "title10": "Exporting Assets",
+        "section1": "Section 1 - Introduction",
+        "section2": "Section 2 - Figma Basic",
+        "section3": "Section 3 - Let's Practice",
+        "desc1": "Explore the foundational concepts of UI/UX design and their practical implications in the digital world",
+        "desc2": "Learn the basics of Figma, from navigating the interface to creating and editing designs collaboratively",
+        "desc3": "Put theory into action with practical exercises and design challenges that reinforce your learning"
+      },
+      "Reviews": {
+        "Names": {
+          "abd": "Abdalrahman Alhamod",
+          "alaa": "Alaa Lababedi",
+          "yassin": "Mohammad Yassin",
+          "obada": "Obadaa Almasri",
+          "ahmad": "Ahmad Esmail"
+        },
+        "review1": "Absolutely fantastic course! 🌟 The content is well-structured, engaging, and delivered by knowledgeable instructors. Highly recommend! 👍",
+        "review2": "I'm blown away by the depth of information covered in this course. 🚀 It's perfect for beginners and experienced designers alike. Can't wait to apply what I've learned! 💡",
+        "review3": "Great course overall. 👌 The content is insightful and informative, but some sections could be more concise. 📚",
+        "review4": "Decent course, but not quite what I expected. 😕 The pacing felt slow, and I found myself losing interest at times. ⏳",
+        "review5": "Disappointing experience. 👎 The material was outdated, and the instructors lacked enthusiasm. Wouldn't recommend. 🚫",
+        "reviewDate": "2 weeks ago"
+      },
+      "Community": {
+        "comment1": "This is a comment",
+        "reply1": "No this is a post",
+        "reply2": "And this is a reply",
+        "comment2": "This is a question with no answer",
+        "comment3": "Does anyone knows a good book about Figma?",
+        "reply3": "See the \"Designing User Interfaces\" book, i found it very useful",
+        "reply4": "Take a look at the official docs",
+        "reply5": "No need for books, just practice",
+        "comment4": "There is some updates on section 3, please check it and don't forget to review the course ❤️"
+      },
+      "Mentor": {
+        "aboutMeTitle": "Senior UI/UX Designer | Google Design System Expert | Product Design Specialist in San Francisco | Halim Instructor",
+        "aboutMeDesc": "Hello, I'm Johanathan Williams, a seasoned UI/UX designer with a passion for creating intuitive and visually appealing digital experiences. With years of experience at Google, I specialize in crafting user-centric design solutions and optimizing user interfaces for maximum usability and engagement. Based in the vibrant city of San Francisco, I thrive on collaborating with cross-functional teams to bring innovative product ideas to life. As an avid learner and educator, I also enjoy sharing my knowledge and insights as a Halim instructor, empowering aspiring designers to hone their skills and excel in the dynamic field of UI/UX design."
+      }
+    },
+    "enrollCourse": "Enroll Course",
+    "Lessons": {
+      "lesson": "Lesson",
+      "min": "min",
+      "Type": {
+        "video": "Video",
+        "reading": "Reading",
+        "quiz": "Quiz"
+      },
+      "questions": "Questions"
+    },
+    "Level": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "Community": {
+      "reply": "Reply"
+    },
+    "Enroll": {
+      "couponCode": "Coupon Code",
+      "wallet": "Wallet",
+      "price": "Price",
+      "discount": "Discount",
+      "total": "Total",
+      "enroll": "Enroll",
+      "enterYourPinToConfirm": "Enter your PIN to confirm payment",
+      "enrollSuccess": "Enroll Course Successful!",
+      "enrollSuccessDesc": "You have successfully made payment and enrolled the course.",
+      "viewEReceipt": "View E-Receipt"
+    },
+    "viewCourse": "View Course",
+    "Mentor": {
+      "courses": "Courses",
+      "coursesNum": "Courses",
+      "aboutMe": "About Me",
+      "message": "Message",
+      "website": "Website"
+    },
+    "MyCourse": {
+      "continueTheCourse": "Continue The Course",
+      "startCourseAgain": "Start Course Again",
+      "announcements": "Announcements",
+      "certificate": "Certificate",
+      "downloadCertificate": "Download Certificate"
+    }
+  },
+  "ForgotPassword": {
+    "confirmPassword": "Confirm Password"
   }
 }
