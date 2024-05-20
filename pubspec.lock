@@ -406,14 +406,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.1"
-  flutter_expand_view:
-    dependency: "direct main"
-    description:
-      name: flutter_expand_view
-      sha256: "068861a7e8ac022334a2eb3a094d405c778299440058d5637018276218c21254"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.6.2"
   flutter_form_builder:
     dependency: "direct main"
     description:
