@@ -104,6 +104,7 @@ dependencies:
   readmore:
   # for course details section
   expandable_page_view:
+  
   # for course reading section
   # flutter_super_html_viewer:
   # Slide to donwload\delete
