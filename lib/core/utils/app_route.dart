@@ -63,7 +63,6 @@ class AppRoute {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          // return const SplashView();
           return const SplashView();
         },
       ),

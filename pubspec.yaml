@@ -104,12 +104,11 @@ dependencies:
   readmore:
   # for course details section
   expandable_page_view:
+  
   # for course reading section
   # flutter_super_html_viewer:
   # Slide to donwload\delete
   flutter_slidable:
-  # For collapsing sub section in lessons
-  flutter_expand_view:
   # For community comments
   provider:
   salomon_bottom_bar: ^3.3.2
