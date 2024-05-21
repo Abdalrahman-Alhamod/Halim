@@ -71,7 +71,7 @@ class _CouponTextFieldState extends State<CouponTextField> {
           child: SvgPicture.asset(
             AppSVGs.coupon,
             width: 32,
-            color: _isFocused ? AppColors.primaryColor : Colors.grey.shade500,
+            colorFilter: ColorFilter.mode(_isFocused ? AppColors.primaryColor : Colors.grey.shade500, BlendMode.srcIn),
           ),
         ),
         suffixIcon: Padding(

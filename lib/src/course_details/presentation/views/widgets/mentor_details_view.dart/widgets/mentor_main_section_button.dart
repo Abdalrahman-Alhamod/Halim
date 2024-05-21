@@ -25,7 +25,10 @@ class MentorMainSectionButton extends StatelessWidget {
       onPressed: onPressed,
       icon: SvgPicture.asset(
         svgPicture,
-        color: isOutlined ? AppColors.primaryColor : Colors.white,
+        colorFilter: ColorFilter.mode(
+          isOutlined ? AppColors.primaryColor : Colors.white,
+          BlendMode.srcIn,
+        ),
         width: 24,
       ),
       label: Text(
