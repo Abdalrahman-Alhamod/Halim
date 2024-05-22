@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/utils/app_route.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
@@ -15,7 +16,7 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
         height: 320,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: MediaQuery.of(context).platformBrightness == Brightness.dark
+          color: context.isDarkMode
               ? AppColors.darkColor
               : AppColors.lightFlatButtonColor,
           borderRadius: const BorderRadius.only(

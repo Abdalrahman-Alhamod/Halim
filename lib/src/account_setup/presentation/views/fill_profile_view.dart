@@ -1,10 +1,13 @@
 import 'dart:io';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
 
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/local_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
@@ -45,22 +48,19 @@ class _FillProfilViewState extends State<FillProfilView> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 50,
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
-                : AppColors.lightFlatButtonColor,
+                : Colors.white,
         title: Text(
-          'Fill your profile',
+         LocaleKeys.FillYourProfile_fillYourProfile.tr(),
           style: TextStyle(
             fontSize: 20,
-            fontFamily: 'Cairo',
             fontWeight: FontWeight.w500,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -70,7 +70,7 @@ class _FillProfilViewState extends State<FillProfilView> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -80,9 +80,9 @@ class _FillProfilViewState extends State<FillProfilView> {
         ),
       ),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
-              : AppColors.lightFlatButtonColor,
+              : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -97,7 +97,7 @@ class _FillProfilViewState extends State<FillProfilView> {
                       ? FileImage(imageFile!)
                       : const AssetImage(AppImages.emptyAvatar)
                           as ImageProvider,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
               child: Container(
@@ -118,29 +118,31 @@ class _FillProfilViewState extends State<FillProfilView> {
                 ),
               ),
             ),
+            Container(height: 20),
             CustomTextField(
-              hintText: 'Full Name',
+              hintText: LocaleKeys.FillYourProfile_fullName.tr(),
               onChanged: (value) {
                 fullName = value;
               },
             ),
             CustomTextField(
-              hintText: 'Last Name',
+              hintText: LocaleKeys.FillYourProfile_lastName.tr(),
               onChanged: (value) {
                 lastName = value;
               },
             ),
             CustomTextField(
-              hintText: 'Date of Birth',
+              hintText:  LocaleKeys.FillYourProfile_dateOfBirth.tr(),
               onChanged: (value) {
                 dateBirth = value;
               },
             ),
             CustomTextField(
-              hintText: 'Phone Number',
+              hintText: LocaleKeys.FillYourProfile_phone.tr(),
               onChanged: (value) {
                 phoneNumber = value;
               },
+              keyboardType: TextInputType.number,
               prefixIcon: Icons.phone,
             ),
             DropdownButtonField(
@@ -150,12 +152,9 @@ class _FillProfilViewState extends State<FillProfilView> {
                 });
               },
             ),
+            Container(height: 30),
             Padding(
-              padding: EdgeInsets.only(
-                  left: screenSize.width * 0.05,
-                  right: screenSize.width * 0.05,
-                  bottom: screenSize.width * 0.0,
-                  top: screenSize.width * 0.07),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: CustomFlatButton(
                 onPressed: () {
                   GoRouter.of(context).push(AppRoute.kCreatePin);

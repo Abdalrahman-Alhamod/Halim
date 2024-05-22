@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -18,7 +19,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         toolbarHeight: 90,
@@ -26,7 +27,7 @@ class HomeView extends StatelessWidget {
         title: const WelcomeCard(),
       ),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
       body: SingleChildScrollView(

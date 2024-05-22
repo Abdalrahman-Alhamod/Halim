@@ -32,7 +32,7 @@
 //                 trailing: Text(
 //                   "93 / 124",
 //                   style: TextStyle(
-//                   color: MediaQuery.of(context).platformBrightness == Brightness.dark
+//                   color: context.isDarkMode
 //                 ? Colors.white54
 //                 : Colors.black54,
 //                     fontSize: 12,

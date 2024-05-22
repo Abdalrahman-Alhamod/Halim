@@ -158,5 +158,18 @@
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password"
+  },
+  "FillYourProfile": {
+    "fillYourProfile": "Fill your profile",
+    "fullName": "Full Name",
+    "lastName": "Last Name",
+    "dateOfBirth": "Date Of Birth",
+    "phone": "Phone Number",
+    "Gender": {
+      "male": "Male",
+      "female": "Female"
+    },
+    "continue": "Continue",
+    "gender": "Gendger"
   }
 }

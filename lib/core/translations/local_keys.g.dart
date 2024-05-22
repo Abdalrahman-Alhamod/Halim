@@ -1,7 +1,5 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
-// ignore_for_file: constant_identifier_names
-
 abstract class  LocaleKeys {
   static const Auth_email = 'Auth.email';
   static const Auth_orContinueWith = 'Auth.orContinueWith';
@@ -143,5 +141,16 @@ abstract class  LocaleKeys {
   static const CourseDetails = 'CourseDetails';
   static const ForgotPassword_confirmPassword = 'ForgotPassword.confirmPassword';
   static const ForgotPassword = 'ForgotPassword';
+  static const FillYourProfile_fillYourProfile = 'FillYourProfile.fillYourProfile';
+  static const FillYourProfile_fullName = 'FillYourProfile.fullName';
+  static const FillYourProfile_lastName = 'FillYourProfile.lastName';
+  static const FillYourProfile_dateOfBirth = 'FillYourProfile.dateOfBirth';
+  static const FillYourProfile_phone = 'FillYourProfile.phone';
+  static const FillYourProfile_Gender = 'FillYourProfile.Gender';
+  static const FillYourProfile_Gender_male = 'FillYourProfile.Gender.Male';
+  static const FillYourProfile_Gender_Female = 'FillYourProfile.Gender.Female';
+  static const FillYourProfile_continue = 'FillYourProfile.continue';
+  static const FillYourProfile_gender = 'FillYourProfile.gender';
+  static const FillYourProfile = 'FillYourProfile';
 
 }

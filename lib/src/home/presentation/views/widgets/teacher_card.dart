@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -15,7 +16,7 @@ class TeacherCard extends StatelessWidget {
       child: Container(
         width: screenSize.width,
         height: 100,
-        color: MediaQuery.of(context).platformBrightness == Brightness.dark
+        color: context.isDarkMode
             ? AppColors.darkColor
             : Colors.white,
         child: Row(

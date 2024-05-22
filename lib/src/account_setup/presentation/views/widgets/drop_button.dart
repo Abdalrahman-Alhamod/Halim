@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/translations/local_keys.g.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -7,7 +10,9 @@ class DropdownButtonField extends StatelessWidget {
   final List<DropdownMenuItem<String>>? items;
 
   final ValueChanged<String?>? onChanged;
-  final List<String> optionsone = ['Male', 'Female'];
+  final List<String> optionsone = [
+    LocaleKeys.FillYourProfile_Gender_male.tr(),
+      LocaleKeys.FillYourProfile_Gender_Female.tr(),];
   String? _selectedOption;
 
   DropdownButtonField({
@@ -18,23 +23,14 @@ class DropdownButtonField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.only(
-          left: screenSize.width * 0.05,
-          right: screenSize.width * 0.05,
-          bottom: screenSize.width * 0.0,
-          top: screenSize.width * 0.07),
+      padding: const EdgeInsets.all(15),
       child: DropdownButtonFormField<String>(
         decoration: InputDecoration(
-          hintText: "Gender",
-          hintStyle: TextStyle(
-            fontSize: 14,
-            fontFamily: 'Cairo',
-            fontWeight: FontWeight.w500,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
-                ? AppColors.lightFlatButtonColor
-                : AppColors.darkFlatButtonColor,
+          hintText: LocaleKeys.FillYourProfile_gender.tr(),
+          hintStyle: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15.0),
@@ -45,9 +41,9 @@ class DropdownButtonField extends StatelessWidget {
           ),
           filled: true,
           fillColor:
-              MediaQuery.of(context).platformBrightness == Brightness.dark
-                  ? AppColors.darkFlatButtonColor
-                  : AppColors.lightFlatButtonColor,
+              context.isDarkMode
+                  ? AppColors.loginWithButtonDarkColor
+                  : AppColors.textFieldColor,
         ),
         value: _selectedOption,
         onChanged: onChanged,
@@ -58,19 +54,21 @@ class DropdownButtonField extends StatelessWidget {
           );
         }).toList(),
         menuMaxHeight: 125,
+        alignment: Alignment.center,
         dropdownColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
-                ? AppColors.darkFlatButtonColor
-                : AppColors.lightFlatButtonColor,
+            context.isDarkMode
+                ? AppColors.loginWithButtonDarkColor
+                : AppColors.textFieldColor,
         elevation: 1,
         borderRadius: BorderRadius.circular(25),
         style: TextStyle(
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
-                ? AppColors.lightFlatButtonColor
-                : AppColors.darkFlatButtonColor,
-            fontSize: 14,
-            fontFamily: 'Cairo',
-            fontWeight: FontWeight.w500),
+          color: context.isDarkMode
+              ? Colors.grey.shade500
+              : AppColors.darkFlatButtonColor,
+          fontSize: 14,
+           fontFamily: '',
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }

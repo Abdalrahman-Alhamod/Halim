@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
@@ -20,7 +21,7 @@ class BookMarkViewState extends State<BookMarkView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         title: Row(
@@ -43,7 +44,7 @@ class BookMarkViewState extends State<BookMarkView> {
               Icons.bookmark,
               size: 28,
               color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
+                  context.isDarkMode
                       ? Colors.white
                       : Colors.black,
             )
@@ -54,7 +55,7 @@ class BookMarkViewState extends State<BookMarkView> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -64,7 +65,7 @@ class BookMarkViewState extends State<BookMarkView> {
         ),
       ),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
       body: SingleChildScrollView(

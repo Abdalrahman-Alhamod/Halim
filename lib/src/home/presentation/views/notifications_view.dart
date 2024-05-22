@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -19,7 +20,7 @@ class NotificationsViewState extends State<NotificationsView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         title: Row(
@@ -42,7 +43,7 @@ class NotificationsViewState extends State<NotificationsView> {
               Icons.notifications_active_outlined,
               size: 28,
               color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
+                  context.isDarkMode
                       ? Colors.white
                       : Colors.black,
             )
@@ -53,7 +54,7 @@ class NotificationsViewState extends State<NotificationsView> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -63,7 +64,7 @@ class NotificationsViewState extends State<NotificationsView> {
         ),
       ),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
       body: Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/home/presentation/views/functions/remove_bookmark_bottom_sheet.dart';
 
 import '../../../../../core/themes/app_colors.dart';
@@ -36,7 +37,7 @@ class _CardCourseState extends State<CardCourse> {
         width: screenSize.width * 0.88,
         height: 150,
         decoration: BoxDecoration(
-          color: MediaQuery.of(context).platformBrightness == Brightness.dark
+          color: context.isDarkMode
               ? AppColors.darkFlatButtonColor
               : AppColors.lightFlatButtonColor,
           borderRadius: BorderRadius.circular(20),

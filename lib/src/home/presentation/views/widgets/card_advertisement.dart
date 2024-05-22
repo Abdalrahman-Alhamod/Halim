@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -21,7 +22,7 @@ class _CardAdvertisementState extends State<CardAdvertisement> {
         width: screenSize.width * 0.90,
         height: 150,
         decoration: BoxDecoration(
-          color: MediaQuery.of(context).platformBrightness == Brightness.dark
+          color: context.isDarkMode
               ? AppColors.darkFlatButtonColor
               : AppColors.lightFlatButtonColor.withOpacity(0.99),
           borderRadius: BorderRadius.circular(20),

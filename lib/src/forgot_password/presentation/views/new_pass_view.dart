@@ -45,7 +45,7 @@ class _NewPassViewState extends State<NewPassView> {
               fontFamily: 'Cairo',
               fontWeight: FontWeight.w500,
               color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
+                  context.isDarkMode
                       ? Colors.white
                       : Colors.black,
             ),
@@ -56,7 +56,7 @@ class _NewPassViewState extends State<NewPassView> {
             icon: Icon(
               Icons.arrow_back,
               color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
+                  context.isDarkMode
                       ? Colors.white
                       : Colors.black,
             ),
@@ -66,7 +66,7 @@ class _NewPassViewState extends State<NewPassView> {
           ),
         ),
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         body: Form(

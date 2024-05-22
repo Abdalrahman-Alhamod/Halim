@@ -158,5 +158,18 @@
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور"
+  },
+  "FillYourProfile": {
+    "fillYourProfile": "ادخل بيانات حسابك",
+    "fullName": "الاسم الأول",
+    "lastName": "الاسم الأخير",
+    "dateOfBirth": "تاريخ الميلاد",
+    "phone": "رقم الجوال",
+    "Gender": {
+      "male": "ذكر",
+      "female": "أنثى"
+    },
+    "continue": "أكمل",
+    "gender": "الجنس"
   }
 }

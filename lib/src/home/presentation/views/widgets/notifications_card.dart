@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -23,7 +24,7 @@ class NotificationsCard extends StatelessWidget {
         width: screenSize.width,
         height: 100,
         decoration: BoxDecoration(
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
             ? AppColors.darkFlatButtonColor
             : AppColors.lightFlatButtonColor, borderRadius: BorderRadius.circular(10)),
         child: Row(

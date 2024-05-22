@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 class TeacherAvatar extends StatelessWidget {
   final String imageUrl;
   final String name;
@@ -29,7 +30,7 @@ class TeacherAvatar extends StatelessWidget {
                 name,
                 style: TextStyle(
                   fontSize: 12,
-  color: MediaQuery.of(context).platformBrightness == Brightness.dark
+  color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,                  fontWeight: FontWeight.w500,
                 ),
