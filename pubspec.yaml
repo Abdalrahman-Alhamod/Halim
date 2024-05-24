@@ -104,7 +104,6 @@ dependencies:
   readmore:
   # for course details section
   expandable_page_view:
-  
   # for course reading section
   # flutter_super_html_viewer:
   # Slide to donwload\delete
@@ -112,6 +111,7 @@ dependencies:
   # For community comments
   provider:
   salomon_bottom_bar: ^3.3.2
+  intl_phone_number_input: 
 
 dev_dependencies:
   flutter_launcher_icons: 

@@ -13,6 +13,7 @@ import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 import 'widgets/drop_button.dart';
+import 'widgets/phoneNum_input.dart';
 
 class FillProfilView extends StatefulWidget {
   const FillProfilView({super.key});
@@ -137,14 +138,8 @@ class _FillProfilViewState extends State<FillProfilView> {
                 dateBirth = value;
               },
             ),
-            CustomTextField(
-              hintText: LocaleKeys.FillYourProfile_phone.tr(),
-              onChanged: (value) {
-                phoneNumber = value;
-              },
-              keyboardType: TextInputType.number,
-              prefixIcon: Icons.phone,
-            ),
+            const PhoneNumberInputScreen(),
+           
             DropdownButtonField(
               onChanged: (newValue) {
                 setState(() {
