@@ -90,11 +90,15 @@ class NotificationsViewState extends State<NotificationsView> {
             ),
           ]),
           const NotificationsCard(
-            imageUrl: AppImages.accountDone,
+            icon: Icons.payments,
+            textToCopy: 'afogjojfhmgfmhposkhpos[gjhsgjhpojsghj5',
+            imageUrl: AppImages.iconPublic,
             title: 'Payment Successful',
             description: 'You have made a course payment',
           ),
           const NotificationsCard(
+            icon: Icons.price_change,
+
             imageUrl: AppImages.accountDone,
             title: 'Today\'s Special Offers',
             description: 'You get a special promo today!',
