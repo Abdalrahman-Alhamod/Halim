@@ -5,6 +5,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
+import 'widgets/counter_widget.dart';
 import 'widgets/welcome_card.dart';
 import 'widgets/card_advertisement.dart';
 import 'widgets/card_course.dart';
@@ -19,20 +20,18 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         toolbarHeight: 90,
         automaticallyImplyLeading: false,
         title: const WelcomeCard(),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
+            MotivationalCounterWidget(
+              points: 20,
+            ),
             const CardAdvertisement(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
