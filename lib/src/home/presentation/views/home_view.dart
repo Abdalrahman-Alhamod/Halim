@@ -46,7 +46,7 @@ class HomeView extends StatelessWidget {
                           ? Colors.white
                           : Colors.black,
                       fontSize: 20,
-                      fontFamily: 'Cairo',
+                     
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -59,7 +59,7 @@ class HomeView extends StatelessWidget {
                       'See All',
                       style: TextStyle(
                         fontSize: 16,
-                        fontFamily: 'Cairo',
+                      
                         color: Colors.blue,
                         fontWeight: FontWeight.w600,
                       ),
@@ -102,7 +102,7 @@ class HomeView extends StatelessWidget {
                           ? Colors.white
                           : Colors.black,
                       fontSize: 20,
-                      fontFamily: 'Cairo',
+                      
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -115,7 +115,7 @@ class HomeView extends StatelessWidget {
                       'See All',
                       style: TextStyle(
                         fontSize: 16,
-                        fontFamily: 'Cairo',
+                        
                         color: Colors.blue,
                         fontWeight: FontWeight.w600,
                       ),
