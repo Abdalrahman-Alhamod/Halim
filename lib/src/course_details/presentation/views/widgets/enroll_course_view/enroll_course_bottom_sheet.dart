@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/functions/show_custom_dialog.dart';
 
-import '../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/bottom_sheet_button.dart';
 import 'widgets/enroll_success_dialog.dart';
 

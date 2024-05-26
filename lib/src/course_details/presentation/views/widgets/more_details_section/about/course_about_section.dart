@@ -4,7 +4,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 import 'package:readmore/readmore.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';
-import '../../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 import 'course_about_mentor.dart';
 import 'course_keywords.dart';
 

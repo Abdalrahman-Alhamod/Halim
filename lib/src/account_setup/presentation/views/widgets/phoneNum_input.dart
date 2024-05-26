@@ -4,7 +4,7 @@ import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-import '../../../../../core/translations/local_keys.g.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
 
 class PhoneNumberInputScreen extends StatefulWidget {
   const PhoneNumberInputScreen({super.key});

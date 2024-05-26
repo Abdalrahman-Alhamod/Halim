@@ -10,7 +10,7 @@ import 'package:halim/src/course_details/presentation/views/widgets/my_course_de
 import 'package:halim/src/course_details/presentation/views/widgets/my_course_details_view/sections/my_course_certificate_section.dart/my_course_certificate_section.dart';
 
 import '../../../../core/constants/app_constrains.dart';
-import '../../../../core/translations/local_keys.g.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/widgets/back_arrow_icon.dart';
 import '../../../../core/widgets/bottom_sheet_button.dart';
 part 'widgets/my_course_details_view/my_course_details_app_bar.dart';
