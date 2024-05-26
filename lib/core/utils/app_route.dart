@@ -133,7 +133,7 @@ class AppRoute {
         },
       ),
       GoRoute(
-        path: kFillProfile,
+        path: '/',
         builder: (BuildContext context, GoRouterState state) {
           return const FillProfilView();
         },
@@ -151,7 +151,7 @@ class AppRoute {
         },
       ),
       GoRoute(
-        path: '/',
+        path: kHome,
         builder: (BuildContext context, GoRouterState state) {
           return const BottomBar();
         },

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
+import 'package:halim/src/account_setup/presentation/views/widgets/BirthdayCard.dart';
 
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
@@ -12,7 +13,8 @@ import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
-import 'widgets/drop_button.dart';
+import 'widgets/ListWithDialogGender.dart';
+import 'widgets/dropdowndialog.dart';
 import 'widgets/phoneNum_input.dart';
 
 class FillProfilView extends StatefulWidget {
@@ -53,17 +55,13 @@ class _FillProfilViewState extends State<FillProfilView> {
       appBar: AppBar(
         toolbarHeight: 50,
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
-         LocaleKeys.FillYourProfile_fillYourProfile.tr(),
+          LocaleKeys.FillYourProfile_fillYourProfile.tr(),
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
         ),
         elevation: 0,
@@ -71,19 +69,14 @@ class _FillProfilViewState extends State<FillProfilView> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             GoRouter.of(context).pop();
           },
         ),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -132,20 +125,11 @@ class _FillProfilViewState extends State<FillProfilView> {
                 lastName = value;
               },
             ),
-            CustomTextField(
-              hintText:  LocaleKeys.FillYourProfile_dateOfBirth.tr(),
-              onChanged: (value) {
-                dateBirth = value;
-              },
-            ),
+            
+            BirthdayCard(),
             const PhoneNumberInputScreen(),
-           
-            DropdownButtonField(
-              onChanged: (newValue) {
-                setState(() {
-                  _selectedOption = newValue;
-                });
-              },
+            ListWithDialogGender(
+              
             ),
             Container(height: 30),
             Padding(

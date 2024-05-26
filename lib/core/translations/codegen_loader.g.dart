@@ -357,8 +357,8 @@ static const Map<String,dynamic> en = {
     "dateOfBirth": "Date Of Birth",
     "phone": "Phone Number",
     "Gender": {
-      "male": "Male",
-      "female": "Female"
+      "male": "male",
+      "female": "female"
     },
     "continue": "Continue",
     "gender": "Gendger"
