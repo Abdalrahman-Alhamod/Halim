@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/app_route.dart';
 
 import '../../../../../../core/themes/app_text_styles.dart';
-import '../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 import '../shared_widgets/auth_form.dart';
 import '../shared_widgets/dont_have_an_account_text_button.dart';
 import '../shared_widgets/or_continue_with_button.dart';

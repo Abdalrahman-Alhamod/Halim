@@ -6,7 +6,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/remember_me_check_box.dart';
 
 import '../../../../core/themes/app_colors.dart';
-import '../../../../core/translations/local_keys.g.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';

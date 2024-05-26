@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../../../core/assets/app_svgs.dart';
-import '../../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 
 class CourseReviewsRatingHeader extends StatelessWidget {
   const CourseReviewsRatingHeader({

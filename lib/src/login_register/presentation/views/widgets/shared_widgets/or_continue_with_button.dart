@@ -4,7 +4,7 @@ import 'package:halim/src/login_register/presentation/views/widgets/shared_widge
 import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/divider_with_text.dart';
 
 import '../../../../../../core/assets/app_images.dart';
-import '../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 
 class OrContinueWithButtons extends StatelessWidget {
   const OrContinueWithButtons({

@@ -7,7 +7,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/themes/app_colors.dart';
-import '../../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../../core/widgets/custome_elevated_button.dart';
 import '../../../../../../../core/widgets/custome_flat_button.dart';
 

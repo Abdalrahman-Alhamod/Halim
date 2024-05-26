@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../core/themes/app_text_styles.dart';
-import '../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/utils/app_route.dart';
 import '../shared_widgets/already_have_an_account_text_button.dart';
 import '../shared_widgets/auth_form.dart';
