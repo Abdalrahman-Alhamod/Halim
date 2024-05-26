@@ -37,87 +37,79 @@ dependencies:
   cupertino_icons: ^1.0.6
 
   # For caching online images
-  cached_network_image:
+  cached_network_image: ^3.3.1
   # For using Equatable
-  dartz:
+  dartz: ^0.10.1
   # For linking the api
-  dio:
+  dio: ^5.4.3
   # For state manegment
-  flutter_bloc:
-  # For fonts and icons
-  font_awesome_flutter:
+  flutter_bloc: ^8.1.5
   # Service Locator For using singleton pattern
-  get_it:
+  get_it: ^7.7.0
   # For navigation
-  go_router:
-  # For using fonts
-  google_fonts:
+  go_router: ^14.1.3
   # For using storage and caching
-  hive:
+  hive: ^2.0.1
   # For using storage and caching
-  hive_flutter:
+  hive_flutter: ^1.1.0
   # For opening links
-  url_launcher:
-  # For using animations
-  animations:
+  url_launcher: ^6.2.6
   # For responsive text size
-  auto_size_text:
+  auto_size_text: ^3.0.0
   # For firebase services
   # firebase_core: 
   # For notifactions
   # firebase_messaging: 
   # For local notifications
-  awesome_notifications:
+  awesome_notifications: ^0.9.3
   # For viewing svg images
-  flutter_svg:
+  flutter_svg: ^2.0.10
   # For printing to the console
-  logger:
+  logger: ^2.3.0
   # For using animated umages
-  lottie:
+  lottie: ^3.1.2
   # For picking images
-  image_picker:
+  image_picker: ^1.1.1
   # For storing data
-  shared_preferences:
+  shared_preferences: ^2.2.3
   # For loading animation
-  shimmer:
+  shimmer: ^3.0.0
   # For loading indicator
-  flutter_spinkit:
+  flutter_spinkit: ^5.2.1
   # For page indicator
-  smooth_page_indicator:
+  smooth_page_indicator: ^1.1.0
   # For form validation
-  form_field_validator:
-  # For easy form building
-  flutter_form_builder:
+  form_field_validator: ^1.1.0
   # For tracking progress
-  percent_indicator:
+  percent_indicator: ^4.2.3
   # For sliding ads
-  carousel_slider:
+  carousel_slider: ^4.2.1
   # For fingerprint auth
-  local_auth:
+  local_auth: ^2.2.0
   # For entering verifying key
   # pinput:
   # For rating
-  flutter_rating_bar:
+  flutter_rating_bar: ^4.0.1
   # For localization
-  easy_localization:
+  easy_localization: ^3.0.7
   # For collapsing text
-  readmore:
+  readmore: ^3.0.0
   # for course details section
-  expandable_page_view:
+  expandable_page_view: ^1.0.17
   
   # for course reading section
   # flutter_super_html_viewer:
   # Slide to donwload\delete
-  flutter_slidable:
+  flutter_slidable: ^3.1.0
   # For community comments
-  provider:
+  provider: ^6.1.2
   salomon_bottom_bar: ^3.3.2
 
 dev_dependencies:
-  flutter_launcher_icons: 
-  build_runner: 
-  hive_generator:
-  flutter_native_splash:
+  flutter_launcher_icons: ^0.13.1
+  build_runner: ^2.4.10
+  hive_generator: ^2.0.1
+  flutter_native_splash: ^2.4.0
 
   flutter_test:
     sdk: flutter
