@@ -7,7 +7,7 @@ import 'package:halim/src/course_details/presentation/views/widgets/mentor_detai
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/sections/mentor_courses_section.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/sections/mentor_reviews_section.dart';
 
-import '../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 import 'widgets/mentor_image_name_title.dart';
 import 'widgets/mentor_main_details.dart';
 

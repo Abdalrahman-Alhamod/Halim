@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
-import '../../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 
 class MentorImageNameTitle extends StatelessWidget {
   const MentorImageNameTitle({

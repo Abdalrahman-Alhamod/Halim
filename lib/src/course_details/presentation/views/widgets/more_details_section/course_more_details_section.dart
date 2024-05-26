@@ -5,7 +5,7 @@ import 'package:halim/src/course_details/presentation/views/widgets/more_details
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lessons_section.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_reviews_section.dart';
 
-import '../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/sections_view/data/section_page.dart';
 import '../../../../../../core/widgets/sections_view/sections_view.dart';
 

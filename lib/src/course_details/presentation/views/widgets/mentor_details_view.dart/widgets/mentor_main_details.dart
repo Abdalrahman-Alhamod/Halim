@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../../core/assets/app_svgs.dart';
-import '../../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 import 'mentor_main_details_vertical_divider.dart';
 import 'mentor_main_details_vertical_info.dart';
 import 'mentor_main_section_button.dart';

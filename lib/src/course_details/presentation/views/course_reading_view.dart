@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // import 'package:halim/core/test/test_course.dart';
 import 'package:halim/core/widgets/bottom_sheet_button.dart';
 
-import '../../../../core/translations/local_keys.g.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import 'widgets/course_reading_view/course_reading_app_bar.dart';
 
 class CourseReadingView extends StatelessWidget {

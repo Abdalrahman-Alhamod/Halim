@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_review_block.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
-import '../../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 
 class CourseReviewsSample extends StatelessWidget {
   const CourseReviewsSample({

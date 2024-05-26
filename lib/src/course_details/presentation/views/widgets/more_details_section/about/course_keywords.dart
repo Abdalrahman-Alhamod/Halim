@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';
-import '../../../../../../../core/translations/local_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 
 class CourseKeywords extends StatelessWidget {
   const CourseKeywords({
