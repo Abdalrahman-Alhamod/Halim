@@ -147,7 +147,7 @@ abstract class  LocaleKeys {
   static const FillYourProfile_dateOfBirth = 'FillYourProfile.dateOfBirth';
   static const FillYourProfile_phone = 'FillYourProfile.phone';
   static const FillYourProfile_Gender = 'FillYourProfile.Gender';
-  static const FillYourProfile_Gender_male = 'FillYourProfile.Gender.Male';
+  static const FillYourProfile_Gender_male = 'FillYourProfile.Gender.male';
   static const FillYourProfile_Gender_Female = 'FillYourProfile.Gender.Female';
   static const FillYourProfile_continue = 'FillYourProfile.continue';
   static const FillYourProfile_gender = 'FillYourProfile.gender';
