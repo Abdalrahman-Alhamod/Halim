@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/local_keys.g.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
@@ -19,8 +19,8 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
   final List<String> options = [
     //        LocaleKeys.CourseDetails_Test_courseTitle.tr(),
 
-    LocaleKeys.FillYourProfile_Gender_male.tr(),
-    LocaleKeys.FillYourProfile_Gender_female.tr()
+    LocaleKeys.FillYourProfile_gender,
+    LocaleKeys.FillYourProfile_gender.tr()
   ];
   List<String> filteredOptions = [];
 

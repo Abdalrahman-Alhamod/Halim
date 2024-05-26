@@ -166,10 +166,14 @@
     "dateOfBirth": "Date Of Birth",
     "phone": "Phone Number",
     "Gender": {
-      "male": "male",
-      "female": "female"
+      "male": "Male",
+      "female": "Female"
     },
     "continue": "Continue",
     "gender": "Gendger"
+  },
+  "CreatePin": {
+    "add_a_pin": "Add a PIN number to make your account more secure",
+    "enter_pin": "Enter Pin Number"
   }
 }

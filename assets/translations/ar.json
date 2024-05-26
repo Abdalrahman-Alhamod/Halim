@@ -171,5 +171,9 @@
     },
     "continue": "أكمل",
     "gender": "الجنس"
+  },
+  "CreatePin": {
+    "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",
+    "enter_pin": "ادخل رمز PIN"
   }
 }

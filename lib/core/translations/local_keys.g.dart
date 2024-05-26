@@ -147,10 +147,11 @@ abstract class  LocaleKeys {
   static const FillYourProfile_dateOfBirth = 'FillYourProfile.dateOfBirth';
   static const FillYourProfile_phone = 'FillYourProfile.phone';
   static const FillYourProfile_Gender = 'FillYourProfile.Gender';
-  static const FillYourProfile_Gender_male = 'FillYourProfile.Gender.male';
-  static const FillYourProfile_Gender_female = 'FillYourProfile.Gender.female';
   static const FillYourProfile_continue = 'FillYourProfile.continue';
   static const FillYourProfile_gender = 'FillYourProfile.gender';
   static const FillYourProfile = 'FillYourProfile';
+  static const CreatePin_add_a_pin = 'CreatePin.add_a_pin';
+  static const CreatePin_enter_pin = 'CreatePin.enter_pin';
+  static const CreatePin = 'CreatePin';
 
 }

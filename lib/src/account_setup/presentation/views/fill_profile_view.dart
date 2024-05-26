@@ -8,13 +8,12 @@ import 'package:halim/src/account_setup/presentation/views/widgets/BirthdayCard.
 
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
-import '../../../../core/translations/local_keys.g.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 import 'widgets/ListWithDialogGender.dart';
-import 'widgets/dropdowndialog.dart';
 import 'widgets/phoneNum_input.dart';
 
 class FillProfilView extends StatefulWidget {
@@ -125,12 +124,9 @@ class _FillProfilViewState extends State<FillProfilView> {
                 lastName = value;
               },
             ),
-            
             BirthdayCard(),
             const PhoneNumberInputScreen(),
-            ListWithDialogGender(
-              
-            ),
+            ListWithDialogGender(),
             Container(height: 30),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -138,7 +134,7 @@ class _FillProfilViewState extends State<FillProfilView> {
                 onPressed: () {
                   GoRouter.of(context).push(AppRoute.kCreatePin);
                 },
-                title: 'Continue',
+                title: LocaleKeys.FillYourProfile_continue.tr(),
                 width: MediaQuery.of(context).size.width * 0.94,
                 height: 60,
                 kTextcolor: AppColors.lightFlatButtonColor,
