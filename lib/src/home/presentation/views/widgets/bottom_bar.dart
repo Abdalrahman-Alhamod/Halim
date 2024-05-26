@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../my_courses/presentation/views/browse_sections_view.dart';
@@ -35,7 +36,7 @@ class BottomBarState extends State<BottomBar> {
         selectedItemColor: AppColors.primaryColor,
         unselectedItemColor: AppColors.darkFlatButtonColor,
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         currentIndex: _currentIndex,

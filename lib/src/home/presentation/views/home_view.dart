@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
+import 'widgets/counter_widget.dart';
 import 'widgets/welcome_card.dart';
 import 'widgets/card_advertisement.dart';
 import 'widgets/card_course.dart';
@@ -18,20 +20,18 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         toolbarHeight: 90,
         automaticallyImplyLeading: false,
         title: const WelcomeCard(),
       ),
-      backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
+            MotivationalCounterWidget(
+              points: 20,
+            ),
             const CardAdvertisement(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -46,7 +46,7 @@ class HomeView extends StatelessWidget {
                           ? Colors.white
                           : Colors.black,
                       fontSize: 20,
-                      fontFamily: 'Cairo',
+                     
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -59,7 +59,7 @@ class HomeView extends StatelessWidget {
                       'See All',
                       style: TextStyle(
                         fontSize: 16,
-                        fontFamily: 'Cairo',
+                      
                         color: Colors.blue,
                         fontWeight: FontWeight.w600,
                       ),
@@ -102,7 +102,7 @@ class HomeView extends StatelessWidget {
                           ? Colors.white
                           : Colors.black,
                       fontSize: 20,
-                      fontFamily: 'Cairo',
+                      
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -115,7 +115,7 @@ class HomeView extends StatelessWidget {
                       'See All',
                       style: TextStyle(
                         fontSize: 16,
-                        fontFamily: 'Cairo',
+                        
                         color: Colors.blue,
                         fontWeight: FontWeight.w600,
                       ),

@@ -16,6 +16,7 @@ class AppImages {
   static const google = '$mainPath/google.png';
   static const facebook = '$mainPath/facebook.png';
    static const emptyAvatar = '$mainPath/emptyAvatar.png';
+   static const iconPublic = '$mainPath/icon.png';
 
   static const testPath = 'assets/images/test';
   static const testCourseCover = '$testPath/course_cover.png';
@@ -43,6 +44,7 @@ class AppImages {
     google,
     facebook,
     emptyAvatar,
+    iconPublic,
 
     // Test
     testCourseCover,

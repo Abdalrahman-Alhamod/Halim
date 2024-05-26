@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import 'package:local_auth/local_auth.dart';
 
 import '../../../../core/themes/app_colors.dart';
@@ -34,7 +35,7 @@ class BiometricViewState extends State<BiometricView> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor:
-              MediaQuery.of(context).platformBrightness == Brightness.dark
+              context.isDarkMode
                   ? AppColors.darkColor
                   : Colors.white,
           title: Text(
@@ -44,7 +45,7 @@ class BiometricViewState extends State<BiometricView> {
               fontFamily: 'Cairo',
               fontWeight: FontWeight.w500,
               color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
+                  context.isDarkMode
                       ? Colors.white
                       : Colors.black,
             ),
@@ -55,7 +56,7 @@ class BiometricViewState extends State<BiometricView> {
             icon: Icon(
               Icons.arrow_back,
               color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
+                  context.isDarkMode
                       ? Colors.white
                       : Colors.black,
             ),
@@ -64,7 +65,7 @@ class BiometricViewState extends State<BiometricView> {
             },
           )),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
       body: Padding(
@@ -79,7 +80,7 @@ class BiometricViewState extends State<BiometricView> {
               'Add a fingerprint to make your account more secure.',
               style: TextStyle(
                 color:
-                    MediaQuery.of(context).platformBrightness == Brightness.dark
+                    context.isDarkMode
                         ? Colors.white
                         : Colors.black,
               ),
@@ -140,7 +141,7 @@ class BiometricViewState extends State<BiometricView> {
               style: TextStyle(
                 fontSize: 16,
                 color:
-                    MediaQuery.of(context).platformBrightness == Brightness.dark
+                    context.isDarkMode
                         ? Colors.white
                         : Colors.black,
               ),

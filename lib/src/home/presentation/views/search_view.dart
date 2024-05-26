@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -18,7 +19,7 @@ class SearchViewState extends State<SearchView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         title: Row(
@@ -41,7 +42,7 @@ class SearchViewState extends State<SearchView> {
               Icons.search,
               size: 28,
               color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
+                  context.isDarkMode
                       ? Colors.white
                       : Colors.black,
             )
@@ -50,7 +51,7 @@ class SearchViewState extends State<SearchView> {
         elevation: 0,
         toolbarHeight: 80,
         leading: IconButton(
-          color: MediaQuery.of(context).platformBrightness == Brightness.dark
+          color: context.isDarkMode
               ? Colors.white
               : Colors.black,
           icon: const Icon(Icons.arrow_back),
@@ -60,7 +61,7 @@ class SearchViewState extends State<SearchView> {
         ),
       ),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
       body: const Column(

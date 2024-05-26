@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/utils/app_route.dart';
 
@@ -55,7 +56,7 @@ class WelcomeCard extends StatelessWidget {
           icon: Icon(
             Icons.search,
             size: 28,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -67,7 +68,7 @@ class WelcomeCard extends StatelessWidget {
           icon: Icon(
             Icons.notifications_active_outlined,
             size: 28,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),

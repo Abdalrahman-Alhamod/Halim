@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
 import 'widgets/teacher_card.dart';
@@ -17,7 +18,7 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         title: Row(
@@ -29,7 +30,7 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
                 fontFamily: 'Cairo',
                 fontWeight: FontWeight.w500,
                 color:
-                    MediaQuery.of(context).platformBrightness == Brightness.dark
+                    context.isDarkMode
                         ? Colors.white
                         : Colors.black,
               ),
@@ -58,7 +59,7 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
         elevation: 0,
         toolbarHeight: 80,
         leading: IconButton(
-          color: MediaQuery.of(context).platformBrightness == Brightness.dark
+          color: context.isDarkMode
               ? Colors.white
               : Colors.black,
           icon: const Icon(Icons.arrow_back),
@@ -68,7 +69,7 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
         ),
       ),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
       body: const Column(

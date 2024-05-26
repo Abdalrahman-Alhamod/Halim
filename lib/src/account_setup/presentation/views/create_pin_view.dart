@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:halim/core/utils/context_extensions.dart';
 import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
 
@@ -31,16 +33,15 @@ class CreatePinViewState extends State<CreatePinView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         title: Text(
-          'Create New PIN',
+          LocaleKeys.CreatePin_enter_pin.tr(),
           style: TextStyle(
             fontSize: 20,
-            fontFamily: 'Cairo',
             fontWeight: FontWeight.w500,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -50,7 +51,7 @@ class CreatePinViewState extends State<CreatePinView> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -60,21 +61,21 @@ class CreatePinViewState extends State<CreatePinView> {
         ),
       ),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
       body: Column(
         children: [
           const Spacer(
-            flex: 1,
+            flex: 2,
           ),
-          Text('Add a PIN number to make Your account more secure.',
+          Text(
+          LocaleKeys.CreatePin_add_a_pin.tr(),
               style: TextStyle(
-                fontSize: 14,
-                fontFamily: 'Cairo',
+                fontSize: 16,
                 fontWeight: FontWeight.normal,
                 color:
-                    MediaQuery.of(context).platformBrightness == Brightness.dark
+                    context.isDarkMode
                         ? Colors.white
                         : Colors.black,
               )),
@@ -146,14 +147,15 @@ class CreatePinViewState extends State<CreatePinView> {
             onPressed: () {
               GoRouter.of(context).push(AppRoute.kBiomatric);
             },
-            title: 'Continue',
-            width: MediaQuery.of(context).size.width * 0.94,
+            title: LocaleKeys.FillYourProfile_continue.tr(),
+
+            width: MediaQuery.of(context).size.width * 0.90,
             height: 60,
             kTextcolor: AppColors.lightFlatButtonColor,
             kBackgroundcolor: AppColors.primaryColor,
           ),
           const Spacer(
-            flex: 2,
+            flex: 1,
           )
         ],
       ),

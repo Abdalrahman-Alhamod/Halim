@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -22,7 +23,7 @@ class _SendCodeviewState extends State<SendCodeview> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            MediaQuery.of(context).platformBrightness == Brightness.dark
+            context.isDarkMode
                 ? AppColors.darkColor
                 : Colors.white,
         title: Text(
@@ -31,7 +32,7 @@ class _SendCodeviewState extends State<SendCodeview> {
             fontSize: 20,
             fontFamily: 'Cairo',
             fontWeight: FontWeight.w500,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -40,7 +41,7 @@ class _SendCodeviewState extends State<SendCodeview> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.white
                 : Colors.black,
           ),
@@ -50,7 +51,7 @@ class _SendCodeviewState extends State<SendCodeview> {
         ),
       ),
       backgroundColor:
-          MediaQuery.of(context).platformBrightness == Brightness.dark
+          context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
       body: Padding(

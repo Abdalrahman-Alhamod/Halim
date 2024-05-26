@@ -174,6 +174,23 @@ class CodegenLoader extends AssetLoader{
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور"
+  },
+  "FillYourProfile": {
+    "fillYourProfile": "ادخل بيانات حسابك",
+    "fullName": "الاسم الأول",
+    "lastName": "الاسم الأخير",
+    "dateOfBirth": "تاريخ الميلاد",
+    "phone": "رقم الجوال",
+    "Gender": {
+      "male": "ذكر",
+      "female": "أنثى"
+    },
+    "continue": "أكمل",
+    "gender": "الجنس"
+  },
+  "CreatePin": {
+    "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",
+    "enter_pin": "ادخل رمز PIN"
   }
 };
 static const Map<String,dynamic> en = {
@@ -336,6 +353,23 @@ static const Map<String,dynamic> en = {
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password"
+  },
+  "FillYourProfile": {
+    "fillYourProfile": "Fill your profile",
+    "fullName": "Full Name",
+    "lastName": "Last Name",
+    "dateOfBirth": "Date Of Birth",
+    "phone": "Phone Number",
+    "Gender": {
+      "male": "Male",
+      "female": "Female"
+    },
+    "continue": "Continue",
+    "gender": "Gendger"
+  },
+  "CreatePin": {
+    "add_a_pin": "Add a PIN number to make your account more secure",
+    "enter_pin": "Enter Pin Number"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

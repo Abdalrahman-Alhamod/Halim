@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../../../../core/themes/app_colors.dart';
@@ -34,7 +35,7 @@ class _FollowCourseState extends State<FollowCourse> {
         width: screenSize.width * 0.90,
         height: 150,
         decoration: BoxDecoration(
-          color: MediaQuery.of(context).platformBrightness == Brightness.dark
+          color: context.isDarkMode
               ? AppColors.darkFlatButtonColor
               : AppColors.lightFlatButtonColor,
           borderRadius: BorderRadius.circular(20),
