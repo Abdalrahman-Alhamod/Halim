@@ -1,5 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/course_box/course_box.dart';
+
+import '../../../../../../../core/assets/app_images.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../home/presentation/views/widgets/card_course.dart';
 
 class MentorCoursesSection extends StatelessWidget {
   const MentorCoursesSection({super.key});
@@ -13,8 +17,13 @@ class MentorCoursesSection extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: CourseBox(
-            onPressed: () {},
+          child: CardCourse(
+            category:  LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+            evaluation: 4.8,
+            followers: 8.289,
+            name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
+            price: 48,
+            imageUrl: AppImages.testCourseCover,
           ),
         );
       },
