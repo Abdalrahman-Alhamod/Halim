@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../my_courses/presentation/views/browse_sections_view.dart';
 import '../home_view.dart';
 
@@ -32,38 +34,39 @@ class BottomBarState extends State<BottomBar> {
         children: _pages,
       ),
       bottomNavigationBar: SalomonBottomBar(
-        itemPadding: const EdgeInsets.all(10),
+        itemPadding: const EdgeInsets.all(12),
         selectedItemColor: AppColors.primaryColor,
         unselectedItemColor: AppColors.darkFlatButtonColor,
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         currentIndex: _currentIndex,
         onTap: (int newIndex) {
           setState(() {
             _currentIndex = newIndex;
           });
         },
+
+
+       
         items: [
           SalomonBottomBarItem(
             icon: const Icon(Icons.home_filled),
-            title: const Text('Home'),
+            title: Text(LocaleKeys.HomePage_Home_NavBar_home.tr()),
             selectedColor: AppColors.primaryColor,
           ),
           SalomonBottomBarItem(
             icon: const Icon(Icons.video_collection),
-            title: const Text('My Courses'),
+            title:Text(LocaleKeys.HomePage_Home_NavBar_myCourses.tr()),
             selectedColor: AppColors.primaryColor,
           ),
           SalomonBottomBarItem(
             icon: const Icon(Icons.power_input_sharp),
-            title: const Text('Points'),
+            title: Text(LocaleKeys.HomePage_Home_NavBar_myPoints.tr()),
             selectedColor: AppColors.primaryColor,
           ),
           SalomonBottomBarItem(
             icon: const Icon(Icons.more_horiz_outlined),
-            title: const Text('More'),
+            title:Text(LocaleKeys.HomePage_Home_NavBar_more.tr()),
             selectedColor: AppColors.primaryColor,
           ),
         ],

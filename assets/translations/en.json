@@ -210,7 +210,22 @@
         "home": "Home",
         "more": "More",
         "myPoints": "My Points"
+      },
+      "pointWidget": {
+        "keepMoving": "keep Moving forward!",
+        "points": "Your Points:"
       }
+    },
+    "NotificationsPage": {
+      "notifications": "Notifications",
+      "today": "Today",
+      "yesterday": "Yesterday"
     }
+  },
+  "SearchPage": {
+    "search": "search"
+  },
+  "MyCourses": {
+    "bookmark": "bookmark"
   }
 }

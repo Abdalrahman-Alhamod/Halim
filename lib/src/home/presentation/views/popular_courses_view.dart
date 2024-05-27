@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import 'widgets/card_course.dart';
 import 'widgets/category_widget.dart';
@@ -20,20 +22,16 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Row(
           children: [
             Text(
-              'Popular Courses',
+              LocaleKeys.HomePage_Home_mostPopularCourses.tr(),
               style: TextStyle(
                   color: MediaQuery.of(context).platformBrightness ==
                           Brightness.dark
                       ? Colors.white
                       : Colors.black,
-                  fontSize: 20,
-                  fontFamily: 'Cairo',
                   fontWeight: FontWeight.w500),
             ),
             const Spacer(
@@ -42,10 +40,7 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
             Icon(
               Icons.search_sharp,
               size: 28,
-              color:
-                  context.isDarkMode
-                      ? Colors.white
-                      : Colors.black,
+              color: context.isDarkMode ? Colors.white : Colors.black,
             )
           ],
         ),
@@ -54,19 +49,14 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             GoRouter.of(context).push(AppRoute.kHome);
           },
         ),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [

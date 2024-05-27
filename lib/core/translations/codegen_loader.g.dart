@@ -173,7 +173,14 @@ class CodegenLoader extends AssetLoader{
     }
   },
   "ForgotPassword": {
-    "confirmPassword": "تأكيد كلمة المرور"
+    "confirmPassword": "تأكيد كلمة المرور",
+    "select": "حدد ما هي تفاصيل الاتصال التي يجب أن نستخدمها لإعادة تعيين كلمة المرور الخاصة بك؟",
+    "resetPass": "إعادة تعيين كلمة السر",
+    "viaSms": "عبر رسالة نصية:",
+    "viaEmail": "عبر البريد الإلكتروني: ",
+    "codeHas": "تم إرسال الكود إلى",
+    "resend": "سيتم إعادة الإرسال خلال",
+    "createNew": "قم بإنشاء كلمة المرور الجديدة الخاصة بك"
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",
@@ -185,7 +192,7 @@ class CodegenLoader extends AssetLoader{
       "male1": "ذكر",
       "female1": "أنثى"
     },
-    "continue": "أكمل",
+    "continue": "تابع",
     "gender": "الجنس",
     "Specialty": {
       "search": "ابحث",
@@ -200,6 +207,31 @@ class CodegenLoader extends AssetLoader{
   "CreatePin": {
     "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",
     "enter_pin": "ادخل رمز PIN"
+  },
+  "Portfolio": {
+    "AddFingerprint": "ضف بصمة الإصبع لجعل حسابك أكثر أماناً.",
+    "Please": "يرجى وضع إصبعك على الماسح الضوئي لبصمات الأصابع للبدء."
+  },
+  "HomePage": {
+    "Home": {
+      "welcome": "أهلاً بك 👋",
+      "goodMorning": "صباح الخير 👋",
+      "goodEvening": "مساء الخير 👋",
+      "search": "ابحث",
+      "topMentors": "كبار الموجهين",
+      "mostPopularCourses": "الدورات الأكثر شعبية",
+      "seeAll": "اظهار الكل",
+      "NavBar": {
+        "myCourses": "كورساتي",
+        "home": "الصفحة الرئيسية",
+        "more": "المزيد",
+        "myPoints": "نقاطي"
+      },
+      "pointWidget": {
+        "keepMoving": "تابع التقدم إلى الأمام !",
+        "points": "نقاطك:"
+      }
+    }
   }
 };
 static const Map<String,dynamic> en = {
@@ -361,7 +393,14 @@ static const Map<String,dynamic> en = {
     }
   },
   "ForgotPassword": {
-    "confirmPassword": "Confirm Password"
+    "confirmPassword": "Confirm Password",
+    "select": "Select Which contact details should we use to reset your password?",
+    "resetPass": "Reset the password",
+    "viaSms": "via SMS:",
+    "viaEmail": "via Email:",
+    "codeHas": "Code has been sent to",
+    "resend": "Resend code in",
+    "createNew": "Create your new password"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
@@ -388,6 +427,31 @@ static const Map<String,dynamic> en = {
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",
     "enter_pin": "Enter Pin Number"
+  },
+  "Portfolio": {
+    "AddFingerprint": "Add a fingerprint to make your account more secure.",
+    "Please": "Please put your finger on the fingerprint scanner to get started."
+  },
+  "HomePage": {
+    "Home": {
+      "welcome": "Welcome 👋",
+      "goodMorning": "Good Morning 👋",
+      "goodEvening": "Good Evening 👋",
+      "search": "Search",
+      "topMentors": "Top Mentors",
+      "mostPopularCourses": "Most Popular courses",
+      "seeAll": "See All",
+      "NavBar": {
+        "myCourses": "My Courses",
+        "home": "Home",
+        "more": "More",
+        "myPoints": "My Points"
+      },
+      "pointWidget": {
+        "keepMoving": "keep Moving forward!",
+        "points": "Your Points:"
+      }
+    }
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

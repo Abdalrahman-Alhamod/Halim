@@ -56,7 +56,7 @@ class CreatePinViewState extends State<CreatePinView> {
                 : Colors.black,
           ),
           onPressed: () {
-            GoRouter.of(context).push(AppRoute.kFillProfile);
+            GoRouter.of(context).pop();
           },
         ),
       ),
@@ -145,7 +145,7 @@ class CreatePinViewState extends State<CreatePinView> {
           ),
           CustomFlatButton(
             onPressed: () {
-              GoRouter.of(context).push(AppRoute.kBiomatric);
+              GoRouter.of(context).push(AppRoute.kHome);
             },
             title: LocaleKeys.FillYourProfile_continue.tr(),
 

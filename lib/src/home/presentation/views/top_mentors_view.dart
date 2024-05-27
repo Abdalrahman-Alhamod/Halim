@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import 'widgets/teacher_card.dart';
 
@@ -24,10 +26,8 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
         title: Row(
           children: [
             Text(
-              'Top Monetors',
+                                   LocaleKeys.HomePage_Home_topMentors.tr(),
               style: TextStyle(
-                fontSize: 20,
-                fontFamily: 'Cairo',
                 fontWeight: FontWeight.w500,
                 color:
                     context.isDarkMode

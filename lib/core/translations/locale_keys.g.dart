@@ -140,6 +140,13 @@ abstract class  LocaleKeys {
   static const CourseDetails_MyCourse = 'CourseDetails.MyCourse';
   static const CourseDetails = 'CourseDetails';
   static const ForgotPassword_confirmPassword = 'ForgotPassword.confirmPassword';
+  static const ForgotPassword_select = 'ForgotPassword.select';
+  static const ForgotPassword_resetPass = 'ForgotPassword.resetPass';
+  static const ForgotPassword_viaSms = 'ForgotPassword.viaSms';
+  static const ForgotPassword_viaEmail = 'ForgotPassword.viaEmail';
+  static const ForgotPassword_codeHas = 'ForgotPassword.codeHas';
+  static const ForgotPassword_resend = 'ForgotPassword.resend';
+  static const ForgotPassword_createNew = 'ForgotPassword.createNew';
   static const ForgotPassword = 'ForgotPassword';
   static const FillYourProfile_fillYourProfile = 'FillYourProfile.fillYourProfile';
   static const FillYourProfile_fullName = 'FillYourProfile.fullName';
@@ -162,5 +169,25 @@ abstract class  LocaleKeys {
   static const CreatePin_add_a_pin = 'CreatePin.add_a_pin';
   static const CreatePin_enter_pin = 'CreatePin.enter_pin';
   static const CreatePin = 'CreatePin';
+  static const Portfolio_AddFingerprint = 'Portfolio.AddFingerprint';
+  static const Portfolio_Please = 'Portfolio.Please';
+  static const Portfolio = 'Portfolio';
+  static const HomePage_Home_welcome = 'HomePage.Home.welcome';
+  static const HomePage_Home_goodMorning = 'HomePage.Home.goodMorning';
+  static const HomePage_Home_goodEvening = 'HomePage.Home.goodEvening';
+  static const HomePage_Home_search = 'HomePage.Home.search';
+  static const HomePage_Home_topMentors = 'HomePage.Home.topMentors';
+  static const HomePage_Home_mostPopularCourses = 'HomePage.Home.mostPopularCourses';
+  static const HomePage_Home_seeAll = 'HomePage.Home.seeAll';
+  static const HomePage_Home_NavBar_myCourses = 'HomePage.Home.NavBar.myCourses';
+  static const HomePage_Home_NavBar_home = 'HomePage.Home.NavBar.home';
+  static const HomePage_Home_NavBar_more = 'HomePage.Home.NavBar.more';
+  static const HomePage_Home_NavBar_myPoints = 'HomePage.Home.NavBar.myPoints';
+  static const HomePage_Home_NavBar = 'HomePage.Home.NavBar';
+  static const HomePage_Home_pointWidget_keepMoving = 'HomePage.Home.pointWidget.keepMoving';
+  static const HomePage_Home_pointWidget_points = 'HomePage.Home.pointWidget.points';
+  static const HomePage_Home_pointWidget = 'HomePage.Home.pointWidget';
+  static const HomePage_Home = 'HomePage.Home';
+  static const HomePage = 'HomePage';
 
 }

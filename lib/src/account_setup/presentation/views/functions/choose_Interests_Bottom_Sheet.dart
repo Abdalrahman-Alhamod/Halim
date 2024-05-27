@@ -8,7 +8,6 @@ import 'package:halim/src/account_setup/presentation/views/widgets/interests_wid
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
-import '../../../../home/presentation/views/widgets/category_widget.dart';
 
 void chooseInterestsBottomSheet(BuildContext context) {
   List<String> Interests = [
@@ -104,7 +103,7 @@ void chooseInterestsBottomSheet(BuildContext context) {
                   ),
                   CustomFlatButton(
                     onPressed: () {
-                      GoRouter.of(context).push(AppRoute.kEnterCode);
+                      GoRouter.of(context).push(AppRoute.kCreatePin);
                     },
                     title:  LocaleKeys.FillYourProfile_Interests_continue.tr(),
                     width: MediaQuery.of(context).size.width * 0.40,

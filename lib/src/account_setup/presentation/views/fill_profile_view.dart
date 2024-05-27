@@ -10,7 +10,6 @@ import 'package:halim/src/account_setup/presentation/views/widgets/BirthdayCard.
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
-import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
@@ -73,7 +72,6 @@ class _FillProfilViewState extends State<FillProfilView> {
             color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            GoRouter.of(context).pop();
           },
         ),
       ),

@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/home/presentation/views/functions/remove_bookmark_bottom_sheet.dart';
 
@@ -67,18 +69,17 @@ class _CardCourseState extends State<CardCourse> {
                     Row(
                       children: [
                         Container(
-                          width: 70,
-                          height: 25,
+                          
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color.fromARGB(255, 113, 132, 204)
-                                  .withOpacity(0.25)),
+                              color: const Color.fromARGB(255, 113, 132, 204).withOpacity(0.25)),
                           child: Center(
                             child: Text(
                               widget.category,
                               style: const TextStyle(
                                 color: Colors.blue,
-                                fontSize: 12,
+                                fontSize: 13,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
@@ -148,7 +149,7 @@ class _CardCourseState extends State<CardCourse> {
                           ),
                         ),
                         Text(
-                          '${widget.followers} students',
+                          '${widget.followers} ${LocaleKeys.CourseDetails_students.tr()}',
                           style: TextStyle(
                             color: MediaQuery.of(context).platformBrightness ==
                                     Brightness.dark
