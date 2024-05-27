@@ -54,7 +54,7 @@ class _EnterCodeViewState extends State<EnterCodeView> {
                 : Colors.black,
           ),
           onPressed: () {
-            GoRouter.of(context).push(AppRoute.kSendCode);
+           GoRouter.of(context).pop();
           },
         ),
       ),

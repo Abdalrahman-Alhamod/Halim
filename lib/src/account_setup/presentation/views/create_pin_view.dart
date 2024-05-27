@@ -56,7 +56,7 @@ class CreatePinViewState extends State<CreatePinView> {
                 : Colors.black,
           ),
           onPressed: () {
-            GoRouter.of(context).push(AppRoute.kFillProfile);
+          GoRouter.of(context).pop();
           },
         ),
       ),

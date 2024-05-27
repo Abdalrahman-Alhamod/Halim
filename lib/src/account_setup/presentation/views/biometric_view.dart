@@ -35,19 +35,14 @@ class BiometricViewState extends State<BiometricView> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor:
-              context.isDarkMode
-                  ? AppColors.darkColor
-                  : Colors.white,
+              context.isDarkMode ? AppColors.darkColor : Colors.white,
           title: Text(
             'Biometric Authentication',
             style: TextStyle(
               fontSize: 20,
               fontFamily: 'Cairo',
               fontWeight: FontWeight.w500,
-              color:
-                  context.isDarkMode
-                      ? Colors.white
-                      : Colors.black,
+              color: context.isDarkMode ? Colors.white : Colors.black,
             ),
           ),
           elevation: 0,
@@ -55,19 +50,13 @@ class BiometricViewState extends State<BiometricView> {
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color:
-                  context.isDarkMode
-                      ? Colors.white
-                      : Colors.black,
+              color: context.isDarkMode ? Colors.white : Colors.black,
             ),
             onPressed: () {
-              GoRouter.of(context).push(AppRoute.kFillProfile);
+              GoRouter.of(context).pop();
             },
           )),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -79,10 +68,7 @@ class BiometricViewState extends State<BiometricView> {
             Text(
               'Add a fingerprint to make your account more secure.',
               style: TextStyle(
-                color:
-                    context.isDarkMode
-                        ? Colors.white
-                        : Colors.black,
+                color: context.isDarkMode ? Colors.white : Colors.black,
               ),
             ),
             const Spacer(
@@ -140,10 +126,7 @@ class BiometricViewState extends State<BiometricView> {
               'Please put your finger or face ID to get started.',
               style: TextStyle(
                 fontSize: 16,
-                color:
-                    context.isDarkMode
-                        ? Colors.white
-                        : Colors.black,
+                color: context.isDarkMode ? Colors.white : Colors.black,
               ),
               textAlign: TextAlign.center,
             ),
@@ -155,7 +138,7 @@ class BiometricViewState extends State<BiometricView> {
               children: [
                 CustomFlatButton(
                   onPressed: () {
-                    GoRouter.of(context).push(AppRoute.kSendCode);
+                    GoRouter.of(context).push(AppRoute.kHome);
                   },
                   title: 'Skip',
                   width: MediaQuery.of(context).size.width * 0.40,

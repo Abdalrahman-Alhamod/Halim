@@ -11,6 +11,7 @@ import 'package:halim/src/course_details/presentation/views/my_course_details_vi
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
 import 'package:halim/src/forgot_password/presentation/views/new_pass_view.dart';
 import 'package:halim/src/home/presentation/views/home_view.dart';
+import 'package:halim/src/login_register/presentation/views/confirm_email_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
@@ -43,6 +44,7 @@ class AppRoute {
   static const kEnrollCourseView = '/enrollCourse';
   static const kMentorDetailsView = '/mentorDetails';
   static const kMyCourseDetailsView = '/myCourseDetails';
+  static const kConfirmEmailView = '/confirmEmail';
 
   static const kFillProfile = '/fillProfile';
   static const kCreatePin = '/kCreatePin';
@@ -60,12 +62,12 @@ class AppRoute {
 
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
-      /*GoRoute(
+      GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           return const SplashView();
         },
-      ),*/
+      ),
       GoRoute(
         path: kIntroView,
         builder: (BuildContext context, GoRouterState state) {
@@ -88,6 +90,12 @@ class AppRoute {
         path: kRegisterView,
         builder: (BuildContext context, GoRouterState state) {
           return const RegisterView();
+        },
+      ),
+      GoRoute(
+        path: kConfirmEmailView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const ConfirmEmailView();
         },
       ),
       GoRoute(
@@ -133,7 +141,7 @@ class AppRoute {
         },
       ),
       GoRoute(
-        path: '/',
+        path: kFillProfile,
         builder: (BuildContext context, GoRouterState state) {
           return const FillProfilView();
         },

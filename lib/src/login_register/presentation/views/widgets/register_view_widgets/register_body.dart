@@ -34,7 +34,7 @@ class RegisterBody extends StatelessWidget {
             AuthForm(
               buttonTitle: LocaleKeys.Auth_signUp.tr(),
               onTap: (email, password, rememberMe) {
-                GoRouter.of(context).push(AppRoute.kFillProfile);
+                GoRouter.of(context).push(AppRoute.kConfirmEmailView);
               },
             ),
             const SizedBox(

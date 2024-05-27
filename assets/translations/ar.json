@@ -20,7 +20,9 @@
     "enterValidEmail": "الرجاء إدخال بريد إلكتروني صالح",
     "passWordMustBe8Digit": "يجب أن تكون كلمة المرور مكوّنة من ما لا يقل عن 8 أحرف",
     "passwordShouldContainSpecialCharacter": "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل",
-    "loginToYourAccount": "سجِّل الدخول إلى حسابك"
+    "loginToYourAccount": "سجِّل الدخول إلى حسابك",
+    "confirmYourEmail": "قم بتأكيد بريدك الإلكتروني",
+    "enterYourEmailConfimCode": "أدخل الرمز التأكيد الذي تلقيته على بريدك الإلكتروني"
   },
   "Intro": {
     "getStarted": "البدء",

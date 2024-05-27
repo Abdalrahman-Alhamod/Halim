@@ -61,7 +61,7 @@ class _NewPassViewState extends State<NewPassView> {
                       : Colors.black,
             ),
             onPressed: () {
-              GoRouter.of(context).push(AppRoute.kEnterCode);
+             GoRouter.of(context).pop();
             },
           ),
         ),

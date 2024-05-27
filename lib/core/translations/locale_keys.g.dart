@@ -22,6 +22,8 @@ abstract class  LocaleKeys {
   static const Auth_passWordMustBe8Digit = 'Auth.passWordMustBe8Digit';
   static const Auth_passwordShouldContainSpecialCharacter = 'Auth.passwordShouldContainSpecialCharacter';
   static const Auth_loginToYourAccount = 'Auth.loginToYourAccount';
+  static const Auth_confirmYourEmail = 'Auth.confirmYourEmail';
+  static const Auth_enterYourEmailConfimCode = 'Auth.enterYourEmailConfimCode';
   static const Auth = 'Auth';
   static const Intro_getStarted = 'Intro.getStarted';
   static const Intro_intro1 = 'Intro.intro1';

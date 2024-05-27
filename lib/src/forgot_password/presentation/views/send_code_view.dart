@@ -23,37 +23,28 @@ class _SendCodeviewState extends State<SendCodeview> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
           'Forgot Password',
           style: TextStyle(
             fontSize: 20,
             fontFamily: 'Cairo',
             fontWeight: FontWeight.w500,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
         ),
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            GoRouter.of(context).push(AppRoute.kBiomatric);
+            GoRouter.of(context).pop();
           },
         ),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(

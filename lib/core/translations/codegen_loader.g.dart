@@ -36,7 +36,9 @@ class CodegenLoader extends AssetLoader{
     "enterValidEmail": "الرجاء إدخال بريد إلكتروني صالح",
     "passWordMustBe8Digit": "يجب أن تكون كلمة المرور مكوّنة من ما لا يقل عن 8 أحرف",
     "passwordShouldContainSpecialCharacter": "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل",
-    "loginToYourAccount": "سجِّل الدخول إلى حسابك"
+    "loginToYourAccount": "سجِّل الدخول إلى حسابك",
+    "confirmYourEmail": "قم بتأكيد بريدك الإلكتروني",
+    "enterYourEmailConfimCode": "أدخل الرمز التأكيد الذي تلقيته على بريدك الإلكتروني"
   },
   "Intro": {
     "getStarted": "البدء",
@@ -215,7 +217,9 @@ static const Map<String,dynamic> en = {
     "enterValidEmail": "Please enter a valid email",
     "passWordMustBe8Digit": "Password must be at least 8 digits long",
     "passwordShouldContainSpecialCharacter": "Passwords must have at least one special character",
-    "loginToYourAccount": "Login to your Account"
+    "loginToYourAccount": "Login to your Account",
+    "confirmYourEmail": "Confirm Your Email",
+    "enterYourEmailConfimCode": "Enter the confirmation code you have received on your email"
   },
   "Intro": {
     "getStarted": "Get Started",
