@@ -17,10 +17,9 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
   bool _isFocused = false;
   late FocusNode _focusNode;
   final List<String> options = [
-    //        LocaleKeys.CourseDetails_Test_courseTitle.tr(),
-
-    LocaleKeys.FillYourProfile_gender,
-    LocaleKeys.FillYourProfile_gender.tr()
+    
+    LocaleKeys.FillYourProfile_Gender_male1.tr(),
+    LocaleKeys.FillYourProfile_Gender_female1.tr()
   ];
   List<String> filteredOptions = [];
 
@@ -80,7 +79,7 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(10.0),
       child: TextField(
         controller: controller,
         focusNode: _focusNode,

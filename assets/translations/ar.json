@@ -166,11 +166,15 @@
     "dateOfBirth": "تاريخ الميلاد",
     "phone": "رقم الجوال",
     "Gender": {
-      "male": "ذكر",
-      "female": "أنثى"
+      "male1": "ذكر",
+      "female1": "أنثى"
     },
     "continue": "أكمل",
-    "gender": "الجنس"
+    "gender": "الجنس",
+    "Specialty": {
+      "search": "ابحث",
+      "choose_specialty": "اختر تخصصك الدراسي"
+    }
   },
   "CreatePin": {
     "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",

@@ -14,6 +14,7 @@ import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 import 'widgets/ListWithDialogGender.dart';
+import 'widgets/ChooseYourSpecialty.dart';
 import 'widgets/phoneNum_input.dart';
 
 class FillProfilView extends StatefulWidget {
@@ -52,7 +53,7 @@ class _FillProfilViewState extends State<FillProfilView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 50,
+        
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
@@ -79,7 +80,7 @@ class _FillProfilViewState extends State<FillProfilView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(height: 40),
+            Container(height: 10),
             Container(
               width: 200,
               height: 160,
@@ -127,9 +128,10 @@ class _FillProfilViewState extends State<FillProfilView> {
             BirthdayCard(),
             const PhoneNumberInputScreen(),
             ListWithDialogGender(),
-            Container(height: 30),
+            ChooseYourSpecialty(),
+            Container(height: 20),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: CustomFlatButton(
                 onPressed: () {
                   GoRouter.of(context).push(AppRoute.kCreatePin);
@@ -140,7 +142,7 @@ class _FillProfilViewState extends State<FillProfilView> {
                 kTextcolor: AppColors.lightFlatButtonColor,
               ),
             ),
-            Container(height: 40),
+            Container(height: 20),
           ],
         ),
       ),

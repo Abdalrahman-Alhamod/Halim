@@ -146,9 +146,14 @@ abstract class  LocaleKeys {
   static const FillYourProfile_lastName = 'FillYourProfile.lastName';
   static const FillYourProfile_dateOfBirth = 'FillYourProfile.dateOfBirth';
   static const FillYourProfile_phone = 'FillYourProfile.phone';
+  static const FillYourProfile_Gender_male1 = 'FillYourProfile.Gender.male1';
+  static const FillYourProfile_Gender_female1 = 'FillYourProfile.Gender.female1';
   static const FillYourProfile_Gender = 'FillYourProfile.Gender';
   static const FillYourProfile_continue = 'FillYourProfile.continue';
   static const FillYourProfile_gender = 'FillYourProfile.gender';
+  static const FillYourProfile_Specialty_search = 'FillYourProfile.Specialty.search';
+  static const FillYourProfile_Specialty_choose_specialty = 'FillYourProfile.Specialty.choose_specialty';
+  static const FillYourProfile_Specialty = 'FillYourProfile.Specialty';
   static const FillYourProfile = 'FillYourProfile';
   static const CreatePin_add_a_pin = 'CreatePin.add_a_pin';
   static const CreatePin_enter_pin = 'CreatePin.enter_pin';

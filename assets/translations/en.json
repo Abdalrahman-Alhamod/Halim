@@ -166,11 +166,15 @@
     "dateOfBirth": "Date Of Birth",
     "phone": "Phone Number",
     "Gender": {
-      "male": "Male",
-      "female": "Female"
+      "male1": "Male",
+      "female1": "Female"
     },
     "continue": "Continue",
-    "gender": "Gendger"
+    "gender": "Gendger",
+    "Specialty": {
+      "search": "Search",
+      "choose_specialty": "Choose your specialty"
+    }
   },
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",

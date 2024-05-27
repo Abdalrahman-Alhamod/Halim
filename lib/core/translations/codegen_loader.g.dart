@@ -182,11 +182,15 @@ class CodegenLoader extends AssetLoader{
     "dateOfBirth": "تاريخ الميلاد",
     "phone": "رقم الجوال",
     "Gender": {
-      "male": "ذكر",
-      "female": "أنثى"
+      "male1": "ذكر",
+      "female1": "أنثى"
     },
     "continue": "أكمل",
-    "gender": "الجنس"
+    "gender": "الجنس",
+    "Specialty": {
+      "search": "ابحث",
+      "choose_specialty": "اختر تخصصك الدراسي"
+    }
   },
   "CreatePin": {
     "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",
@@ -361,11 +365,15 @@ static const Map<String,dynamic> en = {
     "dateOfBirth": "Date Of Birth",
     "phone": "Phone Number",
     "Gender": {
-      "male": "Male",
-      "female": "Female"
+      "male1": "Male",
+      "female1": "Female"
     },
     "continue": "Continue",
-    "gender": "Gendger"
+    "gender": "Gendger",
+    "Specialty": {
+      "search": "Search",
+      "choose_specialty": "Choose your specialty"
+    }
   },
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",
