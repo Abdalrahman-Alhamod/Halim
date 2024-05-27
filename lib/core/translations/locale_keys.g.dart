@@ -154,6 +154,10 @@ abstract class  LocaleKeys {
   static const FillYourProfile_Specialty_search = 'FillYourProfile.Specialty.search';
   static const FillYourProfile_Specialty_choose_specialty = 'FillYourProfile.Specialty.choose_specialty';
   static const FillYourProfile_Specialty = 'FillYourProfile.Specialty';
+  static const FillYourProfile_Interests_choose = 'FillYourProfile.Interests.choose';
+  static const FillYourProfile_Interests_skip = 'FillYourProfile.Interests.skip';
+  static const FillYourProfile_Interests_continue = 'FillYourProfile.Interests.continue';
+  static const FillYourProfile_Interests = 'FillYourProfile.Interests';
   static const FillYourProfile = 'FillYourProfile';
   static const CreatePin_add_a_pin = 'CreatePin.add_a_pin';
   static const CreatePin_enter_pin = 'CreatePin.enter_pin';

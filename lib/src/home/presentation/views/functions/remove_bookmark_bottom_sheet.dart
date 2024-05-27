@@ -13,7 +13,7 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return Container(
-        height: 320,
+        height: 400,
         width: double.infinity,
         decoration: BoxDecoration(
           color: context.isDarkMode

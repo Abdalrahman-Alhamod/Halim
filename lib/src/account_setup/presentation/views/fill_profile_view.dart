@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
+import 'package:halim/src/account_setup/presentation/views/functions/choose_Interests_Bottom_Sheet.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
 import 'package:halim/src/account_setup/presentation/views/widgets/BirthdayCard.dart';
 
@@ -134,7 +135,8 @@ class _FillProfilViewState extends State<FillProfilView> {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: CustomFlatButton(
                 onPressed: () {
-                  GoRouter.of(context).push(AppRoute.kCreatePin);
+                 chooseInterestsBottomSheet(context);
+              
                 },
                 title: LocaleKeys.FillYourProfile_continue.tr(),
                 width: MediaQuery.of(context).size.width * 0.94,

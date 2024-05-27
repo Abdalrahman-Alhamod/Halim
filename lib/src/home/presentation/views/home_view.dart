@@ -129,6 +129,7 @@ class HomeView extends StatelessWidget {
               child: SizedBox(
                 height: 40,
                 child: ListView(
+                  
                   scrollDirection: Axis.horizontal,
                   physics: const ScrollPhysics(),
                   children: const [

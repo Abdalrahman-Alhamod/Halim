@@ -157,7 +157,14 @@
     }
   },
   "ForgotPassword": {
-    "confirmPassword": "Confirm Password"
+    "confirmPassword": "Confirm Password",
+    "select": "Select Which contact details should we use to reset your password?",
+    "resetPass": "Reset the password",
+    "viaSms": "via SMS:",
+    "viaEmail": "via Email:",
+    "codeHas": "Code has been sent to",
+    "resend": "Resend code in",
+    "createNew": "Create your new password"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
@@ -174,10 +181,36 @@
     "Specialty": {
       "search": "Search",
       "choose_specialty": "Choose your specialty"
+    },
+    "Interests": {
+      "choose": "Choose three topics that you would like to follow?",
+      "skip": "skip",
+      "continue": "continue"
     }
   },
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",
     "enter_pin": "Enter Pin Number"
+  },
+  "Portfolio": {
+    "AddFingerprint": "Add a fingerprint to make your account more secure.",
+    "Please": "Please put your finger on the fingerprint scanner to get started."
+  },
+  "HomePage": {
+    "Home": {
+      "welcome": "Welcome 👋",
+      "goodMorning": "Good Morning 👋",
+      "goodEvening": "Good Evening 👋",
+      "search": "Search",
+      "topMentors": "Top Mentors",
+      "mostPopularCourses": "Most Popular courses",
+      "seeAll": "See All",
+      "NavBar": {
+        "myCourses": "My Courses",
+        "home": "Home",
+        "more": "More",
+        "myPoints": "My Points"
+      }
+    }
   }
 }

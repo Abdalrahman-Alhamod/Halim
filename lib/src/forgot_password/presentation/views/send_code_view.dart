@@ -30,7 +30,6 @@ class _SendCodeviewState extends State<SendCodeview> {
           'Forgot Password',
           style: TextStyle(
             fontSize: 20,
-            fontFamily: 'Cairo',
             fontWeight: FontWeight.w500,
             color: context.isDarkMode
                 ? Colors.white

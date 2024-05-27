@@ -190,6 +190,11 @@ class CodegenLoader extends AssetLoader{
     "Specialty": {
       "search": "ابحث",
       "choose_specialty": "اختر تخصصك الدراسي"
+    },
+    "Interests": {
+      "choose": "اختر ثلاثة من المواضيع التي تحب متابعتها؟",
+      "skip": "تخطى",
+      "continue": "تابع"
     }
   },
   "CreatePin": {
@@ -373,6 +378,11 @@ static const Map<String,dynamic> en = {
     "Specialty": {
       "search": "Search",
       "choose_specialty": "Choose your specialty"
+    },
+    "Interests": {
+      "choose": "Choose three topics that you would like to follow?",
+      "skip": "skip",
+      "continue": "continue"
     }
   },
   "CreatePin": {
