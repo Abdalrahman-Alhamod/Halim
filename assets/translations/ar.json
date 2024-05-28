@@ -140,7 +140,11 @@
       "enterYourPinToConfirm": "ادخل رمزك السرّي لإكمال عملية الشراء",
       "enrollSuccess": "تم الاشتراك بالكورس بنجاح!",
       "enrollSuccessDesc": "لقد قمت بإنجاز عملية الشراء بنجاح و الاشتراك بالدورة.",
-      "viewEReceipt": "عرض الإيصال الإلكتروني"
+      "viewEReceipt": "عرض الإيصال الإلكتروني",
+      "verifyYourIdentityToPurchse": "قم بإثبات هويتك لإتمام عملية الشراء",
+      "pin": "رمز PIN",
+      "biometrics": "القياسات الحيوية",
+      "enterYourPINtoVerify": "أدخل رمز PIN الخاص بك لتأكيد هويتك"
     },
     "viewCourse": "عرض الدورة",
     "Mentor": {

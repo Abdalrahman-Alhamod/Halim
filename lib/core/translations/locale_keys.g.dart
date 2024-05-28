@@ -126,6 +126,10 @@ abstract class  LocaleKeys {
   static const CourseDetails_Enroll_enrollSuccess = 'CourseDetails.Enroll.enrollSuccess';
   static const CourseDetails_Enroll_enrollSuccessDesc = 'CourseDetails.Enroll.enrollSuccessDesc';
   static const CourseDetails_Enroll_viewEReceipt = 'CourseDetails.Enroll.viewEReceipt';
+  static const CourseDetails_Enroll_verifyYourIdentityToPurchse = 'CourseDetails.Enroll.verifyYourIdentityToPurchse';
+  static const CourseDetails_Enroll_pin = 'CourseDetails.Enroll.pin';
+  static const CourseDetails_Enroll_biometrics = 'CourseDetails.Enroll.biometrics';
+  static const CourseDetails_Enroll_enterYourPINtoVerify = 'CourseDetails.Enroll.enterYourPINtoVerify';
   static const CourseDetails_Enroll = 'CourseDetails.Enroll';
   static const CourseDetails_viewCourse = 'CourseDetails.viewCourse';
   static const CourseDetails_Mentor_courses = 'CourseDetails.Mentor.courses';

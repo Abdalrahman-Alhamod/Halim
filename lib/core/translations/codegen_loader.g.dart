@@ -156,7 +156,11 @@ class CodegenLoader extends AssetLoader{
       "enterYourPinToConfirm": "ادخل رمزك السرّي لإكمال عملية الشراء",
       "enrollSuccess": "تم الاشتراك بالكورس بنجاح!",
       "enrollSuccessDesc": "لقد قمت بإنجاز عملية الشراء بنجاح و الاشتراك بالدورة.",
-      "viewEReceipt": "عرض الإيصال الإلكتروني"
+      "viewEReceipt": "عرض الإيصال الإلكتروني",
+      "verifyYourIdentityToPurchse": "قم بإثبات هويتك لإتمام عملية الشراء",
+      "pin": "رمز PIN",
+      "biometrics": "القياسات الحيوية",
+      "enterYourPINtoVerify": "أدخل رمز PIN الخاص بك لتأكيد هويتك"
     },
     "viewCourse": "عرض الدورة",
     "Mentor": {
@@ -337,7 +341,11 @@ static const Map<String,dynamic> en = {
       "enterYourPinToConfirm": "Enter your PIN to confirm payment",
       "enrollSuccess": "Enroll Course Successful!",
       "enrollSuccessDesc": "You have successfully made payment and enrolled the course.",
-      "viewEReceipt": "View E-Receipt"
+      "viewEReceipt": "View E-Receipt",
+      "verifyYourIdentityToPurchse": "Verify your identity to complete purchase",
+      "pin": "PIN Number",
+      "biometrics": "Biometrics",
+      "enterYourPINtoVerify": "Enter your PIN number to verify your identity"
     },
     "viewCourse": "View Course",
     "Mentor": {
@@ -373,7 +381,7 @@ static const Map<String,dynamic> en = {
   },
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",
-    "enter_pin": "Enter Pin Number"
+    "enter_pin": "Enter PIN Number"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
