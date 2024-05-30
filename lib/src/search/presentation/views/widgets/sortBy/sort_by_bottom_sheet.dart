@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/search/presentation/views/widgets/sortBy/widgets/sort_by_list.dart';
 
+import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/custome_elevated_button.dart';
 
 class SortByBottomSheet extends StatefulWidget {
@@ -46,7 +48,7 @@ class _SortByBottomSheetState extends State<SortByBottomSheet> {
               height: 10,
             ),
             Text(
-              'Sort By',
+              LocaleKeys.Search_SearchBy_sortBy.tr(),
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
@@ -82,7 +84,7 @@ class _SortByBottomSheetState extends State<SortByBottomSheet> {
                     onPressed: () {
                       setState(() {});
                     },
-                    title: 'Reset',
+                    title: LocaleKeys.Search_reset.tr(),
                     elevation: 0,
                     backgroundColor: Colors.grey.shade800,
                   ),
@@ -96,7 +98,7 @@ class _SortByBottomSheetState extends State<SortByBottomSheet> {
                     onPressed: () {
                       context.pop();
                     },
-                    title: 'Sort',
+                    title: LocaleKeys.Search_SearchBy_sort.tr(),
                   ),
                 ),
               ],

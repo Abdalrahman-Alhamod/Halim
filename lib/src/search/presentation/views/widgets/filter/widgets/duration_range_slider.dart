@@ -16,8 +16,8 @@ class _DurationRangeSliderState extends State<_DurationRangeSlider> {
       max: 100,
       divisions: 20,
       labels: RangeLabels(
-        '${selectedRange.start.round().toString()} H',
-        '${selectedRange.end.round().toString()} H',
+        '${selectedRange.start.round().toString()} ${LocaleKeys.Search_Filter_h.tr()}',
+        '${selectedRange.end.round().toString()} ${LocaleKeys.Search_Filter_h.tr()}',
       ),
       values: selectedRange,
       onChanged: (RangeValues newRange) {

@@ -20,7 +20,7 @@ class _SearchResultsHeader extends StatelessWidget {
             ),
             children: [
               TextSpan(
-                text: 'Results for "',
+                text: '${LocaleKeys.Search_resultsFor.tr()} "',
               ),
               TextSpan(
                 text: serchKeyword,
@@ -35,7 +35,7 @@ class _SearchResultsHeader extends StatelessWidget {
           ),
         ),
         Text(
-          '$resultsNum found',
+          '$resultsNum ${LocaleKeys.Search_found.tr()}',
           style: TextStyle(
             fontWeight: FontWeight.w600,
             color: AppColors.primaryColor,

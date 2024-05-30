@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../core/assets/app_images.dart';
@@ -27,7 +29,7 @@ class ResultNotFound extends StatelessWidget {
               height: 30,
             ),
             Text(
-              'Not Found',
+              LocaleKeys.Search_notFound.tr(),
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
@@ -37,7 +39,7 @@ class ResultNotFound extends StatelessWidget {
               height: 10,
             ),
             Text(
-              'Sorry, the keyword tou entered cannot be found, please check again or search with another keyword',
+              LocaleKeys.Search_notFoundDesc.tr(),
               textAlign: TextAlign.center,
             ),
             Spacer(

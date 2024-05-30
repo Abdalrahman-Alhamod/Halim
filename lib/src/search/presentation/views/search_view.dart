@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:halim/core/assets/app_svgs.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/search/presentation/views/widgets/recent_search/recent_search.dart';
 import '../../../../core/constants/app_constrains.dart';

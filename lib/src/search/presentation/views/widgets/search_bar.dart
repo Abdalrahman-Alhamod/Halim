@@ -108,7 +108,7 @@ class _SearchBarState extends State<SearchBar> {
           ),
         ),
         suffixIconColor: AppColors.primaryColor,
-        hintText: 'Search',
+        hintText: LocaleKeys.Search_search.tr(),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -5,6 +6,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/search/presentation/views/widgets/filter/level_bar/level_bar.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/custome_elevated_button.dart';
 import '../../../../../course_details/presentation/views/widgets/more_details_section/reviews/review_stars_bar/course_reviews_stars_bar.dart';
 import '../../../../../home/presentation/views/widgets/category_widget.dart';
@@ -65,7 +67,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               endIndent: context.width * 0.42,
             ),
             Text(
-              'Filter',
+              LocaleKeys.Search_Filter_filter.tr(),
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
@@ -83,11 +85,11 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: 'Field :  ',
+                    text: '${LocaleKeys.Search_Filter_field.tr()} :  ',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
                   TextSpan(
-                    text: 'Software Engineering',
+                    text: LocaleKeys.Search_Test_mainCategory1.tr(),
                     style: TextStyle(
                       fontSize: 20,
                       color: AppColors.primaryColor,
@@ -102,7 +104,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               height: 20,
             ),
             Text(
-              'Category',
+              LocaleKeys.Search_Filter_category.tr(),
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
             SizedBox(
@@ -129,7 +131,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               height: 20,
             ),
             Text(
-              'Duration',
+              LocaleKeys.Search_Filter_duration.tr(),
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
             SizedBox(
@@ -140,7 +142,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               onChanged: (start, end) {},
             ),
             Text(
-              'Level',
+              LocaleKeys.Search_Filter_level.tr(),
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
             SizedBox(
@@ -155,7 +157,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               height: 20,
             ),
             Text(
-              'Price',
+              LocaleKeys.Search_Filter_price.tr(),
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
             SizedBox(
@@ -166,7 +168,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               onChanged: (start, end) {},
             ),
             Text(
-              'Rating',
+              LocaleKeys.Search_Filter_rating.tr(),
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
             SizedBox(
@@ -195,7 +197,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                     onPressed: () {
                       setState(() {});
                     },
-                    title: 'Reset',
+                    title: LocaleKeys.Search_reset.tr(),
                     elevation: 0,
                     backgroundColor: Colors.grey.shade800,
                   ),
@@ -209,7 +211,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                     onPressed: () {
                       context.pop();
                     },
-                    title: 'Filter',
+                    title: LocaleKeys.Search_Filter_filter.tr(),
                   ),
                 ),
               ],

@@ -182,5 +182,40 @@
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",
     "enter_pin": "Enter PIN Number"
+  },
+  "Search": {
+    "search": "Search",
+    "recent": "Recent",
+    "clearAll": "Clear All",
+    "notFound": "Not Found",
+    "notFoundDesc": "Sorry, the keyword you entered cannot be found, please check again or search with another keyword",
+    "resultsFor": "Results for",
+    "found": "found",
+    "courses": "Courses",
+    "mentors": "Mentors",
+    "Filter": {
+      "filter": "Filter",
+      "field": "Field",
+      "category": "Category",
+      "duration": "Duration",
+      "level": "Level",
+      "price": "Price",
+      "rating": "Rating",
+      "h": "H"
+    },
+    "Test": {
+      "mainCategory1": "Software Engineering"
+    },
+    "reset": "Reset",
+    "SearchBy": {
+      "sortBy": "Sort By",
+      "sort": "Sort",
+      "mostPopular": "Most Popular",
+      "bestSelling": "Best Selling",
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "rating": "Rating",
+      "price": "Price"
+    }
   }
 }

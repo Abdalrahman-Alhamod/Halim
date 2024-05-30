@@ -30,7 +30,7 @@ class _SearchByBarState extends State<_SearchByBar> {
                 animateToIndex();
               });
             },
-            label: 'Courses',
+            label: LocaleKeys.Search_courses.tr(),
           ),
         ),
         SizedBox(
@@ -46,7 +46,7 @@ class _SearchByBarState extends State<_SearchByBar> {
                 animateToIndex();
               });
             },
-            label: 'Mentors',
+            label: LocaleKeys.Search_mentors.tr(),
           ),
         ),
       ],

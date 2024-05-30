@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../core/assets/app_svgs.dart';
@@ -19,7 +21,7 @@ class RecentSearch extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Recent',
+              LocaleKeys.Search_recent.tr(),
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
@@ -28,7 +30,7 @@ class RecentSearch extends StatelessWidget {
             TextButton(
               onPressed: () {},
               child: Text(
-                'Clear All',
+                LocaleKeys.Search_clearAll.tr(),
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,

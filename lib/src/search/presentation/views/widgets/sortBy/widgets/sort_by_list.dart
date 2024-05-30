@@ -1,5 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/src/search/presentation/views/widgets/sortBy/widgets/data/sort_by_list_item.dart';
+
+import '../../../../../../../core/translations/locale_keys.g.dart';
 
 class SortByList extends StatefulWidget {
   const SortByList({super.key, this.startIndex = 0, required this.onChanged});
@@ -15,12 +18,12 @@ class _SortByListState extends State<SortByList> {
   @override
   void initState() {
     items = [
-      SortByListItem(label: 'Most Popular', value: 'most popular'),
-      SortByListItem(label: 'Best Selling', value: 'best selling'),
-      SortByListItem(label: 'Newest', value: 'newst'),
-      SortByListItem(label: 'Oldest', value: 'oldest'),
-      SortByListItem(label: 'Rating', value: 'rating'),
-      SortByListItem(label: 'Price', value: 'price'),
+      SortByListItem(label: LocaleKeys.Search_SearchBy_mostPopular.tr(), value: 'most popular'),
+      SortByListItem(label: LocaleKeys.Search_SearchBy_bestSelling.tr(), value: 'best selling'),
+      SortByListItem(label: LocaleKeys.Search_SearchBy_newest.tr(), value: 'newst'),
+      SortByListItem(label: LocaleKeys.Search_SearchBy_oldest.tr(), value: 'oldest'),
+      SortByListItem(label: LocaleKeys.Search_SearchBy_rating.tr(), value: 'rating'),
+      SortByListItem(label: LocaleKeys.Search_SearchBy_price.tr(), value: 'price'),
     ];
     _value = items[0].value;
     super.initState();
