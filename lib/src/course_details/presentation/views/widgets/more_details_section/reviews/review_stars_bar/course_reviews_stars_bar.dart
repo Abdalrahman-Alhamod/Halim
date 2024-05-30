@@ -34,7 +34,7 @@ class _CourseReviewsStarsBarState extends State<CourseReviewsStarsBar> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 45,
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,

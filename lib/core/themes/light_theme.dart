@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/assets/app_font.dart';
 import 'package:halim/core/themes/app_colors.dart';
+import 'package:halim/core/themes/slider_theme.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 ThemeData getLightThemeData(BuildContext context) {
@@ -17,5 +18,6 @@ ThemeData getLightThemeData(BuildContext context) {
         backgroundColor: AppColors.lightFlatButtonColor,
       ),
     ),
+    sliderTheme: getSliderTheme(context),
   );
 }

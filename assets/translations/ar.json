@@ -125,7 +125,8 @@
     "Level": {
       "beginner": "مبتدئ",
       "intermediate": "متوسط",
-      "advanced": "متقدم"
+      "advanced": "متقدم",
+      "all": "الكل"
     },
     "Community": {
       "reply": "رد"

@@ -10,4 +10,6 @@ class AppSVGs {
   static const coupon = '$mainPath/coupon.svg';
   static const chatFilled = '$mainPath/chat_filled.svg';
   static const compass = '$mainPath/compass.svg';
+  static const filter = '$mainPath/filter.svg';
+  static const close = '$mainPath/close.svg';
 }

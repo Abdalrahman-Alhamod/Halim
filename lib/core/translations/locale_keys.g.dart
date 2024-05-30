@@ -113,6 +113,7 @@ abstract class  LocaleKeys {
   static const CourseDetails_Level_beginner = 'CourseDetails.Level.beginner';
   static const CourseDetails_Level_intermediate = 'CourseDetails.Level.intermediate';
   static const CourseDetails_Level_advanced = 'CourseDetails.Level.advanced';
+  static const CourseDetails_Level_all = 'CourseDetails.Level.all';
   static const CourseDetails_Level = 'CourseDetails.Level';
   static const CourseDetails_Community_reply = 'CourseDetails.Community.reply';
   static const CourseDetails_Community = 'CourseDetails.Community';

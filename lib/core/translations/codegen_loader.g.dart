@@ -141,7 +141,8 @@ class CodegenLoader extends AssetLoader{
     "Level": {
       "beginner": "مبتدئ",
       "intermediate": "متوسط",
-      "advanced": "متقدم"
+      "advanced": "متقدم",
+      "all": "الكل"
     },
     "Community": {
       "reply": "رد"
@@ -326,7 +327,8 @@ static const Map<String,dynamic> en = {
     "Level": {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "advanced": "Advanced",
+      "all": "All"
     },
     "Community": {
       "reply": "Reply"

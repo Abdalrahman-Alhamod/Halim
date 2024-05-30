@@ -125,7 +125,8 @@
     "Level": {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "advanced": "Advanced",
+      "all": "All"
     },
     "Community": {
       "reply": "Reply"

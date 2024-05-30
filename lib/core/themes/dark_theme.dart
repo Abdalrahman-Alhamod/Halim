@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/themes/slider_theme.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../assets/app_font.dart';
@@ -10,6 +11,7 @@ ThemeData getDarkThemeData(BuildContext context) {
     secondary: AppColors.primaryColor.withAlpha(230),
     background: AppColors.darkColor,
   );
+ 
   return ThemeData(
     colorScheme: colorScheme,
     fontFamily: context.isEnglish ? AppFonts.urbanist : AppFonts.tajawal,
@@ -19,5 +21,6 @@ ThemeData getDarkThemeData(BuildContext context) {
         backgroundColor: AppColors.darkFlatButtonColor,
       ),
     ),
+    sliderTheme: getSliderTheme(context),
   );
 }
