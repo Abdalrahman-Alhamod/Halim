@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_reviews_section_header.dart';
 
 import 'course_reviews_sample.dart';
-import 'course_reviews_stars_bar.dart';
+import 'review_stars_bar/course_reviews_stars_bar.dart';
 
 class CourseReviewsSection extends StatelessWidget {
   const CourseReviewsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children:  [
+      children: [
         SizedBox(
           height: 20,
         ),
@@ -19,7 +19,9 @@ class CourseReviewsSection extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        CourseReviewsStarsBar(),
+        CourseReviewsStarsBar(
+          onChanged: (value) {},
+        ),
         SizedBox(
           height: 20,
         ),

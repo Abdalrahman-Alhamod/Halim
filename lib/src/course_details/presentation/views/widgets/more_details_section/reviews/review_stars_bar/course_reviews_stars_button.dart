@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
-import '../../../../../../../core/themes/app_colors.dart';
+import '../../../../../../../../core/themes/app_colors.dart';
 
 class CourseReviewsStarsButton extends StatelessWidget {
   const CourseReviewsStarsButton({
