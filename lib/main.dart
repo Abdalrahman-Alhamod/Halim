@@ -1,10 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:halim/core/themes/dark_theme.dart';
-import 'package:halim/core/themes/light_theme.dart';
+import 'package:halim/core/translations/app_locales.dart';
 import 'package:halim/core/translations/codegen_loader.g.dart';
 import 'package:halim/core/utils/app_route.dart';
+
+import 'core/themes/app_themes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,26 +15,23 @@ void main() async {
   runApp(
     EasyLocalization(
       supportedLocales: const [
-        Locale('en'),
-        Locale('ar'),
+        Locale(AppLocales.en),
+        Locale(AppLocales.ar),
       ],
-      path: 'assets/translations',
-      startLocale: const Locale('en'),
-      fallbackLocale: const Locale('en'),
+      path: AppLocales.translationsAssetsPath,
+      startLocale: const Locale(AppLocales.en),
+      fallbackLocale: const Locale(AppLocales.en),
       assetLoader: const CodegenLoader(),
       child: const HalimApp(),
+      useOnlyLangCode: true,
+      saveLocale: false,
     ),
   );
 }
 
-class HalimApp extends StatefulWidget {
+class HalimApp extends StatelessWidget {
   const HalimApp({super.key});
 
-  @override
-  State<HalimApp> createState() => _HalimAppState();
-}
-
-class _HalimAppState extends State<HalimApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
@@ -42,8 +40,8 @@ class _HalimAppState extends State<HalimApp> {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      theme: getLightThemeData(context),
-      darkTheme: getDarkThemeData(context),
+      theme: AppThemes.getLightThemeData(context),
+      darkTheme: AppThemes.getDarkThemeData(context),
     );
   }
 }

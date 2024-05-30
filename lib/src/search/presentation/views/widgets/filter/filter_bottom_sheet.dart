@@ -43,7 +43,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).scaffoldBackgroundColor,
         border: Border.all(
           color:
               context.isDarkMode ? Colors.grey.shade800 : Colors.grey.shade300,
@@ -81,24 +81,27 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             SizedBox(
               height: 10,
             ),
-            RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: '${LocaleKeys.Search_Filter_field.tr()} :  ',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            Row(
+              children: [
+                Text(
+                  '${LocaleKeys.Search_Filter_field.tr()} :  ',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
                   ),
-                  TextSpan(
-                    text: LocaleKeys.Search_Test_mainCategory1.tr(),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    LocaleKeys.Search_Test_mainCategory1.tr(),
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       color: AppColors.primaryColor,
                       fontWeight: FontWeight.w600,
                     ),
-                    recognizer: _TapGestureRecognizer,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             SizedBox(
               height: 20,
@@ -199,7 +202,9 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                     },
                     title: LocaleKeys.Search_reset.tr(),
                     elevation: 0,
-                    backgroundColor: Colors.grey.shade800,
+                    backgroundColor: context.isDarkMode
+                        ? Colors.grey.shade800
+                        : Colors.grey.shade600,
                   ),
                 ),
                 SizedBox(

@@ -9,7 +9,7 @@ ThemeData getDarkThemeData(BuildContext context) {
   final ColorScheme colorScheme = const ColorScheme.dark().copyWith(
     primary: AppColors.primaryColor,
     secondary: AppColors.primaryColor.withAlpha(230),
-    background: AppColors.darkColor,
+
   );
  
   return ThemeData(

@@ -21,7 +21,7 @@ class _SortByBottomSheetState extends State<SortByBottomSheet> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).scaffoldBackgroundColor,
         border: Border.all(
           color:
               context.isDarkMode ? Colors.grey.shade800 : Colors.grey.shade300,
@@ -86,7 +86,9 @@ class _SortByBottomSheetState extends State<SortByBottomSheet> {
                     },
                     title: LocaleKeys.Search_reset.tr(),
                     elevation: 0,
-                    backgroundColor: Colors.grey.shade800,
+                    backgroundColor: context.isDarkMode
+                        ? Colors.grey.shade800
+                        : Colors.grey.shade600,
                   ),
                 ),
                 SizedBox(

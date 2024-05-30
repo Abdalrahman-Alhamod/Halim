@@ -6,9 +6,10 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 ThemeData getLightThemeData(BuildContext context) {
   final ColorScheme colorScheme = const ColorScheme.light().copyWith(
-      primary: AppColors.primaryColor,
-      secondary: AppColors.primaryColor.withAlpha(230),
-      background: Colors.white);
+    primary: AppColors.primaryColor,
+    secondary: AppColors.primaryColor.withAlpha(230),
+
+  );
   return ThemeData(
     colorScheme: colorScheme,
     fontFamily: context.isEnglish ? AppFonts.urbanist : AppFonts.tajawal,
