@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
+import 'package:halim/src/profile_settings/presentation/views/profile_view.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
@@ -23,7 +24,7 @@ class BottomBarState extends State<BottomBar> {
     const HomeView(),
     const BrowseSectionsCourses(),
     const Icon(Icons.power_input_sharp, size: 150),
-    const Icon(Icons.more_horiz_outlined, size: 150),
+    const ProfileView(),
   ];
 
   @override

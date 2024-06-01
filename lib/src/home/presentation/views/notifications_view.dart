@@ -33,7 +33,6 @@ class NotificationsViewState extends State<NotificationsView> {
                       ? Colors.white
                       : Colors.black,
                   fontSize: 20,
-                  fontFamily: 'Cairo',
                   fontWeight: FontWeight.w500),
             ),
             const Spacer(
