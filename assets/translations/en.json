@@ -214,7 +214,8 @@
       "pointWidget": {
         "keepMoving": "keep Moving forward!",
         "points": "Your Points:"
-      }
+      },
+      "section": "Specialization:"
     },
     "NotificationsPage": {
       "notifications": "Notifications",

@@ -1,11 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
+import 'widgets/ChooseYourSpecialtyWithCourses.dart';
 import 'widgets/card_course.dart';
 import 'widgets/category_widget.dart';
 
@@ -60,8 +62,9 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            ChooseYourSpecialtyWithCourses(),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
               child: SizedBox(
                 height: 40,
                 child: ListView(
@@ -89,23 +92,23 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
                   followers: 8.289,
                   name: '3D Design illustation',
                   price: 48,
-                  imageUrl: 'images/p1.jpg',
+                  imageUrl: AppImages.testCourseCover,
                 ),
                 CardCourse(
-                  category: 'Travilling',
+                  category: 'السياحة والسفر',
                   evaluation: 4.1,
                   followers: 1.154,
-                  name: 'Outer Space',
+                  name: 'رحلات الفضاء',
                   price: 120,
-                  imageUrl: 'images/p2.jpg',
+                  imageUrl: AppImages.testCourseCover,
                 ),
                 CardCourse(
                   category: 'AI',
                   evaluation: 5.0,
                   followers: 5.68,
-                  name: 'artificial intelligence',
+                  name: 'Artificial intelligence',
                   price: 200,
-                  imageUrl: 'images/p4.jpg',
+                  imageUrl: AppImages.testCourseCover,
                 ),
               ],
             ),

@@ -6,6 +6,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/account_setup/presentation/views/functions/choose_Interests_Bottom_Sheet.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
 import 'package:halim/src/account_setup/presentation/views/widgets/BirthdayCard.dart';
+import 'package:halim/src/account_setup/presentation/views/widgets/ChooseYourSpecialty.dart';
 
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
@@ -14,7 +15,7 @@ import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 import 'widgets/ListWithDialogGender.dart';
-import 'widgets/ChooseYourSpecialty.dart';
+import '../../../home/presentation/views/widgets/ChooseYourSpecialtyWithCourses.dart';
 import 'widgets/phoneNum_input.dart';
 
 class FillProfilView extends StatefulWidget {
@@ -127,7 +128,7 @@ class _FillProfilViewState extends State<FillProfilView> {
             BirthdayCard(),
             const PhoneNumberInputScreen(),
             ListWithDialogGender(),
-            ChooseYourSpecialty(),
+            ChooseYourSpecialtyWithRegister(),
             Container(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),

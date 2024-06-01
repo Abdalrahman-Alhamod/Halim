@@ -5,15 +5,16 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
-class ChooseYourSpecialtyWithRegister extends StatefulWidget {
-  const ChooseYourSpecialtyWithRegister({super.key});
+class ChooseYourSpecialtyWithCourses extends StatefulWidget {
+  const ChooseYourSpecialtyWithCourses({super.key});
 
   @override
-  ChooseYourSpecialtyWithRegisterState createState() =>
-      ChooseYourSpecialtyWithRegisterState();
+  ChooseYourSpecialtyWithCoursesState createState() =>
+      ChooseYourSpecialtyWithCoursesState();
 }
 
-class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWithRegister> {
+class ChooseYourSpecialtyWithCoursesState
+    extends State<ChooseYourSpecialtyWithCourses> {
   TextEditingController controller = TextEditingController();
   bool _isFocused = false;
   late FocusNode _focusNode;
@@ -34,8 +35,7 @@ class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWith
     'Undergraduate level - Information Engineering',
     'Undergraduate - Mechanical Engineering',
     'Undergraduate - Architecture',
-    
-    ];
+  ];
   List<String> filteredOptions = [];
 
   @override
@@ -44,6 +44,7 @@ class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWith
     _focusNode = FocusNode();
     _focusNode.addListener(_onFocusChange);
     filteredOptions = options;
+    controller.text = options[0]; // تعيين القسم الافتراضي
   }
 
   @override
@@ -69,7 +70,8 @@ class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWith
                 children: [
                   TextField(
                     decoration: InputDecoration(
-                      hintText: LocaleKeys.FillYourProfile_Specialty_search.tr(),
+                      hintText:
+                          LocaleKeys.FillYourProfile_Specialty_search.tr(),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
@@ -118,7 +120,6 @@ class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWith
       padding: const EdgeInsets.all(10.0),
       child: TextField(
         controller: controller,
-        focusNode: _focusNode,
         readOnly: true,
         onTap: _showDialog,
         decoration: InputDecoration(
@@ -130,9 +131,28 @@ class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWith
                 ? Colors.grey.shade500
                 : Colors.grey.shade700,
           ),
-          suffixIcon: Icon(
-            Icons.arrow_drop_down_rounded,
-            size: 30,
+          prefixIcon: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                '   ${LocaleKeys.HomePage_Home_section.tr()}',
+                style: TextStyle(
+                    fontSize: 18,
+                    color: MediaQuery.of(context).platformBrightness ==
+                            Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
+                    fontWeight: FontWeight.w500),
+              ),
+              SizedBox(width: 4),
+            ],
+          ),
+          suffixIcon: IconButton(
+            icon: Icon(
+              Icons.arrow_drop_down_rounded,
+              size: 30,
+            ),
+            onPressed: _showDialog,
           ),
           filled: true,
           fillColor: context.isDarkMode

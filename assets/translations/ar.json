@@ -214,7 +214,8 @@
       "pointWidget": {
         "keepMoving": "تابع التقدم إلى الأمام !",
         "points": "نقاطك:"
-      }
+      },
+      "section": "التخصص:"
     },
     "NotificationsPage": {
       "notifications": "الإشعارات",

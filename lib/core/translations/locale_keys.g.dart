@@ -187,7 +187,16 @@ abstract class  LocaleKeys {
   static const HomePage_Home_pointWidget_keepMoving = 'HomePage.Home.pointWidget.keepMoving';
   static const HomePage_Home_pointWidget_points = 'HomePage.Home.pointWidget.points';
   static const HomePage_Home_pointWidget = 'HomePage.Home.pointWidget';
+  static const HomePage_Home_section = 'HomePage.Home.section';
   static const HomePage_Home = 'HomePage.Home';
+  static const HomePage_NotificationsPage_notifications = 'HomePage.NotificationsPage.notifications';
+  static const HomePage_NotificationsPage_today = 'HomePage.NotificationsPage.today';
+  static const HomePage_NotificationsPage_yesterday = 'HomePage.NotificationsPage.yesterday';
+  static const HomePage_NotificationsPage = 'HomePage.NotificationsPage';
   static const HomePage = 'HomePage';
+  static const SearchPage_search = 'SearchPage.search';
+  static const SearchPage = 'SearchPage';
+  static const MyCourses_bookmark = 'MyCourses.bookmark';
+  static const MyCourses = 'MyCourses';
 
 }

@@ -27,8 +27,8 @@ class CategoryWidgetState extends State<CategoryWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 10.0),
-            padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
+            margin: const EdgeInsets.symmetric(horizontal: 8.0),
+           padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
             decoration: BoxDecoration(
               color: isSelected
                   ? AppColors.primaryColor

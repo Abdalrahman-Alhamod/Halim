@@ -220,7 +220,7 @@ class CodegenLoader extends AssetLoader{
       "search": "ابحث",
       "topMentors": "كبار الموجهين",
       "mostPopularCourses": "الدورات الأكثر شعبية",
-      "seeAll": "اظهار الكل",
+      "seeAll": "إظهار الكل",
       "NavBar": {
         "myCourses": "كورساتي",
         "home": "الصفحة الرئيسية",
@@ -230,8 +230,20 @@ class CodegenLoader extends AssetLoader{
       "pointWidget": {
         "keepMoving": "تابع التقدم إلى الأمام !",
         "points": "نقاطك:"
-      }
+      },
+      "section": "التخصص:"
+    },
+    "NotificationsPage": {
+      "notifications": "الإشعارات",
+      "today": "اليوم",
+      "yesterday": "البارحة"
     }
+  },
+  "SearchPage": {
+    "search": "ابحث"
+  },
+  "MyCourses": {
+    "bookmark": "المحفوظات"
   }
 };
 static const Map<String,dynamic> en = {
@@ -450,8 +462,20 @@ static const Map<String,dynamic> en = {
       "pointWidget": {
         "keepMoving": "keep Moving forward!",
         "points": "Your Points:"
-      }
+      },
+      "section": "Specialization:"
+    },
+    "NotificationsPage": {
+      "notifications": "Notifications",
+      "today": "Today",
+      "yesterday": "Yesterday"
     }
+  },
+  "SearchPage": {
+    "search": "search"
+  },
+  "MyCourses": {
+    "bookmark": "bookmark"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
