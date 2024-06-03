@@ -30,8 +30,7 @@ class _SectionNavButton extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(
-          vertical: 14,
-          horizontal: 28,
+          horizontal: 24,
         ),
         child: Text(
           title,
@@ -41,7 +40,7 @@ class _SectionNavButton extends StatelessWidget {
                 : context.isDarkMode
                     ? Colors.grey.shade700
                     : Colors.grey.shade500,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
         ),
