@@ -6,7 +6,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/themes/app_colors.dart';
-import 'course_reviews_stars_button.dart';
+import 'review_stars_bar/course_reviews_stars_button.dart';
 
 class CourseReviewBlock extends StatelessWidget {
   const CourseReviewBlock({

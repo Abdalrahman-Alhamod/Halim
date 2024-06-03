@@ -25,10 +25,11 @@ class EnrollCourseAppBar extends StatelessWidget
           fontWeight: FontWeight.w600,
         ),
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(AppConstrains.maxAppBarHeight);
+  Size get preferredSize =>
+      const Size.fromHeight(AppConstrains.maxAppBarHeight);
 }

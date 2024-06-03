@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/search/presentation/views/search_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_reading_view.dart';
@@ -27,7 +28,6 @@ import '../../src/forgot_password/presentation/views/enter_code_view.dart';
 import '../../src/forgot_password/presentation/views/send_code_view.dart';
 import '../../src/home/presentation/views/notifications_view.dart';
 import '../../src/home/presentation/views/popular_courses_view.dart';
-import '../../src/home/presentation/views/search_view.dart';
 import '../../src/home/presentation/views/top_mentors_view.dart';
 import '../../src/home/presentation/views/widgets/bottom_bar.dart';
 import '../../src/my_courses/presentation/views/bookmark_view.dart';
@@ -66,7 +66,7 @@ class AppRoute {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const EnrollCourseView();
+          return const SplashView();
         },
       ),
       GoRoute(

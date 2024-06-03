@@ -16,7 +16,7 @@ class BottomSheetButton extends StatelessWidget {
     return Container(
       height: 120,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).scaffoldBackgroundColor,
         border: Border.all(
           color:
               context.isDarkMode ? Colors.grey.shade800 : Colors.grey.shade300,

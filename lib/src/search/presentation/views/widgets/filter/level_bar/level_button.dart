@@ -1,27 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
-import '../../../../../../../core/themes/app_colors.dart';
+import '../../../../../../../../core/themes/app_colors.dart';
+import 'data/level_bar_item.dart';
 
-class CourseReviewsStarsButton extends StatelessWidget {
-  const CourseReviewsStarsButton({
+class LevelButton extends StatelessWidget {
+  const LevelButton({
     super.key,
     required this.isPressed,
     required this.onPressed,
+    required this.type,
     required this.label,
   });
   final bool isPressed;
   final void Function()? onPressed;
   final String label;
+  final Level type;
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
       style: TextButton.styleFrom(
-        backgroundColor:
-            isPressed ? AppColors.primaryColor : Colors.transparent,
-        side: const BorderSide(
-          color: AppColors.primaryColor,
+        backgroundColor: isPressed
+            ? switch (type) {
+                Level.all => AppColors.primaryColor,
+                Level.begginer => Colors.green,
+                Level.intermediate => Colors.orange,
+                Level.advanced => Colors.red,
+              }
+            : Colors.transparent,
+        side: BorderSide(
+          color: switch (type) {
+            Level.all => AppColors.primaryColor,
+            Level.begginer => Colors.green,
+            Level.intermediate => Colors.orange,
+            Level.advanced => Colors.red,
+          },
           width: 3,
         ),
         padding: EdgeInsets.zero,
@@ -42,20 +56,19 @@ class CourseReviewsStarsButton extends StatelessWidget {
               ? CrossAxisAlignment.center
               : CrossAxisAlignment.start,
           children: [
-            Icon(
-              Icons.star,
-              color: isPressed ? Colors.white : AppColors.primaryColor,
-              size: 22,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
             Text(
               label,
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.w600,
-                color: isPressed ? Colors.white : AppColors.primaryColor,
+                color: isPressed
+                    ? Colors.white
+                    : switch (type) {
+                        Level.all => AppColors.primaryColor,
+                        Level.begginer => Colors.green,
+                        Level.intermediate => Colors.orange,
+                        Level.advanced => Colors.red,
+                      },
               ),
             )
           ],

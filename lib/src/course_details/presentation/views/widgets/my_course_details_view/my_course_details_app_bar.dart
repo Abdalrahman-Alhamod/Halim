@@ -20,7 +20,7 @@ class _MyCourseDetailsAppBar extends StatelessWidget
         ),
         maxLines: 1,
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }
 

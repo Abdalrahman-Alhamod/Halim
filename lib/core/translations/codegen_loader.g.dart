@@ -141,7 +141,8 @@ class CodegenLoader extends AssetLoader{
     "Level": {
       "beginner": "مبتدئ",
       "intermediate": "متوسط",
-      "advanced": "متقدم"
+      "advanced": "متقدم",
+      "all": "الكل"
     },
     "Community": {
       "reply": "رد"
@@ -197,6 +198,41 @@ class CodegenLoader extends AssetLoader{
   "CreatePin": {
     "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",
     "enter_pin": "ادخل رمز PIN"
+  },
+  "Search": {
+    "search": "بحث",
+    "recent": "الأخيرة",
+    "clearAll": "حذف الكل",
+    "notFound": "غير موجود",
+    "notFoundDesc": "عذرًا، الكلمة التي أدخلتها غير موجودة. يرجى التحقق مرة أخرى أو البحث بكلمة أخرى",
+    "resultsFor": "النتائج لـ",
+    "found": "وجدت",
+    "courses": "الدورات",
+    "mentors": "المدربون",
+    "Filter": {
+      "filter": "تصفية",
+      "field": "المجال",
+      "category": "الفئة",
+      "duration": "المدة",
+      "level": "المستوى",
+      "price": "السعر",
+      "rating": "التقييم",
+      "h": "س"
+    },
+    "Test": {
+      "mainCategory1": "هندسة البرمجيات"
+    },
+    "reset": "ارجاع",
+    "SearchBy": {
+      "sortBy": "الترتيب حسب",
+      "sort": "ترتيب",
+      "mostPopular": "الأكثر شهرة",
+      "bestSelling": "الأفضل مبيعاً",
+      "newest": "الأحدث",
+      "oldest": "الأقدم",
+      "rating": "التقييم",
+      "price": "السعر"
+    }
   }
 };
 static const Map<String,dynamic> en = {
@@ -326,7 +362,8 @@ static const Map<String,dynamic> en = {
     "Level": {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "advanced": "Advanced",
+      "all": "All"
     },
     "Community": {
       "reply": "Reply"
@@ -382,6 +419,41 @@ static const Map<String,dynamic> en = {
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",
     "enter_pin": "Enter PIN Number"
+  },
+  "Search": {
+    "search": "Search",
+    "recent": "Recent",
+    "clearAll": "Clear All",
+    "notFound": "Not Found",
+    "notFoundDesc": "Sorry, the keyword you entered cannot be found, please check again or search with another keyword",
+    "resultsFor": "Results for",
+    "found": "found",
+    "courses": "Courses",
+    "mentors": "Mentors",
+    "Filter": {
+      "filter": "Filter",
+      "field": "Field",
+      "category": "Category",
+      "duration": "Duration",
+      "level": "Level",
+      "price": "Price",
+      "rating": "Rating",
+      "h": "H"
+    },
+    "Test": {
+      "mainCategory1": "Software Engineering"
+    },
+    "reset": "Reset",
+    "SearchBy": {
+      "sortBy": "Sort By",
+      "sort": "Sort",
+      "mostPopular": "Most Popular",
+      "bestSelling": "Best Selling",
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "rating": "Rating",
+      "price": "Price"
+    }
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

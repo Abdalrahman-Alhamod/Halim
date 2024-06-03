@@ -113,6 +113,7 @@ abstract class  LocaleKeys {
   static const CourseDetails_Level_beginner = 'CourseDetails.Level.beginner';
   static const CourseDetails_Level_intermediate = 'CourseDetails.Level.intermediate';
   static const CourseDetails_Level_advanced = 'CourseDetails.Level.advanced';
+  static const CourseDetails_Level_all = 'CourseDetails.Level.all';
   static const CourseDetails_Level = 'CourseDetails.Level';
   static const CourseDetails_Community_reply = 'CourseDetails.Community.reply';
   static const CourseDetails_Community = 'CourseDetails.Community';
@@ -159,5 +160,36 @@ abstract class  LocaleKeys {
   static const CreatePin_add_a_pin = 'CreatePin.add_a_pin';
   static const CreatePin_enter_pin = 'CreatePin.enter_pin';
   static const CreatePin = 'CreatePin';
+  static const Search_search = 'Search.search';
+  static const Search_recent = 'Search.recent';
+  static const Search_clearAll = 'Search.clearAll';
+  static const Search_notFound = 'Search.notFound';
+  static const Search_notFoundDesc = 'Search.notFoundDesc';
+  static const Search_resultsFor = 'Search.resultsFor';
+  static const Search_found = 'Search.found';
+  static const Search_courses = 'Search.courses';
+  static const Search_mentors = 'Search.mentors';
+  static const Search_Filter_filter = 'Search.Filter.filter';
+  static const Search_Filter_field = 'Search.Filter.field';
+  static const Search_Filter_category = 'Search.Filter.category';
+  static const Search_Filter_duration = 'Search.Filter.duration';
+  static const Search_Filter_level = 'Search.Filter.level';
+  static const Search_Filter_price = 'Search.Filter.price';
+  static const Search_Filter_rating = 'Search.Filter.rating';
+  static const Search_Filter_h = 'Search.Filter.h';
+  static const Search_Filter = 'Search.Filter';
+  static const Search_Test_mainCategory1 = 'Search.Test.mainCategory1';
+  static const Search_Test = 'Search.Test';
+  static const Search_reset = 'Search.reset';
+  static const Search_SearchBy_sortBy = 'Search.SearchBy.sortBy';
+  static const Search_SearchBy_sort = 'Search.SearchBy.sort';
+  static const Search_SearchBy_mostPopular = 'Search.SearchBy.mostPopular';
+  static const Search_SearchBy_bestSelling = 'Search.SearchBy.bestSelling';
+  static const Search_SearchBy_newest = 'Search.SearchBy.newest';
+  static const Search_SearchBy_oldest = 'Search.SearchBy.oldest';
+  static const Search_SearchBy_rating = 'Search.SearchBy.rating';
+  static const Search_SearchBy_price = 'Search.SearchBy.price';
+  static const Search_SearchBy = 'Search.SearchBy';
+  static const Search = 'Search';
 
 }
