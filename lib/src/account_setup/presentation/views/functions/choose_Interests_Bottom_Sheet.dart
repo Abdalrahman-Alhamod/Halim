@@ -85,7 +85,7 @@ void chooseInterestsBottomSheet(BuildContext context) {
                 children: [
                   CustomFlatButton(
                     onPressed: () {
-                      GoRouter.of(context).push(AppRoute.kEnterCode);
+                      GoRouter.of(context).push(AppRoute.kHome);
                     },
                     title:  LocaleKeys.FillYourProfile_Interests_skip.tr(),
                     width: MediaQuery.of(context).size.width * 0.40,

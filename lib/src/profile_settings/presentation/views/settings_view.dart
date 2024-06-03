@@ -5,20 +5,20 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
+import 'package:halim/src/profile_settings/presentation/views/widget/filterToggleButtonWithIcon.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
-import 'widget/filterToggleButton.dart';
 import 'widget/settings_widget.dart';
 
-class ProfileView extends StatefulWidget {
-  const ProfileView({super.key});
+class SettingsView extends StatefulWidget {
+  const SettingsView({super.key});
 
   @override
-  ProfileViewState createState() => ProfileViewState();
+  SettingsViewState createState() => SettingsViewState();
 }
 
-class ProfileViewState extends State<ProfileView> {
+class SettingsViewState extends State<SettingsView> {
   late ImageServices _imageServices;
 
   File? get imageFile => _imageServices.imageFile;
@@ -87,7 +87,14 @@ class ProfileViewState extends State<ProfileView> {
               name: 'Notification',
               icon: Icons.notifications_active,
               onPressed: () {
-                GoRouter.of(context).push(AppRoute.kHome);
+                GoRouter.of(context).push(AppRoute.kNotificationSettingsView);
+              },
+            ),
+            SettingsWidget(
+              name: 'Security',
+              icon: Icons.security,
+              onPressed: () {
+                GoRouter.of(context).push(AppRoute.kSecurityView);
               },
             ),
             SettingsWidget(
@@ -101,10 +108,10 @@ class ProfileViewState extends State<ProfileView> {
               name: 'Language',
               icon: Icons.language,
               onPressed: () {
-                GoRouter.of(context).push(AppRoute.kHome);
+                GoRouter.of(context).push(AppRoute.kLanguageSettingsView);
               },
             ),
-            FilterToggleButton(
+            FilterToggleButtonWithIcon(
               filterName: 'Dark Mode',
               fun: (p0) {},
               icon: Icons.remove_red_eye,

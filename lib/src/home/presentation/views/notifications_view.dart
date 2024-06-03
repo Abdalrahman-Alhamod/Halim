@@ -82,7 +82,6 @@ class NotificationsViewState extends State<NotificationsView> {
                       ? Colors.white
                       : Colors.black,
                   fontSize: 18,
-                  fontFamily: 'Cairo',
                   fontWeight: FontWeight.bold,
                 ),
               ),

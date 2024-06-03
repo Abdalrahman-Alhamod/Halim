@@ -5,13 +5,11 @@ import 'package:halim/core/utils/context_extensions.dart';
 class FilterToggleButton extends StatefulWidget {
   final String filterName;
   final Function(bool) fun;
-  final IconData? icon;
 
   const FilterToggleButton({
     Key? key,
     required this.filterName,
     required this.fun,
-    this.icon,
   }) : super(key: key);
 
   @override
@@ -37,12 +35,7 @@ class _FilterToggleButtonState extends State<FilterToggleButton> {
       child: Row(
         children: [
           SizedBox(width: 20),
-          Icon(
-            widget.icon,
-            size: 28,
-            color: context.isDarkMode ? Colors.white : AppColors.darkColor,
-          ),
-          SizedBox(width: 20),
+         
           Expanded(
             child: Row(
               children: [

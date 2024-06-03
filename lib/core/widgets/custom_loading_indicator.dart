@@ -1,19 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-class CustomLoadingIndicator extends StatelessWidget {
+class CustomLoadingIndicator extends StatefulWidget {
   const CustomLoadingIndicator({
     super.key,
     this.color = Colors.white,
-    this.size = 50,
+    this.size = 50.0,
+    required this.onComplete,
   });
+
   final Color color;
   final double size;
+  final VoidCallback onComplete;
+
+  @override
+  _CustomLoadingIndicatorState createState() => _CustomLoadingIndicatorState();
+}
+
+class _CustomLoadingIndicatorState extends State<CustomLoadingIndicator> {
+  @override
+  void initState() {
+    super.initState();
+    _startLoading();
+  }
+
+  void _startLoading() {
+    Future.delayed(const Duration(seconds: 2), () {
+      widget.onComplete();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return SpinKitCircle(
-      color: color,
-      size: size,
+    return Center(
+      child: SpinKitCircle(
+        color: widget.color,
+        size: widget.size,
+        duration: const Duration(seconds: 2), 
+      ),
     );
   }
 }
