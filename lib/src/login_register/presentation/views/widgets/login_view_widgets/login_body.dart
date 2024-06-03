@@ -34,7 +34,7 @@ class LoginBody extends StatelessWidget {
             AuthForm(
               buttonTitle: LocaleKeys.Auth_signIn.tr(),
               onTap: (email, password, rememberMe) {
-                GoRouter.of(context).push(AppRoute.kHome);
+                GoRouter.of(context).go(AppRoute.kHome);
               },
             ),
             const SizedBox(

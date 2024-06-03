@@ -138,7 +138,7 @@ class BiometricViewState extends State<BiometricView> {
               children: [
                 CustomFlatButton(
                   onPressed: () {
-                    GoRouter.of(context).push(AppRoute.kHome);
+                    GoRouter.of(context).go(AppRoute.kHome);
                   },
                   title: 'Skip',
                   width: MediaQuery.of(context).size.width * 0.40,

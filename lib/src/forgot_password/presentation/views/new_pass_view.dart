@@ -44,10 +44,7 @@ class _NewPassViewState extends State<NewPassView> {
               fontSize: 20,
               fontFamily: 'Cairo',
               fontWeight: FontWeight.w500,
-              color:
-                  context.isDarkMode
-                      ? Colors.white
-                      : Colors.black,
+              color: context.isDarkMode ? Colors.white : Colors.black,
             ),
           ),
           elevation: 0,
@@ -55,20 +52,15 @@ class _NewPassViewState extends State<NewPassView> {
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color:
-                  context.isDarkMode
-                      ? Colors.white
-                      : Colors.black,
+              color: context.isDarkMode ? Colors.white : Colors.black,
             ),
             onPressed: () {
-             GoRouter.of(context).pop();
+              GoRouter.of(context).pop();
             },
           ),
         ),
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         body: Form(
           key: formKey,
           child: Column(
@@ -117,7 +109,7 @@ class _NewPassViewState extends State<NewPassView> {
                   /*if (formKey.currentState!.validate()) {
                     GoRouter.of(context).push(AppRoute.kHome);
                   } else {}*/
-                  GoRouter.of(context).push(AppRoute.kHome);
+                  GoRouter.of(context).go(AppRoute.kHome);
                 },
                 title: 'Continue',
                 width: context.width * 0.94,
