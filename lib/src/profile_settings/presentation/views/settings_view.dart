@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
+import 'package:halim/src/profile_settings/presentation/views/functions/log_out_bottom_sheet.dart';
 import 'package:halim/src/profile_settings/presentation/views/widget/filterToggleButtonWithIcon.dart';
 
 import '../../../../core/themes/app_colors.dart';
@@ -134,7 +135,7 @@ class SettingsViewState extends State<SettingsView> {
               name: 'Logout',
               icon: Icons.logout_rounded,
               onPressed: () {
-                GoRouter.of(context).push(AppRoute.kHome);
+                logOutBottomSheet(context);
               },
               color: Colors.red,
             ),
