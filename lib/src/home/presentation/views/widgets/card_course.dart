@@ -11,21 +11,31 @@ class CardCourse extends StatefulWidget {
   final int price;
   final String name;
   final String imageUrl;
-  const CardCourse(
-      {super.key,
-      required this.followers,
-      required this.evaluation,
-      required this.category,
-      required this.price,
-      required this.name,
-      required this.imageUrl});
+  final bool isBookmarked;
+  final bool isEnabled;
+  const CardCourse({
+    super.key,
+    required this.followers,
+    required this.evaluation,
+    required this.category,
+    required this.price,
+    required this.name,
+    required this.imageUrl,
+    this.isBookmarked = false,
+    this.isEnabled = true,
+  });
 
   @override
   State<CardCourse> createState() => _CardCourseState();
 }
 
 class _CardCourseState extends State<CardCourse> {
-  bool isBookmarked = false;
+  late bool _isBookmarked;
+  @override
+  void initState() {
+    _isBookmarked = widget.isBookmarked;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -87,20 +97,22 @@ class _CardCourseState extends State<CardCourse> {
                         const Spacer(),
                         IconButton(
                           icon: Icon(
-                            isBookmarked
+                            _isBookmarked
                                 ? Icons.bookmark
                                 : Icons.bookmark_border_outlined,
                             size: 28,
-                            color: isBookmarked ? Colors.blue : Colors.blue,
+                            color: _isBookmarked ? Colors.blue : Colors.blue,
                           ),
-                          onPressed: () {
-                            if (isBookmarked) {
-                              showRemoveBookmarkBottomSheet(context);
-                            }
-                            setState(() {
-                              isBookmarked = !isBookmarked;
-                            });
-                          },
+                          onPressed: widget.isEnabled
+                              ? () {
+                                  if (_isBookmarked) {
+                                    showRemoveBookmarkBottomSheet(context);
+                                  }
+                                  setState(() {
+                                    _isBookmarked = !_isBookmarked;
+                                  });
+                                }
+                              : null,
                         ),
                       ],
                     ),
