@@ -3,13 +3,16 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/functions/show_custom_dialog.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/widgets/enroll_success_dialog.dart';
 import 'package:halim/src/profile_settings/presentation/views/functions/log_out_bottom_sheet.dart';
 import 'package:halim/src/profile_settings/presentation/views/widget/filterToggleButtonWithIcon.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
+import 'widget/evaluation_courses_dialog.dart';
 import 'widget/settings_widget.dart';
 
 class SettingsView extends StatefulWidget {
@@ -125,10 +128,10 @@ class SettingsViewState extends State<SettingsView> {
               },
             ),
             SettingsWidget(
-              name: 'Help Center',
+              name: 'dialog courses test',
               icon: Icons.help_outlined,
               onPressed: () {
-                GoRouter.of(context).push(AppRoute.kHome);
+               showCustomDialog(context: context, widget:EvaluationCoursesDialog() );
               },
             ),
             SettingsWidget(

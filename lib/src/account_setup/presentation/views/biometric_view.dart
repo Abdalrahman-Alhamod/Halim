@@ -160,13 +160,11 @@ class BiometricViewState extends State<BiometricView> {
                   title: 'Skip',
                   width: MediaQuery.of(context).size.width * 0.40,
                   height: 45,
-                  kBackgroundcolor: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
+                  kBackgroundcolor: context.isDarkMode
                       ? AppColors.darkFlatButtonColor
                       : const Color.fromARGB(255, 113, 132, 204)
                           .withOpacity(0.25),
-                  kTextcolor: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
+                  kTextcolor:context.isDarkMode
                       ? AppColors.lightFlatButtonColor
                       : AppColors.primaryColor,
                 ),
