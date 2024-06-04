@@ -66,7 +66,7 @@ class AppRoute {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const HomeView();
+          return const BottomBar();
         },
       ),
       GoRoute(

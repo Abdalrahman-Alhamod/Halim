@@ -161,7 +161,9 @@
       "announcements": "Announcements",
       "certificate": "Certificate",
       "downloadCertificate": "Download Certificate"
-    }
+    },
+    "hrs": "hrs",
+    "mins": "mins"
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password"
@@ -216,6 +218,17 @@
       "oldest": "Oldest",
       "rating": "Rating",
       "price": "Price"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "saved": "Saved",
+    "downloaded": "Downloaded",
+    "Bookmark": {
+      "cancel": "Cancel",
+      "yesRemove": "Yes, Remove",
+      "removeFromBookmark": "Remove from Bookmar ?"
     }
   }
 }

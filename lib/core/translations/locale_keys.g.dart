@@ -145,6 +145,8 @@ abstract class  LocaleKeys {
   static const CourseDetails_MyCourse_certificate = 'CourseDetails.MyCourse.certificate';
   static const CourseDetails_MyCourse_downloadCertificate = 'CourseDetails.MyCourse.downloadCertificate';
   static const CourseDetails_MyCourse = 'CourseDetails.MyCourse';
+  static const CourseDetails_hrs = 'CourseDetails.hrs';
+  static const CourseDetails_mins = 'CourseDetails.mins';
   static const CourseDetails = 'CourseDetails';
   static const ForgotPassword_confirmPassword = 'ForgotPassword.confirmPassword';
   static const ForgotPassword = 'ForgotPassword';
@@ -191,5 +193,14 @@ abstract class  LocaleKeys {
   static const Search_SearchBy_price = 'Search.SearchBy.price';
   static const Search_SearchBy = 'Search.SearchBy';
   static const Search = 'Search';
+  static const MyCourses_ongoing = 'MyCourses.ongoing';
+  static const MyCourses_completed = 'MyCourses.completed';
+  static const MyCourses_saved = 'MyCourses.saved';
+  static const MyCourses_downloaded = 'MyCourses.downloaded';
+  static const MyCourses_Bookmark_cancel = 'MyCourses.Bookmark.cancel';
+  static const MyCourses_Bookmark_yesRemove = 'MyCourses.Bookmark.yesRemove';
+  static const MyCourses_Bookmark_removeFromBookmark = 'MyCourses.Bookmark.removeFromBookmark';
+  static const MyCourses_Bookmark = 'MyCourses.Bookmark';
+  static const MyCourses = 'MyCourses';
 
 }

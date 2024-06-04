@@ -177,7 +177,9 @@ class CodegenLoader extends AssetLoader{
       "announcements": "إعلانات",
       "certificate": "الشهادة",
       "downloadCertificate": "تنزيل الشهادة"
-    }
+    },
+    "hrs": "س",
+    "mins": "د"
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور"
@@ -232,6 +234,17 @@ class CodegenLoader extends AssetLoader{
       "oldest": "الأقدم",
       "rating": "التقييم",
       "price": "السعر"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "قيد التقدم",
+    "completed": "المكتملة",
+    "saved": "المحفوظة",
+    "downloaded": "تم تحميلها",
+    "Bookmark": {
+      "cancel": "الغاء",
+      "yesRemove": "نعم، أزل",
+      "removeFromBookmark": "إزالة من المحفوظة ؟"
     }
   }
 };
@@ -398,7 +411,9 @@ static const Map<String,dynamic> en = {
       "announcements": "Announcements",
       "certificate": "Certificate",
       "downloadCertificate": "Download Certificate"
-    }
+    },
+    "hrs": "hrs",
+    "mins": "mins"
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password"
@@ -453,6 +468,17 @@ static const Map<String,dynamic> en = {
       "oldest": "Oldest",
       "rating": "Rating",
       "price": "Price"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "saved": "Saved",
+    "downloaded": "Downloaded",
+    "Bookmark": {
+      "cancel": "Cancel",
+      "yesRemove": "Yes, Remove",
+      "removeFromBookmark": "Remove from Bookmar ?"
     }
   }
 };

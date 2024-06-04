@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
@@ -6,6 +7,7 @@ import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
 import '../widgets/card_course.dart';
 
@@ -30,7 +32,7 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    'Remove from Bookmark?',
+                    LocaleKeys.MyCourses_Bookmark_removeFromBookmark.tr(),
                     style: TextStyle(
                       color: MediaQuery.of(context).platformBrightness ==
                               Brightness.dark
@@ -48,15 +50,18 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                     color: Colors.grey[300],
                   ),
                 ),
-                const CardCourse(
-                  category: '3D Design',
-                  evaluation: 4.8,
-                  followers: 8.289,
-                  name: '3D Design illustation',
-                  price: 48,
-                  imageUrl: AppImages.testCourseCover,
-                  isBookmarked: true,
-                  isEnabled: false,
+                Padding(
+                  padding: const EdgeInsets.all( 16.0),
+                  child:  CardCourse(
+                    category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                    evaluation: 4.8,
+                    followers: 8.289,
+                    name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
+                    price: 48,
+                    imageUrl: AppImages.testCourseCover,
+                    isBookmarked: true,
+                    isEnabled: false,
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -66,7 +71,7 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                       onPressed: () {
                         context.pop();
                       },
-                      title: 'Cancel',
+                      title:  LocaleKeys.MyCourses_Bookmark_cancel.tr(),
                       width: MediaQuery.of(context).size.width * 0.40,
                       height: 45,
                       kBackgroundcolor:
@@ -84,7 +89,7 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                       onPressed: () {
                         context.pop();
                       },
-                      title: 'Yes, Remove',
+                      title: LocaleKeys.MyCourses_Bookmark_yesRemove.tr(),
                       width: MediaQuery.of(context).size.width * 0.40,
                       height: 45,
                       kTextcolor: AppColors.lightFlatButtonColor,
