@@ -5,6 +5,7 @@ import '../../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../../core/translations/locale_keys.g.dart';
 import '../comments_tree/comments_tree.dart';
 import '../comments_tree/data/comment.dart';
+import 'enter_comment_bottom_sheet.dart';
 
 class CourseCommunityCommentsSample extends StatelessWidget {
   const CourseCommunityCommentsSample({
@@ -19,6 +20,17 @@ class CourseCommunityCommentsSample extends StatelessWidget {
           height: 10,
         ),
         CommentsTree(
+          onReply: () {
+            showModalBottomSheet(
+              isScrollControlled: true,
+              context: context,
+              builder: (context) => EnterCommentBottomSheet(
+                replyOnUsername:
+                    LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
+                onSend: (comment) {},
+              ),
+            );
+          },
           rootComment: Comment(
             avatar: AppImages.testAvatarAbd,
             userName: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
@@ -42,6 +54,17 @@ class CourseCommunityCommentsSample extends StatelessWidget {
           height: 10,
         ),
         CommentsTree(
+          onReply: () {
+            showModalBottomSheet(
+              isScrollControlled: true,
+              context: context,
+              builder: (context) => EnterCommentBottomSheet(
+                replyOnUsername:
+                    LocaleKeys.CourseDetails_Test_Reviews_Names_alaa.tr(),
+                onSend: (comment) {},
+              ),
+            );
+          },
           rootComment: Comment(
             avatar: AppImages.testAvatarAlaa,
             userName: LocaleKeys.CourseDetails_Test_Reviews_Names_alaa.tr(),
@@ -53,6 +76,17 @@ class CourseCommunityCommentsSample extends StatelessWidget {
           height: 10,
         ),
         CommentsTree(
+          onReply: () {
+            showModalBottomSheet(
+              isScrollControlled: true,
+              context: context,
+              builder: (context) => EnterCommentBottomSheet(
+                replyOnUsername:
+                    LocaleKeys.CourseDetails_Test_Reviews_Names_obada.tr(),
+                onSend: (comment) {},
+              ),
+            );
+          },
           rootComment: Comment(
             avatar: AppImages.testAvatarObada,
             userName: LocaleKeys.CourseDetails_Test_Reviews_Names_obada.tr(),

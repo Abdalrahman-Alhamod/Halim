@@ -116,6 +116,10 @@ abstract class  LocaleKeys {
   static const CourseDetails_Level_all = 'CourseDetails.Level.all';
   static const CourseDetails_Level = 'CourseDetails.Level';
   static const CourseDetails_Community_reply = 'CourseDetails.Community.reply';
+  static const CourseDetails_Community_approved = 'CourseDetails.Community.approved';
+  static const CourseDetails_Community_comment = 'CourseDetails.Community.comment';
+  static const CourseDetails_Community_replyingOn = 'CourseDetails.Community.replyingOn';
+  static const CourseDetails_Community_enterComment = 'CourseDetails.Community.enterComment';
   static const CourseDetails_Community = 'CourseDetails.Community';
   static const CourseDetails_Enroll_couponCode = 'CourseDetails.Enroll.couponCode';
   static const CourseDetails_Enroll_wallet = 'CourseDetails.Enroll.wallet';

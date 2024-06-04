@@ -129,7 +129,11 @@
       "all": "All"
     },
     "Community": {
-      "reply": "Reply"
+      "reply": "Reply",
+      "approved": "Approved",
+      "comment": "Comment",
+      "replyingOn": "Replying on",
+      "enterComment": "Enter comment..."
     },
     "Enroll": {
       "couponCode": "Coupon Code",

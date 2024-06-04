@@ -12,9 +12,11 @@ class CommentsTree extends StatelessWidget {
     super.key,
     required this.rootComment,
     required this.replies,
+    required this.onReply,
   });
   final Comment rootComment;
   final List<Comment> replies;
+  final void Function() onReply;
   @override
   Widget build(BuildContext context) {
     return CommentTreeWidget<Comment, Comment>(
@@ -36,6 +38,7 @@ class CommentsTree extends StatelessWidget {
         return CommentBox(
           data: data,
           isRoot: true,
+          onReply: onReply,
         );
       },
     );

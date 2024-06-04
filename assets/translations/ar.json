@@ -129,7 +129,11 @@
       "all": "الكل"
     },
     "Community": {
-      "reply": "رد"
+      "reply": "رد",
+      "approved": "تم التصديق",
+      "comment": "تعليق",
+      "replyingOn": "يتم الردّ على",
+      "enterComment": "ادخل تعليقاً..."
     },
     "Enroll": {
       "couponCode": "رمز القسيمة",

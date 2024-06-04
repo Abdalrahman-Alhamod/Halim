@@ -41,7 +41,7 @@ class RootCommentActionButton extends StatelessWidget {
                   spacing: 4,
                   children: [
                     Text(
-                      'Approved',
+                      LocaleKeys.CourseDetails_Community_approved.tr(),
                       style: TextStyle(
                         color: Colors.green,
                         fontWeight: FontWeight.w600,

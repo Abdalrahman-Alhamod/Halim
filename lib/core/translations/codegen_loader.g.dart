@@ -145,7 +145,11 @@ class CodegenLoader extends AssetLoader{
       "all": "الكل"
     },
     "Community": {
-      "reply": "رد"
+      "reply": "رد",
+      "approved": "تم التصديق",
+      "comment": "تعليق",
+      "replyingOn": "يتم الردّ على",
+      "enterComment": "ادخل تعليقاً..."
     },
     "Enroll": {
       "couponCode": "رمز القسيمة",
@@ -379,7 +383,11 @@ static const Map<String,dynamic> en = {
       "all": "All"
     },
     "Community": {
-      "reply": "Reply"
+      "reply": "Reply",
+      "approved": "Approved",
+      "comment": "Comment",
+      "replyingOn": "Replying on",
+      "enterComment": "Enter comment..."
     },
     "Enroll": {
       "couponCode": "Coupon Code",

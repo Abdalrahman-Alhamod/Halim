@@ -5,13 +5,11 @@ import '../data/comment.dart';
 import 'root_comment_action_button.dart';
 
 class CommentBox extends StatelessWidget {
-  const CommentBox({
-    super.key,
-    required this.data,
-    this.isRoot = false,
-  });
+  const CommentBox(
+      {super.key, required this.data, this.isRoot = false, this.onReply});
   final Comment data;
   final bool isRoot;
+  final void Function()? onReply;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -49,7 +47,7 @@ class CommentBox extends StatelessWidget {
           ),
         ),
         RootCommentActionButton(
-          onReplyPressed: () {},
+          onReplyPressed: onReply,
           isApproved: data.isApproved,
           isRoot: isRoot,
         ),
