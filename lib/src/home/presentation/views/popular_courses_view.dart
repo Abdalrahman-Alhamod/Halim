@@ -1,8 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
+import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import 'widgets/card_course.dart';
 import 'widgets/category_widget.dart';
@@ -20,9 +23,7 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Row(
           children: [
             Text(
@@ -42,10 +43,7 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
             Icon(
               Icons.search_sharp,
               size: 28,
-              color:
-                  context.isDarkMode
-                      ? Colors.white
-                      : Colors.black,
+              color: context.isDarkMode ? Colors.white : Colors.black,
             )
           ],
         ),
@@ -54,19 +52,14 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             GoRouter.of(context).push(AppRoute.kHome);
           },
         ),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -89,35 +82,29 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
                 ),
               ),
             ),
-            ListView(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              children: const [
-                CardCourse(
-                  category: '3D Design',
-                  evaluation: 4.8,
-                  followers: 8.289,
-                  name: '3D Design illustation',
-                  price: 48,
-                  imageUrl: 'images/p1.jpg',
-                ),
-                CardCourse(
-                  category: 'Travilling',
-                  evaluation: 4.1,
-                  followers: 1.154,
-                  name: 'Outer Space',
-                  price: 120,
-                  imageUrl: 'images/p2.jpg',
-                ),
-                CardCourse(
-                  category: 'AI',
-                  evaluation: 5.0,
-                  followers: 5.68,
-                  name: 'artificial intelligence',
-                  price: 200,
-                  imageUrl: 'images/p4.jpg',
-                ),
-              ],
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+              child: ListView.separated(
+                itemCount: 10,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return CardCourse(
+                    category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                    evaluation: 4.8,
+                    followers: 8.289,
+                    name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
+                    price: 48,
+                    imageUrl: AppImages.testCourseCover,
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return SizedBox(
+                    height: 16,
+                  );
+                },
+              ),
             ),
           ],
         ),
