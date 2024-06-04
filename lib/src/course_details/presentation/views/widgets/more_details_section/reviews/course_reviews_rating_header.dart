@@ -24,7 +24,7 @@ class CourseReviewsRatingHeader extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 AppSVGs.stars,
-                width: 25,
+                width: 24,
               ),
               const SizedBox(
                 width: 10,
@@ -34,7 +34,7 @@ class CourseReviewsRatingHeader extends StatelessWidget {
                 child: AutoSizeText(
                   '4.8',
                   style: const TextStyle(
-                    fontSize: 22,
+                    fontSize: 20,
                     fontWeight: FontWeight.w600,
                   ),
                   maxLines: 1,

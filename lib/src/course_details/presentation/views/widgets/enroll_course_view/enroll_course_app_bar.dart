@@ -21,7 +21,7 @@ class EnrollCourseAppBar extends StatelessWidget
       title: Text(
         LocaleKeys.CourseDetails_enrollCourse.tr(),
         style: const TextStyle(
-          fontSize: 28,
+          fontSize: 24,
           fontWeight: FontWeight.w600,
         ),
       ),

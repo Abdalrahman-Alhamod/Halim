@@ -22,8 +22,8 @@ class BottomSheetButton extends StatelessWidget {
               context.isDarkMode ? Colors.grey.shade800 : Colors.grey.shade300,
         ),
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(16),
-          topRight: Radius.circular(16),
+          topLeft: Radius.circular(32),
+          topRight: Radius.circular(32),
         ),
       ),
       child: Padding(

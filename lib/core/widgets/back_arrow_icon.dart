@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class BackArrowIcon extends StatelessWidget {
@@ -13,7 +12,7 @@ class BackArrowIcon extends StatelessWidget {
       onPressed: onPressed,
       icon: const Icon(
         Icons.arrow_back,
-        size: 32,
+        size: 24,
       ),
     );
   }

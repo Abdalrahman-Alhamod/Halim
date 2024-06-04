@@ -28,7 +28,7 @@ class CourseReviewsSectionHeader extends StatelessWidget {
           child: Text(
             LocaleKeys.Buttons_seeAll.tr(),
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
             ),
           ),
