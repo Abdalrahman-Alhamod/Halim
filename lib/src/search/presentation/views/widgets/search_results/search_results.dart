@@ -6,7 +6,8 @@ import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/src/search/presentation/views/widgets/search_results/widgets/mentor_search_results_sample.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
-import '../courses_search_results_sample.dart';
+import 'widgets/courses_search_results_sample.dart';
+
 part 'widgets/search_by/search_by_bar.dart';
 part 'widgets/search_by/search_by_button.dart';
 part 'widgets/search_results_header.dart';
