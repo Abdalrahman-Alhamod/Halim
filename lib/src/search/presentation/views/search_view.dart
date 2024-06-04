@@ -43,7 +43,6 @@ class _SearchViewState extends State<SearchView> {
                   if (!value.isEmpty) {
                     setState(() {
                       body = SearchResults();
-                      print(body.toString());
                     });
                   }
                 }),
