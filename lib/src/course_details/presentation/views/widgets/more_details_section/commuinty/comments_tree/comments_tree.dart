@@ -5,7 +5,6 @@ import 'data/comment.dart';
 import 'functions/build_comment_avatar.dart';
 import 'widgets/comment_box.dart';
 import 'widgets/comment_tree_widget.dart';
-import 'widgets/root_comment_action_button.dart';
 import 'widgets/tree_theme_data.dart';
 
 class CommentsTree extends StatelessWidget {
@@ -29,26 +28,14 @@ class CommentsTree extends StatelessWidget {
       avatarChild: (context, data) =>
           buildCommentAvatar(data: data, radius: 24),
       contentChild: (context, data) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CommentBox(
-              data: data,
-            ),
-          ],
+        return CommentBox(
+          data: data,
         );
       },
       contentRoot: (context, data) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CommentBox(
-              data: data,
-            ),
-            RootCommentActionButton(
-              onReplyPressed: () {},
-            ),
-          ],
+        return CommentBox(
+          data: data,
+          isRoot: true,
         );
       },
     );

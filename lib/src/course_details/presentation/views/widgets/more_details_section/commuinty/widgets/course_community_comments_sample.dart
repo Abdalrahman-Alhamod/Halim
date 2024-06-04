@@ -15,14 +15,6 @@ class CourseCommunityCommentsSample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // CommentsTree(
-        //   rootComment: Comment(
-        //     avatar: AppImages.testMentor,
-        //     userName: LocaleKeys.CourseDetails_Test_courseMentorName.tr(),
-        //     content: LocaleKeys.CourseDetails_Test_Community_comment4.tr(),
-        //   ),
-        //   replies: const [],
-        // ),
         const SizedBox(
           height: 10,
         ),
@@ -31,6 +23,7 @@ class CourseCommunityCommentsSample extends StatelessWidget {
             avatar: AppImages.testAvatarAbd,
             userName: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
             content: LocaleKeys.CourseDetails_Test_Community_comment1.tr(),
+            isApproved: true,
           ),
           replies: [
             Comment(
@@ -75,6 +68,7 @@ class CourseCommunityCommentsSample extends StatelessWidget {
               avatar: AppImages.testAvatarAbd,
               userName: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
               content: LocaleKeys.CourseDetails_Test_Community_reply4.tr(),
+              isApproved: true,
             ),
             Comment(
               avatar: AppImages.emptyAvatar,
