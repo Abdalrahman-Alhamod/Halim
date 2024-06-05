@@ -15,7 +15,20 @@ class BottomBar extends StatefulWidget {
 }
 
 class BottomBarState extends State<BottomBar> {
-  int _currentIndex = 0;
+  late int _currentIndex;
+  late PageController _pageController;
+  @override
+  void initState() {
+    _currentIndex = 0;
+    _pageController = PageController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
   final List<Widget> _pages = [
     const HomeView(),
@@ -27,8 +40,9 @@ class BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
+      body: PageView(
+        physics: NeverScrollableScrollPhysics(),
+        controller: _pageController,
         children: _pages,
       ),
       bottomNavigationBar: SalomonBottomBar(
@@ -36,14 +50,19 @@ class BottomBarState extends State<BottomBar> {
         selectedItemColor: AppColors.primaryColor,
         unselectedItemColor: AppColors.darkFlatButtonColor,
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         currentIndex: _currentIndex,
         onTap: (int newIndex) {
-          setState(() {
-            _currentIndex = newIndex;
-          });
+          setState(
+            () {
+              _currentIndex = newIndex;
+              _pageController.animateToPage(
+                newIndex,
+                duration: Duration(milliseconds: 300),
+                curve: Curves.easeIn,
+              );
+            },
+          );
         },
         items: [
           SalomonBottomBarItem(

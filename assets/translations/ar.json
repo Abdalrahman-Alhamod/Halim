@@ -129,7 +129,11 @@
       "all": "الكل"
     },
     "Community": {
-      "reply": "رد"
+      "reply": "رد",
+      "approved": "تم التصديق",
+      "comment": "تعليق",
+      "replyingOn": "يتم الردّ على",
+      "enterComment": "ادخل تعليقاً..."
     },
     "Enroll": {
       "couponCode": "رمز القسيمة",
@@ -161,7 +165,9 @@
       "announcements": "إعلانات",
       "certificate": "الشهادة",
       "downloadCertificate": "تنزيل الشهادة"
-    }
+    },
+    "hrs": "س",
+    "mins": "د"
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور"
@@ -216,6 +222,17 @@
       "oldest": "الأقدم",
       "rating": "التقييم",
       "price": "السعر"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "قيد التقدم",
+    "completed": "المكتملة",
+    "saved": "المحفوظة",
+    "downloaded": "تم تحميلها",
+    "Bookmark": {
+      "cancel": "الغاء",
+      "yesRemove": "نعم، أزل",
+      "removeFromBookmark": "إزالة من المحفوظة ؟"
     }
   }
 }

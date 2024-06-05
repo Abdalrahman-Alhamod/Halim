@@ -23,7 +23,7 @@ class _SectionsNavBarState extends State<_SectionsNavBar> {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        height: 70,
+        height: 60,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           shrinkWrap: true,

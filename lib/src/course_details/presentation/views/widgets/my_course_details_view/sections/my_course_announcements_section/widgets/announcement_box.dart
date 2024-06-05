@@ -19,14 +19,6 @@ class AnnouncementBox extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CircleAvatar(
-            radius: 32,
-            backgroundColor: Colors.grey,
-            backgroundImage: AssetImage(avatarImage),
-          ),
-          const SizedBox(
-            width: 8,
-          ),
           Expanded(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,22 +29,37 @@ class AnnouncementBox extends StatelessWidget {
                   color: AppColors.primaryColor.withAlpha(30),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Column(
+                child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      username,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    CircleAvatar(
+                      radius: 24,
+                      backgroundColor: Colors.grey,
+                      backgroundImage: AssetImage(avatarImage),
                     ),
                     const SizedBox(
-                      height: 4,
+                      width: 8,
                     ),
-                    Text(
-                      content,
-                      style: const TextStyle(fontSize: 16),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            username,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 4,
+                          ),
+                          Text(
+                            content,
+                            style: const TextStyle(fontSize: 14),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),

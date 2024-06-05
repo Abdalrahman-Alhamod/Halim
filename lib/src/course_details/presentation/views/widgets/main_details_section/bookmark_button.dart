@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:halim/src/home/presentation/views/functions/remove_bookmark_bottom_sheet.dart';
 
 import '../../../../../../core/assets/app_svgs.dart';
 
@@ -25,6 +26,9 @@ class _BookmarkButtonState extends State<BookmarkButton> {
     return IconButton(
       onPressed: () {
         setState(() {
+          if (_isPressed) {
+            showRemoveBookmarkBottomSheet(context);
+          }
           _isPressed = !_isPressed;
         });
       },

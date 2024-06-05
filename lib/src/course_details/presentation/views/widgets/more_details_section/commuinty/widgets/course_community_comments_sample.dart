@@ -5,6 +5,7 @@ import '../../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../../core/translations/locale_keys.g.dart';
 import '../comments_tree/comments_tree.dart';
 import '../comments_tree/data/comment.dart';
+import 'enter_comment_bottom_sheet.dart';
 
 class CourseCommunityCommentsSample extends StatelessWidget {
   const CourseCommunityCommentsSample({
@@ -15,22 +16,26 @@ class CourseCommunityCommentsSample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // CommentsTree(
-        //   rootComment: Comment(
-        //     avatar: AppImages.testMentor,
-        //     userName: LocaleKeys.CourseDetails_Test_courseMentorName.tr(),
-        //     content: LocaleKeys.CourseDetails_Test_Community_comment4.tr(),
-        //   ),
-        //   replies: const [],
-        // ),
         const SizedBox(
           height: 10,
         ),
         CommentsTree(
+          onReply: () {
+            showModalBottomSheet(
+              isScrollControlled: true,
+              context: context,
+              builder: (context) => EnterCommentBottomSheet(
+                replyOnUsername:
+                    LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
+                onSend: (comment) {},
+              ),
+            );
+          },
           rootComment: Comment(
             avatar: AppImages.testAvatarAbd,
             userName: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
             content: LocaleKeys.CourseDetails_Test_Community_comment1.tr(),
+            isApproved: true,
           ),
           replies: [
             Comment(
@@ -49,6 +54,17 @@ class CourseCommunityCommentsSample extends StatelessWidget {
           height: 10,
         ),
         CommentsTree(
+          onReply: () {
+            showModalBottomSheet(
+              isScrollControlled: true,
+              context: context,
+              builder: (context) => EnterCommentBottomSheet(
+                replyOnUsername:
+                    LocaleKeys.CourseDetails_Test_Reviews_Names_alaa.tr(),
+                onSend: (comment) {},
+              ),
+            );
+          },
           rootComment: Comment(
             avatar: AppImages.testAvatarAlaa,
             userName: LocaleKeys.CourseDetails_Test_Reviews_Names_alaa.tr(),
@@ -60,6 +76,17 @@ class CourseCommunityCommentsSample extends StatelessWidget {
           height: 10,
         ),
         CommentsTree(
+          onReply: () {
+            showModalBottomSheet(
+              isScrollControlled: true,
+              context: context,
+              builder: (context) => EnterCommentBottomSheet(
+                replyOnUsername:
+                    LocaleKeys.CourseDetails_Test_Reviews_Names_obada.tr(),
+                onSend: (comment) {},
+              ),
+            );
+          },
           rootComment: Comment(
             avatar: AppImages.testAvatarObada,
             userName: LocaleKeys.CourseDetails_Test_Reviews_Names_obada.tr(),
@@ -75,6 +102,7 @@ class CourseCommunityCommentsSample extends StatelessWidget {
               avatar: AppImages.testAvatarAbd,
               userName: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
               content: LocaleKeys.CourseDetails_Test_Community_reply4.tr(),
+              isApproved: true,
             ),
             Comment(
               avatar: AppImages.emptyAvatar,

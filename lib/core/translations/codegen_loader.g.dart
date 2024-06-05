@@ -145,7 +145,11 @@ class CodegenLoader extends AssetLoader{
       "all": "الكل"
     },
     "Community": {
-      "reply": "رد"
+      "reply": "رد",
+      "approved": "تم التصديق",
+      "comment": "تعليق",
+      "replyingOn": "يتم الردّ على",
+      "enterComment": "ادخل تعليقاً..."
     },
     "Enroll": {
       "couponCode": "رمز القسيمة",
@@ -177,7 +181,9 @@ class CodegenLoader extends AssetLoader{
       "announcements": "إعلانات",
       "certificate": "الشهادة",
       "downloadCertificate": "تنزيل الشهادة"
-    }
+    },
+    "hrs": "س",
+    "mins": "د"
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور"
@@ -232,6 +238,17 @@ class CodegenLoader extends AssetLoader{
       "oldest": "الأقدم",
       "rating": "التقييم",
       "price": "السعر"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "قيد التقدم",
+    "completed": "المكتملة",
+    "saved": "المحفوظة",
+    "downloaded": "تم تحميلها",
+    "Bookmark": {
+      "cancel": "الغاء",
+      "yesRemove": "نعم، أزل",
+      "removeFromBookmark": "إزالة من المحفوظة ؟"
     }
   }
 };
@@ -366,7 +383,11 @@ static const Map<String,dynamic> en = {
       "all": "All"
     },
     "Community": {
-      "reply": "Reply"
+      "reply": "Reply",
+      "approved": "Approved",
+      "comment": "Comment",
+      "replyingOn": "Replying on",
+      "enterComment": "Enter comment..."
     },
     "Enroll": {
       "couponCode": "Coupon Code",
@@ -398,7 +419,9 @@ static const Map<String,dynamic> en = {
       "announcements": "Announcements",
       "certificate": "Certificate",
       "downloadCertificate": "Download Certificate"
-    }
+    },
+    "hrs": "hrs",
+    "mins": "mins"
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password"
@@ -453,6 +476,17 @@ static const Map<String,dynamic> en = {
       "oldest": "Oldest",
       "rating": "Rating",
       "price": "Price"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "saved": "Saved",
+    "downloaded": "Downloaded",
+    "Bookmark": {
+      "cancel": "Cancel",
+      "yesRemove": "Yes, Remove",
+      "removeFromBookmark": "Remove from Bookmar ?"
     }
   }
 };
