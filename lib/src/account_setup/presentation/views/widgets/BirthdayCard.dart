@@ -33,14 +33,11 @@ class BirthdayCardState extends State<BirthdayCard> {
             height: 300,
             width: 300,
             child: SfDateRangePicker(
-              
-              backgroundColor: context.isDarkMode
-                   ? AppColors.darkColor
-                  : Colors.white ,
-                  selectionTextStyle:TextStyle(fontSize: 20),
-                  headerStyle: DateRangePickerHeaderStyle(
-                    textStyle: TextStyle(fontSize: 20)
-                  ),
+              backgroundColor:
+                  context.isDarkMode ? AppColors.darkColor : Colors.white,
+              selectionTextStyle: TextStyle(fontSize: 20),
+              headerStyle: DateRangePickerHeaderStyle(
+                  textStyle: TextStyle(fontSize: 20)),
               onSelectionChanged: _onSelectionChanged,
               selectionMode: DateRangePickerSelectionMode.single,
               initialSelectedDate: _selectedDate,
@@ -69,20 +66,19 @@ class BirthdayCardState extends State<BirthdayCard> {
         onTap: () => _selectDate(context),
         child: AbsorbPointer(
           child: TextField(
-            style: TextStyle(fontWeight: FontWeight.w600,
-            color: context.isDarkMode
-                   ? Colors.white
-                  : Colors.black ),
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                color: context.isDarkMode ? Colors.white : Colors.black),
             controller: _controller,
             readOnly: true,
             decoration: InputDecoration(
               hintText: LocaleKeys.FillYourProfile_dateOfBirth.tr(),
               hintStyle: TextStyle(
-            fontWeight: FontWeight.w600,
-            color: context.isDarkMode
-                ? Colors.grey.shade500
-                : Colors.grey.shade700,
-          ),
+                fontWeight: FontWeight.w600,
+                color: context.isDarkMode
+                    ? Colors.grey.shade500
+                    : Colors.grey.shade700,
+              ),
               filled: true,
               fillColor: context.isDarkMode
                   ? AppColors.loginWithButtonDarkColor

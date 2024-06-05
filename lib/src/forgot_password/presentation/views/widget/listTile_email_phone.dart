@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:halim/core/themes/app_colors.dart';
 
 class ListTileEmailPhone extends StatefulWidget {

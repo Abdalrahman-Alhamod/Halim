@@ -4,8 +4,6 @@ import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/forgot_password/presentation/views/enter_code_body.dart';
 
 import '../../../../core/themes/app_colors.dart';
-import '../../../../core/utils/app_route.dart';
-import '../../../../core/widgets/custome_flat_button.dart';
 
 class EnterCodeView extends StatefulWidget {
   const EnterCodeView({super.key});

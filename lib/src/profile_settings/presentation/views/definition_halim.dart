@@ -1,16 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/custome_flat_button.dart';
-import 'package:halim/src/account_setup/presentation/views/fill_profile_body.dart';
 
-import 'package:halim/src/forgot_password/presentation/views/widget/accont_sucsses_dialog.dart';
 import 'package:halim/src/profile_settings/presentation/views/widget/introductory_widget.dart';
 
-import '../../../../core/functions/show_custom_dialog.dart';
 import '../../../../core/themes/app_colors.dart';
 
 class DefinitionHalimView extends StatefulWidget {

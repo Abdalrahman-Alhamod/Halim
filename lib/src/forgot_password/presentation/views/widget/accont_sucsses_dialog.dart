@@ -1,5 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/app_route.dart';
@@ -7,15 +6,11 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/themes/app_colors.dart';
-import '../../../../../../../core/translations/locale_keys.g.dart';
-import '../../../../../../../core/widgets/custome_elevated_button.dart';
-import '../../../../../../../core/widgets/custome_flat_button.dart';
 import '../../../../../core/widgets/custom_loading_indicator.dart';
 
 class AccontSucssesDialog extends StatefulWidget {
-  VoidCallback onLoadingComplete;
-   AccontSucssesDialog(this.onLoadingComplete
-  );
+  final VoidCallback onLoadingComplete;
+   AccontSucssesDialog(this.onLoadingComplete);
 
   @override
   State<AccontSucssesDialog> createState() => _AccontSucssesDialogState();

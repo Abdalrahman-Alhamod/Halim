@@ -221,7 +221,6 @@ class CodegenLoader extends AssetLoader{
     "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",
     "enter_pin": "ادخل رمز PIN"
   },
-<<<<<<< lib/core/translations/codegen_loader.g.dart
   "Portfolio": {
     "AddFingerprint": "ضف بصمة الإصبع لجعل حسابك أكثر أماناً.",
     "Please": "يرجى وضع إصبعك على الماسح الضوئي لبصمات الأصابع للبدء."
@@ -256,9 +255,6 @@ class CodegenLoader extends AssetLoader{
   "SearchPage": {
     "search": "ابحث"
   },
-  "MyCourses": {
-    "bookmark": "المحفوظات"
-  },
   "Settings": {
     "edit": "تعديل بيانات الحساب",
     "security": "القفل والحماية",
@@ -283,7 +279,8 @@ class CodegenLoader extends AssetLoader{
     },
     "Language": {
       "language": "لغة التطبيق",
-      "mainLan": "اللغة الأساسية:"
+      "mainLan": "اللغة الأساسية:",
+      "complete": "تم تغيير اللغة بنجاح!"
     },
     "Security": {
       "security": "القفل والحماية",
@@ -291,7 +288,8 @@ class CodegenLoader extends AssetLoader{
     },
     "EditProfile": {
       "edit": "تغيير بيانات الحساب"
-=======
+    }
+  },
   "Search": {
     "search": "بحث",
     "recent": "الأخيرة",
@@ -336,7 +334,6 @@ class CodegenLoader extends AssetLoader{
       "cancel": "الغاء",
       "yesRemove": "نعم، أزل",
       "removeFromBookmark": "إزالة من المحفوظة ؟"
->>>>>>> lib/core/translations/codegen_loader.g.dart
     }
   }
 };
@@ -581,9 +578,6 @@ static const Map<String,dynamic> en = {
   "SearchPage": {
     "search": "search"
   },
-  "MyCourses": {
-    "bookmark": "bookmark"
-  },
   "Settings": {
     "edit": "Edit Profile",
     "security": "Security",
@@ -608,7 +602,8 @@ static const Map<String,dynamic> en = {
     },
     "Language": {
       "language": "Language",
-      "mainLan": "Main Language:"
+      "mainLan": "Main Language:",
+      "complete": "The language has been changed successfully!"
     },
     "Security": {
       "security": "Security",
