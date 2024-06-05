@@ -8,12 +8,9 @@ import 'package:halim/core/functions/show_custom_dialog.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/widgets/enroll_success_dialog.dart';
 import 'package:halim/src/profile_settings/presentation/views/functions/log_out_bottom_sheet.dart';
 import 'package:halim/src/profile_settings/presentation/views/widget/filterToggleButtonWithIcon.dart';
 import 'package:halim/src/profile_settings/presentation/views/widget/halim_widget.dart';
-import 'package:halim/src/profile_settings/presentation/views/widget/introductory_widget.dart';
-
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
 import 'widget/evaluation_courses_dialog.dart';
@@ -27,23 +24,8 @@ class SettingsView extends StatefulWidget {
 }
 
 class SettingsViewState extends State<SettingsView> {
-  late ImageServices _imageServices;
 
-  File? get imageFile => _imageServices.imageFile;
 
-  @override
-  void initState() {
-    super.initState();
-    _imageServices = ImageServices(this, refresh);
-  }
-
-  void refresh() {
-    setState(() {});
-  }
-
-  void _handleToggle(bool isActive) {
-    print("Filter is ${isActive ? "Active" : "Inactive"}");
-  }
 
   @override
   Widget build(BuildContext context) {
