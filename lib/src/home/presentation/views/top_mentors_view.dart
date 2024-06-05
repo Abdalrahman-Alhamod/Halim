@@ -1,7 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import 'widgets/teacher_card.dart';
 
@@ -24,10 +27,8 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
         title: Row(
           children: [
             Text(
-              'Top Monetors',
+                                   LocaleKeys.HomePage_Home_topMentors.tr(),
               style: TextStyle(
-                fontSize: 20,
-                fontFamily: 'Cairo',
                 fontWeight: FontWeight.w500,
                 color:
                     context.isDarkMode
@@ -72,12 +73,18 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
           context.isDarkMode
               ? AppColors.darkColor
               : Colors.white,
-      body: const Column(
-        children: [
-          TeacherCard(),
-          TeacherCard(),
-          TeacherCard(),
-        ],
+      body:  Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: Column(
+          children: [
+         
+            TeacherCard(imageUrl: AppImages.testAvatarAlaa ,name:'Alaa' ,specialization: 'Markting Analayzt',),
+            TeacherCard(  imageUrl: AppImages.testAvatarObada, name: 'Obada' ,specialization: 'Markting Analayzt',),
+            TeacherCard( imageUrl: AppImages.testAvatarAbd,
+                          name: 'Abd Alrahman' ,specialization: 'Markting Analayzt',),
+            TeacherCard(  imageUrl: AppImages.testAvatarYassin, name: 'Yaseen',specialization: 'Markting Analayzt',),
+          ],
+        ),
       ),
     );
   }

@@ -170,7 +170,14 @@
     "mins": "mins"
   },
   "ForgotPassword": {
-    "confirmPassword": "Confirm Password"
+    "confirmPassword": "Confirm Password",
+    "select": "Select Which contact details should we use to reset your password?",
+    "resetPass": "Reset the password",
+    "viaSms": "via SMS:",
+    "viaEmail": "via Email:",
+    "codeHas": "Code has been sent to",
+    "resend": "Resend code in",
+    "createNew": "Create your new password"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
@@ -179,15 +186,93 @@
     "dateOfBirth": "Date Of Birth",
     "phone": "Phone Number",
     "Gender": {
-      "male": "Male",
-      "female": "Female"
+      "male1": "Male",
+      "female1": "Female"
     },
     "continue": "Continue",
-    "gender": "Gendger"
+    "gender": "Gendger",
+    "Specialty": {
+      "search": "Search",
+      "choose_specialty": "Choose your specialty"
+    },
+    "Interests": {
+      "choose": "Choose three topics that you would like to follow?",
+      "skip": "skip",
+      "continue": "continue"
+    }
   },
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",
-    "enter_pin": "Enter PIN Number"
+    "enter_pin": "Enter Pin Number"
+  },
+  "Portfolio": {
+    "AddFingerprint": "Add a fingerprint to make your account more secure.",
+    "Please": "Please put your finger on the fingerprint scanner to get started."
+  },
+  "HomePage": {
+    "Home": {
+      "welcome": "Welcome 👋",
+      "goodMorning": "Good Morning 👋",
+      "goodEvening": "Good Evening 👋",
+      "search": "Search",
+      "topMentors": "Top Mentors",
+      "mostPopularCourses": "Most Popular courses",
+      "seeAll": "See All",
+      "NavBar": {
+        "myCourses": "My Courses",
+        "home": "Home",
+        "more": "Settings",
+        "myPoints": "My Points"
+      },
+      "pointWidget": {
+        "keepMoving": "keep Moving forward!",
+        "points": "Your Points:"
+      },
+      "section": "Specialization:"
+    },
+    "NotificationsPage": {
+      "notifications": "Notifications",
+      "today": "Today",
+      "yesterday": "Yesterday"
+    }
+  },
+  "SearchPage": {
+    "search": "search"
+  },
+  "Settings": {
+    "edit": "Edit Profile",
+    "security": "Security",
+    "dark": "Dark Mode",
+    "light": "Light Mode",
+    "Logout": {
+      "logout": "Logout",
+      "areYou": "Are you sure you want to logout?",
+      "yes": "Yes, Logout",
+      "cancel": "Cancel"
+    },
+    "Notifications": {
+      "notifications": "Notifications",
+      "generalNotifications": "General Notifications",
+      "sound": "Sound"
+    },
+    "HalimTeam": {
+      "hailm": "Hailm Team",
+      "definitionofHailm": "Definition of Hailm",
+      "whatis": "Embrace the power of knowledge and unlock your full potential with Halim. Join our community of passionate learners and embark on a journey of continuous growth and development. Visit our website at www.halim.com to explore our diverse course offerings and create your personalized learning path. Halim: your gateway to a brighter future.",
+      "whatisHalim": "What is Halim?"
+    },
+    "Language": {
+      "language": "Language",
+      "mainLan": "Main Language:",
+      "complete": "The language has been changed successfully!"
+    },
+    "Security": {
+      "security": "Security",
+      "changePass": "Change Password"
+    },
+    "EditProfile": {
+      "edit": "Edit Profile"
+    }
   },
   "Search": {
     "search": "Search",

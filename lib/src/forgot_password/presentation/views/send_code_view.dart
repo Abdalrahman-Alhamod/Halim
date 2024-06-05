@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/utils/context_extensions.dart';
+import 'package:halim/src/forgot_password/presentation/views/widget/listTile_email_phone.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -15,9 +16,7 @@ class SendCodeview extends StatefulWidget {
 }
 
 class _SendCodeviewState extends State<SendCodeview> {
-  bool isItemSelectedOne = false;
-  bool isItemSelectedTwo = false;
-
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,13 +24,15 @@ class _SendCodeviewState extends State<SendCodeview> {
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
-          'Forgot Password',
+          'Change Password',
           style: TextStyle(
-            fontSize: 20,
-            fontFamily: 'Cairo',
-            fontWeight: FontWeight.w500,
-            color: context.isDarkMode ? Colors.white : Colors.black,
-          ),
+                    fontSize: 20,
+                    fontWeight: FontWeight.normal,
+                    color: MediaQuery.of(context).platformBrightness ==
+                            Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
+                  )
         ),
         elevation: 0,
         leading: IconButton(
@@ -40,7 +41,7 @@ class _SendCodeviewState extends State<SendCodeview> {
             color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            GoRouter.of(context).pop();
+              GoRouter.of(context).pop();
           },
         ),
       ),
@@ -72,121 +73,7 @@ class _SendCodeviewState extends State<SendCodeview> {
             const Spacer(
               flex: 1,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: ListTile(
-                leading: Container(
-                  width: 160,
-                  height: 160,
-                  decoration: const BoxDecoration(
-                    color: AppColors.lightFlatButtonColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.sms_rounded,
-                    size: 25,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-                enabled: true,
-                title: Text(
-                  'via SMS:',
-                  style: TextStyle(
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.grey[400]
-                        : Colors.grey,
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-                subtitle: Text(
-                  '+1 111 *** **9',
-                  style: TextStyle(
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                contentPadding:
-                    const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    color:
-                        isItemSelectedOne ? Colors.blue : Colors.grey.shade200,
-                    width: 2.5,
-                  ),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                dense: true,
-                onTap: () {
-                  setState(() {
-                    isItemSelectedOne = !isItemSelectedOne;
-                  });
-                },
-              ),
-            ),
-            //Container(height: 20,),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: ListTile(
-                leading: Container(
-                  width: 160,
-                  height: 160,
-                  decoration: const BoxDecoration(
-                    color: AppColors.lightFlatButtonColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.email,
-                    size: 28,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-                enabled: true,
-                title: Text(
-                  'via Email:',
-                  style: TextStyle(
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.grey[400]
-                        : Colors.grey,
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-                subtitle: Text(
-                  'and**ley@gmail.com',
-                  style: TextStyle(
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                contentPadding:
-                    const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    color:
-                        isItemSelectedTwo ? Colors.blue : Colors.grey.shade200,
-                    width: 2.5,
-                  ),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                dense: true,
-                onTap: () {
-                  setState(() {
-                    isItemSelectedTwo = !isItemSelectedTwo;
-                  });
-                },
-              ),
-            ),
+            ListTileEmailPhone(),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: CustomFlatButton(

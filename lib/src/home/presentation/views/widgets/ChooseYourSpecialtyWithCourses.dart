@@ -1,21 +1,41 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
-class CustomTextFieldWithDialog extends StatefulWidget {
-  const CustomTextFieldWithDialog({super.key});
+class ChooseYourSpecialtyWithCourses extends StatefulWidget {
+  const ChooseYourSpecialtyWithCourses({super.key});
 
   @override
-  CustomTextFieldWithDialogState createState() =>
-      CustomTextFieldWithDialogState();
+  ChooseYourSpecialtyWithCoursesState createState() =>
+      ChooseYourSpecialtyWithCoursesState();
 }
 
-class CustomTextFieldWithDialogState extends State<CustomTextFieldWithDialog> {
+class ChooseYourSpecialtyWithCoursesState
+    extends State<ChooseYourSpecialtyWithCourses> {
   TextEditingController controller = TextEditingController();
   bool _isFocused = false;
   late FocusNode _focusNode;
-  final List<String> options = ['Option 1', 'Option 2', 'Option 3'];
+  final List<String> options = [
+    'المرحلة الإعدادية- سابع',
+    'المرحلة الإعدادية- ثامن',
+    'المرحلة الإعدادية- تاسع',
+    'المرحلة الثانوية - عاشر',
+    'المرحلة الثانوية - حادي عشر',
+    'المرحلة الثانوية - بكالوريا',
+    'المرحلة الجامعية - طب أسنان',
+    'المرحلة الجامعية - طب بشري',
+    'المرحلة الجامعية - الهندسة المعلوماتية',
+    'المرحلة الجامعية - الهندسة الميكانيكية',
+    'المرحلة الجامعية - الهنسة المعمارية',
+    'Undergraduate - Dentistry',
+    'Undergraduate - Human Medicine',
+    'Undergraduate level - Information Engineering',
+    'Undergraduate - Mechanical Engineering',
+    'Undergraduate - Architecture',
+  ];
   List<String> filteredOptions = [];
 
   @override
@@ -24,6 +44,7 @@ class CustomTextFieldWithDialogState extends State<CustomTextFieldWithDialog> {
     _focusNode = FocusNode();
     _focusNode.addListener(_onFocusChange);
     filteredOptions = options;
+    controller.text = options[0]; // تعيين القسم الافتراضي
   }
 
   @override
@@ -49,7 +70,8 @@ class CustomTextFieldWithDialogState extends State<CustomTextFieldWithDialog> {
                 children: [
                   TextField(
                     decoration: InputDecoration(
-                      hintText: 'Search',
+                      hintText:
+                          LocaleKeys.FillYourProfile_Specialty_search.tr(),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
@@ -68,7 +90,7 @@ class CustomTextFieldWithDialogState extends State<CustomTextFieldWithDialog> {
               ),
               content: Container(
                 width: double.maxFinite,
-                height: 400.0,
+                height: 500.0,
                 child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: filteredOptions.length,
@@ -95,29 +117,43 @@ class CustomTextFieldWithDialogState extends State<CustomTextFieldWithDialog> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(10.0),
       child: TextField(
         controller: controller,
-        focusNode: _focusNode,
         readOnly: true,
         onTap: _showDialog,
         decoration: InputDecoration(
-          hintText: 'Select an option',
-          contentPadding: EdgeInsets.symmetric(
-              vertical: 0, horizontal: 15),
-
+          hintText: LocaleKeys.FillYourProfile_Specialty_choose_specialty.tr(),
+          contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(
-            fontSize: 20,
             fontWeight: FontWeight.w600,
             color: Theme.of(context).brightness == Brightness.dark
                 ? Colors.grey.shade500
                 : Colors.grey.shade700,
           ),
-          suffixIcon: Icon(
-            Icons.arrow_drop_down_rounded,
-            size: 30,
+          prefixIcon: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                '   ${LocaleKeys.HomePage_Home_section.tr()}',
+                style: TextStyle(
+                    fontSize: 18,
+                    color: MediaQuery.of(context).platformBrightness ==
+                            Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
+                    fontWeight: FontWeight.w500),
+              ),
+              SizedBox(width: 4),
+            ],
           ),
-
+          suffixIcon: IconButton(
+            icon: Icon(
+              Icons.arrow_drop_down_rounded,
+              size: 30,
+            ),
+            onPressed: _showDialog,
+          ),
           filled: true,
           fillColor: context.isDarkMode
               ? _isFocused

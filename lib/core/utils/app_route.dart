@@ -17,6 +17,8 @@ import 'package:halim/src/login_register/presentation/views/confirm_email_view.d
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
+import 'package:halim/src/profile_settings/presentation/views/definition_halim.dart';
+import 'package:halim/src/profile_settings/presentation/views/notification_settings_view.dart';
 import 'package:halim/src/splash/presentation/views/intro_view.dart';
 import 'package:halim/src/splash/presentation/views/splash_view.dart';
 
@@ -32,6 +34,10 @@ import '../../src/home/presentation/views/top_mentors_view.dart';
 import '../../src/home/presentation/views/widgets/bottom_bar.dart';
 import '../../src/my_courses/presentation/views/bookmark_view.dart';
 import '../../src/my_courses/presentation/views/browse_sections_view.dart';
+import '../../src/profile_settings/presentation/views/edit_profile.dart';
+import '../../src/profile_settings/presentation/views/language_settings_view.dart';
+import '../../src/profile_settings/presentation/views/security_view.dart';
+import '../../src/profile_settings/presentation/views/settings_view.dart';
 
 class AppRoute {
   static const kIntroView = '/intro';
@@ -60,6 +66,12 @@ class AppRoute {
   static const kBookMark = '/kBookMark';
   static const kSearch = '/kSearch';
   static const kBrowseSectionsCourses = '/kBrowseSectionsCourses';
+  static const kEditProfile = '/kEditProfile';
+  static const kNotificationSettingsView = '/kNotificationSettingsView';
+  static const kSecurityView = '/kSecurityView';
+  static const kLanguageSettingsView = '/kLanguageSettingsView';
+  static const kSettingsView = '/kSettingsView';
+  static const kDefinitionHalimView = '/kDefinitionHalimView';
 
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
@@ -217,6 +229,42 @@ class AppRoute {
         path: kBrowseSectionsCourses,
         builder: (BuildContext context, GoRouterState state) {
           return const BrowseSectionsCourses();
+        },
+      ),
+      GoRoute(
+        path: kEditProfile,
+        builder: (BuildContext context, GoRouterState state) {
+          return const EditProfileView();
+        },
+      ),
+      GoRoute(
+        path: kNotificationSettingsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const NotificationSettingsView();
+        },
+      ),
+      GoRoute(
+        path: kSecurityView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const SecurityView();
+        },
+      ),
+      GoRoute(
+        path: kLanguageSettingsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const LanguageSettingsView();
+        },
+      ),
+      GoRoute(
+        path: kSettingsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const SettingsView();
+        },
+      ),
+      GoRoute(
+        path: kDefinitionHalimView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const DefinitionHalimView();
         },
       ),
     ],

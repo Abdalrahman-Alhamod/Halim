@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
@@ -41,14 +42,14 @@ class HomeView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'Top Mentors',
+                    LocaleKeys.HomePage_Home_topMentors.tr(),
                     style: TextStyle(
                       color: MediaQuery.of(context).platformBrightness ==
                               Brightness.dark
                           ? Colors.white
                           : Colors.black,
                       fontSize: 20,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                   const Spacer(),
@@ -56,10 +57,10 @@ class HomeView extends StatelessWidget {
                     onTap: () {
                       GoRouter.of(context).push(AppRoute.kTopMentors);
                     },
-                    child: const Text(
-                      'See All',
+                    child: Text(
+                      LocaleKeys.HomePage_Home_seeAll.tr(),
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 14,
                         color: Colors.blue,
                         fontWeight: FontWeight.w600,
                       ),
@@ -95,14 +96,14 @@ class HomeView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'Most Popular Courses',
+                    LocaleKeys.HomePage_Home_mostPopularCourses.tr(),
                     style: TextStyle(
                       color: MediaQuery.of(context).platformBrightness ==
                               Brightness.dark
                           ? Colors.white
                           : Colors.black,
                       fontSize: 20,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                   const Spacer(),
@@ -110,10 +111,10 @@ class HomeView extends StatelessWidget {
                     onTap: () {
                       GoRouter.of(context).push(AppRoute.kPopularCourses);
                     },
-                    child: const Text(
-                      'See All',
+                    child: Text(
+                      LocaleKeys.HomePage_Home_seeAll.tr(),
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 14,
                         color: Colors.blue,
                         fontWeight: FontWeight.w600,
                       ),
