@@ -224,7 +224,7 @@ class CodegenLoader extends AssetLoader{
       "NavBar": {
         "myCourses": "كورساتي",
         "home": "الصفحة الرئيسية",
-        "more": "المزيد",
+        "more": "الضبط",
         "myPoints": "نقاطي"
       },
       "pointWidget": {
@@ -244,6 +244,40 @@ class CodegenLoader extends AssetLoader{
   },
   "MyCourses": {
     "bookmark": "المحفوظات"
+  },
+  "Settings": {
+    "edit": "تعديل بيانات الحساب",
+    "security": "القفل والحماية",
+    "dark": "الوضع الليلي",
+    "light": "الوضع النهاري",
+    "Logout": {
+      "logout": "تسجيل الخروج",
+      "areYou": "هل أنت متأكد من عملية تسجيل الخروج؟",
+      "yes": "نعم، سجِّل الخروج",
+      "cancel": "خروج"
+    },
+    "Notifications": {
+      "notifications": "الإشعارات",
+      "generalNotifications": "الإشعارات العامة",
+      "sound": "صوت الإشعارات"
+    },
+    "HalimTeam": {
+      "hailm": "فريق حليم",
+      "definitionofHailm": "حول حليم",
+      "whatis": "احتضن قوة المعرفة وأطلق العنان لإمكانياتك الكاملة مع حليم. انضم إلى مجتمعنا من المتعلمين المتحمسين وابدأ في رحلة من النمو والتطور المستمر. قم بزيارة موقعنا على www.halim.com لاستكشاف عروض الدورات المتنوعة لدينا وإنشاء مسار التعلم المخصص لك. الحليم: بوابتك لمستقبل أكثر إشراقا.",
+      "whatisHalim": "ما هو حليم؟"
+    },
+    "Language": {
+      "language": "لغة التطبيق",
+      "mainLan": "اللغة الأساسية:"
+    },
+    "Security": {
+      "security": "القفل والحماية",
+      "changePass": "تغيرر كلمة السر"
+    },
+    "EditProfile": {
+      "edit": "تغيير بيانات الحساب"
+    }
   }
 };
 static const Map<String,dynamic> en = {
@@ -456,7 +490,7 @@ static const Map<String,dynamic> en = {
       "NavBar": {
         "myCourses": "My Courses",
         "home": "Home",
-        "more": "More",
+        "more": "Settings",
         "myPoints": "My Points"
       },
       "pointWidget": {
@@ -476,6 +510,40 @@ static const Map<String,dynamic> en = {
   },
   "MyCourses": {
     "bookmark": "bookmark"
+  },
+  "Settings": {
+    "edit": "Edit Profile",
+    "security": "Security",
+    "dark": "Dark Mode",
+    "light": "Light Mode",
+    "Logout": {
+      "logout": "Logout",
+      "areYou": "Are you sure you want to logout?",
+      "yes": "Yes, Logout",
+      "cancel": "Cancel"
+    },
+    "Notifications": {
+      "notifications": "Notifications",
+      "generalNotifications": "General Notifications",
+      "sound": "Sound"
+    },
+    "HalimTeam": {
+      "hailm": "Hailm Team",
+      "definitionofHailm": "Definition of Hailm",
+      "whatis": "Embrace the power of knowledge and unlock your full potential with Halim. Join our community of passionate learners and embark on a journey of continuous growth and development. Visit our website at www.halim.com to explore our diverse course offerings and create your personalized learning path. Halim: your gateway to a brighter future.",
+      "whatisHalim": "What is Halim?"
+    },
+    "Language": {
+      "language": "Language",
+      "mainLan": "Main Language:"
+    },
+    "Security": {
+      "security": "Security",
+      "changePass": "Change Password"
+    },
+    "EditProfile": {
+      "edit": "Edit Profile"
+    }
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

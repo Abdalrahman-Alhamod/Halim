@@ -37,7 +37,7 @@ class SecurityViewState extends State<SecurityView> {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         toolbarHeight: 70,
         title: Text(
-          'Security',
+          LocaleKeys.Settings_Security_security.tr(),
           style: TextStyle(
               color: MediaQuery.of(context).platformBrightness ==
                       Brightness.dark
@@ -54,7 +54,7 @@ class SecurityViewState extends State<SecurityView> {
           children: [
             Container(height: 20),
           SettingsWidget(
-              name: 'Change Password',
+              name: LocaleKeys.Settings_Security_changePass.tr(),
               icon: Icons.notifications_active,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kSendCode);

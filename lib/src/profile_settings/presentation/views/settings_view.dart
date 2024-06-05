@@ -1,9 +1,11 @@
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/functions/show_custom_dialog.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/widgets/enroll_success_dialog.dart';
@@ -64,7 +66,7 @@ class SettingsViewState extends State<SettingsView> {
               width: 15,
             ),
             Text(
-              'Settings',
+              LocaleKeys.HomePage_Home_NavBar_more.tr(),
               style: TextStyle(
                   color: MediaQuery.of(context).platformBrightness ==
                           Brightness.dark
@@ -83,21 +85,21 @@ class SettingsViewState extends State<SettingsView> {
         child: Column(
           children: [
             SettingsWidget(
-              name: 'Edit Profile',
+              name: LocaleKeys.Settings_EditProfile_edit.tr(),
               icon: Icons.person,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kEditProfile);
               },
             ),
             SettingsWidget(
-              name: 'Notification',
+              name: LocaleKeys.Settings_Notifications_notifications.tr(),
               icon: Icons.notifications_active,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kNotificationSettingsView);
               },
             ),
             SettingsWidget(
-              name: 'Security',
+              name: LocaleKeys.Settings_Security_security.tr(),
               icon: Icons.security,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kSecurityView);
@@ -111,14 +113,14 @@ class SettingsViewState extends State<SettingsView> {
               },
             ),*/
             SettingsWidget(
-              name: 'Language',
+              name: LocaleKeys.Settings_Language_language.tr(),
               icon: Icons.language,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kLanguageSettingsView);
               },
             ),
             FilterToggleButtonWithIcon(
-              filterName: 'Dark Mode',
+              filterName: LocaleKeys.Settings_dark.tr(),
               fun: (p0) {},
               icon: Icons.remove_red_eye,
             ),
@@ -139,7 +141,7 @@ class SettingsViewState extends State<SettingsView> {
             ),
             HalimWidget(name: 'Halim Team', onPressed: (){GoRouter.of(context).push(AppRoute.kDefinitionHalimView);}),
             SettingsWidget(
-              name: 'Logout',
+              name: LocaleKeys.Settings_Logout_logout.tr(),
               icon: Icons.logout_rounded,
               onPressed: () {
                 logOutBottomSheet(context);

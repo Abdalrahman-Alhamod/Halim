@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
 
 void logOutBottomSheet(BuildContext context) {
@@ -25,7 +27,7 @@ void logOutBottomSheet(BuildContext context) {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text(
-                'Logout',
+                LocaleKeys.Settings_Logout_logout.tr(),
                 style: TextStyle(
                   color: Colors.red,
                   fontSize: 22,
@@ -43,7 +45,7 @@ void logOutBottomSheet(BuildContext context) {
            Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text(
-                'Are you sure you want to logout',
+                LocaleKeys.Settings_Logout_areYou.tr(),
                 style: TextStyle(
                   color:MediaQuery.of(context).platformBrightness ==
                           Brightness.dark
@@ -62,7 +64,7 @@ void logOutBottomSheet(BuildContext context) {
                   onPressed: () {
                     GoRouter.of(context).pop();
                   },
-                  title: 'Cancel',
+                  title: LocaleKeys.Settings_Logout_cancel.tr(),
                   width: MediaQuery.of(context).size.width * 0.40,
                   height: 45,
                   kBackgroundcolor: MediaQuery.of(context).platformBrightness ==
@@ -79,7 +81,7 @@ void logOutBottomSheet(BuildContext context) {
                   onPressed: () {
                     GoRouter.of(context).pop();
                   },
-                  title: 'Yes, Logout',
+                  title: LocaleKeys.Settings_Logout_yes.tr(),
                   width: MediaQuery.of(context).size.width * 0.40,
                   height: 45,
                   kTextcolor: AppColors.lightFlatButtonColor,

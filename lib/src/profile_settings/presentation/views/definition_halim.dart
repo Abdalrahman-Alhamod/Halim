@@ -29,7 +29,7 @@ class DefinitionHalimViewState extends State<DefinitionHalimView> {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         toolbarHeight: 70,
         title: Text(
-          'Definition of Hailm',
+          LocaleKeys.Settings_HalimTeam_definitionofHailm.tr(),
           style: TextStyle(
               color:
                   MediaQuery.of(context).platformBrightness == Brightness.dark
@@ -44,9 +44,9 @@ class DefinitionHalimViewState extends State<DefinitionHalimView> {
       body: SingleChildScrollView(
         child: Column(children: [
           IntroductoryWidget(
-              title: 'What is Halim?',
+              title: LocaleKeys.Settings_HalimTeam_whatisHalim.tr(),
               text:
-                  'Embrace the power of knowledge and unlock your full potential with Halim. Join our community of passionate learners and embark on a journey of continuous growth and development. Visit our website at www.halim.com to explore our diverse course offerings and create your personalized learning path. Halim: your gateway to a brighter future.'),
+                  LocaleKeys.Settings_HalimTeam_whatis.tr()),
           IntroductoryWidget(
               title: 'Lifetime of Learning?',
               text:

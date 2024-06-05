@@ -198,5 +198,32 @@ abstract class  LocaleKeys {
   static const SearchPage = 'SearchPage';
   static const MyCourses_bookmark = 'MyCourses.bookmark';
   static const MyCourses = 'MyCourses';
+  static const Settings_edit = 'Settings.edit';
+  static const Settings_security = 'Settings.security';
+  static const Settings_dark = 'Settings.dark';
+  static const Settings_light = 'Settings.light';
+  static const Settings_Logout_logout = 'Settings.Logout.logout';
+  static const Settings_Logout_areYou = 'Settings.Logout.areYou';
+  static const Settings_Logout_yes = 'Settings.Logout.yes';
+  static const Settings_Logout_cancel = 'Settings.Logout.cancel';
+  static const Settings_Logout = 'Settings.Logout';
+  static const Settings_Notifications_notifications = 'Settings.Notifications.notifications';
+  static const Settings_Notifications_generalNotifications = 'Settings.Notifications.generalNotifications';
+  static const Settings_Notifications_sound = 'Settings.Notifications.sound';
+  static const Settings_Notifications = 'Settings.Notifications';
+  static const Settings_HalimTeam_hailm = 'Settings.HalimTeam.hailm';
+  static const Settings_HalimTeam_definitionofHailm = 'Settings.HalimTeam.definitionofHailm';
+  static const Settings_HalimTeam_whatis = 'Settings.HalimTeam.whatis';
+  static const Settings_HalimTeam_whatisHalim = 'Settings.HalimTeam.whatisHalim';
+  static const Settings_HalimTeam = 'Settings.HalimTeam';
+  static const Settings_Language_language = 'Settings.Language.language';
+  static const Settings_Language_mainLan = 'Settings.Language.mainLan';
+  static const Settings_Language = 'Settings.Language';
+  static const Settings_Security_security = 'Settings.Security.security';
+  static const Settings_Security_changePass = 'Settings.Security.changePass';
+  static const Settings_Security = 'Settings.Security';
+  static const Settings_EditProfile_edit = 'Settings.EditProfile.edit';
+  static const Settings_EditProfile = 'Settings.EditProfile';
+  static const Settings = 'Settings';
 
 }

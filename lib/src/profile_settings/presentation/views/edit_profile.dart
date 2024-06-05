@@ -28,7 +28,7 @@ class EditProfileViewState extends State<EditProfileView> {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         toolbarHeight: 70,
         title: Text(
-          'Edit Profile',
+          LocaleKeys.Settings_EditProfile_edit.tr(),
           style: TextStyle(
               color:
                   MediaQuery.of(context).platformBrightness == Brightness.dark

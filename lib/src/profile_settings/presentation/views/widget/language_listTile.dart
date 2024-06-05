@@ -29,7 +29,7 @@ class _LanguageListTileState extends State<LanguageListTile> {
         Padding(
           padding: const EdgeInsets.only(left: 30.0),
           child: Text(
-            'Sugessted',
+            LocaleKeys.Settings_Language_mainLan.tr(),
             textAlign: TextAlign.start,
             style: TextStyle(
               color:

@@ -37,7 +37,7 @@ class NotificationSettingsViewState extends State<NotificationSettingsView> {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         toolbarHeight: 70,
         title: Text(
-          'Notification',
+          LocaleKeys.Settings_Notifications_notifications.tr(),
           style: TextStyle(
               color: MediaQuery.of(context).platformBrightness ==
                       Brightness.dark
@@ -53,9 +53,9 @@ class NotificationSettingsViewState extends State<NotificationSettingsView> {
         child: Column(
           children: [
             Container(height: 20),
-            FilterToggleButton(filterName: 'General Notifications',fun: (p0){},),
-            FilterToggleButton(filterName: 'Sound',fun: (p0){},),
-            FilterToggleButton(filterName: 'Vibrate',fun: (p0){},),
+            FilterToggleButton(filterName: LocaleKeys.Settings_Notifications_generalNotifications.tr(),fun: (p0){},),
+            FilterToggleButton(filterName: LocaleKeys.Settings_Notifications_sound.tr(),fun: (p0){},),
+            //FilterToggleButton(filterName: 'Vibrate',fun: (p0){},),
           ],
         ),
       ),

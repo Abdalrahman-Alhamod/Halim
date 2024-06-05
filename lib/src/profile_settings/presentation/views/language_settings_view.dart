@@ -41,7 +41,7 @@ class LanguageSettingsViewState extends State<LanguageSettingsView> {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         toolbarHeight: 70,
         title: Text(
-          'Language',
+          LocaleKeys.Settings_Language_language.tr(),
           style: TextStyle(
               color:
                   MediaQuery.of(context).platformBrightness == Brightness.dark
