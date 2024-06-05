@@ -186,7 +186,14 @@ class CodegenLoader extends AssetLoader{
     "mins": "د"
   },
   "ForgotPassword": {
-    "confirmPassword": "تأكيد كلمة المرور"
+    "confirmPassword": "تأكيد كلمة المرور",
+    "select": "حدد ما هي تفاصيل الاتصال التي يجب أن نستخدمها لإعادة تعيين كلمة المرور الخاصة بك؟",
+    "resetPass": "إعادة تعيين كلمة السر",
+    "viaSms": "عبر رسالة نصية:",
+    "viaEmail": "عبر البريد الإلكتروني: ",
+    "codeHas": "تم إرسال الكود إلى",
+    "resend": "سيتم إعادة الإرسال خلال",
+    "createNew": "قم بإنشاء كلمة المرور الجديدة الخاصة بك"
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",
@@ -195,16 +202,96 @@ class CodegenLoader extends AssetLoader{
     "dateOfBirth": "تاريخ الميلاد",
     "phone": "رقم الجوال",
     "Gender": {
-      "male": "ذكر",
-      "female": "أنثى"
+      "male1": "ذكر",
+      "female1": "أنثى"
     },
-    "continue": "أكمل",
-    "gender": "الجنس"
+    "continue": "تابع",
+    "gender": "الجنس",
+    "Specialty": {
+      "search": "ابحث",
+      "choose_specialty": "اختر تخصصك الدراسي"
+    },
+    "Interests": {
+      "choose": "اختر ثلاثة من المواضيع التي تحب متابعتها؟",
+      "skip": "تخطى",
+      "continue": "تابع"
+    }
   },
   "CreatePin": {
     "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",
     "enter_pin": "ادخل رمز PIN"
   },
+<<<<<<< lib/core/translations/codegen_loader.g.dart
+  "Portfolio": {
+    "AddFingerprint": "ضف بصمة الإصبع لجعل حسابك أكثر أماناً.",
+    "Please": "يرجى وضع إصبعك على الماسح الضوئي لبصمات الأصابع للبدء."
+  },
+  "HomePage": {
+    "Home": {
+      "welcome": "أهلاً بك 👋",
+      "goodMorning": "صباح الخير 👋",
+      "goodEvening": "مساء الخير 👋",
+      "search": "ابحث",
+      "topMentors": "كبار الموجهين",
+      "mostPopularCourses": "الدورات الأكثر شعبية",
+      "seeAll": "إظهار الكل",
+      "NavBar": {
+        "myCourses": "كورساتي",
+        "home": "الصفحة الرئيسية",
+        "more": "الضبط",
+        "myPoints": "نقاطي"
+      },
+      "pointWidget": {
+        "keepMoving": "تابع التقدم إلى الأمام !",
+        "points": "نقاطك:"
+      },
+      "section": "التخصص:"
+    },
+    "NotificationsPage": {
+      "notifications": "الإشعارات",
+      "today": "اليوم",
+      "yesterday": "البارحة"
+    }
+  },
+  "SearchPage": {
+    "search": "ابحث"
+  },
+  "MyCourses": {
+    "bookmark": "المحفوظات"
+  },
+  "Settings": {
+    "edit": "تعديل بيانات الحساب",
+    "security": "القفل والحماية",
+    "dark": "الوضع الليلي",
+    "light": "الوضع النهاري",
+    "Logout": {
+      "logout": "تسجيل الخروج",
+      "areYou": "هل أنت متأكد من عملية تسجيل الخروج؟",
+      "yes": "نعم، سجِّل الخروج",
+      "cancel": "خروج"
+    },
+    "Notifications": {
+      "notifications": "الإشعارات",
+      "generalNotifications": "الإشعارات العامة",
+      "sound": "صوت الإشعارات"
+    },
+    "HalimTeam": {
+      "hailm": "فريق حليم",
+      "definitionofHailm": "حول حليم",
+      "whatis": "احتضن قوة المعرفة وأطلق العنان لإمكانياتك الكاملة مع حليم. انضم إلى مجتمعنا من المتعلمين المتحمسين وابدأ في رحلة من النمو والتطور المستمر. قم بزيارة موقعنا على www.halim.com لاستكشاف عروض الدورات المتنوعة لدينا وإنشاء مسار التعلم المخصص لك. الحليم: بوابتك لمستقبل أكثر إشراقا.",
+      "whatisHalim": "ما هو حليم؟"
+    },
+    "Language": {
+      "language": "لغة التطبيق",
+      "mainLan": "اللغة الأساسية:"
+    },
+    "Security": {
+      "security": "القفل والحماية",
+      "changePass": "تغيرر كلمة السر"
+    },
+    "EditProfile": {
+      "edit": "تغيير بيانات الحساب"
+=======
   "Search": {
     "search": "بحث",
     "recent": "الأخيرة",
@@ -249,6 +336,7 @@ class CodegenLoader extends AssetLoader{
       "cancel": "الغاء",
       "yesRemove": "نعم، أزل",
       "removeFromBookmark": "إزالة من المحفوظة ؟"
+>>>>>>> lib/core/translations/codegen_loader.g.dart
     }
   }
 };
@@ -424,7 +512,14 @@ static const Map<String,dynamic> en = {
     "mins": "mins"
   },
   "ForgotPassword": {
-    "confirmPassword": "Confirm Password"
+    "confirmPassword": "Confirm Password",
+    "select": "Select Which contact details should we use to reset your password?",
+    "resetPass": "Reset the password",
+    "viaSms": "via SMS:",
+    "viaEmail": "via Email:",
+    "codeHas": "Code has been sent to",
+    "resend": "Resend code in",
+    "createNew": "Create your new password"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
@@ -433,15 +528,95 @@ static const Map<String,dynamic> en = {
     "dateOfBirth": "Date Of Birth",
     "phone": "Phone Number",
     "Gender": {
-      "male": "Male",
-      "female": "Female"
+      "male1": "Male",
+      "female1": "Female"
     },
     "continue": "Continue",
-    "gender": "Gendger"
+    "gender": "Gendger",
+    "Specialty": {
+      "search": "Search",
+      "choose_specialty": "Choose your specialty"
+    },
+    "Interests": {
+      "choose": "Choose three topics that you would like to follow?",
+      "skip": "skip",
+      "continue": "continue"
+    }
   },
   "CreatePin": {
     "add_a_pin": "Add a PIN number to make your account more secure",
-    "enter_pin": "Enter PIN Number"
+    "enter_pin": "Enter Pin Number"
+  },
+  "Portfolio": {
+    "AddFingerprint": "Add a fingerprint to make your account more secure.",
+    "Please": "Please put your finger on the fingerprint scanner to get started."
+  },
+  "HomePage": {
+    "Home": {
+      "welcome": "Welcome 👋",
+      "goodMorning": "Good Morning 👋",
+      "goodEvening": "Good Evening 👋",
+      "search": "Search",
+      "topMentors": "Top Mentors",
+      "mostPopularCourses": "Most Popular courses",
+      "seeAll": "See All",
+      "NavBar": {
+        "myCourses": "My Courses",
+        "home": "Home",
+        "more": "Settings",
+        "myPoints": "My Points"
+      },
+      "pointWidget": {
+        "keepMoving": "keep Moving forward!",
+        "points": "Your Points:"
+      },
+      "section": "Specialization:"
+    },
+    "NotificationsPage": {
+      "notifications": "Notifications",
+      "today": "Today",
+      "yesterday": "Yesterday"
+    }
+  },
+  "SearchPage": {
+    "search": "search"
+  },
+  "MyCourses": {
+    "bookmark": "bookmark"
+  },
+  "Settings": {
+    "edit": "Edit Profile",
+    "security": "Security",
+    "dark": "Dark Mode",
+    "light": "Light Mode",
+    "Logout": {
+      "logout": "Logout",
+      "areYou": "Are you sure you want to logout?",
+      "yes": "Yes, Logout",
+      "cancel": "Cancel"
+    },
+    "Notifications": {
+      "notifications": "Notifications",
+      "generalNotifications": "General Notifications",
+      "sound": "Sound"
+    },
+    "HalimTeam": {
+      "hailm": "Hailm Team",
+      "definitionofHailm": "Definition of Hailm",
+      "whatis": "Embrace the power of knowledge and unlock your full potential with Halim. Join our community of passionate learners and embark on a journey of continuous growth and development. Visit our website at www.halim.com to explore our diverse course offerings and create your personalized learning path. Halim: your gateway to a brighter future.",
+      "whatisHalim": "What is Halim?"
+    },
+    "Language": {
+      "language": "Language",
+      "mainLan": "Main Language:"
+    },
+    "Security": {
+      "security": "Security",
+      "changePass": "Change Password"
+    },
+    "EditProfile": {
+      "edit": "Edit Profile"
+    }
   },
   "Search": {
     "search": "Search",

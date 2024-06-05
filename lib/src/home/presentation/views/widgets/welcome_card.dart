@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/utils/app_route.dart';
@@ -27,7 +29,7 @@ class WelcomeCard extends StatelessWidget {
             spacing: 5,
             children: [
               Text(
-                'Good Morning 👋',
+                LocaleKeys.HomePage_Home_goodMorning.tr(),
                 style: TextStyle(
                   color: MediaQuery.of(context).platformBrightness ==
                           Brightness.dark

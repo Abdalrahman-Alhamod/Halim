@@ -38,10 +38,10 @@ class SplashBody extends StatelessWidget {
           const Spacer(
             flex: 1,
           ),
-          const CustomLoadingIndicator(
+          /*const CustomLoadingIndicator(
             color: Colors.white,
             size: 75,
-          ),
+          ),*/
           const Spacer(
             flex: 1,
           ),

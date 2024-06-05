@@ -42,7 +42,7 @@ class PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(10.0),
       child: InternationalPhoneNumberInput(
         focusNode: _focusNode,
         onInputChanged: (PhoneNumber number) {

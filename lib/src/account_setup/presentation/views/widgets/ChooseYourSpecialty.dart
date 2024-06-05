@@ -5,22 +5,37 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
-class ListWithDialogGender extends StatefulWidget {
-  const ListWithDialogGender({super.key});
+class ChooseYourSpecialtyWithRegister extends StatefulWidget {
+  const ChooseYourSpecialtyWithRegister({super.key});
 
   @override
-  ListWithDialogGenderState createState() => ListWithDialogGenderState();
+  ChooseYourSpecialtyWithRegisterState createState() =>
+      ChooseYourSpecialtyWithRegisterState();
 }
 
-class ListWithDialogGenderState extends State<ListWithDialogGender> {
+class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWithRegister> {
   TextEditingController controller = TextEditingController();
   bool _isFocused = false;
   late FocusNode _focusNode;
   final List<String> options = [
+    'المرحلة الإعدادية- سابع',
+    'المرحلة الإعدادية- ثامن',
+    'المرحلة الإعدادية- تاسع',
+    'المرحلة الثانوية - عاشر',
+    'المرحلة الثانوية - حادي عشر',
+    'المرحلة الثانوية - بكالوريا',
+    'المرحلة الجامعية - طب أسنان',
+    'المرحلة الجامعية - طب بشري',
+    'المرحلة الجامعية - الهندسة المعلوماتية',
+    'المرحلة الجامعية - الهندسة الميكانيكية',
+    'المرحلة الجامعية - الهنسة المعمارية',
+    'Undergraduate - Dentistry',
+    'Undergraduate - Human Medicine',
+    'Undergraduate level - Information Engineering',
+    'Undergraduate - Mechanical Engineering',
+    'Undergraduate - Architecture',
     
-    LocaleKeys.FillYourProfile_Gender_male1.tr(),
-    LocaleKeys.FillYourProfile_Gender_female1.tr()
-  ];
+    ];
   List<String> filteredOptions = [];
 
   @override
@@ -50,9 +65,30 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
         return StatefulBuilder(
           builder: (BuildContext context, StateSetter setState) {
             return AlertDialog(
+              title: Column(
+                children: [
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: LocaleKeys.FillYourProfile_Specialty_search.tr(),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    onChanged: (value) {
+                      setState(() {
+                        filteredOptions = options
+                            .where((option) => option
+                                .toLowerCase()
+                                .contains(value.toLowerCase()))
+                            .toList();
+                      });
+                    },
+                  ),
+                ],
+              ),
               content: Container(
                 width: double.maxFinite,
-                height: 100.0,
+                height: 500.0,
                 child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: filteredOptions.length,
@@ -86,7 +122,7 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
         readOnly: true,
         onTap: _showDialog,
         decoration: InputDecoration(
-          hintText: LocaleKeys.FillYourProfile_gender.tr(),
+          hintText: LocaleKeys.FillYourProfile_Specialty_choose_specialty.tr(),
           contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(
             fontWeight: FontWeight.w600,

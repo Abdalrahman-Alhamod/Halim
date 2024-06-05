@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
-class CategoryWidget extends StatefulWidget {
+class InterestsWidget extends StatefulWidget {
   final String category;
 
-  const CategoryWidget(this.category, {super.key});
+  const InterestsWidget(this.category, {super.key});
 
   @override
-  CategoryWidgetState createState() => CategoryWidgetState();
+  InterestsWidgetState createState() => InterestsWidgetState();
 }
 
-class CategoryWidgetState extends State<CategoryWidget> {
+class InterestsWidgetState extends State<InterestsWidget> {
   bool isSelected = false;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(15),
       onTap: () {
         setState(() {
           isSelected = !isSelected;
@@ -27,8 +27,8 @@ class CategoryWidgetState extends State<CategoryWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 8.0),
-           padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
+            margin: const EdgeInsets.symmetric(horizontal: 0.0),
+            padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
             decoration: BoxDecoration(
               color: isSelected
                   ? AppColors.primaryColor
@@ -36,7 +36,7 @@ class CategoryWidgetState extends State<CategoryWidget> {
                           Brightness.light
                       ? Colors.white
                       : AppColors.darkFlatButtonColor,
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(15.0),
               border: Border.all(
                 color: isSelected
                     ? AppColors.primaryColor

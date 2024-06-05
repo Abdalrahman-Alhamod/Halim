@@ -1,0 +1,138 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/functions/show_custom_dialog.dart';
+import 'package:halim/core/themes/app_colors.dart';
+import 'package:halim/core/utils/app_route.dart';
+import 'package:halim/core/utils/context_extensions.dart';
+import 'package:halim/src/forgot_password/presentation/views/widget/accont_sucsses_dialog.dart';
+
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/widgets/custome_flat_button.dart';
+
+class CreatePinBody extends StatefulWidget {
+  const CreatePinBody();
+
+  @override
+  _CreatePinBodyState createState() => _CreatePinBodyState();
+}
+
+class _CreatePinBodyState extends State<CreatePinBody> {
+  final List<TextEditingController> _pinControllers =
+      List.generate(4, (_) => TextEditingController());
+
+  void _handlePinChange(int index, String value) {
+    if (value.length == 1 && index < 3) {
+      FocusScope.of(context).nextFocus();
+    } else if (value.isEmpty && index > 0) {
+      FocusScope.of(context).previousFocus();
+    }
+  }
+  @override
+  Widget build(BuildContext context) {
+        Size screenSize = MediaQuery.of(context).size;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Spacer(
+            flex: 2,
+          ),
+          Text(
+          LocaleKeys.CreatePin_add_a_pin.tr(),
+          textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.normal,
+                color:
+                    context.isDarkMode
+                        ? Colors.white
+                        : Colors.black,
+              )),
+          const Spacer(
+            flex: 4,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: List.generate(4, (index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: SizedBox(
+                  width: 60,
+                  child: TextField(
+                    cursorColor: MediaQuery.of(context).platformBrightness ==
+                            Brightness.dark
+                        ? AppColors.lightFlatButtonColor
+                        : AppColors.darkFlatButtonColor,
+                    style: TextStyle(
+                      fontSize: screenSize.height * 0.019,
+                      color: MediaQuery.of(context).platformBrightness ==
+                              Brightness.dark
+                          ? AppColors.lightFlatButtonColor
+                          : AppColors.darkFlatButtonColor,
+                    ),
+                    controller: _pinControllers[index],
+                    obscureText: true,
+                    maxLength: 1,
+                    textAlign: TextAlign.center,
+                    onChanged: (value) {
+                      _handlePinChange(index, value);
+                    },
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      // focusColor: Colors.red,
+                      // hoverColor: Colors.red,
+                      counterText: '',
+                      border: const OutlineInputBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(10))),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: const BorderSide(
+                          width: 0.5,
+                          style: BorderStyle.none,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: const BorderSide(color: Colors.blue),
+                      ),
+                      filled: true,
+                      fillColor: MediaQuery.of(context).platformBrightness ==
+                              Brightness.dark
+                          ? AppColors.darkFlatButtonColor
+                          : AppColors.lightFlatButtonColor,
+                    ),
+                  ),
+                ),
+              );
+            }),
+          ),
+          const Spacer(
+            flex: 8,
+          ),
+          CustomFlatButton(
+            onPressed: () {
+           showCustomDialog(
+                      context: context,
+                      widget: AccontSucssesDialog(
+                        () {
+                          GoRouter.of(context).push(AppRoute.kHome);
+                        },
+                      ));
+
+            },
+            title: LocaleKeys.FillYourProfile_continue.tr(),
+
+            width: MediaQuery.of(context).size.width * 0.90,
+            height: 60,
+            kTextcolor: AppColors.lightFlatButtonColor,
+            kBackgroundcolor: AppColors.primaryColor,
+          ),
+          const Spacer(
+            flex: 1,
+          )
+        ],
+      );
+  }
+}

@@ -1,6 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/themes/app_colors.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 class MotivationalCounterWidget extends StatelessWidget {
@@ -39,7 +41,7 @@ class MotivationalCounterWidget extends StatelessWidget {
             child: AnimatedTextKit(
               animatedTexts: [
                 WavyAnimatedText(
-                  'Keep moving forward',
+                   LocaleKeys.HomePage_Home_pointWidget_keepMoving.tr(),
                   textAlign: TextAlign.start,
                   speed: Duration(microseconds: 50000),
                   textStyle: TextStyle(
@@ -60,7 +62,7 @@ class MotivationalCounterWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Text(
-                'Points:',
+                LocaleKeys.HomePage_Home_pointWidget_points.tr(),
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 22,
