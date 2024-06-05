@@ -6,7 +6,6 @@ import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
-import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import 'widgets/counter_widget.dart';
 import 'widgets/welcome_card.dart';

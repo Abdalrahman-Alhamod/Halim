@@ -209,8 +209,6 @@ abstract class  LocaleKeys {
   static const HomePage = 'HomePage';
   static const SearchPage_search = 'SearchPage.search';
   static const SearchPage = 'SearchPage';
-  static const MyCourses_bookmark = 'MyCourses.bookmark';
-  static const MyCourses = 'MyCourses';
   static const Settings_edit = 'Settings.edit';
   static const Settings_security = 'Settings.security';
   static const Settings_dark = 'Settings.dark';
@@ -231,6 +229,7 @@ abstract class  LocaleKeys {
   static const Settings_HalimTeam = 'Settings.HalimTeam';
   static const Settings_Language_language = 'Settings.Language.language';
   static const Settings_Language_mainLan = 'Settings.Language.mainLan';
+  static const Settings_Language_complete = 'Settings.Language.complete';
   static const Settings_Language = 'Settings.Language';
   static const Settings_Security_security = 'Settings.Security.security';
   static const Settings_Security_changePass = 'Settings.Security.changePass';

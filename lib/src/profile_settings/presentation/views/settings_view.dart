@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +6,6 @@ import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/functions/show_custom_dialog.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
 import 'package:halim/src/profile_settings/presentation/views/functions/log_out_bottom_sheet.dart';
 import 'package:halim/src/profile_settings/presentation/views/widget/filterToggleButtonWithIcon.dart';
 import 'package:halim/src/profile_settings/presentation/views/widget/halim_widget.dart';

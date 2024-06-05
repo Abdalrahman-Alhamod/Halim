@@ -109,6 +109,7 @@ dependencies:
   flutter_datetime_picker: ^1.5.1
   intl: ^0.19.0
   syncfusion_flutter_pdfviewer: ^24.2.8
+  syncfusion_flutter_datepicker: ^24.2.9
   
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
