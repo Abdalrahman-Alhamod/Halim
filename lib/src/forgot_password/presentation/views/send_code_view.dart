@@ -22,9 +22,7 @@ class _SendCodeviewState extends State<SendCodeview> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
           'Change Password',
           style: TextStyle(
@@ -40,19 +38,14 @@ class _SendCodeviewState extends State<SendCodeview> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
               GoRouter.of(context).pop();
           },
         ),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(

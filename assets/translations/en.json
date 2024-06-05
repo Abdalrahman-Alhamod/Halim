@@ -20,7 +20,9 @@
     "enterValidEmail": "Please enter a valid email",
     "passWordMustBe8Digit": "Password must be at least 8 digits long",
     "passwordShouldContainSpecialCharacter": "Passwords must have at least one special character",
-    "loginToYourAccount": "Login to your Account"
+    "loginToYourAccount": "Login to your Account",
+    "confirmYourEmail": "Confirm Your Email",
+    "enterYourEmailConfimCode": "Enter the confirmation code you have received on your email"
   },
   "Intro": {
     "getStarted": "Get Started",
@@ -123,10 +125,15 @@
     "Level": {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "advanced": "Advanced",
+      "all": "All"
     },
     "Community": {
-      "reply": "Reply"
+      "reply": "Reply",
+      "approved": "Approved",
+      "comment": "Comment",
+      "replyingOn": "Replying on",
+      "enterComment": "Enter comment..."
     },
     "Enroll": {
       "couponCode": "Coupon Code",
@@ -138,7 +145,11 @@
       "enterYourPinToConfirm": "Enter your PIN to confirm payment",
       "enrollSuccess": "Enroll Course Successful!",
       "enrollSuccessDesc": "You have successfully made payment and enrolled the course.",
-      "viewEReceipt": "View E-Receipt"
+      "viewEReceipt": "View E-Receipt",
+      "verifyYourIdentityToPurchse": "Verify your identity to complete purchase",
+      "pin": "PIN Number",
+      "biometrics": "Biometrics",
+      "enterYourPINtoVerify": "Enter your PIN number to verify your identity"
     },
     "viewCourse": "View Course",
     "Mentor": {
@@ -154,7 +165,9 @@
       "announcements": "Announcements",
       "certificate": "Certificate",
       "downloadCertificate": "Download Certificate"
-    }
+    },
+    "hrs": "hrs",
+    "mins": "mins"
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password",
@@ -226,9 +239,6 @@
   "SearchPage": {
     "search": "search"
   },
-  "MyCourses": {
-    "bookmark": "bookmark"
-  },
   "Settings": {
     "edit": "Edit Profile",
     "security": "Security",
@@ -262,6 +272,52 @@
     },
     "EditProfile": {
       "edit": "Edit Profile"
+    }
+  },
+  "Search": {
+    "search": "Search",
+    "recent": "Recent",
+    "clearAll": "Clear All",
+    "notFound": "Not Found",
+    "notFoundDesc": "Sorry, the keyword you entered cannot be found, please check again or search with another keyword",
+    "resultsFor": "Results for",
+    "found": "found",
+    "courses": "Courses",
+    "mentors": "Mentors",
+    "Filter": {
+      "filter": "Filter",
+      "field": "Field",
+      "category": "Category",
+      "duration": "Duration",
+      "level": "Level",
+      "price": "Price",
+      "rating": "Rating",
+      "h": "H"
+    },
+    "Test": {
+      "mainCategory1": "Software Engineering"
+    },
+    "reset": "Reset",
+    "SearchBy": {
+      "sortBy": "Sort By",
+      "sort": "Sort",
+      "mostPopular": "Most Popular",
+      "bestSelling": "Best Selling",
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "rating": "Rating",
+      "price": "Price"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "saved": "Saved",
+    "downloaded": "Downloaded",
+    "Bookmark": {
+      "cancel": "Cancel",
+      "yesRemove": "Yes, Remove",
+      "removeFromBookmark": "Remove from Bookmar ?"
     }
   }
 }

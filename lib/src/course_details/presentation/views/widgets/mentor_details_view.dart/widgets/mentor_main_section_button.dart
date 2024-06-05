@@ -20,7 +20,7 @@ class MentorMainSectionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomElevatedButtonWithIcon(
       backgroundColor: isOutlined
-          ? Theme.of(context).colorScheme.background
+          ? Theme.of(context).scaffoldBackgroundColor
           : AppColors.primaryColor,
       onPressed: onPressed,
       icon: SvgPicture.asset(

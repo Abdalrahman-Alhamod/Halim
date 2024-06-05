@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
+import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
@@ -82,35 +83,29 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
                 ),
               ),
             ),
-            ListView(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              children: const [
-                CardCourse(
-                  category: '3D Design',
-                  evaluation: 4.8,
-                  followers: 8.289,
-                  name: '3D Design illustation',
-                  price: 48,
-                  imageUrl: AppImages.testCourseCover,
-                ),
-                CardCourse(
-                  category: 'السياحة والسفر',
-                  evaluation: 4.1,
-                  followers: 1.154,
-                  name: 'رحلات الفضاء',
-                  price: 120,
-                  imageUrl: AppImages.testCourseCover,
-                ),
-                CardCourse(
-                  category: 'AI',
-                  evaluation: 5.0,
-                  followers: 5.68,
-                  name: 'Artificial intelligence',
-                  price: 200,
-                  imageUrl: AppImages.testCourseCover,
-                ),
-              ],
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+              child: ListView.separated(
+                itemCount: 10,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return CardCourse(
+                    category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                    evaluation: 4.8,
+                    followers: 8.289,
+                    name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
+                    price: 48,
+                    imageUrl: AppImages.testCourseCover,
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return SizedBox(
+                    height: 16,
+                  );
+                },
+              ),
             ),
           ],
         ),

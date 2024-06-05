@@ -36,7 +36,9 @@ class CodegenLoader extends AssetLoader{
     "enterValidEmail": "الرجاء إدخال بريد إلكتروني صالح",
     "passWordMustBe8Digit": "يجب أن تكون كلمة المرور مكوّنة من ما لا يقل عن 8 أحرف",
     "passwordShouldContainSpecialCharacter": "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل",
-    "loginToYourAccount": "سجِّل الدخول إلى حسابك"
+    "loginToYourAccount": "سجِّل الدخول إلى حسابك",
+    "confirmYourEmail": "قم بتأكيد بريدك الإلكتروني",
+    "enterYourEmailConfimCode": "أدخل الرمز التأكيد الذي تلقيته على بريدك الإلكتروني"
   },
   "Intro": {
     "getStarted": "البدء",
@@ -139,10 +141,15 @@ class CodegenLoader extends AssetLoader{
     "Level": {
       "beginner": "مبتدئ",
       "intermediate": "متوسط",
-      "advanced": "متقدم"
+      "advanced": "متقدم",
+      "all": "الكل"
     },
     "Community": {
-      "reply": "رد"
+      "reply": "رد",
+      "approved": "تم التصديق",
+      "comment": "تعليق",
+      "replyingOn": "يتم الردّ على",
+      "enterComment": "ادخل تعليقاً..."
     },
     "Enroll": {
       "couponCode": "رمز القسيمة",
@@ -154,7 +161,11 @@ class CodegenLoader extends AssetLoader{
       "enterYourPinToConfirm": "ادخل رمزك السرّي لإكمال عملية الشراء",
       "enrollSuccess": "تم الاشتراك بالكورس بنجاح!",
       "enrollSuccessDesc": "لقد قمت بإنجاز عملية الشراء بنجاح و الاشتراك بالدورة.",
-      "viewEReceipt": "عرض الإيصال الإلكتروني"
+      "viewEReceipt": "عرض الإيصال الإلكتروني",
+      "verifyYourIdentityToPurchse": "قم بإثبات هويتك لإتمام عملية الشراء",
+      "pin": "رمز PIN",
+      "biometrics": "القياسات الحيوية",
+      "enterYourPINtoVerify": "أدخل رمز PIN الخاص بك لتأكيد هويتك"
     },
     "viewCourse": "عرض الدورة",
     "Mentor": {
@@ -170,7 +181,9 @@ class CodegenLoader extends AssetLoader{
       "announcements": "إعلانات",
       "certificate": "الشهادة",
       "downloadCertificate": "تنزيل الشهادة"
-    }
+    },
+    "hrs": "س",
+    "mins": "د"
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور",
@@ -208,6 +221,7 @@ class CodegenLoader extends AssetLoader{
     "add_a_pin": "ادخل رمز PIN لجعل حسابك أكثر أماناً.",
     "enter_pin": "ادخل رمز PIN"
   },
+<<<<<<< lib/core/translations/codegen_loader.g.dart
   "Portfolio": {
     "AddFingerprint": "ضف بصمة الإصبع لجعل حسابك أكثر أماناً.",
     "Please": "يرجى وضع إصبعك على الماسح الضوئي لبصمات الأصابع للبدء."
@@ -277,6 +291,52 @@ class CodegenLoader extends AssetLoader{
     },
     "EditProfile": {
       "edit": "تغيير بيانات الحساب"
+=======
+  "Search": {
+    "search": "بحث",
+    "recent": "الأخيرة",
+    "clearAll": "حذف الكل",
+    "notFound": "غير موجود",
+    "notFoundDesc": "عذرًا، الكلمة التي أدخلتها غير موجودة. يرجى التحقق مرة أخرى أو البحث بكلمة أخرى",
+    "resultsFor": "النتائج لـ",
+    "found": "وجدت",
+    "courses": "الدورات",
+    "mentors": "المدربون",
+    "Filter": {
+      "filter": "تصفية",
+      "field": "المجال",
+      "category": "الفئة",
+      "duration": "المدة",
+      "level": "المستوى",
+      "price": "السعر",
+      "rating": "التقييم",
+      "h": "س"
+    },
+    "Test": {
+      "mainCategory1": "هندسة البرمجيات"
+    },
+    "reset": "ارجاع",
+    "SearchBy": {
+      "sortBy": "الترتيب حسب",
+      "sort": "ترتيب",
+      "mostPopular": "الأكثر شهرة",
+      "bestSelling": "الأفضل مبيعاً",
+      "newest": "الأحدث",
+      "oldest": "الأقدم",
+      "rating": "التقييم",
+      "price": "السعر"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "قيد التقدم",
+    "completed": "المكتملة",
+    "saved": "المحفوظة",
+    "downloaded": "تم تحميلها",
+    "Bookmark": {
+      "cancel": "الغاء",
+      "yesRemove": "نعم، أزل",
+      "removeFromBookmark": "إزالة من المحفوظة ؟"
+>>>>>>> lib/core/translations/codegen_loader.g.dart
     }
   }
 };
@@ -302,7 +362,9 @@ static const Map<String,dynamic> en = {
     "enterValidEmail": "Please enter a valid email",
     "passWordMustBe8Digit": "Password must be at least 8 digits long",
     "passwordShouldContainSpecialCharacter": "Passwords must have at least one special character",
-    "loginToYourAccount": "Login to your Account"
+    "loginToYourAccount": "Login to your Account",
+    "confirmYourEmail": "Confirm Your Email",
+    "enterYourEmailConfimCode": "Enter the confirmation code you have received on your email"
   },
   "Intro": {
     "getStarted": "Get Started",
@@ -405,10 +467,15 @@ static const Map<String,dynamic> en = {
     "Level": {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "advanced": "Advanced",
+      "all": "All"
     },
     "Community": {
-      "reply": "Reply"
+      "reply": "Reply",
+      "approved": "Approved",
+      "comment": "Comment",
+      "replyingOn": "Replying on",
+      "enterComment": "Enter comment..."
     },
     "Enroll": {
       "couponCode": "Coupon Code",
@@ -420,7 +487,11 @@ static const Map<String,dynamic> en = {
       "enterYourPinToConfirm": "Enter your PIN to confirm payment",
       "enrollSuccess": "Enroll Course Successful!",
       "enrollSuccessDesc": "You have successfully made payment and enrolled the course.",
-      "viewEReceipt": "View E-Receipt"
+      "viewEReceipt": "View E-Receipt",
+      "verifyYourIdentityToPurchse": "Verify your identity to complete purchase",
+      "pin": "PIN Number",
+      "biometrics": "Biometrics",
+      "enterYourPINtoVerify": "Enter your PIN number to verify your identity"
     },
     "viewCourse": "View Course",
     "Mentor": {
@@ -436,7 +507,9 @@ static const Map<String,dynamic> en = {
       "announcements": "Announcements",
       "certificate": "Certificate",
       "downloadCertificate": "Download Certificate"
-    }
+    },
+    "hrs": "hrs",
+    "mins": "mins"
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password",
@@ -543,6 +616,52 @@ static const Map<String,dynamic> en = {
     },
     "EditProfile": {
       "edit": "Edit Profile"
+    }
+  },
+  "Search": {
+    "search": "Search",
+    "recent": "Recent",
+    "clearAll": "Clear All",
+    "notFound": "Not Found",
+    "notFoundDesc": "Sorry, the keyword you entered cannot be found, please check again or search with another keyword",
+    "resultsFor": "Results for",
+    "found": "found",
+    "courses": "Courses",
+    "mentors": "Mentors",
+    "Filter": {
+      "filter": "Filter",
+      "field": "Field",
+      "category": "Category",
+      "duration": "Duration",
+      "level": "Level",
+      "price": "Price",
+      "rating": "Rating",
+      "h": "H"
+    },
+    "Test": {
+      "mainCategory1": "Software Engineering"
+    },
+    "reset": "Reset",
+    "SearchBy": {
+      "sortBy": "Sort By",
+      "sort": "Sort",
+      "mostPopular": "Most Popular",
+      "bestSelling": "Best Selling",
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "rating": "Rating",
+      "price": "Price"
+    }
+  },
+  "MyCourses": {
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "saved": "Saved",
+    "downloaded": "Downloaded",
+    "Bookmark": {
+      "cancel": "Cancel",
+      "yesRemove": "Yes, Remove",
+      "removeFromBookmark": "Remove from Bookmar ?"
     }
   }
 };

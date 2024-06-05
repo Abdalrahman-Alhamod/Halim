@@ -6,7 +6,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/themes/app_colors.dart';
-import 'course_reviews_stars_button.dart';
+import 'review_stars_bar/course_reviews_stars_button.dart';
 
 class CourseReviewBlock extends StatelessWidget {
   const CourseReviewBlock({
@@ -39,17 +39,17 @@ class CourseReviewBlock extends StatelessWidget {
                         image != '' ? image : AppImages.emptyAvatar,
                       ),
                       backgroundColor: AppColors.primaryColor.withAlpha(30),
-                      radius: 32,
+                      radius: 24,
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
                     Flexible(
                       flex: 1,
                       child: AutoSizeText(
                         name,
                         style: const TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.w600,
                         ),
                         maxLines: 1,
@@ -75,7 +75,7 @@ class CourseReviewBlock extends StatelessWidget {
         Text(
           review,
           style: const TextStyle(
-            fontSize: 16,
+            fontSize: 14,
           ),
         ),
         const SizedBox(

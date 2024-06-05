@@ -1,6 +1,9 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
+import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/home/presentation/views/functions/remove_bookmark_bottom_sheet.dart';
 
@@ -13,36 +16,43 @@ class CardCourse extends StatefulWidget {
   final int price;
   final String name;
   final String imageUrl;
-  const CardCourse(
-      {super.key,
-      required this.followers,
-      required this.evaluation,
-      required this.category,
-      required this.price,
-      required this.name,
-      required this.imageUrl});
+  final bool isBookmarked;
+  final bool isEnabled;
+  const CardCourse({
+    super.key,
+    required this.followers,
+    required this.evaluation,
+    required this.category,
+    required this.price,
+    required this.name,
+    required this.imageUrl,
+    this.isBookmarked = false,
+    this.isEnabled = true,
+  });
 
   @override
   State<CardCourse> createState() => _CardCourseState();
 }
 
 class _CardCourseState extends State<CardCourse> {
-  bool isBookmarked = false;
+  late bool _isBookmarked;
+  @override
+  void initState() {
+    _isBookmarked = widget.isBookmarked;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
+    return GestureDetector(
+      onTap: () => GoRouter.of(context).push(AppRoute.kCourseDetailsView),
       child: Container(
-        width: screenSize.width * 0.88,
         height: 150,
         decoration: BoxDecoration(
           color: context.isDarkMode
-              ? AppColors.darkFlatButtonColor
+              ? AppColors.loginWithButtonDarkColor
               : AppColors.lightFlatButtonColor,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(32),
         ),
         child: Row(
           children: [
@@ -69,43 +79,51 @@ class _CardCourseState extends State<CardCourse> {
                     Row(
                       children: [
                         Container(
-                          
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          constraints: BoxConstraints(maxWidth: 160),
+                          padding: EdgeInsets.symmetric(
+                            vertical: 4,
+                            horizontal: 6,
+                          ),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: const Color.fromARGB(255, 113, 132, 204).withOpacity(0.25)),
-                          child: Center(
-                            child: Text(
-                              widget.category,
-                              style: const TextStyle(
-                                color: Colors.blue,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w700,
-                              ),
+                            borderRadius: BorderRadius.circular(6),
+                            color: const Color.fromARGB(255, 113, 132, 204)
+                                .withOpacity(0.25),
+                          ),
+                          child: AutoSizeText(
+                            widget.category,
+                            maxLines: 1,
+                            minFontSize: 8,
+                            style: const TextStyle(
+                              color: Colors.blue,
+                              fontSize: 10,
+                              fontWeight: FontWeight.w700,
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ),
                         ),
                         const Spacer(),
                         IconButton(
                           icon: Icon(
-                            isBookmarked
+                            _isBookmarked
                                 ? Icons.bookmark
                                 : Icons.bookmark_border_outlined,
                             size: 28,
-                            color: isBookmarked ? Colors.blue : Colors.blue,
+                            color: _isBookmarked ? Colors.blue : Colors.blue,
                           ),
-                          onPressed: () {
-                            if (isBookmarked) {
-                              showRemoveBookmarkBottomSheet(context);
-                            }
-                            setState(() {
-                              isBookmarked = !isBookmarked;
-                            });
-                          },
+                          onPressed: widget.isEnabled
+                              ? () {
+                                  if (_isBookmarked) {
+                                    showRemoveBookmarkBottomSheet(context);
+                                  }
+                                  setState(() {
+                                    _isBookmarked = !_isBookmarked;
+                                  });
+                                }
+                              : null,
                         ),
                       ],
                     ),
-                    Text(
+                    AutoSizeText(
                       widget.name,
                       style: TextStyle(
                         color: MediaQuery.of(context).platformBrightness ==

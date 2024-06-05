@@ -18,10 +18,11 @@ class MentorDetailsAppBar extends StatelessWidget
       ),
       leadingWidth: AppConstrains.maxWidthAppBarIcon,
       toolbarHeight: AppConstrains.maxWidthAppBarIcon,
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(AppConstrains.maxAppBarHeight);
+  Size get preferredSize =>
+      const Size.fromHeight(AppConstrains.maxAppBarHeight);
 }

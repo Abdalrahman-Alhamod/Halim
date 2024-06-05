@@ -34,14 +34,16 @@ class LoginBody extends StatelessWidget {
             AuthForm(
               buttonTitle: LocaleKeys.Auth_signIn.tr(),
               onTap: (email, password, rememberMe) {
-                GoRouter.of(context).push(AppRoute.kFillProfile);
+                GoRouter.of(context).go(AppRoute.kHome);
               },
             ),
             const SizedBox(
               height: 20,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRoute.kSendCode);
+              },
               child: Text(
                 LocaleKeys.Auth_forgotThePassword.tr(),
                 style:

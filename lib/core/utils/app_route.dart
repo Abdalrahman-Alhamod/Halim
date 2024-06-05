@@ -2,15 +2,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/search/presentation/views/search_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_reading_view.dart';
 import 'package:halim/src/course_details/presentation/views/enroll_course_view.dart';
 import 'package:halim/src/course_details/presentation/views/mentor_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/my_course_details_view.dart';
+import 'package:halim/src/course_details/presentation/views/pin_auth_view.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
 import 'package:halim/src/forgot_password/presentation/views/new_pass_view.dart';
 import 'package:halim/src/home/presentation/views/home_view.dart';
+import 'package:halim/src/login_register/presentation/views/confirm_email_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
@@ -27,7 +30,6 @@ import '../../src/forgot_password/presentation/views/enter_code_view.dart';
 import '../../src/forgot_password/presentation/views/send_code_view.dart';
 import '../../src/home/presentation/views/notifications_view.dart';
 import '../../src/home/presentation/views/popular_courses_view.dart';
-import '../../src/home/presentation/views/search_view.dart';
 import '../../src/home/presentation/views/top_mentors_view.dart';
 import '../../src/home/presentation/views/widgets/bottom_bar.dart';
 import '../../src/my_courses/presentation/views/bookmark_view.dart';
@@ -49,6 +51,7 @@ class AppRoute {
   static const kEnrollCourseView = '/enrollCourse';
   static const kMentorDetailsView = '/mentorDetails';
   static const kMyCourseDetailsView = '/myCourseDetails';
+  static const kConfirmEmailView = '/confirmEmail';
 
   static const kFillProfile = '/fillProfile';
   static const kCreatePin = '/kCreatePin';
@@ -72,12 +75,12 @@ class AppRoute {
 
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
-      /*GoRoute(
+      GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const SplashView();
+          return const BottomBar();
         },
-      ),*/
+      ),
       GoRoute(
         path: kIntroView,
         builder: (BuildContext context, GoRouterState state) {
@@ -100,6 +103,12 @@ class AppRoute {
         path: kRegisterView,
         builder: (BuildContext context, GoRouterState state) {
           return const RegisterView();
+        },
+      ),
+      GoRoute(
+        path: kConfirmEmailView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const ConfirmEmailView();
         },
       ),
       GoRoute(
@@ -145,7 +154,7 @@ class AppRoute {
         },
       ),
       GoRoute(
-        path: '/',
+        path: kFillProfile,
         builder: (BuildContext context, GoRouterState state) {
           return const FillProfilView();
         },

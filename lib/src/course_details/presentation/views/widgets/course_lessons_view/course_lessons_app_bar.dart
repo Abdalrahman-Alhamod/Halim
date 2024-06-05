@@ -25,7 +25,7 @@ class CourseLessonsAppBar extends StatelessWidget
           fontWeight: FontWeight.w600,
         ),
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }
 

@@ -7,20 +7,21 @@ class _MyCourseDetailsAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: BackArrowIcon(onPressed: () {
-        GoRouter.of(context).pop();
-      }),
-      leadingWidth: AppConstrains.maxWidthAppBarIcon,
-      toolbarHeight: AppConstrains.maxWidthAppBarIcon,
+      leading: BackArrowIcon(
+        onPressed: () {
+          GoRouter.of(context).pop();
+        },
+      ),
+      toolbarHeight: AppConstrains.maxAppBarHeight,
       title: AutoSizeText(
         LocaleKeys.CourseDetails_Test_courseTitle.tr(),
         style: const TextStyle(
-          fontSize: 28,
+          fontSize: 24,
           fontWeight: FontWeight.w600,
         ),
         maxLines: 1,
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }
 
