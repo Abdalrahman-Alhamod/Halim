@@ -14,6 +14,7 @@ import 'package:halim/src/home/presentation/views/home_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_view.dart';
 import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
 import 'package:halim/src/login_register/presentation/views/register_view.dart';
+import 'package:halim/src/profile_settings/presentation/views/definition_halim.dart';
 import 'package:halim/src/profile_settings/presentation/views/notification_settings_view.dart';
 import 'package:halim/src/splash/presentation/views/intro_view.dart';
 import 'package:halim/src/splash/presentation/views/splash_view.dart';
@@ -34,6 +35,7 @@ import '../../src/my_courses/presentation/views/browse_sections_view.dart';
 import '../../src/profile_settings/presentation/views/edit_profile.dart';
 import '../../src/profile_settings/presentation/views/language_settings_view.dart';
 import '../../src/profile_settings/presentation/views/security_view.dart';
+import '../../src/profile_settings/presentation/views/settings_view.dart';
 
 class AppRoute {
   static const kIntroView = '/intro';
@@ -65,6 +67,8 @@ class AppRoute {
   static const kNotificationSettingsView = '/kNotificationSettingsView';
   static const kSecurityView = '/kSecurityView';
   static const kLanguageSettingsView = '/kLanguageSettingsView';
+  static const kSettingsView = '/kSettingsView';
+  static const kDefinitionHalimView = '/kDefinitionHalimView';
 
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
@@ -240,6 +244,18 @@ class AppRoute {
         path: kLanguageSettingsView,
         builder: (BuildContext context, GoRouterState state) {
           return const LanguageSettingsView();
+        },
+      ),
+      GoRoute(
+        path: kSettingsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const SettingsView();
+        },
+      ),
+      GoRoute(
+        path: kDefinitionHalimView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const DefinitionHalimView();
         },
       ),
     ],

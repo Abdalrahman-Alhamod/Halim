@@ -9,6 +9,8 @@ import 'package:halim/src/account_setup/presentation/views/services/image_servic
 import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/widgets/enroll_success_dialog.dart';
 import 'package:halim/src/profile_settings/presentation/views/functions/log_out_bottom_sheet.dart';
 import 'package:halim/src/profile_settings/presentation/views/widget/filterToggleButtonWithIcon.dart';
+import 'package:halim/src/profile_settings/presentation/views/widget/halim_widget.dart';
+import 'package:halim/src/profile_settings/presentation/views/widget/introductory_widget.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -101,13 +103,13 @@ class SettingsViewState extends State<SettingsView> {
                 GoRouter.of(context).push(AppRoute.kSecurityView);
               },
             ),
-            SettingsWidget(
+            /*SettingsWidget(
               name: 'Payment',
               icon: Icons.payment,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kHome);
               },
-            ),
+            ),*/
             SettingsWidget(
               name: 'Language',
               icon: Icons.language,
@@ -120,20 +122,22 @@ class SettingsViewState extends State<SettingsView> {
               fun: (p0) {},
               icon: Icons.remove_red_eye,
             ),
-            SettingsWidget(
+            /*SettingsWidget(
               name: 'Privacy Policy',
               icon: Icons.privacy_tip_rounded,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kHome);
               },
-            ),
+            ),*/
             SettingsWidget(
               name: 'dialog courses test',
               icon: Icons.help_outlined,
               onPressed: () {
-               showCustomDialog(context: context, widget:EvaluationCoursesDialog() );
+                showCustomDialog(
+                    context: context, widget: EvaluationCoursesDialog());
               },
             ),
+            HalimWidget(name: 'Halim Team', onPressed: (){GoRouter.of(context).push(AppRoute.kDefinitionHalimView);}),
             SettingsWidget(
               name: 'Logout',
               icon: Icons.logout_rounded,
@@ -142,7 +146,6 @@ class SettingsViewState extends State<SettingsView> {
               },
               color: Colors.red,
             ),
-            
           ],
         ),
       ),

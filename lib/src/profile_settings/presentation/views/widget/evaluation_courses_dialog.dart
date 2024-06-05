@@ -120,7 +120,7 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: CustomElevatedButton(
               onPressed: () {
-                GoRouter.of(context).push(AppRoute.kMyCourseDetailsView);
+                GoRouter.of(context).pop();
               },
               title: 'Send Review',
               elevation: 0,
@@ -133,7 +133,7 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: CustomFlatButton(
               onPressed: () {
-                GoRouter.of(context).push(AppRoute.kMyCourseDetailsView);
+                GoRouter.of(context).pop();
               },
               width: MediaQuery.of(context).size.width * 0.40,
               height: 45,

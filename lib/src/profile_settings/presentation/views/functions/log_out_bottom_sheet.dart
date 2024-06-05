@@ -68,7 +68,7 @@ void logOutBottomSheet(BuildContext context) {
                   kBackgroundcolor: MediaQuery.of(context).platformBrightness ==
                           Brightness.dark
                       ? AppColors.darkFlatButtonColor
-                      : AppColors.lightFlatButtonColor,
+                      : AppColors.textFieldColor,
                   kTextcolor: MediaQuery.of(context).platformBrightness ==
                           Brightness.dark
                       ? AppColors.lightFlatButtonColor
