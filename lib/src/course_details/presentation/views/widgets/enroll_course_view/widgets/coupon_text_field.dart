@@ -67,11 +67,13 @@ class _CouponTextFieldState extends State<CouponTextField> {
                 ? AppColors.primaryColor.withAlpha(30)
                 : Colors.grey.shade200,
         prefixIcon: Padding(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(16),
           child: SvgPicture.asset(
             AppSVGs.coupon,
             width: 32,
-            colorFilter: ColorFilter.mode(_isFocused ? AppColors.primaryColor : Colors.grey.shade500, BlendMode.srcIn),
+            colorFilter: ColorFilter.mode(
+                _isFocused ? AppColors.primaryColor : Colors.grey.shade500,
+                BlendMode.srcIn),
           ),
         ),
         suffixIcon: Padding(
