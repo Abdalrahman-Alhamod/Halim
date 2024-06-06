@@ -66,6 +66,7 @@ class _ConfirmEmailBodyState extends State<_ConfirmEmailBody> {
                 fontWeight: FontWeight.normal,
                 color: context.isDarkMode ? Colors.white : Colors.black,
               ),
+              textAlign: TextAlign.center,
             ),
             const Spacer(
               flex: 4,
