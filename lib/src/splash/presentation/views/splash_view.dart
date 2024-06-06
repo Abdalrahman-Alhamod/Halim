@@ -13,10 +13,11 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
+
   @override
-  void initState() {
-    super.initState();
-    navigateToIntroView();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    initializeApp();
   }
 
   @override
@@ -27,13 +28,18 @@ class _SplashViewState extends State<SplashView> {
     );
   }
 
+  Future<void> initializeApp() async {
+    try {
+      await preCacheAppImages();
+      await Future.delayed(const Duration(seconds: 3)); // Shortened delay
+      navigateToIntroView();
+    } catch (e) {
+      debugPrint('Error during initialization: $e');
+    }
+  }
+
   void navigateToIntroView() {
-    Future.delayed(
-      const Duration(seconds: 5),
-      () {
-        GoRouter.of(context).pushReplacement(AppRoute.kIntroView);
-      },
-    );
+    GoRouter.of(context).go(AppRoute.kIntroView);
   }
 
   Future<void> preCacheAppImages() async {

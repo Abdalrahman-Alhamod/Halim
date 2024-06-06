@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/assets/app_images.dart';
 import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/widgets/custom_loading_indicator.dart';
 
 class SplashBody extends StatelessWidget {
   const SplashBody({
@@ -31,16 +33,16 @@ class SplashBody extends StatelessWidget {
           Center(
             child: Image.asset(
               AppImages.logoWhite,
-              width: 150,
+              width: context.width * 0.4,
             ),
           ),
           const Spacer(
             flex: 1,
           ),
-          /*const CustomLoadingIndicator(
+          const CustomLoadingIndicator(
             color: Colors.white,
             size: 75,
-          ),*/
+          ),
           const Spacer(
             flex: 1,
           ),

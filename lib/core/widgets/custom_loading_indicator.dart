@@ -6,13 +6,14 @@ class CustomLoadingIndicator extends StatefulWidget {
     super.key,
     this.color = Colors.white,
     this.size = 50.0,
-    required this.onComplete,
+    this.onComplete,
+    this.durationInSeconds = 2,
   });
 
   final Color color;
   final double size;
-  final VoidCallback onComplete;
-
+  final VoidCallback? onComplete;
+  final int durationInSeconds;
   @override
   _CustomLoadingIndicatorState createState() => _CustomLoadingIndicatorState();
 }
@@ -25,9 +26,14 @@ class _CustomLoadingIndicatorState extends State<CustomLoadingIndicator> {
   }
 
   void _startLoading() {
-    Future.delayed(const Duration(seconds: 2), () {
-      widget.onComplete();
-    });
+    Future.delayed(
+      Duration(seconds: widget.durationInSeconds),
+      () {
+        if (widget.onComplete != null) {
+          widget.onComplete!();
+        }
+      },
+    );
   }
 
   @override
@@ -36,7 +42,6 @@ class _CustomLoadingIndicatorState extends State<CustomLoadingIndicator> {
       child: SpinKitCircle(
         color: widget.color,
         size: widget.size,
-        duration: const Duration(seconds: 2), 
       ),
     );
   }

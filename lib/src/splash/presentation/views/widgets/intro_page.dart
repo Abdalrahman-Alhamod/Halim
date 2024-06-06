@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:halim/core/constants/app_sizes.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 class IntroPage extends StatelessWidget {
@@ -13,7 +14,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: AppSizes.pad16),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

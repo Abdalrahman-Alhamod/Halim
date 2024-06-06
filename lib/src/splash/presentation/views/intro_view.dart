@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/constants/app_sizes.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
 import 'widgets/intro_button.dart';
 import 'widgets/intro_page.dart';
@@ -14,7 +15,13 @@ class IntroView extends StatefulWidget {
 }
 
 class _IntroViewState extends State<IntroView> {
-  final _pageController = PageController();
+  late final _pageController;
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
   bool _isLastPage = false;
   @override
   Widget build(BuildContext context) {
@@ -45,7 +52,7 @@ class _IntroViewState extends State<IntroView> {
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: AppSizes.pad16),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [

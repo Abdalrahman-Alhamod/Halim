@@ -72,11 +72,12 @@ class AppRoute {
   static const kDefinitionHalimView = '/kDefinitionHalimView';
 
   static final GoRouter router = GoRouter(
+    debugLogDiagnostics: true,
     routes: <RouteBase>[
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const BottomBar();
+          return const SplashView();
         },
       ),
       GoRoute(
