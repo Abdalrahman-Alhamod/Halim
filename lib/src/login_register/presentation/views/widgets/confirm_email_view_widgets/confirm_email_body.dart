@@ -8,10 +8,23 @@ class _ConfirmEmailBody extends StatefulWidget {
 }
 
 class _ConfirmEmailBodyState extends State<_ConfirmEmailBody> {
-  final List<TextEditingController> _pinControllers =
-      List.generate(4, (_) => TextEditingController());
+  late final List<TextEditingController> _codeControllers;
 
-  void _handlePinChange(int index, String value) {
+  @override
+  void initState() {
+    _codeControllers = List.generate(4, (_) => TextEditingController());
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    for (var controller in _codeControllers) {
+      controller.dispose();
+    }
+    super.dispose();
+  }
+
+  void _handleCodeChange(int index, String value) {
     if (value.length == 1 && index < 3) {
       FocusScope.of(context).nextFocus();
     } else if (value.isEmpty && index > 0) {
@@ -21,99 +34,83 @@ class _ConfirmEmailBodyState extends State<_ConfirmEmailBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Spacer(
-          flex: 2,
-        ),
-        Text(
-          LocaleKeys.Auth_enterYourEmailConfimCode.tr(),
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.normal,
-            color: context.isDarkMode ? Colors.white : Colors.black,
-          ),
-        ),
-        const Spacer(
-          flex: 4,
-        ),
-        Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-              4,
-              (index) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: SizedBox(
-                    width: 60,
-                    child: TextField(
-                      cursorColor: MediaQuery.of(context).platformBrightness ==
-                              Brightness.dark
-                          ? AppColors.lightFlatButtonColor
-                          : AppColors.darkFlatButtonColor,
-                      style: TextStyle(
-                        fontSize: context.height * 0.019,
-                        color: MediaQuery.of(context).platformBrightness ==
-                                Brightness.dark
-                            ? AppColors.lightFlatButtonColor
-                            : AppColors.darkFlatButtonColor,
-                      ),
-                      controller: _pinControllers[index],
-                      maxLength: 1,
-                      textAlign: TextAlign.center,
-                      onChanged: (value) {
-                        _handlePinChange(index, value);
-                      },
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        counterText: '',
-                        border: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          borderSide: const BorderSide(
-                            width: 0.5,
-                            style: BorderStyle.none,
-                          ),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          borderSide: const BorderSide(color: Colors.blue),
-                        ),
-                        filled: true,
-                        fillColor: MediaQuery.of(context).platformBrightness ==
-                                Brightness.dark
-                            ? AppColors.darkFlatButtonColor
-                            : AppColors.lightFlatButtonColor,
-                      ),
-                    ),
-                  ),
-                );
-              },
+    return SingleChildScrollView(
+      child: SizedBox(
+        height: context.height - 100,
+        child: Column(
+          children: [
+            const Spacer(
+              flex: 2,
             ),
-          ),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Image.asset(
+                  AppImages.iconPublic,
+                  width: context.width * .7,
+                ),
+                Icon(
+                  Icons.mark_email_unread,
+                  size: 100,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+            const Spacer(
+              flex: 3,
+            ),
+            Text(
+              LocaleKeys.Auth_enterYourEmailConfimCode.tr(),
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.normal,
+                color: context.isDarkMode ? Colors.white : Colors.black,
+              ),
+            ),
+            const Spacer(
+              flex: 4,
+            ),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  4,
+                  (index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: SizedBox.square(
+                        dimension: 60,
+                        child: PinTextField(
+                          onChanged: (value) {
+                            _handleCodeChange(index, value);
+                          },
+                          controller: _codeControllers[index],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+            const Spacer(
+              flex: 8,
+            ),
+            CustomFlatButton(
+              onPressed: () {
+                GoRouter.of(context).push(AppRoute.kFillProfile);
+              },
+              title: LocaleKeys.FillYourProfile_continue.tr(),
+              width: MediaQuery.of(context).size.width * 0.90,
+              height: 60,
+              kTextcolor: AppColors.lightFlatButtonColor,
+              kBackgroundcolor: AppColors.primaryColor,
+            ),
+            const Spacer(
+              flex: 1,
+            )
+          ],
         ),
-        const Spacer(
-          flex: 8,
-        ),
-        CustomFlatButton(
-          onPressed: () {
-            GoRouter.of(context).push(AppRoute.kFillProfile);
-          },
-          title: LocaleKeys.FillYourProfile_continue.tr(),
-          width: MediaQuery.of(context).size.width * 0.90,
-          height: 60,
-          kTextcolor: AppColors.lightFlatButtonColor,
-          kBackgroundcolor: AppColors.primaryColor,
-        ),
-        const Spacer(
-          flex: 1,
-        )
-      ],
+      ),
     );
   }
 }

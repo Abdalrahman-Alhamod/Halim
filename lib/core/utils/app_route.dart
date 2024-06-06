@@ -9,7 +9,6 @@ import 'package:halim/src/course_details/presentation/views/course_reading_view.
 import 'package:halim/src/course_details/presentation/views/enroll_course_view.dart';
 import 'package:halim/src/course_details/presentation/views/mentor_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/my_course_details_view.dart';
-import 'package:halim/src/course_details/presentation/views/pin_auth_view.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
 import 'package:halim/src/forgot_password/presentation/views/new_pass_view.dart';
 import 'package:halim/src/home/presentation/views/home_view.dart';
