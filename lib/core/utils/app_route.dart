@@ -32,7 +32,6 @@ import '../../src/home/presentation/views/notifications_view.dart';
 import '../../src/home/presentation/views/popular_courses_view.dart';
 import '../../src/home/presentation/views/top_mentors_view.dart';
 import '../../src/home/presentation/views/widgets/bottom_bar.dart';
-import '../../src/my_courses/presentation/views/bookmark_view.dart';
 import '../../src/my_courses/presentation/views/browse_sections_view.dart';
 import '../../src/profile_settings/presentation/views/edit_profile.dart';
 import '../../src/profile_settings/presentation/views/language_settings_view.dart';
@@ -199,12 +198,6 @@ class AppRoute {
         path: kNotifications,
         builder: (BuildContext context, GoRouterState state) {
           return const NotificationsView();
-        },
-      ),
-      GoRoute(
-        path: kBookMark,
-        builder: (BuildContext context, GoRouterState state) {
-          return const BookMarkView();
         },
       ),
       GoRoute(

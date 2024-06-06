@@ -30,15 +30,14 @@ class BrowseSectionsCoursesState extends State<BrowseSectionsCourses> {
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
-          'My Courses',
+          LocaleKeys.MyCourses_myCourses.tr(),
           style: TextStyle(
-              color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-              fontSize: 20,
-              fontFamily: 'Cairo',
-              fontWeight: FontWeight.w500),
+            color: MediaQuery.of(context).platformBrightness == Brightness.dark
+                ? Colors.white
+                : Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+          ),
         ),
         elevation: 0,
         toolbarHeight: AppConstrains.maxAppBarHeight,
@@ -78,15 +77,15 @@ class BrowseSectionsCoursesState extends State<BrowseSectionsCourses> {
               child: OngoingCoursesPage(),
             ),
             SectionPage(
-              title:  LocaleKeys.MyCourses_completed.tr(),
+              title: LocaleKeys.MyCourses_completed.tr(),
               child: CompletedCoursesPage(),
             ),
             SectionPage(
-              title:  LocaleKeys.MyCourses_saved.tr(),
+              title: LocaleKeys.MyCourses_saved.tr(),
               child: SavedCoursesPage(),
             ),
             SectionPage(
-              title:  LocaleKeys.MyCourses_downloaded.tr(),
+              title: LocaleKeys.MyCourses_downloaded.tr(),
               child: DownloadedCoursesPage(),
             ),
           ],
