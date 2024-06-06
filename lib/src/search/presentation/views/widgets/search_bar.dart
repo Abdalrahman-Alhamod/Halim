@@ -59,13 +59,15 @@ class _SearchBarState extends State<SearchBar> {
                 ? AppColors.primaryColor.withAlpha(30)
                 : AppColors.textFieldColor,
         prefixIcon: Padding(
-          padding: const EdgeInsets.all(14),
-          child: Icon(
-            Icons.search,
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          child: IconButton(
+            onPressed: () => context.pop(),
+            icon: Icon(
+              Icons.arrow_back,
+              color: AppColors.primaryColor,
+            ),
           ),
         ),
-        prefixIconColor:
-            _isFocused ? AppColors.primaryColor : Colors.grey.shade500,
         suffixIcon: SizedBox(
           height: 50,
           child: ListView(
