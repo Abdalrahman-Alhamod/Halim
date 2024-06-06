@@ -26,7 +26,9 @@ class _MyCourseDetailsBody extends StatelessWidget {
                 ),
                 SectionPage(
                   title: LocaleKeys.CourseDetails_MyCourse_certificate.tr(),
-                  child: const MyCourseCertificateSection(),
+                  child: const MyCourseCertificateSection(
+                    certificateUrl: 'https://www.soundczech.cz/temp/lorem-ipsum.pdf',
+                  ),
                 ),
               ],
             ),
