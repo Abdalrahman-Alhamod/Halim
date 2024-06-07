@@ -7,7 +7,6 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/utils/app_route.dart';
 
-
 class WelcomeCard extends StatelessWidget {
   const WelcomeCard({
     super.key,
@@ -31,10 +30,6 @@ class WelcomeCard extends StatelessWidget {
               Text(
                 LocaleKeys.HomePage_Home_goodMorning.tr(),
                 style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
                   fontSize: 14,
                   fontWeight: FontWeight.w200,
                 ),
@@ -42,10 +37,6 @@ class WelcomeCard extends StatelessWidget {
               Text(
                 'Alaa Lababedi',
                 style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
@@ -58,9 +49,7 @@ class WelcomeCard extends StatelessWidget {
           icon: Icon(
             Icons.search,
             size: 28,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             GoRouter.of(context).push(AppRoute.kSearch);
@@ -70,9 +59,7 @@ class WelcomeCard extends StatelessWidget {
           icon: Icon(
             Icons.notifications_active_outlined,
             size: 28,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             GoRouter.of(context).push(AppRoute.kNotifications);

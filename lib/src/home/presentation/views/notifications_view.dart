@@ -20,20 +20,12 @@ class NotificationsViewState extends State<NotificationsView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Row(
           children: [
             Text(
               'Notifications',
-              style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
             const Spacer(
               flex: 1,
@@ -41,10 +33,7 @@ class NotificationsViewState extends State<NotificationsView> {
             Icon(
               Icons.notifications_active_outlined,
               size: 28,
-              color:
-                  context.isDarkMode
-                      ? Colors.white
-                      : Colors.black,
+              color: context.isDarkMode ? Colors.white : Colors.black,
             )
           ],
         ),
@@ -53,19 +42,14 @@ class NotificationsViewState extends State<NotificationsView> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             GoRouter.of(context).push(AppRoute.kHome);
           },
         ),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: Column(
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.start, children: [
@@ -77,10 +61,6 @@ class NotificationsViewState extends State<NotificationsView> {
               child: Text(
                 'Today',
                 style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
@@ -96,7 +76,6 @@ class NotificationsViewState extends State<NotificationsView> {
           ),
           const NotificationsCard(
             icon: Icons.price_change,
-
             imageUrl: AppImages.accountDone,
             title: 'Today\'s Special Offers',
             description: 'You get a special promo today!',

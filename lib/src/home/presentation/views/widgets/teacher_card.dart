@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
@@ -40,10 +42,6 @@ class TeacherCard extends StatelessWidget {
                       Text(
                         name,
                         style: TextStyle(
-                          color: MediaQuery.of(context).platformBrightness ==
-                                  Brightness.dark
-                              ? Colors.white
-                              : Colors.black,
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
@@ -51,10 +49,6 @@ class TeacherCard extends StatelessWidget {
                       Text(
                         specialization,
                         style: TextStyle(
-                          color: MediaQuery.of(context).platformBrightness ==
-                                  Brightness.dark
-                              ? Colors.white54
-                              : Colors.black54,
                           fontSize: 14,
                           fontWeight: FontWeight.w300,
                         ),
@@ -66,10 +60,6 @@ class TeacherCard extends StatelessWidget {
                         width: 30,
                         height: 30,
                         decoration: BoxDecoration(
-                          color: MediaQuery.of(context).platformBrightness ==
-                                  Brightness.dark
-                              ? AppColors.darkColor
-                              : Colors.white,
                           borderRadius:
                               const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
@@ -82,7 +72,9 @@ class TeacherCard extends StatelessWidget {
                             Icons.more_horiz_sharp,
                             color: Colors.blue),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(context).push(AppRoute.kMentorDetailsView);
+                      },
                     ),
                   ],
                 ),

@@ -16,24 +16,17 @@ class SendCodeview extends StatefulWidget {
 }
 
 class _SendCodeviewState extends State<SendCodeview> {
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        title: Text(
-          'Change Password',
-          style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.normal,
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
-                  )
-        ),
+        title: Text('Change Password',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.normal,
+            )),
         elevation: 0,
         leading: IconButton(
           icon: Icon(
@@ -41,7 +34,7 @@ class _SendCodeviewState extends State<SendCodeview> {
             color: context.isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-              GoRouter.of(context).pop();
+            GoRouter.of(context).pop();
           },
         ),
       ),
@@ -55,17 +48,12 @@ class _SendCodeviewState extends State<SendCodeview> {
               child: Image.asset(AppImages.forgotPassword,
                   height: 250, width: 250, fit: BoxFit.fill),
             ),
-
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
                 'Select which contact details should we use to rest your password',
                 style: TextStyle(
                   fontSize: 16,
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
                 ),
                 textAlign: TextAlign.center,
               ),

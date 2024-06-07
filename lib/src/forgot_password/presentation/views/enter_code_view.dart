@@ -13,37 +13,30 @@ class EnterCodeView extends StatefulWidget {
 }
 
 class _EnterCodeViewState extends State<EnterCodeView> {
- 
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
+          backgroundColor:
+              context.isDarkMode ? AppColors.darkColor : Colors.white,
+          title: Text('Enter Code',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              )),
+          elevation: 0,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: context.isDarkMode ? Colors.white : Colors.black,
+            ),
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
+          ),
+        ),
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        title: Text('Enter Code',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.normal,
-              color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-            )),
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: context.isDarkMode ? Colors.white : Colors.black,
-          ),
-          onPressed: () {
-            GoRouter.of(context).pop();
-          },
-        ),
-      ),
-      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
-      body: EnterCodeBody()
-    );
+        body: EnterCodeBody());
   }
 }

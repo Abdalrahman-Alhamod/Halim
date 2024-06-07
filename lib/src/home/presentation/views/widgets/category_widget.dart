@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -16,6 +17,7 @@ class CategoryWidgetState extends State<CategoryWidget> {
 
   @override
   Widget build(BuildContext context) {
+    print(context.isDarkMode);
     return InkWell(
       borderRadius: BorderRadius.circular(20),
       onTap: () {
@@ -28,12 +30,11 @@ class CategoryWidgetState extends State<CategoryWidget> {
         children: [
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 8.0),
-           padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
             decoration: BoxDecoration(
               color: isSelected
                   ? AppColors.primaryColor
-                  : MediaQuery.of(context).platformBrightness ==
-                          Brightness.light
+                  : !context.isDarkMode
                       ? Colors.white
                       : AppColors.darkFlatButtonColor,
               borderRadius: BorderRadius.circular(20.0),

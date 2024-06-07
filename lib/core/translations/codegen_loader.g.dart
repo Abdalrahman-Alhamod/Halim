@@ -334,7 +334,8 @@ class CodegenLoader extends AssetLoader{
       "cancel": "الغاء",
       "yesRemove": "نعم، أزل",
       "removeFromBookmark": "إزالة من المحفوظة ؟"
-    }
+    },
+    "myCourses": "دوراتي"
   }
 };
 static const Map<String,dynamic> en = {
@@ -657,7 +658,8 @@ static const Map<String,dynamic> en = {
       "cancel": "Cancel",
       "yesRemove": "Yes, Remove",
       "removeFromBookmark": "Remove from Bookmar ?"
-    }
+    },
+    "myCourses": "My Courses"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

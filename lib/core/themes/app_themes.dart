@@ -20,6 +20,7 @@ class AppThemes {
         ),
       ),
       sliderTheme: _getSliderTheme(context),
+      useMaterial3: true,
     );
   }
 
@@ -57,6 +58,7 @@ class AppThemes {
         ),
       ),
       sliderTheme: _getSliderTheme(context),
+      useMaterial3: true,
     );
   }
 }

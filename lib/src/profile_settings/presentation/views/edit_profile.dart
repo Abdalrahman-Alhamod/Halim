@@ -29,13 +29,7 @@ class EditProfileViewState extends State<EditProfileView> {
         toolbarHeight: 70,
         title: Text(
           LocaleKeys.Settings_EditProfile_edit.tr(),
-          style: TextStyle(
-              color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w500),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
       ),

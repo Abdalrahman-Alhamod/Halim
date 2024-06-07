@@ -1,11 +1,14 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../../../../../../core/widgets/bottom_sheet_button.dart';
 
 class MyCourseCertificateSection extends StatelessWidget {
-  const MyCourseCertificateSection({super.key});
-
+  const MyCourseCertificateSection({super.key, required this.certificateUrl});
+  final String certificateUrl;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,9 +21,12 @@ class MyCourseCertificateSection extends StatelessWidget {
             //   child: Image.asset(AppImages.testCertificate),
             // ),
             SizedBox(
+              height: 20,
+            ),
+            SizedBox(
               height: context.height * .6,
               child: SfPdfViewer.network(
-                'https://www.soundczech.cz/temp/lorem-ipsum.pdf',
+                certificateUrl,
                 enableDoubleTapZooming: false,
               ),
             ),
@@ -30,8 +36,10 @@ class MyCourseCertificateSection extends StatelessWidget {
           ],
         ),
         bottomSheet: BottomSheetButton(
-          title: 'Downlaod Certificate',
-          onPressed: () {},
+          title: LocaleKeys.CourseDetails_MyCourse_downloadCertificate.tr(),
+          onPressed: () async {
+            await launchUrl(Uri.parse(certificateUrl));
+          },
         ),
       ),
     );

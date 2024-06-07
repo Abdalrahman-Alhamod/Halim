@@ -29,12 +29,7 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
           children: [
             Text(
               LocaleKeys.HomePage_Home_mostPopularCourses.tr(),
-              style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-                  fontWeight: FontWeight.w500),
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
             const Spacer(
               flex: 1,

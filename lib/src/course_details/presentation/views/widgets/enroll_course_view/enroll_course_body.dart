@@ -15,15 +15,20 @@ class EnrollCourseBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
-      child: SingleChildScrollView(
-        child: SizedBox(
-          height: context.height - 220,
+      child: SizedBox(
+        height: context.height - 200,
+        child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const CourseBox(),
+              SizedBox(
+                height: 20,
+              ),
               CouponTextField(
                 onApplyPressed: () {},
+              ),
+              SizedBox(
+                height: 20,
               ),
               const CourseEnrollCheckout(wallet: 550, price: 70, discount: 30),
             ],

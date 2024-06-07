@@ -17,7 +17,6 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
   bool _isFocused = false;
   late FocusNode _focusNode;
   final List<String> options = [
-    
     LocaleKeys.FillYourProfile_Gender_male1.tr(),
     LocaleKeys.FillYourProfile_Gender_female1.tr()
   ];
@@ -90,7 +89,7 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
           contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(
             fontWeight: FontWeight.w600,
-            color: Theme.of(context).brightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.grey.shade500
                 : Colors.grey.shade700,
           ),

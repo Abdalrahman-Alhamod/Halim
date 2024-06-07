@@ -276,6 +276,7 @@ abstract class  LocaleKeys {
   static const MyCourses_Bookmark_yesRemove = 'MyCourses.Bookmark.yesRemove';
   static const MyCourses_Bookmark_removeFromBookmark = 'MyCourses.Bookmark.removeFromBookmark';
   static const MyCourses_Bookmark = 'MyCourses.Bookmark';
+  static const MyCourses_myCourses = 'MyCourses.myCourses';
   static const MyCourses = 'MyCourses';
 
 }

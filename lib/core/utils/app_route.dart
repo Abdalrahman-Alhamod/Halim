@@ -9,7 +9,6 @@ import 'package:halim/src/course_details/presentation/views/course_reading_view.
 import 'package:halim/src/course_details/presentation/views/enroll_course_view.dart';
 import 'package:halim/src/course_details/presentation/views/mentor_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/my_course_details_view.dart';
-import 'package:halim/src/course_details/presentation/views/pin_auth_view.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
 import 'package:halim/src/forgot_password/presentation/views/new_pass_view.dart';
 import 'package:halim/src/home/presentation/views/home_view.dart';
@@ -32,7 +31,6 @@ import '../../src/home/presentation/views/notifications_view.dart';
 import '../../src/home/presentation/views/popular_courses_view.dart';
 import '../../src/home/presentation/views/top_mentors_view.dart';
 import '../../src/home/presentation/views/widgets/bottom_bar.dart';
-import '../../src/my_courses/presentation/views/bookmark_view.dart';
 import '../../src/my_courses/presentation/views/browse_sections_view.dart';
 import '../../src/profile_settings/presentation/views/edit_profile.dart';
 import '../../src/profile_settings/presentation/views/language_settings_view.dart';
@@ -74,6 +72,7 @@ class AppRoute {
   static const kDefinitionHalimView = '/kDefinitionHalimView';
 
   static final GoRouter router = GoRouter(
+    debugLogDiagnostics: true,
     routes: <RouteBase>[
       GoRoute(
         path: '/',
@@ -199,12 +198,6 @@ class AppRoute {
         path: kNotifications,
         builder: (BuildContext context, GoRouterState state) {
           return const NotificationsView();
-        },
-      ),
-      GoRoute(
-        path: kBookMark,
-        builder: (BuildContext context, GoRouterState state) {
-          return const BookMarkView();
         },
       ),
       GoRoute(

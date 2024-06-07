@@ -63,7 +63,7 @@ class _FollowCourseState extends State<FollowCourse> {
                 width: 110,
                 height: 110,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(24),
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(widget.imageUrl),
@@ -84,10 +84,6 @@ class _FollowCourseState extends State<FollowCourse> {
                     child: AutoSizeText(
                       widget.name,
                       style: TextStyle(
-                        color: MediaQuery.of(context).platformBrightness ==
-                                Brightness.dark
-                            ? Colors.white
-                            : Colors.black87,
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                       ),
@@ -103,10 +99,6 @@ class _FollowCourseState extends State<FollowCourse> {
                     child: Text(
                       '${widget.hours} ${LocaleKeys.CourseDetails_hrs.tr()} ${widget.min} ${LocaleKeys.CourseDetails_mins.tr()}',
                       style: TextStyle(
-                        color: MediaQuery.of(context).platformBrightness ==
-                                Brightness.dark
-                            ? Colors.white54
-                            : Colors.black54,
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
                       ),
@@ -129,10 +121,6 @@ class _FollowCourseState extends State<FollowCourse> {
                     trailing: Text(
                       "${widget.completedEpisodes} / ${widget.allEpisodes}",
                       style: TextStyle(
-                        color: MediaQuery.of(context).platformBrightness ==
-                                Brightness.dark
-                            ? Colors.white54
-                            : Colors.black54,
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                       ),

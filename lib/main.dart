@@ -1,3 +1,4 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,7 +20,7 @@ void main() async {
         Locale(AppLocales.ar),
       ],
       path: AppLocales.translationsAssetsPath,
-      startLocale: const Locale(AppLocales.ar),
+      startLocale: const Locale(AppLocales.en),
       fallbackLocale: const Locale(AppLocales.en),
       assetLoader: const CodegenLoader(),
       child: const HalimApp(),
@@ -34,14 +35,18 @@ class HalimApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: AppRoute.router,
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      theme: AppThemes.getLightThemeData(context),
-      darkTheme: AppThemes.getDarkThemeData(context),
+    return AdaptiveTheme(
+      light: AppThemes.getLightThemeData(context),
+      dark: AppThemes.getDarkThemeData(context),
+      initial: AdaptiveThemeMode.light,
+      builder: (theme, darkTheme) => MaterialApp.router(
+        routerConfig: AppRoute.router,
+        debugShowCheckedModeBanner: false,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        darkTheme: darkTheme,
+      ),
     );
   }
 }

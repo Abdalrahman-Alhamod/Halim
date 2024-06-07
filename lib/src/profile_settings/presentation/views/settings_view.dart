@@ -1,4 +1,4 @@
-
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -22,9 +22,6 @@ class SettingsView extends StatefulWidget {
 }
 
 class SettingsViewState extends State<SettingsView> {
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,13 +44,7 @@ class SettingsViewState extends State<SettingsView> {
             ),
             Text(
               LocaleKeys.HomePage_Home_NavBar_more.tr(),
-              style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
           ],
         ),
@@ -101,7 +92,11 @@ class SettingsViewState extends State<SettingsView> {
             ),
             FilterToggleButtonWithIcon(
               filterName: LocaleKeys.Settings_dark.tr(),
-              fun: (p0) {},
+              fun: (isDarkModeEnabled) {
+                isDarkModeEnabled
+                    ? AdaptiveTheme.of(context).setDark()
+                    : AdaptiveTheme.of(context).setLight();
+              },
               icon: Icons.remove_red_eye,
             ),
             /*SettingsWidget(
@@ -119,7 +114,11 @@ class SettingsViewState extends State<SettingsView> {
                     context: context, widget: EvaluationCoursesDialog());
               },
             ),
-            HalimWidget(name: 'Halim Team', onPressed: (){GoRouter.of(context).push(AppRoute.kDefinitionHalimView);}),
+            HalimWidget(
+                name: 'Halim Team',
+                onPressed: () {
+                  GoRouter.of(context).push(AppRoute.kDefinitionHalimView);
+                }),
             SettingsWidget(
               name: LocaleKeys.Settings_Logout_logout.tr(),
               icon: Icons.logout_rounded,

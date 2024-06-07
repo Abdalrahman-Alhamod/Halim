@@ -42,15 +42,11 @@ void logOutBottomSheet(BuildContext context) {
                 color: Colors.grey[300],
               ),
             ),
-           Padding(
+            Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text(
                 LocaleKeys.Settings_Logout_areYou.tr(),
                 style: TextStyle(
-                  color:MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
                   fontSize: 22,
                   fontWeight: FontWeight.w500,
                 ),
@@ -67,12 +63,10 @@ void logOutBottomSheet(BuildContext context) {
                   title: LocaleKeys.Settings_Logout_cancel.tr(),
                   width: MediaQuery.of(context).size.width * 0.40,
                   height: 45,
-                  kBackgroundcolor: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
+                  kBackgroundcolor: context.isDarkMode
                       ? AppColors.darkFlatButtonColor
                       : AppColors.textFieldColor,
-                  kTextcolor: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
+                  kTextcolor: context.isDarkMode
                       ? AppColors.lightFlatButtonColor
                       : AppColors.primaryColor,
                 ),

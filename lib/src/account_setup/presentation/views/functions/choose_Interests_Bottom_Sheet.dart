@@ -47,12 +47,8 @@ void chooseInterestsBottomSheet(BuildContext context) {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text(
-                 LocaleKeys.FillYourProfile_Interests_choose.tr(),
+                LocaleKeys.FillYourProfile_Interests_choose.tr(),
                 style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black87,
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
                 ),
@@ -67,10 +63,11 @@ void chooseInterestsBottomSheet(BuildContext context) {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
                 child: Wrap(
-                  spacing: 8.0, 
-                  runSpacing: 8.0, 
+                  spacing: 8.0,
+                  runSpacing: 8.0,
                   children:
                       Interests.map((Interest) => InterestsWidget(Interest))
                           .toList(),
@@ -87,17 +84,13 @@ void chooseInterestsBottomSheet(BuildContext context) {
                     onPressed: () {
                       GoRouter.of(context).push(AppRoute.kHome);
                     },
-                    title:  LocaleKeys.FillYourProfile_Interests_skip.tr(),
+                    title: LocaleKeys.FillYourProfile_Interests_skip.tr(),
                     width: MediaQuery.of(context).size.width * 0.40,
                     height: 45,
-                    kBackgroundcolor:
-                        MediaQuery.of(context).platformBrightness ==
-                                Brightness.dark
-                            ? AppColors.darkFlatButtonColor
-                            : Color.fromARGB(255, 113, 132, 204)
-                                  .withOpacity(0.25),
-                    kTextcolor: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
+                    kBackgroundcolor: context.isDarkMode
+                        ? AppColors.darkFlatButtonColor
+                        : Color.fromARGB(255, 113, 132, 204).withOpacity(0.25),
+                    kTextcolor: context.isDarkMode
                         ? AppColors.lightFlatButtonColor
                         : AppColors.primaryColor,
                   ),
@@ -105,7 +98,7 @@ void chooseInterestsBottomSheet(BuildContext context) {
                     onPressed: () {
                       GoRouter.of(context).push(AppRoute.kCreatePin);
                     },
-                    title:  LocaleKeys.FillYourProfile_Interests_continue.tr(),
+                    title: LocaleKeys.FillYourProfile_Interests_continue.tr(),
                     width: MediaQuery.of(context).size.width * 0.40,
                     height: 45,
                     kTextcolor: AppColors.lightFlatButtonColor,

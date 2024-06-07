@@ -40,7 +40,6 @@ class BiometricViewState extends State<BiometricView> {
             'Biometric Authentication',
             style: TextStyle(
               fontSize: 20,
-              fontFamily: 'Cairo',
               fontWeight: FontWeight.w500,
               color: context.isDarkMode ? Colors.white : Colors.black,
             ),
@@ -77,22 +76,10 @@ class BiometricViewState extends State<BiometricView> {
             if (_supportState)
               Text(
                 'This device is supported',
-                style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-                ),
               )
             else
               Text(
                 'This  device is not supported',
-                style: TextStyle(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-                ),
               ),
             const Spacer(
               flex: 2,
@@ -147,7 +134,7 @@ class BiometricViewState extends State<BiometricView> {
                       ? AppColors.darkFlatButtonColor
                       : const Color.fromARGB(255, 113, 132, 204)
                           .withOpacity(0.25),
-                  kTextcolor:context.isDarkMode
+                  kTextcolor: context.isDarkMode
                       ? AppColors.lightFlatButtonColor
                       : AppColors.primaryColor,
                 ),

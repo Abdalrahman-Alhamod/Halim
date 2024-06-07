@@ -15,10 +15,12 @@ class FilterToggleButtonWithIcon extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FilterToggleButtonWithIconState createState() => _FilterToggleButtonWithIconState();
+  _FilterToggleButtonWithIconState createState() =>
+      _FilterToggleButtonWithIconState();
 }
 
-class _FilterToggleButtonWithIconState extends State<FilterToggleButtonWithIcon> {
+class _FilterToggleButtonWithIconState
+    extends State<FilterToggleButtonWithIcon> {
   bool _isActive = false;
 
   void _onToggle(bool newValue) {
@@ -57,7 +59,7 @@ class _FilterToggleButtonWithIconState extends State<FilterToggleButtonWithIcon>
                 ),
                 Spacer(),
                 Switch(
-                  value: _isActive,
+                  value: context.isDarkMode,
                   onChanged: _onToggle,
                   activeColor: Colors.white,
                   activeTrackColor: Colors.blue,

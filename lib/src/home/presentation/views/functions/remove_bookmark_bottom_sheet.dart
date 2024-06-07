@@ -34,10 +34,6 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                   child: Text(
                     LocaleKeys.MyCourses_Bookmark_removeFromBookmark.tr(),
                     style: TextStyle(
-                      color: MediaQuery.of(context).platformBrightness ==
-                              Brightness.dark
-                          ? Colors.white
-                          : Colors.black87,
                       fontSize: 22,
                       fontWeight: FontWeight.w500,
                     ),
@@ -51,8 +47,8 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all( 16.0),
-                  child:  CardCourse(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CardCourse(
                     category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
                     evaluation: 4.8,
                     followers: 8.289,
@@ -71,16 +67,13 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                       onPressed: () {
                         context.pop();
                       },
-                      title:  LocaleKeys.MyCourses_Bookmark_cancel.tr(),
+                      title: LocaleKeys.MyCourses_Bookmark_cancel.tr(),
                       width: MediaQuery.of(context).size.width * 0.40,
                       height: 45,
-                      kBackgroundcolor:
-                          MediaQuery.of(context).platformBrightness ==
-                                  Brightness.dark
-                              ? AppColors.darkFlatButtonColor
-                              : AppColors.lightFlatButtonColor,
-                      kTextcolor: MediaQuery.of(context).platformBrightness ==
-                              Brightness.dark
+                      kBackgroundcolor: context.isDarkMode
+                          ? AppColors.darkFlatButtonColor
+                          : AppColors.lightFlatButtonColor,
+                      kTextcolor: context.isDarkMode
                           ? AppColors.lightFlatButtonColor
                           : AppColors.primaryColor,
                     ),
