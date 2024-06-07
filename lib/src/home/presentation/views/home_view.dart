@@ -43,10 +43,6 @@ class HomeView extends StatelessWidget {
                   Text(
                     LocaleKeys.HomePage_Home_topMentors.tr(),
                     style: TextStyle(
-                      color: MediaQuery.of(context).platformBrightness ==
-                              Brightness.dark
-                          ? Colors.white
-                          : Colors.black,
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
                     ),
@@ -97,10 +93,6 @@ class HomeView extends StatelessWidget {
                   Text(
                     LocaleKeys.HomePage_Home_mostPopularCourses.tr(),
                     style: TextStyle(
-                      color: MediaQuery.of(context).platformBrightness ==
-                              Brightness.dark
-                          ? Colors.white
-                          : Colors.black,
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
                     ),

@@ -24,13 +24,7 @@ class DefinitionHalimViewState extends State<DefinitionHalimView> {
         toolbarHeight: 70,
         title: Text(
           LocaleKeys.Settings_HalimTeam_definitionofHailm.tr(),
-          style: TextStyle(
-              color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w500),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
       ),
@@ -39,8 +33,7 @@ class DefinitionHalimViewState extends State<DefinitionHalimView> {
         child: Column(children: [
           IntroductoryWidget(
               title: LocaleKeys.Settings_HalimTeam_whatisHalim.tr(),
-              text:
-                  LocaleKeys.Settings_HalimTeam_whatis.tr()),
+              text: LocaleKeys.Settings_HalimTeam_whatis.tr()),
           IntroductoryWidget(
               title: 'Lifetime of Learning?',
               text:

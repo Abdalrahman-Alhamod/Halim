@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
+
 class TeacherAvatar extends StatelessWidget {
   final String imageUrl;
   final String name;
   final double rad;
-  const TeacherAvatar({super.key, 
-    required this.imageUrl,
-    required this.name,
-    this.rad=35
-  });
+  const TeacherAvatar(
+      {super.key, required this.imageUrl, required this.name, this.rad = 35});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Add your onTap functionality here
+        GoRouter.of(context).push(AppRoute.kMentorDetailsView);
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -22,7 +22,7 @@ class TeacherAvatar extends StatelessWidget {
           child: Column(
             children: [
               CircleAvatar(
-                radius:rad,
+                radius: rad,
                 backgroundImage: AssetImage(imageUrl),
               ),
               const SizedBox(height: 8),
@@ -30,9 +30,8 @@ class TeacherAvatar extends StatelessWidget {
                 name,
                 style: TextStyle(
                   fontSize: 12,
-  color: context.isDarkMode
-                ? Colors.white
-                : Colors.black,                  fontWeight: FontWeight.w500,
+                  color: context.isDarkMode ? Colors.white : Colors.black,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ],

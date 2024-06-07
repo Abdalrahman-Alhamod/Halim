@@ -126,10 +126,6 @@ class _CardCourseState extends State<CardCourse> {
                     AutoSizeText(
                       widget.name,
                       style: TextStyle(
-                        color: MediaQuery.of(context).platformBrightness ==
-                                Brightness.dark
-                            ? Colors.white
-                            : Colors.black87,
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                       ),
@@ -158,10 +154,6 @@ class _CardCourseState extends State<CardCourse> {
                         Text(
                           '  ${widget.evaluation}  | ',
                           style: TextStyle(
-                            color: MediaQuery.of(context).platformBrightness ==
-                                    Brightness.dark
-                                ? Colors.white
-                                : Colors.black,
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
                           ),
@@ -169,10 +161,6 @@ class _CardCourseState extends State<CardCourse> {
                         Text(
                           '${widget.followers} ${LocaleKeys.CourseDetails_students.tr()}',
                           style: TextStyle(
-                            color: MediaQuery.of(context).platformBrightness ==
-                                    Brightness.dark
-                                ? Colors.white
-                                : Colors.black,
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
                           ),

@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/themes/app_colors.dart';
+import 'package:halim/core/translations/app_locales.dart';
 import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
@@ -18,7 +19,7 @@ class LanguageListTile extends StatefulWidget {
 }
 
 class _LanguageListTileState extends State<LanguageListTile> {
-  String _selectedLanguage = 'English';
+  late String _selectedLanguage = context.locale.toString();
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +28,11 @@ class _LanguageListTileState extends State<LanguageListTile> {
       children: [
         Container(height: 5),
         Padding(
-          padding: const EdgeInsets.only(left: 30.0),
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Text(
             LocaleKeys.Settings_Language_mainLan.tr(),
             textAlign: TextAlign.start,
             style: TextStyle(
-              color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -45,12 +42,12 @@ class _LanguageListTileState extends State<LanguageListTile> {
         ListTile(
           title: Text('English'),
           leading: Radio<String>(
-            value: 'English',
+            value: 'en',
             groupValue: _selectedLanguage,
             onChanged: (String? value) {
               setState(() {
                 _selectedLanguage = value!;
-                // context.setLocale(Locale('en'));
+                context.setLocale(Locale(AppLocales.en));
               });
             },
           ),
@@ -58,12 +55,12 @@ class _LanguageListTileState extends State<LanguageListTile> {
         ListTile(
           title: Text('العربية'),
           leading: Radio<String>(
-            value: 'Arabic',
+            value: 'ar',
             groupValue: _selectedLanguage,
             onChanged: (String? value) {
               setState(() {
                 _selectedLanguage = value!;
-                // context.setLocale(Locale('ar'));
+                context.setLocale(Locale(AppLocales.ar));
               });
             },
           ),

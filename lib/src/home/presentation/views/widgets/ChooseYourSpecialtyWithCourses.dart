@@ -136,13 +136,7 @@ class ChooseYourSpecialtyWithCoursesState
             children: [
               Text(
                 '   ${LocaleKeys.HomePage_Home_section.tr()}',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
-                    fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               ),
               SizedBox(width: 4),
             ],

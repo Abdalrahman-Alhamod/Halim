@@ -1,4 +1,3 @@
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -17,7 +16,6 @@ class SecurityView extends StatefulWidget {
 }
 
 class SecurityViewState extends State<SecurityView> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,13 +25,7 @@ class SecurityViewState extends State<SecurityView> {
         toolbarHeight: 70,
         title: Text(
           LocaleKeys.Settings_Security_security.tr(),
-          style: TextStyle(
-              color: MediaQuery.of(context).platformBrightness ==
-                      Brightness.dark
-                  ? Colors.white
-                  : Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w500),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
       ),
@@ -42,7 +34,7 @@ class SecurityViewState extends State<SecurityView> {
         child: Column(
           children: [
             Container(height: 20),
-          SettingsWidget(
+            SettingsWidget(
               name: LocaleKeys.Settings_Security_changePass.tr(),
               icon: Icons.notifications_active,
               onPressed: () {

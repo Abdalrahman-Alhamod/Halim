@@ -1,4 +1,3 @@
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
@@ -15,28 +14,21 @@ class LanguageSettingsView extends StatefulWidget {
 }
 
 class LanguageSettingsViewState extends State<LanguageSettingsView> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
+          backgroundColor:
+              context.isDarkMode ? AppColors.darkColor : Colors.white,
+          toolbarHeight: 70,
+          title: Text(
+            LocaleKeys.Settings_Language_language.tr(),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          ),
+          elevation: 0,
+        ),
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        toolbarHeight: 70,
-        title: Text(
-          LocaleKeys.Settings_Language_language.tr(),
-          style: TextStyle(
-              color:
-                  MediaQuery.of(context).platformBrightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w500),
-        ),
-        elevation: 0,
-      ),
-      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
-      body: LanguageListTile()
-    );
+        body: LanguageListTile());
   }
 }

@@ -32,9 +32,6 @@ class BrowseSectionsCoursesState extends State<BrowseSectionsCourses> {
         title: Text(
           LocaleKeys.MyCourses_myCourses.tr(),
           style: TextStyle(
-            color: MediaQuery.of(context).platformBrightness == Brightness.dark
-                ? Colors.white
-                : Colors.black,
             fontSize: 20,
             fontWeight: FontWeight.w500,
           ),

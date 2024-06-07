@@ -96,10 +96,6 @@ class _EnterCodeBodyState extends State<EnterCodeBody> {
                   'Resend code in 55 s',
                   style: TextStyle(
                     fontSize: 16,
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
                   ),
                   textAlign: TextAlign.center,
                 ),

@@ -22,7 +22,7 @@ class NewPassBody extends StatefulWidget {
 }
 
 class _NewPassBodyState extends State<NewPassBody> {
- GlobalKey<FormState> formKey = GlobalKey();
+  GlobalKey<FormState> formKey = GlobalKey();
 
   TextEditingController passControllerOne = TextEditingController();
   TextEditingController passControllerTwo = TextEditingController();
@@ -39,76 +39,72 @@ class _NewPassBodyState extends State<NewPassBody> {
   @override
   Widget build(BuildContext context) {
     return Form(
-          key: formKey,
-          child: Column(
-            children: [
-              const Spacer(
-                flex: 1,
-              ),
-              Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset(AppImages.newPassword,
-                  height: 250, width:300, fit: BoxFit.fill),
-            ),
-              const Spacer(
-                flex: 2,
-              ),
-              Text('Create Your New Password',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.normal,
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
-                  )),
-              CustomTextField(
-                obscureText: true,
-                hintText: LocaleKeys.Auth_password.tr(),
-                onChanged: (value) {
-                  password = value;
-                },
-                keyboardType: TextInputType.text,
-                validator: _passwordValidator.call,
-                prefixIcon: Icons.lock,
-              ),
-              CustomTextField(
-                obscureText: true,
-                hintText: LocaleKeys.ForgotPassword_confirmPassword.tr(),
-                onChanged: (value) {
-                  password = value;
-                },
-                keyboardType: TextInputType.text,
-                validator: _passwordValidator.call,
-                prefixIcon: Icons.lock,
-              ),
-              RememberMeCheckBox(onChange: (value) {
-                rememberMe = value!;
-              }),
-              const Spacer(
-                flex: 1,
-              ),
-              CustomFlatButton(
-                onPressed: () {
-                 
-                  showCustomDialog(
-                      context: context,
-                      widget: AccontSucssesDialog(
-                        () {
-                          print('Loading complete!');
-                          GoRouter.of(context).push(AppRoute.kHome);
-                        },
-                      ));
-                },
-                title: 'Continue',
-                width: context.width * 0.94,
-                height: 60,
-                kTextcolor: AppColors.lightFlatButtonColor,
-              ),
-                         SizedBox(height: 20,)
-
-            ],
+      key: formKey,
+      child: Column(
+        children: [
+          const Spacer(
+            flex: 1,
           ),
-        );
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Image.asset(AppImages.newPassword,
+                height: 250, width: 300, fit: BoxFit.fill),
+          ),
+          const Spacer(
+            flex: 2,
+          ),
+          Text('Create Your New Password',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              )),
+          CustomTextField(
+            obscureText: true,
+            hintText: LocaleKeys.Auth_password.tr(),
+            onChanged: (value) {
+              password = value;
+            },
+            keyboardType: TextInputType.text,
+            validator: _passwordValidator.call,
+            prefixIcon: Icons.lock,
+          ),
+          CustomTextField(
+            obscureText: true,
+            hintText: LocaleKeys.ForgotPassword_confirmPassword.tr(),
+            onChanged: (value) {
+              password = value;
+            },
+            keyboardType: TextInputType.text,
+            validator: _passwordValidator.call,
+            prefixIcon: Icons.lock,
+          ),
+          RememberMeCheckBox(onChange: (value) {
+            rememberMe = value!;
+          }),
+          const Spacer(
+            flex: 1,
+          ),
+          CustomFlatButton(
+            onPressed: () {
+              showCustomDialog(
+                  context: context,
+                  widget: AccontSucssesDialog(
+                    () {
+                      print('Loading complete!');
+                      GoRouter.of(context).push(AppRoute.kHome);
+                    },
+                  ));
+            },
+            title: 'Continue',
+            width: context.width * 0.94,
+            height: 60,
+            kTextcolor: AppColors.lightFlatButtonColor,
+          ),
+          SizedBox(
+            height: 20,
+          )
+        ],
+      ),
+    );
   }
 }

@@ -21,19 +21,14 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:
-            context.isDarkMode
-                ? AppColors.darkColor
-                : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Row(
           children: [
             Text(
-                                   LocaleKeys.HomePage_Home_topMentors.tr(),
+              LocaleKeys.HomePage_Home_topMentors.tr(),
               style: TextStyle(
                 fontWeight: FontWeight.w500,
-                color:
-                    context.isDarkMode
-                        ? Colors.white
-                        : Colors.black,
+                color: context.isDarkMode ? Colors.white : Colors.black,
               ),
             ),
             const Spacer(
@@ -46,10 +41,6 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
                   GoRouter.of(context).push(AppRoute.kSearch);
                 },
                 icon: Icon(
-                  color: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
                   Icons.search,
                   size: 28,
                 ),
@@ -60,29 +51,38 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
         elevation: 0,
         toolbarHeight: 80,
         leading: IconButton(
-          color: context.isDarkMode
-              ? Colors.white
-              : Colors.black,
+          color: context.isDarkMode ? Colors.white : Colors.black,
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             GoRouter.of(context).push(AppRoute.kHome);
           },
         ),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
-      body:  Padding(
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
+      body: Padding(
         padding: const EdgeInsets.all(2.0),
         child: Column(
           children: [
-         
-            TeacherCard(imageUrl: AppImages.testAvatarAlaa ,name:'Alaa' ,specialization: 'Markting Analayzt',),
-            TeacherCard(  imageUrl: AppImages.testAvatarObada, name: 'Obada' ,specialization: 'Markting Analayzt',),
-            TeacherCard( imageUrl: AppImages.testAvatarAbd,
-                          name: 'Abd Alrahman' ,specialization: 'Markting Analayzt',),
-            TeacherCard(  imageUrl: AppImages.testAvatarYassin, name: 'Yaseen',specialization: 'Markting Analayzt',),
+            TeacherCard(
+              imageUrl: AppImages.testAvatarAlaa,
+              name: 'Alaa',
+              specialization: 'Markting Analayzt',
+            ),
+            TeacherCard(
+              imageUrl: AppImages.testAvatarObada,
+              name: 'Obada',
+              specialization: 'Markting Analayzt',
+            ),
+            TeacherCard(
+              imageUrl: AppImages.testAvatarAbd,
+              name: 'Abd Alrahman',
+              specialization: 'Markting Analayzt',
+            ),
+            TeacherCard(
+              imageUrl: AppImages.testAvatarYassin,
+              name: 'Yaseen',
+              specialization: 'Markting Analayzt',
+            ),
           ],
         ),
       ),

@@ -1,4 +1,3 @@
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
@@ -11,11 +10,11 @@ class NotificationSettingsView extends StatefulWidget {
   const NotificationSettingsView({super.key});
 
   @override
-  NotificationSettingsViewState createState() => NotificationSettingsViewState();
+  NotificationSettingsViewState createState() =>
+      NotificationSettingsViewState();
 }
 
 class NotificationSettingsViewState extends State<NotificationSettingsView> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,13 +24,7 @@ class NotificationSettingsViewState extends State<NotificationSettingsView> {
         toolbarHeight: 70,
         title: Text(
           LocaleKeys.Settings_Notifications_notifications.tr(),
-          style: TextStyle(
-              color: MediaQuery.of(context).platformBrightness ==
-                      Brightness.dark
-                  ? Colors.white
-                  : Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w500),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
       ),
@@ -40,8 +33,15 @@ class NotificationSettingsViewState extends State<NotificationSettingsView> {
         child: Column(
           children: [
             Container(height: 20),
-            FilterToggleButton(filterName: LocaleKeys.Settings_Notifications_generalNotifications.tr(),fun: (p0){},),
-            FilterToggleButton(filterName: LocaleKeys.Settings_Notifications_sound.tr(),fun: (p0){},),
+            FilterToggleButton(
+              filterName:
+                  LocaleKeys.Settings_Notifications_generalNotifications.tr(),
+              fun: (p0) {},
+            ),
+            FilterToggleButton(
+              filterName: LocaleKeys.Settings_Notifications_sound.tr(),
+              fun: (p0) {},
+            ),
             //FilterToggleButton(filterName: 'Vibrate',fun: (p0){},),
           ],
         ),

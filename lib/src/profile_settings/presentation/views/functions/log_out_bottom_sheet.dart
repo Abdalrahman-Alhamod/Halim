@@ -42,15 +42,11 @@ void logOutBottomSheet(BuildContext context) {
                 color: Colors.grey[300],
               ),
             ),
-           Padding(
+            Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text(
                 LocaleKeys.Settings_Logout_areYou.tr(),
                 style: TextStyle(
-                  color:MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
                   fontSize: 22,
                   fontWeight: FontWeight.w500,
                 ),

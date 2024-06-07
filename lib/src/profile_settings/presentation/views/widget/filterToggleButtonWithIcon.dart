@@ -1,3 +1,4 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/utils/context_extensions.dart';
@@ -15,10 +16,12 @@ class FilterToggleButtonWithIcon extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FilterToggleButtonWithIconState createState() => _FilterToggleButtonWithIconState();
+  _FilterToggleButtonWithIconState createState() =>
+      _FilterToggleButtonWithIconState();
 }
 
-class _FilterToggleButtonWithIconState extends State<FilterToggleButtonWithIcon> {
+class _FilterToggleButtonWithIconState
+    extends State<FilterToggleButtonWithIcon> {
   bool _isActive = false;
 
   void _onToggle(bool newValue) {
@@ -57,7 +60,8 @@ class _FilterToggleButtonWithIconState extends State<FilterToggleButtonWithIcon>
                 ),
                 Spacer(),
                 Switch(
-                  value: _isActive,
+                  value:
+                      AdaptiveTheme.of(context).brightness == Brightness.dark,
                   onChanged: _onToggle,
                   activeColor: Colors.white,
                   activeTrackColor: Colors.blue,
