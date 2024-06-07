@@ -44,23 +44,6 @@ class _ConfirmEmailBodyState extends State<_ConfirmEmailBody> {
               const Spacer(
                 flex: 2,
               ),
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image.asset(
-                    AppImages.iconPublic,
-                    width: context.width * .7,
-                  ),
-                  Icon(
-                    Icons.mark_email_unread,
-                    size: 100,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-              const Spacer(
-                flex: 3,
-              ),
               Text(
                 LocaleKeys.Auth_enterYourEmailConfimCode.tr(),
                 style: TextStyle(
@@ -71,7 +54,7 @@ class _ConfirmEmailBodyState extends State<_ConfirmEmailBody> {
                 textAlign: TextAlign.center,
               ),
               const Spacer(
-                flex: 4,
+                flex: 2,
               ),
               Center(
                 child: Row(

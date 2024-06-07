@@ -10,7 +10,6 @@ import 'package:halim/src/forgot_password/presentation/views/widget/accont_sucss
 
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
-import '../../../../core/assets/app_images.dart';
 import '../../../course_details/presentation/views/widgets/enroll_course_view/widgets/pin_text_field.dart';
 
 class CreatePinBody extends StatefulWidget {
@@ -58,23 +57,6 @@ class _CreatePinBodyState extends State<CreatePinBody> {
               const Spacer(
                 flex: 2,
               ),
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image.asset(
-                    AppImages.iconPublic,
-                    width: context.width * .7,
-                  ),
-                  Icon(
-                    Icons.password,
-                    size: 100,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-              const Spacer(
-                flex: 4,
-              ),
               Text(LocaleKeys.CreatePin_add_a_pin.tr(),
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -83,7 +65,7 @@ class _CreatePinBodyState extends State<CreatePinBody> {
                     color: context.isDarkMode ? Colors.white : Colors.black,
                   )),
               const Spacer(
-                flex: 4,
+                flex: 2,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

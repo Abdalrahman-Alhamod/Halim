@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/constants/app_sizes.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
-import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
@@ -53,23 +52,6 @@ class _EnterCodeBodyState extends State<EnterCodeBody> {
             children: [
               const Spacer(
                 flex: 2,
-              ),
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image.asset(
-                    AppImages.iconPublic,
-                    width: context.width * .7,
-                  ),
-                  Icon(
-                    Icons.mark_email_unread,
-                    size: 100,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-              const Spacer(
-                flex: 4,
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
