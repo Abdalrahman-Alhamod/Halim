@@ -95,7 +95,7 @@ class _EnterCodeBodyState extends State<EnterCodeBody> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  '${LocaleKeys.ForgotPassword_resend.tr()} 55',
+                  '${LocaleKeys.ForgotPassword_resend.tr()} 55 ${LocaleKeys.ForgotPassword_second.tr()}',
                   style: TextStyle(
                     fontSize: 16,
                   ),

@@ -196,7 +196,8 @@ class CodegenLoader extends AssetLoader{
     "createNew": "قم بإنشاء كلمة المرور الجديدة:",
     "change": "تغيير كلمة المرور",
     "enter": "أدخل الرمز",
-    "verify": "تأكيد"
+    "verify": "تأكيد",
+    "second": "ثانية"
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",
@@ -531,7 +532,8 @@ static const Map<String,dynamic> en = {
     "createNew": "Create your new password:",
     "change": "Change Password",
     "enter": "Enter Code",
-    "verify": "Verify"
+    "verify": "Verify",
+    "second": "second"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",

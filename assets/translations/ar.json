@@ -180,7 +180,8 @@
     "createNew": "قم بإنشاء كلمة المرور الجديدة:",
     "change": "تغيير كلمة المرور",
     "enter": "أدخل الرمز",
-    "verify": "تأكيد"
+    "verify": "تأكيد",
+    "second": "ثانية"
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",

@@ -35,7 +35,7 @@ class SecurityViewState extends State<SecurityView> {
           children: [
             Container(height: 20),
             SettingsWidget(
-              name: LocaleKeys.Settings_Security_changePass.tr(),
+              name: LocaleKeys.ForgotPassword_change.tr(),
               icon: Icons.notifications_active,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kSendCode);

@@ -180,7 +180,8 @@
     "createNew": "Create your new password:",
     "change": "Change Password",
     "enter": "Enter Code",
-    "verify": "Verify"
+    "verify": "Verify",
+    "second": "second"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
