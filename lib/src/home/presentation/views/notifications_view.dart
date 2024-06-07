@@ -67,10 +67,7 @@ class NotificationsViewState extends State<NotificationsView> {
                 child: Text(
                   LocaleKeys.HomePage_NotificationsPage_today.tr(),
                   style: TextStyle(
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
+                   
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -101,10 +98,7 @@ class NotificationsViewState extends State<NotificationsView> {
                 child: Text(
                   LocaleKeys.HomePage_NotificationsPage_yesterday.tr(),
                   style: TextStyle(
-                    color: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
+                  
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),

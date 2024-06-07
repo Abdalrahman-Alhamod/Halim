@@ -237,6 +237,8 @@ abstract class  LocaleKeys {
   static const Settings_HalimTeam_definitionofHailm = 'Settings.HalimTeam.definitionofHailm';
   static const Settings_HalimTeam_whatis = 'Settings.HalimTeam.whatis';
   static const Settings_HalimTeam_whatisHalim = 'Settings.HalimTeam.whatisHalim';
+  static const Settings_HalimTeam_life = 'Settings.HalimTeam.life';
+  static const Settings_HalimTeam_l2ife = 'Settings.HalimTeam.l2ife';
   static const Settings_HalimTeam = 'Settings.HalimTeam';
   static const Settings_Language_language = 'Settings.Language.language';
   static const Settings_Language_mainLan = 'Settings.Language.mainLan';

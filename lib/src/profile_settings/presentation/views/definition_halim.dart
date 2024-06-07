@@ -34,14 +34,11 @@ class DefinitionHalimViewState extends State<DefinitionHalimView> {
           IntroductoryWidget(
               title: LocaleKeys.Settings_HalimTeam_whatisHalim.tr(),
               text: LocaleKeys.Settings_HalimTeam_whatis.tr()),
+         
           IntroductoryWidget(
-              title: 'Lifetime of Learning?',
+              title:  LocaleKeys.Settings_HalimTeam_life.tr(),
               text:
-                  'Halim is committed to empowering individuals to achieve their lifelong learning goals. Our platform continuously updates its course offerings and expands its curriculum to stay at the forefront of knowledge and innovation. With Halim, you can confidently navigate the ever-changing landscape of education and stay ahead of the curve in your chosen field.'),
-          IntroductoryWidget(
-              title: 'Is Halim free to use?',
-              text:
-                  'Halim is more than just an online education platform; it\'s a vibrant community of learners. Our platform facilitates interaction among students, allowing them to connect, collaborate, and support each other\'s learning journeys. You can participate in forums, ask questions, and engage in discussions with fellow learners and experts, fostering a collaborative and supportive learning environment.'),
+                   LocaleKeys.Settings_HalimTeam_l2ife.tr()),
         ]),
       ),
     );
