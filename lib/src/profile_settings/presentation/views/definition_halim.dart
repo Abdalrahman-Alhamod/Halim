@@ -25,6 +25,7 @@ class DefinitionHalimViewState extends State<DefinitionHalimView> {
         title: Text(
           LocaleKeys.Settings_HalimTeam_definitionofHailm.tr(),
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
       ),
@@ -34,11 +35,9 @@ class DefinitionHalimViewState extends State<DefinitionHalimView> {
           IntroductoryWidget(
               title: LocaleKeys.Settings_HalimTeam_whatisHalim.tr(),
               text: LocaleKeys.Settings_HalimTeam_whatis.tr()),
-         
           IntroductoryWidget(
-              title:  LocaleKeys.Settings_HalimTeam_life.tr(),
-              text:
-                   LocaleKeys.Settings_HalimTeam_l2ife.tr()),
+              title: LocaleKeys.Settings_HalimTeam_life.tr(),
+              text: LocaleKeys.Settings_HalimTeam_l2ife.tr()),
         ]),
       ),
     );

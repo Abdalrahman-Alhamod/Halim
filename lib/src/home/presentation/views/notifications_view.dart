@@ -23,10 +23,12 @@ class NotificationsViewState extends State<NotificationsView> {
       appBar: AppBar(
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
+            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Row(
           children: [
             Text(
               LocaleKeys.HomePage_NotificationsPage_notifications.tr(),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
             const Spacer(
@@ -35,6 +37,7 @@ class NotificationsViewState extends State<NotificationsView> {
             Icon(
               Icons.notifications_active_outlined,
               size: 28,
+              color: context.isDarkMode ? Colors.white : Colors.black,
               color: context.isDarkMode ? Colors.white : Colors.black,
             )
           ],
@@ -51,10 +54,7 @@ class NotificationsViewState extends State<NotificationsView> {
           },
         ),
       ),
-      backgroundColor:
-          context.isDarkMode
-              ? AppColors.darkColor
-              : Colors.white,
+      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -67,28 +67,29 @@ class NotificationsViewState extends State<NotificationsView> {
                 child: Text(
                   LocaleKeys.HomePage_NotificationsPage_today.tr(),
                   style: TextStyle(
-                   
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ]),
-             NotificationsCard(
+            NotificationsCard(
               icon: Icons.payments,
               imageUrl: AppImages.iconPublic,
               title: LocaleKeys.HomePage_NotificationsPage_widgets_todayIs.tr(),
-              description:  LocaleKeys.HomePage_NotificationsPage_widgets_t2odyIs.tr(),
+              description:
+                  LocaleKeys.HomePage_NotificationsPage_widgets_t2odyIs.tr(),
             ),
-             NotificationsCard(
+            NotificationsCard(
               icon: Icons.price_change,
-                        textToCopy: 'afogjojfhmgfmhposkhpos[gjhsgjhpojsghj5',
-
+              textToCopy: 'afogjojfhmgfmhposkhpos[gjhsgjhpojsghj5',
               imageUrl: AppImages.accountDone,
-              title:  LocaleKeys.HomePage_NotificationsPage_widgets_discount.tr(),
-              description:  LocaleKeys.HomePage_NotificationsPage_widgets_d2iscount.tr(),
+              title:
+                  LocaleKeys.HomePage_NotificationsPage_widgets_discount.tr(),
+              description:
+                  LocaleKeys.HomePage_NotificationsPage_widgets_d2iscount.tr(),
               picColor: Colors.amber,
-            ), 
+            ),
             Row(mainAxisAlignment: MainAxisAlignment.start, children: [
               const SizedBox(
                 width: 10,
@@ -98,21 +99,20 @@ class NotificationsViewState extends State<NotificationsView> {
                 child: Text(
                   LocaleKeys.HomePage_NotificationsPage_yesterday.tr(),
                   style: TextStyle(
-                  
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ]),
-             NotificationsCard(
+            NotificationsCard(
               icon: Icons.payment,
               picColor: Colors.pink,
               imageUrl: AppImages.iconPublic,
-              title:  LocaleKeys.HomePage_NotificationsPage_widgets_payment.tr(),
-              description:  LocaleKeys.HomePage_NotificationsPage_widgets_p2ayment.tr(),
+              title: LocaleKeys.HomePage_NotificationsPage_widgets_payment.tr(),
+              description:
+                  LocaleKeys.HomePage_NotificationsPage_widgets_p2ayment.tr(),
             ),
-            
           ],
         ),
       ),

@@ -50,7 +50,7 @@ class _SendCodeviewState extends State<SendCodeview> {
               child: Image.asset(AppImages.forgotPassword,
                   height: 250, width: 250, fit: BoxFit.fill),
             ),
-
+            
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
@@ -80,7 +80,6 @@ class _SendCodeviewState extends State<SendCodeview> {
                 kTextcolor: AppColors.lightFlatButtonColor,
               ),
             ),
-            
           ],
         ),
       ),
