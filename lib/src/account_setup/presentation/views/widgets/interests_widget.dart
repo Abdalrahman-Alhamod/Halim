@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -32,8 +33,7 @@ class InterestsWidgetState extends State<InterestsWidget> {
             decoration: BoxDecoration(
               color: isSelected
                   ? AppColors.primaryColor
-                  : MediaQuery.of(context).platformBrightness ==
-                          Brightness.light
+                  : !context.isDarkMode
                       ? Colors.white
                       : AppColors.darkFlatButtonColor,
               borderRadius: BorderRadius.circular(15.0),

@@ -87,13 +87,10 @@ void chooseInterestsBottomSheet(BuildContext context) {
                     title: LocaleKeys.FillYourProfile_Interests_skip.tr(),
                     width: MediaQuery.of(context).size.width * 0.40,
                     height: 45,
-                    kBackgroundcolor: MediaQuery.of(context)
-                                .platformBrightness ==
-                            Brightness.dark
+                    kBackgroundcolor: context.isDarkMode
                         ? AppColors.darkFlatButtonColor
                         : Color.fromARGB(255, 113, 132, 204).withOpacity(0.25),
-                    kTextcolor: MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark
+                    kTextcolor: context.isDarkMode
                         ? AppColors.lightFlatButtonColor
                         : AppColors.primaryColor,
                   ),

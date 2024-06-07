@@ -63,12 +63,10 @@ void logOutBottomSheet(BuildContext context) {
                   title: LocaleKeys.Settings_Logout_cancel.tr(),
                   width: MediaQuery.of(context).size.width * 0.40,
                   height: 45,
-                  kBackgroundcolor: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
+                  kBackgroundcolor: context.isDarkMode
                       ? AppColors.darkFlatButtonColor
                       : AppColors.textFieldColor,
-                  kTextcolor: MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark
+                  kTextcolor: context.isDarkMode
                       ? AppColors.lightFlatButtonColor
                       : AppColors.primaryColor,
                 ),

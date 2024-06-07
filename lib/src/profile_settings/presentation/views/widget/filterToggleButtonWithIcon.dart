@@ -1,4 +1,3 @@
-import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/utils/context_extensions.dart';
@@ -60,8 +59,7 @@ class _FilterToggleButtonWithIconState
                 ),
                 Spacer(),
                 Switch(
-                  value:
-                      AdaptiveTheme.of(context).brightness == Brightness.dark,
+                  value: context.isDarkMode,
                   onChanged: _onToggle,
                   activeColor: Colors.white,
                   activeTrackColor: Colors.blue,

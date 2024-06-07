@@ -70,13 +70,10 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                       title: LocaleKeys.MyCourses_Bookmark_cancel.tr(),
                       width: MediaQuery.of(context).size.width * 0.40,
                       height: 45,
-                      kBackgroundcolor:
-                          MediaQuery.of(context).platformBrightness ==
-                                  Brightness.dark
-                              ? AppColors.darkFlatButtonColor
-                              : AppColors.lightFlatButtonColor,
-                      kTextcolor: MediaQuery.of(context).platformBrightness ==
-                              Brightness.dark
+                      kBackgroundcolor: context.isDarkMode
+                          ? AppColors.darkFlatButtonColor
+                          : AppColors.lightFlatButtonColor,
+                      kTextcolor: context.isDarkMode
                           ? AppColors.lightFlatButtonColor
                           : AppColors.primaryColor,
                     ),

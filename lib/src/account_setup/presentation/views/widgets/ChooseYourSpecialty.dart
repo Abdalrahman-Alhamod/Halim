@@ -13,7 +13,8 @@ class ChooseYourSpecialtyWithRegister extends StatefulWidget {
       ChooseYourSpecialtyWithRegisterState();
 }
 
-class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWithRegister> {
+class ChooseYourSpecialtyWithRegisterState
+    extends State<ChooseYourSpecialtyWithRegister> {
   TextEditingController controller = TextEditingController();
   bool _isFocused = false;
   late FocusNode _focusNode;
@@ -34,8 +35,7 @@ class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWith
     'Undergraduate level - Information Engineering',
     'Undergraduate - Mechanical Engineering',
     'Undergraduate - Architecture',
-    
-    ];
+  ];
   List<String> filteredOptions = [];
 
   @override
@@ -69,7 +69,8 @@ class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWith
                 children: [
                   TextField(
                     decoration: InputDecoration(
-                      hintText: LocaleKeys.FillYourProfile_Specialty_search.tr(),
+                      hintText:
+                          LocaleKeys.FillYourProfile_Specialty_search.tr(),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
@@ -126,7 +127,7 @@ class ChooseYourSpecialtyWithRegisterState extends State<ChooseYourSpecialtyWith
           contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(
             fontWeight: FontWeight.w600,
-            color: Theme.of(context).brightness == Brightness.dark
+            color: context.isDarkMode
                 ? Colors.grey.shade500
                 : Colors.grey.shade700,
           ),

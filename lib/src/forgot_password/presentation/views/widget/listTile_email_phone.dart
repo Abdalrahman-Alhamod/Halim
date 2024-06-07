@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/themes/app_colors.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 class ListTileEmailPhone extends StatefulWidget {
   const ListTileEmailPhone();
@@ -36,10 +37,7 @@ class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
             title: Text(
               'via SMS:',
               style: TextStyle(
-                color:
-                    MediaQuery.of(context).platformBrightness == Brightness.dark
-                        ? Colors.grey[400]
-                        : Colors.grey,
+                color: context.isDarkMode ? Colors.grey[400] : Colors.grey,
                 fontSize: 14,
                 fontWeight: FontWeight.normal,
               ),
@@ -89,10 +87,7 @@ class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
             title: Text(
               'via Email:',
               style: TextStyle(
-                color:
-                    MediaQuery.of(context).platformBrightness == Brightness.dark
-                        ? Colors.grey[400]
-                        : Colors.grey,
+                color: context.isDarkMode ? Colors.grey[400] : Colors.grey,
                 fontSize: 14,
                 fontWeight: FontWeight.normal,
               ),
