@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/constants/app_sizes.dart';
 import 'package:halim/core/functions/show_custom_dialog.dart';
 import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/utils/app_route.dart';
@@ -49,80 +50,83 @@ class _CreatePinBodyState extends State<CreatePinBody> {
     return SingleChildScrollView(
       child: SizedBox(
         height: context.height - 100,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Spacer(
-              flex: 2,
-            ),
-            Stack(
-              alignment: Alignment.center,
-              children: [
-                Image.asset(
-                  AppImages.iconPublic,
-                  width: context.width * .7,
-                ),
-                Icon(
-                  Icons.password,
-                  size: 100,
-                  color: Colors.white,
-                ),
-              ],
-            ),
-            const Spacer(
-              flex: 4,
-            ),
-            Text(LocaleKeys.CreatePin_add_a_pin.tr(),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.normal,
-                  color: context.isDarkMode ? Colors.white : Colors.black,
-                )),
-            const Spacer(
-              flex: 4,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(4, (index) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: SizedBox.square(
-                    dimension: 60,
-                    child: PinTextField(
-                      onChanged: (value) {
-                        _handlePinChange(index, value);
-                      },
-                      controller: _pinControllers[index],
-                      obsecureText: true,
-                    ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: AppSizes.pad16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Spacer(
+                flex: 2,
+              ),
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.asset(
+                    AppImages.iconPublic,
+                    width: context.width * .7,
                   ),
-                );
-              }),
-            ),
-            const Spacer(
-              flex: 8,
-            ),
-            CustomFlatButton(
-              onPressed: () {
-                showCustomDialog(
-                    context: context,
-                    widget: AccontSucssesDialog(
-                      () {
-                        GoRouter.of(context).push(AppRoute.kHome);
-                      },
-                    ));
-              },
-              title: LocaleKeys.FillYourProfile_continue.tr(),
-              width: MediaQuery.of(context).size.width * 0.90,
-              height: 60,
-              kTextcolor: AppColors.lightFlatButtonColor,
-              kBackgroundcolor: AppColors.primaryColor,
-            ),
-            const Spacer(
-              flex: 1,
-            )
-          ],
+                  Icon(
+                    Icons.password,
+                    size: 100,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
+              const Spacer(
+                flex: 4,
+              ),
+              Text(LocaleKeys.CreatePin_add_a_pin.tr(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                    color: context.isDarkMode ? Colors.white : Colors.black,
+                  )),
+              const Spacer(
+                flex: 4,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(4, (index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: SizedBox.square(
+                      dimension: 60,
+                      child: PinTextField(
+                        onChanged: (value) {
+                          _handlePinChange(index, value);
+                        },
+                        controller: _pinControllers[index],
+                        obsecureText: true,
+                      ),
+                    ),
+                  );
+                }),
+              ),
+              const Spacer(
+                flex: 8,
+              ),
+              CustomFlatButton(
+                onPressed: () {
+                  showCustomDialog(
+                      context: context,
+                      widget: AccontSucssesDialog(
+                        () {
+                          GoRouter.of(context).push(AppRoute.kHome);
+                        },
+                      ));
+                },
+                title: LocaleKeys.FillYourProfile_continue.tr(),
+                width: MediaQuery.of(context).size.width * 0.90,
+                height: 60,
+                kTextcolor: AppColors.lightFlatButtonColor,
+                kBackgroundcolor: AppColors.primaryColor,
+              ),
+              const Spacer(
+                flex: 1,
+              )
+            ],
+          ),
         ),
       ),
     );
