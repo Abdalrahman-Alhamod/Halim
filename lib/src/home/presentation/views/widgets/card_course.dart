@@ -62,7 +62,7 @@ class _CardCourseState extends State<CardCourse> {
                 width: 110,
                 height: 110,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(24),
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(widget.imageUrl),
