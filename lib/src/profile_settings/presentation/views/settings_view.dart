@@ -70,7 +70,7 @@ class SettingsViewState extends State<SettingsView> {
               },
             ),
             SettingsWidget(
-              name: LocaleKeys.Settings_Security_security.tr(),
+              name: LocaleKeys.ForgotPassword_change.tr(),
               icon: Icons.security,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kSecurityView);

@@ -177,7 +177,10 @@
     "viaEmail": "via Email:",
     "codeHas": "Code has been sent to",
     "resend": "Resend code in",
-    "createNew": "Create your new password"
+    "createNew": "Create your new password:",
+    "change": "Change Password",
+    "enter": "Enter Code",
+    "verify": "Verify"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",

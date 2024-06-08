@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/forgot_password/presentation/views/enter_code_body.dart';
 
 import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 
 class EnterCodeView extends StatefulWidget {
   const EnterCodeView({super.key});
@@ -19,7 +21,7 @@ class _EnterCodeViewState extends State<EnterCodeView> {
         appBar: AppBar(
           backgroundColor:
               context.isDarkMode ? AppColors.darkColor : Colors.white,
-          title: Text('Enter Code',
+          title: Text(LocaleKeys.ForgotPassword_enter.tr(),
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,

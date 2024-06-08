@@ -193,7 +193,10 @@ class CodegenLoader extends AssetLoader{
     "viaEmail": "عبر البريد الإلكتروني: ",
     "codeHas": "تم إرسال الكود إلى",
     "resend": "سيتم إعادة الإرسال خلال",
-    "createNew": "قم بإنشاء كلمة المرور الجديدة الخاصة بك"
+    "createNew": "قم بإنشاء كلمة المرور الجديدة:",
+    "change": "تغيير كلمة المرور",
+    "enter": "أدخل الرمز",
+    "verify": "تأكيد"
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",
@@ -517,7 +520,10 @@ static const Map<String,dynamic> en = {
     "viaEmail": "via Email:",
     "codeHas": "Code has been sent to",
     "resend": "Resend code in",
-    "createNew": "Create your new password"
+    "createNew": "Create your new password:",
+    "change": "Change Password",
+    "enter": "Enter Code",
+    "verify": "Verify"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",

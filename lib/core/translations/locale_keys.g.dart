@@ -160,6 +160,9 @@ abstract class  LocaleKeys {
   static const ForgotPassword_codeHas = 'ForgotPassword.codeHas';
   static const ForgotPassword_resend = 'ForgotPassword.resend';
   static const ForgotPassword_createNew = 'ForgotPassword.createNew';
+  static const ForgotPassword_change = 'ForgotPassword.change';
+  static const ForgotPassword_enter = 'ForgotPassword.enter';
+  static const ForgotPassword_verify = 'ForgotPassword.verify';
   static const ForgotPassword = 'ForgotPassword';
   static const FillYourProfile_fillYourProfile = 'FillYourProfile.fillYourProfile';
   static const FillYourProfile_fullName = 'FillYourProfile.fullName';
