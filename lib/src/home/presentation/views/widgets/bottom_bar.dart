@@ -67,9 +67,6 @@ class BottomBarState extends State<BottomBar> {
             },
           );
         },
-
-
-       
         items: [
           SalomonBottomBarItem(
             icon: const Icon(Icons.home_filled),
@@ -78,17 +75,17 @@ class BottomBarState extends State<BottomBar> {
           ),
           SalomonBottomBarItem(
             icon: const Icon(Icons.video_collection),
-            title:Text(LocaleKeys.HomePage_Home_NavBar_myCourses.tr()),
+            title: Text(LocaleKeys.HomePage_Home_NavBar_myCourses.tr()),
             selectedColor: AppColors.primaryColor,
           ),
           SalomonBottomBarItem(
-            icon: const Icon(Icons.power_input_sharp),
+            icon: const Icon(Icons.military_tech),
             title: Text(LocaleKeys.HomePage_Home_NavBar_myPoints.tr()),
             selectedColor: AppColors.primaryColor,
           ),
           SalomonBottomBarItem(
             icon: const Icon(Icons.settings),
-            title:Text(LocaleKeys.HomePage_Home_NavBar_more.tr()),
+            title: Text(LocaleKeys.HomePage_Home_NavBar_more.tr()),
             selectedColor: AppColors.primaryColor,
           ),
         ],

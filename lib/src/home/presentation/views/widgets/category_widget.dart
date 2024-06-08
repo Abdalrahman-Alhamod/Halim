@@ -17,7 +17,6 @@ class CategoryWidgetState extends State<CategoryWidget> {
 
   @override
   Widget build(BuildContext context) {
-    print(context.isDarkMode);
     return InkWell(
       borderRadius: BorderRadius.circular(20),
       onTap: () {

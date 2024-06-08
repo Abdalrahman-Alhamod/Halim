@@ -27,6 +27,7 @@ class RegisterBody extends StatelessWidget {
             Text(
               LocaleKeys.Auth_createYourAccount.tr(),
               style: AppTextStyles.extraLargeTitle,
+              
             ),
             const SizedBox(
               height: 40,
@@ -38,11 +39,11 @@ class RegisterBody extends StatelessWidget {
               },
             ),
             const SizedBox(
-              height: 70,
+              height: 50,
             ),
             const OrContinueWithButtons(),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             const AlreadyHaveAnAccountTextButton(),
             const SizedBox(

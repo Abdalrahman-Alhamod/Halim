@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/core/widgets/custome_flat_button.dart';
 import 'package:halim/src/account_setup/presentation/views/fill_profile_body.dart';
@@ -35,20 +36,22 @@ class _FillProfilViewState extends State<FillProfilView> {
               Icons.arrow_back,
               color: context.isDarkMode ? Colors.white : Colors.black,
             ),
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
           ),
         ),
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        body: SingleChildScrollView(child: Column(
+        body: SingleChildScrollView(
+            child: Column(
           children: [
             FillProfileBody(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: CustomFlatButton(
                 onPressed: () {
-                 chooseInterestsBottomSheet(context);
-              
+                  chooseInterestsBottomSheet(context);
                 },
                 title: LocaleKeys.FillYourProfile_continue.tr(),
                 width: MediaQuery.of(context).size.width * 0.94,

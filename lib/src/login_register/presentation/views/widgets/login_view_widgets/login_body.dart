@@ -29,7 +29,7 @@ class LoginBody extends StatelessWidget {
               style: AppTextStyles.extraLargeTitle,
             ),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             AuthForm(
               buttonTitle: LocaleKeys.Auth_signIn.tr(),
@@ -38,7 +38,7 @@ class LoginBody extends StatelessWidget {
               },
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             TextButton(
               onPressed: () {
@@ -51,7 +51,7 @@ class LoginBody extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 50,
+              height: 20,
             ),
             const OrContinueWithButtons(),
             const SizedBox(

@@ -62,9 +62,6 @@ class _AuthFormState extends State<AuthForm> {
               validator: _emailValidator.call,
               prefixIcon: Icons.email,
             ),
-            const SizedBox(
-              height: 24,
-            ),
             CustomTextField(
               obscureText: true,
               hintText: LocaleKeys.Auth_password.tr(),
@@ -83,7 +80,7 @@ class _AuthFormState extends State<AuthForm> {
               prefixIcon: Icons.lock,
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             RememberMeCheckBox(
               onChange: (value) {
