@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/forgot_password/presentation/views/widget/listTile_email_phone.dart';
 
@@ -22,7 +24,7 @@ class _SendCodeviewState extends State<SendCodeview> {
       appBar: AppBar(
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        title: Text('Change Password',
+        title: Text(LocaleKeys.ForgotPassword_change.tr(),
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.normal,
@@ -48,10 +50,11 @@ class _SendCodeviewState extends State<SendCodeview> {
               child: Image.asset(AppImages.forgotPassword,
                   height: 250, width: 250, fit: BoxFit.fill),
             ),
+            
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                'Select which contact details should we use to rest your password',
+                LocaleKeys.ForgotPassword_select.tr(),
                 style: TextStyle(
                   fontSize: 16,
                 ),
@@ -59,21 +62,24 @@ class _SendCodeviewState extends State<SendCodeview> {
               ),
             ),
             const Spacer(
-              flex: 1,
+              flex: 2,
             ),
             ListTileEmailPhone(),
+            const Spacer(
+              flex: 1,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: CustomFlatButton(
                 onPressed: () {
                   GoRouter.of(context).push(AppRoute.kEnterCode);
                 },
-                title: 'Continue',
+                title: LocaleKeys.FillYourProfile_continue.tr(),
                 width: MediaQuery.of(context).size.width * 0.94,
                 height: 60,
                 kTextcolor: AppColors.lightFlatButtonColor,
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -3,7 +3,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/functions/show_custom_dialog.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/profile_settings/presentation/views/functions/log_out_bottom_sheet.dart';
@@ -11,7 +10,6 @@ import 'package:halim/src/profile_settings/presentation/views/widget/filterToggl
 import 'package:halim/src/profile_settings/presentation/views/widget/halim_widget.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
-import 'widget/evaluation_courses_dialog.dart';
 import 'widget/settings_widget.dart';
 
 class SettingsView extends StatefulWidget {
@@ -70,7 +68,7 @@ class SettingsViewState extends State<SettingsView> {
               },
             ),
             SettingsWidget(
-              name: LocaleKeys.Settings_Security_security.tr(),
+              name: LocaleKeys.ForgotPassword_change.tr(),
               icon: Icons.security,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kSecurityView);
@@ -106,16 +104,16 @@ class SettingsViewState extends State<SettingsView> {
                 GoRouter.of(context).push(AppRoute.kHome);
               },
             ),*/
-            SettingsWidget(
+            /*SettingsWidget(
               name: 'dialog courses test',
               icon: Icons.help_outlined,
               onPressed: () {
                 showCustomDialog(
                     context: context, widget: EvaluationCoursesDialog());
               },
-            ),
+            ),*/
             HalimWidget(
-                name: 'Halim Team',
+                name: LocaleKeys.Settings_HalimTeam_hailm.tr(),
                 onPressed: () {
                   GoRouter.of(context).push(AppRoute.kDefinitionHalimView);
                 }),

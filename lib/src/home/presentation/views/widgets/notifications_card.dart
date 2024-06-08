@@ -115,7 +115,7 @@ class NotificationsCard extends StatelessWidget {
                                               left: Radius.circular(6),
                                               right: Radius.circular(6))),
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(
+                                    padding: const EdgeInsets.symmetric(vertical: 2.8,
                                         horizontal: 10.0),
                                     child: Text(
                                       displayText,

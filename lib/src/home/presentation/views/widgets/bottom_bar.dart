@@ -87,7 +87,7 @@ class BottomBarState extends State<BottomBar> {
             selectedColor: AppColors.primaryColor,
           ),
           SalomonBottomBarItem(
-            icon: const Icon(Icons.more_horiz_outlined),
+            icon: const Icon(Icons.settings),
             title:Text(LocaleKeys.HomePage_Home_NavBar_more.tr()),
             selectedColor: AppColors.primaryColor,
           ),

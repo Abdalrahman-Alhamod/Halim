@@ -1,5 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/themes/app_colors.dart';
+import 'package:halim/core/utils/context_extensions.dart';
+
+import '../../../../../core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 class ListTileEmailPhone extends StatefulWidget {
@@ -35,7 +39,7 @@ class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
             ),
             enabled: true,
             title: Text(
-              'via SMS:',
+              LocaleKeys.ForgotPassword_viaSms.tr(),
               style: TextStyle(
                 color: context.isDarkMode ? Colors.grey[400] : Colors.grey,
                 fontSize: 14,
@@ -85,7 +89,7 @@ class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
             ),
             enabled: true,
             title: Text(
-              'via Email:',
+              LocaleKeys.ForgotPassword_viaEmail.tr(),
               style: TextStyle(
                 color: context.isDarkMode ? Colors.grey[400] : Colors.grey,
                 fontSize: 14,

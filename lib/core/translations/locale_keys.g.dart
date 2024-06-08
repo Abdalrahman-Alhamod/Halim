@@ -160,6 +160,10 @@ abstract class  LocaleKeys {
   static const ForgotPassword_codeHas = 'ForgotPassword.codeHas';
   static const ForgotPassword_resend = 'ForgotPassword.resend';
   static const ForgotPassword_createNew = 'ForgotPassword.createNew';
+  static const ForgotPassword_change = 'ForgotPassword.change';
+  static const ForgotPassword_enter = 'ForgotPassword.enter';
+  static const ForgotPassword_verify = 'ForgotPassword.verify';
+  static const ForgotPassword_second = 'ForgotPassword.second';
   static const ForgotPassword = 'ForgotPassword';
   static const FillYourProfile_fillYourProfile = 'FillYourProfile.fillYourProfile';
   static const FillYourProfile_fullName = 'FillYourProfile.fullName';
@@ -205,6 +209,13 @@ abstract class  LocaleKeys {
   static const HomePage_NotificationsPage_notifications = 'HomePage.NotificationsPage.notifications';
   static const HomePage_NotificationsPage_today = 'HomePage.NotificationsPage.today';
   static const HomePage_NotificationsPage_yesterday = 'HomePage.NotificationsPage.yesterday';
+  static const HomePage_NotificationsPage_widgets_payment = 'HomePage.NotificationsPage.widgets.payment';
+  static const HomePage_NotificationsPage_widgets_todayIs = 'HomePage.NotificationsPage.widgets.todayIs';
+  static const HomePage_NotificationsPage_widgets_discount = 'HomePage.NotificationsPage.widgets.discount';
+  static const HomePage_NotificationsPage_widgets_d2iscount = 'HomePage.NotificationsPage.widgets.d2iscount';
+  static const HomePage_NotificationsPage_widgets_p2ayment = 'HomePage.NotificationsPage.widgets.p2ayment';
+  static const HomePage_NotificationsPage_widgets_t2odyIs = 'HomePage.NotificationsPage.widgets.t2odyIs';
+  static const HomePage_NotificationsPage_widgets = 'HomePage.NotificationsPage.widgets';
   static const HomePage_NotificationsPage = 'HomePage.NotificationsPage';
   static const HomePage = 'HomePage';
   static const SearchPage_search = 'SearchPage.search';
@@ -226,6 +237,8 @@ abstract class  LocaleKeys {
   static const Settings_HalimTeam_definitionofHailm = 'Settings.HalimTeam.definitionofHailm';
   static const Settings_HalimTeam_whatis = 'Settings.HalimTeam.whatis';
   static const Settings_HalimTeam_whatisHalim = 'Settings.HalimTeam.whatisHalim';
+  static const Settings_HalimTeam_life = 'Settings.HalimTeam.life';
+  static const Settings_HalimTeam_l2ife = 'Settings.HalimTeam.l2ife';
   static const Settings_HalimTeam = 'Settings.HalimTeam';
   static const Settings_Language_language = 'Settings.Language.language';
   static const Settings_Language_mainLan = 'Settings.Language.mainLan';

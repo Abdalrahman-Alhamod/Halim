@@ -193,7 +193,11 @@ class CodegenLoader extends AssetLoader{
     "viaEmail": "عبر البريد الإلكتروني: ",
     "codeHas": "تم إرسال الكود إلى",
     "resend": "سيتم إعادة الإرسال خلال",
-    "createNew": "قم بإنشاء كلمة المرور الجديدة الخاصة بك"
+    "createNew": "قم بإنشاء كلمة المرور الجديدة:",
+    "change": "تغيير كلمة المرور",
+    "enter": "أدخل الرمز",
+    "verify": "تأكيد",
+    "second": "ثانية"
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",
@@ -249,7 +253,15 @@ class CodegenLoader extends AssetLoader{
     "NotificationsPage": {
       "notifications": "الإشعارات",
       "today": "اليوم",
-      "yesterday": "البارحة"
+      "yesterday": "البارحة",
+      "widgets": {
+        "payment": "تم الدفع بنجاح",
+        "todayIs": "العروض لهذا اليوم مميزة",
+        "discount": "كود حسم خاص !",
+        "d2iscount": "اغتنم هذه الفرصة للشراء",
+        "p2ayment": "لقد قمت بالدفع للدورة",
+        "t2odyIs": "لقد حصلت على عرض خاص اليوم!"
+      }
     }
   },
   "SearchPage": {
@@ -262,9 +274,9 @@ class CodegenLoader extends AssetLoader{
     "light": "الوضع النهاري",
     "Logout": {
       "logout": "تسجيل الخروج",
-      "areYou": "هل أنت متأكد من عملية تسجيل الخروج؟",
-      "yes": "نعم، سجِّل الخروج",
-      "cancel": "خروج"
+      "areYou": "هل أنت متأكد من تسجيل الخروج؟",
+      "yes": "سجِّل الخروج",
+      "cancel": "إلغاء"
     },
     "Notifications": {
       "notifications": "الإشعارات",
@@ -275,7 +287,9 @@ class CodegenLoader extends AssetLoader{
       "hailm": "فريق حليم",
       "definitionofHailm": "حول حليم",
       "whatis": "احتضن قوة المعرفة وأطلق العنان لإمكانياتك الكاملة مع حليم. انضم إلى مجتمعنا من المتعلمين المتحمسين وابدأ في رحلة من النمو والتطور المستمر. قم بزيارة موقعنا على www.halim.com لاستكشاف عروض الدورات المتنوعة لدينا وإنشاء مسار التعلم المخصص لك. الحليم: بوابتك لمستقبل أكثر إشراقا.",
-      "whatisHalim": "ما هو حليم؟"
+      "whatisHalim": "ما هو حليم؟",
+      "life": "هل حليم مجاني للاستخدام؟",
+      "l2ife": "حليم هو أكثر من مجرد منصة تعليمية عبر الإنترنت؛ إنه مجتمع نابض بالحياة من المتعلمين. تعمل منصتنا على تسهيل التفاعل بين الطلاب، مما يسمح لهم بالتواصل والتعاون ودعم رحلات التعلم لبعضهم البعض. يمكنك المشاركة في المنتديات وطرح الأسئلة والمشاركة في المناقشات مع زملائك المتعلمين والخبراء، مما يعزز بيئة تعليمية تعاونية وداعمة."
     },
     "Language": {
       "language": "لغة التطبيق",
@@ -517,7 +531,11 @@ static const Map<String,dynamic> en = {
     "viaEmail": "via Email:",
     "codeHas": "Code has been sent to",
     "resend": "Resend code in",
-    "createNew": "Create your new password"
+    "createNew": "Create your new password:",
+    "change": "Change Password",
+    "enter": "Enter Code",
+    "verify": "Verify",
+    "second": "second"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
@@ -573,7 +591,15 @@ static const Map<String,dynamic> en = {
     "NotificationsPage": {
       "notifications": "Notifications",
       "today": "Today",
-      "yesterday": "Yesterday"
+      "yesterday": "Yesterday",
+      "widgets": {
+        "payment": "Payment Successful",
+        "todayIs": "Today's special offers",
+        "discount": "Special discount code!",
+        "d2iscount": "Take this opportunity to purchase",
+        "p2ayment": "You have made a course payment",
+        "t2odyIs": "You get a special promo today!"
+      }
     }
   },
   "SearchPage": {
@@ -599,7 +625,9 @@ static const Map<String,dynamic> en = {
       "hailm": "Hailm Team",
       "definitionofHailm": "Definition of Hailm",
       "whatis": "Embrace the power of knowledge and unlock your full potential with Halim. Join our community of passionate learners and embark on a journey of continuous growth and development. Visit our website at www.halim.com to explore our diverse course offerings and create your personalized learning path. Halim: your gateway to a brighter future.",
-      "whatisHalim": "What is Halim?"
+      "whatisHalim": "What is Halim?",
+      "life": "Is Halim free to use?",
+      "l2ife": "Halim is more than just an online education platform; it's a vibrant community of learners. Our platform facilitates interaction among students, allowing them to connect, collaborate, and support each other's learning journeys. You can participate in forums, ask questions, and engage in discussions with fellow learners and experts, fostering a collaborative and supportive learning environment."
     },
     "Language": {
       "language": "Language",

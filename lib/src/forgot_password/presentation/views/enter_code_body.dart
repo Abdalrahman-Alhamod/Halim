@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/constants/app_sizes.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
@@ -56,7 +58,7 @@ class _EnterCodeBodyState extends State<EnterCodeBody> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Code has been sent to +1 111 *** **9',
+                  '${LocaleKeys.ForgotPassword_codeHas.tr()} +1 111 *** **9',
                   style: TextStyle(
                     fontSize: 16,
                     color: context.isDarkMode ? Colors.white : Colors.black,
@@ -93,7 +95,7 @@ class _EnterCodeBodyState extends State<EnterCodeBody> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Resend code in 55 s',
+                  '${LocaleKeys.ForgotPassword_resend.tr()} 55 ${LocaleKeys.ForgotPassword_second.tr()}',
                   style: TextStyle(
                     fontSize: 16,
                   ),
@@ -109,7 +111,7 @@ class _EnterCodeBodyState extends State<EnterCodeBody> {
                   onPressed: () {
                     GoRouter.of(context).push(AppRoute.kNewPass);
                   },
-                  title: 'Verify',
+                  title: LocaleKeys.ForgotPassword_verify.tr(),
                   width: MediaQuery.of(context).size.width * 0.94,
                   height: 60,
                   kTextcolor: AppColors.lightFlatButtonColor,
