@@ -23,12 +23,10 @@ class NotificationsViewState extends State<NotificationsView> {
       appBar: AppBar(
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-            context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Row(
           children: [
             Text(
               LocaleKeys.HomePage_NotificationsPage_notifications.tr(),
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
             const Spacer(
@@ -37,7 +35,6 @@ class NotificationsViewState extends State<NotificationsView> {
             Icon(
               Icons.notifications_active_outlined,
               size: 28,
-              color: context.isDarkMode ? Colors.white : Colors.black,
               color: context.isDarkMode ? Colors.white : Colors.black,
             )
           ],

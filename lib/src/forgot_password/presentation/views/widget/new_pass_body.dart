@@ -23,7 +23,6 @@ class NewPassBody extends StatefulWidget {
 
 class _NewPassBodyState extends State<NewPassBody> {
   GlobalKey<FormState> formKey = GlobalKey();
-  GlobalKey<FormState> formKey = GlobalKey();
 
   TextEditingController passControllerOne = TextEditingController();
   TextEditingController passControllerTwo = TextEditingController();

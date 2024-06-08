@@ -25,7 +25,6 @@ class DefinitionHalimViewState extends State<DefinitionHalimView> {
         title: Text(
           LocaleKeys.Settings_HalimTeam_definitionofHailm.tr(),
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
       ),
