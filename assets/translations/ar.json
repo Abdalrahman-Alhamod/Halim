@@ -236,7 +236,15 @@
     "NotificationsPage": {
       "notifications": "الإشعارات",
       "today": "اليوم",
-      "yesterday": "البارحة"
+      "yesterday": "البارحة",
+      "widgets": {
+        "payment": "تم الدفع بنجاح",
+        "todayIs": "العروض لهذا اليوم مميزة",
+        "discount": "كود حسم خاص !",
+        "d2iscount": "اغتنم هذه الفرصة للشراء",
+        "p2ayment": "لقد قمت بالدفع للدورة",
+        "t2odyIs": "لقد حصلت على عرض خاص اليوم!"
+      }
     }
   },
   "SearchPage": {

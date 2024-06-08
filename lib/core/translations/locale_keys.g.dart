@@ -208,6 +208,13 @@ abstract class  LocaleKeys {
   static const HomePage_NotificationsPage_notifications = 'HomePage.NotificationsPage.notifications';
   static const HomePage_NotificationsPage_today = 'HomePage.NotificationsPage.today';
   static const HomePage_NotificationsPage_yesterday = 'HomePage.NotificationsPage.yesterday';
+  static const HomePage_NotificationsPage_widgets_payment = 'HomePage.NotificationsPage.widgets.payment';
+  static const HomePage_NotificationsPage_widgets_todayIs = 'HomePage.NotificationsPage.widgets.todayIs';
+  static const HomePage_NotificationsPage_widgets_discount = 'HomePage.NotificationsPage.widgets.discount';
+  static const HomePage_NotificationsPage_widgets_d2iscount = 'HomePage.NotificationsPage.widgets.d2iscount';
+  static const HomePage_NotificationsPage_widgets_p2ayment = 'HomePage.NotificationsPage.widgets.p2ayment';
+  static const HomePage_NotificationsPage_widgets_t2odyIs = 'HomePage.NotificationsPage.widgets.t2odyIs';
+  static const HomePage_NotificationsPage_widgets = 'HomePage.NotificationsPage.widgets';
   static const HomePage_NotificationsPage = 'HomePage.NotificationsPage';
   static const HomePage = 'HomePage';
   static const SearchPage_search = 'SearchPage.search';

@@ -252,7 +252,15 @@ class CodegenLoader extends AssetLoader{
     "NotificationsPage": {
       "notifications": "الإشعارات",
       "today": "اليوم",
-      "yesterday": "البارحة"
+      "yesterday": "البارحة",
+      "widgets": {
+        "payment": "تم الدفع بنجاح",
+        "todayIs": "العروض لهذا اليوم مميزة",
+        "discount": "كود حسم خاص !",
+        "d2iscount": "اغتنم هذه الفرصة للشراء",
+        "p2ayment": "لقد قمت بالدفع للدورة",
+        "t2odyIs": "لقد حصلت على عرض خاص اليوم!"
+      }
     }
   },
   "SearchPage": {
@@ -579,7 +587,15 @@ static const Map<String,dynamic> en = {
     "NotificationsPage": {
       "notifications": "Notifications",
       "today": "Today",
-      "yesterday": "Yesterday"
+      "yesterday": "Yesterday",
+      "widgets": {
+        "payment": "Payment Successful",
+        "todayIs": "Today's special offers",
+        "discount": "Special discount code!",
+        "d2iscount": "Take this opportunity to purchase",
+        "p2ayment": "You have made a course payment",
+        "t2odyIs": "You get a special promo today!"
+      }
     }
   },
   "SearchPage": {

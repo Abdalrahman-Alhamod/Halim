@@ -236,7 +236,15 @@
     "NotificationsPage": {
       "notifications": "Notifications",
       "today": "Today",
-      "yesterday": "Yesterday"
+      "yesterday": "Yesterday",
+      "widgets": {
+        "payment": "Payment Successful",
+        "todayIs": "Today's special offers",
+        "discount": "Special discount code!",
+        "d2iscount": "Take this opportunity to purchase",
+        "p2ayment": "You have made a course payment",
+        "t2odyIs": "You get a special promo today!"
+      }
     }
   },
   "SearchPage": {
