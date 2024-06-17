@@ -82,6 +82,13 @@ class SettingsViewState extends State<SettingsView> {
               },
             ),*/
             SettingsWidget(
+              name: 'Leaderboards',
+              icon: Icons.leaderboard,
+              onPressed: () {
+                GoRouter.of(context).push(AppRoute.kLeaderboardsView);
+              },
+            ),
+            SettingsWidget(
               name: LocaleKeys.Settings_Language_language.tr(),
               icon: Icons.language,
               onPressed: () {

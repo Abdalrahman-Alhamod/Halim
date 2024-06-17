@@ -334,5 +334,8 @@
       "removeFromBookmark": "Remove from Bookmar ?"
     },
     "myCourses": "My Courses"
+  },
+  "Leaderboards": {
+    "leaderboards": "Leaderboards"
   }
 }

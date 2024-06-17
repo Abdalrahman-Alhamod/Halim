@@ -334,5 +334,8 @@
       "removeFromBookmark": "إزالة من المحفوظة ؟"
     },
     "myCourses": "دوراتي"
+  },
+  "Leaderboards": {
+    "leaderboards": "لوحة الشرف"
   }
 }

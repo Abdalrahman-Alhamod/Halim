@@ -291,5 +291,7 @@ abstract class  LocaleKeys {
   static const MyCourses_Bookmark = 'MyCourses.Bookmark';
   static const MyCourses_myCourses = 'MyCourses.myCourses';
   static const MyCourses = 'MyCourses';
+  static const Leaderboards_leaderboards = 'Leaderboards.leaderboards';
+  static const Leaderboards = 'Leaderboards';
 
 }

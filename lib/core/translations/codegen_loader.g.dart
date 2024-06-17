@@ -350,6 +350,9 @@ class CodegenLoader extends AssetLoader{
       "removeFromBookmark": "إزالة من المحفوظة ؟"
     },
     "myCourses": "دوراتي"
+  },
+  "Leaderboards": {
+    "leaderboards": "لوحة الشرف"
   }
 };
 static const Map<String,dynamic> en = {
@@ -688,6 +691,9 @@ static const Map<String,dynamic> en = {
       "removeFromBookmark": "Remove from Bookmar ?"
     },
     "myCourses": "My Courses"
+  },
+  "Leaderboards": {
+    "leaderboards": "Leaderboards"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
