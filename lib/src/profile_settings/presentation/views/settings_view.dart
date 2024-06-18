@@ -74,15 +74,15 @@ class SettingsViewState extends State<SettingsView> {
                 GoRouter.of(context).push(AppRoute.kSecurityView);
               },
             ),
-            /*SettingsWidget(
-              name: 'Payment',
+            SettingsWidget(
+              name: LocaleKeys.Settings_Payments_payments.tr(),
               icon: Icons.payment,
               onPressed: () {
-                GoRouter.of(context).push(AppRoute.kHome);
+                GoRouter.of(context).push(AppRoute.kPaymentsView);
               },
-            ),*/
+            ),
             SettingsWidget(
-              name: 'Leaderboards',
+              name: LocaleKeys.Leaderboards_leaderboards.tr(),
               icon: Icons.leaderboard,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kLeaderboardsView);
