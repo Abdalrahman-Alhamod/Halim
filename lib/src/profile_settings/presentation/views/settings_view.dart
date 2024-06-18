@@ -82,6 +82,13 @@ class SettingsViewState extends State<SettingsView> {
               },
             ),
             SettingsWidget(
+              name: LocaleKeys.Settings_Shipping_shipping.tr(),
+              icon: Icons.account_balance_wallet,
+              onPressed: () {
+                GoRouter.of(context).push(AppRoute.kShippingView);
+              },
+            ),
+            SettingsWidget(
               name: LocaleKeys.Leaderboards_leaderboards.tr(),
               icon: Icons.leaderboard,
               onPressed: () {

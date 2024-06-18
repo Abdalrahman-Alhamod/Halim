@@ -305,6 +305,13 @@
         "email": "Email"
       },
       "receipt": "E-Receipt"
+    },
+    "Shipping": {
+      "shipping": "Shipping operations",
+      "valueShip": "Shipping value",
+      "dateShip": "Date of shipment",
+      "idEmp": "Responsible employee ID",
+      "numShip": "Shipping process number"
     }
   },
   "Search": {

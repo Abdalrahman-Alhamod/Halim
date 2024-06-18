@@ -266,6 +266,12 @@ abstract class  LocaleKeys {
   static const Settings_Payments_Receipt = 'Settings.Payments.Receipt';
   static const Settings_Payments_receipt = 'Settings.Payments.receipt';
   static const Settings_Payments = 'Settings.Payments';
+  static const Settings_Shipping_shipping = 'Settings.Shipping.shipping';
+  static const Settings_Shipping_valueShip = 'Settings.Shipping.valueShip';
+  static const Settings_Shipping_dateShip = 'Settings.Shipping.dateShip';
+  static const Settings_Shipping_idEmp = 'Settings.Shipping.idEmp';
+  static const Settings_Shipping_numShip = 'Settings.Shipping.numShip';
+  static const Settings_Shipping = 'Settings.Shipping';
   static const Settings = 'Settings';
   static const Search_search = 'Search.search';
   static const Search_recent = 'Search.recent';

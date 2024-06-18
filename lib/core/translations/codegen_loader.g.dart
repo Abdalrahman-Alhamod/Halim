@@ -321,6 +321,13 @@ class CodegenLoader extends AssetLoader{
         "email": "البريد الإلكتروني"
       },
       "receipt": "الإيصال"
+    },
+    "Shipping": {
+      "shipping": "عمليات الشحن",
+      "valueShip": "قيمة الشحن",
+      "dateShip": "تاريخ الشحن",
+      "idEmp": "رقم الموظف المسؤول",
+      "numShip": "رقم عملية الشحن"
     }
   },
   "Search": {
@@ -681,6 +688,13 @@ static const Map<String,dynamic> en = {
         "email": "Email"
       },
       "receipt": "E-Receipt"
+    },
+    "Shipping": {
+      "shipping": "Shipping operations",
+      "valueShip": "Shipping value",
+      "dateShip": "Date of shipment",
+      "idEmp": "Responsible employee ID",
+      "numShip": "Shipping process number"
     }
   },
   "Search": {

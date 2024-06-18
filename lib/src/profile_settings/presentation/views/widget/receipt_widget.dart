@@ -38,7 +38,6 @@ class ReceiptWidget extends StatefulWidget {
 class _ReceiptWidgetState extends State<ReceiptWidget> {
   @override
   Widget build(BuildContext context) {
-    // تنسيق التاريخ
     String formattedDate = DateFormat('dd-MM-yyyy').format(widget.date);
 
     return SingleChildScrollView(
