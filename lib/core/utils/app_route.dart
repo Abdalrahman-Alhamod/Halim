@@ -27,6 +27,7 @@ import 'package:halim/src/splash/presentation/views/splash_view.dart';
 import '../../src/account_setup/presentation/views/biometric_view.dart';
 import '../../src/account_setup/presentation/views/create_pin_view.dart';
 import '../../src/account_setup/presentation/views/fill_profile_view.dart';
+import '../../src/chat/presentation/views/chat_view.dart';
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
 import '../../src/forgot_password/presentation/views/enter_code_view.dart';
 import '../../src/forgot_password/presentation/views/send_code_view.dart';
@@ -53,6 +54,7 @@ class AppRoute {
   static const kMentorDetailsView = '/mentorDetails';
   static const kMyCourseDetailsView = '/myCourseDetails';
   static const kConfirmEmailView = '/confirmEmail';
+  static const kChatView = '/chat';
 
   static const kFillProfile = '/fillProfile';
   static const kCreatePin = '/kCreatePin';
@@ -83,7 +85,7 @@ class AppRoute {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const SplashView();
+          return const ChatView();
         },
       ),
       GoRoute(
@@ -126,6 +128,12 @@ class AppRoute {
         path: kCourseLessonsView,
         builder: (BuildContext context, GoRouterState state) {
           return const CourseLessonsView();
+        },
+      ),
+      GoRoute(
+        path: kChatView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const ChatView();
         },
       ),
       GoRoute(
@@ -267,19 +275,19 @@ class AppRoute {
         },
       ),
       GoRoute(
-        path:kLeaderboardsView,
+        path: kLeaderboardsView,
         builder: (BuildContext context, GoRouterState state) {
           return const LeaderboardsView();
         },
       ),
       GoRoute(
-        path:kPaymentsView,
+        path: kPaymentsView,
         builder: (BuildContext context, GoRouterState state) {
           return const PaymentsView();
         },
       ),
       GoRoute(
-        path:kReceiptView,
+        path: kReceiptView,
         builder: (BuildContext context, GoRouterState state) {
           return const ReceiptView();
         },

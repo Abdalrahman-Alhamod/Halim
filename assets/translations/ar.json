@@ -358,5 +358,8 @@
   },
   "Leaderboards": {
     "leaderboards": "لوحة الشرف"
+  },
+  "Chat": {
+    "enterMessage": "ادخل رسالة..."
   }
 }

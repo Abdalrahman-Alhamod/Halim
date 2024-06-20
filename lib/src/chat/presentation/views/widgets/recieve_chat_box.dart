@@ -1,0 +1,58 @@
+import 'package:flutter/material.dart';
+import 'package:halim/core/utils/context_extensions.dart';
+
+import '../../../../../core/themes/app_colors.dart';
+import '../../../domain/entities/message.dart';
+
+class RecieveChatBox extends StatelessWidget {
+  const RecieveChatBox({
+    super.key,
+    required this.message,
+  });
+  final Message message;
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment:
+          context.isEnglish ? Alignment.centerRight : Alignment.centerLeft,
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        decoration: BoxDecoration(
+            color: context.isDarkMode
+                ? AppColors.darkFlatButtonColor
+                : Colors.grey.shade200,
+            borderRadius: BorderRadius.only(
+              topRight: context.isEnglish ? Radius.zero : Radius.circular(16),
+              topLeft: context.isEnglish ? Radius.circular(16) : Radius.zero,
+              bottomRight: Radius.circular(16),
+              bottomLeft: Radius.circular(16),
+            )),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Flexible(
+              child: Text(
+                message.content,
+                style: const TextStyle(),
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Text(
+              TimeOfDay.fromDateTime(message.time).format(context),
+              style: TextStyle(
+                fontSize: 10,
+                color: context.isDarkMode
+                    ? Colors.grey.shade300
+                    : Colors.grey.shade500,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

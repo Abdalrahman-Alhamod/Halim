@@ -20,7 +20,7 @@ void main() async {
         Locale(AppLocales.ar),
       ],
       path: AppLocales.translationsAssetsPath,
-      startLocale: const Locale(AppLocales.ar),
+      startLocale: const Locale(AppLocales.en),
       fallbackLocale: const Locale(AppLocales.en),
       assetLoader: const CodegenLoader(),
       child: const HalimApp(),

@@ -358,5 +358,8 @@
   },
   "Leaderboards": {
     "leaderboards": "Leaderboards"
+  },
+  "Chat": {
+    "enterMessage": "Enter message..."
   }
 }

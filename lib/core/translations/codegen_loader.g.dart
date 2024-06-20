@@ -374,6 +374,9 @@ class CodegenLoader extends AssetLoader{
   },
   "Leaderboards": {
     "leaderboards": "لوحة الشرف"
+  },
+  "Chat": {
+    "enterMessage": "ادخل رسالة..."
   }
 };
 static const Map<String,dynamic> en = {
@@ -736,6 +739,9 @@ static const Map<String,dynamic> en = {
   },
   "Leaderboards": {
     "leaderboards": "Leaderboards"
+  },
+  "Chat": {
+    "enterMessage": "Enter message..."
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

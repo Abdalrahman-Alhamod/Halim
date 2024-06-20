@@ -312,5 +312,7 @@ abstract class  LocaleKeys {
   static const MyCourses = 'MyCourses';
   static const Leaderboards_leaderboards = 'Leaderboards.leaderboards';
   static const Leaderboards = 'Leaderboards';
+  static const Chat_enterMessage = 'Chat.enterMessage';
+  static const Chat = 'Chat';
 
 }
