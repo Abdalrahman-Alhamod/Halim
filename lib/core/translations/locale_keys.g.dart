@@ -37,6 +37,8 @@ abstract class  LocaleKeys {
   static const Buttons_download = 'Buttons.download';
   static const Buttons_all = 'Buttons.all';
   static const Buttons_apply = 'Buttons.apply';
+  static const Buttons_cancel = 'Buttons.cancel';
+  static const Buttons_ok = 'Buttons.ok';
   static const Buttons = 'Buttons';
   static const CourseDetails_reviews = 'CourseDetails.reviews';
   static const CourseDetails_students = 'CourseDetails.students';

@@ -37,7 +37,9 @@
     "seeAll": "See All",
     "download": "Download",
     "all": "All",
-    "apply": "Apply"
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "ok": "Ok"
   },
   "CourseDetails": {
     "reviews": "reviews",

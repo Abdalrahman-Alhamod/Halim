@@ -53,7 +53,9 @@ class CodegenLoader extends AssetLoader{
     "seeAll": "عرض الكل",
     "download": "تنزيل",
     "all": "الكل",
-    "apply": "تطبيق"
+    "apply": "تطبيق",
+    "cancel": "إلغاء",
+    "ok": "حسناً"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -391,7 +393,9 @@ static const Map<String,dynamic> en = {
     "seeAll": "See All",
     "download": "Download",
     "all": "All",
-    "apply": "Apply"
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "ok": "Ok"
   },
   "CourseDetails": {
     "reviews": "reviews",
