@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
+import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
+import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
 import 'package:halim/src/search/presentation/views/search_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';
@@ -70,6 +73,9 @@ class AppRoute {
   static const kLanguageSettingsView = '/kLanguageSettingsView';
   static const kSettingsView = '/kSettingsView';
   static const kDefinitionHalimView = '/kDefinitionHalimView';
+  static const kLeaderboardsView = '/kLeaderboardsView';
+  static const kPaymentsView = '/kPaymentsView';
+  static const kReceiptView = '/kkReceiptView';
 
   static final GoRouter router = GoRouter(
     debugLogDiagnostics: true,
@@ -258,6 +264,24 @@ class AppRoute {
         path: kDefinitionHalimView,
         builder: (BuildContext context, GoRouterState state) {
           return const DefinitionHalimView();
+        },
+      ),
+      GoRoute(
+        path:kLeaderboardsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const LeaderboardsView();
+        },
+      ),
+      GoRoute(
+        path:kPaymentsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const PaymentsView();
+        },
+      ),
+      GoRoute(
+        path:kReceiptView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const ReceiptView();
         },
       ),
     ],

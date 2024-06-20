@@ -288,6 +288,25 @@
     },
     "EditProfile": {
       "edit": "تغيير بيانات الحساب"
+    },
+    "Payments": {
+      "payments": "المدفوعات",
+      "paid": "مدفوع",
+      "unpaid": "غير مدفوع",
+      "Receipt": {
+        "receipt": "الإيصال الإلكتروني",
+        "name": "الاسم",
+        "course": "الدورة",
+        "category": "التصنيف",
+        "transaction": "رقم الفاتورة",
+        "priceBefor": " سعر الدورة قبل الحسم",
+        "priceAfter": "سعر الدورة بعد الحسم",
+        "discount": "قيمة الحسم",
+        "date": "تاريخ الشراء",
+        "status": "حالة الدورة",
+        "email": "البريد الإلكتروني"
+      },
+      "receipt": "الإيصال"
     }
   },
   "Search": {
@@ -336,5 +355,8 @@
       "removeFromBookmark": "إزالة من المحفوظة ؟"
     },
     "myCourses": "دوراتي"
+  },
+  "Leaderboards": {
+    "leaderboards": "لوحة الشرف"
   }
 }

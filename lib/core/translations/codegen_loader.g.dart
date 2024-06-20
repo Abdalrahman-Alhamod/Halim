@@ -304,6 +304,25 @@ class CodegenLoader extends AssetLoader{
     },
     "EditProfile": {
       "edit": "تغيير بيانات الحساب"
+    },
+    "Payments": {
+      "payments": "المدفوعات",
+      "paid": "مدفوع",
+      "unpaid": "غير مدفوع",
+      "Receipt": {
+        "receipt": "الإيصال الإلكتروني",
+        "name": "الاسم",
+        "course": "الدورة",
+        "category": "التصنيف",
+        "transaction": "رقم الفاتورة",
+        "priceBefor": " سعر الدورة قبل الحسم",
+        "priceAfter": "سعر الدورة بعد الحسم",
+        "discount": "قيمة الحسم",
+        "date": "تاريخ الشراء",
+        "status": "حالة الدورة",
+        "email": "البريد الإلكتروني"
+      },
+      "receipt": "الإيصال"
     }
   },
   "Search": {
@@ -352,6 +371,9 @@ class CodegenLoader extends AssetLoader{
       "removeFromBookmark": "إزالة من المحفوظة ؟"
     },
     "myCourses": "دوراتي"
+  },
+  "Leaderboards": {
+    "leaderboards": "لوحة الشرف"
   }
 };
 static const Map<String,dynamic> en = {
@@ -644,6 +666,25 @@ static const Map<String,dynamic> en = {
     },
     "EditProfile": {
       "edit": "Edit Profile"
+    },
+    "Payments": {
+      "payments": "Payments",
+      "paid": "Paid",
+      "unpaid": "UnPaid",
+      "Receipt": {
+        "receipt": "E-Receipt",
+        "name": "Name",
+        "course": "Course",
+        "category": "Category",
+        "transaction": "Transaction ID",
+        "priceBefor": "Course price before discount",
+        "priceAfter": "Course price after discount",
+        "discount": "Discount value",
+        "date": "The date of purchase",
+        "status": "Course status",
+        "email": "Email"
+      },
+      "receipt": "E-Receipt"
     }
   },
   "Search": {
@@ -692,6 +733,9 @@ static const Map<String,dynamic> en = {
       "removeFromBookmark": "Remove from Bookmar ?"
     },
     "myCourses": "My Courses"
+  },
+  "Leaderboards": {
+    "leaderboards": "Leaderboards"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

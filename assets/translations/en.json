@@ -288,6 +288,25 @@
     },
     "EditProfile": {
       "edit": "Edit Profile"
+    },
+    "Payments": {
+      "payments": "Payments",
+      "paid": "Paid",
+      "unpaid": "UnPaid",
+      "Receipt": {
+        "receipt": "E-Receipt",
+        "name": "Name",
+        "course": "Course",
+        "category": "Category",
+        "transaction": "Transaction ID",
+        "priceBefor": "Course price before discount",
+        "priceAfter": "Course price after discount",
+        "discount": "Discount value",
+        "date": "The date of purchase",
+        "status": "Course status",
+        "email": "Email"
+      },
+      "receipt": "E-Receipt"
     }
   },
   "Search": {
@@ -336,5 +355,8 @@
       "removeFromBookmark": "Remove from Bookmar ?"
     },
     "myCourses": "My Courses"
+  },
+  "Leaderboards": {
+    "leaderboards": "Leaderboards"
   }
 }

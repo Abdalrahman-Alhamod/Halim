@@ -21,46 +21,49 @@ class SettingsWidget extends StatelessWidget {
       width: screenSize.width,
       height: 55,
       color: context.isDarkMode ? AppColors.darkColor : Colors.white,
-      child: Row(
-        children: [
-          SizedBox(
-            width: 20,
-          ),
-          Icon(
-            icon,
-            size: 28,
-            color: color
-          ),
-          SizedBox(
-            width: 20,
-          ),
-          Expanded(
-            child: Row(
-              children: [
-                Text(
-                  name,
-                  style: TextStyle(
-                    color: color,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                const Spacer(),
-                IconButton(
-                  icon: Icon(
-                    size: 28,
-                    Icons.chevron_right,
-                    color: color,
-                  ),
-                  onPressed: onPressed,
-                ),
-                SizedBox(
-                  width: 8,
-                ),
-              ],
+      child: InkWell(
+        onTap: onPressed,
+        child: Row(
+          children: [
+            SizedBox(
+              width: 20,
             ),
-          )
-        ],
+            Icon(
+              icon,
+              size: 28,
+              color: color
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Expanded(
+              child: Row(
+                children: [
+                  Text(
+                    name,
+                    style: TextStyle(
+                      color: color,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    icon: Icon(
+                      size: 28,
+                      Icons.chevron_right,
+                      color: color,
+                    ),
+                    onPressed: onPressed,
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
