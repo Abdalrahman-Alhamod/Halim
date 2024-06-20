@@ -85,7 +85,7 @@ class AppRoute {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const ChatView();
+          return const SplashView();
         },
       ),
       GoRoute(

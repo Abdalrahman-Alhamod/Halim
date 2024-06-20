@@ -29,13 +29,13 @@ class MentorMainSectionButton extends StatelessWidget {
           isOutlined ? AppColors.primaryColor : Colors.white,
           BlendMode.srcIn,
         ),
-        width: 24,
+        width: 20,
       ),
       label: Text(
         title,
         style: TextStyle(
           color: isOutlined ? AppColors.primaryColor : Colors.white,
-          fontSize: 20,
+          fontSize: 18,
           fontWeight: FontWeight.w600,
         ),
       ),
