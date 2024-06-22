@@ -1,5 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/app_route.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../../../core/assets/app_svgs.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
@@ -21,7 +24,7 @@ class MentorMainDetails extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-               MentorMainDetailsVerticalInfo(
+              MentorMainDetailsVerticalInfo(
                 num: '25',
                 label: LocaleKeys.CourseDetails_Mentor_coursesNum.tr(),
               ),
@@ -47,7 +50,12 @@ class MentorMainDetails extends StatelessWidget {
             Expanded(
               flex: 1,
               child: MentorMainSectionButton(
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).push(
+                    AppRoute.kChatView,
+                    extra: LocaleKeys.CourseDetails_Test_courseMentorName.tr(),
+                  );
+                },
                 svgPicture: AppSVGs.chatFilled,
                 title: LocaleKeys.CourseDetails_Mentor_message.tr(),
               ),
@@ -58,7 +66,13 @@ class MentorMainDetails extends StatelessWidget {
             Expanded(
               flex: 1,
               child: MentorMainSectionButton(
-                onPressed: () {},
+                onPressed: () async {
+                  await launchUrl(
+                    Uri.parse(
+                      'https://www.linkedin.com/in/abd-alrrahman-alhamod/',
+                    ),
+                  );
+                },
                 svgPicture: AppSVGs.compass,
                 title: LocaleKeys.CourseDetails_Mentor_website.tr(),
                 isOutlined: true,

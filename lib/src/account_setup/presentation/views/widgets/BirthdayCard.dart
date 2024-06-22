@@ -3,7 +3,6 @@ import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/utils/context_extensions.dart';
-import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class BirthdayCard extends StatefulWidget {
   const BirthdayCard({super.key});
@@ -14,13 +13,19 @@ class BirthdayCard extends StatefulWidget {
 
 class BirthdayCardState extends State<BirthdayCard> {
   DateTime? _selectedDate;
-  final TextEditingController _controller = TextEditingController();
+  late final TextEditingController _controller;
+  DateTime? _tempSelectedDate;
 
-  void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
-    setState(() {
-      _selectedDate = args.value;
-      _controller.text = DateFormat('yyyy-MM-dd', 'en').format(_selectedDate!);
-    });
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   Future<void> _selectDate(BuildContext context) async {
@@ -28,29 +33,38 @@ class BirthdayCardState extends State<BirthdayCard> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
+          backgroundColor:
+              context.isDarkMode ? AppColors.darkColor : Colors.white,
           title: Text(LocaleKeys.FillYourProfile_dateOfBirth.tr()),
           content: Container(
             height: 300,
             width: 300,
-            child: SfDateRangePicker(
-              backgroundColor:
-                  context.isDarkMode ? AppColors.darkColor : Colors.white,
-              selectionTextStyle: TextStyle(fontSize: 20),
-              headerStyle: DateRangePickerHeaderStyle(
-                  textStyle: TextStyle(fontSize: 20)),
-              onSelectionChanged: _onSelectionChanged,
-              selectionMode: DateRangePickerSelectionMode.single,
-              initialSelectedDate: _selectedDate,
-              minDate: DateTime(1900),
-              maxDate: DateTime(2100),
+            child: CalendarDatePicker(
+              initialDate: _selectedDate,
+              firstDate: DateTime(1900),
+              lastDate: DateTime.now(),
+              onDateChanged: (date) {
+                _tempSelectedDate = date;
+              },
             ),
           ),
           actions: <Widget>[
             TextButton(
-              child: Text('OK'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
+              child: Text(LocaleKeys.Buttons_cancel.tr()),
+            ),
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  _selectedDate = _tempSelectedDate;
+                  _controller.text =
+                      DateFormat('yyyy-MM-dd', 'en').format(_selectedDate!);
+                });
+                Navigator.of(context).pop(_selectedDate);
+              },
+              child: Text(LocaleKeys.Buttons_ok.tr()),
             ),
           ],
         );

@@ -37,7 +37,9 @@
     "seeAll": "عرض الكل",
     "download": "تنزيل",
     "all": "الكل",
-    "apply": "تطبيق"
+    "apply": "تطبيق",
+    "cancel": "إلغاء",
+    "ok": "حسناً"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -363,5 +365,8 @@
   },
   "Leaderboards": {
     "leaderboards": "لوحة الشرف"
+  },
+  "Chat": {
+    "enterMessage": "ادخل رسالة..."
   }
 }

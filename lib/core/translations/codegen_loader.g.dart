@@ -53,7 +53,9 @@ class CodegenLoader extends AssetLoader{
     "seeAll": "عرض الكل",
     "download": "تنزيل",
     "all": "الكل",
-    "apply": "تطبيق"
+    "apply": "تطبيق",
+    "cancel": "إلغاء",
+    "ok": "حسناً"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -379,6 +381,9 @@ class CodegenLoader extends AssetLoader{
   },
   "Leaderboards": {
     "leaderboards": "لوحة الشرف"
+  },
+  "Chat": {
+    "enterMessage": "ادخل رسالة..."
   }
 };
 static const Map<String,dynamic> en = {
@@ -420,7 +425,9 @@ static const Map<String,dynamic> en = {
     "seeAll": "See All",
     "download": "Download",
     "all": "All",
-    "apply": "Apply"
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "ok": "Ok"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -746,6 +753,9 @@ static const Map<String,dynamic> en = {
   },
   "Leaderboards": {
     "leaderboards": "Leaderboards"
+  },
+  "Chat": {
+    "enterMessage": "Enter message..."
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
