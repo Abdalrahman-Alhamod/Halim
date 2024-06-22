@@ -86,12 +86,12 @@ class AppRoute {
   static final GoRouter router = GoRouter(
     debugLogDiagnostics: true,
     routes: <RouteBase>[
-      // GoRoute(
-      //   path: '/',
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return const SplashView();
-      //   },
-      // ),
+      GoRoute(
+        path: '/',
+        builder: (BuildContext context, GoRouterState state) {
+          return const SplashView();
+        },
+      ),
       GoRoute(
         path: kIntroView,
         builder: (BuildContext context, GoRouterState state) {
@@ -303,7 +303,7 @@ class AppRoute {
         },
       ),
       GoRoute(
-        path:'/',
+        path:kProfileStudentView,
         builder: (BuildContext context, GoRouterState state) {
           return const profileStudentView();
         },
