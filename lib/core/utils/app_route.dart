@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/home/presentation/views/profile_student.dart';
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
@@ -78,16 +79,17 @@ class AppRoute {
   static const kPaymentsView = '/kPaymentsView';
   static const kReceiptView = '/kReceiptView';
   static const kShippingView = '/kShippingView';
+  static const kProfileStudentView = '/kProfileStudentView';
 
   static final GoRouter router = GoRouter(
     debugLogDiagnostics: true,
     routes: <RouteBase>[
-      GoRoute(
-        path: '/',
-        builder: (BuildContext context, GoRouterState state) {
-          return const SplashView();
-        },
-      ),
+      // GoRoute(
+      //   path: '/',
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return const SplashView();
+      //   },
+      // ),
       GoRoute(
         path: kIntroView,
         builder: (BuildContext context, GoRouterState state) {
@@ -290,6 +292,12 @@ class AppRoute {
         path:kShippingView,
         builder: (BuildContext context, GoRouterState state) {
           return const ShippingView();
+        },
+      ),
+      GoRoute(
+        path:'/',
+        builder: (BuildContext context, GoRouterState state) {
+          return const profileStudentView();
         },
       ),
     ],
