@@ -183,7 +183,8 @@
     "change": "تغيير كلمة المرور",
     "enter": "أدخل الرمز",
     "verify": "تأكيد",
-    "second": "ثانية"
+    "second": "ثانية",
+    "enterEmail": "أدخل بريدك الإلكتروني"
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",

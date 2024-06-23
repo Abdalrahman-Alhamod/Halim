@@ -183,7 +183,8 @@
     "change": "Change Password",
     "enter": "Enter Code",
     "verify": "Verify",
-    "second": "second"
+    "second": "second",
+    "enterEmail": "Enter Your Email"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
