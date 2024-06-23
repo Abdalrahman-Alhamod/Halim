@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/achievements/presentation/views/achievements_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
@@ -55,6 +56,7 @@ class AppRoute {
   static const kMyCourseDetailsView = '/myCourseDetails';
   static const kConfirmEmailView = '/confirmEmail';
   static const kChatView = '/chat';
+  static const kAchievementsView = '/achievements';
 
   static const kFillProfile = '/fillProfile';
   static const kCreatePin = '/kCreatePin';
@@ -85,7 +87,7 @@ class AppRoute {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const SplashView();
+          return const AchievementsView();
         },
       ),
       GoRoute(
@@ -134,6 +136,11 @@ class AppRoute {
         path: kChatView,
         builder: (BuildContext context, GoRouterState state) {
           return const ChatView();
+        },
+      ),GoRoute(
+        path:kAchievementsView ,
+        builder: (BuildContext context, GoRouterState state) {
+          return const AchievementsView();
         },
       ),
       GoRoute(

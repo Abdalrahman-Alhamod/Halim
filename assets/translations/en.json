@@ -361,5 +361,38 @@
   },
   "Chat": {
     "enterMessage": "Enter message..."
+  },
+  "Achievements": {
+    "Test": {
+      "halim": "Halim"
+    },
+    "points": "Points",
+    "rank": "Rank",
+    "totalHours": "Total Hours",
+    "totalCourses": "Total Courses",
+    "contributions": "Contributions",
+    "monthlyRate": "Monthly Rate",
+    "Sections": {
+      "Summery": {
+        "summery": "Summery",
+        "totalBudegs": "Total Budges",
+        "earned": "Earned"
+      },
+      "AvatarLevels": {
+        "avatarLevels": "Avater Levels"
+      },
+      "CoursesAttended": {
+        "coursesAttended": "Courses Attended"
+      },
+      "CommunityContributions": {
+        "communityContributions": "Community Contributions"
+      },
+      "FirstTime": {
+        "firstTime": "First Time"
+      },
+      "HoursSpent": {
+        "hoursSpent": "Hours Spent"
+      }
+    }
   }
 }
