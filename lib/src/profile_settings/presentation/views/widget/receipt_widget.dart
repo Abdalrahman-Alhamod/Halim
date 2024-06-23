@@ -50,7 +50,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
           Text('${widget.transactionID}'),
           SizedBox(height: 20),
           Container(
-            height: 90,
+            height: 80,
             decoration: BoxDecoration(
               color: context.isDarkMode
                   ? AppColors.loginWithButtonDarkColor
@@ -122,7 +122,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
           ),
           SizedBox(height: 25),
           Container(
-            height: 90,
+            height: 80,
             decoration: BoxDecoration(
               color: context.isDarkMode
                   ? AppColors.loginWithButtonDarkColor
@@ -194,7 +194,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
           ),
           SizedBox(height: 25),
           Container(
-            height: 220,
+            height: 210,
             decoration: BoxDecoration(
               color: context.isDarkMode
                   ? AppColors.loginWithButtonDarkColor
@@ -395,4 +395,3 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
     );
   }
 }
-

@@ -320,7 +320,8 @@ class CodegenLoader extends AssetLoader{
         "discount": "قيمة الحسم",
         "date": "تاريخ الشراء",
         "status": "حالة الدورة",
-        "email": "البريد الإلكتروني"
+        "email": "البريد الإلكتروني",
+        "download": "تنزيل"
       },
       "receipt": "الإيصال"
     },
@@ -692,7 +693,8 @@ static const Map<String,dynamic> en = {
         "discount": "Discount value",
         "date": "The date of purchase",
         "status": "Course status",
-        "email": "Email"
+        "email": "Email",
+        "download": "Download"
       },
       "receipt": "E-Receipt"
     },

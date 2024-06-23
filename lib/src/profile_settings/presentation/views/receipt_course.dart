@@ -25,13 +25,43 @@ class ReceiptViewState extends State<ReceiptView> {
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
+        actions: <Widget>[
+          PopupMenuButton<String>(
+            color: context.isDarkMode
+                ? AppColors.loginWithButtonDarkColor
+                : AppColors.lightFlatButtonColor,
+            onSelected: (String result) {
+              if (result == 'download') {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Download selected'),
+                  ),
+                );
+              }
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+              PopupMenuItem<String>(
+                value: 'download',
+                child: Row(
+                  children: [
+                    Text(LocaleKeys.Settings_Payments_Receipt_download.tr()),
+                    Spacer(),
+                    Icon(Icons.download,
+                        color: context.isDarkMode
+                            ? Colors.white
+                            : AppColors.darkColor),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(children: [
-
             ReceiptWidget(
               name: 'Alaa Aldeen Lababedi',
               email: 'master.alaa.aldeen@gmail.com',

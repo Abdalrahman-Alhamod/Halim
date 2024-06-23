@@ -265,6 +265,7 @@ abstract class  LocaleKeys {
   static const Settings_Payments_Receipt_date = 'Settings.Payments.Receipt.date';
   static const Settings_Payments_Receipt_status = 'Settings.Payments.Receipt.status';
   static const Settings_Payments_Receipt_email = 'Settings.Payments.Receipt.email';
+  static const Settings_Payments_Receipt_download = 'Settings.Payments.Receipt.download';
   static const Settings_Payments_Receipt = 'Settings.Payments.Receipt';
   static const Settings_Payments_receipt = 'Settings.Payments.receipt';
   static const Settings_Payments = 'Settings.Payments';
