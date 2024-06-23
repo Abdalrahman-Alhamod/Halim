@@ -73,15 +73,13 @@ class _FirstTimeSectionState extends State<FirstTimeSection> {
             total: 6,
             progressColor: Colors.deepOrange,
           ),
-          SizedBox(
-            height: 10,
-          ),
           GridView.builder(
             shrinkWrap: true,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
             ),
             itemCount: _badges.length,
+            physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return StaticBadge(
                 image: _badges[index].image,

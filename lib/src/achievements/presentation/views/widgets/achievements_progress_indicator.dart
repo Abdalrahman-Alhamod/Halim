@@ -54,7 +54,9 @@ class AchievementsProgressIndicator extends StatelessWidget {
                 '${context.isEnglish ? ' ${current} / ${total}' : '${total} / ${current}'}  ${LocaleKeys.Achievements_Sections_Summery_earned.tr()}',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.grey.shade300,
+                  color: context.isDarkMode
+                      ? Colors.grey.shade300
+                      : Colors.grey.shade100,
                 ),
               )
             ],

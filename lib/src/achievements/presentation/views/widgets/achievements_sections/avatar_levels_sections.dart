@@ -85,6 +85,7 @@ class _AvatarLevelsSectionState extends State<AvatarLevelsSection> {
             height: 10,
           ),
           ListView.separated(
+            physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemCount: _badges.length,
             separatorBuilder: (context, index) => SizedBox(

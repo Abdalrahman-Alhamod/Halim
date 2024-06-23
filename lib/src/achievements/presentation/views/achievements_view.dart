@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/core/widgets/sections_view/data/section_page.dart';
 import 'package:halim/core/widgets/sections_view/sections_view.dart';
 import 'package:halim/src/achievements/presentation/views/widgets/achievemenets_numbers.dart';
@@ -19,6 +20,7 @@ class AchievementsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.isEnglish;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

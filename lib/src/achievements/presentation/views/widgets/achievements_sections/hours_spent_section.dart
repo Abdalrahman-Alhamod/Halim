@@ -56,7 +56,6 @@ class _HoursSpentSectionState extends State<HoursSpentSection> {
         current: 500,
         total: 500,
       ),
-
       AchievemenetBadge(
         image: AppImages.testBadgeDisabled,
         name: 'Spend 1000 Hours',
@@ -87,15 +86,13 @@ class _HoursSpentSectionState extends State<HoursSpentSection> {
             total: 8,
             progressColor: Colors.teal,
           ),
-          SizedBox(
-            height: 10,
-          ),
           ListView.separated(
             shrinkWrap: true,
             itemCount: _badges.length,
             separatorBuilder: (context, index) => SizedBox(
               height: 20,
             ),
+            physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) => TrackedBadge(
               image: _badges[index].image,
               title: _badges[index].name,

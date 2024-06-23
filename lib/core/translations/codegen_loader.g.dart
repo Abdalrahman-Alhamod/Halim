@@ -409,7 +409,8 @@ class CodegenLoader extends AssetLoader{
       "HoursSpent": {
         "hoursSpent": "الساعات المقضية"
       }
-    }
+    },
+    "achievemenets": "الإنجازات"
   }
 };
 static const Map<String,dynamic> en = {
@@ -807,7 +808,8 @@ static const Map<String,dynamic> en = {
       "HoursSpent": {
         "hoursSpent": "Hours Spent"
       }
-    }
+    },
+    "achievemenets": "Achievemenets"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

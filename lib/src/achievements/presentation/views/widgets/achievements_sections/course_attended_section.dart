@@ -75,12 +75,10 @@ class _CourseAttendedSectionState extends State<CourseAttendedSection> {
             total: 6,
             progressColor: Colors.pink,
           ),
-          SizedBox(
-            height: 10,
-          ),
           ListView.separated(
             shrinkWrap: true,
             itemCount: _badges.length,
+            physics: NeverScrollableScrollPhysics(),
             separatorBuilder: (context, index) => SizedBox(
               height: 20,
             ),

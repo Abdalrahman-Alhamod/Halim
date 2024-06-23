@@ -39,12 +39,13 @@ class AchievementsNumbers extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: 170,
+          height: 180,
           child: GridView(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 2.5,
             ),
+            physics: NeverScrollableScrollPhysics(),
             children: [
               AchievementsNumbersListTile(
                 title: LocaleKeys.Achievements_totalHours.tr(),

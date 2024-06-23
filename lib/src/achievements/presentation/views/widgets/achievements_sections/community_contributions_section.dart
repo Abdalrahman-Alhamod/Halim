@@ -78,15 +78,13 @@ class _CommunityContributionsSectionState
             total: 6,
             progressColor: Colors.brown,
           ),
-          SizedBox(
-            height: 10,
-          ),
           ListView.separated(
             shrinkWrap: true,
             itemCount: _badges.length,
             separatorBuilder: (context, index) => SizedBox(
               height: 20,
             ),
+            physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) => TrackedBadge(
               image: _badges[index].image,
               title: _badges[index].name,

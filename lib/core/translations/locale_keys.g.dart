@@ -337,6 +337,7 @@ abstract class  LocaleKeys {
   static const Achievements_Sections_HoursSpent_hoursSpent = 'Achievements.Sections.HoursSpent.hoursSpent';
   static const Achievements_Sections_HoursSpent = 'Achievements.Sections.HoursSpent';
   static const Achievements_Sections = 'Achievements.Sections';
+  static const Achievements_achievemenets = 'Achievements.achievemenets';
   static const Achievements = 'Achievements';
 
 }
