@@ -377,6 +377,40 @@ class CodegenLoader extends AssetLoader{
   },
   "Chat": {
     "enterMessage": "ادخل رسالة..."
+  },
+  "Achievements": {
+    "Test": {
+      "halim": "حليم"
+    },
+    "points": "النقاط",
+    "rank": "المرتبة",
+    "totalHours": "عدد الساعات",
+    "totalCourses": "عدد الدورات",
+    "contributions": "الإسهامات",
+    "monthlyRate": "المتوسط الشهري",
+    "Sections": {
+      "Summery": {
+        "summery": "الملخص",
+        "totalBudegs": "جميع الشارات",
+        "earned": "مكتسبة"
+      },
+      "AvatarLevels": {
+        "avatarLevels": "مستويات الشخصية"
+      },
+      "CoursesAttended": {
+        "coursesAttended": "الدورات التي تم حضورها"
+      },
+      "CommunityContributions": {
+        "communityContributions": "إسهامات المجتمع"
+      },
+      "FirstTime": {
+        "firstTime": "للمرة الأولى"
+      },
+      "HoursSpent": {
+        "hoursSpent": "الساعات المقضية"
+      }
+    },
+    "achievemenets": "الإنجازات"
   }
 };
 static const Map<String,dynamic> en = {
@@ -742,6 +776,40 @@ static const Map<String,dynamic> en = {
   },
   "Chat": {
     "enterMessage": "Enter message..."
+  },
+  "Achievements": {
+    "Test": {
+      "halim": "Halim"
+    },
+    "points": "Points",
+    "rank": "Rank",
+    "totalHours": "Total Hours",
+    "totalCourses": "Total Courses",
+    "contributions": "Contributions",
+    "monthlyRate": "Monthly Rate",
+    "Sections": {
+      "Summery": {
+        "summery": "Summery",
+        "totalBudegs": "Total Budges",
+        "earned": "Earned"
+      },
+      "AvatarLevels": {
+        "avatarLevels": "Avater Levels"
+      },
+      "CoursesAttended": {
+        "coursesAttended": "Courses Attended"
+      },
+      "CommunityContributions": {
+        "communityContributions": "Community Contributions"
+      },
+      "FirstTime": {
+        "firstTime": "First Time"
+      },
+      "HoursSpent": {
+        "hoursSpent": "Hours Spent"
+      }
+    },
+    "achievemenets": "Achievemenets"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

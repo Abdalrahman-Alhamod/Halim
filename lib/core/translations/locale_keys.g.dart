@@ -314,5 +314,30 @@ abstract class  LocaleKeys {
   static const Leaderboards = 'Leaderboards';
   static const Chat_enterMessage = 'Chat.enterMessage';
   static const Chat = 'Chat';
+  static const Achievements_Test_halim = 'Achievements.Test.halim';
+  static const Achievements_Test = 'Achievements.Test';
+  static const Achievements_points = 'Achievements.points';
+  static const Achievements_rank = 'Achievements.rank';
+  static const Achievements_totalHours = 'Achievements.totalHours';
+  static const Achievements_totalCourses = 'Achievements.totalCourses';
+  static const Achievements_contributions = 'Achievements.contributions';
+  static const Achievements_monthlyRate = 'Achievements.monthlyRate';
+  static const Achievements_Sections_Summery_summery = 'Achievements.Sections.Summery.summery';
+  static const Achievements_Sections_Summery_totalBudegs = 'Achievements.Sections.Summery.totalBudegs';
+  static const Achievements_Sections_Summery_earned = 'Achievements.Sections.Summery.earned';
+  static const Achievements_Sections_Summery = 'Achievements.Sections.Summery';
+  static const Achievements_Sections_AvatarLevels_avatarLevels = 'Achievements.Sections.AvatarLevels.avatarLevels';
+  static const Achievements_Sections_AvatarLevels = 'Achievements.Sections.AvatarLevels';
+  static const Achievements_Sections_CoursesAttended_coursesAttended = 'Achievements.Sections.CoursesAttended.coursesAttended';
+  static const Achievements_Sections_CoursesAttended = 'Achievements.Sections.CoursesAttended';
+  static const Achievements_Sections_CommunityContributions_communityContributions = 'Achievements.Sections.CommunityContributions.communityContributions';
+  static const Achievements_Sections_CommunityContributions = 'Achievements.Sections.CommunityContributions';
+  static const Achievements_Sections_FirstTime_firstTime = 'Achievements.Sections.FirstTime.firstTime';
+  static const Achievements_Sections_FirstTime = 'Achievements.Sections.FirstTime';
+  static const Achievements_Sections_HoursSpent_hoursSpent = 'Achievements.Sections.HoursSpent.hoursSpent';
+  static const Achievements_Sections_HoursSpent = 'Achievements.Sections.HoursSpent';
+  static const Achievements_Sections = 'Achievements.Sections';
+  static const Achievements_achievemenets = 'Achievements.achievemenets';
+  static const Achievements = 'Achievements';
 
 }

@@ -361,5 +361,39 @@
   },
   "Chat": {
     "enterMessage": "ادخل رسالة..."
+  },
+  "Achievements": {
+    "Test": {
+      "halim": "حليم"
+    },
+    "points": "النقاط",
+    "rank": "المرتبة",
+    "totalHours": "عدد الساعات",
+    "totalCourses": "عدد الدورات",
+    "contributions": "الإسهامات",
+    "monthlyRate": "المتوسط الشهري",
+    "Sections": {
+      "Summery": {
+        "summery": "الملخص",
+        "totalBudegs": "جميع الشارات",
+        "earned": "مكتسبة"
+      },
+      "AvatarLevels": {
+        "avatarLevels": "مستويات الشخصية"
+      },
+      "CoursesAttended": {
+        "coursesAttended": "الدورات التي تم حضورها"
+      },
+      "CommunityContributions": {
+        "communityContributions": "إسهامات المجتمع"
+      },
+      "FirstTime": {
+        "firstTime": "للمرة الأولى"
+      },
+      "HoursSpent": {
+        "hoursSpent": "الساعات المقضية"
+      }
+    },
+    "achievemenets": "الإنجازات"
   }
 }

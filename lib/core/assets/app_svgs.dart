@@ -12,4 +12,12 @@ class AppSVGs {
   static const compass = '$mainPath/compass.svg';
   static const filter = '$mainPath/filter.svg';
   static const close = '$mainPath/close.svg';
+  static const calendar = '$mainPath/calendar.svg';
+  static const clock = '$mainPath/clock.svg';
+  static const coins = '$mainPath/coins.svg';
+  static const course = '$mainPath/course.svg';
+  static const discussion = '$mainPath/discussion.svg';
+  static const leaderbaord = '$mainPath/leaderboard.svg';
+  static const points = '$mainPath/points.svg';
+  static const store = '$mainPath/store.svg';
 }

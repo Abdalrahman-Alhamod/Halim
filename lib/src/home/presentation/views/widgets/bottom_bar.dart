@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
+import 'package:halim/src/achievements/presentation/views/achievements_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/settings_view.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import '../../../../../core/themes/app_colors.dart';
@@ -36,7 +37,7 @@ class BottomBarState extends State<BottomBar> {
   final List<Widget> _pages = [
     const HomeView(),
     const BrowseSectionsCourses(),
-    const Icon(Icons.power_input_sharp, size: 150),
+    const AchievementsView(),
     const SettingsView(),
   ];
 
@@ -80,7 +81,7 @@ class BottomBarState extends State<BottomBar> {
           ),
           SalomonBottomBarItem(
             icon: const Icon(Icons.military_tech),
-            title: Text(LocaleKeys.HomePage_Home_NavBar_myPoints.tr()),
+            title: Text(LocaleKeys.Achievements_achievemenets.tr()),
             selectedColor: AppColors.primaryColor,
           ),
           SalomonBottomBarItem(

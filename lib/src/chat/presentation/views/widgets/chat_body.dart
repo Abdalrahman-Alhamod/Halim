@@ -119,6 +119,7 @@ class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
 
   @override
   void didChangeMetrics() {
+    // ignore: deprecated_member_use
     final bottomInset = WidgetsBinding.instance.window.viewInsets.bottom;
     if (bottomInset > 0.0) {
       WidgetsBinding.instance.addPostFrameCallback((_) {

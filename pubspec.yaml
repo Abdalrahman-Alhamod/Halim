@@ -229,6 +229,15 @@ flutter:
           weight: 300
         - asset: assets/fonts/Tajawal/Tajawal-ExtraLight.ttf
           weight: 200
+    - family: Zahey
+      fonts:
+        - asset: assets/fonts/Zahey/Zahey-Regular.ttf
+          weight: 400  
+    - family: Satisfy
+      fonts:
+        - asset: assets/fonts/Satisfy/Satisfy-Regular.ttf
+          weight: 400  
+          
 
 
   #

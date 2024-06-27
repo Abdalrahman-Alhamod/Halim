@@ -20,7 +20,7 @@ void main() async {
         Locale(AppLocales.ar),
       ],
       path: AppLocales.translationsAssetsPath,
-      startLocale: const Locale(AppLocales.en),
+      // startLocale: const Locale(AppLocales.ar),
       fallbackLocale: const Locale(AppLocales.en),
       assetLoader: const CodegenLoader(),
       child: const HalimApp(),
@@ -38,7 +38,7 @@ class HalimApp extends StatelessWidget {
     return AdaptiveTheme(
       light: AppThemes.getLightThemeData(context),
       dark: AppThemes.getDarkThemeData(context),
-      initial: AdaptiveThemeMode.light,
+      initial: AdaptiveThemeMode.system,
       builder: (theme, darkTheme) => MaterialApp.router(
         routerConfig: AppRoute.router,
         debugShowCheckedModeBanner: false,
