@@ -15,11 +15,17 @@ class IntroView extends StatefulWidget {
 }
 
 class _IntroViewState extends State<IntroView> {
-  late final _pageController;
+  late final PageController _pageController;
   @override
   void initState() {
     super.initState();
     _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   bool _isLastPage = false;
