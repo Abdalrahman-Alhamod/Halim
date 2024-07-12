@@ -55,7 +55,8 @@ class CodegenLoader extends AssetLoader{
     "all": "الكل",
     "apply": "تطبيق",
     "cancel": "إلغاء",
-    "ok": "حسناً"
+    "ok": "حسناً",
+    "confirm": "أكّد"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -410,7 +411,41 @@ class CodegenLoader extends AssetLoader{
         "hoursSpent": "الساعات المقضية"
       }
     },
-    "achievemenets": "الإنجازات"
+    "achievemenets": "الإنجازات",
+    "Store": {
+      "store": "المتجر",
+      "by": "تقديم",
+      "discount": "خصم",
+      "point": "نقطة",
+      "couponLeft": "قسيمة متبقية",
+      "Test": {
+        "itemName": "مفكرة حليم",
+        "itemDesc": "مفكرة عالية الجودة لتدوين الملاحظات والأفكار"
+      },
+      "coupons": "قسائم",
+      "products": "منتجات",
+      "yourTotalPoints": "عدد نقاطك الكلي",
+      "Dialog": {
+        "confirmToPurchase": "قم بالتأكيد لإكمال الشراء",
+        "sureToPurchaseCoupon": "هل أنت متأكد أنك تريد شراء هذه القسيمة؟",
+        "courseName": "اسم الدورة",
+        "discount": "مقدار الخصم",
+        "couponPrice": "سعر القسيمة",
+        "youPoints": "عدد نقاطك",
+        "purchaseComplete": "عملية الشراء اكتملت!",
+        "youWillRecieveCouponNotification": "سوف يصلك إشعار يحتوي على رمز القسيمة التي تم شراؤها",
+        "sureToPurchaseProduct": "هل أنت متأكد أنك تريد شراء هذا المنتج؟",
+        "productName": "اسم المنتج",
+        "productPrice": "سعر المنتج",
+        "getTheProductFromCenter": "يمكنك استلام المنتج الذي اشتريته من متاجرنا"
+      },
+      "FilterCoupons": {
+        "allCoupons": "جميع القسائم",
+        "relevantCoupons": "قسائم قد تهمني",
+        "purchasableCoupons": "قسائم يمكنني شراءها",
+        "filterCoupons": "تصفية القسائم"
+      }
+    }
   }
 };
 static const Map<String,dynamic> en = {
@@ -454,7 +489,8 @@ static const Map<String,dynamic> en = {
     "all": "All",
     "apply": "Apply",
     "cancel": "Cancel",
-    "ok": "Ok"
+    "ok": "Ok",
+    "confirm": "Confirm"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -809,7 +845,41 @@ static const Map<String,dynamic> en = {
         "hoursSpent": "Hours Spent"
       }
     },
-    "achievemenets": "Achievemenets"
+    "achievemenets": "Achievemenets",
+    "Store": {
+      "store": "Store",
+      "by": "By",
+      "discount": "discount",
+      "point": "points",
+      "couponLeft": "coupons left",
+      "Test": {
+        "itemName": "Halim Notebook",
+        "itemDesc": "Hight quality notebook for notes and ideas"
+      },
+      "coupons": "Coupons",
+      "products": "Products",
+      "yourTotalPoints": "Your total points",
+      "Dialog": {
+        "confirmToPurchase": "Confirm to purchase",
+        "sureToPurchaseCoupon": "Are you sure you want to purchase this coupon?",
+        "courseName": "Course name",
+        "discount": "Discount",
+        "couponPrice": "Coupon price",
+        "youPoints": "Your points",
+        "purchaseComplete": "Purchase complete!",
+        "youWillRecieveCouponNotification": "You will recieve a notification that contains the purchased coupon code",
+        "sureToPurchaseProduct": "Are you sure you want to purchase this product?",
+        "productName": "Product name",
+        "productPrice": "Product price",
+        "getTheProductFromCenter": "Your can recieve your purchased product from our stores"
+      },
+      "FilterCoupons": {
+        "allCoupons": "All coupons",
+        "relevantCoupons": "Relevant coupons",
+        "purchasableCoupons": "Purchasable coupons",
+        "filterCoupons": "Filter Coupons"
+      }
+    }
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

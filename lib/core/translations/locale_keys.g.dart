@@ -39,6 +39,7 @@ abstract class  LocaleKeys {
   static const Buttons_apply = 'Buttons.apply';
   static const Buttons_cancel = 'Buttons.cancel';
   static const Buttons_ok = 'Buttons.ok';
+  static const Buttons_confirm = 'Buttons.confirm';
   static const Buttons = 'Buttons';
   static const CourseDetails_reviews = 'CourseDetails.reviews';
   static const CourseDetails_students = 'CourseDetails.students';
@@ -338,6 +339,36 @@ abstract class  LocaleKeys {
   static const Achievements_Sections_HoursSpent = 'Achievements.Sections.HoursSpent';
   static const Achievements_Sections = 'Achievements.Sections';
   static const Achievements_achievemenets = 'Achievements.achievemenets';
+  static const Achievements_Store_store = 'Achievements.Store.store';
+  static const Achievements_Store_by = 'Achievements.Store.by';
+  static const Achievements_Store_discount = 'Achievements.Store.discount';
+  static const Achievements_Store_point = 'Achievements.Store.point';
+  static const Achievements_Store_couponLeft = 'Achievements.Store.couponLeft';
+  static const Achievements_Store_Test_itemName = 'Achievements.Store.Test.itemName';
+  static const Achievements_Store_Test_itemDesc = 'Achievements.Store.Test.itemDesc';
+  static const Achievements_Store_Test = 'Achievements.Store.Test';
+  static const Achievements_Store_coupons = 'Achievements.Store.coupons';
+  static const Achievements_Store_products = 'Achievements.Store.products';
+  static const Achievements_Store_yourTotalPoints = 'Achievements.Store.yourTotalPoints';
+  static const Achievements_Store_Dialog_confirmToPurchase = 'Achievements.Store.Dialog.confirmToPurchase';
+  static const Achievements_Store_Dialog_sureToPurchaseCoupon = 'Achievements.Store.Dialog.sureToPurchaseCoupon';
+  static const Achievements_Store_Dialog_courseName = 'Achievements.Store.Dialog.courseName';
+  static const Achievements_Store_Dialog_discount = 'Achievements.Store.Dialog.discount';
+  static const Achievements_Store_Dialog_couponPrice = 'Achievements.Store.Dialog.couponPrice';
+  static const Achievements_Store_Dialog_youPoints = 'Achievements.Store.Dialog.youPoints';
+  static const Achievements_Store_Dialog_purchaseComplete = 'Achievements.Store.Dialog.purchaseComplete';
+  static const Achievements_Store_Dialog_youWillRecieveCouponNotification = 'Achievements.Store.Dialog.youWillRecieveCouponNotification';
+  static const Achievements_Store_Dialog_sureToPurchaseProduct = 'Achievements.Store.Dialog.sureToPurchaseProduct';
+  static const Achievements_Store_Dialog_productName = 'Achievements.Store.Dialog.productName';
+  static const Achievements_Store_Dialog_productPrice = 'Achievements.Store.Dialog.productPrice';
+  static const Achievements_Store_Dialog_getTheProductFromCenter = 'Achievements.Store.Dialog.getTheProductFromCenter';
+  static const Achievements_Store_Dialog = 'Achievements.Store.Dialog';
+  static const Achievements_Store_FilterCoupons_allCoupons = 'Achievements.Store.FilterCoupons.allCoupons';
+  static const Achievements_Store_FilterCoupons_relevantCoupons = 'Achievements.Store.FilterCoupons.relevantCoupons';
+  static const Achievements_Store_FilterCoupons_purchasableCoupons = 'Achievements.Store.FilterCoupons.purchasableCoupons';
+  static const Achievements_Store_FilterCoupons_filterCoupons = 'Achievements.Store.FilterCoupons.filterCoupons';
+  static const Achievements_Store_FilterCoupons = 'Achievements.Store.FilterCoupons';
+  static const Achievements_Store = 'Achievements.Store';
   static const Achievements = 'Achievements';
 
 }

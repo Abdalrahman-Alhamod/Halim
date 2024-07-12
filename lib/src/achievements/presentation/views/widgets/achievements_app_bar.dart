@@ -24,7 +24,9 @@ class AchievementsAppBar extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(AppRoute.kStoreView);
+          },
           icon: Padding(
             padding: const EdgeInsets.all(16.0),
             child: SvgPicture.asset(

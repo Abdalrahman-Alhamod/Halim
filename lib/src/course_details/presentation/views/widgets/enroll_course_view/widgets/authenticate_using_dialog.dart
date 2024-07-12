@@ -4,8 +4,6 @@ import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/widgets/pin_auth_dialog.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/functions/authenticate.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/widgets/enroll_success_dialog.dart';
-
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/constants/app_constrains.dart';
 import '../../../../../../../core/functions/show_custom_dialog.dart';
@@ -13,8 +11,13 @@ import '../../../../../../../core/themes/app_colors.dart';
 part './authentication_method_button.dart';
 
 class AuthenticateUsingDialog extends StatelessWidget {
-  const AuthenticateUsingDialog({super.key, required this.parentContext});
-  final BuildContext parentContext;
+  const AuthenticateUsingDialog({
+    super.key,
+    required this.message,
+    required this.onSuccess,
+  });
+  final String message;
+  final void Function() onSuccess;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -46,7 +49,7 @@ class AuthenticateUsingDialog extends StatelessWidget {
             flex: 3,
           ),
           Text(
-            LocaleKeys.CourseDetails_Enroll_verifyYourIdentityToPurchse.tr(),
+            message,
             style: const TextStyle(
               fontSize: 16,
             ),
@@ -65,7 +68,7 @@ class AuthenticateUsingDialog extends StatelessWidget {
                     showCustomDialog(
                       context: context,
                       widget: PINAuthDialog(
-                        parentContext: parentContext,
+                        onSuccess: onSuccess,
                       ),
                     );
                   },
@@ -80,10 +83,7 @@ class AuthenticateUsingDialog extends StatelessWidget {
                     Navigator.pop(context);
                     bool authenticated = await authenticate();
                     if (authenticated) {
-                      showCustomDialog(
-                        context: parentContext,
-                        widget: const EnrollSuccessDialog(),
-                      );
+                      onSuccess.call();
                     }
                   },
                   label: LocaleKeys.CourseDetails_Enroll_biometrics.tr(),

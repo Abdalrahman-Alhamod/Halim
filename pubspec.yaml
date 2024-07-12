@@ -109,6 +109,7 @@ dependencies:
   intl: ^0.19.0
   syncfusion_flutter_pdfviewer: ^24.2.8
   adaptive_theme: ^3.6.0
+  dotted_line: ^3.2.2
   
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1

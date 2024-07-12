@@ -39,7 +39,8 @@
     "all": "الكل",
     "apply": "تطبيق",
     "cancel": "إلغاء",
-    "ok": "حسناً"
+    "ok": "حسناً",
+    "confirm": "أكّد"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -394,6 +395,40 @@
         "hoursSpent": "الساعات المقضية"
       }
     },
-    "achievemenets": "الإنجازات"
+    "achievemenets": "الإنجازات",
+    "Store": {
+      "store": "المتجر",
+      "by": "تقديم",
+      "discount": "خصم",
+      "point": "نقطة",
+      "couponLeft": "قسيمة متبقية",
+      "Test": {
+        "itemName": "مفكرة حليم",
+        "itemDesc": "مفكرة عالية الجودة لتدوين الملاحظات والأفكار"
+      },
+      "coupons": "قسائم",
+      "products": "منتجات",
+      "yourTotalPoints": "عدد نقاطك الكلي",
+      "Dialog": {
+        "confirmToPurchase": "قم بالتأكيد لإكمال الشراء",
+        "sureToPurchaseCoupon": "هل أنت متأكد أنك تريد شراء هذه القسيمة؟",
+        "courseName": "اسم الدورة",
+        "discount": "مقدار الخصم",
+        "couponPrice": "سعر القسيمة",
+        "youPoints": "عدد نقاطك",
+        "purchaseComplete": "عملية الشراء اكتملت!",
+        "youWillRecieveCouponNotification": "سوف يصلك إشعار يحتوي على رمز القسيمة التي تم شراؤها",
+        "sureToPurchaseProduct": "هل أنت متأكد أنك تريد شراء هذا المنتج؟",
+        "productName": "اسم المنتج",
+        "productPrice": "سعر المنتج",
+        "getTheProductFromCenter": "يمكنك استلام المنتج الذي اشتريته من متاجرنا"
+      },
+      "FilterCoupons": {
+        "allCoupons": "جميع القسائم",
+        "relevantCoupons": "قسائم قد تهمني",
+        "purchasableCoupons": "قسائم يمكنني شراءها",
+        "filterCoupons": "تصفية القسائم"
+      }
+    }
   }
 }
