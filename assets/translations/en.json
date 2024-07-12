@@ -39,7 +39,8 @@
     "all": "All",
     "apply": "Apply",
     "cancel": "Cancel",
-    "ok": "Ok"
+    "ok": "Ok",
+    "confirm": "Confirm"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -394,6 +395,40 @@
         "hoursSpent": "Hours Spent"
       }
     },
-    "achievemenets": "Achievemenets"
+    "achievemenets": "Achievemenets",
+    "Store": {
+      "store": "Store",
+      "by": "By",
+      "discount": "discount",
+      "point": "points",
+      "couponLeft": "coupons left",
+      "Test": {
+        "itemName": "Halim Notebook",
+        "itemDesc": "Hight quality notebook for notes and ideas"
+      },
+      "coupons": "Coupons",
+      "products": "Products",
+      "yourTotalPoints": "Your total points",
+      "Dialog": {
+        "confirmToPurchase": "Confirm to purchase",
+        "sureToPurchaseCoupon": "Are you sure you want to purchase this coupon?",
+        "courseName": "Course name",
+        "discount": "Discount",
+        "couponPrice": "Coupon price",
+        "youPoints": "Your points",
+        "purchaseComplete": "Purchase complete!",
+        "youWillRecieveCouponNotification": "You will recieve a notification that contains the purchased coupon code",
+        "sureToPurchaseProduct": "Are you sure you want to purchase this product?",
+        "productName": "Product name",
+        "productPrice": "Product price",
+        "getTheProductFromCenter": "Your can recieve your purchased product from our stores"
+      },
+      "FilterCoupons": {
+        "allCoupons": "All coupons",
+        "relevantCoupons": "Relevant coupons",
+        "purchasableCoupons": "Purchasable coupons",
+        "filterCoupons": "Filter Coupons"
+      }
+    }
   }
 }
