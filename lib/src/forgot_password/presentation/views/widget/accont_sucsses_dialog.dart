@@ -1,7 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
@@ -17,10 +15,6 @@ class AccontSucssesDialog extends StatefulWidget {
 }
 
 class _AccontSucssesDialogState extends State<AccontSucssesDialog> {
-  void onLoadingComplete() {
-    print('Loading complete!');
-    GoRouter.of(context).push(AppRoute.kHome);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +64,7 @@ class _AccontSucssesDialogState extends State<AccontSucssesDialog> {
               children: [
                 CustomLoadingIndicator(
                   color: AppColors.primaryColor,
-                  onComplete: onLoadingComplete,
+                  onComplete: widget.onLoadingComplete,
                   size: 75,
                 ),
               ],
