@@ -56,7 +56,9 @@ class CodegenLoader extends AssetLoader{
     "apply": "تطبيق",
     "cancel": "إلغاء",
     "ok": "حسناً",
-    "confirm": "أكّد"
+    "confirm": "أكّد",
+    "previous": "السابق",
+    "submit": "إرسال"
   },
   "CourseDetails": {
     "reviews": "مراجعة",
@@ -128,6 +130,28 @@ class CodegenLoader extends AssetLoader{
       "Mentor": {
         "aboutMeTitle": "مصمم واجهات مستخدم محترف | خبير في نظام التصميم بغوغل | متخصص في تصميم المنتجات في سان فرانسيسكو | مدرب في منصة حليم",
         "aboutMeDesc": "مرحبًا، أنا يوسف عبدالرحمن، مصمم واجهات مستخدم بخبرة وشغف لخلق تجارب رقمية سلسة وجذابة. بعد سنوات من الخبرة في غوغل، أتخصص في صياغة حلول تصميم موجهة للمستخدم وتحسين واجهات المستخدم لتحقيق أقصى قدر من الاستخدامية والمشاركة. مقره في مدينة سان فرانسيسكو النابضة بالحياة، أجد الإلهام في التعاون مع فرق متعددة التخصصات لتحقيق أفكار المنتجات المبتكرة. كمتعلم متحمس ومدرب، أستمتع أيضًا بمشاركة معرفتي وتجاربي كمدرب على منصة حليم، لتمكين المصممين الطموحين من اتقان مهاراتهم والتفوق في مجال تصميم واجهات المستخدم وتجربة المستخدم الديناميكي."
+      },
+      "Quiz": {
+        "question1": "ما هي الفائدة الرئيسية من استخدام فيجما لتصميم واجهات المستخدم؟",
+        "question2": "أي ميزة توجد عادة في ملحقات فيجما؟",
+        "question3": "ما هو الغرض الأساسي من ملحقات فيجما؟",
+        "question4": "اختر الملحقات التي تساعد في إنشاء النماذج الأولية:",
+        "choice11": "التعاون",
+        "choice12": "النماذج الأولية",
+        "choice13": "التوسع",
+        "choice14": "سهولة الاستخدام",
+        "choice21": "إدارة الأصول",
+        "choice22": "تصدير الشيفرة",
+        "choice23": "رموز التصميم",
+        "choice24": "جميع ما سبق",
+        "choice31": "تحسين سير العمل في التصميم",
+        "choice32": "إنشاء أنظمة تصميم جديدة",
+        "choice33": "أتمتة المهام",
+        "choice34": "جميع ما سبق",
+        "choice41": "مساعد النماذج الأولية",
+        "choice42": "فيجموتيون",
+        "choice43": "بروتو باي",
+        "choice44": "سانتكون"
       }
     },
     "enrollCourse": "سجِّل في الدورة",
@@ -186,7 +210,27 @@ class CodegenLoader extends AssetLoader{
       "downloadCertificate": "تنزيل الشهادة"
     },
     "hrs": "س",
-    "mins": "د"
+    "mins": "د",
+    "Quiz": {
+      "quiz": "اختبار",
+      "questions": "عدد الاسئلة",
+      "status": "الحالة",
+      "grade": "الدرجة",
+      "limits": "القيود",
+      "attemptEvery8Hours": "محاولة واحدة كل 8 ساعات",
+      "nextAttempt": "المحاولة القادمة",
+      "passed": "ناجح",
+      "failed": "راسب",
+      "notTaken": "لم يتم التقدم",
+      "start": "ابدأ",
+      "question": "السؤال",
+      "totalQuestions": "جميع الأسئلة",
+      "correctAnswers": "الأجوبة الصحيحة",
+      "wrongAnswers": "الأجوبة الخاطئة",
+      "seeMyAnswers": "عرض إجاباتي",
+      "returnToCourse": "العودة إلى الدورة",
+      "quizDone": "انتهى الاختبار"
+    }
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور",
@@ -490,7 +534,9 @@ static const Map<String,dynamic> en = {
     "apply": "Apply",
     "cancel": "Cancel",
     "ok": "Ok",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "previous": "Presious",
+    "submit": "Submit"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -562,6 +608,28 @@ static const Map<String,dynamic> en = {
       "Mentor": {
         "aboutMeTitle": "Senior UI/UX Designer | Google Design System Expert | Product Design Specialist in San Francisco | Halim Instructor",
         "aboutMeDesc": "Hello, I'm Johanathan Williams, a seasoned UI/UX designer with a passion for creating intuitive and visually appealing digital experiences. With years of experience at Google, I specialize in crafting user-centric design solutions and optimizing user interfaces for maximum usability and engagement. Based in the vibrant city of San Francisco, I thrive on collaborating with cross-functional teams to bring innovative product ideas to life. As an avid learner and educator, I also enjoy sharing my knowledge and insights as a Halim instructor, empowering aspiring designers to hone their skills and excel in the dynamic field of UI/UX design."
+      },
+      "Quiz": {
+        "question1": "What is the main benefit of using Figma for UI design?",
+        "question2": "Which feature is commonly found in Figma plugins",
+        "question3": "What is the primary purpose of Figma plugins?",
+        "question4": "Select the plugins that assist in prototyping:",
+        "choice11": "Collaboration",
+        "choice12": "Prototyping",
+        "choice13": "Scalability",
+        "choice14": "Ease of Use",
+        "choice21": "Asset Management",
+        "choice22": "Code Export",
+        "choice23": "Design Tokens",
+        "choice24": "All of the above",
+        "choice31": "Enhance design workflow",
+        "choice32": "Create new design systems",
+        "choice33": "Automate tasks",
+        "choice34": "All of the above",
+        "choice41": "Prototype Helper",
+        "choice42": "Figmotion",
+        "choice43": "ProtoPie",
+        "choice44": "Santkon"
       }
     },
     "enrollCourse": "Enroll Course",
@@ -620,7 +688,27 @@ static const Map<String,dynamic> en = {
       "downloadCertificate": "Download Certificate"
     },
     "hrs": "hrs",
-    "mins": "mins"
+    "mins": "mins",
+    "Quiz": {
+      "quiz": "Quiz",
+      "questions": "Questions",
+      "status": "Status",
+      "grade": "Grade",
+      "limits": "Limits",
+      "attemptEvery8Hours": "1 attempt every 8 hours",
+      "nextAttempt": "Next attempt",
+      "passed": "Passed",
+      "failed": "Failed",
+      "notTaken": "Not Taken",
+      "start": "Start",
+      "question": "Question",
+      "totalQuestions": "Total questions",
+      "correctAnswers": "Correct answers",
+      "wrongAnswers": "Wrong answers",
+      "seeMyAnswers": "See my answers",
+      "returnToCourse": "Return to course",
+      "quizDone": "Quiz Done"
+    }
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password",

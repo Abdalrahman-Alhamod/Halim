@@ -1,4 +1,3 @@
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -23,7 +22,7 @@ class CourseReadingAppBar extends StatelessWidget
       title: Text(
         LocaleKeys.CourseDetails_Lessons_Type_reading.tr(),
         style: const TextStyle(
-          fontSize: 28,
+          fontSize: 24,
           fontWeight: FontWeight.w600,
         ),
       ),
@@ -32,5 +31,6 @@ class CourseReadingAppBar extends StatelessWidget
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(AppConstrains.maxAppBarHeight);
+  Size get preferredSize =>
+      const Size.fromHeight(AppConstrains.maxAppBarHeight);
 }
