@@ -99,8 +99,6 @@ dependencies:
   
   # for course reading section
   # flutter_super_html_viewer:
-  # Slide to donwload\delete
-  flutter_slidable: ^3.1.0
   # For community comments
   provider: ^6.1.2
   salomon_bottom_bar: ^3.3.2
@@ -110,6 +108,7 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^24.2.8
   adaptive_theme: ^3.6.0
   dotted_line: ^3.2.2
+  timelines: ^0.1.0
   
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
