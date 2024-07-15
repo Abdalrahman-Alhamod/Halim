@@ -27,9 +27,17 @@ class _BookmarkButtonState extends State<BookmarkButton> {
       onPressed: () {
         setState(() {
           if (_isPressed) {
-            showRemoveBookmarkBottomSheet(context);
+            showRemoveBookmarkBottomSheet(
+              context: context,
+              onConfirm: () {
+                setState(() {
+                  _isPressed = false;
+                });
+              },
+            );
+          } else {
+            _isPressed = true;
           }
-          _isPressed = !_isPressed;
         });
       },
       icon: SvgPicture.asset(
