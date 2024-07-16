@@ -1,4 +1,4 @@
-class AppFonts {
+abstract final class AppFonts {
   static const urbanist = 'Urbanist';
   static const tajawal = 'Tajawal';
   static const zahey = 'Zahey';

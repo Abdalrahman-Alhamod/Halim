@@ -109,6 +109,9 @@ dependencies:
   adaptive_theme: ^3.6.0
   dotted_line: ^3.2.2
   timelines: ^0.1.0
+  video_player: ^2.9.1
+  chewie: ^1.8.1
+  flutter_markdown: ^0.7.3
   
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -155,6 +158,7 @@ flutter:
     - assets/images/test/
     - assets/svgs/
     - assets/translations/
+    - assets/videos/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

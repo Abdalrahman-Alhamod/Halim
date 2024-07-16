@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 // import 'package:flutter_super_html_viewer/flutter_super_html_viewer.dart';
 // import 'package:halim/core/test/test_course.dart';
 
+import '../../../../core/test/app_test.dart';
 import 'widgets/course_reading_view/course_reading_app_bar.dart';
 
 class CourseReadingView extends StatelessWidget {
@@ -15,8 +17,8 @@ class CourseReadingView extends StatelessWidget {
       //   title: LocaleKeys.Buttons_next.tr(),
       //   onPressed: () {},
       // ),
-      body: const Center(
-        child: Text('HTML CONTENT'),
+      body: const Markdown(
+        data: AppTest.notesMarkdown,
       ),
     );
   }

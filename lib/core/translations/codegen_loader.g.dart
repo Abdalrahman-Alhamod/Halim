@@ -230,6 +230,12 @@ class CodegenLoader extends AssetLoader{
       "seeMyAnswers": "عرض إجاباتي",
       "returnToCourse": "العودة إلى الدورة",
       "quizDone": "انتهى الاختبار"
+    },
+    "Video": {
+      "loading": "جاري التحميل...",
+      "notes": "ملاحظات",
+      "playbackSpeed": "سرعة التشغيل",
+      "subtitles": "الترجمات النصية"
     }
   },
   "ForgotPassword": {
@@ -708,6 +714,12 @@ static const Map<String,dynamic> en = {
       "seeMyAnswers": "See my answers",
       "returnToCourse": "Return to course",
       "quizDone": "Quiz Done"
+    },
+    "Video": {
+      "loading": "Loading...",
+      "notes": "Notes",
+      "playbackSpeed": "Playback speed",
+      "subtitles": "Subtitles"
     }
   },
   "ForgotPassword": {

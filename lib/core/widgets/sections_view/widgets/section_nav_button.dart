@@ -8,11 +8,14 @@ class _SectionNavButton extends StatelessWidget {
   });
   final String title;
   final bool isSelected;
-  final void Function() onPressed;
+  final void Function(double buttonWidth) onPressed;
   @override
   Widget build(BuildContext context) {
+   
     return TextButton(
-      onPressed: onPressed,
+      onPressed: () {
+        onPressed.call((context.findRenderObject() as RenderBox).size.width);
+      },
       style: TextButton.styleFrom(
         shape: LinearBorder.bottom(
           side: isSelected

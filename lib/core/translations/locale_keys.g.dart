@@ -196,6 +196,11 @@ abstract class  LocaleKeys {
   static const CourseDetails_Quiz_returnToCourse = 'CourseDetails.Quiz.returnToCourse';
   static const CourseDetails_Quiz_quizDone = 'CourseDetails.Quiz.quizDone';
   static const CourseDetails_Quiz = 'CourseDetails.Quiz';
+  static const CourseDetails_Video_loading = 'CourseDetails.Video.loading';
+  static const CourseDetails_Video_notes = 'CourseDetails.Video.notes';
+  static const CourseDetails_Video_playbackSpeed = 'CourseDetails.Video.playbackSpeed';
+  static const CourseDetails_Video_subtitles = 'CourseDetails.Video.subtitles';
+  static const CourseDetails_Video = 'CourseDetails.Video';
   static const CourseDetails = 'CourseDetails';
   static const ForgotPassword_confirmPassword = 'ForgotPassword.confirmPassword';
   static const ForgotPassword_select = 'ForgotPassword.select';
