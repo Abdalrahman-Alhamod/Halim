@@ -1,14 +1,12 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
 
 import '../../../../../../core/constants/app_constrains.dart';
 import '../../../../../../core/widgets/back_arrow_icon.dart';
 
-class CourseQuizAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CourseQuizAppBar({super.key});
-
+class CourseVideoAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CourseVideoAppBar({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,7 +25,7 @@ class CourseQuizAppBar extends StatelessWidget implements PreferredSizeWidget {
             width: 24,
           ),
           Text(
-            LocaleKeys.CourseDetails_Quiz_quiz.tr(),
+            title,
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w600,

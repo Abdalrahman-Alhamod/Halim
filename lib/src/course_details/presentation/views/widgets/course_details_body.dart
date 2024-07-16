@@ -15,12 +15,12 @@ class CourseDetailsBody extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: [
-        const CourseVideoCover(),
+        const CourseIntroVideo(),
         Padding(
           padding: const EdgeInsets.only(
-            top: 24.0,
-            left: 24.0,
-            right: 24.0,
+            top: 16.0,
+            left: 16.0,
+            right: 16.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

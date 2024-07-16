@@ -1,4 +1,4 @@
-class AppSVGs {
+abstract final class AppSVGs {
   static const mainPath = 'assets/svgs';
   static const playCircle = '$mainPath/play_circle.svg';
   static const bookmark = '$mainPath/bookmark.svg';

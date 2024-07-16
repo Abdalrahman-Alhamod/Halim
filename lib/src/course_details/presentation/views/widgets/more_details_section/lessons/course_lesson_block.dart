@@ -33,13 +33,17 @@ class CourseLessonBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        if (type == CourseLessonType.reading && !isLocked) {
-          GoRouter.of(context).push(AppRoute.kCourseReadingView);
-        } else if (type == CourseLessonType.quiz && !isLocked) {
-          GoRouter.of(context).push(AppRoute.kCourseQuizView);
-        }
-      },
+      onTap: isLocked
+          ? null
+          : () {
+              if (type == CourseLessonType.reading) {
+                GoRouter.of(context).push(AppRoute.kCourseReadingView);
+              } else if (type == CourseLessonType.quiz) {
+                GoRouter.of(context).push(AppRoute.kCourseQuizView);
+              } else if (type == CourseLessonType.video) {
+                GoRouter.of(context).push(AppRoute.kCourseVideoView);
+              }
+            },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 2),
         height: 90,
@@ -135,7 +139,7 @@ class CourseLessonBlockElements extends StatelessWidget {
                           width: 10,
                         ),
                         type == CourseLessonType.quiz
-                            ? Text(
+                            ? AutoSizeText(
                                 '${questionNumber} ${LocaleKeys.CourseDetails_Lessons_questions.tr()}',
                                 style: const TextStyle(
                                   fontSize: 16,
@@ -143,7 +147,7 @@ class CourseLessonBlockElements extends StatelessWidget {
                                   color: Colors.orange,
                                 ),
                               )
-                            : Container(),
+                            : SizedBox(),
                       ],
                     )
                   ],
@@ -295,15 +299,11 @@ class DownloadIconButton extends StatelessWidget {
   final bool isDownloaded;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(4.0),
-      child: IconButton(
-        onPressed: () {},
-        icon: Icon(
-          isDownloaded ? Icons.delete : Icons.download,
-          color:
-              context.isDarkMode ? Colors.grey.shade400 : Colors.grey.shade500,
-        ),
+    return IconButton(
+      onPressed: () {},
+      icon: Icon(
+        isDownloaded ? Icons.delete : Icons.download,
+        color: context.isDarkMode ? Colors.grey.shade400 : Colors.grey.shade500,
       ),
     );
   }

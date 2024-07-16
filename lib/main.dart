@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:halim/core/translations/app_locales.dart';
 import 'package:halim/core/translations/codegen_loader.g.dart';
 import 'package:halim/core/utils/app_route.dart';
-
 import 'core/themes/app_themes.dart';
 
 void main() async {
@@ -20,7 +19,7 @@ void main() async {
         Locale(AppLocales.ar),
       ],
       path: AppLocales.translationsAssetsPath,
-      // startLocale: const Locale(AppLocales.ar),
+      startLocale: const Locale(AppLocales.en),
       fallbackLocale: const Locale(AppLocales.en),
       assetLoader: const CodegenLoader(),
       child: const HalimApp(),
