@@ -21,7 +21,6 @@ class AppThemes {
       ),
       sliderTheme: _getSliderTheme(context),
       useMaterial3: true,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
     );
   }
 
@@ -60,7 +59,6 @@ class AppThemes {
       ),
       sliderTheme: _getSliderTheme(context),
       useMaterial3: true,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
     );
   }
 }
