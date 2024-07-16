@@ -90,7 +90,6 @@ class _NewPassBodyState extends State<NewPassBody> {
                   context: context,
                   widget: AccontSucssesDialog(
                     () {
-                      print('Loading complete!');
                       GoRouter.of(context).go(AppRoute.kHome);
                     },
                   ));

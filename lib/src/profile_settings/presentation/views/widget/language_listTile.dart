@@ -73,7 +73,6 @@ class _LanguageListTileState extends State<LanguageListTile> {
                   context: context,
                   widget: AccontSucssesDialog(
                     () {
-                      print('Loading complete!');
                       GoRouter.of(context).push(AppRoute.kHome);
                     },
                   ));

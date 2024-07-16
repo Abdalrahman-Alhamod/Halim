@@ -71,7 +71,6 @@ class _SectionsNavBarState extends State<_SectionsNavBar> {
     // Calculate target scroll position to center the selected button
     double targetScrollPosition =
         offset - (MediaQuery.of(context).size.width / 3) + (buttonWidth / 2);
-    print(targetScrollPosition);
 
     // Animate scrolling to the calculated position
     _scrollController.animateTo(
