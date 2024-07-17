@@ -6,9 +6,7 @@ import 'package:halim/core/functions/show_custom_dialog.dart';
 import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/core/widgets/custome_flat_button.dart';
-import 'package:halim/src/forgot_password/presentation/views/enter_code_body.dart';
 import 'package:halim/src/forgot_password/presentation/views/widget/accont_sucsses_dialog.dart';
-import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
