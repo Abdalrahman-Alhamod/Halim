@@ -22,9 +22,9 @@ class IntroPage extends StatelessWidget {
             flex: 1,
           ),
           ConstrainedBox(
-            constraints: const BoxConstraints(
+            constraints: BoxConstraints(
               minWidth: 100,
-              maxWidth: 450,
+              maxWidth: context.width * 0.8,
             ),
             child: Image.asset(
               image,

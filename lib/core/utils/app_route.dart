@@ -3,11 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/navigation_extra_keys.dart';
+import 'package:halim/src/achievements/presentation/views/achievements_view.dart';
 import 'package:halim/src/achievements/presentation/views/store_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_quiz_view.dart';
 import 'package:halim/src/course_details/presentation/views/quiz_finish_view.dart';
 import 'package:halim/src/course_details/presentation/views/quiz_questions_view.dart';
-import 'package:halim/src/home/presentation/views/profile_student.dart';
+import 'package:halim/src/course_details/presentation/views/course_video_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
@@ -68,6 +69,7 @@ class AppRoute {
   static const kCourseQuizView = '/courseQuiz';
   static const kQuizQuestionsView = '/quizQuestions';
   static const kQuizFinishView = '/quizFinish';
+  static const kCourseVideoView = '/courseVideo';
 
   static const kFillProfile = '/fillProfile';
   static const kCreatePin = '/kCreatePin';
@@ -165,6 +167,12 @@ class AppRoute {
         path: kCourseLessonsView,
         builder: (BuildContext context, GoRouterState state) {
           return const CourseLessonsView();
+        },
+      ),
+      GoRoute(
+        path: kCourseVideoView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const CourseVideoView();
         },
       ),
       GoRoute(

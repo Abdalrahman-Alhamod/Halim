@@ -60,10 +60,8 @@ class BottomBarState extends State<BottomBar> {
           setState(
             () {
               _currentIndex = newIndex;
-              _pageController.animateToPage(
+              _pageController.jumpToPage(
                 newIndex,
-                duration: Duration(milliseconds: 300),
-                curve: Curves.easeIn,
               );
             },
           );

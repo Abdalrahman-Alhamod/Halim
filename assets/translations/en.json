@@ -214,6 +214,12 @@
       "seeMyAnswers": "See my answers",
       "returnToCourse": "Return to course",
       "quizDone": "Quiz Done"
+    },
+    "Video": {
+      "loading": "Loading...",
+      "notes": "Notes",
+      "playbackSpeed": "Playback speed",
+      "subtitles": "Subtitles"
     }
   },
   "ForgotPassword": {

@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:halim/core/translations/app_locales.dart';
 import 'package:halim/core/translations/codegen_loader.g.dart';
 import 'package:halim/core/utils/app_route.dart';
-
 import 'core/themes/app_themes.dart';
 
 void main() async {
@@ -36,6 +35,7 @@ class HalimApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
+      // key: UniqueKey(),
       light: AppThemes.getLightThemeData(context),
       dark: AppThemes.getDarkThemeData(context),
       initial: AdaptiveThemeMode.system,
@@ -45,6 +45,7 @@ class HalimApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
+        theme: theme,
         darkTheme: darkTheme,
       ),
     );

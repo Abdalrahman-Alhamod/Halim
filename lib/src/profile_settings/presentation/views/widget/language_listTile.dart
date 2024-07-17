@@ -59,6 +59,25 @@ class _LanguageListTileState extends State<LanguageListTile> {
             },
           ),
         ),
+        Container(height: context.height * 0.58),
+        Center(
+          child: CustomFlatButton(
+            onPressed: () {
+              showCustomDialog(
+                  context: context,
+                  widget: AccontSucssesDialog(
+                    () {
+                      GoRouter.of(context).push(AppRoute.kHome);
+                    },
+                  ));
+            },
+            title: LocaleKeys.FillYourProfile_continue.tr(),
+            width: MediaQuery.of(context).size.width * 0.90,
+            height: 60,
+            kTextcolor: AppColors.lightFlatButtonColor,
+            kBackgroundcolor: AppColors.primaryColor,
+          ),
+        ),
       ],
     );
   }
