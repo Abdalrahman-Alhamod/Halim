@@ -39,7 +39,10 @@
     "all": "All",
     "apply": "Apply",
     "cancel": "Cancel",
-    "ok": "Ok"
+    "ok": "Ok",
+    "confirm": "Confirm",
+    "previous": "Presious",
+    "submit": "Submit"
   },
   "CourseDetails": {
     "reviews": "reviews",
@@ -111,6 +114,28 @@
       "Mentor": {
         "aboutMeTitle": "Senior UI/UX Designer | Google Design System Expert | Product Design Specialist in San Francisco | Halim Instructor",
         "aboutMeDesc": "Hello, I'm Johanathan Williams, a seasoned UI/UX designer with a passion for creating intuitive and visually appealing digital experiences. With years of experience at Google, I specialize in crafting user-centric design solutions and optimizing user interfaces for maximum usability and engagement. Based in the vibrant city of San Francisco, I thrive on collaborating with cross-functional teams to bring innovative product ideas to life. As an avid learner and educator, I also enjoy sharing my knowledge and insights as a Halim instructor, empowering aspiring designers to hone their skills and excel in the dynamic field of UI/UX design."
+      },
+      "Quiz": {
+        "question1": "What is the main benefit of using Figma for UI design?",
+        "question2": "Which feature is commonly found in Figma plugins",
+        "question3": "What is the primary purpose of Figma plugins?",
+        "question4": "Select the plugins that assist in prototyping:",
+        "choice11": "Collaboration",
+        "choice12": "Prototyping",
+        "choice13": "Scalability",
+        "choice14": "Ease of Use",
+        "choice21": "Asset Management",
+        "choice22": "Code Export",
+        "choice23": "Design Tokens",
+        "choice24": "All of the above",
+        "choice31": "Enhance design workflow",
+        "choice32": "Create new design systems",
+        "choice33": "Automate tasks",
+        "choice34": "All of the above",
+        "choice41": "Prototype Helper",
+        "choice42": "Figmotion",
+        "choice43": "ProtoPie",
+        "choice44": "Santkon"
       }
     },
     "enrollCourse": "Enroll Course",
@@ -169,7 +194,27 @@
       "downloadCertificate": "Download Certificate"
     },
     "hrs": "hrs",
-    "mins": "mins"
+    "mins": "mins",
+    "Quiz": {
+      "quiz": "Quiz",
+      "questions": "Questions",
+      "status": "Status",
+      "grade": "Grade",
+      "limits": "Limits",
+      "attemptEvery8Hours": "1 attempt every 8 hours",
+      "nextAttempt": "Next attempt",
+      "passed": "Passed",
+      "failed": "Failed",
+      "notTaken": "Not Taken",
+      "start": "Start",
+      "question": "Question",
+      "totalQuestions": "Total questions",
+      "correctAnswers": "Correct answers",
+      "wrongAnswers": "Wrong answers",
+      "seeMyAnswers": "See my answers",
+      "returnToCourse": "Return to course",
+      "quizDone": "Quiz Done"
+    }
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password",
@@ -370,5 +415,73 @@
   },
   "Chat": {
     "enterMessage": "Enter message..."
+  },
+  "Achievements": {
+    "Test": {
+      "halim": "Halim"
+    },
+    "points": "Points",
+    "rank": "Rank",
+    "totalHours": "Total Hours",
+    "totalCourses": "Total Courses",
+    "contributions": "Contributions",
+    "monthlyRate": "Monthly Rate",
+    "Sections": {
+      "Summery": {
+        "summery": "Summery",
+        "totalBudegs": "Total Budges",
+        "earned": "Earned"
+      },
+      "AvatarLevels": {
+        "avatarLevels": "Avater Levels"
+      },
+      "CoursesAttended": {
+        "coursesAttended": "Courses Attended"
+      },
+      "CommunityContributions": {
+        "communityContributions": "Community Contributions"
+      },
+      "FirstTime": {
+        "firstTime": "First Time"
+      },
+      "HoursSpent": {
+        "hoursSpent": "Hours Spent"
+      }
+    },
+    "achievemenets": "Achievemenets",
+    "Store": {
+      "store": "Store",
+      "by": "By",
+      "discount": "discount",
+      "point": "points",
+      "couponLeft": "coupons left",
+      "Test": {
+        "itemName": "Halim Notebook",
+        "itemDesc": "Hight quality notebook for notes and ideas"
+      },
+      "coupons": "Coupons",
+      "products": "Products",
+      "yourTotalPoints": "Your total points",
+      "Dialog": {
+        "confirmToPurchase": "Confirm to purchase",
+        "sureToPurchaseCoupon": "Are you sure you want to purchase this coupon?",
+        "courseName": "Course name",
+        "discount": "Discount",
+        "couponPrice": "Coupon price",
+        "youPoints": "Your points",
+        "purchaseComplete": "Purchase complete!",
+        "youWillRecieveCouponNotification": "You will recieve a notification that contains the purchased coupon code",
+        "sureToPurchaseProduct": "Are you sure you want to purchase this product?",
+        "productName": "Product name",
+        "productPrice": "Product price",
+        "getTheProductFromCenter": "Your can recieve your purchased product from our stores"
+      },
+      "FilterCoupons": {
+        "allCoupons": "All coupons",
+        "relevantCoupons": "Relevant coupons",
+        "purchasableCoupons": "Purchasable coupons",
+        "filterCoupons": "Filter Coupons"
+      }
+    }
   }
 }

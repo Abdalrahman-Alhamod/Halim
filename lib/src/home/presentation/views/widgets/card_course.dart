@@ -45,7 +45,11 @@ class _CardCourseState extends State<CardCourse> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => GoRouter.of(context).push(AppRoute.kCourseDetailsView),
+      onTap: () {
+        if (widget.isEnabled) {
+          GoRouter.of(context).push(AppRoute.kCourseDetailsView);
+        }
+      },
       child: Container(
         height: 150,
         decoration: BoxDecoration(
@@ -113,11 +117,16 @@ class _CardCourseState extends State<CardCourse> {
                           onPressed: widget.isEnabled
                               ? () {
                                   if (_isBookmarked) {
-                                    showRemoveBookmarkBottomSheet(context);
+                                    showRemoveBookmarkBottomSheet(context: context,onConfirm: () {
+                                       setState(() {
+                                      _isBookmarked = false;
+                                    });
+                                    },);
+                                  } else {
+                                    setState(() {
+                                      _isBookmarked = true;
+                                    });
                                   }
-                                  setState(() {
-                                    _isBookmarked = !_isBookmarked;
-                                  });
                                 }
                               : null,
                         ),

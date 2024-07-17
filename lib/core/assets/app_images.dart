@@ -15,8 +15,8 @@ class AppImages {
   static const forgotPassword = '$mainPath/forgot_password.png';
   static const google = '$mainPath/google.png';
   static const facebook = '$mainPath/facebook.png';
-   static const emptyAvatar = '$mainPath/emptyAvatar.png';
-   static const iconPublic = '$mainPath/icon.png';
+  static const emptyAvatar = '$mainPath/emptyAvatar.png';
+  static const iconPublic = '$mainPath/icon.png';
 
   static const testPath = 'assets/images/test';
   static const testCourseCover = '$testPath/course_cover.png';
@@ -26,6 +26,10 @@ class AppImages {
   static const testAvatarYassin = '$testPath/yassin.png';
   static const testAvatarAlaa = '$testPath/alaa.png';
   static const testCertificate = '$testPath/certificate.png';
+  static const testHalimAvatar = '$testPath/halim_avatar.png';
+  static const testBadge = '$testPath/badge.png';
+  static const testBadgeDisabled = '$testPath/badge_grey.png';
+  static const testNotebook = '$testPath/notebook.png';
 
   static const List<String> allImages = [
     appLogo,
@@ -53,6 +57,10 @@ class AppImages {
     testAvatarAlaa,
     testAvatarObada,
     testAvatarYassin,
-    testCertificate
+    testCertificate,
+    testHalimAvatar,
+    testBadge,
+    testBadgeDisabled,
+    testNotebook
   ];
 }

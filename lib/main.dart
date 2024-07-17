@@ -38,7 +38,7 @@ class HalimApp extends StatelessWidget {
     return AdaptiveTheme(
       light: AppThemes.getLightThemeData(context),
       dark: AppThemes.getDarkThemeData(context),
-      initial: AdaptiveThemeMode.light,
+      initial: AdaptiveThemeMode.system,
       builder: (theme, darkTheme) => MaterialApp.router(
         routerConfig: AppRoute.router,
         debugShowCheckedModeBanner: false,

@@ -73,7 +73,9 @@ class EnrollSuccessDialog extends StatelessWidget {
                     height: 14,
                   ),
                   CustomElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      GoRouter.of(context).push(AppRoute.kReceiptView);
+                    },
                     title: LocaleKeys.CourseDetails_Enroll_viewEReceipt.tr(),
                     elevation: 0,
                     backgroundColor: context.isDarkMode

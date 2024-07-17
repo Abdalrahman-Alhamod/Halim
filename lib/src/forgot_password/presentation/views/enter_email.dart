@@ -93,5 +93,5 @@ class _EnterEmailViewState extends State<EnterEmailView> {
         ],
       ),
     ));
-  }
+  } 
 }

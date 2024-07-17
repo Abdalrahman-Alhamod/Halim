@@ -1,7 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
@@ -10,63 +9,18 @@ import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_svgs.dart';
 import '../../../../../../../core/themes/app_colors.dart';
-
-enum CourseLessonType { video, reading, quiz }
+import '../../../../../domain/entities/course_lesson_type.dart';
 
 class CourseLessonBlock extends StatelessWidget {
   const CourseLessonBlock({
     super.key,
-    required this.number,
-    required this.title,
-    required this.duration,
-    required this.isLocked,
-    required this.type,
-    required this.isDone,
-  });
-  final int number;
-  final String title;
-  final int duration;
-  final bool isLocked;
-  final CourseLessonType type;
-  final bool isDone;
-  @override
-  Widget build(BuildContext context) {
-    return Slidable(
-      startActionPane: ActionPane(
-        motion: const ScrollMotion(),
-        extentRatio: 1 / 3,
-        children: [
-          SlidableAction(
-            onPressed: (context) {},
-            backgroundColor: AppColors.primaryColor.withAlpha(30),
-            foregroundColor:
-                context.isDarkMode ? Colors.white : AppColors.primaryColor,
-            icon: Icons.download,
-            label: LocaleKeys.Buttons_download.tr(),
-            borderRadius: BorderRadius.circular(16),
-            autoClose: true,
-          ),
-        ],
-      ),
-      child: CourseLessonBlockBox(
-        type: type,
-        title: title,
-        duration: duration,
-        isLocked: isLocked,
-        isDone: isDone,
-      ),
-    );
-  }
-}
-
-class CourseLessonBlockBox extends StatelessWidget {
-  const CourseLessonBlockBox({
-    super.key,
     required this.type,
     required this.title,
     required this.duration,
     required this.isLocked,
     required this.isDone,
+    this.questionNumber,
+    required this.isDownloaded,
   });
 
   final CourseLessonType type;
@@ -74,12 +28,16 @@ class CourseLessonBlockBox extends StatelessWidget {
   final int duration;
   final bool isLocked;
   final bool isDone;
+  final int? questionNumber;
+  final bool isDownloaded;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         if (type == CourseLessonType.reading && !isLocked) {
           GoRouter.of(context).push(AppRoute.kCourseReadingView);
+        } else if (type == CourseLessonType.quiz && !isLocked) {
+          GoRouter.of(context).push(AppRoute.kCourseQuizView);
         }
       },
       child: Container(
@@ -114,6 +72,8 @@ class CourseLessonBlockBox extends StatelessWidget {
             duration: duration,
             isLocked: isLocked,
             isDone: isDone,
+            questionNumber: questionNumber,
+            isDownloaded: isDownloaded,
           ),
         ),
       ),
@@ -129,6 +89,8 @@ class CourseLessonBlockElements extends StatelessWidget {
     required this.duration,
     required this.isLocked,
     required this.isDone,
+    this.questionNumber,
+    required this.isDownloaded,
   });
 
   final CourseLessonType type;
@@ -136,6 +98,8 @@ class CourseLessonBlockElements extends StatelessWidget {
   final int duration;
   final bool isLocked;
   final bool isDone;
+  final int? questionNumber;
+  final bool isDownloaded;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -148,6 +112,7 @@ class CourseLessonBlockElements extends StatelessWidget {
               CourseLessonIcon(
                 type: type,
                 isDone: isDone,
+                isLocked: isLocked,
               ),
               const SizedBox(
                 width: 20,
@@ -171,7 +136,7 @@ class CourseLessonBlockElements extends StatelessWidget {
                         ),
                         type == CourseLessonType.quiz
                             ? Text(
-                                '20 ${LocaleKeys.CourseDetails_Lessons_questions.tr()}',
+                                '${questionNumber} ${LocaleKeys.CourseDetails_Lessons_questions.tr()}',
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
@@ -187,11 +152,11 @@ class CourseLessonBlockElements extends StatelessWidget {
             ],
           ),
         ),
-        isLocked
-            ? const LockIcon()
-            : type == CourseLessonType.video
-                ? const PlayIconButton()
-                : Container(),
+        !isLocked
+            ? DownloadIconButton(
+                isDownloaded: isDownloaded,
+              )
+            : SizedBox(),
       ],
     );
   }
@@ -202,10 +167,12 @@ class CourseLessonIcon extends StatelessWidget {
     super.key,
     required this.type,
     required this.isDone,
+    required this.isLocked,
   });
 
   final CourseLessonType type;
   final bool isDone;
+  final bool isLocked;
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
@@ -213,19 +180,21 @@ class CourseLessonIcon extends StatelessWidget {
         20,
       ),
       radius: 22,
-      child: isDone
-          ? const Icon(
-              Icons.done,
-              color: Colors.green,
-            )
-          : Icon(
-              switch (type) {
-                CourseLessonType.video => Icons.play_arrow,
-                CourseLessonType.reading => Icons.auto_stories,
-                CourseLessonType.quiz => Icons.quiz,
-              },
-              color: AppColors.primaryColor,
-            ),
+      child: isLocked
+          ? LockIcon()
+          : isDone
+              ? const Icon(
+                  Icons.done,
+                  color: Colors.green,
+                )
+              : Icon(
+                  switch (type) {
+                    CourseLessonType.video => Icons.play_arrow,
+                    CourseLessonType.reading => Icons.auto_stories,
+                    CourseLessonType.quiz => Icons.quiz,
+                  },
+                  color: AppColors.primaryColor,
+                ),
     );
   }
 }
@@ -308,36 +277,33 @@ class LockIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(4.0),
-      child: SvgPicture.asset(
-        AppSVGs.lock,
-        width: 32,
-        colorFilter: ColorFilter.mode(
-            context.isDarkMode ? Colors.grey.shade400 : Colors.grey.shade500,
-            BlendMode.srcIn),
-      ),
+    return SvgPicture.asset(
+      AppSVGs.lock,
+      width: 30,
+      colorFilter: ColorFilter.mode(
+          context.isDarkMode ? Colors.grey.shade400 : Colors.grey.shade500,
+          BlendMode.srcIn),
     );
   }
 }
 
-class PlayIconButton extends StatelessWidget {
-  const PlayIconButton({
+class DownloadIconButton extends StatelessWidget {
+  const DownloadIconButton({
     super.key,
+    required this.isDownloaded,
   });
-
+  final bool isDownloaded;
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: () {},
-      icon: SvgPicture.asset(
-        AppSVGs.playCircle,
-        width: 36,
-        colorFilter:
-            const ColorFilter.mode(AppColors.primaryColor, BlendMode.srcIn),
-      ),
-      style: IconButton.styleFrom(
-        padding: EdgeInsets.zero,
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
+      child: IconButton(
+        onPressed: () {},
+        icon: Icon(
+          isDownloaded ? Icons.delete : Icons.download,
+          color:
+              context.isDarkMode ? Colors.grey.shade400 : Colors.grey.shade500,
+        ),
       ),
     );
   }

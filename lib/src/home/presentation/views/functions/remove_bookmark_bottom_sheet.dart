@@ -11,7 +11,8 @@ import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
 import '../widgets/card_course.dart';
 
-void showRemoveBookmarkBottomSheet(BuildContext context) {
+void showRemoveBookmarkBottomSheet(
+    {required BuildContext context, required void Function() onConfirm}) {
   showModalBottomSheet(
     context: context,
     builder: (BuildContext context) {
@@ -80,6 +81,7 @@ void showRemoveBookmarkBottomSheet(BuildContext context) {
                     const Spacer(flex: 1),
                     CustomFlatButton(
                       onPressed: () {
+                        onConfirm.call();
                         context.pop();
                       },
                       title: LocaleKeys.MyCourses_Bookmark_yesRemove.tr(),

@@ -2,6 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/navigation_extra_keys.dart';
+import 'package:halim/src/achievements/presentation/views/store_view.dart';
+import 'package:halim/src/course_details/presentation/views/course_quiz_view.dart';
+import 'package:halim/src/course_details/presentation/views/quiz_finish_view.dart';
+import 'package:halim/src/course_details/presentation/views/quiz_questions_view.dart';
 import 'package:halim/src/home/presentation/views/profile_student.dart';
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
@@ -29,6 +34,7 @@ import 'package:halim/src/splash/presentation/views/splash_view.dart';
 import '../../src/account_setup/presentation/views/biometric_view.dart';
 import '../../src/account_setup/presentation/views/create_pin_view.dart';
 import '../../src/account_setup/presentation/views/fill_profile_view.dart';
+import '../../src/achievements/presentation/views/achievements_view.dart';
 import '../../src/chat/presentation/views/chat_view.dart';
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
 import '../../src/forgot_password/presentation/views/enter_code_view.dart';
@@ -57,6 +63,11 @@ class AppRoute {
   static const kMyCourseDetailsView = '/myCourseDetails';
   static const kConfirmEmailView = '/confirmEmail';
   static const kChatView = '/chat';
+  static const kAchievementsView = '/achievements';
+  static const kStoreView = '/store';
+  static const kCourseQuizView = '/courseQuiz';
+  static const kQuizQuestionsView = '/quizQuestions';
+  static const kQuizFinishView = '/quizFinish';
 
   static const kFillProfile = '/fillProfile';
   static const kCreatePin = '/kCreatePin';
@@ -129,15 +140,49 @@ class AppRoute {
         },
       ),
       GoRoute(
+        path: kCourseQuizView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const CourseQuizView();
+        },
+      ),
+      GoRoute(
+        path: kQuizQuestionsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return QuizQuestionsView(
+            isAnswer: (GoRouterState.of(context).extra
+                    as Map<String, dynamic>)[NavKeys.IsQuizQuestionStateAnswers]
+                as bool,
+          );
+        },
+      ),
+      GoRoute(
+        path: kQuizFinishView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const QuizFinishView();
+        },
+      ),
+      GoRoute(
         path: kCourseLessonsView,
         builder: (BuildContext context, GoRouterState state) {
           return const CourseLessonsView();
         },
       ),
       GoRoute(
+        path: kStoreView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const StoreView();
+        },
+      ),
+      GoRoute(
         path: kChatView,
         builder: (BuildContext context, GoRouterState state) {
           return const ChatView();
+        },
+      ),
+      GoRoute(
+        path: kAchievementsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const AchievementsView();
         },
       ),
       GoRoute(
@@ -297,13 +342,13 @@ class AppRoute {
         },
       ),
       GoRoute(
-        path:kShippingView,
+        path: kShippingView,
         builder: (BuildContext context, GoRouterState state) {
           return const ShippingView();
         },
       ),
       GoRoute(
-        path:kProfileStudentView,
+        path: kProfileStudentView,
         builder: (BuildContext context, GoRouterState state) {
           return const profileStudentView();
         },
