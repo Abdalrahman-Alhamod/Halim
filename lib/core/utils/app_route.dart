@@ -9,6 +9,7 @@ import 'package:halim/src/course_details/presentation/views/course_quiz_view.dar
 import 'package:halim/src/course_details/presentation/views/quiz_finish_view.dart';
 import 'package:halim/src/course_details/presentation/views/quiz_questions_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_video_view.dart';
+import 'package:halim/src/home/presentation/views/profile_student.dart';
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
@@ -35,7 +36,6 @@ import 'package:halim/src/splash/presentation/views/splash_view.dart';
 import '../../src/account_setup/presentation/views/biometric_view.dart';
 import '../../src/account_setup/presentation/views/create_pin_view.dart';
 import '../../src/account_setup/presentation/views/fill_profile_view.dart';
-import '../../src/achievements/presentation/views/achievements_view.dart';
 import '../../src/chat/presentation/views/chat_view.dart';
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
 import '../../src/forgot_password/presentation/views/enter_code_view.dart';
