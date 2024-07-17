@@ -214,6 +214,7 @@ abstract class  LocaleKeys {
   static const ForgotPassword_enter = 'ForgotPassword.enter';
   static const ForgotPassword_verify = 'ForgotPassword.verify';
   static const ForgotPassword_second = 'ForgotPassword.second';
+  static const ForgotPassword_enterEmail = 'ForgotPassword.enterEmail';
   static const ForgotPassword = 'ForgotPassword';
   static const FillYourProfile_fillYourProfile = 'FillYourProfile.fillYourProfile';
   static const FillYourProfile_fullName = 'FillYourProfile.fullName';
@@ -313,9 +314,16 @@ abstract class  LocaleKeys {
   static const Settings_Payments_Receipt_date = 'Settings.Payments.Receipt.date';
   static const Settings_Payments_Receipt_status = 'Settings.Payments.Receipt.status';
   static const Settings_Payments_Receipt_email = 'Settings.Payments.Receipt.email';
+  static const Settings_Payments_Receipt_download = 'Settings.Payments.Receipt.download';
   static const Settings_Payments_Receipt = 'Settings.Payments.Receipt';
   static const Settings_Payments_receipt = 'Settings.Payments.receipt';
   static const Settings_Payments = 'Settings.Payments';
+  static const Settings_Shipping_shipping = 'Settings.Shipping.shipping';
+  static const Settings_Shipping_valueShip = 'Settings.Shipping.valueShip';
+  static const Settings_Shipping_dateShip = 'Settings.Shipping.dateShip';
+  static const Settings_Shipping_idEmp = 'Settings.Shipping.idEmp';
+  static const Settings_Shipping_numShip = 'Settings.Shipping.numShip';
+  static const Settings_Shipping = 'Settings.Shipping';
   static const Settings = 'Settings';
   static const Search_search = 'Search.search';
   static const Search_recent = 'Search.recent';

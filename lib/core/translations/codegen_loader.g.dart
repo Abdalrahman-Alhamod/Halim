@@ -250,7 +250,8 @@ class CodegenLoader extends AssetLoader{
     "change": "تغيير كلمة المرور",
     "enter": "أدخل الرمز",
     "verify": "تأكيد",
-    "second": "ثانية"
+    "second": "ثانية",
+    "enterEmail": "أدخل بريدك الإلكتروني"
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",
@@ -371,9 +372,17 @@ class CodegenLoader extends AssetLoader{
         "discount": "قيمة الحسم",
         "date": "تاريخ الشراء",
         "status": "حالة الدورة",
-        "email": "البريد الإلكتروني"
+        "email": "البريد الإلكتروني",
+        "download": "تنزيل"
       },
       "receipt": "الإيصال"
+    },
+    "Shipping": {
+      "shipping": "عمليات الشحن",
+      "valueShip": "قيمة الشحن",
+      "dateShip": "تاريخ الشحن",
+      "idEmp": "رقم الموظف المسؤول",
+      "numShip": "رقم عملية الشحن"
     }
   },
   "Search": {
@@ -734,7 +743,8 @@ static const Map<String,dynamic> en = {
     "change": "Change Password",
     "enter": "Enter Code",
     "verify": "Verify",
-    "second": "second"
+    "second": "second",
+    "enterEmail": "Enter Your Email"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
@@ -855,9 +865,17 @@ static const Map<String,dynamic> en = {
         "discount": "Discount value",
         "date": "The date of purchase",
         "status": "Course status",
-        "email": "Email"
+        "email": "Email",
+        "download": "Download"
       },
       "receipt": "E-Receipt"
+    },
+    "Shipping": {
+      "shipping": "Shipping operations",
+      "valueShip": "Shipping value",
+      "dateShip": "Date of shipment",
+      "idEmp": "Responsible employee ID",
+      "numShip": "Shipping process number"
     }
   },
   "Search": {

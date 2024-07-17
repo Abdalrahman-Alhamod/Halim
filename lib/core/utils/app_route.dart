@@ -12,6 +12,7 @@ import 'package:halim/src/course_details/presentation/views/course_video_view.da
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
+import 'package:halim/src/profile_settings/presentation/views/shipping_view.dart';
 import 'package:halim/src/search/presentation/views/search_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';
@@ -34,6 +35,7 @@ import 'package:halim/src/splash/presentation/views/splash_view.dart';
 import '../../src/account_setup/presentation/views/biometric_view.dart';
 import '../../src/account_setup/presentation/views/create_pin_view.dart';
 import '../../src/account_setup/presentation/views/fill_profile_view.dart';
+import '../../src/achievements/presentation/views/achievements_view.dart';
 import '../../src/chat/presentation/views/chat_view.dart';
 import '../../src/course_details/presentation/views/course_reviews_view.dart';
 import '../../src/forgot_password/presentation/views/enter_code_view.dart';
@@ -90,7 +92,9 @@ class AppRoute {
   static const kDefinitionHalimView = '/kDefinitionHalimView';
   static const kLeaderboardsView = '/kLeaderboardsView';
   static const kPaymentsView = '/kPaymentsView';
-  static const kReceiptView = '/kkReceiptView';
+  static const kReceiptView = '/kReceiptView';
+  static const kShippingView = '/kShippingView';
+  static const kProfileStudentView = '/kProfileStudentView';
 
   static final GoRouter router = GoRouter(
     debugLogDiagnostics: true,
@@ -343,6 +347,18 @@ class AppRoute {
         path: kReceiptView,
         builder: (BuildContext context, GoRouterState state) {
           return const ReceiptView();
+        },
+      ),
+      GoRoute(
+        path: kShippingView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const ShippingView();
+        },
+      ),
+      GoRoute(
+        path: kProfileStudentView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const profileStudentView();
         },
       ),
     ],

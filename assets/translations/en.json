@@ -234,7 +234,8 @@
     "change": "Change Password",
     "enter": "Enter Code",
     "verify": "Verify",
-    "second": "second"
+    "second": "second",
+    "enterEmail": "Enter Your Email"
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
@@ -355,9 +356,17 @@
         "discount": "Discount value",
         "date": "The date of purchase",
         "status": "Course status",
-        "email": "Email"
+        "email": "Email",
+        "download": "Download"
       },
       "receipt": "E-Receipt"
+    },
+    "Shipping": {
+      "shipping": "Shipping operations",
+      "valueShip": "Shipping value",
+      "dateShip": "Date of shipment",
+      "idEmp": "Responsible employee ID",
+      "numShip": "Shipping process number"
     }
   },
   "Search": {
