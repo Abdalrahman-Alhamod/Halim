@@ -505,6 +505,11 @@ class CodegenLoader extends AssetLoader{
         "filterCoupons": "تصفية القسائم"
       }
     }
+  },
+  "StudentProfile": {
+    "Student": "طالب لدى",
+    "FollowCourses": "الكورسات المتابعة",
+    "Test": "إدارة الأعمال"
   }
 };
 static const Map<String,dynamic> en = {
@@ -998,6 +1003,11 @@ static const Map<String,dynamic> en = {
         "filterCoupons": "Filter Coupons"
       }
     }
+  },
+  "StudentProfile": {
+    "Student": "Student at",
+    "FollowCourses": "Follow-up courses",
+    "Test": "Business Management"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

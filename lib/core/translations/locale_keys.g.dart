@@ -425,5 +425,9 @@ abstract class  LocaleKeys {
   static const Achievements_Store_FilterCoupons = 'Achievements.Store.FilterCoupons';
   static const Achievements_Store = 'Achievements.Store';
   static const Achievements = 'Achievements';
+  static const StudentProfile_Student = 'StudentProfile.Student';
+  static const StudentProfile_FollowCourses = 'StudentProfile.FollowCourses';
+  static const StudentProfile_Test = 'StudentProfile.Test';
+  static const StudentProfile = 'StudentProfile';
 
 }

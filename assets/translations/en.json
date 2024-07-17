@@ -489,5 +489,10 @@
         "filterCoupons": "Filter Coupons"
       }
     }
+  },
+  "StudentProfile": {
+    "Student": "Student at",
+    "FollowCourses": "Follow-up courses",
+    "Test": "Business Management"
   }
 }

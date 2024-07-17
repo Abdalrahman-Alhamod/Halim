@@ -489,5 +489,10 @@
         "filterCoupons": "تصفية القسائم"
       }
     }
+  },
+  "StudentProfile": {
+    "Student": "طالب لدى",
+    "FollowCourses": "الكورسات المتابعة",
+    "Test": "إدارة الأعمال"
   }
 }
