@@ -12,10 +12,10 @@ class ListTileEmailPhone extends StatefulWidget {
   _ListTileEmailPhoneState createState() => _ListTileEmailPhoneState();
 }
 
-bool isItemSelectedOne = false;
-bool isItemSelectedTwo = false;
-
 class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
+  bool isItemSelectedOne = false;
+  bool isItemSelectedTwo = false;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -45,13 +45,7 @@ class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
                 fontWeight: FontWeight.normal,
               ),
             ),
-            subtitle: Text(
-              '+1 111 *** **9',
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
             shape: RoundedRectangleBorder(
@@ -65,11 +59,13 @@ class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
             onTap: () {
               setState(() {
                 isItemSelectedOne = !isItemSelectedOne;
+                if (isItemSelectedOne) {
+                  isItemSelectedTwo = false;
+                }
               });
             },
           ),
         ),
-        //Container(height: 20,),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: ListTile(
@@ -95,13 +91,7 @@ class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
                 fontWeight: FontWeight.normal,
               ),
             ),
-            subtitle: Text(
-              'and**ley@gmail.com',
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
             shape: RoundedRectangleBorder(
@@ -115,6 +105,9 @@ class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
             onTap: () {
               setState(() {
                 isItemSelectedTwo = !isItemSelectedTwo;
+                if (isItemSelectedTwo) {
+                  isItemSelectedOne = false;
+                }
               });
             },
           ),
