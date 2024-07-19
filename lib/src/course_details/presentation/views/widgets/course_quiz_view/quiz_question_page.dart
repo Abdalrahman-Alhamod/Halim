@@ -34,7 +34,7 @@ class _QuizQuestionsPageState extends State<QuizQuestionsPage> {
       children: [
         Container(
           width: context.width * 0.90,
-          constraints: BoxConstraints(minHeight: 130),
+          constraints: const BoxConstraints(minHeight: 130),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: context.isDarkMode
@@ -52,7 +52,7 @@ class _QuizQuestionsPageState extends State<QuizQuestionsPage> {
               end: Alignment.bottomRight,
             ),
             borderRadius: BorderRadius.circular(20),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.black26,
                 blurRadius: 10,
@@ -60,23 +60,23 @@ class _QuizQuestionsPageState extends State<QuizQuestionsPage> {
               ),
             ],
           ),
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Center(
             child: Text(
               widget.question.title,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              style: const TextStyle(fontSize: 20, color: Colors.white),
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SizedBox(
           width: context.width * 0.9,
           child: ListView.separated(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) => QuestionChoice(
               state: switch (widget.question.type) {
                 QuestionType.checkbox =>
@@ -123,12 +123,12 @@ class _QuizQuestionsPageState extends State<QuizQuestionsPage> {
               title: widget.question.choices[index],
             ),
             itemCount: widget.question.choices.length,
-            separatorBuilder: (context, index) => SizedBox(
+            separatorBuilder: (context, index) => const SizedBox(
               height: 10,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
       ],

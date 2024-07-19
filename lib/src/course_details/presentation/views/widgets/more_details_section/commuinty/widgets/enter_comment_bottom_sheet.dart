@@ -41,8 +41,7 @@ class EnterCommentBottomSheet extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            LocaleKeys.CourseDetails_Community_replyingOn.tr() +
-                                ' ',
+                            '${LocaleKeys.CourseDetails_Community_replyingOn.tr()} ',
                             style: TextStyle(
                               color: Colors.grey.shade400,
                             ),

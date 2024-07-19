@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/store_view/functions/showFilterCouponsBottomsheet.dart';
+import 'package:halim/src/achievements/presentation/views/widgets/store_view/functions/show_filter_coupons_bottomsheet.dart';
 
 import '../../../../../../core/assets/app_images.dart';
 import '../../../../../../core/assets/app_svgs.dart';

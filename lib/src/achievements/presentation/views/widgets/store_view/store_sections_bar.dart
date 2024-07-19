@@ -4,7 +4,7 @@ import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/src/achievements/presentation/views/widgets/store_view/store_section_button.dart';
 
 class StoreSectionBar extends StatefulWidget {
-  const StoreSectionBar({required this.pageController});
+  const StoreSectionBar({super.key, required this.pageController});
   final PageController pageController;
 
   @override

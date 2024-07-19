@@ -23,14 +23,14 @@ class CourseVideoView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomVideoPlayer(
+            const CustomVideoPlayer(
               url: AppVideos.test,
               dataSourceType: DataSourceType.asset,
               // url: AppTest.videoUrl,
               // dataSourceType: DataSourceType.network,
             ),
-            SizedBox(height: 20),
-            Column(
+            const SizedBox(height: 20),
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [],
             ),
@@ -39,7 +39,7 @@ class CourseVideoView extends StatelessWidget {
               child: Text(
                 '${LocaleKeys.CourseDetails_Video_notes.tr()} :',
                 textAlign: TextAlign.start,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),

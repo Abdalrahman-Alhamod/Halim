@@ -236,7 +236,7 @@ class CourseCoupon extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '${LocaleKeys.Achievements_Store_discount.tr()}',
+                        LocaleKeys.Achievements_Store_discount.tr(),
                         style: const TextStyle(
                           color: Colors.grey,
                           fontSize: 14,
@@ -262,7 +262,7 @@ class CourseCoupon extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            '${couponPrice} ',
+                            '$couponPrice ',
                             style: const TextStyle(
                               color: Colors.green,
                               fontSize: 32,
@@ -270,7 +270,7 @@ class CourseCoupon extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            '${LocaleKeys.Achievements_Store_point.tr()}',
+                            LocaleKeys.Achievements_Store_point.tr(),
                             style: const TextStyle(
                               color: Colors.green,
                               fontSize: 20,
@@ -283,7 +283,7 @@ class CourseCoupon extends StatelessWidget {
                         TextSpan(
                           children: [
                             TextSpan(
-                              text: '${leftAmount}',
+                              text: '$leftAmount',
                               style: TextStyle(
                                 color: Colors.green,
                                 fontWeight: FontWeight.bold,

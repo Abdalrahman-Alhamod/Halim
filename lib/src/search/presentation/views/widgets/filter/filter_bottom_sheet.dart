@@ -24,16 +24,16 @@ class FilterBottomSheet extends StatefulWidget {
 }
 
 class _FilterBottomSheetState extends State<FilterBottomSheet> {
-  late TapGestureRecognizer _TapGestureRecognizer;
+  late TapGestureRecognizer _tapGestureRecognizer;
   @override
   void initState() {
     super.initState();
-    _TapGestureRecognizer = TapGestureRecognizer()..onTap = _handleTap;
+    _tapGestureRecognizer = TapGestureRecognizer()..onTap = _handleTap;
   }
 
   @override
   void dispose() {
-    _TapGestureRecognizer.dispose();
+    _tapGestureRecognizer.dispose();
     super.dispose();
   }
 

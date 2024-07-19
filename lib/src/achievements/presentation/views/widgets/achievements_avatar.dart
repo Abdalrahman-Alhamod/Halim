@@ -16,15 +16,15 @@ class AchievementsAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CircleAvatar(
+        const CircleAvatar(
+          backgroundColor: AppColors.primaryColor,
+          radius: 105,
           child: CircleAvatar(
             backgroundImage: AssetImage(
               AppImages.testHalimAvatar,
             ),
             radius: 100,
           ),
-          backgroundColor: AppColors.primaryColor,
-          radius: 105,
         ),
         SizedBox(
           height: 10,
@@ -34,7 +34,7 @@ class AchievementsAvatar extends StatelessWidget {
           style: TextStyle(
             fontSize: 28,
             fontFamily: context.isEnglish ? AppFonts.satisfy : AppFonts.zahey,
-            shadows: [
+            shadows: const [
               Shadow(
                 blurRadius: 10.0,
                 color: Colors.blue,

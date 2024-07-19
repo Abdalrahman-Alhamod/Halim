@@ -75,7 +75,7 @@ showProductPurchaseDialog({
                 ),
               ),
               Text(
-                '${productPrice} ${LocaleKeys.Achievements_Store_point.tr()}',
+                '$productPrice ${LocaleKeys.Achievements_Store_point.tr()}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.green,
@@ -97,7 +97,7 @@ showProductPurchaseDialog({
                 ),
               ),
               Text(
-                '${totalPoints} ${LocaleKeys.Achievements_Store_point.tr()}',
+                '$totalPoints ${LocaleKeys.Achievements_Store_point.tr()}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.green,

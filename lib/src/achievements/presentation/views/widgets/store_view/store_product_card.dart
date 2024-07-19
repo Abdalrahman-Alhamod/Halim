@@ -74,7 +74,7 @@ class StoreProductCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '${price} ',
+                  '$price ',
                   style: const TextStyle(
                     color: Colors.green,
                     fontSize: 24,
@@ -82,7 +82,7 @@ class StoreProductCard extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '${LocaleKeys.Achievements_Store_point.tr()}',
+                  LocaleKeys.Achievements_Store_point.tr(),
                   style: const TextStyle(
                     color: Colors.green,
                     fontSize: 12,

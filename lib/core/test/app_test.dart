@@ -151,6 +151,6 @@ Build and run using your preferred C++ compiler
 This project is licensed under the MIT License - see the LICENSE file for details. 🌐
 ''';
 
-  static final videoUrl =
+  static const videoUrl =
       'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4';
 }
