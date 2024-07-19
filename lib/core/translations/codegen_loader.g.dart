@@ -240,10 +240,10 @@ class CodegenLoader extends AssetLoader{
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور",
-    "select": "حدد ما هي تفاصيل الاتصال التي يجب أن نستخدمها لإعادة تعيين كلمة المرور الخاصة بك؟",
+    "select": "حدد ما طريقة التواصل التي يجب أن نستخدمها لإعادة تعيين كلمة المرور الخاصة بك؟",
     "resetPass": "إعادة تعيين كلمة السر",
-    "viaSms": "عبر رسالة نصية:",
-    "viaEmail": "عبر البريد الإلكتروني: ",
+    "viaSms": "رمز عبر الرسالة النصية",
+    "viaEmail": "رمز عبر البريد الإلكتروني",
     "codeHas": "تم إرسال الكود إلى",
     "resend": "سيتم إعادة الإرسال خلال",
     "createNew": "قم بإنشاء كلمة المرور الجديدة:",
@@ -251,7 +251,17 @@ class CodegenLoader extends AssetLoader{
     "enter": "أدخل الرمز",
     "verify": "تأكيد",
     "second": "ثانية",
-    "enterEmail": "أدخل بريدك الإلكتروني"
+    "enterEmail": "أدخل بريدك الإلكتروني",
+    "Congratulations": "تهانينا!",
+    "Sucss": "لقد تم تغيير كلمة مرورك بنجاح!",
+    "EnterPhone": {
+      "EnterPhoneNum": "أدخل رقم هاتفك",
+      "EnterThe": "أدخل رقم هاتفك المسجَّل مسبقا لدى التطبيق:"
+    },
+    "EnterEm": {
+      "EnterEmail": "أدخل بريدك الإلكتروني",
+      "EnterThe": "أدخل بريد الالكتروني المسجَّل مسبقا لدى التطبيق:"
+    }
   },
   "FillYourProfile": {
     "fillYourProfile": "ادخل بيانات حسابك",
@@ -505,6 +515,11 @@ class CodegenLoader extends AssetLoader{
         "filterCoupons": "تصفية القسائم"
       }
     }
+  },
+  "StudentProfile": {
+    "Student": "طالب لدى",
+    "FollowCourses": "الكورسات المتابعة",
+    "Test": "إدارة الأعمال"
   }
 };
 static const Map<String,dynamic> en = {
@@ -733,10 +748,10 @@ static const Map<String,dynamic> en = {
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password",
-    "select": "Select Which contact details should we use to reset your password?",
+    "select": "Select What communication method should we use to reset your password?",
     "resetPass": "Reset the password",
-    "viaSms": "via SMS:",
-    "viaEmail": "via Email:",
+    "viaSms": "Code via text message",
+    "viaEmail": "Code via Email",
     "codeHas": "Code has been sent to",
     "resend": "Resend code in",
     "createNew": "Create your new password:",
@@ -744,7 +759,17 @@ static const Map<String,dynamic> en = {
     "enter": "Enter Code",
     "verify": "Verify",
     "second": "second",
-    "enterEmail": "Enter Your Email"
+    "enterEmail": "Enter Your Email",
+    "Congratulations": "Congratulations!",
+    "Sucss": "Your password has been successfully changed!",
+    "EnterPhone": {
+      "EnterPhoneNum": "Enter your phone number",
+      "EnterThe": "Enter the phone number previously registered with the application:"
+    },
+    "EnterEm": {
+      "EnterEmail": "Enter your email address",
+      "EnterThe": "Enter the email address previously registered with the application:"
+    }
   },
   "FillYourProfile": {
     "fillYourProfile": "Fill your profile",
@@ -998,6 +1023,11 @@ static const Map<String,dynamic> en = {
         "filterCoupons": "Filter Coupons"
       }
     }
+  },
+  "StudentProfile": {
+    "Student": "Student at",
+    "FollowCourses": "Follow-up courses",
+    "Test": "Business Management"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

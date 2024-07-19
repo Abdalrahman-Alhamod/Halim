@@ -5,10 +5,10 @@ import 'package:halim/core/constants/app_sizes.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
-import '../../../../core/themes/app_colors.dart';
-import '../../../../core/utils/app_route.dart';
-import '../../../../core/widgets/custome_flat_button.dart';
-import '../../../course_details/presentation/views/widgets/enroll_course_view/widgets/pin_text_field.dart';
+import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/widgets/custome_flat_button.dart';
+import '../../../../course_details/presentation/views/widgets/enroll_course_view/widgets/pin_text_field.dart';
 
 class EnterCodeBody extends StatefulWidget {
   const EnterCodeBody();

@@ -25,7 +25,7 @@ class HomeView extends StatelessWidget {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         toolbarHeight: 90,
         automaticallyImplyLeading: false,
-        title: const WelcomeCard(),
+        title: const WelcomeCard()
       ),
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(

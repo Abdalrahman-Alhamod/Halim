@@ -16,29 +16,38 @@ class WelcomeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const CircleAvatar(
-          radius: 25,
-          backgroundImage: AssetImage(AppImages.testAvatarAlaa),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Wrap(
-            alignment: WrapAlignment.spaceAround,
-            direction: Axis.vertical,
-            spacing: 5,
+        GestureDetector(
+          onTap: () {
+            GoRouter.of(context).push(AppRoute.kProfileStudentPersonalView);
+          },
+          child: Row(
             children: [
-              Text(
-                LocaleKeys.HomePage_Home_goodMorning.tr(),
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w200,
-                ),
+              CircleAvatar(
+                radius: 25,
+                backgroundImage: AssetImage(AppImages.testAvatarAlaa),
               ),
-              Text(
-                'Alaa Lababedi',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Wrap(
+                  alignment: WrapAlignment.spaceAround,
+                  direction: Axis.vertical,
+                  spacing: 5,
+                  children: [
+                    Text(
+                      LocaleKeys.HomePage_Home_goodMorning.tr(),
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                    Text(
+                      'Alaa Lababedi',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

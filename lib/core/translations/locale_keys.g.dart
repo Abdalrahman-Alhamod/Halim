@@ -215,6 +215,14 @@ abstract class  LocaleKeys {
   static const ForgotPassword_verify = 'ForgotPassword.verify';
   static const ForgotPassword_second = 'ForgotPassword.second';
   static const ForgotPassword_enterEmail = 'ForgotPassword.enterEmail';
+  static const ForgotPassword_Congratulations = 'ForgotPassword.Congratulations';
+  static const ForgotPassword_Sucss = 'ForgotPassword.Sucss';
+  static const ForgotPassword_EnterPhone_EnterPhoneNum = 'ForgotPassword.EnterPhone.EnterPhoneNum';
+  static const ForgotPassword_EnterPhone_EnterThe = 'ForgotPassword.EnterPhone.EnterThe';
+  static const ForgotPassword_EnterPhone = 'ForgotPassword.EnterPhone';
+  static const ForgotPassword_EnterEm_EnterEmail = 'ForgotPassword.EnterEm.EnterEmail';
+  static const ForgotPassword_EnterEm_EnterThe = 'ForgotPassword.EnterEm.EnterThe';
+  static const ForgotPassword_EnterEm = 'ForgotPassword.EnterEm';
   static const ForgotPassword = 'ForgotPassword';
   static const FillYourProfile_fillYourProfile = 'FillYourProfile.fillYourProfile';
   static const FillYourProfile_fullName = 'FillYourProfile.fullName';
@@ -425,5 +433,9 @@ abstract class  LocaleKeys {
   static const Achievements_Store_FilterCoupons = 'Achievements.Store.FilterCoupons';
   static const Achievements_Store = 'Achievements.Store';
   static const Achievements = 'Achievements';
+  static const StudentProfile_Student = 'StudentProfile.Student';
+  static const StudentProfile_FollowCourses = 'StudentProfile.FollowCourses';
+  static const StudentProfile_Test = 'StudentProfile.Test';
+  static const StudentProfile = 'StudentProfile';
 
 }

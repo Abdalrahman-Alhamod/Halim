@@ -9,7 +9,10 @@ import 'package:halim/src/course_details/presentation/views/course_quiz_view.dar
 import 'package:halim/src/course_details/presentation/views/quiz_finish_view.dart';
 import 'package:halim/src/course_details/presentation/views/quiz_questions_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_video_view.dart';
+import 'package:halim/src/forgot_password/presentation/views/enter_email_view.dart';
+import 'package:halim/src/forgot_password/presentation/views/enter_phoneNumView.dart';
 import 'package:halim/src/home/presentation/views/profile_student.dart';
+import 'package:halim/src/home/presentation/views/profile_student_personal_view%20.dart';
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
@@ -95,6 +98,9 @@ class AppRoute {
   static const kReceiptView = '/kReceiptView';
   static const kShippingView = '/kShippingView';
   static const kProfileStudentView = '/kProfileStudentView';
+  static const kProfileStudentPersonalView = '/kProfileStudentPersonalView';
+  static const kEnterEmailView = '/kEnterEmailView';
+  static const kEnterPhoneNumView = '/kEnterPhoneNumView';
 
   static final GoRouter router = GoRouter(
     debugLogDiagnostics: true,
@@ -359,6 +365,24 @@ class AppRoute {
         path: kProfileStudentView,
         builder: (BuildContext context, GoRouterState state) {
           return const profileStudentView();
+        },
+      ),
+      GoRoute(
+        path: kEnterEmailView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const EnterEmailView();
+        },
+      ),
+      GoRoute(
+        path: kEnterPhoneNumView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const EnterPhoneNumView();
+        },
+      ),
+      GoRoute(
+        path: kProfileStudentPersonalView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const ProfileStudentPersonalView();
         },
       ),
     ],

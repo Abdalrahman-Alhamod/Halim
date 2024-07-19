@@ -6,26 +6,44 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/assets/app_images.dart';
 import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/translations/locale_keys.g.dart';
+import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/src/achievements/presentation/views/widgets/achievemenets_numbers.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/sections/mentor_courses_section.dart';
 
-import '../../../../core/constants/app_constrains.dart';
-import '../../../../core/widgets/back_arrow_icon.dart';
-
-class profileStudentView extends StatelessWidget {
-  const profileStudentView({super.key});
+class ProfileStudentPersonalView extends StatelessWidget {
+  const ProfileStudentPersonalView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackArrowIcon(
-          onPressed: () {
-            GoRouter.of(context).pop();
-          },
+        automaticallyImplyLeading: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              icon: Icon(
+                Icons.arrow_back,
+                size: 28,
+                color: context.isDarkMode ? Colors.white : Colors.black,
+              ),
+              onPressed: () {
+                GoRouter.of(context).pop();
+              },
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.edit,
+                size: 28,
+                color: context.isDarkMode ? Colors.white : Colors.black,
+              ),
+              onPressed: () {
+                GoRouter.of(context).push(AppRoute.kEditProfile);
+              },
+            ),
+          ],
         ),
-        leadingWidth: AppConstrains.maxWidthAppBarIcon,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       ),
       body: SingleChildScrollView(
