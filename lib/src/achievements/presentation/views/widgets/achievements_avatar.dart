@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/assets/app_font.dart';
 import '../../../../../core/assets/app_images.dart';
@@ -26,7 +26,7 @@ class AchievementsAvatar extends StatelessWidget {
             radius: 100,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(

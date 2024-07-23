@@ -1,16 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/account_setup/presentation/views/widgets/interests_widget.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/context_extensions.dart';
+import '../widgets/interests_widget.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
 
 void chooseInterestsBottomSheet(BuildContext context) {
-  List<String> Interests = [
+  List<String> interests = [
     '🔥 All',
     '📊 BA',
     '💰 Business',
@@ -48,7 +48,7 @@ void chooseInterestsBottomSheet(BuildContext context) {
               padding: const EdgeInsets.all(15.0),
               child: Text(
                 LocaleKeys.FillYourProfile_Interests_choose.tr(),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
                 ),
@@ -68,9 +68,9 @@ void chooseInterestsBottomSheet(BuildContext context) {
                 child: Wrap(
                   spacing: 8.0,
                   runSpacing: 8.0,
-                  children:
-                      Interests.map((Interest) => InterestsWidget(Interest))
-                          .toList(),
+                  children: interests
+                      .map((interest) => InterestsWidget(interest))
+                      .toList(),
                 ),
               ),
             ),
@@ -89,7 +89,8 @@ void chooseInterestsBottomSheet(BuildContext context) {
                     height: 45,
                     kBackgroundcolor: context.isDarkMode
                         ? AppColors.darkFlatButtonColor
-                        : Color.fromARGB(255, 113, 132, 204).withOpacity(0.25),
+                        : const Color.fromARGB(255, 113, 132, 204)
+                            .withOpacity(0.25),
                     kTextcolor: context.isDarkMode
                         ? AppColors.lightFlatButtonColor
                         : AppColors.primaryColor,

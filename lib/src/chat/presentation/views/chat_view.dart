@@ -12,7 +12,7 @@ class ChatView extends StatelessWidget {
       appBar: ChatAppBar(
         chatWithName: GoRouterState.of(context).extra! as String,
       ),
-      body: ChatBody(),
+      body: const ChatBody(),
     );
   }
 }

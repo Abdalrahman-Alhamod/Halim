@@ -1,16 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/app_locales.dart';
+import '../../../../../core/translations/app_locales.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 
 class LanguageListTile extends StatefulWidget {
-  const LanguageListTile();
+  const LanguageListTile({super.key});
 
   @override
-  _LanguageListTileState createState() => _LanguageListTileState();
+  LanguageListTileState createState() => LanguageListTileState();
 }
 
-class _LanguageListTileState extends State<LanguageListTile> {
+class LanguageListTileState extends State<LanguageListTile> {
   late String _selectedLanguage = context.locale.toString();
 
   @override
@@ -24,7 +24,7 @@ class _LanguageListTileState extends State<LanguageListTile> {
           child: Text(
             LocaleKeys.Settings_Language_mainLan.tr(),
             textAlign: TextAlign.start,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -32,27 +32,27 @@ class _LanguageListTileState extends State<LanguageListTile> {
         ),
         Container(height: 10),
         ListTile(
-          title: Text('English'),
+          title: const Text('English'),
           leading: Radio<String>(
             value: 'en',
             groupValue: _selectedLanguage,
             onChanged: (String? value) {
               setState(() {
                 _selectedLanguage = value!;
-                context.setLocale(Locale(AppLocales.en));
+                context.setLocale(const Locale(AppLocales.en));
               });
             },
           ),
         ),
         ListTile(
-          title: Text('العربية'),
+          title: const Text('العربية'),
           leading: Radio<String>(
             value: 'ar',
             groupValue: _selectedLanguage,
             onChanged: (String? value) {
               setState(() {
                 _selectedLanguage = value!;
-                context.setLocale(Locale(AppLocales.ar));
+                context.setLocale(const Locale(AppLocales.ar));
               });
             },
           ),

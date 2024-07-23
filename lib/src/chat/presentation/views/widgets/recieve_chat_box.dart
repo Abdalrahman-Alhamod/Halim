@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../domain/entities/message.dart';
@@ -23,10 +23,10 @@ class RecieveChatBox extends StatelessWidget {
                 ? AppColors.darkFlatButtonColor
                 : Colors.grey.shade200,
             borderRadius: BorderRadius.only(
-              topRight: context.isEnglish ? Radius.zero : Radius.circular(16),
-              topLeft: context.isEnglish ? Radius.circular(16) : Radius.zero,
-              bottomRight: Radius.circular(16),
-              bottomLeft: Radius.circular(16),
+              topRight: context.isEnglish ? Radius.zero : const Radius.circular(16),
+              topLeft: context.isEnglish ? const Radius.circular(16) : Radius.zero,
+              bottomRight: const Radius.circular(16),
+              bottomLeft: const Radius.circular(16),
             )),
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -38,7 +38,7 @@ class RecieveChatBox extends StatelessWidget {
                 style: const TextStyle(),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Text(

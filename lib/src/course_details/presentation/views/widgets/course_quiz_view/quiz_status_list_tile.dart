@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
@@ -13,12 +13,12 @@ class QuizStatusListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.monitor_heart,
           size: 36,
           color: AppColors.primaryColor,
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         Text(
@@ -28,11 +28,11 @@ class QuizStatusListTile extends StatelessWidget {
             color: context.isDarkMode ? Colors.grey : Colors.grey.shade600,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
           decoration: BoxDecoration(
             color: switch (status) {
               QuizStatus.passed => Colors.green,
@@ -49,7 +49,7 @@ class QuizStatusListTile extends StatelessWidget {
               QuizStatus.failed => LocaleKeys.CourseDetails_Quiz_failed.tr(),
               QuizStatus.notTaken => LocaleKeys.CourseDetails_Quiz_notTaken.tr(),
             },
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               color: Colors.white,
             ),

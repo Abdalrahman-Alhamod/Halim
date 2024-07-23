@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 class FilterToggleButton extends StatefulWidget {
   final String filterName;
   final Function(bool) fun;
 
   const FilterToggleButton({
-    Key? key,
+    super.key,
     required this.filterName,
     required this.fun,
-  }) : super(key: key);
+  });
 
   @override
-  _FilterToggleButtonState createState() => _FilterToggleButtonState();
+  FilterToggleButtonState createState() => FilterToggleButtonState();
 }
 
-class _FilterToggleButtonState extends State<FilterToggleButton> {
+class FilterToggleButtonState extends State<FilterToggleButton> {
   bool _isActive = false;
 
   void _onToggle(bool newValue) {
@@ -34,7 +34,7 @@ class _FilterToggleButtonState extends State<FilterToggleButton> {
       color: context.isDarkMode ? AppColors.darkColor : Colors.white,
       child: Row(
         children: [
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
          
           Expanded(
             child: Row(
@@ -48,14 +48,14 @@ class _FilterToggleButtonState extends State<FilterToggleButton> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Switch(
                   value: _isActive,
                   onChanged: _onToggle,
                   activeColor: Colors.white,
                   activeTrackColor: Colors.blue,
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
               ],
             ),
           )

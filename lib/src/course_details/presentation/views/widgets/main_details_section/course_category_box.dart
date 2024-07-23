@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/widgets.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 

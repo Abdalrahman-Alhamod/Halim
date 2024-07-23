@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/src/search/presentation/views/widgets/search_results/widgets/mentor_search_results_sample.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
+import 'widgets/mentor_search_results_sample.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 import 'widgets/courses_search_results_sample.dart';
@@ -42,10 +42,10 @@ class _SearchResultsState extends State<SearchResults> {
     return Column(
       children: [
         _SearchByBar(_controller),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        _SearchResultsHeader(serchKeyword: '3D Design', resultsNum: 256),
+        const _SearchResultsHeader(serchKeyword: '3D Design', resultsNum: 256),
         ExpandablePageView(
           physics: const NeverScrollableScrollPhysics(),
           controller: _controller,

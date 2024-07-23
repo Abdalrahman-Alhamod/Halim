@@ -3,18 +3,18 @@ import 'dart:math';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievemenets_numbers.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/sections/mentor_courses_section.dart';
+import '../../../../core/assets/app_images.dart';
+import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/utils/context_extensions.dart';
+import '../../../achievements/presentation/views/widgets/achievemenets_numbers.dart';
+import '../../../course_details/presentation/views/widgets/mentor_details_view.dart/sections/mentor_courses_section.dart';
 
 import '../../../../core/constants/app_constrains.dart';
 import '../../../../core/widgets/back_arrow_icon.dart';
 
-class profileStudentView extends StatelessWidget {
-  const profileStudentView({super.key});
+class ProfileStudentView extends StatelessWidget {
+  const ProfileStudentView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +61,7 @@ class profileStudentView extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
               ],
@@ -76,7 +76,7 @@ class profileStudentView extends StatelessWidget {
             ),
             Container(
               alignment: AlignmentDirectional.topStart,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   border: Border.symmetric(
                 horizontal: BorderSide(
                   color: AppColors.primaryColor,
@@ -89,7 +89,7 @@ class profileStudentView extends StatelessWidget {
                   child: Text(
                     LocaleKeys.StudentProfile_FollowCourses.tr(),
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: AppColors.primaryColor,
                         fontSize: 21,
                         fontWeight: FontWeight.w600),
@@ -100,8 +100,8 @@ class profileStudentView extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12.0),
               child: MentorCoursesSection(),
             ),
           ],

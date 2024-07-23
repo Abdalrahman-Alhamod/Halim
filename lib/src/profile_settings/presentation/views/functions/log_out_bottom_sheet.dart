@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
@@ -28,7 +28,7 @@ void logOutBottomSheet(BuildContext context) {
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
                   LocaleKeys.Settings_Logout_logout.tr(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.red,
                     fontSize: 22,
                     fontWeight: FontWeight.w700,
@@ -46,7 +46,7 @@ void logOutBottomSheet(BuildContext context) {
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
                   LocaleKeys.Settings_Logout_areYou.tr(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w500,
                   ),
@@ -83,7 +83,7 @@ void logOutBottomSheet(BuildContext context) {
                   const Spacer(flex: 1),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

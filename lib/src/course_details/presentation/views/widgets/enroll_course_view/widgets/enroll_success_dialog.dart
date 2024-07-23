@@ -2,8 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../../core/utils/app_route.dart';
+import '../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/themes/app_colors.dart';

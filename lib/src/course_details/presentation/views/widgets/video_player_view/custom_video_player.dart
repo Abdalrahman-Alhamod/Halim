@@ -4,8 +4,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:chewie/chewie.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
+import '../../../../../../core/themes/app_colors.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 import 'package:video_player/video_player.dart';
 
 
@@ -58,7 +58,7 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
             //   backgroundColor: AppColors.darkColor,
             //   iconColor: AppColors.primaryColor,
             // ),
-            customControls: MaterialDesktopControls(),
+            customControls: const MaterialDesktopControls(),
             materialProgressColors: ChewieProgressColors(
               playedColor: AppColors.primaryColor,
               handleColor: Colors.white,
@@ -108,8 +108,8 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircularProgressIndicator(),
-                    SizedBox(height: 20),
+                    const CircularProgressIndicator(),
+                    const SizedBox(height: 20),
                     Text(LocaleKeys.CourseDetails_Video_loading.tr()),
                   ],
                 ),

@@ -1,17 +1,17 @@
 import 'dart:math';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/sections_view/data/section_page.dart';
-import 'package:halim/core/widgets/sections_view/sections_view.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievemenets_numbers.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievements_sections/avatar_levels_sections.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievements_sections/community_contributions_section.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievements_sections/course_attended_section.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievements_sections/first_time_section.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievements_sections/summery_section.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievements_sections/hours_spent_section.dart';
+import '../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/utils/context_extensions.dart';
+import '../../../../core/widgets/sections_view/data/section_page.dart';
+import '../../../../core/widgets/sections_view/sections_view.dart';
+import 'widgets/achievemenets_numbers.dart';
+import 'widgets/achievements_sections/avatar_levels_sections.dart';
+import 'widgets/achievements_sections/community_contributions_section.dart';
+import 'widgets/achievements_sections/course_attended_section.dart';
+import 'widgets/achievements_sections/first_time_section.dart';
+import 'widgets/achievements_sections/summery_section.dart';
+import 'widgets/achievements_sections/hours_spent_section.dart';
 import 'widgets/achievements_app_bar.dart';
 import 'widgets/achievements_avatar.dart';
 
@@ -26,12 +26,12 @@ class AchievementsView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            AchievementsAppBar(),
-            SizedBox(
+            const AchievementsAppBar(),
+            const SizedBox(
               height: 10,
             ),
-            AchievementsAvatar(),
-            SizedBox(
+            const AchievementsAvatar(),
+            const SizedBox(
               height: 10,
             ),
             AchievementsNumbers(
@@ -45,33 +45,33 @@ class AchievementsView extends StatelessWidget {
             SectionsView(pages: [
               SectionPage(
                 title: LocaleKeys.Achievements_Sections_Summery_summery.tr(),
-                child: SummerySection(),
+                child: const SummerySection(),
               ),
               SectionPage(
                 title: LocaleKeys
                     .Achievements_Sections_AvatarLevels_avatarLevels.tr(),
-                child: AvatarLevelsSection(),
+                child: const AvatarLevelsSection(),
               ),
               SectionPage(
                 title:
                     LocaleKeys.Achievements_Sections_FirstTime_firstTime.tr(),
-                child: FirstTimeSection(),
+                child: const FirstTimeSection(),
               ),
               SectionPage(
                 title: LocaleKeys
                     .Achievements_Sections_CoursesAttended_coursesAttended.tr(),
-                child: CourseAttendedSection(),
+                child: const CourseAttendedSection(),
               ),
               SectionPage(
                 title: LocaleKeys
                         .Achievements_Sections_CommunityContributions_communityContributions
                     .tr(),
-                child: CommunityContributionsSection(),
+                child: const CommunityContributionsSection(),
               ),
               SectionPage(
                 title:
                     LocaleKeys.Achievements_Sections_HoursSpent_hoursSpent.tr(),
-                child: HoursSpentSection(),
+                child: const HoursSpentSection(),
               ),
             ])
           ],

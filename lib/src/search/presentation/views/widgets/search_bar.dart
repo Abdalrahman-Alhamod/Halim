@@ -62,7 +62,7 @@ class _SearchBarState extends State<SearchBar> {
           padding: const EdgeInsets.symmetric(horizontal: 4.0),
           child: IconButton(
             onPressed: () => context.pop(),
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: AppColors.primaryColor,
             ),
@@ -77,14 +77,14 @@ class _SearchBarState extends State<SearchBar> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.sort,
                     size: 28,
                   ),
                   onPressed: () {
                     showModalBottomSheet(
                       context: context,
-                      builder: (context) => SortByBottomSheet(),
+                      builder: (context) => const SortByBottomSheet(),
                       scrollControlDisabledMaxHeightRatio: double.infinity,
                     );
                   },
@@ -100,7 +100,7 @@ class _SearchBarState extends State<SearchBar> {
                   onPressed: () {
                     showModalBottomSheet(
                       context: context,
-                      builder: (context) => FilterBottomSheet(),
+                      builder: (context) => const FilterBottomSheet(),
                       scrollControlDisabledMaxHeightRatio: double.infinity,
                     );
                   },

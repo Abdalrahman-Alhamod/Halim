@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/store_view/functions/show_filter_coupons_bottomsheet.dart';
+import 'functions/show_filter_coupons_bottomsheet.dart';
 
 import '../../../../../../core/assets/app_images.dart';
 import '../../../../../../core/assets/app_svgs.dart';
@@ -29,13 +29,13 @@ class CouponsSection extends StatelessWidget {
                     AppSVGs.filter,
                     width: 24,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Text(
                     LocaleKeys.Achievements_Store_FilterCoupons_filterCoupons
                         .tr(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                     ),
                   ),
@@ -44,7 +44,7 @@ class CouponsSection extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Expanded(
@@ -61,7 +61,7 @@ class CouponsSection extends StatelessWidget {
               couponPrice: 250,
               leftAmount: 23,
             ),
-            separatorBuilder: (context, index) => SizedBox(
+            separatorBuilder: (context, index) => const SizedBox(
               height: 16,
             ),
           ),

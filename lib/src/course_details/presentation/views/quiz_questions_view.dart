@@ -1,14 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/back_arrow_icon.dart';
-import 'package:halim/core/widgets/custome_elevated_button.dart';
-import 'package:halim/src/course_details/domain/entities/question_type.dart';
-import 'package:halim/src/course_details/domain/entities/quiz_question.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/course_quiz_view/quiz_question_page.dart';
+import '../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/utils/app_route.dart';
+import '../../../../core/utils/context_extensions.dart';
+import '../../../../core/widgets/back_arrow_icon.dart';
+import '../../../../core/widgets/custome_elevated_button.dart';
+import '../../domain/entities/question_type.dart';
+import '../../domain/entities/quiz_question.dart';
+import 'widgets/course_quiz_view/quiz_question_page.dart';
 import 'widgets/course_quiz_view/quiz_timeline.dart';
 
 class QuizQuestionsView extends StatefulWidget {
@@ -195,16 +195,16 @@ class _QuizQuestionsViewState extends State<QuizQuestionsView> {
                     onPressed: () => GoRouter.of(context).pop(),
                   ),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 2,
                 ),
                 Text(
                   '${LocaleKeys.CourseDetails_Quiz_question.tr()} $_currentQuesion ${context.isEnglish ? '/' : '\\'} ${_questions.length}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 24,
                   ),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 3,
                 ),
               ],
@@ -214,12 +214,12 @@ class _QuizQuestionsViewState extends State<QuizQuestionsView> {
             currentPageIndex: _currentQuesion,
             totalPages: _questions.length,
           ),
-          Spacer(),
+          const Spacer(),
           SizedBox(
             height: context.height * 0.7,
             child: PageView(
               controller: _pageController,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               children: _questions,
               onPageChanged: (value) {
                 setState(() {
@@ -230,7 +230,7 @@ class _QuizQuestionsViewState extends State<QuizQuestionsView> {
               },
             ),
           ),
-          Spacer(
+          const Spacer(
             flex: 2,
           ),
           Padding(
@@ -238,20 +238,20 @@ class _QuizQuestionsViewState extends State<QuizQuestionsView> {
             child: Row(
               children: [
                 _isFirstQuestion
-                    ? SizedBox()
+                    ? const SizedBox()
                     : CustomElevatedButton(
                         width: context.width * 0.45,
                         onPressed: () {
                           _pageController.previousPage(
-                            duration: Duration(milliseconds: 300),
+                            duration: const Duration(milliseconds: 300),
                             curve: Curves.easeIn,
                           );
                         },
                         title: LocaleKeys.Buttons_previous.tr(),
                       ),
-                Spacer(),
+                const Spacer(),
                 widget.isAnswer && _isLastQuestion
-                    ? SizedBox()
+                    ? const SizedBox()
                     : CustomElevatedButton(
                         width: context.width * 0.45,
                         onPressed: () {
@@ -260,7 +260,7 @@ class _QuizQuestionsViewState extends State<QuizQuestionsView> {
                                 .pushReplacement(AppRoute.kQuizFinishView);
                           } else {
                             _pageController.nextPage(
-                              duration: Duration(milliseconds: 300),
+                              duration: const Duration(milliseconds: 300),
                               curve: Curves.easeIn,
                             );
                           }
@@ -272,7 +272,7 @@ class _QuizQuestionsViewState extends State<QuizQuestionsView> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ],

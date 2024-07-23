@@ -33,7 +33,7 @@ class _SearchByBarState extends State<_SearchByBar> {
             label: LocaleKeys.Search_courses.tr(),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Flexible(

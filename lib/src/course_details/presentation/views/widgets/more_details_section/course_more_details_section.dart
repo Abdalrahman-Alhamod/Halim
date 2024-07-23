@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/about/course_about_section.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lessons_section.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_reviews_section.dart';
+import 'about/course_about_section.dart';
+import 'lessons/course_lessons_section.dart';
+import 'reviews/course_reviews_section.dart';
 
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/sections_view/data/section_page.dart';

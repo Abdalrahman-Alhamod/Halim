@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievements_progress_indicator.dart';
+import '../../../../../../core/assets/app_images.dart';
+import '../../../../../../core/constants/app_sizes.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
+import '../achievements_progress_indicator.dart';
 
 import '../../../../domain/entities/achievemenet_badge.dart';
 
@@ -75,11 +75,11 @@ class _FirstTimeSectionState extends State<FirstTimeSection> {
           ),
           GridView.builder(
             shrinkWrap: true,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
             ),
             itemCount: _badges.length,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return StaticBadge(
                 image: _badges[index].image,
@@ -106,12 +106,12 @@ class StaticBadge extends StatelessWidget {
     return Column(
       children: [
         Image.asset(image),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
           title,
-          style: TextStyle(fontSize: 16),
+          style: const TextStyle(fontSize: 16),
         )
       ],
     );

@@ -2,9 +2,9 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -63,10 +63,10 @@ class _CardCourseTrancationsState extends State<CardCourseTrancations> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       AutoSizeText(
                         widget.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
                         overflow: TextOverflow.ellipsis,
@@ -74,7 +74,7 @@ class _CardCourseTrancationsState extends State<CardCourseTrancations> {
                         minFontSize: 18,
                         maxLines: 2,
                       ),
-                      SizedBox(height: 25),
+                      const SizedBox(height: 25),
                       AutoSizeText(
                         widget.category,
                         style: TextStyle(
@@ -120,14 +120,14 @@ class _CardCourseTrancationsState extends State<CardCourseTrancations> {
               Container(
                 height: 30,
                 width: 80,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: AppColors.primaryColor,
                     borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Center(
                   child: GestureDetector(
                     child: AutoSizeText(
                       LocaleKeys.Settings_Payments_receipt.tr(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
                       ),
@@ -139,7 +139,7 @@ class _CardCourseTrancationsState extends State<CardCourseTrancations> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               )
             ],

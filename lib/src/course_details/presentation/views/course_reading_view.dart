@@ -11,13 +11,13 @@ class CourseReadingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CourseReadingAppBar(),
+    return const Scaffold(
+      appBar: CourseReadingAppBar(),
       // bottomSheet: BottomSheetButton(
       //   title: LocaleKeys.Buttons_next.tr(),
       //   onPressed: () {},
       // ),
-      body: const Markdown(
+      body: Markdown(
         data: AppTest.notesMarkdown,
       ),
     );

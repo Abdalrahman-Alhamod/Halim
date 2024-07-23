@@ -22,7 +22,7 @@ class _AuthenticationMethodButton extends StatelessWidget {
           AppConstrains.maxWidth,
           AppConstrains.maxHeight,
         ),
-        fixedSize: Size(double.infinity, 60),
+        fixedSize: const Size(double.infinity, 60),
         elevation: 0,
       ),
       icon: Icon(

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:halim/core/utils/logger.dart';
+import '../../../../utils/logger.dart';
 import 'package:http/http.dart' as http;
 
 import '../../local/app_storage.dart';

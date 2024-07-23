@@ -11,7 +11,7 @@ class _PriceRangeSlider extends StatefulWidget {
 }
 
 class _PriceRangeSliderState extends State<_PriceRangeSlider> {
-  var selectedRange = RangeValues(50, 150);
+  var selectedRange = const RangeValues(50, 150);
   @override
   Widget build(BuildContext context) {
     return RangeSlider(

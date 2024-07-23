@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/src/search/presentation/views/widgets/filter/level_bar/data/level_bar_item.dart';
-import 'package:halim/src/search/presentation/views/widgets/filter/level_bar/level_button.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
+import 'data/level_bar_item.dart';
+import 'level_button.dart';
 
 class LevelBar extends StatefulWidget {
   const LevelBar({super.key, this.startIndex = 0, required this.onChanged});
@@ -61,7 +61,7 @@ class _LevelBarState extends State<LevelBar> {
                 type: items[index].type,
                 label: items[index].label,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
             ],

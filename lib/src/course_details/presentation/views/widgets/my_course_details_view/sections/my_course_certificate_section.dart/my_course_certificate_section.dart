@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../../../core/utils/context_extensions.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../../../../../core/widgets/bottom_sheet_button.dart';
@@ -20,7 +20,7 @@ class MyCourseCertificateSection extends StatelessWidget {
             //   padding: const EdgeInsets.symmetric(vertical: 24.0),
             //   child: Image.asset(AppImages.testCertificate),
             // ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SizedBox(
@@ -30,7 +30,7 @@ class MyCourseCertificateSection extends StatelessWidget {
                 enableDoubleTapZooming: false,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 120,
             ),
           ],

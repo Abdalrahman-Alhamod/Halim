@@ -1,11 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../core/constants/app_sizes.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 import 'package:dotted_line/dotted_line.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/store_view/functions/show_coupon_purchase_dialog.dart';
+import 'functions/show_coupon_purchase_dialog.dart';
 import '../../../../../../core/themes/app_colors.dart';
 import 'helpers/coupon_clipper.dart';
 
@@ -56,7 +56,7 @@ class CourseCoupon extends StatelessWidget {
                 color: context.isDarkMode
                     ? AppColors.loginWithButtonDarkColor
                     : AppColors.primaryColor.withOpacity(0.1),
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(32),
                   topRight: Radius.circular(32),
                 ),
@@ -87,8 +87,8 @@ class CourseCoupon extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                constraints: BoxConstraints(maxWidth: 160),
-                                padding: EdgeInsets.symmetric(
+                                constraints: const BoxConstraints(maxWidth: 160),
+                                padding: const EdgeInsets.symmetric(
                                   vertical: 4,
                                   horizontal: 6,
                                 ),
@@ -118,7 +118,7 @@ class CourseCoupon extends StatelessWidget {
                                       ? Colors.yellowAccent.withAlpha(20)
                                       : Colors.yellowAccent.withAlpha(60),
                                 ),
-                                padding: EdgeInsets.symmetric(
+                                padding: const EdgeInsets.symmetric(
                                   vertical: AppSizes.pad4,
                                   horizontal: AppSizes.pad8,
                                 ),
@@ -131,7 +131,7 @@ class CourseCoupon extends StatelessWidget {
                                     ),
                                     Text(
                                       ' $rating',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 12,
                                       ),
                                     ),
@@ -143,7 +143,7 @@ class CourseCoupon extends StatelessWidget {
                           ),
                           AutoSizeText(
                             courseName,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
                             ),
@@ -154,7 +154,7 @@ class CourseCoupon extends StatelessWidget {
                             children: [
                               Text(
                                 '${LocaleKeys.Achievements_Store_by.tr()} ',
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.normal,
                                   color: Colors.grey,
@@ -162,7 +162,7 @@ class CourseCoupon extends StatelessWidget {
                               ),
                               Text(
                                 mentorName,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -215,14 +215,14 @@ class CourseCoupon extends StatelessWidget {
                 color: context.isDarkMode
                     ? AppColors.loginWithButtonDarkColor
                     : AppColors.primaryColor.withOpacity(0.1),
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(32),
                   bottomRight: Radius.circular(32),
                 ),
               ),
               child: Row(
                 children: [
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     children: [
                       Text(
@@ -244,7 +244,7 @@ class CourseCoupon extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   DottedLine(
                     direction: Axis.vertical,
                     dashColor: !context.isDarkMode
@@ -256,7 +256,7 @@ class CourseCoupon extends StatelessWidget {
                     dashGapLength: 8,
                     dashLength: 8,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     children: [
                       Row(
@@ -284,7 +284,7 @@ class CourseCoupon extends StatelessWidget {
                           children: [
                             TextSpan(
                               text: '$leftAmount',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.green,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
@@ -293,7 +293,7 @@ class CourseCoupon extends StatelessWidget {
                             TextSpan(
                               text:
                                   ' ${LocaleKeys.Achievements_Store_couponLeft.tr()}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.grey,
                                 fontSize: 16,
                               ),
@@ -303,7 +303,7 @@ class CourseCoupon extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
             )

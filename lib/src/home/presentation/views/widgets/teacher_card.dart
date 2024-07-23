@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -9,8 +9,8 @@ class TeacherCard extends StatelessWidget {
   final String imageUrl;
   final String name;
   final String specialization;
-  TeacherCard(
-      {required this.imageUrl,
+  const TeacherCard(
+      {super.key, required this.imageUrl,
       required this.name,
       required this.specialization});
 
@@ -41,14 +41,14 @@ class TeacherCard extends StatelessWidget {
                     Wrap(direction: Axis.vertical, spacing: 5, children: [
                       Text(
                         name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         specialization,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w300,
                         ),

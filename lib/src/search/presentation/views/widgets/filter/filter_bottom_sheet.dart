@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/search/presentation/views/widgets/filter/level_bar/level_bar.dart';
+import '../../../../../../core/utils/context_extensions.dart';
+import 'level_bar/level_bar.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
@@ -56,7 +56,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           children: [
             Divider(
@@ -69,23 +69,23 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             Text(
               LocaleKeys.Search_Filter_filter.tr(),
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
               ),
             ),
-            Divider(
+            const Divider(
               height: 20,
               color: Colors.grey,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               children: [
                 Text(
                   '${LocaleKeys.Search_Filter_field.tr()} :  ',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
                   ),
@@ -94,7 +94,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                   onPressed: () {},
                   child: Text(
                     LocaleKeys.Search_Test_mainCategory1.tr(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       color: AppColors.primaryColor,
                       fontWeight: FontWeight.w600,
@@ -103,14 +103,14 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
               LocaleKeys.Search_Filter_category.tr(),
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SizedBox(
@@ -130,14 +130,14 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
               LocaleKeys.Search_Filter_duration.tr(),
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             _DurationRangeSlider(
@@ -146,9 +146,9 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             ),
             Text(
               LocaleKeys.Search_Filter_level.tr(),
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             LevelBar(
@@ -156,14 +156,14 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               key: UniqueKey(),
               onChanged: (value) {},
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
               LocaleKeys.Search_Filter_price.tr(),
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             _PriceRangeSlider(
@@ -172,9 +172,9 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             ),
             Text(
               LocaleKeys.Search_Filter_rating.tr(),
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             CourseReviewsStarsBar(
@@ -182,14 +182,14 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               key: UniqueKey(),
               onChanged: (value) {},
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Divider(
+            const Divider(
               height: 20,
               color: Colors.grey,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -207,7 +207,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                         : Colors.grey.shade600,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Flexible(
@@ -221,7 +221,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
           ],

@@ -1,18 +1,18 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/translations/locale_keys.g.dart';
 
 class ListTileEmailPhone extends StatefulWidget {
-  const ListTileEmailPhone();
+  const ListTileEmailPhone({super.key});
 
   @override
-  _ListTileEmailPhoneState createState() => _ListTileEmailPhoneState();
+  ListTileEmailPhoneState createState() => ListTileEmailPhoneState();
 }
 
-class _ListTileEmailPhoneState extends State<ListTileEmailPhone> {
+class ListTileEmailPhoneState extends State<ListTileEmailPhone> {
   bool isItemSelectedOne = false;
   bool isItemSelectedTwo = false;
 

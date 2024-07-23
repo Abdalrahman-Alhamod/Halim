@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/forgot_password/presentation/views/widget/enter_phone_body.dart';
+import '../../../../core/utils/context_extensions.dart';
+import 'widget/enter_phone_body.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
@@ -42,6 +42,6 @@ class _EnterPhoneNumViewState extends State<EnterPhoneNumView> {
         ),
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        body: EnterPhoneBody());
+        body: const EnterPhoneBody());
   }
 }

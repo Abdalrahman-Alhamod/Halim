@@ -81,14 +81,14 @@ class _AvatarLevelsSectionState extends State<AvatarLevelsSection> {
             total: 7,
             progressColor: Colors.deepPurple,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           ListView.separated(
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemCount: _badges.length,
-            separatorBuilder: (context, index) => SizedBox(
+            separatorBuilder: (context, index) => const SizedBox(
               height: 20,
             ),
             itemBuilder: (context, index) => TrackedBadge(
@@ -98,7 +98,7 @@ class _AvatarLevelsSectionState extends State<AvatarLevelsSection> {
               total: _badges[index].total,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
         ],

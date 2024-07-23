@@ -1,4 +1,4 @@
-import 'package:halim/src/course_details/domain/entities/question_type.dart';
+import 'question_type.dart';
 
 class QuizQuestion {
   final String title;

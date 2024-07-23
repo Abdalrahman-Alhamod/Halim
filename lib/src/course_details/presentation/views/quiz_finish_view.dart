@@ -1,14 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/utils/navigation_extra_keys.dart';
-import 'package:halim/core/widgets/custome_elevated_button.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/course_quiz_view/quiz_details_list_tile.dart';
+import '../../../../core/assets/app_images.dart';
+import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/utils/app_route.dart';
+import '../../../../core/utils/context_extensions.dart';
+import '../../../../core/utils/navigation_extra_keys.dart';
+import '../../../../core/widgets/custome_elevated_button.dart';
+import 'widgets/course_quiz_view/quiz_details_list_tile.dart';
 
 import '../../domain/entities/quiz_status.dart';
 import 'widgets/course_quiz_view/quiz_grade_list_tile.dart';
@@ -25,22 +25,22 @@ class QuizFinishView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Spacer(),
+            const Spacer(),
             Image.asset(
               AppImages.enrollDone,
               width: context.width * 0.65,
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Text(
               LocaleKeys.CourseDetails_Quiz_quizDone.tr(),
-              style: TextStyle(fontSize: 32),
+              style: const TextStyle(fontSize: 32),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
@@ -52,7 +52,7 @@ class QuizFinishView extends StatelessWidget {
                     label: LocaleKeys.CourseDetails_Quiz_totalQuestions.tr(),
                     description: '10',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   QuizDetailsListTile(
@@ -61,7 +61,7 @@ class QuizFinishView extends StatelessWidget {
                     description: '7',
                     descriptionColor: Colors.green,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   QuizDetailsListTile(
@@ -70,20 +70,20 @@ class QuizFinishView extends StatelessWidget {
                     description: '3',
                     descriptionColor: Colors.red,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  QuizGradeListTile(
+                  const QuizGradeListTile(
                     grade: 85,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  QuizStatusListTile(status: QuizStatus.passed),
+                  const QuizStatusListTile(status: QuizStatus.passed),
                 ],
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 5,
             ),
             CustomElevatedButton(
@@ -101,7 +101,7 @@ class QuizFinishView extends StatelessWidget {
                   : AppColors.darkFlatButtonColor.withAlpha(180),
               elevation: 0,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             CustomElevatedButton(
@@ -112,7 +112,7 @@ class QuizFinishView extends StatelessWidget {
               },
               title: LocaleKeys.CourseDetails_Quiz_returnToCourse.tr(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
           ],

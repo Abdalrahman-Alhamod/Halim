@@ -8,7 +8,7 @@ class _DurationRangeSlider extends StatefulWidget {
 }
 
 class _DurationRangeSliderState extends State<_DurationRangeSlider> {
-  var selectedRange = RangeValues(10, 30);
+  var selectedRange = const RangeValues(10, 30);
   @override
   Widget build(BuildContext context) {
     return RangeSlider(

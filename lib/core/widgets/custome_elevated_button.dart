@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/constants/app_constrains.dart';
+import '../constants/app_constrains.dart';
 
 import '../themes/app_colors.dart';
 

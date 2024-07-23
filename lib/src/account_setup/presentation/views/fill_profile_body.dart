@@ -2,24 +2,24 @@ import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/src/account_setup/presentation/views/services/image_services.dart';
-import 'package:halim/src/account_setup/presentation/views/widgets/BirthdayCard.dart';
-import 'package:halim/src/account_setup/presentation/views/widgets/ChooseYourSpecialty.dart';
-import 'package:halim/src/account_setup/presentation/views/widgets/ListWithDialogGender.dart';
-import 'package:halim/src/account_setup/presentation/views/widgets/phoneNum_input.dart';
-import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
+import '../../../../core/assets/app_images.dart';
+import '../../../../core/translations/locale_keys.g.dart';
+import 'services/image_services.dart';
+import 'widgets/birthday_card.dart';
+import 'widgets/choose_your_specialty.dart';
+import 'widgets/list_with_dialog_gender.dart';
+import 'widgets/phone_num_input.dart';
+import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 class FillProfileBody extends StatefulWidget {
-  const FillProfileBody();
+  const FillProfileBody({super.key});
 
   
   @override
-  _FillProfileBodyState createState() => _FillProfileBodyState();
+  FillProfileBodyState createState() => FillProfileBodyState();
 }
 
-class _FillProfileBodyState extends State<FillProfileBody> {
+class FillProfileBodyState extends State<FillProfileBody> {
   String fullName = '';
   String lastName = '';
   String dateBirth = '';
@@ -93,10 +93,10 @@ class _FillProfileBodyState extends State<FillProfileBody> {
                 lastName = value;
               },
             ),
-            BirthdayCard(),
+            const BirthdayCard(),
             const PhoneNumberInputScreen(),
-            ListWithDialogGender(),
-            ChooseYourSpecialtyWithRegister(),
+            const ListWithDialogGender(),
+            const ChooseYourSpecialtyWithRegister(),
             Container(height: 20),
             
           ],

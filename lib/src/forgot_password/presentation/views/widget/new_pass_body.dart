@@ -2,26 +2,26 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/functions/show_custom_dialog.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/custome_flat_button.dart';
-import 'package:halim/src/forgot_password/presentation/views/widget/accont_sucsses_dialog.dart';
-import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
-import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/remember_me_check_box.dart';
+import '../../../../../core/assets/app_images.dart';
+import '../../../../../core/functions/show_custom_dialog.dart';
+import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
+import '../../../../../core/widgets/custome_flat_button.dart';
+import 'accont_sucsses_dialog.dart';
+import '../../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
+import '../../../../login_register/presentation/views/widgets/shared_widgets/remember_me_check_box.dart';
 
 import '../../../../../core/utils/app_route.dart';
 
 class NewPassBody extends StatefulWidget {
-  const NewPassBody();
+  const NewPassBody({super.key});
 
   @override
-  _NewPassBodyState createState() => _NewPassBodyState();
+  NewPassBodyState createState() => NewPassBodyState();
 }
 
-class _NewPassBodyState extends State<NewPassBody> {
+class NewPassBodyState extends State<NewPassBody> {
   GlobalKey<FormState> formKey = GlobalKey();
 
   TextEditingController passControllerOne = TextEditingController();
@@ -54,7 +54,7 @@ class _NewPassBodyState extends State<NewPassBody> {
             flex: 2,
           ),
           Text(LocaleKeys.ForgotPassword_createNew.tr(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,
               )),
@@ -99,7 +99,7 @@ class _NewPassBodyState extends State<NewPassBody> {
             height: 60,
             kTextcolor: AppColors.lightFlatButtonColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ],

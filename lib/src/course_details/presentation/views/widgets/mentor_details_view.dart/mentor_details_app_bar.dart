@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/constants/app_constrains.dart';
+import '../../../../../../core/constants/app_constrains.dart';
 
 import '../../../../../../core/widgets/back_arrow_icon.dart';
 

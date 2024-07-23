@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../core/utils/context_extensions.dart';
 import 'package:local_auth/local_auth.dart';
 
 import '../../../../core/themes/app_colors.dart';
@@ -74,11 +74,11 @@ class BiometricViewState extends State<BiometricView> {
               flex: 1,
             ),
             if (_supportState)
-              Text(
+              const Text(
                 'This device is supported',
               )
             else
-              Text(
+              const Text(
                 'This  device is not supported',
               ),
             const Spacer(

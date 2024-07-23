@@ -1,25 +1,25 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/functions/show_custom_dialog.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/forgot_password/presentation/views/widget/accont_sucsses_dialog.dart';
+import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/functions/show_custom_dialog.dart';
+import '../../../../core/themes/app_colors.dart';
+import '../../../../core/utils/app_route.dart';
+import '../../../../core/utils/context_extensions.dart';
+import '../../../forgot_password/presentation/views/widget/accont_sucsses_dialog.dart';
 
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
 import '../../../course_details/presentation/views/widgets/enroll_course_view/widgets/pin_text_field.dart';
 
 class CreatePinBody extends StatefulWidget {
-  const CreatePinBody();
+  const CreatePinBody({super.key});
 
   @override
-  _CreatePinBodyState createState() => _CreatePinBodyState();
+  CreatePinBodyState createState() => CreatePinBodyState();
 }
 
-class _CreatePinBodyState extends State<CreatePinBody> {
+class CreatePinBodyState extends State<CreatePinBody> {
   late final List<TextEditingController> _pinControllers;
 
   @override

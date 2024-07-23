@@ -12,17 +12,17 @@ class CourseReviewsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CourseReviewsStarsBar(
               onChanged: (value) {},
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            CourseReviewsSample(),
+            const CourseReviewsSample(),
           ],
         ),
       ),

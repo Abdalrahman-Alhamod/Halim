@@ -21,11 +21,11 @@ class QuestionChoice extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 24,
         ),
-        fixedSize: Size.fromHeight(80),
+        fixedSize: const Size.fromHeight(80),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
             16,
@@ -74,7 +74,7 @@ class QuestionChoice extends StatelessWidget {
                 ),
               ),
           },
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Expanded(

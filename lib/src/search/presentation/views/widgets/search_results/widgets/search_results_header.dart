@@ -14,7 +14,7 @@ class _SearchResultsHeader extends StatelessWidget {
       children: [
         Text.rich(
           TextSpan(
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
             ),
@@ -24,11 +24,11 @@ class _SearchResultsHeader extends StatelessWidget {
               ),
               TextSpan(
                 text: serchKeyword,
-                style: TextStyle(
+                style: const TextStyle(
                   color: AppColors.primaryColor,
                 ),
               ),
-              TextSpan(
+              const TextSpan(
                 text: '"',
               ),
             ],
@@ -36,7 +36,7 @@ class _SearchResultsHeader extends StatelessWidget {
         ),
         Text(
           '$resultsNum ${LocaleKeys.Search_found.tr()}',
-          style: TextStyle(
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
             color: AppColors.primaryColor,
           ),

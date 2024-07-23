@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 class FilterToggleButtonWithIcon extends StatefulWidget {
   final String filterName;
@@ -8,18 +8,18 @@ class FilterToggleButtonWithIcon extends StatefulWidget {
   final IconData? icon;
 
   const FilterToggleButtonWithIcon({
-    Key? key,
+    super.key,
     required this.filterName,
     required this.fun,
     this.icon,
-  }) : super(key: key);
+  });
 
   @override
-  _FilterToggleButtonWithIconState createState() =>
-      _FilterToggleButtonWithIconState();
+  FilterToggleButtonWithIconState createState() =>
+      FilterToggleButtonWithIconState();
 }
 
-class _FilterToggleButtonWithIconState
+class FilterToggleButtonWithIconState
     extends State<FilterToggleButtonWithIcon> {
   bool _isActive = false;
 
@@ -38,13 +38,13 @@ class _FilterToggleButtonWithIconState
       color: context.isDarkMode ? AppColors.darkColor : Colors.white,
       child: Row(
         children: [
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
           Icon(
             widget.icon,
             size: 28,
             color: context.isDarkMode ? Colors.white : AppColors.darkColor,
           ),
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
           Expanded(
             child: Row(
               children: [
@@ -57,14 +57,14 @@ class _FilterToggleButtonWithIconState
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Switch(
                   value: context.isDarkMode,
                   onChanged: _onToggle,
                   activeColor: Colors.white,
                   activeTrackColor: Colors.blue,
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
               ],
             ),
           )

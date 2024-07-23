@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({

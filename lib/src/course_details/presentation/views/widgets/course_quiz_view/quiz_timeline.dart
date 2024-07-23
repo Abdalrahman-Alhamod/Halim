@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 import 'package:timelines/timelines.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
@@ -18,10 +18,10 @@ class QuizTimeline extends StatelessWidget {
         // direction: Axis.horizontal,
         theme: TimelineThemeData(
           direction: Axis.horizontal,
-          connectorTheme: ConnectorThemeData(
+          connectorTheme: const ConnectorThemeData(
             color: AppColors.primaryColor,
           ),
-          indicatorTheme: IndicatorThemeData(
+          indicatorTheme: const IndicatorThemeData(
             color: AppColors.primaryColor,
             size: 20,
           ),

@@ -2,9 +2,9 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/context_extensions.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../../../../core/themes/app_colors.dart';
@@ -76,14 +76,14 @@ class _FollowCourseState extends State<FollowCourse> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Spacer(
+                  const Spacer(
                     flex: 2,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: AutoSizeText(
                       widget.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                       ),
@@ -91,20 +91,20 @@ class _FollowCourseState extends State<FollowCourse> {
                       maxLines: 1,
                     ),
                   ),
-                  Spacer(
+                  const Spacer(
                     flex: 1,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Text(
                       '${widget.hours} ${LocaleKeys.CourseDetails_hrs.tr()} ${widget.min} ${LocaleKeys.CourseDetails_mins.tr()}',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
                   ),
-                  Spacer(
+                  const Spacer(
                     flex: 1,
                   ),
                   LinearPercentIndicator(
@@ -120,13 +120,13 @@ class _FollowCourseState extends State<FollowCourse> {
                     clipLinearGradient: true,
                     trailing: Text(
                       "${widget.completedEpisodes} / ${widget.allEpisodes}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
                   ),
-                  Spacer(
+                  const Spacer(
                     flex: 2,
                   ),
                 ],

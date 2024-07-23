@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:halim/core/test/app_test.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/video_player_view/course_video_app_bar.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/video_player_view/custom_video_player.dart';
+import '../../../../core/test/app_test.dart';
+import 'widgets/video_player_view/course_video_app_bar.dart';
+import 'widgets/video_player_view/custom_video_player.dart';
 import 'package:video_player/video_player.dart';
 
 // ignore: unused_import

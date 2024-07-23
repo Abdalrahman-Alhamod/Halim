@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 class BirthdayCard extends StatefulWidget {
   const BirthdayCard({super.key});
@@ -36,7 +36,7 @@ class BirthdayCardState extends State<BirthdayCard> {
           backgroundColor:
               context.isDarkMode ? AppColors.darkColor : Colors.white,
           title: Text(LocaleKeys.FillYourProfile_dateOfBirth.tr()),
-          content: Container(
+          content: SizedBox(
             height: 300,
             width: 300,
             child: CalendarDatePicker(

@@ -3,9 +3,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../../core/utils/app_route.dart';
+import '../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_svgs.dart';
 import '../../../../../../../core/themes/app_colors.dart';
@@ -147,7 +147,7 @@ class CourseLessonBlockElements extends StatelessWidget {
                                   color: Colors.orange,
                                 ),
                               )
-                            : SizedBox(),
+                            : const SizedBox(),
                       ],
                     )
                   ],
@@ -160,7 +160,7 @@ class CourseLessonBlockElements extends StatelessWidget {
             ? DownloadIconButton(
                 isDownloaded: isDownloaded,
               )
-            : SizedBox(),
+            : const SizedBox(),
       ],
     );
   }
@@ -185,7 +185,7 @@ class CourseLessonIcon extends StatelessWidget {
       ),
       radius: 22,
       child: isLocked
-          ? LockIcon()
+          ? const LockIcon()
           : isDone
               ? const Icon(
                   Icons.done,

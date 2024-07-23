@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/themes/app_colors.dart';
+import '../../../../../../core/constants/app_sizes.dart';
+import '../../../../../../core/themes/app_colors.dart';
 
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../achievements_progress_indicator.dart';
@@ -15,7 +15,7 @@ class SummerySection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: AppSizes.pad16),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           AchievementsProgressIndicator(
@@ -24,7 +24,7 @@ class SummerySection extends StatelessWidget {
             total: 39,
             progressColor: AppColors.primaryColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           AchievementsProgressIndicator(
@@ -61,7 +61,7 @@ class SummerySection extends StatelessWidget {
             total: 8,
             progressColor: Colors.teal,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ],

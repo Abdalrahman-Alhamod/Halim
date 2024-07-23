@@ -89,10 +89,10 @@ class _HoursSpentSectionState extends State<HoursSpentSection> {
           ListView.separated(
             shrinkWrap: true,
             itemCount: _badges.length,
-            separatorBuilder: (context, index) => SizedBox(
+            separatorBuilder: (context, index) => const SizedBox(
               height: 20,
             ),
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) => TrackedBadge(
               image: _badges[index].image,
               title: _badges[index].name,
@@ -100,7 +100,7 @@ class _HoursSpentSectionState extends State<HoursSpentSection> {
               total: _badges[index].total,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
         ],

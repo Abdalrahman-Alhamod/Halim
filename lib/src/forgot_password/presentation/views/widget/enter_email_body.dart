@@ -1,24 +1,24 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/custome_flat_button.dart';
+import '../../../../../core/assets/app_images.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
+import '../../../../../core/widgets/custome_flat_button.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
+import '../../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/app_route.dart';
 
 class EnterEmailBody extends StatefulWidget {
-  const EnterEmailBody();
+  const EnterEmailBody({super.key});
 
   @override
-  _EnterEmailBodyState createState() => _EnterEmailBodyState();
+  EnterEmailBodyState createState() => EnterEmailBodyState();
 }
 
-class _EnterEmailBodyState extends State<EnterEmailBody> {
+class EnterEmailBodyState extends State<EnterEmailBody> {
   GlobalKey<FormState> formKey = GlobalKey();
   final _emailValidator = MultiValidator([
     RequiredValidator(errorText: LocaleKeys.Auth_thisFieldIsRequired.tr()),
@@ -55,7 +55,7 @@ class _EnterEmailBodyState extends State<EnterEmailBody> {
               Text(
                 LocaleKeys.ForgotPassword_EnterEm_EnterThe.tr(),
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.normal,
                 ),
@@ -92,7 +92,7 @@ class _EnterEmailBodyState extends State<EnterEmailBody> {
                 height: 60,
                 kTextcolor: AppColors.lightFlatButtonColor,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

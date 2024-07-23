@@ -1,25 +1,25 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/account_setup/presentation/views/widgets/phoneNum_input.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
+import '../../../../account_setup/presentation/views/widgets/phone_num_input.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
 
-import 'package:halim/core/assets/app_images.dart';
+import '../../../../../core/assets/app_images.dart';
 
 
 class EnterPhoneBody extends StatefulWidget {
-  const EnterPhoneBody();
+  const EnterPhoneBody({super.key});
 
   @override
-  _EnterPhoneBodyState createState() => _EnterPhoneBodyState();
+  EnterPhoneBodyState createState() => EnterPhoneBodyState();
 }
 
-class _EnterPhoneBodyState extends State<EnterPhoneBody> {
+class EnterPhoneBodyState extends State<EnterPhoneBody> {
   
   @override
   Widget build(BuildContext context) {
@@ -41,13 +41,13 @@ class _EnterPhoneBodyState extends State<EnterPhoneBody> {
           ),
           Text(LocaleKeys.ForgotPassword_EnterPhone_EnterThe.tr(),
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,
               )),
           const Spacer(
             flex: 1,
-          ),PhoneNumberInputScreen(),
+          ),const PhoneNumberInputScreen(),
           // CustomTextField(
           //   obscureText: false,
           //   hintText: LocaleKeys.Auth_email.tr(),
@@ -77,7 +77,7 @@ class _EnterPhoneBodyState extends State<EnterPhoneBody> {
             height: 60,
             kTextcolor: AppColors.lightFlatButtonColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ],

@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../utils/context_extensions.dart';
 
 import '../themes/app_colors.dart';
 import '../translations/locale_keys.g.dart';
@@ -59,7 +59,7 @@ showConfirmDialog({
                   const Spacer(flex: 1),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

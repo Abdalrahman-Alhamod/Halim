@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/course_quiz_view/course_quiz_app_bar.dart';
+import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/utils/app_route.dart';
+import 'widgets/course_quiz_view/course_quiz_app_bar.dart';
 
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/navigation_extra_keys.dart';

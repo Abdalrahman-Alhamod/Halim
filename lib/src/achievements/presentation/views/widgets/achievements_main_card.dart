@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -36,7 +36,7 @@ class AchievementsNumbersCard extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
               ),
             ),
@@ -59,7 +59,7 @@ class PointsText extends StatelessWidget {
     return AutoSizeText(
       points.toString(),
       maxLines: 1,
-      style: TextStyle(
+      style: const TextStyle(
         fontSize: 36,
         color: Colors.green,
       ),

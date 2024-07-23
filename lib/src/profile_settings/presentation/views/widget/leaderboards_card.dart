@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/themes/app_colors.dart';
 
 class LeaderboardsCard extends StatelessWidget {
@@ -63,7 +63,7 @@ class LeaderboardsCard extends StatelessWidget {
                         child: Center(
                           child: Text(
                             '$rank',
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.red,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16),
@@ -111,7 +111,7 @@ class LeaderboardsCard extends StatelessWidget {
                       ),
                       AutoSizeText(
                         '$hours',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.red,
                           fontWeight: FontWeight.w600,
                         ),
@@ -122,7 +122,7 @@ class LeaderboardsCard extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               )
             ],

@@ -1,15 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/constants/app_constrains.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/sections_view/data/section_page.dart';
-import 'package:halim/core/widgets/sections_view/sections_view.dart';
-import 'package:halim/src/my_courses/presentation/views/widget/completed_courses_page.dart';
-import 'package:halim/src/my_courses/presentation/views/widget/downloaded_courses_page.dart';
-import 'package:halim/src/my_courses/presentation/views/widget/ongoing_courses_page.dart';
-import 'package:halim/src/my_courses/presentation/views/widget/saved_courses_page.dart';
+import '../../../../core/assets/app_images.dart';
+import '../../../../core/constants/app_constrains.dart';
+import '../../../../core/utils/context_extensions.dart';
+import '../../../../core/widgets/sections_view/data/section_page.dart';
+import '../../../../core/widgets/sections_view/sections_view.dart';
+import 'widget/completed_courses_page.dart';
+import 'widget/downloaded_courses_page.dart';
+import 'widget/ongoing_courses_page.dart';
+import 'widget/saved_courses_page.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
@@ -31,7 +31,7 @@ class BrowseSectionsCoursesState extends State<BrowseSectionsCourses> {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
           LocaleKeys.MyCourses_myCourses.tr(),
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
           ),
@@ -71,19 +71,19 @@ class BrowseSectionsCoursesState extends State<BrowseSectionsCourses> {
           pages: [
             SectionPage(
               title: LocaleKeys.MyCourses_ongoing.tr(),
-              child: OngoingCoursesPage(),
+              child: const OngoingCoursesPage(),
             ),
             SectionPage(
               title: LocaleKeys.MyCourses_completed.tr(),
-              child: CompletedCoursesPage(),
+              child: const CompletedCoursesPage(),
             ),
             SectionPage(
               title: LocaleKeys.MyCourses_saved.tr(),
-              child: SavedCoursesPage(),
+              child: const SavedCoursesPage(),
             ),
             SectionPage(
               title: LocaleKeys.MyCourses_downloaded.tr(),
-              child: DownloadedCoursesPage(),
+              child: const DownloadedCoursesPage(),
             ),
           ],
         ),

@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
+import '../../../../../../../../core/translations/locale_keys.g.dart';
 
 import 'course_reviews_stars_button.dart';
 import 'data/stars_bar_item.dart';
@@ -52,7 +52,7 @@ class _CourseReviewsStarsBarState extends State<CourseReviewsStarsBar> {
                 isPressed: _index == index,
                 label: items[index].label,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
             ],

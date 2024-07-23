@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../../core/themes/app_colors.dart';
 import '../../../../../../../../core/translations/locale_keys.g.dart';
@@ -48,7 +48,7 @@ class EnterCommentBottomSheet extends StatelessWidget {
                           ),
                           Text(
                             replyOnUsername!,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               color: AppColors.primaryColor,
                             ),
@@ -56,11 +56,11 @@ class EnterCommentBottomSheet extends StatelessWidget {
                         ],
                       ),
                     )
-                  : SizedBox(),
+                  : const SizedBox(),
               CommentTextField(
                 onSendPressed: onSend,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               )
             ],

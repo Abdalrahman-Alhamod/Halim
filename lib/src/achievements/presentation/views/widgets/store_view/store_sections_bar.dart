@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/store_view/store_section_button.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
+import 'store_section_button.dart';
 
 class StoreSectionBar extends StatefulWidget {
   const StoreSectionBar({super.key, required this.pageController});
@@ -36,7 +36,7 @@ class _StoreSectionBarState extends State<StoreSectionBar> {
             label: LocaleKeys.Achievements_Store_coupons.tr(),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Flexible(

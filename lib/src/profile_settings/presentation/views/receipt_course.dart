@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/profile_settings/presentation/views/widget/receipt_widget.dart';
+import '../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/utils/context_extensions.dart';
+import 'widget/receipt_widget.dart';
 
 import '../../../../core/themes/app_colors.dart';
 
@@ -22,7 +22,7 @@ class ReceiptViewState extends State<ReceiptView> {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
           LocaleKeys.Settings_Payments_Receipt_receipt.tr(),
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
         actions: <Widget>[
@@ -33,7 +33,7 @@ class ReceiptViewState extends State<ReceiptView> {
             onSelected: (String result) {
               if (result == 'download') {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
+                  const SnackBar(
                     content: Text('Download selected'),
                   ),
                 );
@@ -45,7 +45,7 @@ class ReceiptViewState extends State<ReceiptView> {
                 child: Row(
                   children: [
                     Text(LocaleKeys.Settings_Payments_Receipt_download.tr()),
-                    Spacer(),
+                    const Spacer(),
                     Icon(Icons.download,
                         color: context.isDarkMode
                             ? Colors.white

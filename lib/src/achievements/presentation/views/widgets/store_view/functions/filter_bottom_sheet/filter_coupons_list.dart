@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/src/search/presentation/views/widgets/sortBy/widgets/data/sort_by_list_item.dart';
+import '../../../../../../../search/presentation/views/widgets/sortBy/widgets/data/sort_by_list_item.dart';
 
 import '../../../../../../../../core/translations/locale_keys.g.dart';
 
@@ -40,7 +40,7 @@ class _FilterCouponsListState extends State<FilterCouponsList> {
     return SizedBox(
       width: double.infinity,
       child: ListView.builder(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         itemCount: items.length,
@@ -48,7 +48,7 @@ class _FilterCouponsListState extends State<FilterCouponsList> {
           return ListTile(
             title: Text(
               items[index].label,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
               ),

@@ -1,14 +1,14 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 class MotivationalCounterWidget extends StatelessWidget {
   final int points;
 
-  MotivationalCounterWidget({required this.points});
+  const MotivationalCounterWidget({super.key, required this.points});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MotivationalCounterWidget extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: Colors.blue.withOpacity(0.9), width: 3),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black26,
             blurRadius: 10,
@@ -43,7 +43,7 @@ class MotivationalCounterWidget extends StatelessWidget {
                 WavyAnimatedText(
                    LocaleKeys.HomePage_Home_pointWidget_keepMoving.tr(),
                   textAlign: TextAlign.start,
-                  speed: Duration(microseconds: 50000),
+                  speed: const Duration(microseconds: 50000),
                   textStyle: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -69,7 +69,7 @@ class MotivationalCounterWidget extends StatelessWidget {
                     color:
                         context.isDarkMode ? Colors.white70 : Colors.black54),
               ),
-              SizedBox(width: 40),
+              const SizedBox(width: 40),
               DefaultTextStyle(
                 style: TextStyle(
                   fontSize: 48,
@@ -82,7 +82,7 @@ class MotivationalCounterWidget extends StatelessWidget {
                   animatedTexts: [
                     TypewriterAnimatedText(
                       '$points',
-                      speed: Duration(microseconds: 150000),
+                      speed: const Duration(microseconds: 150000),
                     ),
                     /*ColorizeAnimatedText(
                       '$points',

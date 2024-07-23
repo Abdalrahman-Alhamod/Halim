@@ -2,10 +2,10 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/app_route.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/home/presentation/views/functions/remove_bookmark_bottom_sheet.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/context_extensions.dart';
+import '../functions/remove_bookmark_bottom_sheet.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -83,8 +83,8 @@ class _CardCourseState extends State<CardCourse> {
                     Row(
                       children: [
                         Container(
-                          constraints: BoxConstraints(maxWidth: 160),
-                          padding: EdgeInsets.symmetric(
+                          constraints: const BoxConstraints(maxWidth: 160),
+                          padding: const EdgeInsets.symmetric(
                             vertical: 4,
                             horizontal: 6,
                           ),
@@ -134,7 +134,7 @@ class _CardCourseState extends State<CardCourse> {
                     ),
                     AutoSizeText(
                       widget.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                       ),
@@ -162,14 +162,14 @@ class _CardCourseState extends State<CardCourse> {
                         ),
                         Text(
                           '  ${widget.evaluation}  | ',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
                           ),
                         ),
                         Text(
                           '${widget.followers} ${LocaleKeys.CourseDetails_students.tr()}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
                           ),

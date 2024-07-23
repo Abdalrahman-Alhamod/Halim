@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/achievements/presentation/views/achievements_view.dart';
-import 'package:halim/src/profile_settings/presentation/views/settings_view.dart';
+import '../../../../../core/utils/context_extensions.dart';
+import '../../../../achievements/presentation/views/achievements_view.dart';
+import '../../../../profile_settings/presentation/views/settings_view.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
@@ -45,7 +45,7 @@ class BottomBarState extends State<BottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         children: _pages,
       ),

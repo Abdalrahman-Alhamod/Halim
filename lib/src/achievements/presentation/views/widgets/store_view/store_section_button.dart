@@ -24,7 +24,7 @@ class StoreSectionButton extends StatelessWidget {
           width: 3,
         ),
         padding: EdgeInsets.zero,
-        minimumSize: Size(
+        minimumSize: const Size(
           double.infinity,
           55,
         ),

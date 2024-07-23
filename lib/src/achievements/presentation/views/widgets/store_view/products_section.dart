@@ -17,7 +17,7 @@ class ProductsSection extends StatelessWidget {
         description: LocaleKeys.Achievements_Store_Test_itemDesc.tr(),
         price: 200,
       ),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 16,
         crossAxisSpacing: 16,

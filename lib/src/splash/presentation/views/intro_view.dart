@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
+import '../../../../core/assets/app_images.dart';
+import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import 'widgets/intro_button.dart';
 import 'widgets/intro_page.dart';
 import 'widgets/intro_page_indicator.dart';

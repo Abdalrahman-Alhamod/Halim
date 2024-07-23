@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/auth_tile.dart';
-import 'package:halim/src/login_register/presentation/views/widgets/shared_widgets/divider_with_text.dart';
+import 'auth_tile.dart';
+import 'divider_with_text.dart';
 
 import '../../../../../../core/assets/app_images.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';

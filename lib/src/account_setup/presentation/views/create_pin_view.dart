@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/account_setup/presentation/views/create_pin_body.dart';
+import '../../../../core/utils/context_extensions.dart';
+import 'create_pin_body.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 
@@ -41,6 +41,6 @@ class CreatePinViewState extends State<CreatePinView> {
         ),
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        body: CreatePinBody());
+        body: const CreatePinBody());
   }
 }

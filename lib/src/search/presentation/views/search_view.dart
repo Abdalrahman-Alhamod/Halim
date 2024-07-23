@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_svgs.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/search/presentation/views/widgets/recent_search/recent_search.dart';
+import '../../../../core/assets/app_svgs.dart';
+import '../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/utils/context_extensions.dart';
+import 'widgets/recent_search/recent_search.dart';
 import '../../../../core/constants/app_constrains.dart';
 import '../../../../core/themes/app_colors.dart';
 // ignore: unused_import
@@ -27,7 +27,7 @@ class _SearchViewState extends State<SearchView> {
   late Widget body;
   @override
   void initState() {
-    body = RecentSearch();
+    body = const RecentSearch();
     super.initState();
   }
 
@@ -36,18 +36,18 @@ class _SearchViewState extends State<SearchView> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
           child: SingleChildScrollView(
             child: Column(
               children: [
                 SearchBar(onSubmitted: (value) {
                   if (value.isNotEmpty) {
                     setState(() {
-                      body = SearchResults();
+                      body = const SearchResults();
                     });
                   }
                 }),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 body,

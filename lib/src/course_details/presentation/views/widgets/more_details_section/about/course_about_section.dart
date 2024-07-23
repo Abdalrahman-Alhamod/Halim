@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../../core/utils/context_extensions.dart';
 import 'package:readmore/readmore.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';

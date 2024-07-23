@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/constants/app_constrains.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../core/constants/app_constrains.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 

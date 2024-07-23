@@ -48,7 +48,7 @@ class AnimatedCounterState extends State<AnimatedCounter>
       widget.value is int
           ? _animation.value.toInt().toString()
           : _animation.value.toStringAsFixed(1),
-      style: TextStyle(fontSize: 28),
+      style: const TextStyle(fontSize: 28),
     );
   }
 }

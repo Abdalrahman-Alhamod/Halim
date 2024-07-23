@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 import '../../../../../core/themes/app_colors.dart';
@@ -26,7 +26,7 @@ class TrackedBadge extends StatelessWidget {
           image,
           width: 80,
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         Expanded(
@@ -35,9 +35,9 @@ class TrackedBadge extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(fontSize: 18),
+                style: const TextStyle(fontSize: 18),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               LinearPercentIndicator(
@@ -51,7 +51,7 @@ class TrackedBadge extends StatelessWidget {
                 animation: true,
                 animationDuration: 700,
                 animateFromLastPercent: true,
-                barRadius: Radius.circular(8),
+                barRadius: const Radius.circular(8),
                 padding: EdgeInsets.zero,
                 isRTL: !context.isEnglish,
                 center: Text(

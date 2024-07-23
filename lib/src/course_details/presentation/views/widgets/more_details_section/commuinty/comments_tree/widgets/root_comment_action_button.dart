@@ -32,7 +32,7 @@ class RootCommentActionButton extends StatelessWidget {
                   LocaleKeys.CourseDetails_Community_reply.tr(),
                 ),
               )
-            : SizedBox(),
+            : const SizedBox(),
         isApproved
             ? Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
@@ -42,12 +42,12 @@ class RootCommentActionButton extends StatelessWidget {
                   children: [
                     Text(
                       LocaleKeys.CourseDetails_Community_approved.tr(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.green,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.done,
                       color: Colors.green,
                       size: 20,
@@ -55,7 +55,7 @@ class RootCommentActionButton extends StatelessWidget {
                   ],
                 ),
               )
-            : SizedBox(),
+            : const SizedBox(),
       ],
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/assets/app_images.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -12,7 +12,7 @@ class HalimWidget extends StatelessWidget {
   final IconData? icon;
 
   HalimWidget(
-      {required this.name, this.icon, required this.onPressed, this.color});
+      {super.key, required this.name, this.icon, required this.onPressed, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class HalimWidget extends StatelessWidget {
       color: context.isDarkMode ? AppColors.darkColor : Colors.white,
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 23,
           ),
           Image.asset(
@@ -32,7 +32,7 @@ class HalimWidget extends StatelessWidget {
             width: 23,
             color: context.isDarkMode ? Colors.white : Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             width: 23,
           ),
           Expanded(
@@ -54,7 +54,7 @@ class HalimWidget extends StatelessWidget {
                       color: context.isDarkMode ? Colors.white : Colors.black,
                     ),
                     onPressed: onPressed),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
               ],

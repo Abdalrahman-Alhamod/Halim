@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:halim/core/assets/app_svgs.dart';
-import 'package:halim/core/constants/app_constrains.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../../core/assets/app_svgs.dart';
+import '../../../../../../../core/constants/app_constrains.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';
 

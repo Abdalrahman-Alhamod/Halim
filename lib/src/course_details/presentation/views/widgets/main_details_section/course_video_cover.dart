@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/video_player_view/custom_video_player.dart';
+import '../../../../../../core/utils/context_extensions.dart';
+import '../video_player_view/custom_video_player.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../../../../core/assets/app_images.dart';
@@ -73,7 +73,7 @@ class _CourseIntroVideoState extends State<CourseIntroVideo> {
   }
 
   Widget _buildVideoPlayer() {
-    return Center(
+    return const Center(
       child: CustomVideoPlayer(
         url: AppVideos.test,
         dataSourceType: DataSourceType.asset,

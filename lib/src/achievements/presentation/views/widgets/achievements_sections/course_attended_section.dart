@@ -78,8 +78,8 @@ class _CourseAttendedSectionState extends State<CourseAttendedSection> {
           ListView.separated(
             shrinkWrap: true,
             itemCount: _badges.length,
-            physics: NeverScrollableScrollPhysics(),
-            separatorBuilder: (context, index) => SizedBox(
+            physics: const NeverScrollableScrollPhysics(),
+            separatorBuilder: (context, index) => const SizedBox(
               height: 20,
             ),
             itemBuilder: (context, index) => TrackedBadge(
@@ -89,7 +89,7 @@ class _CourseAttendedSectionState extends State<CourseAttendedSection> {
               total: _badges[index].total,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
         ],

@@ -1,20 +1,20 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
-class ChooseYourSpecialtyWithRegister extends StatefulWidget {
-  const ChooseYourSpecialtyWithRegister({super.key});
+class ChooseYourSpecialtyWithCourses extends StatefulWidget {
+  const ChooseYourSpecialtyWithCourses({super.key});
 
   @override
-  ChooseYourSpecialtyWithRegisterState createState() =>
-      ChooseYourSpecialtyWithRegisterState();
+  ChooseYourSpecialtyWithCoursesState createState() =>
+      ChooseYourSpecialtyWithCoursesState();
 }
 
-class ChooseYourSpecialtyWithRegisterState
-    extends State<ChooseYourSpecialtyWithRegister> {
+class ChooseYourSpecialtyWithCoursesState
+    extends State<ChooseYourSpecialtyWithCourses> {
   TextEditingController controller = TextEditingController();
   bool _isFocused = false;
   late FocusNode _focusNode;
@@ -44,6 +44,7 @@ class ChooseYourSpecialtyWithRegisterState
     _focusNode = FocusNode();
     _focusNode.addListener(_onFocusChange);
     filteredOptions = options;
+    controller.text = options[0]; // تعيين القسم الافتراضي
   }
 
   @override
@@ -87,7 +88,7 @@ class ChooseYourSpecialtyWithRegisterState
                   ),
                 ],
               ),
-              content: Container(
+              content: SizedBox(
                 width: double.maxFinite,
                 height: 500.0,
                 child: ListView.builder(
@@ -119,21 +120,33 @@ class ChooseYourSpecialtyWithRegisterState
       padding: const EdgeInsets.all(10.0),
       child: TextField(
         controller: controller,
-        focusNode: _focusNode,
         readOnly: true,
         onTap: _showDialog,
         decoration: InputDecoration(
           hintText: LocaleKeys.FillYourProfile_Specialty_choose_specialty.tr(),
-          contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+          contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(
             fontWeight: FontWeight.w600,
             color: context.isDarkMode
                 ? Colors.grey.shade500
                 : Colors.grey.shade700,
           ),
-          suffixIcon: Icon(
-            Icons.arrow_drop_down_rounded,
-            size: 30,
+          prefixIcon: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                '   ${LocaleKeys.HomePage_Home_section.tr()}',
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              ),
+              const SizedBox(width: 4),
+            ],
+          ),
+          suffixIcon: IconButton(
+            icon: const Icon(
+              Icons.arrow_drop_down_rounded,
+              size: 30,
+            ),
+            onPressed: _showDialog,
           ),
           filled: true,
           fillColor: context.isDarkMode

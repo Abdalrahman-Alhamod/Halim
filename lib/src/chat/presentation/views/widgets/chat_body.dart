@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/src/chat/presentation/views/widgets/chat_text_field.dart';
-import 'package:halim/src/chat/presentation/views/widgets/send_chat_box.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import 'chat_text_field.dart';
+import 'send_chat_box.dart';
 
 import '../../../domain/entities/message.dart';
 import 'recieve_chat_box.dart';
@@ -28,62 +28,62 @@ class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
       Message(
         email: 'abd@gmail.com',
         content: 'Hey Alaa, how are you?',
-        time: DateTime.now().subtract(Duration(minutes: 15)),
+        time: DateTime.now().subtract(const Duration(minutes: 15)),
       ),
       Message(
         email: 'alaa@gmail.com',
         content: 'I\'m good, Abd. How about you?',
-        time: DateTime.now().subtract(Duration(minutes: 14)),
+        time: DateTime.now().subtract(const Duration(minutes: 14)),
       ),
       Message(
         email: 'abd@gmail.com',
         content: 'Doing well, just working on a project.',
-        time: DateTime.now().subtract(Duration(minutes: 13)),
+        time: DateTime.now().subtract(const Duration(minutes: 13)),
       ),
       Message(
         email: 'alaa@gmail.com',
         content: 'That sounds interesting. What project is it?',
-        time: DateTime.now().subtract(Duration(minutes: 12)),
+        time: DateTime.now().subtract(const Duration(minutes: 12)),
       ),
       Message(
         email: 'abd@gmail.com',
         content: 'It\'s a chat application. Trying to improve its UI.',
-        time: DateTime.now().subtract(Duration(minutes: 11)),
+        time: DateTime.now().subtract(const Duration(minutes: 11)),
       ),
       Message(
         email: 'alaa@gmail.com',
         content: 'Nice! Need any help?',
-        time: DateTime.now().subtract(Duration(minutes: 10)),
+        time: DateTime.now().subtract(const Duration(minutes: 10)),
       ),
       Message(
         email: 'abd@gmail.com',
         content: 'Sure, some feedback would be great.',
-        time: DateTime.now().subtract(Duration(minutes: 9)),
+        time: DateTime.now().subtract(const Duration(minutes: 9)),
       ),
       Message(
         email: 'alaa@gmail.com',
         content: 'Alright, send me the details.',
-        time: DateTime.now().subtract(Duration(minutes: 8)),
+        time: DateTime.now().subtract(const Duration(minutes: 8)),
       ),
       Message(
         email: 'abd@gmail.com',
         content: 'Just emailed you the project specs.',
-        time: DateTime.now().subtract(Duration(minutes: 7)),
+        time: DateTime.now().subtract(const Duration(minutes: 7)),
       ),
       Message(
         email: 'alaa@gmail.com',
         content: 'Got it. I\'ll take a look and get back to you.',
-        time: DateTime.now().subtract(Duration(minutes: 6)),
+        time: DateTime.now().subtract(const Duration(minutes: 6)),
       ),
       Message(
         email: 'abd@gmail.com',
         content: 'Thanks, Alaa! Appreciate it.',
-        time: DateTime.now().subtract(Duration(minutes: 5)),
+        time: DateTime.now().subtract(const Duration(minutes: 5)),
       ),
       Message(
         email: 'alaa@gmail.com',
         content: 'No problem! Talk to you soon.',
-        time: DateTime.now().subtract(Duration(minutes: 4)),
+        time: DateTime.now().subtract(const Duration(minutes: 4)),
       ),
     ];
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -96,7 +96,7 @@ class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
     if (_scrollController.hasClients) {
       _scrollController.animateTo(
         _scrollController.position.maxScrollExtent,
-        duration: Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 300),
         curve: Curves.easeOut,
       );
     }
@@ -145,7 +145,7 @@ class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
           ),
         ),
         Container(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: AppSizes.pad16,
             vertical: AppSizes.pad12,
           ),

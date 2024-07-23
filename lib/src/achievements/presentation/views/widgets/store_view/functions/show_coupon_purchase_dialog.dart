@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../core/functions/show_confirm_dialog.dart';
 import '../../../../../../../core/functions/show_custom_dialog.dart';
@@ -26,16 +26,16 @@ showCouponPurchaseDialog({
         children: [
           Text(
             LocaleKeys.Achievements_Store_Dialog_confirmToPurchase.tr(),
-            style: TextStyle(fontSize: 24),
+            style: const TextStyle(fontSize: 24),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
             LocaleKeys.Achievements_Store_Dialog_sureToPurchaseCoupon.tr(),
             textAlign: TextAlign.center,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -44,7 +44,7 @@ showCouponPurchaseDialog({
               Text(
                 '${LocaleKeys.Achievements_Store_Dialog_courseName.tr()}:',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                 ),
               ),
@@ -55,7 +55,7 @@ showCouponPurchaseDialog({
                   textAlign: TextAlign.end,
                   maxLines: 2,
                   minFontSize: 8,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   ),
@@ -63,7 +63,7 @@ showCouponPurchaseDialog({
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -71,7 +71,7 @@ showCouponPurchaseDialog({
             children: [
               Text(
                 '${LocaleKeys.Achievements_Store_Dialog_discount.tr()}:',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                 ),
               ),
@@ -85,7 +85,7 @@ showCouponPurchaseDialog({
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -93,13 +93,13 @@ showCouponPurchaseDialog({
             children: [
               Text(
                 '${LocaleKeys.Achievements_Store_Dialog_couponPrice.tr()}:',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                 ),
               ),
               Text(
                 '$couponPrice ${LocaleKeys.Achievements_Store_point.tr()}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.green,
                   fontSize: 18,
@@ -107,7 +107,7 @@ showCouponPurchaseDialog({
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -115,13 +115,13 @@ showCouponPurchaseDialog({
             children: [
               Text(
                 '${LocaleKeys.Achievements_Store_Dialog_youPoints.tr()}:',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                 ),
               ),
               Text(
                 '$totalPoints ${LocaleKeys.Achievements_Store_point.tr()}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.green,
                   fontSize: 18,
@@ -129,7 +129,7 @@ showCouponPurchaseDialog({
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
         ],

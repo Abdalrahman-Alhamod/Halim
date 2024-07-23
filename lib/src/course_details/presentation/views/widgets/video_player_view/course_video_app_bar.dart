@@ -21,7 +21,7 @@ class CourseVideoAppBar extends StatelessWidget implements PreferredSizeWidget {
               },
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 24,
           ),
           Text(

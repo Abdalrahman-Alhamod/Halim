@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/themes/app_colors.dart';
 
 class ReceiptWidget extends StatefulWidget {
@@ -43,12 +43,12 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Icon(
+          const Icon(
             Icons.qr_code_2,
             size: 200,
           ),
           Text('${widget.transactionID}'),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Container(
             height: 80,
             decoration: BoxDecoration(
@@ -63,7 +63,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                 children: [
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_name.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_name.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -77,7 +77,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                     ),
                     const Spacer(),
                     AutoSizeText(
-                      '${widget.name}',
+                      widget.name,
                       style: TextStyle(
                         color: context.isDarkMode ? Colors.white : Colors.black,
                         fontWeight: FontWeight.w400,
@@ -88,10 +88,10 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       maxLines: 1,
                     ),
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_email.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_email.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -105,7 +105,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                     ),
                     const Spacer(),
                     AutoSizeText(
-                      '${widget.email}',
+                      widget.email,
                       style: TextStyle(
                         color: context.isDarkMode ? Colors.white : Colors.black,
                         fontWeight: FontWeight.w400,
@@ -120,7 +120,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
               ),
             ),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Container(
             height: 80,
             decoration: BoxDecoration(
@@ -135,7 +135,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                 children: [
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_course.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_course.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -149,7 +149,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                     ),
                     const Spacer(),
                     AutoSizeText(
-                      '${widget.nameCourse}',
+                      widget.nameCourse,
                       style: TextStyle(
                         color: context.isDarkMode ? Colors.white : Colors.black,
                         fontWeight: FontWeight.w400,
@@ -160,10 +160,10 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       maxLines: 1,
                     ),
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_category.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_category.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -177,7 +177,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                     ),
                     const Spacer(),
                     AutoSizeText(
-                      '${widget.category}',
+                      widget.category,
                       style: TextStyle(
                         color: context.isDarkMode ? Colors.white : Colors.black,
                         fontWeight: FontWeight.w400,
@@ -192,7 +192,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
               ),
             ),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Container(
             height: 210,
             decoration: BoxDecoration(
@@ -207,7 +207,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                 children: [
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_transaction.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_transaction.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -232,10 +232,10 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       maxLines: 1,
                     ),
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_priceBefor.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_priceBefor.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -260,10 +260,10 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       maxLines: 1,
                     ),
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_discount.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_discount.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -288,10 +288,10 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       maxLines: 1,
                     ),
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_priceAfter.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_priceAfter.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -316,10 +316,10 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       maxLines: 1,
                     ),
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_date.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_date.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -344,10 +344,10 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       maxLines: 1,
                     ),
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     AutoSizeText(
-                      '${LocaleKeys.Settings_Payments_Receipt_status.tr()}',
+                      LocaleKeys.Settings_Payments_Receipt_status.tr(),
                       style: TextStyle(
                         color: context.isDarkMode
                             ? Colors.white70
@@ -363,7 +363,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                     Container(
                       height: 25,
                       width: 80,
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 4,
                         horizontal: 6,
                       ),
@@ -373,7 +373,7 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       ),
                       child: Center(
                         child: AutoSizeText(
-                          '${widget.paid ? '${LocaleKeys.Settings_Payments_paid.tr()}' : '${LocaleKeys.Settings_Payments_unpaid.tr()}'}',
+                          widget.paid ? LocaleKeys.Settings_Payments_paid.tr() : LocaleKeys.Settings_Payments_unpaid.tr(),
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,

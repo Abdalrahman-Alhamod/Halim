@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../core/utils/context_extensions.dart';
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
@@ -40,7 +40,7 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
                 onPressed: () {
                   GoRouter.of(context).push(AppRoute.kSearch);
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.search,
                   size: 28,
                 ),
@@ -59,8 +59,8 @@ class TopMonetorsViewState extends State<TopMonetorsView> {
         ),
       ),
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.all(2.0),
+      body: const Padding(
+        padding: EdgeInsets.all(2.0),
         child: Column(
           children: [
             TeacherCard(

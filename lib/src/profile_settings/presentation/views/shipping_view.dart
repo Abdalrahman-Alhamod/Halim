@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/profile_settings/presentation/views/widget/shipping_card.dart';
+import '../../../../core/utils/context_extensions.dart';
+import 'widget/shipping_card.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
@@ -22,7 +22,7 @@ class ShippingViewState extends State<ShippingView> {
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
           LocaleKeys.Settings_Shipping_shipping.tr(),
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
       ),

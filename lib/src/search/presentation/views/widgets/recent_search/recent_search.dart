@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/assets/app_svgs.dart';
 import '../../../../../../core/themes/app_colors.dart';
@@ -22,7 +22,7 @@ class RecentSearch extends StatelessWidget {
           children: [
             Text(
               LocaleKeys.Search_recent.tr(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
               ),
@@ -31,7 +31,7 @@ class RecentSearch extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 LocaleKeys.Search_clearAll.tr(),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),

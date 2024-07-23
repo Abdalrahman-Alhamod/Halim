@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 
@@ -24,7 +24,7 @@ class QuizDetailsListTile extends StatelessWidget {
           size: 36,
           color: AppColors.primaryColor,
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         Text(
@@ -34,7 +34,7 @@ class QuizDetailsListTile extends StatelessWidget {
             color: context.isDarkMode ? Colors.grey : Colors.grey.shade600,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Text(

@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/constants/app_constrains.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../core/constants/app_constrains.dart';
+import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/utils/context_extensions.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
@@ -17,7 +17,7 @@ class ConfirmEmailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: _ConfirmEmailAppBar(),
       body: _ConfirmEmailBody(),
     );

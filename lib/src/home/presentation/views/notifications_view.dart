@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../core/assets/app_images.dart';
+import '../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/utils/context_extensions.dart';
 
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
@@ -27,7 +27,7 @@ class NotificationsViewState extends State<NotificationsView> {
           children: [
             Text(
               LocaleKeys.HomePage_NotificationsPage_notifications.tr(),
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
             const Spacer(
               flex: 1,
@@ -63,7 +63,7 @@ class NotificationsViewState extends State<NotificationsView> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   LocaleKeys.HomePage_NotificationsPage_today.tr(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -95,7 +95,7 @@ class NotificationsViewState extends State<NotificationsView> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   LocaleKeys.HomePage_NotificationsPage_yesterday.tr(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),

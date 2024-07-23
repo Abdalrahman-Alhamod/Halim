@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -11,7 +11,7 @@ class SettingsWidget extends StatelessWidget {
   final IconData? icon;
 
   SettingsWidget(
-      {required this.name,  this.icon, required this.onPressed,  this.color});
+      {super.key, required this.name,  this.icon, required this.onPressed,  this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class SettingsWidget extends StatelessWidget {
         onTap: onPressed,
         child: Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Icon(
@@ -33,7 +33,7 @@ class SettingsWidget extends StatelessWidget {
               size: 28,
               color: color
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Expanded(
@@ -56,7 +56,7 @@ class SettingsWidget extends StatelessWidget {
                     ),
                     onPressed: onPressed,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                 ],

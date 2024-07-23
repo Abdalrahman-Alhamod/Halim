@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/constants/app_constrains.dart';
 import '../../../../../core/themes/app_colors.dart';
@@ -74,8 +74,8 @@ class _ChatTextFieldState extends State<ChatTextField> {
                   widget.onSendPressed.call(_controller.text);
                   _controller.clear();
                 },
-          icon: Icon(Icons.send),
-          padding: EdgeInsets.all(16),
+          icon: const Icon(Icons.send),
+          padding: const EdgeInsets.all(16),
         ),
         suffixIconColor:
             _isFocused ? AppColors.primaryColor : Colors.grey.shade500,

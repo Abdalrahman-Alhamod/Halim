@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../home/presentation/views/widgets/teacher_card.dart';
@@ -13,7 +13,7 @@ class MentorsSearchResultsSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: 10,
       itemBuilder: (context, index) {

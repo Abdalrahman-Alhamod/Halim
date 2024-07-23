@@ -1,7 +1,7 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../utils/context_extensions.dart';
 
 import '../../themes/app_colors.dart';
 import 'data/section_page.dart';

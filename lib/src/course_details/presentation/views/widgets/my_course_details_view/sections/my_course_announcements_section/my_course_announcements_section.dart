@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/my_course_details_view/sections/my_course_announcements_section/widgets/announcement_box.dart';
+import '../../../../../../../../core/assets/app_images.dart';
+import '../../../../../../../../core/translations/locale_keys.g.dart';
+import 'widgets/announcement_box.dart';
 
 class MyCourseAnouncementsSection extends StatelessWidget {
   const MyCourseAnouncementsSection({super.key});

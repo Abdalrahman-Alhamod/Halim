@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
 
 import '../../../../../domain/entities/course_lesson_type.dart';
 import 'course_lesson_block.dart';

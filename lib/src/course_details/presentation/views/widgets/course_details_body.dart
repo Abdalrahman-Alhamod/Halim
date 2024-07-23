@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import 'main_details_section/course_main_details_section.dart';
 import 'main_details_section/course_video_cover.dart';

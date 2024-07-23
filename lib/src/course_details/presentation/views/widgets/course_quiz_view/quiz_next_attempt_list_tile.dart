@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
@@ -29,7 +29,7 @@ class QuizNextAttemptListTileState extends State<QuizNextAttemptListTile> {
   void initState() {
     super.initState();
     _updateCountdown();
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       _updateCountdown();
     });
   }
@@ -60,7 +60,7 @@ class QuizNextAttemptListTileState extends State<QuizNextAttemptListTile> {
       return ' - - : - - : - - ';
     }
 
-    final remainingTime = Duration(hours: 8) - duration;
+    final remainingTime = const Duration(hours: 8) - duration;
 
     final hours = remainingTime.inHours.toString().padLeft(2, '0');
     final minutes = (remainingTime.inMinutes % 60).toString().padLeft(2, '0');
@@ -73,12 +73,12 @@ class QuizNextAttemptListTileState extends State<QuizNextAttemptListTile> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.access_time,
           size: 36,
           color: AppColors.primaryColor,
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         Text(
@@ -88,12 +88,12 @@ class QuizNextAttemptListTileState extends State<QuizNextAttemptListTile> {
             color: context.isDarkMode ? Colors.grey : Colors.grey.shade600,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Text(
           countdownText,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
           ),
         ),

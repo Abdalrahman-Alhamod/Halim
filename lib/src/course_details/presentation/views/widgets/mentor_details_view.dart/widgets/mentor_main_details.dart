@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/app_route.dart';
+import '../../../../../../../core/utils/app_route.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../../../core/assets/app_svgs.dart';

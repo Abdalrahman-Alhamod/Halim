@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_images.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/assets/app_images.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/utils/app_route.dart';
 
@@ -22,7 +22,7 @@ class WelcomeCard extends StatelessWidget {
           },
           child: Row(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 25,
                 backgroundImage: AssetImage(AppImages.testAvatarAlaa),
               ),
@@ -35,12 +35,12 @@ class WelcomeCard extends StatelessWidget {
                   children: [
                     Text(
                       LocaleKeys.HomePage_Home_goodMorning.tr(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w200,
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Alaa Lababedi',
                       style: TextStyle(
                         fontSize: 18,

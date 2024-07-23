@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/themes/app_colors.dart';
@@ -65,9 +65,9 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
           const Spacer(
             flex: 5,
           ),
-          AutoSizeText(
+          const AutoSizeText(
             'Course Completed!',
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 32,
               color: AppColors.primaryColor,
               fontWeight: FontWeight.bold,
@@ -77,9 +77,9 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
           const Spacer(
             flex: 3,
           ),
-          Text(
+          const Text(
             'Please leave a review for your course',
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 16,
             ),
             textAlign: TextAlign.center,
@@ -90,15 +90,15 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               RatingBar.builder(
                 initialRating: _rating,
                 minRating: 1,
                 direction: Axis.horizontal,
                 allowHalfRating: true,
                 itemCount: 5,
-                itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                itemBuilder: (context, _) => Icon(
+                itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                itemBuilder: (context, _) => const Icon(
                   Icons.star_rounded,
                   color: AppColors.primaryColor,
                 ),

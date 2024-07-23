@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
@@ -15,12 +15,12 @@ class QuizGradeListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.percent,
           size: 36,
           color: AppColors.primaryColor,
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         Text(
@@ -30,7 +30,7 @@ class QuizGradeListTile extends StatelessWidget {
             color: context.isDarkMode ? Colors.grey : Colors.grey.shade600,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Text(

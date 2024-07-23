@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/assets/app_images.dart';
+import '../../../../../core/assets/app_images.dart';
 // ignore: unused_import
 import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/context_extensions.dart';
@@ -34,7 +34,7 @@ void showRemoveBookmarkBottomSheet(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     LocaleKeys.MyCourses_Bookmark_removeFromBookmark.tr(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w500,
                     ),
@@ -92,7 +92,7 @@ void showRemoveBookmarkBottomSheet(
                     const Spacer(flex: 1),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
               ],

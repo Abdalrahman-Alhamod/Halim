@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/constants/app_sizes.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/app_route.dart';
@@ -11,13 +11,13 @@ import '../../../../../core/widgets/custome_flat_button.dart';
 import '../../../../course_details/presentation/views/widgets/enroll_course_view/widgets/pin_text_field.dart';
 
 class EnterCodeBody extends StatefulWidget {
-  const EnterCodeBody();
+  const EnterCodeBody({super.key});
 
   @override
-  _EnterCodeBodyState createState() => _EnterCodeBodyState();
+  EnterCodeBodyState createState() => EnterCodeBodyState();
 }
 
-class _EnterCodeBodyState extends State<EnterCodeBody> {
+class EnterCodeBodyState extends State<EnterCodeBody> {
   late final List<TextEditingController> _codeControllers;
 
   @override
@@ -96,7 +96,7 @@ class _EnterCodeBodyState extends State<EnterCodeBody> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   '${LocaleKeys.ForgotPassword_resend.tr()} 55 ${LocaleKeys.ForgotPassword_second.tr()}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                   ),
                   textAlign: TextAlign.center,
@@ -117,7 +117,7 @@ class _EnterCodeBodyState extends State<EnterCodeBody> {
                   kTextcolor: AppColors.lightFlatButtonColor,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               )
             ],

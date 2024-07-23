@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/locale_keys.g.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/themes/app_colors.dart';
 
 class ShippingCard extends StatefulWidget {
@@ -33,7 +33,7 @@ class _ShippingCardState extends State<ShippingCard> {
         padding: const EdgeInsets.symmetric(vertical: 5.0),
         child: Column(
           children: [
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
               height: 147,
               decoration: BoxDecoration(
@@ -48,7 +48,7 @@ class _ShippingCardState extends State<ShippingCard> {
                   children: [
                     Row(children: [
                       AutoSizeText(
-                        '${LocaleKeys.Settings_Shipping_numShip.tr()}',
+                        LocaleKeys.Settings_Shipping_numShip.tr(),
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.white70
@@ -64,7 +64,7 @@ class _ShippingCardState extends State<ShippingCard> {
                       Container(
                         height: 25,
                         width: 80,
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           vertical: 4,
                           horizontal: 6,
                         ),
@@ -115,10 +115,10 @@ class _ShippingCardState extends State<ShippingCard> {
                     //     maxLines: 1,
                     //   ),
                     // ]),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Row(children: [
                       AutoSizeText(
-                        '${LocaleKeys.Settings_Shipping_valueShip.tr()}',
+                        LocaleKeys.Settings_Shipping_valueShip.tr(),
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.white70
@@ -144,10 +144,10 @@ class _ShippingCardState extends State<ShippingCard> {
                         maxLines: 1,
                       ),
                     ]),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(children: [
                       AutoSizeText(
-                        '${LocaleKeys.Settings_Shipping_idEmp.tr()}',
+                        LocaleKeys.Settings_Shipping_idEmp.tr(),
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.white70
@@ -173,10 +173,10 @@ class _ShippingCardState extends State<ShippingCard> {
                         maxLines: 1,
                       ),
                     ]),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(children: [
                       AutoSizeText(
-                        '${LocaleKeys.Settings_Shipping_dateShip.tr()}',
+                        LocaleKeys.Settings_Shipping_dateShip.tr(),
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.white70

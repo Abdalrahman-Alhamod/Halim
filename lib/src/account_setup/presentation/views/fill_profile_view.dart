@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/custome_flat_button.dart';
-import 'package:halim/src/account_setup/presentation/views/fill_profile_body.dart';
-import 'package:halim/src/account_setup/presentation/views/functions/choose_Interests_Bottom_Sheet.dart';
+import '../../../../core/utils/context_extensions.dart';
+import '../../../../core/widgets/custome_flat_button.dart';
+import 'fill_profile_body.dart';
+import 'functions/show_choose_interests_bottom_sheet.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 
@@ -46,7 +46,7 @@ class _FillProfilViewState extends State<FillProfilView> {
         body: SingleChildScrollView(
             child: Column(
           children: [
-            FillProfileBody(),
+            const FillProfileBody(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: CustomFlatButton(
