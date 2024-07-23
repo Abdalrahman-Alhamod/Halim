@@ -8,7 +8,6 @@ import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
 import 'package:video_player/video_player.dart';
 
-
 class CustomVideoPlayer extends StatefulWidget {
   const CustomVideoPlayer(
       {super.key, required this.url, required this.dataSourceType});

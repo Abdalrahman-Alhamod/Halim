@@ -41,7 +41,6 @@ class _CardAdvertisementState extends State<CardAdvertisement> {
       width: screenSize.width * 0.90,
       height: 150,
       decoration: BoxDecoration(
-        
         borderRadius: BorderRadius.circular(20),
       ),
       child: ClipRRect(

@@ -1,10 +1,10 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 
 class StoreSectionButton extends StatelessWidget {
-  const StoreSectionButton({super.key, 
+  const StoreSectionButton({
+    super.key,
     required this.isPressed,
     required this.onPressed,
     required this.label,

@@ -3,5 +3,4 @@ class StarsBarItem {
   final String value;
 
   StarsBarItem({required this.label, required this.value});
-  
 }

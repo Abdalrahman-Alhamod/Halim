@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class TreeThemeData {
-
   final Color lineColor;
   final double lineWidth;
 

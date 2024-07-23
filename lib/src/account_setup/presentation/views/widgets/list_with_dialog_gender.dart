@@ -86,7 +86,8 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
         onTap: _showDialog,
         decoration: InputDecoration(
           hintText: LocaleKeys.FillYourProfile_gender.tr(),
-          contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(
             fontWeight: FontWeight.w600,
             color: context.isDarkMode

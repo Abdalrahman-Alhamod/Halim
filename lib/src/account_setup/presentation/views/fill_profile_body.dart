@@ -14,7 +14,6 @@ import '../../../login_register/presentation/views/widgets/shared_widgets/custom
 class FillProfileBody extends StatefulWidget {
   const FillProfileBody({super.key});
 
-  
   @override
   FillProfileBodyState createState() => FillProfileBodyState();
 }
@@ -47,60 +46,56 @@ class FillProfileBodyState extends State<FillProfileBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
-          children: [
-            Container(height: 10),
-            Container(
-              width: 200,
-              height: 160,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: imageFile != null
-                      ? FileImage(imageFile!)
-                      : const AssetImage(AppImages.emptyAvatar)
-                          as ImageProvider,
-                  fit: BoxFit.contain,
-                ),
-              ),
-              child: Container(
-                padding: const EdgeInsets.only(left: 125),
-                alignment: Alignment.bottomCenter,
-                child: IconButton(
-                  icon: Container(
-                      width: 30,
-                      height: 30,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: const Icon(
-                          size: 25, Icons.edit, color: Colors.white)),
-                  onPressed: () {
-                    _imageServices.showOptionImage(context);
-                  },
-                ),
-              ),
+      children: [
+        Container(height: 10),
+        Container(
+          width: 200,
+          height: 160,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              image: imageFile != null
+                  ? FileImage(imageFile!)
+                  : const AssetImage(AppImages.emptyAvatar) as ImageProvider,
+              fit: BoxFit.contain,
             ),
-            Container(height: 20),
-            CustomTextField(
-              hintText: LocaleKeys.FillYourProfile_fullName.tr(),
-              onChanged: (value) {
-                fullName = value;
+          ),
+          child: Container(
+            padding: const EdgeInsets.only(left: 125),
+            alignment: Alignment.bottomCenter,
+            child: IconButton(
+              icon: Container(
+                  width: 30,
+                  height: 30,
+                  decoration: const BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  child: const Icon(size: 25, Icons.edit, color: Colors.white)),
+              onPressed: () {
+                _imageServices.showOptionImage(context);
               },
             ),
-            CustomTextField(
-              hintText: LocaleKeys.FillYourProfile_lastName.tr(),
-              onChanged: (value) {
-                lastName = value;
-              },
-            ),
-            const BirthdayCard(),
-            const PhoneNumberInputScreen(),
-            const ListWithDialogGender(),
-            const ChooseYourSpecialtyWithRegister(),
-            Container(height: 20),
-            
-          ],
-        );
-      
+          ),
+        ),
+        Container(height: 20),
+        CustomTextField(
+          hintText: LocaleKeys.FillYourProfile_fullName.tr(),
+          onChanged: (value) {
+            fullName = value;
+          },
+        ),
+        CustomTextField(
+          hintText: LocaleKeys.FillYourProfile_lastName.tr(),
+          onChanged: (value) {
+            lastName = value;
+          },
+        ),
+        const BirthdayCard(),
+        const PhoneNumberInputScreen(),
+        const ListWithDialogGender(),
+        const ChooseYourSpecialtyWithRegister(),
+        Container(height: 20),
+      ],
+    );
   }
 }

@@ -44,7 +44,6 @@ class CreatePinBodyState extends State<CreatePinBody> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

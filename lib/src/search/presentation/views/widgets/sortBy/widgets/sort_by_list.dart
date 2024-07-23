@@ -18,12 +18,20 @@ class _SortByListState extends State<SortByList> {
   @override
   void initState() {
     items = [
-      SortByListItem(label: LocaleKeys.Search_SearchBy_mostPopular.tr(), value: 'most popular'),
-      SortByListItem(label: LocaleKeys.Search_SearchBy_bestSelling.tr(), value: 'best selling'),
-      SortByListItem(label: LocaleKeys.Search_SearchBy_newest.tr(), value: 'newst'),
-      SortByListItem(label: LocaleKeys.Search_SearchBy_oldest.tr(), value: 'oldest'),
-      SortByListItem(label: LocaleKeys.Search_SearchBy_rating.tr(), value: 'rating'),
-      SortByListItem(label: LocaleKeys.Search_SearchBy_price.tr(), value: 'price'),
+      SortByListItem(
+          label: LocaleKeys.Search_SearchBy_mostPopular.tr(),
+          value: 'most popular'),
+      SortByListItem(
+          label: LocaleKeys.Search_SearchBy_bestSelling.tr(),
+          value: 'best selling'),
+      SortByListItem(
+          label: LocaleKeys.Search_SearchBy_newest.tr(), value: 'newst'),
+      SortByListItem(
+          label: LocaleKeys.Search_SearchBy_oldest.tr(), value: 'oldest'),
+      SortByListItem(
+          label: LocaleKeys.Search_SearchBy_rating.tr(), value: 'rating'),
+      SortByListItem(
+          label: LocaleKeys.Search_SearchBy_price.tr(), value: 'price'),
     ];
     _value = items[0].value;
     super.initState();

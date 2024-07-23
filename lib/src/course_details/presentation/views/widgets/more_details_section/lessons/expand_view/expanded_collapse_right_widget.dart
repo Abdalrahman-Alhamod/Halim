@@ -99,13 +99,11 @@ class _ExpandedCollapseOpenOrderWidgetState
   /// Custom animation curve for arrow controll.
   static final _easeInCurve = CurveTween(curve: Curves.easeInOutCubic);
 
-
   /// General animation controller.
   late AnimationController _controller;
 
   /// Animations for height control.
   late Animation<double> _heightFactor;
-
 
   /// Auxiliary variable to controll expand status.
   bool _isExpanded = false;

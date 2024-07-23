@@ -23,8 +23,10 @@ class RecieveChatBox extends StatelessWidget {
                 ? AppColors.darkFlatButtonColor
                 : Colors.grey.shade200,
             borderRadius: BorderRadius.only(
-              topRight: context.isEnglish ? Radius.zero : const Radius.circular(16),
-              topLeft: context.isEnglish ? const Radius.circular(16) : Radius.zero,
+              topRight:
+                  context.isEnglish ? Radius.zero : const Radius.circular(16),
+              topLeft:
+                  context.isEnglish ? const Radius.circular(16) : Radius.zero,
               bottomRight: const Radius.circular(16),
               bottomLeft: const Radius.circular(16),
             )),

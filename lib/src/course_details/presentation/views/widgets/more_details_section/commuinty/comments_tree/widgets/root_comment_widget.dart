@@ -8,17 +8,20 @@ class RootCommentWidget extends StatelessWidget {
   final PreferredSizeWidget avatar;
   final Widget content;
   final bool isSingleComment;
-  const RootCommentWidget(this.avatar, this.content, {super.key, required this.isSingleComment});
+  const RootCommentWidget(this.avatar, this.content,
+      {super.key, required this.isSingleComment});
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      painter:isSingleComment?null: RootPainter(
-        avatar.preferredSize,
-        context.watch<TreeThemeData>().lineColor,
-        context.watch<TreeThemeData>().lineWidth,
-        context,
-      ),
+      painter: isSingleComment
+          ? null
+          : RootPainter(
+              avatar.preferredSize,
+              context.watch<TreeThemeData>().lineColor,
+              context.watch<TreeThemeData>().lineWidth,
+              context,
+            ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

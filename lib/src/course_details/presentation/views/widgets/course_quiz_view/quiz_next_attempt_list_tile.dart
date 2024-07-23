@@ -17,8 +17,7 @@ class QuizNextAttemptListTile extends StatefulWidget {
   final void Function() onCounterDone;
 
   @override
-  QuizNextAttemptListTileState createState() =>
-      QuizNextAttemptListTileState();
+  QuizNextAttemptListTileState createState() => QuizNextAttemptListTileState();
 }
 
 class QuizNextAttemptListTileState extends State<QuizNextAttemptListTile> {

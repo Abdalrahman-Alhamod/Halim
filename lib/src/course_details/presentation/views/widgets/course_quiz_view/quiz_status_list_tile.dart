@@ -47,7 +47,8 @@ class QuizStatusListTile extends StatelessWidget {
             switch (status) {
               QuizStatus.passed => LocaleKeys.CourseDetails_Quiz_passed.tr(),
               QuizStatus.failed => LocaleKeys.CourseDetails_Quiz_failed.tr(),
-              QuizStatus.notTaken => LocaleKeys.CourseDetails_Quiz_notTaken.tr(),
+              QuizStatus.notTaken =>
+                LocaleKeys.CourseDetails_Quiz_notTaken.tr(),
             },
             style: const TextStyle(
               fontSize: 18,

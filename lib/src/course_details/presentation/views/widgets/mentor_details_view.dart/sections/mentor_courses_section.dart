@@ -18,7 +18,7 @@ class MentorCoursesSection extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: CardCourse(
-            category:  LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+            category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
             evaluation: 4.8,
             followers: 8.289,
             name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),

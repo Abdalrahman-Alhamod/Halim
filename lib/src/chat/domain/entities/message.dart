@@ -4,5 +4,4 @@ class Message {
   final DateTime time;
 
   Message({required this.email, required this.content, required this.time});
-  
 }

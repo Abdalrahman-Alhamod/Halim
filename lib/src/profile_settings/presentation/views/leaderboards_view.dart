@@ -37,21 +37,18 @@ class LeaderboardsViewState extends State<LeaderboardsView> {
             title: LocaleKeys.CourseDetails_Test_Reviews_Names_alaa.tr(),
             hours: 15,
             rank: 1,
-          
           ),
           LeaderboardsCard(
             imageUrl: AppImages.testAvatarAbd,
-            title:  LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
+            title: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
             hours: 600,
             rank: 2,
-        
           ),
           LeaderboardsCard(
             imageUrl: AppImages.testAvatarYassin,
-            title:  LocaleKeys.CourseDetails_Test_Reviews_Names_yassin.tr(),
+            title: LocaleKeys.CourseDetails_Test_Reviews_Names_yassin.tr(),
             hours: 40,
             rank: 63,
-         
           ),
         ]),
       ),

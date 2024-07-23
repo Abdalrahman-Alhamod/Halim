@@ -27,7 +27,6 @@ class RegisterBody extends StatelessWidget {
             Text(
               LocaleKeys.Auth_createYourAccount.tr(),
               style: AppTextStyles.extraLargeTitle,
-              
             ),
             const SizedBox(
               height: 40,

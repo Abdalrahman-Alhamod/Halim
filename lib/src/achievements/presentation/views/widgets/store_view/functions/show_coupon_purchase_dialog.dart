@@ -143,8 +143,9 @@ showCouponPurchaseDialog({
         onSuccess: () {
           showPurchaseSuccess(
             context: context,
-            message:
-                LocaleKeys.Achievements_Store_Dialog_youWillRecieveCouponNotification.tr(),
+            message: LocaleKeys
+                    .Achievements_Store_Dialog_youWillRecieveCouponNotification
+                .tr(),
           );
         },
       ),

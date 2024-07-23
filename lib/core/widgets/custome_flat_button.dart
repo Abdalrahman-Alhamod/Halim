@@ -22,7 +22,6 @@ class CustomFlatButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      
       onPressed: isEnabled ? onPressed : null,
       style: ElevatedButton.styleFrom(
         backgroundColor: kBackgroundcolor,

@@ -87,7 +87,8 @@ class CourseCoupon extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                constraints: const BoxConstraints(maxWidth: 160),
+                                constraints:
+                                    const BoxConstraints(maxWidth: 160),
                                 padding: const EdgeInsets.symmetric(
                                   vertical: 4,
                                   horizontal: 6,

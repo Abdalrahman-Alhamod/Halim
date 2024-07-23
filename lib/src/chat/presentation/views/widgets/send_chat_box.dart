@@ -21,8 +21,10 @@ class SendChatBox extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.primaryColor,
           borderRadius: BorderRadius.only(
-            topLeft: context.isEnglish ? Radius.zero : const Radius.circular(16),
-            topRight: context.isEnglish ? const Radius.circular(16) : Radius.zero,
+            topLeft:
+                context.isEnglish ? Radius.zero : const Radius.circular(16),
+            topRight:
+                context.isEnglish ? const Radius.circular(16) : Radius.zero,
             bottomRight: const Radius.circular(16),
             bottomLeft: const Radius.circular(16),
           ),

@@ -170,7 +170,8 @@ class _SendCodeviewState extends State<SendCodeview> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: CustomFlatButton(
-              isEnabled: isItemSelectedOne || isItemSelectedTwo ? true : false,
+                isEnabled:
+                    isItemSelectedOne || isItemSelectedTwo ? true : false,
                 onPressed: () {
                   isItemSelectedTwo
                       ? GoRouter.of(context).push(AppRoute.kEnterEmailView)

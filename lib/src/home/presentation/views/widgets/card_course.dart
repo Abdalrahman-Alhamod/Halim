@@ -117,11 +117,14 @@ class _CardCourseState extends State<CardCourse> {
                           onPressed: widget.isEnabled
                               ? () {
                                   if (_isBookmarked) {
-                                    showRemoveBookmarkBottomSheet(context: context,onConfirm: () {
-                                       setState(() {
-                                      _isBookmarked = false;
-                                    });
-                                    },);
+                                    showRemoveBookmarkBottomSheet(
+                                      context: context,
+                                      onConfirm: () {
+                                        setState(() {
+                                          _isBookmarked = false;
+                                        });
+                                      },
+                                    );
                                   } else {
                                     setState(() {
                                       _isBookmarked = true;

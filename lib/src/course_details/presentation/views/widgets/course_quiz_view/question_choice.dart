@@ -70,7 +70,6 @@ class QuestionChoice extends StatelessWidget {
                       context: context,
                     ),
                   ),
-                  
                 ),
               ),
           },

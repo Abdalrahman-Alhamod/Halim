@@ -10,7 +10,8 @@ class TeacherCard extends StatelessWidget {
   final String name;
   final String specialization;
   const TeacherCard(
-      {super.key, required this.imageUrl,
+      {super.key,
+      required this.imageUrl,
       required this.name,
       required this.specialization});
 

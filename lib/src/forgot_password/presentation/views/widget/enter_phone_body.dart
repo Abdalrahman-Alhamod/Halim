@@ -11,7 +11,6 @@ import '../../../../../core/widgets/custome_flat_button.dart';
 
 import '../../../../../core/assets/app_images.dart';
 
-
 class EnterPhoneBody extends StatefulWidget {
   const EnterPhoneBody({super.key});
 
@@ -20,7 +19,6 @@ class EnterPhoneBody extends StatefulWidget {
 }
 
 class EnterPhoneBodyState extends State<EnterPhoneBody> {
-  
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -47,7 +45,8 @@ class EnterPhoneBodyState extends State<EnterPhoneBody> {
               )),
           const Spacer(
             flex: 1,
-          ),const PhoneNumberInputScreen(),
+          ),
+          const PhoneNumberInputScreen(),
           // CustomTextField(
           //   obscureText: false,
           //   hintText: LocaleKeys.Auth_email.tr(),

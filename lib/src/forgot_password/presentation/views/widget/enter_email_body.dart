@@ -82,11 +82,10 @@ class EnterEmailBodyState extends State<EnterEmailBody> {
               CustomFlatButton(
                 isEnabled: isEmailValid,
                 onPressed: () {
-                  isEmailValid?
-                        GoRouter.of(context).go(AppRoute.kEnterCode)
+                  isEmailValid
+                      ? GoRouter.of(context).go(AppRoute.kEnterCode)
                       : null;
-                      }
-                  ,
+                },
                 title: LocaleKeys.FillYourProfile_continue.tr(),
                 width: context.width * 0.94,
                 height: 60,

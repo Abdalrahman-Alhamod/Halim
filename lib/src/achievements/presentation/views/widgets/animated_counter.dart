@@ -4,7 +4,8 @@ class AnimatedCounter extends StatefulWidget {
   final num value;
   final Duration duration;
 
-  const AnimatedCounter({super.key, 
+  const AnimatedCounter({
+    super.key,
     required this.value,
     required this.duration,
   });

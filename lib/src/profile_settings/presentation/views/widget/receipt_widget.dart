@@ -373,7 +373,9 @@ class _ReceiptWidgetState extends State<ReceiptWidget> {
                       ),
                       child: Center(
                         child: AutoSizeText(
-                          widget.paid ? LocaleKeys.Settings_Payments_paid.tr() : LocaleKeys.Settings_Payments_unpaid.tr(),
+                          widget.paid
+                              ? LocaleKeys.Settings_Payments_paid.tr()
+                              : LocaleKeys.Settings_Payments_unpaid.tr(),
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,

@@ -2,7 +2,6 @@
 
 // import 'package:percent_indicator/linear_percent_indicator.dart';
 
-
 // class ProgressLine extends StatefulWidget {
 
 //   //final double? progress;

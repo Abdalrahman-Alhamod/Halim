@@ -45,7 +45,6 @@ class ListTileEmailPhoneState extends State<ListTileEmailPhone> {
                 fontWeight: FontWeight.normal,
               ),
             ),
-            
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
             shape: RoundedRectangleBorder(
@@ -91,7 +90,6 @@ class ListTileEmailPhoneState extends State<ListTileEmailPhone> {
                 fontWeight: FontWeight.normal,
               ),
             ),
-            
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
             shape: RoundedRectangleBorder(

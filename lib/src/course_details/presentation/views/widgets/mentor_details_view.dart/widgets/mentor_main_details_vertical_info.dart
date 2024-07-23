@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 
@@ -35,5 +34,3 @@ class MentorMainDetailsVerticalInfo extends StatelessWidget {
     );
   }
 }
-
-

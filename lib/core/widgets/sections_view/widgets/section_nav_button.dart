@@ -11,7 +11,6 @@ class _SectionNavButton extends StatelessWidget {
   final void Function(double buttonWidth) onPressed;
   @override
   Widget build(BuildContext context) {
-   
     return TextButton(
       onPressed: () {
         onPressed.call((context.findRenderObject() as RenderBox).size.width);

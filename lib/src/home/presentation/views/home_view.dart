@@ -21,12 +21,11 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:
-            context.isDarkMode ? AppColors.darkColor : Colors.white,
-        toolbarHeight: 90,
-        automaticallyImplyLeading: false,
-        title: const WelcomeCard()
-      ),
+          backgroundColor:
+              context.isDarkMode ? AppColors.darkColor : Colors.white,
+          toolbarHeight: 90,
+          automaticallyImplyLeading: false,
+          title: const WelcomeCard()),
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Column(

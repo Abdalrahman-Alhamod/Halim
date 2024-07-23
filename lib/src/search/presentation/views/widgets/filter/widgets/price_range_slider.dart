@@ -18,7 +18,6 @@ class _PriceRangeSliderState extends State<_PriceRangeSlider> {
       min: 0,
       max: 300,
       divisions: 30,
-      
       labels: RangeLabels(
         '\$${selectedRange.start.round().toString()}',
         '\$${selectedRange.end.round().toString()}',

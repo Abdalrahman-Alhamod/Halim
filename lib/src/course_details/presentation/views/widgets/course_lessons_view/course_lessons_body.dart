@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../more_details_section/lessons/course_lessons_section_sample.dart';

@@ -10,14 +10,13 @@ import '../../../../../core/widgets/custom_loading_indicator.dart';
 
 class AccontSucssesDialog extends StatefulWidget {
   final VoidCallback onLoadingComplete;
-   const AccontSucssesDialog(this.onLoadingComplete, {super.key});
+  const AccontSucssesDialog(this.onLoadingComplete, {super.key});
 
   @override
   State<AccontSucssesDialog> createState() => _AccontSucssesDialogState();
 }
 
 class _AccontSucssesDialogState extends State<AccontSucssesDialog> {
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(

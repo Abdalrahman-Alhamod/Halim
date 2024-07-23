@@ -42,6 +42,6 @@ class _NewPassViewState extends State<NewPassView> {
         ),
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        body: const NewPassBody()) ;
+        body: const NewPassBody());
   }
 }

@@ -12,7 +12,11 @@ class HalimWidget extends StatelessWidget {
   final IconData? icon;
 
   HalimWidget(
-      {super.key, required this.name, this.icon, required this.onPressed, this.color});
+      {super.key,
+      required this.name,
+      this.icon,
+      required this.onPressed,
+      this.color});
 
   @override
   Widget build(BuildContext context) {

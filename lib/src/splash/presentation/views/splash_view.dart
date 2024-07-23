@@ -13,7 +13,6 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();

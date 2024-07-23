@@ -33,7 +33,7 @@ class AchievementsNumbersListTile extends StatelessWidget {
       ),
       subtitle: AnimatedCounter(
         value: value,
-        duration: const Duration(milliseconds:700),
+        duration: const Duration(milliseconds: 700),
       ),
     );
   }

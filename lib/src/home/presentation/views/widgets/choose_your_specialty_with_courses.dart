@@ -124,7 +124,8 @@ class ChooseYourSpecialtyWithCoursesState
         onTap: _showDialog,
         decoration: InputDecoration(
           hintText: LocaleKeys.FillYourProfile_Specialty_choose_specialty.tr(),
-          contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(
             fontWeight: FontWeight.w600,
             color: context.isDarkMode
@@ -136,7 +137,8 @@ class ChooseYourSpecialtyWithCoursesState
             children: [
               Text(
                 '   ${LocaleKeys.HomePage_Home_section.tr()}',
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               ),
               const SizedBox(width: 4),
             ],

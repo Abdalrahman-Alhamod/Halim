@@ -11,7 +11,11 @@ class SettingsWidget extends StatelessWidget {
   final IconData? icon;
 
   SettingsWidget(
-      {super.key, required this.name,  this.icon, required this.onPressed,  this.color});
+      {super.key,
+      required this.name,
+      this.icon,
+      required this.onPressed,
+      this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +32,7 @@ class SettingsWidget extends StatelessWidget {
             const SizedBox(
               width: 20,
             ),
-            Icon(
-              icon,
-              size: 28,
-              color: color
-            ),
+            Icon(icon, size: 28, color: color),
             const SizedBox(
               width: 20,
             ),

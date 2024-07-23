@@ -41,7 +41,7 @@ class MotivationalCounterWidget extends StatelessWidget {
             child: AnimatedTextKit(
               animatedTexts: [
                 WavyAnimatedText(
-                   LocaleKeys.HomePage_Home_pointWidget_keepMoving.tr(),
+                  LocaleKeys.HomePage_Home_pointWidget_keepMoving.tr(),
                   textAlign: TextAlign.start,
                   speed: const Duration(microseconds: 50000),
                   textStyle: TextStyle(

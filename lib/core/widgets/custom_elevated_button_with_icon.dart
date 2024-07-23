@@ -15,7 +15,6 @@ class CustomElevatedButtonWithIcon extends StatelessWidget {
   });
   final void Function()? onPressed;
 
-
   final bool isEnabled;
   final double elevation;
   final Color backgroundColor;

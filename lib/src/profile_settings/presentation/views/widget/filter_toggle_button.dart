@@ -35,7 +35,6 @@ class FilterToggleButtonState extends State<FilterToggleButton> {
       child: Row(
         children: [
           const SizedBox(width: 20),
-         
           Expanded(
             child: Row(
               children: [
