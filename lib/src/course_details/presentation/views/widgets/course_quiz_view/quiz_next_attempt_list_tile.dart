@@ -17,11 +17,11 @@ class QuizNextAttemptListTile extends StatefulWidget {
   final void Function() onCounterDone;
 
   @override
-  _QuizNextAttemptListTileState createState() =>
-      _QuizNextAttemptListTileState();
+  QuizNextAttemptListTileState createState() =>
+      QuizNextAttemptListTileState();
 }
 
-class _QuizNextAttemptListTileState extends State<QuizNextAttemptListTile> {
+class QuizNextAttemptListTileState extends State<QuizNextAttemptListTile> {
   late Timer _timer;
   String countdownText = '';
 

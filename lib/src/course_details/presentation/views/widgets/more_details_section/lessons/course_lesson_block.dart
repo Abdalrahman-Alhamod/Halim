@@ -140,7 +140,7 @@ class CourseLessonBlockElements extends StatelessWidget {
                         ),
                         type == CourseLessonType.quiz
                             ? AutoSizeText(
-                                '${questionNumber} ${LocaleKeys.CourseDetails_Lessons_questions.tr()}',
+                                '$questionNumber ${LocaleKeys.CourseDetails_Lessons_questions.tr()}',
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,

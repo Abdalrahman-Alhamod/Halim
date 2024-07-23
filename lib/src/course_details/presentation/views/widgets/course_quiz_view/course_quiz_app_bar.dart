@@ -12,7 +12,7 @@ class CourseQuizAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 24),
+      padding: const EdgeInsets.only(top: 16),
       child: Row(
         children: [
           Padding(
@@ -23,7 +23,7 @@ class CourseQuizAppBar extends StatelessWidget implements PreferredSizeWidget {
               },
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 24,
           ),
           Text(

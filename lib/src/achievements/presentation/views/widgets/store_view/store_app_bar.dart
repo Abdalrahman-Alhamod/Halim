@@ -19,7 +19,7 @@ class StoreAppBar extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: AppConstrains.maxWidthAppBarIcon,
       centerTitle: true,
       title: Text(
-        '${LocaleKeys.Achievements_Store_store.tr()}',
+        LocaleKeys.Achievements_Store_store.tr(),
         style: const TextStyle(
           fontSize: 28,
           fontWeight: FontWeight.w600,

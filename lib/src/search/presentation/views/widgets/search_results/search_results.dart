@@ -50,7 +50,7 @@ class _SearchResultsState extends State<SearchResults> {
           physics: const NeverScrollableScrollPhysics(),
           controller: _controller,
           dragStartBehavior: DragStartBehavior.down,
-          children: [
+          children: const [
             // ResultNotFound(),
             CoursesSearchResultsSample(),
             MentorsSearchResultsSample(),

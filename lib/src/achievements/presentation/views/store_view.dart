@@ -65,7 +65,7 @@ class _StoreViewState extends State<StoreView> {
             Expanded(
               child: PageView(
                 controller: _pageController,
-                children: [
+                children: const [
                   CouponsSection(),
                   ProductsSection(),
                 ],

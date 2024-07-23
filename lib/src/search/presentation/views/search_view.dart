@@ -41,7 +41,7 @@ class _SearchViewState extends State<SearchView> {
             child: Column(
               children: [
                 SearchBar(onSubmitted: (value) {
-                  if (!value.isEmpty) {
+                  if (value.isNotEmpty) {
                     setState(() {
                       body = SearchResults();
                     });

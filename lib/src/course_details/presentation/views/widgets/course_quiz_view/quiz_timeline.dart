@@ -8,7 +8,7 @@ class QuizTimeline extends StatelessWidget {
   final int currentPageIndex;
   final int totalPages;
 
-  QuizTimeline({required this.currentPageIndex, required this.totalPages});
+  const QuizTimeline({super.key, required this.currentPageIndex, required this.totalPages});
 
   @override
   Widget build(BuildContext context) {

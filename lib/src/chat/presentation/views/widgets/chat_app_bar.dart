@@ -5,7 +5,7 @@ import '../../../../../core/constants/app_constrains.dart';
 import '../../../../../core/widgets/back_arrow_icon.dart';
 
 class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const ChatAppBar({required this.chatWithName});
+  const ChatAppBar({super.key, required this.chatWithName});
   final String chatWithName;
   @override
   Widget build(BuildContext context) {

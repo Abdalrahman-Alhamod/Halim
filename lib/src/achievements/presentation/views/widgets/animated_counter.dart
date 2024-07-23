@@ -4,16 +4,16 @@ class AnimatedCounter extends StatefulWidget {
   final num value;
   final Duration duration;
 
-  AnimatedCounter({
+  const AnimatedCounter({super.key, 
     required this.value,
     required this.duration,
   });
 
   @override
-  _AnimatedCounterState createState() => _AnimatedCounterState();
+  AnimatedCounterState createState() => AnimatedCounterState();
 }
 
-class _AnimatedCounterState extends State<AnimatedCounter>
+class AnimatedCounterState extends State<AnimatedCounter>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<num> _animation;

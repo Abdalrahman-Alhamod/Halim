@@ -1,4 +1,5 @@
-class AppSizes {
+abstract final class AppSizes {
+  AppSizes._();
   static const pad4 = 4.0;
   static const pad8 = 8.0;
   static const pad12 = 12.0;

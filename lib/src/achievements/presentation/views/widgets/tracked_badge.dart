@@ -55,7 +55,7 @@ class TrackedBadge extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 isRTL: !context.isEnglish,
                 center: Text(
-                  '${context.isEnglish ? ' ${current} / ${total}' : '${total} / ${current}'}  ${LocaleKeys.Achievements_Sections_Summery_earned.tr()}',
+                  '${context.isEnglish ? ' $current / $total' : '$total / $current'}  ${LocaleKeys.Achievements_Sections_Summery_earned.tr()}',
                   style: TextStyle(
                     fontSize: 16,
                     color: context.isDarkMode

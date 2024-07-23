@@ -76,7 +76,7 @@ showCouponPurchaseDialog({
                 ),
               ),
               Text(
-                '${discount}%',
+                '$discount%',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -98,7 +98,7 @@ showCouponPurchaseDialog({
                 ),
               ),
               Text(
-                '${couponPrice} ${LocaleKeys.Achievements_Store_point.tr()}',
+                '$couponPrice ${LocaleKeys.Achievements_Store_point.tr()}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.green,
@@ -120,7 +120,7 @@ showCouponPurchaseDialog({
                 ),
               ),
               Text(
-                '${totalPoints} ${LocaleKeys.Achievements_Store_point.tr()}',
+                '$totalPoints ${LocaleKeys.Achievements_Store_point.tr()}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.green,

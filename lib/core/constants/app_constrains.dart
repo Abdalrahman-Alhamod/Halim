@@ -1,4 +1,5 @@
-class AppConstrains {
+abstract final class AppConstrains {
+  AppConstrains._();
   static const maxWidth = 450.0;
   static const maxHeight = 100.0;
   static const maxAppBarHeight = 75.0;

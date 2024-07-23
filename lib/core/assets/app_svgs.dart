@@ -1,4 +1,5 @@
 abstract final class AppSVGs {
+  AppSVGs._();
   static const mainPath = 'assets/svgs';
   static const playCircle = '$mainPath/play_circle.svg';
   static const bookmark = '$mainPath/bookmark.svg';

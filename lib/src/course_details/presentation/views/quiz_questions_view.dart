@@ -199,7 +199,7 @@ class _QuizQuestionsViewState extends State<QuizQuestionsView> {
                   flex: 2,
                 ),
                 Text(
-                  '${LocaleKeys.CourseDetails_Quiz_question.tr()} ${_currentQuesion} ${context.isEnglish ? '/' : '\\'} ${_questions.length}',
+                  '${LocaleKeys.CourseDetails_Quiz_question.tr()} $_currentQuesion ${context.isEnglish ? '/' : '\\'} ${_questions.length}',
                   style: TextStyle(
                     fontSize: 24,
                   ),

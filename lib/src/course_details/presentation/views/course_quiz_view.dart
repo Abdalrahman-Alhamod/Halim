@@ -27,7 +27,7 @@ class _CourseQuizViewState extends State<CourseQuizView> {
   @override
   void initState() {
     _lastAttemptTime = DateTime.now().subtract(
-      Duration(
+      const Duration(
         hours: 7,
         minutes: 59,
         seconds: 50,
@@ -39,24 +39,24 @@ class _CourseQuizViewState extends State<CourseQuizView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CourseQuizAppBar(),
+      appBar: const CourseQuizAppBar(),
       body: Padding(
-        padding: EdgeInsets.all(AppSizes.pad16),
+        padding: const EdgeInsets.all(AppSizes.pad16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Text(
               LocaleKeys.CourseDetails_Test_Lessons_title6.tr(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             QuizDetailsListTile(
@@ -64,17 +64,17 @@ class _CourseQuizViewState extends State<CourseQuizView> {
               label: LocaleKeys.CourseDetails_Quiz_questions.tr(),
               description: '10',
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            QuizStatusListTile(status: QuizStatus.passed),
-            SizedBox(
+            const QuizStatusListTile(status: QuizStatus.passed),
+            const SizedBox(
               height: 10,
             ),
-            QuizGradeListTile(
+            const QuizGradeListTile(
               grade: 85,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             QuizDetailsListTile(
@@ -83,7 +83,7 @@ class _CourseQuizViewState extends State<CourseQuizView> {
               description:
                   LocaleKeys.CourseDetails_Quiz_attemptEvery8Hours.tr(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             QuizNextAttemptListTile(
@@ -94,7 +94,7 @@ class _CourseQuizViewState extends State<CourseQuizView> {
                 });
               },
             ),
-            Spacer(),
+            const Spacer(),
             QuizStartButton(
               onPressed: _isStartButtonEnabled
                   ? () {
@@ -107,7 +107,7 @@ class _CourseQuizViewState extends State<CourseQuizView> {
                     }
                   : null,
             ),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),

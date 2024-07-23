@@ -7,7 +7,7 @@ class SearchBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         // RecentSearch(),
         SearchResults(),

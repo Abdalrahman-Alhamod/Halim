@@ -1,4 +1,5 @@
-class AppTest {
+abstract final class AppTest {
+  AppTest._();
   static const readingHTML =
       '''<h1 id="-al-aqsa-mosque-opengl-project-">🕌 Al Aqsa Mosque OpenGL Project 🌟</h1>
               <p><img src="https://github.com/Abdalrahman-Alhamod/Al-Aqsa-Mosque/assets/137921143/a0db1013-907f-4932-b737-25cfd06b6af8" alt="Screenshot (351) (1)"></p>
@@ -151,6 +152,6 @@ Build and run using your preferred C++ compiler
 This project is licensed under the MIT License - see the LICENSE file for details. 🌐
 ''';
 
-  static final videoUrl =
+  static const videoUrl =
       'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4';
 }

@@ -15,10 +15,10 @@ class CustomLoadingIndicator extends StatefulWidget {
   final VoidCallback? onComplete;
   final int durationInSeconds;
   @override
-  _CustomLoadingIndicatorState createState() => _CustomLoadingIndicatorState();
+  CustomLoadingIndicatorState createState() => CustomLoadingIndicatorState();
 }
 
-class _CustomLoadingIndicatorState extends State<CustomLoadingIndicator> {
+class CustomLoadingIndicatorState extends State<CustomLoadingIndicator> {
   @override
   void initState() {
     super.initState();
