@@ -1,4 +1,5 @@
 abstract final class AppImages {
+  AppImages._();
   static const mainPath = 'assets/images';
   static const appLogo = '$mainPath/app_logo.png';
   static const logoWhite = '$mainPath/logo_white.png';

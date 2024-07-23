@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AppTextStyles {
+abstract  final class AppTextStyles {
+  AppTextStyles._();
   static const extraLargeTitle = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.bold,

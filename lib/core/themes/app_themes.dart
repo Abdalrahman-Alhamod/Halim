@@ -4,7 +4,8 @@ import 'package:halim/core/utils/context_extensions.dart';
 import '../assets/app_font.dart';
 import 'app_colors.dart';
 
-class AppThemes {
+abstract final class AppThemes {
+  AppThemes._();
   static ThemeData getDarkThemeData(BuildContext context) {
     return ThemeData(
       colorScheme: const ColorScheme.dark().copyWith(
