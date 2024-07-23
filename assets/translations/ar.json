@@ -371,12 +371,12 @@
       },
       "receipt": "الإيصال"
     },
-    "Shipping": {
-      "shipping": "عمليات الشحن",
+    "Recharge": {
       "valueShip": "قيمة الشحن",
       "dateShip": "تاريخ الشحن",
       "idEmp": "رقم الموظف المسؤول",
-      "numShip": "رقم عملية الشحن"
+      "numShip": "رقم عملية الشحن",
+      "rechargeOperations": "عمليات الشحن"
     }
   },
   "Search": {

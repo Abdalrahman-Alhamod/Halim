@@ -48,7 +48,7 @@ class _ShippingCardState extends State<ShippingCard> {
                   children: [
                     Row(children: [
                       AutoSizeText(
-                        LocaleKeys.Settings_Shipping_numShip.tr(),
+                        LocaleKeys.Settings_Recharge_numShip.tr(),
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.white70
@@ -118,7 +118,7 @@ class _ShippingCardState extends State<ShippingCard> {
                     const SizedBox(height: 12),
                     Row(children: [
                       AutoSizeText(
-                        LocaleKeys.Settings_Shipping_valueShip.tr(),
+                        LocaleKeys.Settings_Recharge_valueShip.tr(),
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.white70
@@ -147,7 +147,7 @@ class _ShippingCardState extends State<ShippingCard> {
                     const SizedBox(height: 10),
                     Row(children: [
                       AutoSizeText(
-                        LocaleKeys.Settings_Shipping_idEmp.tr(),
+                        LocaleKeys.Settings_Recharge_idEmp.tr(),
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.white70
@@ -176,7 +176,7 @@ class _ShippingCardState extends State<ShippingCard> {
                     const SizedBox(height: 10),
                     Row(children: [
                       AutoSizeText(
-                        LocaleKeys.Settings_Shipping_dateShip.tr(),
+                        LocaleKeys.Settings_Recharge_dateShip.tr(),
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.white70

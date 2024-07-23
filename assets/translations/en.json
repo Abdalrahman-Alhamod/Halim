@@ -371,12 +371,12 @@
       },
       "receipt": "E-Receipt"
     },
-    "Shipping": {
-      "shipping": "Shipping operations",
-      "valueShip": "Shipping value",
-      "dateShip": "Date of shipment",
+    "Recharge": {
+      "valueShip": "Recharge value",
+      "dateShip": "Date of Recharge",
       "idEmp": "Responsible employee ID",
-      "numShip": "Shipping process number"
+      "numShip": "Recharge process number",
+      "rechargeOperations": "Recharge operations"
     }
   },
   "Search": {

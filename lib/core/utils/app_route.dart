@@ -16,7 +16,7 @@ import 'package:halim/src/home/presentation/views/profile_student_personal_view.
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
-import 'package:halim/src/profile_settings/presentation/views/shipping_view.dart';
+import 'package:halim/src/profile_settings/presentation/views/recharge_view.dart';
 import 'package:halim/src/search/presentation/views/search_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';

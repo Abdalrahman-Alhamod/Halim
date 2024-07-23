@@ -82,13 +82,12 @@ class SettingsViewState extends State<SettingsView> {
               },
             ),
             SettingsWidget(
-              name: LocaleKeys.Settings_Shipping_shipping.tr(),
+              name: LocaleKeys.Settings_Recharge_rechargeOperations.tr(),
               icon: Icons.account_balance_wallet,
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kShippingView);
               },
             ),
-           
             SettingsWidget(
               name: LocaleKeys.Settings_Language_language.tr(),
               icon: Icons.language,
