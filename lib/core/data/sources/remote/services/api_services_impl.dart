@@ -255,46 +255,26 @@ class ApiServicesImpl implements ApiServices {
     onRequest: (RequestOptions options, handler) {
       String headers = "";
       options.headers.forEach((key, value) {
-        headers += "| $key: $value";
+        headers += "| $key: $value ";
       });
       logger.print(
-        "┌------------------------------------------------------------------------------",
-        title: PrintTitles.dioInterceptors,
-      );
-      logger.print(
-        '''
-        | [DIO] Request: ${options.method} ${options.uri}
-        | ${options.data.toString()}
-        | Headers:\n$headers
-        ''',
-        title: PrintTitles.dioInterceptors,
-      );
-      logger.print(
-        "├------------------------------------------------------------------------------",
-        title: PrintTitles.dioInterceptors,
+        '[DIO] Request: ${options.method} ${options.uri}\nOptions${options.data.toString()}\nHeaders:\n$headers',
+        title: '${PrintTitles.dioInterceptors} Request',
       );
       handler.next(options); //continue
     },
     onResponse: (Response<dynamic> response, handler) async {
       logger.print(
-        response.data.toString(),
-        title: PrintTitles.dioInterceptors,
-      );
-      logger.print(
-        "└------------------------------------------------------------------------------",
-        title: PrintTitles.dioInterceptors,
+        jsonDecode(response.data),
+        title: '${PrintTitles.dioInterceptors} Response',
       );
       handler.next(response);
       // return response; // continue
     },
     onError: (DioException error, handler) async {
       logger.print(
-        "| [DIO] Error: ${error.error}: ${error.response.toString()}",
-        title: PrintTitles.dioInterceptors,
-      );
-      logger.print(
-        "└------------------------------------------------------------------------------",
-        title: PrintTitles.dioInterceptors,
+        '[DIO] Error ${error.response?.statusCode} : ${error.error}: ${error.response.toString()}',
+        title: '${PrintTitles.dioInterceptors} Error',
       );
       handler.next(error); //continue
     },

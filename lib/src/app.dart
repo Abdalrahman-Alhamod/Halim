@@ -14,7 +14,7 @@ class HalimApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
-      key: UniqueKey(),
+      // key: UniqueKey(),
       light: AppThemes.getLightThemeData(context),
       dark: AppThemes.getDarkThemeData(context),
       initial: AdaptiveThemeMode.system,

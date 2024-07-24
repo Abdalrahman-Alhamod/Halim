@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'core/translations/app_locales.dart';
-import 'core/translations/codegen_loader.g.dart';
+import 'package:halim/core/translations/app_locales.dart';
+import 'package:halim/core/translations/codegen_loader.g.dart';
 
 import 'src/app.dart';
 import 'src/config.dart';
@@ -16,7 +16,7 @@ void main() async {
         Locale(AppLocales.ar),
       ],
       path: AppLocales.translationsAssetsPath,
-      startLocale: const Locale(AppLocales.ar),
+      startLocale: const Locale(AppLocales.en),
       fallbackLocale: const Locale(AppLocales.en),
       assetLoader: const CodegenLoader(),
       useOnlyLangCode: true,

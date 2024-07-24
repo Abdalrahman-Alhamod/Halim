@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:halim/core/data/sources/local/app_storage.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../core/utils/custom_bloc_observer.dart';
@@ -16,6 +17,7 @@ Future<void> initAppConfig() async {
     await EasyLocalization.ensureInitialized();
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     await Hive.initFlutter();
+    await AppStorage.instance.init();
     await dotenv.load(fileName: ".env");
   } catch (error, stackTrace) {
     logger.e(
@@ -28,5 +30,5 @@ Future<void> initAppConfig() async {
   Bloc.observer = CustomBlocObserver();
   setupLocators();
   logger.on(bloc: true, dio: true);
-  testLogs();
+  // testLogs();
 }

@@ -29,10 +29,12 @@ extension ContextExtensions on Logger {
 
     color ??= PrintColor.blue;
 
-    if (title == PrintTitles.blocObserver) {
-      color = PrintColor.cyan;
-    } else if (title == PrintTitles.dioInterceptors) {
-      color = PrintColor.grey;
+    if (title != null) {
+      if (title.contains(PrintTitles.blocObserver)) {
+        color = PrintColor.cyan;
+      } else if (title.contains(PrintTitles.dioInterceptors)) {
+        color = PrintColor.grey;
+      }
     }
 
     switch (color) {
@@ -83,6 +85,7 @@ void testLogs() {
   logger.print("What a fatal log", color: PrintColor.pink, title: '6');
 }
 
+// TODO add other keys (search) and make it enum
 abstract final class PrintTitles {
   PrintTitles._();
   static const blocObserver = 'Bloc Observer';

@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'logger.dart';
+import 'package:halim/core/utils/logger.dart';
 
 class CustomBlocObserver implements BlocObserver {
   @override
@@ -8,11 +8,8 @@ class CustomBlocObserver implements BlocObserver {
     Object? event,
   ) {
     logger.print(
-      '''
-      bloc = $bloc
-      event = $event
-      ''',
-      title: PrintTitles.blocObserver,
+      'Bloc = $bloc\nEvent = $event',
+      title: '${PrintTitles.blocObserver} Event',
     );
   }
 
@@ -23,12 +20,8 @@ class CustomBlocObserver implements BlocObserver {
     StackTrace stackTrace,
   ) {
     logger.print(
-      '''
-      bloc = $bloc
-      error = $error
-      trace = $stackTrace
-      ''',
-      title: PrintTitles.blocObserver,
+      'Bloc = $bloc\nError = $error\nTrace = $stackTrace',
+      title: '${PrintTitles.blocObserver} Error',
     );
   }
 
@@ -38,11 +31,8 @@ class CustomBlocObserver implements BlocObserver {
     Change<dynamic> change,
   ) {
     logger.print(
-      '''
-      bloc = $bloc
-      change = $change
-      ''',
-      title: PrintTitles.blocObserver,
+      'Bloc = $bloc\n$change',
+      title: '${PrintTitles.blocObserver} Change',
     );
   }
 
@@ -52,11 +42,8 @@ class CustomBlocObserver implements BlocObserver {
     Transition<dynamic, dynamic> transition,
   ) {
     logger.print(
-      '''
-      bloc = $bloc
-      transition = $transition
-      ''',
-      title: PrintTitles.blocObserver,
+      'Bloc = $bloc\nTransition = $transition',
+      title: '${PrintTitles.blocObserver} Transition',
     );
   }
 
@@ -65,11 +52,8 @@ class CustomBlocObserver implements BlocObserver {
     BlocBase<dynamic> bloc,
   ) {
     logger.print(
-      '''
-      bloc = $bloc
-      close = $bloc
-      ''',
-      title: PrintTitles.blocObserver,
+      'Bloc = $bloc\nClose = $bloc',
+      title: '${PrintTitles.blocObserver} Close',
     );
   }
 
@@ -78,10 +62,8 @@ class CustomBlocObserver implements BlocObserver {
     BlocBase<dynamic> bloc,
   ) {
     logger.print(
-      '''
-      create = $bloc
-      ''',
-      title: PrintTitles.blocObserver,
+      'Create = $bloc',
+      title: '${PrintTitles.blocObserver} Create',
     );
   }
 }
