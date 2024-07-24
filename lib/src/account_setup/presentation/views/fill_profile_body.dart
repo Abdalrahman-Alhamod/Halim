@@ -9,7 +9,7 @@ import 'widgets/birthday_card.dart';
 import 'widgets/choose_your_specialty.dart';
 import 'widgets/list_with_dialog_gender.dart';
 import 'widgets/phone_num_input.dart';
-import '../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
+import '../../../auth/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 class FillProfileBody extends StatefulWidget {
   const FillProfileBody({super.key});

@@ -6,7 +6,7 @@ import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import '../../../../login_register/presentation/views/widgets/shared_widgets/custom_text_field.dart';
+import '../../../../auth/presentation/views/widgets/shared_widgets/custom_text_field.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/app_route.dart';

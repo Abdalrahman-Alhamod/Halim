@@ -9,7 +9,7 @@ import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/widgets/custome_flat_button.dart';
 import '../../../course_details/presentation/views/widgets/enroll_course_view/widgets/pin_text_field.dart';
-part './widgets/confirm_email_view_widgets/confirm_email_app_bar.dart';
+part 'widgets/confirm_email_view_widgets/confirm_email_app_bar.dart';
 part 'widgets/confirm_email_view_widgets/confirm_email_body.dart';
 
 class ConfirmEmailView extends StatelessWidget {

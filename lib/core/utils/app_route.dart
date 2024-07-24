@@ -27,10 +27,10 @@ import 'package:halim/src/course_details/presentation/views/my_course_details_vi
 import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
 import 'package:halim/src/forgot_password/presentation/views/new_pass_view.dart';
 import 'package:halim/src/home/presentation/views/home_view.dart';
-import 'package:halim/src/login_register/presentation/views/confirm_email_view.dart';
-import 'package:halim/src/login_register/presentation/views/login_view.dart';
-import 'package:halim/src/login_register/presentation/views/login_with_view.dart';
-import 'package:halim/src/login_register/presentation/views/register_view.dart';
+import 'package:halim/src/auth/presentation/views/confirm_email_view.dart';
+import 'package:halim/src/auth/presentation/views/login_view.dart';
+import 'package:halim/src/auth/presentation/views/login_with_view.dart';
+import 'package:halim/src/auth/presentation/views/register_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/definition_halim.dart';
 import 'package:halim/src/profile_settings/presentation/views/notification_settings_view.dart';
 import 'package:halim/src/splash/presentation/views/intro_view.dart';
