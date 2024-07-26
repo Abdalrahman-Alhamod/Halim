@@ -258,7 +258,7 @@ class ApiServicesImpl implements ApiServices {
         headers += "| $key: $value ";
       });
       logger.print(
-        '[DIO] Request: ${options.method} ${options.uri}\nOptions${options.data.toString()}\nHeaders:\n$headers',
+        '[DIO] Request: ${options.method} ${options.uri}\nOptions ${options.data.toString()}\nHeaders:\n$headers',
         title: '${PrintTitles.dioInterceptors} Request',
       );
       handler.next(options); //continue
@@ -273,7 +273,7 @@ class ApiServicesImpl implements ApiServices {
     },
     onError: (DioException error, handler) async {
       logger.print(
-        '[DIO] Error ${error.response?.statusCode} : ${error.error}: ${error.response.toString()}',
+        '[DIO] Error \nStatus code: ${error.response?.statusCode}\nError: ${error.error} \nResponse: ${error.response.toString()}',
         title: '${PrintTitles.dioInterceptors} Error',
       );
       handler.next(error); //continue

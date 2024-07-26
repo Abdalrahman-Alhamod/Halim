@@ -7,15 +7,14 @@ import 'toast_status.dart';
 showTOAST(
   BuildContext context, {
   String? textToast,
-  String? title,
+  required String title,
   ToastStatus? status,
 }) {
   showToastWidget(
     duration: const Duration(seconds: 5),
     ToastWidget(
-      // TODO review code
-      title: title ?? status.toString(),
-      description: textToast ?? '',
+      title: title,
+      description: textToast,
       icon: switch (status) {
         null => Icons.info,
         ToastStatus.success => Icons.check_circle,

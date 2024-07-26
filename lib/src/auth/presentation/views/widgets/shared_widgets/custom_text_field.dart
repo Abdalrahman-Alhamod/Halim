@@ -13,6 +13,7 @@ class CustomTextField extends StatefulWidget {
     this.validator,
     this.keyboardType = TextInputType.text,
     this.prefixIcon,
+    this.initialValue,
   });
   final bool obscureText;
   final String hintText;
@@ -20,6 +21,7 @@ class CustomTextField extends StatefulWidget {
   final String? Function(String?)? validator;
   final TextInputType keyboardType;
   final IconData? prefixIcon;
+  final String? initialValue;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -37,6 +39,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
     _focusNode.addListener(_onFocusChange);
     _controller = TextEditingController();
     _enableObscureText = widget.obscureText;
+    if (widget.initialValue != null) {
+      _controller.text = widget.initialValue!;
+    }
   }
 
   @override

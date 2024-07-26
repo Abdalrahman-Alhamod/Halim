@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
 
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/custome_elevated_button.dart';
@@ -24,8 +26,8 @@ class _AuthFormState extends State<AuthForm> {
   final _passwordValidator = MultiValidator([
     RequiredValidator(errorText: LocaleKeys.Auth_thisFieldIsRequired.tr()),
     MinLengthValidator(8, errorText: LocaleKeys.Auth_passWordMustBe8Digit.tr()),
-    PatternValidator(r'(?=.*?[#?!@$%^&*-])',
-        errorText: LocaleKeys.Auth_passwordShouldContainSpecialCharacter.tr())
+    // PatternValidator(r'(?=.*?[#?!@$%^&*-])',
+    //     errorText: LocaleKeys.Auth_passwordShouldContainSpecialCharacter.tr())
   ]);
 
   String email = '';
@@ -39,67 +41,82 @@ class _AuthFormState extends State<AuthForm> {
   bool isPasswordFilled = false;
 
   final _formKey = GlobalKey<FormState>();
+
+  _setInitialValues() {
+    email = context.read<LoginCubit>().getUserEmail() ?? '';
+    setState(() {
+      if (email != '') {
+        isEmailFilled = true;
+      } else {
+        isEmailFilled = false;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    _setInitialValues();
     return Form(
-        key: _formKey,
-        child: Column(
-          children: [
-            CustomTextField(
-              obscureText: false,
-              hintText: LocaleKeys.Auth_email.tr(),
-              onChanged: (value) {
-                email = value;
-                setState(() {
-                  if (value != '') {
-                    isEmailFilled = true;
-                  } else {
-                    isEmailFilled = false;
-                  }
-                });
-              },
-              keyboardType: TextInputType.emailAddress,
-              validator: _emailValidator.call,
-              prefixIcon: Icons.email,
-            ),
-            CustomTextField(
-              obscureText: true,
-              hintText: LocaleKeys.Auth_password.tr(),
-              onChanged: (value) {
-                password = value;
-                setState(() {
-                  if (value != '') {
-                    isPasswordFilled = true;
-                  } else {
-                    isPasswordFilled = false;
-                  }
-                });
-              },
-              keyboardType: TextInputType.text,
-              validator: _passwordValidator.call,
-              prefixIcon: Icons.lock,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            RememberMeCheckBox(
-              onChange: (value) {
-                rememberMe = value!;
-              },
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            CustomElevatedButton(
-              onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  widget.onTap.call(email, password, rememberMe);
+      key: _formKey,
+      child: Column(
+        children: [
+          CustomTextField(
+            initialValue: email,
+            obscureText: false,
+            hintText: LocaleKeys.Auth_email.tr(),
+            onChanged: (value) {
+              email = value;
+              setState(() {
+                if (value != '') {
+                  isEmailFilled = true;
+                } else {
+                  isEmailFilled = false;
                 }
-              },
-              title: widget.buttonTitle,
-              isEnabled: isEmailFilled && isPasswordFilled,
-            ),
-          ],
-        ));
+              });
+            },
+            keyboardType: TextInputType.emailAddress,
+            validator: _emailValidator.call,
+            prefixIcon: Icons.email,
+          ),
+          CustomTextField(
+            obscureText: true,
+            hintText: LocaleKeys.Auth_password.tr(),
+            onChanged: (value) {
+              password = value;
+              setState(() {
+                if (value != '') {
+                  isPasswordFilled = true;
+                } else {
+                  isPasswordFilled = false;
+                }
+              });
+            },
+            keyboardType: TextInputType.text,
+            validator: _passwordValidator.call,
+            prefixIcon: Icons.lock,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          RememberMeCheckBox(
+            onChange: (value) {
+              rememberMe = value!;
+            },
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          CustomElevatedButton(
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+                widget.onTap.call(email, password, rememberMe);
+              }
+            },
+            title: widget.buttonTitle,
+            isEnabled: isEmailFilled && isPasswordFilled,
+          ),
+        ],
+      ),
+    );
   }
 }

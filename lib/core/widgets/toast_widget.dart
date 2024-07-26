@@ -6,15 +6,15 @@ import 'package:halim/core/utils/context_extensions.dart';
 class ToastWidget extends StatelessWidget {
   const ToastWidget({
     super.key,
-    this.title = 'Title',
+    required this.title,
     this.icon,
-    this.description = 'Description',
+    this.description,
     this.color = AppColors.warning,
   });
 
   final String title;
   final IconData? icon;
-  final String description;
+  final String? description;
   final Color color;
 
   @override
@@ -53,10 +53,10 @@ class ToastWidget extends StatelessWidget {
                                 Icon(
                                   icon,
                                   color: color,
-                                  size: 16,
+                                  size: 20,
                                 ),
                                 const SizedBox(
-                                  width: 4,
+                                  width: 8,
                                 ),
                               ],
                               Text(
@@ -69,18 +69,20 @@ class ToastWidget extends StatelessWidget {
                               ),
                             ],
                           ),
-                          subtitle: Padding(
-                            padding: const EdgeInsets.only(top: 10),
-                            child: Text(
-                              description,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: color,
-                              ),
-                            ),
-                          ),
+                          subtitle: description == null || description == ''
+                              ? null
+                              : Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Text(
+                                    description!,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: color,
+                                    ),
+                                  ),
+                                ),
                         ),
                       )
                     ],

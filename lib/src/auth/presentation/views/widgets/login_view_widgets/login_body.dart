@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
 import '../../../../../../core/utils/app_route.dart';
 
 import '../../../../../../core/themes/app_text_styles.dart';
@@ -16,52 +18,60 @@ class LoginBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
-              LocaleKeys.Auth_loginToYourAccount.tr(),
-              style: AppTextStyles.extraLargeTitle,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            AuthForm(
-              buttonTitle: LocaleKeys.Auth_signIn.tr(),
-              onTap: (email, password, rememberMe) {
-                GoRouter.of(context).go(AppRoute.kHome);
-              },
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextButton(
-              onPressed: () {
-                GoRouter.of(context).push(AppRoute.kSendCode);
-              },
-              child: Text(
-                LocaleKeys.Auth_forgotThePassword.tr(),
-                style:
-                    const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+    return BlocListener<LoginCubit, LoginState>(
+      listenWhen: context.read<LoginCubit>().listenWhen,
+      listener: context.read<LoginCubit>().listen,
+      child: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const OrContinueWithButtons(),
-            const SizedBox(
-              height: 40,
-            ),
-            const DontHaveAnAccountTextButton(),
-            const SizedBox(
-              height: 40,
-            ),
-          ],
+              Text(
+                LocaleKeys.Auth_loginToYourAccount.tr(),
+                style: AppTextStyles.extraLargeTitle,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              AuthForm(
+                buttonTitle: LocaleKeys.Auth_signIn.tr(),
+                onTap: (email, password, rememberMe) {
+                  context.read<LoginCubit>().login(
+                        email: email,
+                        password: password,
+                        rememeberMe: rememberMe,
+                      );
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                onPressed: () {
+                  GoRouter.of(context).push(AppRoute.kSendCode);
+                },
+                child: Text(
+                  LocaleKeys.Auth_forgotThePassword.tr(),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 16),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const OrContinueWithButtons(),
+              const SizedBox(
+                height: 40,
+              ),
+              const DontHaveAnAccountTextButton(),
+              const SizedBox(
+                height: 40,
+              ),
+            ],
+          ),
         ),
       ),
     );

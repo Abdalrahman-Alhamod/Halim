@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/utils/app_route.dart';
 
@@ -31,14 +33,16 @@ class _SplashViewState extends State<SplashView> {
     try {
       await preCacheAppImages();
       await Future.delayed(const Duration(seconds: 3)); // Shortened delay
-      navigateToIntroView();
+      navigate();
     } catch (e) {
       debugPrint('Error during initialization: $e');
     }
   }
 
-  void navigateToIntroView() {
-    GoRouter.of(context).go(AppRoute.kIntroView);
+  void navigate() {
+    context.read<LoginCubit>().isUserLoggedIn()
+        ? GoRouter.of(context).go(AppRoute.kHome)
+        : GoRouter.of(context).go(AppRoute.kIntroView);
   }
 
   Future<void> preCacheAppImages() async {
