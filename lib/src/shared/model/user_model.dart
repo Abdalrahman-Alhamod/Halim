@@ -1,16 +1,23 @@
-import 'package:halim/src/shared/entity/user_entity.dart';
-
-class UserModel extends UserEntity {
+class UserModel {
+  int? id;
+  String? firstName;
+  String? lastName;
+  String? email;
+  String? gender;
+  String? birthDate;
+  dynamic image;
+  String? phoneNumber;
+  String? accessToken;
   UserModel({
-    super.id,
-    super.firstName,
-    super.lastName,
-    super.email,
-    super.gender,
-    super.birthDate,
-    super.image,
-    super.phoneNumber,
-    super.accessToken,
+    this.id,
+    this.firstName,
+    this.lastName,
+    this.email,
+    this.gender,
+    this.birthDate,
+    this.image,
+    this.phoneNumber,
+    this.accessToken,
   });
 
   @override

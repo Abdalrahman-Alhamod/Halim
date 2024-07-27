@@ -1,14 +1,15 @@
 import 'package:halim/core/data/model/base_model.dart';
 import 'package:halim/core/data/sources/remote/api_response.dart';
-import 'package:halim/src/shared/entity/user_entity.dart';
+
+import '../../../shared/model/user_model.dart';
 
 abstract class AuthRepo {
   Future<ApiResponse<BaseModel>> login({
     required String email,
     required String password,
   });
-  void saveToken(UserEntity user);
-  void saveUserEmail(UserEntity user);
+  void saveToken(UserModel user);
+  void saveUserEmail(UserModel user);
   String? getUserEmail();
   bool isUserLoggedIn();
 

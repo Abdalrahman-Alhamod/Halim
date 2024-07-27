@@ -22,7 +22,7 @@ mixin _$LoginState {
     required TResult Function() save,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(UserEntity data, String? message) success,
+    required TResult Function(UserModel data, String? message) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +31,7 @@ mixin _$LoginState {
     TResult? Function()? save,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(UserEntity data, String? message)? success,
+    TResult? Function(UserModel data, String? message)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +40,7 @@ mixin _$LoginState {
     TResult Function()? save,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(UserEntity data, String? message)? success,
+    TResult Function(UserModel data, String? message)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,7 +134,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() save,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(UserEntity data, String? message) success,
+    required TResult Function(UserModel data, String? message) success,
   }) {
     return initial();
   }
@@ -146,7 +146,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? save,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(UserEntity data, String? message)? success,
+    TResult? Function(UserModel data, String? message)? success,
   }) {
     return initial?.call();
   }
@@ -158,7 +158,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? save,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(UserEntity data, String? message)? success,
+    TResult Function(UserModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -253,7 +253,7 @@ class _$SaveImpl implements _Save {
     required TResult Function() save,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(UserEntity data, String? message) success,
+    required TResult Function(UserModel data, String? message) success,
   }) {
     return save();
   }
@@ -265,7 +265,7 @@ class _$SaveImpl implements _Save {
     TResult? Function()? save,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(UserEntity data, String? message)? success,
+    TResult? Function(UserModel data, String? message)? success,
   }) {
     return save?.call();
   }
@@ -277,7 +277,7 @@ class _$SaveImpl implements _Save {
     TResult Function()? save,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(UserEntity data, String? message)? success,
+    TResult Function(UserModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -373,7 +373,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() save,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(UserEntity data, String? message) success,
+    required TResult Function(UserModel data, String? message) success,
   }) {
     return loading();
   }
@@ -385,7 +385,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? save,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(UserEntity data, String? message)? success,
+    TResult? Function(UserModel data, String? message)? success,
   }) {
     return loading?.call();
   }
@@ -397,7 +397,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? save,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(UserEntity data, String? message)? success,
+    TResult Function(UserModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -534,7 +534,7 @@ class _$FailureImpl implements _Failure {
     required TResult Function() save,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(UserEntity data, String? message) success,
+    required TResult Function(UserModel data, String? message) success,
   }) {
     return failure(networkException);
   }
@@ -546,7 +546,7 @@ class _$FailureImpl implements _Failure {
     TResult? Function()? save,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(UserEntity data, String? message)? success,
+    TResult? Function(UserModel data, String? message)? success,
   }) {
     return failure?.call(networkException);
   }
@@ -558,7 +558,7 @@ class _$FailureImpl implements _Failure {
     TResult Function()? save,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(UserEntity data, String? message)? success,
+    TResult Function(UserModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -624,7 +624,7 @@ abstract class _$$SuccessImplCopyWith<$Res> {
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserEntity data, String? message});
+  $Res call({UserModel data, String? message});
 }
 
 /// @nodoc
@@ -645,7 +645,7 @@ class __$$SuccessImplCopyWithImpl<$Res>
       null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as UserEntity,
+              as UserModel,
       freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -660,7 +660,7 @@ class _$SuccessImpl implements _Success {
   const _$SuccessImpl(this.data, this.message);
 
   @override
-  final UserEntity data;
+  final UserModel data;
   @override
   final String? message;
 
@@ -694,7 +694,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function() save,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(UserEntity data, String? message) success,
+    required TResult Function(UserModel data, String? message) success,
   }) {
     return success(data, message);
   }
@@ -706,7 +706,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function()? save,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(UserEntity data, String? message)? success,
+    TResult? Function(UserModel data, String? message)? success,
   }) {
     return success?.call(data, message);
   }
@@ -718,7 +718,7 @@ class _$SuccessImpl implements _Success {
     TResult Function()? save,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(UserEntity data, String? message)? success,
+    TResult Function(UserModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -769,10 +769,10 @@ class _$SuccessImpl implements _Success {
 }
 
 abstract class _Success implements LoginState {
-  const factory _Success(final UserEntity data, final String? message) =
+  const factory _Success(final UserModel data, final String? message) =
       _$SuccessImpl;
 
-  UserEntity get data;
+  UserModel get data;
   String? get message;
   @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>

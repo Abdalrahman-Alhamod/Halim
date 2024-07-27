@@ -1,10 +1,10 @@
 import 'package:halim/core/data/sources/local/app_storage_keys.dart';
-import 'package:halim/src/shared/entity/user_entity.dart';
+import 'package:halim/src/shared/model/user_model.dart';
 
 import '../../../../core/data/sources/local/app_storage.dart';
 
 class AuthLocalDataSource {
-  void saveUser(UserEntity user) {
+  void saveUser(UserModel user) {
     AppStorage.instance.writeData(
       AppStorageKeys.TOKEN,
       user.accessToken,
@@ -15,7 +15,7 @@ class AuthLocalDataSource {
     );
   }
 
-  void saveUserEmail(UserEntity user) {
+  void saveUserEmail(UserModel user) {
     AppStorage.instance.writeData(
       AppStorageKeys.USER_EMAIL,
       user.email,
@@ -34,7 +34,8 @@ class AuthLocalDataSource {
         ) !=
         null;
   }
-  void deleteToken(){
+
+  void deleteToken() {
     AppStorage.instance.removeData(
       AppStorageKeys.TOKEN,
     );

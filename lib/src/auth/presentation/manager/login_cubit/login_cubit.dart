@@ -5,12 +5,12 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/functions/show_loading_dialog.dart';
 import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/src/auth/domain/repos/auth_repo.dart';
-import 'package:halim/src/shared/entity/user_entity.dart';
 
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
 import '../../../../../core/functions/show_toast.dart';
 import '../../../../../core/functions/toast_status.dart';
 import '../../../../../core/utils/logger.dart';
+import '../../../../shared/model/user_model.dart';
 
 part 'login_state.dart';
 part 'login_cubit.freezed.dart';
@@ -18,7 +18,7 @@ part 'login_cubit.freezed.dart';
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit(this._authRepo) : super(const LoginState.initial());
   final AuthRepo _authRepo;
-  UserEntity? _user;
+  UserModel? _user;
 
   void _saveUser(bool rememeberMe) {
     emit(const LoginState.save());

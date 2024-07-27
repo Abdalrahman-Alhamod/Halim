@@ -5,9 +5,9 @@ import 'package:halim/core/data/sources/remote/api_response.dart';
 import 'package:halim/src/auth/data/data_sources/auth_local_data_source.dart';
 import 'package:halim/src/auth/data/data_sources/auth_remote_data_source.dart';
 import 'package:halim/src/auth/domain/repos/auth_repo.dart';
-import 'package:halim/src/shared/entity/user_entity.dart';
 
 import '../../../../core/domain/error_handler/network_exceptions.dart';
+import '../../../shared/model/user_model.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final AuthRemoteDataSource _authRemoteDataSource;
@@ -38,12 +38,12 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  void saveToken(UserEntity user) {
+  void saveToken(UserModel user) {
     _authLocalDataSource.saveUser(user);
   }
 
   @override
-  void saveUserEmail(UserEntity user) {
+  void saveUserEmail(UserModel user) {
     _authLocalDataSource.saveUserEmail(user);
   }
 
