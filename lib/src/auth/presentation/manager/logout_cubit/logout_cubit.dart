@@ -24,7 +24,7 @@ class LogoutCubit extends Cubit<LogoutState> {
     response.when(
       success: (data) {
         emit(
-          const LogoutState.success(),
+          LogoutState.success(data.message),
         );
         _authRepo.deleteToken();
       },
@@ -40,7 +40,7 @@ class LogoutCubit extends Cubit<LogoutState> {
     if (current == previous) return false;
     return current.maybeWhen(
       loading: () => true,
-      success: () => true,
+      success: (message) => true,
       failure: (_) => true,
       orElse: () => false,
     );
@@ -74,7 +74,7 @@ class LogoutCubit extends Cubit<LogoutState> {
           title: '$title Error',
         );
       },
-      success: () {
+      success: (message) {
         context.pop();
 
         showTOAST(

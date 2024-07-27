@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:halim/src/search/domain/entities/search_keyword_entity.dart';
 import 'package:halim/src/search/domain/repos/search_repo.dart';
 import 'package:halim/src/shared/entity/test_user_entity.dart';
 
@@ -19,11 +20,11 @@ class SearchCubit extends Cubit<SearchState> {
 
   dynamic someData;
 
-  List<TestUserEntity> users = [];
+  List<SearchKeywordEntity> searchKeywords = [];
 
   late final PagingAdapter<TestUserEntity> pagingAdapter;
   void init(BuildContext context) {
-    pagingAdapter = PagingAdapter(fetchItems: getPages);
+    // pagingAdapter = PagingAdapter(fetchItems: getPages);
     pagingAdapter.init();
     pagingAdapter.initPageRequestListener(
       context,
@@ -35,10 +36,10 @@ class SearchCubit extends Cubit<SearchState> {
     emit(
       const SearchState.loading(),
     );
-    final response = await _searchRepo.get();
+    final response = await _searchRepo.getSearchKeywords();
     response.when(
       success: (data) {
-        someData = data.data;
+        someData = data.data.list;
         emit(
           SearchState.success(
             someData,
@@ -56,35 +57,35 @@ class SearchCubit extends Cubit<SearchState> {
     );
   }
 
-  Future<void> getPages(BuildContext context, {required int? pageKey}) async {
-    if ((pageKey ?? 1) == 1) users.clear();
-    emit(
-      const SearchState.loadingPagination(),
-    );
-    // TODO implement getPages in repos and data sources
-    final response = await _searchRepo.get();
-    response.when(
-      success: (data) async {
-        List list = data.data.list;
-        users.addAll(list.whereType());
-        pagingAdapter.handlePageData(
-          baseModel: data,
-          pageData: users,
-          pageKey: pageKey,
-          pagingController: pagingAdapter.pagingController,
-        );
-        emit(
-          SearchState.successPagination(null, data.message),
-        );
-      },
-      failure: (networkException) {
-        pagingAdapter.pagingController.error = networkException;
-        emit(
-          SearchState.failurePagination(networkException),
-        );
-      },
-    );
-  }
+  // Future<void> getPages(BuildContext context, {required int? pageKey}) async {
+  //   if ((pageKey ?? 1) == 1) users.clear();
+  //   emit(
+  //     const SearchState.loadingPagination(),
+  //   );
+  //   // TODO implement getPages in repos and data sources
+  //   final response = await _searchRepo.get();
+  //   response.when(
+  //     success: (data) async {
+  //       List list = data.data.list;
+  //       users.addAll(list.whereType());
+  //       pagingAdapter.handlePageData(
+  //         baseModel: data,
+  //         pageData: users,
+  //         pageKey: pageKey,
+  //         pagingController: pagingAdapter.pagingController,
+  //       );
+  //       emit(
+  //         SearchState.successPagination(null, data.message),
+  //       );
+  //     },
+  //     failure: (networkException) {
+  //       pagingAdapter.pagingController.error = networkException;
+  //       emit(
+  //         SearchState.failurePagination(networkException),
+  //       );
+  //     },
+  //   );
+  // }
 
   bool buildWhen(SearchState previous, SearchState current) {
     if (current == previous) return false;
@@ -143,12 +144,12 @@ class SearchCubit extends Cubit<SearchState> {
       failure: (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: networkException.toString(),
+          textToast: NetworkExceptions.getErrorMessage(networkException),
           title: '$title Error',
           status: ToastStatus.failure,
         );
         logger.print(
-          networkException,
+          NetworkExceptions.getErrorMessage(networkException),
           color: PrintColor.red,
           title: '$title Error',
         );
@@ -182,7 +183,7 @@ class SearchCubit extends Cubit<SearchState> {
       loadingPage: () {},
       failurePage: (NetworkExceptions? networkException) {
         logger.print(
-          networkException,
+          NetworkExceptions.getErrorMessage(networkException),
           color: PrintColor.red,
           title: '$title Page Error',
         );
@@ -211,7 +212,7 @@ class SearchCubit extends Cubit<SearchState> {
       },
       failurePagination: (NetworkExceptions? networkException) {
         logger.print(
-          networkException,
+          NetworkExceptions.getErrorMessage(networkException),
           color: PrintColor.red,
           title: '$title Pagination Error',
         );
@@ -233,7 +234,7 @@ class SearchCubit extends Cubit<SearchState> {
       },
       failureFirst: (NetworkExceptions? networkException) {
         logger.print(
-          networkException,
+          NetworkExceptions.getErrorMessage(networkException),
           color: PrintColor.red,
           title: '$title First Error',
         );

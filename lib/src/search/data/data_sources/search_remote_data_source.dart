@@ -1,4 +1,5 @@
-import 'package:halim/src/shared/model/test_user_model.dart';
+import 'package:halim/core/data/model/base_models.dart';
+import 'package:halim/src/search/data/models/search_keyword_model.dart';
 
 import '../../../../core/data/model/base_model.dart';
 import '../../../../core/data/sources/remote/app_url.dart';
@@ -9,15 +10,43 @@ class SearchRemoteDateSource {
 
   SearchRemoteDateSource(this._apiServices);
 
-  Future<BaseModel> get() async {
+  Future<BaseModel> getSearchKeywords() async {
     final response = await _apiServices.get(
-      AppUrl.testUrl,
+      AppUrl.searchKeywords,
+      hasToken: true,
+    );
+
+    return BaseModel<BaseModels>.fromJson(
+      response,
+      (json) => BaseModels.fromJson(
+        json,
+        (itemJson) => SearchKeywordModel.fromJson(
+          itemJson,
+        ),
+      ),
+    );
+  }
+
+  Future<BaseModel> deleteSearchKeyword(int id) async {
+    final response = await _apiServices.delete(
+      '${AppUrl.searchKeywords}/$id',
       hasToken: true,
     );
 
     return BaseModel.fromJson(
       response,
-      (json) => TestUserModel.fromJson(json),
+      (json) => () {},
+    );
+  }
+
+  Future<BaseModel> deleteSearchKeywords() async {
+    final response = await _apiServices.delete(
+      AppUrl.searchKeywords,
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => () {},
     );
   }
 }

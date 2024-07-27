@@ -6,5 +6,5 @@ class LogoutState with _$LogoutState {
   const factory LogoutState.loading() = _Loading;
   const factory LogoutState.failure(NetworkExceptions? networkException) =
       _Failure;
-  const factory LogoutState.success() = _Success;
+  const factory LogoutState.success(String? message) = _Success;
 }

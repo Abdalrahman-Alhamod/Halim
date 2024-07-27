@@ -176,7 +176,7 @@ class ApiServicesImpl implements ApiServices {
 
   dynamic _handleResponseAsJson(Response<dynamic> response) {
     final responseAsJson = response.data.toString().isEmpty
-        ? {}
+        ? jsonDecode("{}")
         : jsonDecode(response.data.toString());
     return responseAsJson;
   }
@@ -265,7 +265,9 @@ class ApiServicesImpl implements ApiServices {
     },
     onResponse: (Response<dynamic> response, handler) async {
       logger.print(
-        jsonDecode(response.data),
+        response.data.toString().isEmpty
+            ? jsonDecode("{}")
+            : jsonDecode(response.data.toString()),
         title: '${PrintTitles.dioInterceptors} Response',
       );
       handler.next(response);

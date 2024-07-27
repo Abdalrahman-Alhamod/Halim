@@ -17,9 +17,41 @@ class SearchRepoImpl extends SearchRepo {
   );
 
   @override
-  Future<ApiResponse<BaseModel>> get() async {
+  Future<ApiResponse<BaseModel>> getSearchKeywords() async {
     try {
-      final response = await _searchRemoteDateSource.get();
+      final response = await _searchRemoteDateSource.getSearchKeywords();
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> deleteSearchKeyword(int id) async {
+    try {
+      final response = await _searchRemoteDateSource.deleteSearchKeyword(id);
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> deleteSearchKeywords() async {
+    try {
+      final response = await _searchRemoteDateSource.deleteSearchKeywords();
       return ApiResponse.success(
         response,
       );

@@ -27,4 +27,8 @@ abstract final class AppUrl {
   static final googleCallback = "${auth}google/callback";
 
   ///<------------------------------------------------------------------------------
+
+  static final searchKeywords = "${baseUrl}searchwords";
+
+  ///<------------------------------------------------------------------------------
 }

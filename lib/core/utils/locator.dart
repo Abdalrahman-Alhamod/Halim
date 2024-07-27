@@ -10,6 +10,7 @@ import 'package:halim/src/search/data/data_sources/search_remote_data_source.dar
 import 'package:halim/src/search/data/repos/search_repo_impl.dart';
 import 'package:halim/src/search/domain/repos/search_repo.dart';
 import 'package:halim/src/search/presentation/manager/search_cubit.dart';
+import 'package:halim/src/search/presentation/manager/search_keywords_cubit/search_keywords_cubit.dart';
 
 import '../../src/auth/presentation/manager/logout_cubit/logout_cubit.dart';
 import '../data/sources/remote/services/api_services.dart';
@@ -67,6 +68,12 @@ void setupLocators() {
   ///** Factory **///
 
   /// Cubits
+  // Search
+  locator.registerFactory<SearchKeywordsCubit>(
+    () => SearchKeywordsCubit(
+      locator.get<SearchRepo>(),
+    ),
+  );
   locator.registerFactory<SearchCubit>(
     () => SearchCubit(
       locator.get<SearchRepo>(),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:halim/core/utils/context_extensions.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ShimmerBase extends StatelessWidget {
@@ -7,12 +9,10 @@ class ShimmerBase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      // baseColor: Theme.of(context).primaryColor.withOpacity(.20),
-      // highlightColor: Theme.of(context).primaryColor.withOpacity(.10),
-
-      baseColor: Colors.grey.withOpacity(.90),
+      baseColor: context.isDarkMode
+          ? Colors.grey.withOpacity(.10)
+          : Colors.grey.withOpacity(.50),
       highlightColor: Colors.grey.withOpacity(.30),
-      // enabled: _enabled,
       child: child ?? const SizedBox.shrink(),
     );
   }

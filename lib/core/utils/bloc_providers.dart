@@ -2,11 +2,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:halim/src/auth/presentation/manager/logout_cubit/logout_cubit.dart';
 import 'package:halim/src/search/presentation/manager/search_cubit.dart';
+import 'package:halim/src/search/presentation/manager/search_keywords_cubit/search_keywords_cubit.dart';
 
 import 'locator.dart';
 
 List<BlocProvider> initProviders() {
   return [
+    BlocProvider<SearchKeywordsCubit>(
+      create: (context) => locator.get<SearchKeywordsCubit>(),
+    ),
     BlocProvider<SearchCubit>(
       create: (context) => locator.get<SearchCubit>(),
     ),
