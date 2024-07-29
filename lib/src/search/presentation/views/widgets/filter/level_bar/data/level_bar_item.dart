@@ -1,8 +1,6 @@
 class LevelBarItem {
   final String label;
-  final Level type;
+  final String value;
 
-  LevelBarItem({required this.label, required this.type});
+  LevelBarItem({required this.label, required this.value});
 }
-
-enum Level { all, begginer, intermediate, advanced }

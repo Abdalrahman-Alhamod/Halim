@@ -8,7 +8,7 @@ class SearchKeywordsState with _$SearchKeywordsState {
       NetworkExceptions? networkException) = _Failure;
   const factory SearchKeywordsState.empty(String? message) = _Empty;
   const factory SearchKeywordsState.fetchSuccess(
-      List<SearchKeywordEntity> data, String? message) = _FetchSuccess;
+      List<SearchKeywordModel> data, String? message) = _FetchSuccess;
   const factory SearchKeywordsState.deleteSuccess(String? message) =
       _DeleteSuccess;
 }

@@ -1,25 +1,29 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/data/sources/remote/app_url.dart';
 import '../../../../../../../../core/translations/locale_keys.g.dart';
 
 import 'course_reviews_stars_button.dart';
 import 'data/stars_bar_item.dart';
 
 class CourseReviewsStarsBar extends StatefulWidget {
-  const CourseReviewsStarsBar(
-      {super.key, this.startIndex = 0, required this.onChanged});
-  final int startIndex;
+  const CourseReviewsStarsBar({
+    super.key,
+    this.initialValue = AppUrl.all,
+    required this.onChanged,
+  });
+  final String initialValue;
   final void Function(String value) onChanged;
   @override
   State<CourseReviewsStarsBar> createState() => _CourseReviewsStarsBarState();
 }
 
 class _CourseReviewsStarsBarState extends State<CourseReviewsStarsBar> {
-  late int _index;
+  late String _value;
   late List<StarsBarItem> items;
   @override
   void initState() {
-    _index = widget.startIndex;
+    _value = widget.initialValue;
     items = [
       StarsBarItem(label: LocaleKeys.Buttons_all.tr(), value: 'all'),
       StarsBarItem(label: '1', value: '1'),
@@ -45,11 +49,11 @@ class _CourseReviewsStarsBarState extends State<CourseReviewsStarsBar> {
               CourseReviewsStarsButton(
                 onPressed: () {
                   setState(() {
-                    _index = index;
+                    _value = items[index].value;
                     widget.onChanged.call(items[index].value);
                   });
                 },
-                isPressed: _index == index,
+                isPressed: _value == items[index].value,
                 label: items[index].label,
               ),
               const SizedBox(

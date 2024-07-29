@@ -1,7 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/functions/show_custom_dialog.dart';
+import 'package:halim/src/search/data/models/search_filter_model.dart';
+import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
+import 'package:halim/src/search/presentation/views/widgets/filter/widgets/select_category_dialog.dart';
+import 'package:halim/src/shared/app_data.dart';
 import '../../../../../../core/utils/context_extensions.dart';
 import 'level_bar/level_bar.dart';
 
@@ -9,38 +14,21 @@ import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/custome_elevated_button.dart';
 import '../../../../../course_details/presentation/views/widgets/more_details_section/reviews/review_stars_bar/course_reviews_stars_bar.dart';
-import '../../../../../home/presentation/views/widgets/category_widget.dart';
+import 'widgets/subcategories_buttons_list.dart';
 
 part './widgets/price_range_slider.dart';
 part './widgets/duration_range_slider.dart';
 
-class FilterBottomSheet extends StatefulWidget {
+class FilterBottomSheet extends StatelessWidget {
   const FilterBottomSheet({
     super.key,
   });
 
   @override
-  State<FilterBottomSheet> createState() => _FilterBottomSheetState();
-}
-
-class _FilterBottomSheetState extends State<FilterBottomSheet> {
-  late TapGestureRecognizer _tapGestureRecognizer;
-  @override
-  void initState() {
-    super.initState();
-    _tapGestureRecognizer = TapGestureRecognizer()..onTap = _handleTap;
-  }
-
-  @override
-  void dispose() {
-    _tapGestureRecognizer.dispose();
-    super.dispose();
-  }
-
-  void _handleTap() {}
-
-  @override
   Widget build(BuildContext context) {
+    SearchFilterModel currentFilters = context.read<SearchCubit>().filters;
+    context.read<SearchCubit>().fetchSubcategories();
+    context.read<SearchCubit>().getCategories();
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,
@@ -90,16 +78,48 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    LocaleKeys.Search_Test_mainCategory1.tr(),
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: AppColors.primaryColor,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
+                BlocBuilder<SearchCubit, SearchState>(
+                  buildWhen: context.read<SearchCubit>().buildCategoriesWhen,
+                  builder: (context, state) {
+                    final categories = context.read<SearchCubit>().categories;
+                    return context.read<SearchCubit>().buildCategorie(
+                          context: context,
+                          state: state,
+                          child: StatefulBuilder(
+                            builder: (context, setState) {
+                              return TextButton(
+                                onPressed: () {
+                                  showCustomDialog(
+                                    context: context,
+                                    widget: SelectCategoryDialog(
+                                      categories: categories,
+                                      onSelect: (selectedCategory) {
+                                        setState(() {
+                                          currentFilters.category =
+                                              selectedCategory;
+                                          context
+                                              .read<SearchCubit>()
+                                              .fetchSubcategories();
+                                          currentFilters.subcategory =
+                                              getSubcategoryAll();
+                                        });
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: Text(
+                                  currentFilters.category.name ?? '',
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    color: AppColors.primaryColor,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                  },
                 ),
               ],
             ),
@@ -115,19 +135,28 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             ),
             SizedBox(
               height: 40,
-              child: ListView(
-                key: UniqueKey(),
-                scrollDirection: Axis.horizontal,
-                physics: const ScrollPhysics(),
-                children: const [
-                  CategoryWidget('🔥 All'),
-                  CategoryWidget('📊 BA'),
-                  CategoryWidget('💰 Business'),
-                  CategoryWidget('💡 AI'),
-                  CategoryWidget('🖋 3D Design'),
-                  CategoryWidget('💊 Medicine '),
-                  CategoryWidget('🧮 Mathematical analysis'),
-                ],
+              child: BlocBuilder<SearchCubit, SearchState>(
+                buildWhen: context.read<SearchCubit>().buildSubcategoriesWhen,
+                builder: (context, state) {
+                  final subcategories =
+                      context.read<SearchCubit>().subcategories;
+                  return context.read<SearchCubit>().buildSubcategorie(
+                        context: context,
+                        state: state,
+                        child: SubcategoriesButtonsList(
+                          subcategories: subcategories,
+                          initialValueId: context
+                                  .read<SearchCubit>()
+                                  .filters
+                                  .subcategory
+                                  .id ??
+                              allId,
+                          onChange: (id) {
+                            currentFilters.subcategory.id = id;
+                          },
+                        ),
+                      );
+                },
               ),
             ),
             const SizedBox(
@@ -141,8 +170,13 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               height: 30,
             ),
             _DurationRangeSlider(
-              key: UniqueKey(),
-              onChanged: (start, end) {},
+              initialStartValue:
+                  context.read<SearchCubit>().filters.startDuation,
+              initialEndValue: context.read<SearchCubit>().filters.endDuration,
+              onChanged: (start, end) {
+                currentFilters.startDuation = start;
+                currentFilters.endDuration = end;
+              },
             ),
             Text(
               LocaleKeys.Search_Filter_level.tr(),
@@ -152,9 +186,10 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               height: 10,
             ),
             LevelBar(
-              startIndex: 0,
-              key: UniqueKey(),
-              onChanged: (value) {},
+              initialValue: context.read<SearchCubit>().filters.level,
+              onChanged: (value) {
+                currentFilters.level = value;
+              },
             ),
             const SizedBox(
               height: 20,
@@ -167,8 +202,12 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               height: 30,
             ),
             _PriceRangeSlider(
-              key: UniqueKey(),
-              onChanged: (start, end) {},
+              initialStartValue: context.read<SearchCubit>().filters.startPrice,
+              initialEndValue: context.read<SearchCubit>().filters.endPrice,
+              onChanged: (start, end) {
+                currentFilters.startPrice = start;
+                currentFilters.endPrice = end;
+              },
             ),
             Text(
               LocaleKeys.Search_Filter_rating.tr(),
@@ -178,9 +217,10 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               height: 10,
             ),
             CourseReviewsStarsBar(
-              startIndex: 0,
-              key: UniqueKey(),
-              onChanged: (value) {},
+              initialValue: context.read<SearchCubit>().filters.rating,
+              onChanged: (value) {
+                currentFilters.rating = value;
+              },
             ),
             const SizedBox(
               height: 10,
@@ -198,7 +238,9 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                   flex: 1,
                   child: CustomElevatedButton(
                     onPressed: () {
-                      setState(() {});
+                      context.read<SearchCubit>().setDefaultFilters();
+                      context.read<SearchCubit>().refresh();
+                      context.pop();
                     },
                     title: LocaleKeys.Search_reset.tr(),
                     elevation: 0,
@@ -214,6 +256,8 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                   flex: 1,
                   child: CustomElevatedButton(
                     onPressed: () {
+                      context.read<SearchCubit>().filters = currentFilters;
+                      context.read<SearchCubit>().refresh();
                       context.pop();
                     },
                     title: LocaleKeys.Search_Filter_filter.tr(),

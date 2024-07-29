@@ -1,0 +1,1 @@
+enum SearchBy { courses, mentors }

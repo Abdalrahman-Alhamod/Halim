@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/widgets/custom_loading_indicator.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
+import '../../src/search/presentation/views/widgets/search_results/result_not_found.dart';
 import '../data/model/base_model.dart';
 
 typedef ItemBuilder<T> = Widget Function(BuildContext, T, int);
@@ -23,12 +25,12 @@ mixin PagingMixin<T> {
         transitionDuration: const Duration(milliseconds: 350),
         // TODO uncomment views
         // firstPageErrorIndicatorBuilder: (_) => ErrorView(),
-        // firstPageProgressIndicatorBuilder: (_) =>
-        //     loadBuilder ?? const LoadingDataView(),
+        firstPageProgressIndicatorBuilder: (_) =>
+            loadBuilder ?? const CustomLoadingIndicator(),
         newPageErrorIndicatorBuilder: null,
-        // newPageProgressIndicatorBuilder: (_) =>
-        //     loadBuilder ?? const LoadingDataView(),
-        // noItemsFoundIndicatorBuilder: (_) => EmptyDataView(),
+        newPageProgressIndicatorBuilder: (_) =>
+            loadBuilder ?? const CustomLoadingIndicator(),
+        noItemsFoundIndicatorBuilder: (_) => const ResultNotFound(),
         itemBuilder: itemBuilder,
       ),
     );

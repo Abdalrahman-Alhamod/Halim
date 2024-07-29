@@ -6,6 +6,7 @@ abstract final class AppUrl {
   static final baseServ = dotenv.env['API_URL'] ?? 'http://localhost:8000/';
   static final baseUrl = "${baseServ}v1/";
   static final storageUrl = "${baseServ}storage/";
+  static const page = "page";
 
   ///<------------------------------------------------------------------------------
 
@@ -28,7 +29,42 @@ abstract final class AppUrl {
 
   ///<------------------------------------------------------------------------------
 
+  static const all = "all";
+  static const beginner = "Beginner";
+  static const intermediate = "Intermediate";
+  static const advanced = "Advanced";
+  static const kCategories = "categories";
+  static const kSubcategories = "subcategories";
+
+  // Filters keys
+  static const kMostRelevent = "most-relevent";
+  static const kMostPopular = "most-popular";
+  static const kTopRated = "top-rated";
+  static const kBestSelling = "best-selling";
+  static const kLatest = "latest";
+  static const kOldest = "oldest";
+  static const kLowPrice = "low-price";
+  static const kHighPrice = "high-price";
+
+  static const duration = "duration";
+  static const levels = "levels";
+  static const price = "price";
+  static const ratings = "ratings";
+  static const sortBy = "sort-by";
+  static const searchQuery = "search-query";
   static final searchKeywords = "${baseUrl}searchwords";
+  static final searchCourses = "${baseUrl}courses";
+  static final searchMentors = "${baseUrl}mentors";
 
   ///<------------------------------------------------------------------------------
+
+  static const include = "include";
+  static const courseCardIncludes =
+      "subcategory,enrollments-count,reviews-avg,universalDiscount";
+  static const mentorCardIncludes = "";
+
+  ///<------------------------------------------------------------------------------
+
+  static final categories = "${baseUrl}categories";
+  static final subcategories = "${baseUrl}subcategories";
 }

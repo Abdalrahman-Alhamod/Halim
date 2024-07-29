@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/assets/app_images.dart';
+import 'package:halim/src/shared/model/mentor_card_model.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 import 'package:readmore/readmore.dart';
 
@@ -31,7 +33,16 @@ class CourseAboutSection extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const CourseAboutMentor(),
+        CourseAboutMentor(
+            mentorCardModel: MentorCardModel(
+          id: 0,
+          firstName:
+              LocaleKeys.CourseDetails_Test_courseMentorName.tr().split(' ')[0],
+          lastName:
+              LocaleKeys.CourseDetails_Test_courseMentorName.tr().split(' ')[1],
+          image: AppImages.testMentor,
+          headline: LocaleKeys.CourseDetails_Test_courseMentorTitle.tr(),
+        )),
         const SizedBox(
           height: 20,
         ),

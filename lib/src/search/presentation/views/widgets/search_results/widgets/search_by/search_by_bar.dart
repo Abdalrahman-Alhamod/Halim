@@ -1,9 +1,8 @@
 part of '../../search_results.dart';
 
 class _SearchByBar extends StatefulWidget {
-  const _SearchByBar(this.pageController);
-  final PageController pageController;
-
+  const _SearchByBar(this.onChange);
+  final void Function(int index) onChange;
   @override
   State<_SearchByBar> createState() => _SearchByBarState();
 }
@@ -27,7 +26,7 @@ class _SearchByBarState extends State<_SearchByBar> {
             onPressed: () {
               setState(() {
                 _index = 0;
-                animateToIndex();
+                widget.onChange.call(_index);
               });
             },
             label: LocaleKeys.Search_courses.tr(),
@@ -43,21 +42,13 @@ class _SearchByBarState extends State<_SearchByBar> {
             onPressed: () {
               setState(() {
                 _index = 1;
-                animateToIndex();
+                widget.onChange.call(_index);
               });
             },
             label: LocaleKeys.Search_mentors.tr(),
           ),
         ),
       ],
-    );
-  }
-
-  void animateToIndex() {
-    widget.pageController.animateToPage(
-      _index,
-      duration: const Duration(milliseconds: 500),
-      curve: Curves.easeInOut,
     );
   }
 }

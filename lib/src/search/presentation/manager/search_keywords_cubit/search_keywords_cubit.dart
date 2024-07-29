@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:halim/src/search/domain/entities/search_keyword_entity.dart';
+import 'package:halim/src/search/data/models/search_keyword_model.dart';
 import 'package:halim/src/search/presentation/views/widgets/recent_search/recent_search_loading_items_list.dart';
 
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
@@ -17,7 +17,7 @@ class SearchKeywordsCubit extends Cubit<SearchKeywordsState> {
   SearchKeywordsCubit(this._searchRepo)
       : super(const SearchKeywordsState.initial());
   final SearchRepo _searchRepo;
-  List<SearchKeywordEntity> searchKeywords = [];
+  List<SearchKeywordModel> searchKeywords = [];
 
   Future<void> getSearchKeywords() async {
     emit(
@@ -26,7 +26,7 @@ class SearchKeywordsCubit extends Cubit<SearchKeywordsState> {
     final response = await _searchRepo.getSearchKeywords();
     response.when(
       success: (data) {
-        searchKeywords = List<SearchKeywordEntity>.from(data.data.list);
+        searchKeywords = List<SearchKeywordModel>.from(data.data.list);
 
         searchKeywords.isEmpty
             ? emit(
@@ -175,7 +175,7 @@ class SearchKeywordsCubit extends Cubit<SearchKeywordsState> {
       initial: () {
         return const RecentSearchLoadingItemsList();
       },
-      fetchSuccess: (List<SearchKeywordEntity> data, String? message) => child,
+      fetchSuccess: (List<SearchKeywordModel> data, String? message) => child,
     );
   }
 }

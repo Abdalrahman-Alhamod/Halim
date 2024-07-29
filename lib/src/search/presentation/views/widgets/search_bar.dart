@@ -4,8 +4,10 @@ class SearchBar extends StatefulWidget {
   const SearchBar({
     super.key,
     required this.onSubmitted,
+    required this.controller,
   });
   final void Function(String value) onSubmitted;
+  final TextEditingController controller;
   @override
   State<SearchBar> createState() => _SearchBarState();
 }
@@ -13,20 +15,17 @@ class SearchBar extends StatefulWidget {
 class _SearchBarState extends State<SearchBar> {
   late FocusNode _focusNode;
   bool _isFocused = false;
-  late TextEditingController _controller;
 
   @override
   void initState() {
     super.initState();
     _focusNode = FocusNode();
     _focusNode.addListener(_onFocusChange);
-    _controller = TextEditingController();
   }
 
   @override
   void dispose() {
     _focusNode.dispose();
-    _controller.dispose();
     super.dispose();
   }
 
@@ -46,7 +45,7 @@ class _SearchBarState extends State<SearchBar> {
         _focusNode.unfocus();
       },
       onSubmitted: widget.onSubmitted,
-      controller: _controller,
+      controller: widget.controller,
       style: const TextStyle(
         fontWeight: FontWeight.w600,
       ),
@@ -68,46 +67,62 @@ class _SearchBarState extends State<SearchBar> {
             ),
           ),
         ),
-        suffixIcon: SizedBox(
-          height: 50,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            shrinkWrap: true,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4),
-                child: IconButton(
-                  icon: const Icon(
-                    Icons.sort,
-                    size: 28,
+        suffixIcon: BlocBuilder<SearchCubit, SearchState>(
+          buildWhen: (previous, current) {
+            if (current == previous) return false;
+            return current.maybeWhen(
+              changeSortBy: () => true,
+              orElse: () => false,
+            );
+          },
+          builder: (context, state) {
+            return switch (context.read<SearchCubit>().searchBy) {
+              SearchBy.courses => SizedBox(
+                  height: 50,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: IconButton(
+                          icon: const Icon(
+                            Icons.sort,
+                            size: 28,
+                          ),
+                          onPressed: () {
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) => const SortByBottomSheet(),
+                              scrollControlDisabledMaxHeightRatio:
+                                  double.infinity,
+                            );
+                          },
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                            AppSVGs.filter,
+                            width: 24,
+                          ),
+                          onPressed: () {
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) => const FilterBottomSheet(),
+                              scrollControlDisabledMaxHeightRatio:
+                                  double.infinity,
+                            );
+                          },
+                        ),
+                      ),
+                    ],
                   ),
-                  onPressed: () {
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (context) => const SortByBottomSheet(),
-                      scrollControlDisabledMaxHeightRatio: double.infinity,
-                    );
-                  },
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4),
-                child: IconButton(
-                  icon: SvgPicture.asset(
-                    AppSVGs.filter,
-                    width: 24,
-                  ),
-                  onPressed: () {
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (context) => const FilterBottomSheet(),
-                      scrollControlDisabledMaxHeightRatio: double.infinity,
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
+              SearchBy.mentors => const SizedBox(),
+            };
+          },
         ),
         suffixIconColor: AppColors.primaryColor,
         hintText: LocaleKeys.Search_search.tr(),

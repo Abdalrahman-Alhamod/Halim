@@ -408,10 +408,12 @@
       "sort": "Sort",
       "mostPopular": "Most Popular",
       "bestSelling": "Best Selling",
-      "newest": "Newest",
       "oldest": "Oldest",
-      "rating": "Rating",
-      "price": "Price"
+      "mostRelevent": "Most Relevent",
+      "topRated": "Top Rated",
+      "latest": "Latest",
+      "priceAscending": "Price Ascending",
+      "priceDescending": "Price Descending"
     }
   },
   "MyCourses": {

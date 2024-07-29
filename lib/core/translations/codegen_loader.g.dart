@@ -430,10 +430,12 @@ class CodegenLoader extends AssetLoader {
         "sort": "ترتيب",
         "mostPopular": "الأكثر شهرة",
         "bestSelling": "الأفضل مبيعاً",
-        "newest": "الأحدث",
         "oldest": "الأقدم",
-        "rating": "التقييم",
-        "price": "السعر"
+        "mostRelevent": "الأكثر صلة",
+        "topRated": "الأعلى تقييماً",
+        "latest": "الأحدث",
+        "priceAscending": "السعر تصاعدياً",
+        "priceDescending": "السعر تنازلياً"
       }
     },
     "MyCourses": {
@@ -932,10 +934,12 @@ class CodegenLoader extends AssetLoader {
         "sort": "Sort",
         "mostPopular": "Most Popular",
         "bestSelling": "Best Selling",
-        "newest": "Newest",
         "oldest": "Oldest",
-        "rating": "Rating",
-        "price": "Price"
+        "mostRelevent": "Most Relevent",
+        "topRated": "Top Rated",
+        "latest": "Latest",
+        "priceAscending": "Price Ascending",
+        "priceDescending": "Price Descending"
       }
     },
     "MyCourses": {

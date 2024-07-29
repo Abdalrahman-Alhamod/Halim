@@ -22,7 +22,7 @@ mixin _$SearchKeywordsState {
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
     required TResult Function(String? message) empty,
-    required TResult Function(List<SearchKeywordEntity> data, String? message)
+    required TResult Function(List<SearchKeywordModel> data, String? message)
         fetchSuccess,
     required TResult Function(String? message) deleteSuccess,
   }) =>
@@ -33,7 +33,7 @@ mixin _$SearchKeywordsState {
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
     TResult? Function(String? message)? empty,
-    TResult? Function(List<SearchKeywordEntity> data, String? message)?
+    TResult? Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult? Function(String? message)? deleteSuccess,
   }) =>
@@ -44,7 +44,7 @@ mixin _$SearchKeywordsState {
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
     TResult Function(String? message)? empty,
-    TResult Function(List<SearchKeywordEntity> data, String? message)?
+    TResult Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult Function(String? message)? deleteSuccess,
     required TResult orElse(),
@@ -143,7 +143,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
     required TResult Function(String? message) empty,
-    required TResult Function(List<SearchKeywordEntity> data, String? message)
+    required TResult Function(List<SearchKeywordModel> data, String? message)
         fetchSuccess,
     required TResult Function(String? message) deleteSuccess,
   }) {
@@ -157,7 +157,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
     TResult? Function(String? message)? empty,
-    TResult? Function(List<SearchKeywordEntity> data, String? message)?
+    TResult? Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult? Function(String? message)? deleteSuccess,
   }) {
@@ -171,7 +171,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
     TResult Function(String? message)? empty,
-    TResult Function(List<SearchKeywordEntity> data, String? message)?
+    TResult Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult Function(String? message)? deleteSuccess,
     required TResult orElse(),
@@ -272,7 +272,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
     required TResult Function(String? message) empty,
-    required TResult Function(List<SearchKeywordEntity> data, String? message)
+    required TResult Function(List<SearchKeywordModel> data, String? message)
         fetchSuccess,
     required TResult Function(String? message) deleteSuccess,
   }) {
@@ -286,7 +286,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
     TResult? Function(String? message)? empty,
-    TResult? Function(List<SearchKeywordEntity> data, String? message)?
+    TResult? Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult? Function(String? message)? deleteSuccess,
   }) {
@@ -300,7 +300,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
     TResult Function(String? message)? empty,
-    TResult Function(List<SearchKeywordEntity> data, String? message)?
+    TResult Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult Function(String? message)? deleteSuccess,
     required TResult orElse(),
@@ -442,7 +442,7 @@ class _$FailureImpl implements _Failure {
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
     required TResult Function(String? message) empty,
-    required TResult Function(List<SearchKeywordEntity> data, String? message)
+    required TResult Function(List<SearchKeywordModel> data, String? message)
         fetchSuccess,
     required TResult Function(String? message) deleteSuccess,
   }) {
@@ -456,7 +456,7 @@ class _$FailureImpl implements _Failure {
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
     TResult? Function(String? message)? empty,
-    TResult? Function(List<SearchKeywordEntity> data, String? message)?
+    TResult? Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult? Function(String? message)? deleteSuccess,
   }) {
@@ -470,7 +470,7 @@ class _$FailureImpl implements _Failure {
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
     TResult Function(String? message)? empty,
-    TResult Function(List<SearchKeywordEntity> data, String? message)?
+    TResult Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult Function(String? message)? deleteSuccess,
     required TResult orElse(),
@@ -603,7 +603,7 @@ class _$EmptyImpl implements _Empty {
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
     required TResult Function(String? message) empty,
-    required TResult Function(List<SearchKeywordEntity> data, String? message)
+    required TResult Function(List<SearchKeywordModel> data, String? message)
         fetchSuccess,
     required TResult Function(String? message) deleteSuccess,
   }) {
@@ -617,7 +617,7 @@ class _$EmptyImpl implements _Empty {
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
     TResult? Function(String? message)? empty,
-    TResult? Function(List<SearchKeywordEntity> data, String? message)?
+    TResult? Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult? Function(String? message)? deleteSuccess,
   }) {
@@ -631,7 +631,7 @@ class _$EmptyImpl implements _Empty {
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
     TResult Function(String? message)? empty,
-    TResult Function(List<SearchKeywordEntity> data, String? message)?
+    TResult Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult Function(String? message)? deleteSuccess,
     required TResult orElse(),
@@ -701,7 +701,7 @@ abstract class _$$FetchSuccessImplCopyWith<$Res> {
           _$FetchSuccessImpl value, $Res Function(_$FetchSuccessImpl) then) =
       __$$FetchSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<SearchKeywordEntity> data, String? message});
+  $Res call({List<SearchKeywordModel> data, String? message});
 }
 
 /// @nodoc
@@ -722,7 +722,7 @@ class __$$FetchSuccessImplCopyWithImpl<$Res>
       null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<SearchKeywordEntity>,
+              as List<SearchKeywordModel>,
       freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -734,12 +734,12 @@ class __$$FetchSuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FetchSuccessImpl implements _FetchSuccess {
-  const _$FetchSuccessImpl(final List<SearchKeywordEntity> data, this.message)
+  const _$FetchSuccessImpl(final List<SearchKeywordModel> data, this.message)
       : _data = data;
 
-  final List<SearchKeywordEntity> _data;
+  final List<SearchKeywordModel> _data;
   @override
-  List<SearchKeywordEntity> get data {
+  List<SearchKeywordModel> get data {
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
@@ -779,7 +779,7 @@ class _$FetchSuccessImpl implements _FetchSuccess {
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
     required TResult Function(String? message) empty,
-    required TResult Function(List<SearchKeywordEntity> data, String? message)
+    required TResult Function(List<SearchKeywordModel> data, String? message)
         fetchSuccess,
     required TResult Function(String? message) deleteSuccess,
   }) {
@@ -793,7 +793,7 @@ class _$FetchSuccessImpl implements _FetchSuccess {
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
     TResult? Function(String? message)? empty,
-    TResult? Function(List<SearchKeywordEntity> data, String? message)?
+    TResult? Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult? Function(String? message)? deleteSuccess,
   }) {
@@ -807,7 +807,7 @@ class _$FetchSuccessImpl implements _FetchSuccess {
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
     TResult Function(String? message)? empty,
-    TResult Function(List<SearchKeywordEntity> data, String? message)?
+    TResult Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult Function(String? message)? deleteSuccess,
     required TResult orElse(),
@@ -864,10 +864,10 @@ class _$FetchSuccessImpl implements _FetchSuccess {
 
 abstract class _FetchSuccess implements SearchKeywordsState {
   const factory _FetchSuccess(
-          final List<SearchKeywordEntity> data, final String? message) =
+          final List<SearchKeywordModel> data, final String? message) =
       _$FetchSuccessImpl;
 
-  List<SearchKeywordEntity> get data;
+  List<SearchKeywordModel> get data;
   String? get message;
   @JsonKey(ignore: true)
   _$$FetchSuccessImplCopyWith<_$FetchSuccessImpl> get copyWith =>
@@ -942,7 +942,7 @@ class _$DeleteSuccessImpl implements _DeleteSuccess {
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
     required TResult Function(String? message) empty,
-    required TResult Function(List<SearchKeywordEntity> data, String? message)
+    required TResult Function(List<SearchKeywordModel> data, String? message)
         fetchSuccess,
     required TResult Function(String? message) deleteSuccess,
   }) {
@@ -956,7 +956,7 @@ class _$DeleteSuccessImpl implements _DeleteSuccess {
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
     TResult? Function(String? message)? empty,
-    TResult? Function(List<SearchKeywordEntity> data, String? message)?
+    TResult? Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult? Function(String? message)? deleteSuccess,
   }) {
@@ -970,7 +970,7 @@ class _$DeleteSuccessImpl implements _DeleteSuccess {
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
     TResult Function(String? message)? empty,
-    TResult Function(List<SearchKeywordEntity> data, String? message)?
+    TResult Function(List<SearchKeywordModel> data, String? message)?
         fetchSuccess,
     TResult Function(String? message)? deleteSuccess,
     required TResult orElse(),

@@ -1,41 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/data/sources/remote/app_url.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../../core/themes/app_colors.dart';
-import 'data/level_bar_item.dart';
 
 class LevelButton extends StatelessWidget {
   const LevelButton({
     super.key,
     required this.isPressed,
     required this.onPressed,
-    required this.type,
+    required this.value,
     required this.label,
   });
   final bool isPressed;
   final void Function()? onPressed;
   final String label;
-  final Level type;
+  final String value;
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
       style: TextButton.styleFrom(
-        backgroundColor: isPressed
-            ? switch (type) {
-                Level.all => AppColors.primaryColor,
-                Level.begginer => Colors.green,
-                Level.intermediate => Colors.orange,
-                Level.advanced => Colors.red,
-              }
-            : Colors.transparent,
+        backgroundColor:
+            isPressed ? getColorFromValue(value) : Colors.transparent,
         side: BorderSide(
-          color: switch (type) {
-            Level.all => AppColors.primaryColor,
-            Level.begginer => Colors.green,
-            Level.intermediate => Colors.orange,
-            Level.advanced => Colors.red,
-          },
+          color: getColorFromValue(value),
           width: 3,
         ),
         padding: EdgeInsets.zero,
@@ -61,19 +50,22 @@ class LevelButton extends StatelessWidget {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-                color: isPressed
-                    ? Colors.white
-                    : switch (type) {
-                        Level.all => AppColors.primaryColor,
-                        Level.begginer => Colors.green,
-                        Level.intermediate => Colors.orange,
-                        Level.advanced => Colors.red,
-                      },
+                color: isPressed ? Colors.white : getColorFromValue(value),
               ),
             )
           ],
         ),
       ),
     );
+  }
+
+  Color getColorFromValue(String value) {
+    return switch (value) {
+      AppUrl.all => AppColors.primaryColor,
+      AppUrl.beginner => Colors.green,
+      AppUrl.intermediate => Colors.orange,
+      AppUrl.advanced => Colors.red,
+      String() => Colors.grey,
+    };
   }
 }

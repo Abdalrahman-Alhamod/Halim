@@ -9,6 +9,8 @@ import 'package:halim/core/utils/context_extensions.dart';
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
+import '../../../../shared/model/course_card_model.dart';
+import '../../../../shared/model/subcategory_model.dart';
 import '../widgets/card_course.dart';
 
 void showRemoveBookmarkBottomSheet(
@@ -50,13 +52,19 @@ void showRemoveBookmarkBottomSheet(
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: CardCourse(
-                    category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
-                    evaluation: 4.8,
-                    followers: 8.289,
-                    name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
-                    price: 48,
-                    imageUrl: AppImages.testCourseCover,
-                    isBookmarked: true,
+                    courseCardModel: CourseCardModel(
+                      id: 0,
+                      title: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                      image: AppImages.testCourseCover,
+                      price: 48,
+                      subcategory: SubcategoryModel(
+                        id: 0,
+                        name: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                      ),
+                      enrollmentsCount: 546,
+                      reviewsAvg: 4.8,
+                      isSaved: true,
+                    ),
                     isEnabled: false,
                   ),
                 ),

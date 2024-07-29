@@ -1,8 +1,7 @@
-import '../../domain/entities/search_keyword_entity.dart';
-
-class SearchKeywordModel extends SearchKeywordEntity {
-  SearchKeywordModel({super.id, super.word});
-
+class SearchKeywordModel {
+  final int? id;
+  final String? word;
+  SearchKeywordModel({this.id, this.word});
   @override
   String toString() => 'SearchKeyword(id: $id, word: $word)';
 

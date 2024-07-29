@@ -77,13 +77,17 @@ class ChooseYourSpecialtyWithCoursesState
                       ),
                     ),
                     onChanged: (value) {
-                      setState(() {
-                        filteredOptions = options
-                            .where((option) => option
-                                .toLowerCase()
-                                .contains(value.toLowerCase()))
-                            .toList();
-                      });
+                      setState(
+                        () {
+                          filteredOptions = options
+                              .where(
+                                (option) => option.toLowerCase().contains(
+                                      value.toLowerCase(),
+                                    ),
+                              )
+                              .toList();
+                        },
+                      );
                     },
                   ),
                 ],

@@ -504,10 +504,14 @@ abstract class LocaleKeys {
   static const Search_SearchBy_sort = 'Search.SearchBy.sort';
   static const Search_SearchBy_mostPopular = 'Search.SearchBy.mostPopular';
   static const Search_SearchBy_bestSelling = 'Search.SearchBy.bestSelling';
-  static const Search_SearchBy_newest = 'Search.SearchBy.newest';
   static const Search_SearchBy_oldest = 'Search.SearchBy.oldest';
-  static const Search_SearchBy_rating = 'Search.SearchBy.rating';
-  static const Search_SearchBy_price = 'Search.SearchBy.price';
+  static const Search_SearchBy_mostRelevent = 'Search.SearchBy.mostRelevent';
+  static const Search_SearchBy_topRated = 'Search.SearchBy.topRated';
+  static const Search_SearchBy_latest = 'Search.SearchBy.latest';
+  static const Search_SearchBy_priceAscending =
+      'Search.SearchBy.priceAscending';
+  static const Search_SearchBy_priceDescending =
+      'Search.SearchBy.priceDescending';
   static const Search_SearchBy = 'Search.SearchBy';
   static const Search = 'Search';
   static const MyCourses_ongoing = 'MyCourses.ongoing';

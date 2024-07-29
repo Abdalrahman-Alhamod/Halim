@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../home/presentation/views/widgets/card_course.dart';
+import '../../../../../../shared/model/course_card_model.dart';
+import '../../../../../../shared/model/subcategory_model.dart';
 
 class MentorCoursesSection extends StatelessWidget {
   const MentorCoursesSection({super.key});
@@ -18,12 +20,19 @@ class MentorCoursesSection extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: CardCourse(
-            category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
-            evaluation: 4.8,
-            followers: 8.289,
-            name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
-            price: 48,
-            imageUrl: AppImages.testCourseCover,
+            courseCardModel: CourseCardModel(
+              id: 0,
+              title: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+              image: AppImages.testCourseCover,
+              price: 48,
+              subcategory: SubcategoryModel(
+                id: 0,
+                name: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+              ),
+              enrollmentsCount: 546,
+              reviewsAvg: 4.8,
+              isSaved: false,
+            ),
           ),
         );
       },

@@ -9,7 +9,7 @@ class RecentSearchLoadingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShimmerBase(
       child: Container(
-        height: 50,
+        height: 48,
         decoration: BoxDecoration(
           color: AppColors.primaryColor,
           borderRadius: BorderRadius.circular(

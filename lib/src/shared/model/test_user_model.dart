@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/shared/entity/test_user_entity.dart';
 
 @immutable
-class TestUserModel extends TestUserEntity {
-  TestUserModel({
-    super.id,
-    super.email,
-    super.firstName,
-    super.lastName,
-    super.avatar,
+class TestUserModel {
+  final int? id;
+  final String? email;
+  final String? firstName;
+  final String? lastName;
+  final String? avatar;
+  const TestUserModel({
+    this.id,
+    this.email,
+    this.firstName,
+    this.lastName,
+    this.avatar,
   });
 
   @override

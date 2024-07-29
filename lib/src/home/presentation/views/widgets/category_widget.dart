@@ -3,53 +3,46 @@ import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
-class CategoryWidget extends StatefulWidget {
+class CategoryWidget extends StatelessWidget {
+  const CategoryWidget({
+    super.key,
+    required this.category,
+    required this.isSelected,
+    required this.onTap,
+  });
   final String category;
-
-  const CategoryWidget(this.category, {super.key});
-
-  @override
-  CategoryWidgetState createState() => CategoryWidgetState();
-}
-
-class CategoryWidgetState extends State<CategoryWidget> {
-  bool isSelected = false;
-
+  final bool isSelected;
+  final void Function() onTap;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(20),
-      onTap: () {
-        setState(() {
-          isSelected = !isSelected;
-        });
-      },
+    return GestureDetector(
+      onTap: onTap,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 8.0),
-            padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
+            padding: const EdgeInsets.symmetric(
+              vertical: 5.0,
+              horizontal: 16,
+            ),
             decoration: BoxDecoration(
               color: isSelected
                   ? AppColors.primaryColor
                   : !context.isDarkMode
                       ? Colors.white
-                      : AppColors.darkFlatButtonColor,
+                      : AppColors.loginWithButtonDarkColor,
               borderRadius: BorderRadius.circular(20.0),
               border: Border.all(
-                color: isSelected
-                    ? AppColors.primaryColor
-                    : Colors.blue.withOpacity(0.9),
+                color: AppColors.primaryColor,
                 width: 2,
               ),
             ),
             child: Text(
-              widget.category,
+              category,
               style: TextStyle(
-                color: isSelected ? Colors.white : Colors.blue.withOpacity(0.9),
+                color: isSelected ? Colors.white : AppColors.primaryColor,
                 fontSize: 18,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),

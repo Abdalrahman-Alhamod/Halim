@@ -7,9 +7,10 @@ import '../../../../core/utils/context_extensions.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
+import '../../../shared/model/course_card_model.dart';
+import '../../../shared/model/subcategory_model.dart';
 import 'widgets/choose_your_specialty_with_courses.dart';
 import 'widgets/card_course.dart';
-import 'widgets/category_widget.dart';
 
 class PopularCoursesView extends StatefulWidget {
   const PopularCoursesView({super.key});
@@ -66,13 +67,14 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
                   scrollDirection: Axis.horizontal,
                   physics: const ScrollPhysics(),
                   children: const [
-                    CategoryWidget('🔥 All'),
-                    CategoryWidget('💡 AI'),
-                    CategoryWidget('🖋 3D Design'),
-                    CategoryWidget('💊 Medicine '),
-                    CategoryWidget('🧮 Mathematical analysis'),
-                    CategoryWidget('📊 BA'),
-                    CategoryWidget('💰 Business'),
+                    // TODO fix subcategories list
+                    // CategoryWidget('🔥 All'),
+                    // CategoryWidget('💡 AI'),
+                    // CategoryWidget('🖋 3D Design'),
+                    // CategoryWidget('💊 Medicine '),
+                    // CategoryWidget('🧮 Mathematical analysis'),
+                    // CategoryWidget('📊 BA'),
+                    // CategoryWidget('💰 Business'),
                   ],
                 ),
               ),
@@ -86,12 +88,19 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return CardCourse(
-                    category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
-                    evaluation: 4.8,
-                    followers: 8.289,
-                    name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
-                    price: 48,
-                    imageUrl: AppImages.testCourseCover,
+                    courseCardModel: CourseCardModel(
+                      id: 0,
+                      title: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                      image: AppImages.testCourseCover,
+                      price: 48,
+                      subcategory: SubcategoryModel(
+                        id: 0,
+                        name: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                      ),
+                      enrollmentsCount: 546,
+                      reviewsAvg: 4.8,
+                      isSaved: false,
+                    ),
                   );
                 },
                 separatorBuilder: (context, index) {

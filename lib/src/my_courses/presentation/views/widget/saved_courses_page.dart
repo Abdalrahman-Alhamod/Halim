@@ -5,6 +5,8 @@ import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/assets/app_images.dart';
 import '../../../../home/presentation/views/widgets/card_course.dart';
+import '../../../../shared/model/course_card_model.dart';
+import '../../../../shared/model/subcategory_model.dart';
 
 class SavedCoursesPage extends StatelessWidget {
   const SavedCoursesPage({super.key});
@@ -18,13 +20,19 @@ class SavedCoursesPage extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: CardCourse(
-              category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
-              evaluation: 4.8,
-              followers: 8.289,
-              name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
-              price: 48,
-              imageUrl: AppImages.testCourseCover,
-              isBookmarked: true,
+              courseCardModel: CourseCardModel(
+                id: 0,
+                title: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                image: AppImages.testCourseCover,
+                price: 48,
+                subcategory: SubcategoryModel(
+                  id: 0,
+                  name: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                ),
+                enrollmentsCount: 546,
+                reviewsAvg: 4.8,
+                isSaved: true,
+              ),
             ),
           );
         },

@@ -1,12 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/data/sources/remote/app_url.dart';
 import 'data/sort_by_list_item.dart';
 
 import '../../../../../../../core/translations/locale_keys.g.dart';
 
 class SortByList extends StatefulWidget {
-  const SortByList({super.key, this.startIndex = 0, required this.onChanged});
-  final int startIndex;
+  const SortByList(
+      {super.key, required this.initialValue, required this.onChanged});
+  final String initialValue;
   final void Function(String value) onChanged;
   @override
   State<SortByList> createState() => _SortByListState();
@@ -19,21 +21,39 @@ class _SortByListState extends State<SortByList> {
   void initState() {
     items = [
       SortByListItem(
-          label: LocaleKeys.Search_SearchBy_mostPopular.tr(),
-          value: 'most popular'),
+        label: LocaleKeys.Search_SearchBy_mostRelevent.tr(),
+        value: AppUrl.kMostRelevent,
+      ),
       SortByListItem(
-          label: LocaleKeys.Search_SearchBy_bestSelling.tr(),
-          value: 'best selling'),
+        label: LocaleKeys.Search_SearchBy_mostPopular.tr(),
+        value: AppUrl.kMostPopular,
+      ),
       SortByListItem(
-          label: LocaleKeys.Search_SearchBy_newest.tr(), value: 'newst'),
+        label: LocaleKeys.Search_SearchBy_topRated.tr(),
+        value: AppUrl.kTopRated,
+      ),
       SortByListItem(
-          label: LocaleKeys.Search_SearchBy_oldest.tr(), value: 'oldest'),
+        label: LocaleKeys.Search_SearchBy_bestSelling.tr(),
+        value: AppUrl.kBestSelling,
+      ),
       SortByListItem(
-          label: LocaleKeys.Search_SearchBy_rating.tr(), value: 'rating'),
+        label: LocaleKeys.Search_SearchBy_latest.tr(),
+        value: AppUrl.kLatest,
+      ),
       SortByListItem(
-          label: LocaleKeys.Search_SearchBy_price.tr(), value: 'price'),
+        label: LocaleKeys.Search_SearchBy_oldest.tr(),
+        value: AppUrl.kOldest,
+      ),
+      SortByListItem(
+        label: LocaleKeys.Search_SearchBy_priceAscending.tr(),
+        value: AppUrl.kLowPrice,
+      ),
+      SortByListItem(
+        label: LocaleKeys.Search_SearchBy_priceDescending.tr(),
+        value: AppUrl.kHighPrice,
+      ),
     ];
-    _value = items[0].value;
+    _value = widget.initialValue;
     super.initState();
   }
 
@@ -58,6 +78,7 @@ class _SortByListState extends State<SortByList> {
             onTap: () {
               setState(() {
                 _value = items[index].value;
+                widget.onChanged.call(_value);
               });
             },
             trailing: Radio<String>(
@@ -67,6 +88,7 @@ class _SortByListState extends State<SortByList> {
                 setState(
                   () {
                     _value = value!;
+                    widget.onChanged.call(value);
                   },
                 );
               },
