@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:halim/src/search/data/data_sources/search_local_data_source.dart';
 import 'package:halim/src/search/data/data_sources/search_remote_data_source.dart';
 import 'package:halim/src/search/data/models/search_filter_model.dart';
@@ -9,7 +11,6 @@ import '../../../../core/domain/error_handler/network_exceptions.dart';
 
 class SearchRepoImpl extends SearchRepo {
   final SearchRemoteDateSource _searchRemoteDateSource;
-  // ignore: unused_field
   final SearchLocalDataSource _searchLocalDataSource;
 
   SearchRepoImpl(
