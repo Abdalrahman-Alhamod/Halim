@@ -19,7 +19,6 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
     required TResult Function() fetchSubcategoriesLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchSubcategoriesFailure,
@@ -30,7 +29,6 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
     TResult? Function()? fetchSubcategoriesLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -41,7 +39,6 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
     TResult Function()? fetchSubcategoriesLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -53,7 +50,6 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
     required TResult Function(_FetchSubcategoriesLoading value)
         fetchSubcategoriesLoading,
     required TResult Function(_FetchSubcategoriesFailure value)
@@ -65,7 +61,6 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
     TResult? Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult? Function(_FetchSubcategoriesFailure value)?
@@ -77,7 +72,6 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
     TResult Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult Function(_FetchSubcategoriesFailure value)?
@@ -145,7 +139,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
     required TResult Function() fetchSubcategoriesLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchSubcategoriesFailure,
@@ -159,7 +152,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
     TResult? Function()? fetchSubcategoriesLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -173,7 +165,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
     TResult Function()? fetchSubcategoriesLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -191,7 +182,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
     required TResult Function(_FetchSubcategoriesLoading value)
         fetchSubcategoriesLoading,
     required TResult Function(_FetchSubcategoriesFailure value)
@@ -206,7 +196,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
     TResult? Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult? Function(_FetchSubcategoriesFailure value)?
@@ -221,7 +210,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
     TResult Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult Function(_FetchSubcategoriesFailure value)?
@@ -239,140 +227,6 @@ class _$InitialImpl implements _Initial {
 
 abstract class _Initial implements HomeState {
   const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$SaveImplCopyWith<$Res> {
-  factory _$$SaveImplCopyWith(
-          _$SaveImpl value, $Res Function(_$SaveImpl) then) =
-      __$$SaveImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SaveImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$SaveImpl>
-    implements _$$SaveImplCopyWith<$Res> {
-  __$$SaveImplCopyWithImpl(_$SaveImpl _value, $Res Function(_$SaveImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SaveImpl implements _Save {
-  const _$SaveImpl();
-
-  @override
-  String toString() {
-    return 'HomeState.save()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SaveImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() fetchSubcategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchSubcategoriesFailure,
-    required TResult Function(List<SubcategoryModel> data, String? message)
-        fetchSubcategoriesSuccess,
-  }) {
-    return save();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? fetchSubcategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult? Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-  }) {
-    return save?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? fetchSubcategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (save != null) {
-      return save();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_FetchSubcategoriesLoading value)
-        fetchSubcategoriesLoading,
-    required TResult Function(_FetchSubcategoriesFailure value)
-        fetchSubcategoriesFailure,
-    required TResult Function(_FetchSubcategoriesSuccess value)
-        fetchSubcategoriesSuccess,
-  }) {
-    return save(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult? Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult? Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-  }) {
-    return save?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (save != null) {
-      return save(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Save implements HomeState {
-  const factory _Save() = _$SaveImpl;
 }
 
 /// @nodoc
@@ -417,7 +271,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
     required TResult Function() fetchSubcategoriesLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchSubcategoriesFailure,
@@ -431,7 +284,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
     TResult? Function()? fetchSubcategoriesLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -445,7 +297,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
     TResult Function()? fetchSubcategoriesLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -463,7 +314,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
     required TResult Function(_FetchSubcategoriesLoading value)
         fetchSubcategoriesLoading,
     required TResult Function(_FetchSubcategoriesFailure value)
@@ -478,7 +328,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
     TResult? Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult? Function(_FetchSubcategoriesFailure value)?
@@ -493,7 +342,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
     TResult Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult Function(_FetchSubcategoriesFailure value)?
@@ -596,7 +444,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
     required TResult Function() fetchSubcategoriesLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchSubcategoriesFailure,
@@ -610,7 +457,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
     TResult? Function()? fetchSubcategoriesLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -624,7 +470,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
     TResult Function()? fetchSubcategoriesLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -642,7 +487,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
     required TResult Function(_FetchSubcategoriesLoading value)
         fetchSubcategoriesLoading,
     required TResult Function(_FetchSubcategoriesFailure value)
@@ -657,7 +501,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
     TResult? Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult? Function(_FetchSubcategoriesFailure value)?
@@ -672,7 +515,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
     TResult Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult Function(_FetchSubcategoriesFailure value)?
@@ -784,7 +626,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
     required TResult Function() fetchSubcategoriesLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchSubcategoriesFailure,
@@ -798,7 +639,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
     TResult? Function()? fetchSubcategoriesLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -812,7 +652,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
     TResult Function()? fetchSubcategoriesLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchSubcategoriesFailure,
@@ -830,7 +669,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
     required TResult Function(_FetchSubcategoriesLoading value)
         fetchSubcategoriesLoading,
     required TResult Function(_FetchSubcategoriesFailure value)
@@ -845,7 +683,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
     TResult? Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult? Function(_FetchSubcategoriesFailure value)?
@@ -860,7 +697,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
     TResult Function(_FetchSubcategoriesLoading value)?
         fetchSubcategoriesLoading,
     TResult Function(_FetchSubcategoriesFailure value)?

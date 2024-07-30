@@ -106,11 +106,17 @@ dependencies:
   avatar_glow: ^3.0.1
   # For developping
   json_annotation: ^4.9.0
+  # For api link
   http: ^1.2.2
+  # For freezed dart files
   freezed_annotation: ^2.4.4
+  # For cubit files
   bloc: ^8.1.4
+  # For pagination
   infinite_scroll_pagination: ^4.0.0
+  # For animation
   animate_do: ^3.3.4
+  # For toast(notification) widget
   flutter_styled_toast: ^2.2.1
   
   

@@ -19,13 +19,6 @@ mixin _$SearchState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -46,13 +39,6 @@ mixin _$SearchState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -72,13 +58,6 @@ mixin _$SearchState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -99,12 +78,6 @@ mixin _$SearchState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -126,12 +99,6 @@ mixin _$SearchState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -150,12 +117,6 @@ mixin _$SearchState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -231,13 +192,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -261,13 +215,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -290,13 +237,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -323,12 +263,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -353,12 +287,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -380,12 +308,6 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -410,1497 +332,6 @@ class _$InitialImpl implements _Initial {
 
 abstract class _Initial implements SearchState {
   const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$SaveImplCopyWith<$Res> {
-  factory _$$SaveImplCopyWith(
-          _$SaveImpl value, $Res Function(_$SaveImpl) then) =
-      __$$SaveImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SaveImplCopyWithImpl<$Res>
-    extends _$SearchStateCopyWithImpl<$Res, _$SaveImpl>
-    implements _$$SaveImplCopyWith<$Res> {
-  __$$SaveImplCopyWithImpl(_$SaveImpl _value, $Res Function(_$SaveImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SaveImpl implements _Save {
-  const _$SaveImpl();
-
-  @override
-  String toString() {
-    return 'SearchState.save()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SaveImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
-    required TResult Function() changeSortBy,
-    required TResult Function() loadingPagination,
-    required TResult Function(NetworkExceptions? networkException)
-        failurePagination,
-    required TResult Function(String? message) successPagination,
-    required TResult Function() fetchSubcategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchSubcategoriesFailure,
-    required TResult Function(List<SubcategoryModel> data, String? message)
-        fetchSubcategoriesSuccess,
-    required TResult Function() fetchCategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchCategoriesFailure,
-    required TResult Function(List<CategoryModel> data, String? message)
-        fetchCategoriesSuccess,
-  }) {
-    return save();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? loadingPagination,
-    TResult? Function(NetworkExceptions? networkException)? failurePagination,
-    TResult? Function(String? message)? successPagination,
-    TResult? Function()? fetchSubcategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult? Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult? Function()? fetchCategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult? Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-  }) {
-    return save?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
-    TResult Function()? changeSortBy,
-    TResult Function()? loadingPagination,
-    TResult Function(NetworkExceptions? networkException)? failurePagination,
-    TResult Function(String? message)? successPagination,
-    TResult Function()? fetchSubcategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult Function()? fetchCategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (save != null) {
-      return save();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
-    required TResult Function(_ChangeSortBy value) changeSortBy,
-    required TResult Function(_LoadingPagination value) loadingPagination,
-    required TResult Function(_FailurePagination value) failurePagination,
-    required TResult Function(_SuccessPagination value) successPagination,
-    required TResult Function(_FetchSubcategoriesLoading value)
-        fetchSubcategoriesLoading,
-    required TResult Function(_FetchSubcategoriesFailure value)
-        fetchSubcategoriesFailure,
-    required TResult Function(_FetchSubcategoriesSuccess value)
-        fetchSubcategoriesSuccess,
-    required TResult Function(_FetchCategoriesLoading value)
-        fetchCategoriesLoading,
-    required TResult Function(_FetchCategoriesFailure value)
-        fetchCategoriesFailure,
-    required TResult Function(_FetchCategoriesSuccess value)
-        fetchCategoriesSuccess,
-  }) {
-    return save(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult? Function(_ChangeSortBy value)? changeSortBy,
-    TResult? Function(_LoadingPagination value)? loadingPagination,
-    TResult? Function(_FailurePagination value)? failurePagination,
-    TResult? Function(_SuccessPagination value)? successPagination,
-    TResult? Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult? Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult? Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult? Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult? Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult? Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-  }) {
-    return save?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult Function(_ChangeSortBy value)? changeSortBy,
-    TResult Function(_LoadingPagination value)? loadingPagination,
-    TResult Function(_FailurePagination value)? failurePagination,
-    TResult Function(_SuccessPagination value)? successPagination,
-    TResult Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (save != null) {
-      return save(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Save implements SearchState {
-  const factory _Save() = _$SaveImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$SearchStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingImpl implements _Loading {
-  const _$LoadingImpl();
-
-  @override
-  String toString() {
-    return 'SearchState.loading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
-    required TResult Function() changeSortBy,
-    required TResult Function() loadingPagination,
-    required TResult Function(NetworkExceptions? networkException)
-        failurePagination,
-    required TResult Function(String? message) successPagination,
-    required TResult Function() fetchSubcategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchSubcategoriesFailure,
-    required TResult Function(List<SubcategoryModel> data, String? message)
-        fetchSubcategoriesSuccess,
-    required TResult Function() fetchCategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchCategoriesFailure,
-    required TResult Function(List<CategoryModel> data, String? message)
-        fetchCategoriesSuccess,
-  }) {
-    return loading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? loadingPagination,
-    TResult? Function(NetworkExceptions? networkException)? failurePagination,
-    TResult? Function(String? message)? successPagination,
-    TResult? Function()? fetchSubcategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult? Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult? Function()? fetchCategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult? Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-  }) {
-    return loading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
-    TResult Function()? changeSortBy,
-    TResult Function()? loadingPagination,
-    TResult Function(NetworkExceptions? networkException)? failurePagination,
-    TResult Function(String? message)? successPagination,
-    TResult Function()? fetchSubcategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult Function()? fetchCategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
-    required TResult Function(_ChangeSortBy value) changeSortBy,
-    required TResult Function(_LoadingPagination value) loadingPagination,
-    required TResult Function(_FailurePagination value) failurePagination,
-    required TResult Function(_SuccessPagination value) successPagination,
-    required TResult Function(_FetchSubcategoriesLoading value)
-        fetchSubcategoriesLoading,
-    required TResult Function(_FetchSubcategoriesFailure value)
-        fetchSubcategoriesFailure,
-    required TResult Function(_FetchSubcategoriesSuccess value)
-        fetchSubcategoriesSuccess,
-    required TResult Function(_FetchCategoriesLoading value)
-        fetchCategoriesLoading,
-    required TResult Function(_FetchCategoriesFailure value)
-        fetchCategoriesFailure,
-    required TResult Function(_FetchCategoriesSuccess value)
-        fetchCategoriesSuccess,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult? Function(_ChangeSortBy value)? changeSortBy,
-    TResult? Function(_LoadingPagination value)? loadingPagination,
-    TResult? Function(_FailurePagination value)? failurePagination,
-    TResult? Function(_SuccessPagination value)? successPagination,
-    TResult? Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult? Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult? Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult? Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult? Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult? Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult Function(_ChangeSortBy value)? changeSortBy,
-    TResult Function(_LoadingPagination value)? loadingPagination,
-    TResult Function(_FailurePagination value)? failurePagination,
-    TResult Function(_SuccessPagination value)? successPagination,
-    TResult Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Loading implements SearchState {
-  const factory _Loading() = _$LoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$FailureImplCopyWith<$Res> {
-  factory _$$FailureImplCopyWith(
-          _$FailureImpl value, $Res Function(_$FailureImpl) then) =
-      __$$FailureImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({NetworkExceptions? networkException});
-
-  $NetworkExceptionsCopyWith<$Res>? get networkException;
-}
-
-/// @nodoc
-class __$$FailureImplCopyWithImpl<$Res>
-    extends _$SearchStateCopyWithImpl<$Res, _$FailureImpl>
-    implements _$$FailureImplCopyWith<$Res> {
-  __$$FailureImplCopyWithImpl(
-      _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? networkException = freezed,
-  }) {
-    return _then(_$FailureImpl(
-      freezed == networkException
-          ? _value.networkException
-          : networkException // ignore: cast_nullable_to_non_nullable
-              as NetworkExceptions?,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $NetworkExceptionsCopyWith<$Res>? get networkException {
-    if (_value.networkException == null) {
-      return null;
-    }
-
-    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
-      return _then(_value.copyWith(networkException: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$FailureImpl implements _Failure {
-  const _$FailureImpl(this.networkException);
-
-  @override
-  final NetworkExceptions? networkException;
-
-  @override
-  String toString() {
-    return 'SearchState.failure(networkException: $networkException)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FailureImpl &&
-            (identical(other.networkException, networkException) ||
-                other.networkException == networkException));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, networkException);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
-      __$$FailureImplCopyWithImpl<_$FailureImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
-    required TResult Function() changeSortBy,
-    required TResult Function() loadingPagination,
-    required TResult Function(NetworkExceptions? networkException)
-        failurePagination,
-    required TResult Function(String? message) successPagination,
-    required TResult Function() fetchSubcategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchSubcategoriesFailure,
-    required TResult Function(List<SubcategoryModel> data, String? message)
-        fetchSubcategoriesSuccess,
-    required TResult Function() fetchCategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchCategoriesFailure,
-    required TResult Function(List<CategoryModel> data, String? message)
-        fetchCategoriesSuccess,
-  }) {
-    return failure(networkException);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? loadingPagination,
-    TResult? Function(NetworkExceptions? networkException)? failurePagination,
-    TResult? Function(String? message)? successPagination,
-    TResult? Function()? fetchSubcategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult? Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult? Function()? fetchCategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult? Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-  }) {
-    return failure?.call(networkException);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
-    TResult Function()? changeSortBy,
-    TResult Function()? loadingPagination,
-    TResult Function(NetworkExceptions? networkException)? failurePagination,
-    TResult Function(String? message)? successPagination,
-    TResult Function()? fetchSubcategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult Function()? fetchCategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (failure != null) {
-      return failure(networkException);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
-    required TResult Function(_ChangeSortBy value) changeSortBy,
-    required TResult Function(_LoadingPagination value) loadingPagination,
-    required TResult Function(_FailurePagination value) failurePagination,
-    required TResult Function(_SuccessPagination value) successPagination,
-    required TResult Function(_FetchSubcategoriesLoading value)
-        fetchSubcategoriesLoading,
-    required TResult Function(_FetchSubcategoriesFailure value)
-        fetchSubcategoriesFailure,
-    required TResult Function(_FetchSubcategoriesSuccess value)
-        fetchSubcategoriesSuccess,
-    required TResult Function(_FetchCategoriesLoading value)
-        fetchCategoriesLoading,
-    required TResult Function(_FetchCategoriesFailure value)
-        fetchCategoriesFailure,
-    required TResult Function(_FetchCategoriesSuccess value)
-        fetchCategoriesSuccess,
-  }) {
-    return failure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult? Function(_ChangeSortBy value)? changeSortBy,
-    TResult? Function(_LoadingPagination value)? loadingPagination,
-    TResult? Function(_FailurePagination value)? failurePagination,
-    TResult? Function(_SuccessPagination value)? successPagination,
-    TResult? Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult? Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult? Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult? Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult? Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult? Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-  }) {
-    return failure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult Function(_ChangeSortBy value)? changeSortBy,
-    TResult Function(_LoadingPagination value)? loadingPagination,
-    TResult Function(_FailurePagination value)? failurePagination,
-    TResult Function(_SuccessPagination value)? successPagination,
-    TResult Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (failure != null) {
-      return failure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Failure implements SearchState {
-  const factory _Failure(final NetworkExceptions? networkException) =
-      _$FailureImpl;
-
-  NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
-  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$EmptyImplCopyWith<$Res> {
-  factory _$$EmptyImplCopyWith(
-          _$EmptyImpl value, $Res Function(_$EmptyImpl) then) =
-      __$$EmptyImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$EmptyImplCopyWithImpl<$Res>
-    extends _$SearchStateCopyWithImpl<$Res, _$EmptyImpl>
-    implements _$$EmptyImplCopyWith<$Res> {
-  __$$EmptyImplCopyWithImpl(
-      _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$EmptyImpl(
-      freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$EmptyImpl implements _Empty {
-  const _$EmptyImpl(this.message);
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'SearchState.empty(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EmptyImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EmptyImplCopyWith<_$EmptyImpl> get copyWith =>
-      __$$EmptyImplCopyWithImpl<_$EmptyImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
-    required TResult Function() changeSortBy,
-    required TResult Function() loadingPagination,
-    required TResult Function(NetworkExceptions? networkException)
-        failurePagination,
-    required TResult Function(String? message) successPagination,
-    required TResult Function() fetchSubcategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchSubcategoriesFailure,
-    required TResult Function(List<SubcategoryModel> data, String? message)
-        fetchSubcategoriesSuccess,
-    required TResult Function() fetchCategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchCategoriesFailure,
-    required TResult Function(List<CategoryModel> data, String? message)
-        fetchCategoriesSuccess,
-  }) {
-    return empty(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? loadingPagination,
-    TResult? Function(NetworkExceptions? networkException)? failurePagination,
-    TResult? Function(String? message)? successPagination,
-    TResult? Function()? fetchSubcategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult? Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult? Function()? fetchCategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult? Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-  }) {
-    return empty?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
-    TResult Function()? changeSortBy,
-    TResult Function()? loadingPagination,
-    TResult Function(NetworkExceptions? networkException)? failurePagination,
-    TResult Function(String? message)? successPagination,
-    TResult Function()? fetchSubcategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult Function()? fetchCategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (empty != null) {
-      return empty(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
-    required TResult Function(_ChangeSortBy value) changeSortBy,
-    required TResult Function(_LoadingPagination value) loadingPagination,
-    required TResult Function(_FailurePagination value) failurePagination,
-    required TResult Function(_SuccessPagination value) successPagination,
-    required TResult Function(_FetchSubcategoriesLoading value)
-        fetchSubcategoriesLoading,
-    required TResult Function(_FetchSubcategoriesFailure value)
-        fetchSubcategoriesFailure,
-    required TResult Function(_FetchSubcategoriesSuccess value)
-        fetchSubcategoriesSuccess,
-    required TResult Function(_FetchCategoriesLoading value)
-        fetchCategoriesLoading,
-    required TResult Function(_FetchCategoriesFailure value)
-        fetchCategoriesFailure,
-    required TResult Function(_FetchCategoriesSuccess value)
-        fetchCategoriesSuccess,
-  }) {
-    return empty(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult? Function(_ChangeSortBy value)? changeSortBy,
-    TResult? Function(_LoadingPagination value)? loadingPagination,
-    TResult? Function(_FailurePagination value)? failurePagination,
-    TResult? Function(_SuccessPagination value)? successPagination,
-    TResult? Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult? Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult? Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult? Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult? Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult? Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-  }) {
-    return empty?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult Function(_ChangeSortBy value)? changeSortBy,
-    TResult Function(_LoadingPagination value)? loadingPagination,
-    TResult Function(_FailurePagination value)? failurePagination,
-    TResult Function(_SuccessPagination value)? successPagination,
-    TResult Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (empty != null) {
-      return empty(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Empty implements SearchState {
-  const factory _Empty(final String? message) = _$EmptyImpl;
-
-  String? get message;
-  @JsonKey(ignore: true)
-  _$$EmptyImplCopyWith<_$EmptyImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CoursesSuccessImplCopyWith<$Res> {
-  factory _$$CoursesSuccessImplCopyWith(_$CoursesSuccessImpl value,
-          $Res Function(_$CoursesSuccessImpl) then) =
-      __$$CoursesSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<CourseCardModel> courses, String? message});
-}
-
-/// @nodoc
-class __$$CoursesSuccessImplCopyWithImpl<$Res>
-    extends _$SearchStateCopyWithImpl<$Res, _$CoursesSuccessImpl>
-    implements _$$CoursesSuccessImplCopyWith<$Res> {
-  __$$CoursesSuccessImplCopyWithImpl(
-      _$CoursesSuccessImpl _value, $Res Function(_$CoursesSuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? courses = null,
-    Object? message = freezed,
-  }) {
-    return _then(_$CoursesSuccessImpl(
-      null == courses
-          ? _value._courses
-          : courses // ignore: cast_nullable_to_non_nullable
-              as List<CourseCardModel>,
-      freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$CoursesSuccessImpl implements _CoursesSuccess {
-  const _$CoursesSuccessImpl(final List<CourseCardModel> courses, this.message)
-      : _courses = courses;
-
-  final List<CourseCardModel> _courses;
-  @override
-  List<CourseCardModel> get courses {
-    if (_courses is EqualUnmodifiableListView) return _courses;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_courses);
-  }
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'SearchState.coursesSuccess(courses: $courses, message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CoursesSuccessImpl &&
-            const DeepCollectionEquality().equals(other._courses, _courses) &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_courses), message);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CoursesSuccessImplCopyWith<_$CoursesSuccessImpl> get copyWith =>
-      __$$CoursesSuccessImplCopyWithImpl<_$CoursesSuccessImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
-    required TResult Function() changeSortBy,
-    required TResult Function() loadingPagination,
-    required TResult Function(NetworkExceptions? networkException)
-        failurePagination,
-    required TResult Function(String? message) successPagination,
-    required TResult Function() fetchSubcategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchSubcategoriesFailure,
-    required TResult Function(List<SubcategoryModel> data, String? message)
-        fetchSubcategoriesSuccess,
-    required TResult Function() fetchCategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchCategoriesFailure,
-    required TResult Function(List<CategoryModel> data, String? message)
-        fetchCategoriesSuccess,
-  }) {
-    return coursesSuccess(courses, message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? loadingPagination,
-    TResult? Function(NetworkExceptions? networkException)? failurePagination,
-    TResult? Function(String? message)? successPagination,
-    TResult? Function()? fetchSubcategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult? Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult? Function()? fetchCategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult? Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-  }) {
-    return coursesSuccess?.call(courses, message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
-    TResult Function()? changeSortBy,
-    TResult Function()? loadingPagination,
-    TResult Function(NetworkExceptions? networkException)? failurePagination,
-    TResult Function(String? message)? successPagination,
-    TResult Function()? fetchSubcategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult Function()? fetchCategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (coursesSuccess != null) {
-      return coursesSuccess(courses, message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
-    required TResult Function(_ChangeSortBy value) changeSortBy,
-    required TResult Function(_LoadingPagination value) loadingPagination,
-    required TResult Function(_FailurePagination value) failurePagination,
-    required TResult Function(_SuccessPagination value) successPagination,
-    required TResult Function(_FetchSubcategoriesLoading value)
-        fetchSubcategoriesLoading,
-    required TResult Function(_FetchSubcategoriesFailure value)
-        fetchSubcategoriesFailure,
-    required TResult Function(_FetchSubcategoriesSuccess value)
-        fetchSubcategoriesSuccess,
-    required TResult Function(_FetchCategoriesLoading value)
-        fetchCategoriesLoading,
-    required TResult Function(_FetchCategoriesFailure value)
-        fetchCategoriesFailure,
-    required TResult Function(_FetchCategoriesSuccess value)
-        fetchCategoriesSuccess,
-  }) {
-    return coursesSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult? Function(_ChangeSortBy value)? changeSortBy,
-    TResult? Function(_LoadingPagination value)? loadingPagination,
-    TResult? Function(_FailurePagination value)? failurePagination,
-    TResult? Function(_SuccessPagination value)? successPagination,
-    TResult? Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult? Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult? Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult? Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult? Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult? Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-  }) {
-    return coursesSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult Function(_ChangeSortBy value)? changeSortBy,
-    TResult Function(_LoadingPagination value)? loadingPagination,
-    TResult Function(_FailurePagination value)? failurePagination,
-    TResult Function(_SuccessPagination value)? successPagination,
-    TResult Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (coursesSuccess != null) {
-      return coursesSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CoursesSuccess implements SearchState {
-  const factory _CoursesSuccess(
-          final List<CourseCardModel> courses, final String? message) =
-      _$CoursesSuccessImpl;
-
-  List<CourseCardModel> get courses;
-  String? get message;
-  @JsonKey(ignore: true)
-  _$$CoursesSuccessImplCopyWith<_$CoursesSuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$MentorsSuccessImplCopyWith<$Res> {
-  factory _$$MentorsSuccessImplCopyWith(_$MentorsSuccessImpl value,
-          $Res Function(_$MentorsSuccessImpl) then) =
-      __$$MentorsSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({dynamic data, String? message});
-}
-
-/// @nodoc
-class __$$MentorsSuccessImplCopyWithImpl<$Res>
-    extends _$SearchStateCopyWithImpl<$Res, _$MentorsSuccessImpl>
-    implements _$$MentorsSuccessImplCopyWith<$Res> {
-  __$$MentorsSuccessImplCopyWithImpl(
-      _$MentorsSuccessImpl _value, $Res Function(_$MentorsSuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? data = freezed,
-    Object? message = freezed,
-  }) {
-    return _then(_$MentorsSuccessImpl(
-      freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$MentorsSuccessImpl implements _MentorsSuccess {
-  const _$MentorsSuccessImpl(this.data, this.message);
-
-  @override
-  final dynamic data;
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'SearchState.mentorsSuccess(data: $data, message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$MentorsSuccessImpl &&
-            const DeepCollectionEquality().equals(other.data, data) &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(data), message);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$MentorsSuccessImplCopyWith<_$MentorsSuccessImpl> get copyWith =>
-      __$$MentorsSuccessImplCopyWithImpl<_$MentorsSuccessImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
-    required TResult Function() changeSortBy,
-    required TResult Function() loadingPagination,
-    required TResult Function(NetworkExceptions? networkException)
-        failurePagination,
-    required TResult Function(String? message) successPagination,
-    required TResult Function() fetchSubcategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchSubcategoriesFailure,
-    required TResult Function(List<SubcategoryModel> data, String? message)
-        fetchSubcategoriesSuccess,
-    required TResult Function() fetchCategoriesLoading,
-    required TResult Function(NetworkExceptions? networkException)
-        fetchCategoriesFailure,
-    required TResult Function(List<CategoryModel> data, String? message)
-        fetchCategoriesSuccess,
-  }) {
-    return mentorsSuccess(data, message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? loadingPagination,
-    TResult? Function(NetworkExceptions? networkException)? failurePagination,
-    TResult? Function(String? message)? successPagination,
-    TResult? Function()? fetchSubcategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult? Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult? Function()? fetchCategoriesLoading,
-    TResult? Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult? Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-  }) {
-    return mentorsSuccess?.call(data, message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
-    TResult Function()? changeSortBy,
-    TResult Function()? loadingPagination,
-    TResult Function(NetworkExceptions? networkException)? failurePagination,
-    TResult Function(String? message)? successPagination,
-    TResult Function()? fetchSubcategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchSubcategoriesFailure,
-    TResult Function(List<SubcategoryModel> data, String? message)?
-        fetchSubcategoriesSuccess,
-    TResult Function()? fetchCategoriesLoading,
-    TResult Function(NetworkExceptions? networkException)?
-        fetchCategoriesFailure,
-    TResult Function(List<CategoryModel> data, String? message)?
-        fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (mentorsSuccess != null) {
-      return mentorsSuccess(data, message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
-    required TResult Function(_ChangeSortBy value) changeSortBy,
-    required TResult Function(_LoadingPagination value) loadingPagination,
-    required TResult Function(_FailurePagination value) failurePagination,
-    required TResult Function(_SuccessPagination value) successPagination,
-    required TResult Function(_FetchSubcategoriesLoading value)
-        fetchSubcategoriesLoading,
-    required TResult Function(_FetchSubcategoriesFailure value)
-        fetchSubcategoriesFailure,
-    required TResult Function(_FetchSubcategoriesSuccess value)
-        fetchSubcategoriesSuccess,
-    required TResult Function(_FetchCategoriesLoading value)
-        fetchCategoriesLoading,
-    required TResult Function(_FetchCategoriesFailure value)
-        fetchCategoriesFailure,
-    required TResult Function(_FetchCategoriesSuccess value)
-        fetchCategoriesSuccess,
-  }) {
-    return mentorsSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult? Function(_ChangeSortBy value)? changeSortBy,
-    TResult? Function(_LoadingPagination value)? loadingPagination,
-    TResult? Function(_FailurePagination value)? failurePagination,
-    TResult? Function(_SuccessPagination value)? successPagination,
-    TResult? Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult? Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult? Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult? Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult? Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult? Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-  }) {
-    return mentorsSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
-    TResult Function(_ChangeSortBy value)? changeSortBy,
-    TResult Function(_LoadingPagination value)? loadingPagination,
-    TResult Function(_FailurePagination value)? failurePagination,
-    TResult Function(_SuccessPagination value)? successPagination,
-    TResult Function(_FetchSubcategoriesLoading value)?
-        fetchSubcategoriesLoading,
-    TResult Function(_FetchSubcategoriesFailure value)?
-        fetchSubcategoriesFailure,
-    TResult Function(_FetchSubcategoriesSuccess value)?
-        fetchSubcategoriesSuccess,
-    TResult Function(_FetchCategoriesLoading value)? fetchCategoriesLoading,
-    TResult Function(_FetchCategoriesFailure value)? fetchCategoriesFailure,
-    TResult Function(_FetchCategoriesSuccess value)? fetchCategoriesSuccess,
-    required TResult orElse(),
-  }) {
-    if (mentorsSuccess != null) {
-      return mentorsSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _MentorsSuccess implements SearchState {
-  const factory _MentorsSuccess(final dynamic data, final String? message) =
-      _$MentorsSuccessImpl;
-
-  dynamic get data;
-  String? get message;
-  @JsonKey(ignore: true)
-  _$$MentorsSuccessImplCopyWith<_$MentorsSuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1942,13 +373,6 @@ class _$ChangeSortByImpl implements _ChangeSortBy {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -1972,13 +396,6 @@ class _$ChangeSortByImpl implements _ChangeSortBy {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -2001,13 +418,6 @@ class _$ChangeSortByImpl implements _ChangeSortBy {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -2034,12 +444,6 @@ class _$ChangeSortByImpl implements _ChangeSortBy {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -2064,12 +468,6 @@ class _$ChangeSortByImpl implements _ChangeSortBy {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -2091,12 +489,6 @@ class _$ChangeSortByImpl implements _ChangeSortBy {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -2162,13 +554,6 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -2192,13 +577,6 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -2221,13 +599,6 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -2254,12 +625,6 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -2284,12 +649,6 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -2311,12 +670,6 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -2424,13 +777,6 @@ class _$FailurePaginationImpl implements _FailurePagination {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -2454,13 +800,6 @@ class _$FailurePaginationImpl implements _FailurePagination {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -2483,13 +822,6 @@ class _$FailurePaginationImpl implements _FailurePagination {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -2516,12 +848,6 @@ class _$FailurePaginationImpl implements _FailurePagination {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -2546,12 +872,6 @@ class _$FailurePaginationImpl implements _FailurePagination {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -2573,12 +893,6 @@ class _$FailurePaginationImpl implements _FailurePagination {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -2677,13 +991,6 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -2707,13 +1014,6 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -2736,13 +1036,6 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -2769,12 +1062,6 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -2799,12 +1086,6 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -2826,12 +1107,6 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -2906,13 +1181,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -2936,13 +1204,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -2965,13 +1226,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -2998,12 +1252,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -3028,12 +1276,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -3055,12 +1297,6 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -3170,13 +1406,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -3200,13 +1429,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -3229,13 +1451,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -3262,12 +1477,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -3292,12 +1501,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -3319,12 +1522,6 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -3443,13 +1640,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -3473,13 +1663,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -3502,13 +1685,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -3535,12 +1711,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -3565,12 +1735,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -3592,12 +1756,6 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -3674,13 +1832,6 @@ class _$FetchCategoriesLoadingImpl implements _FetchCategoriesLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -3704,13 +1855,6 @@ class _$FetchCategoriesLoadingImpl implements _FetchCategoriesLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -3733,13 +1877,6 @@ class _$FetchCategoriesLoadingImpl implements _FetchCategoriesLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -3766,12 +1903,6 @@ class _$FetchCategoriesLoadingImpl implements _FetchCategoriesLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -3796,12 +1927,6 @@ class _$FetchCategoriesLoadingImpl implements _FetchCategoriesLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -3823,12 +1948,6 @@ class _$FetchCategoriesLoadingImpl implements _FetchCategoriesLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -3938,13 +2057,6 @@ class _$FetchCategoriesFailureImpl implements _FetchCategoriesFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -3968,13 +2080,6 @@ class _$FetchCategoriesFailureImpl implements _FetchCategoriesFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -3997,13 +2102,6 @@ class _$FetchCategoriesFailureImpl implements _FetchCategoriesFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -4030,12 +2128,6 @@ class _$FetchCategoriesFailureImpl implements _FetchCategoriesFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -4060,12 +2152,6 @@ class _$FetchCategoriesFailureImpl implements _FetchCategoriesFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -4087,12 +2173,6 @@ class _$FetchCategoriesFailureImpl implements _FetchCategoriesFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,
@@ -4210,13 +2290,6 @@ class _$FetchCategoriesSuccessImpl implements _FetchCategoriesSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() save,
-    required TResult Function() loading,
-    required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) empty,
-    required TResult Function(List<CourseCardModel> courses, String? message)
-        coursesSuccess,
-    required TResult Function(dynamic data, String? message) mentorsSuccess,
     required TResult Function() changeSortBy,
     required TResult Function() loadingPagination,
     required TResult Function(NetworkExceptions? networkException)
@@ -4240,13 +2313,6 @@ class _$FetchCategoriesSuccessImpl implements _FetchCategoriesSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? save,
-    TResult? Function()? loading,
-    TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? empty,
-    TResult? Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult? Function(dynamic data, String? message)? mentorsSuccess,
     TResult? Function()? changeSortBy,
     TResult? Function()? loadingPagination,
     TResult? Function(NetworkExceptions? networkException)? failurePagination,
@@ -4269,13 +2335,6 @@ class _$FetchCategoriesSuccessImpl implements _FetchCategoriesSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? save,
-    TResult Function()? loading,
-    TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? empty,
-    TResult Function(List<CourseCardModel> courses, String? message)?
-        coursesSuccess,
-    TResult Function(dynamic data, String? message)? mentorsSuccess,
     TResult Function()? changeSortBy,
     TResult Function()? loadingPagination,
     TResult Function(NetworkExceptions? networkException)? failurePagination,
@@ -4302,12 +2361,6 @@ class _$FetchCategoriesSuccessImpl implements _FetchCategoriesSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Save value) save,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_CoursesSuccess value) coursesSuccess,
-    required TResult Function(_MentorsSuccess value) mentorsSuccess,
     required TResult Function(_ChangeSortBy value) changeSortBy,
     required TResult Function(_LoadingPagination value) loadingPagination,
     required TResult Function(_FailurePagination value) failurePagination,
@@ -4332,12 +2385,6 @@ class _$FetchCategoriesSuccessImpl implements _FetchCategoriesSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Save value)? save,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_CoursesSuccess value)? coursesSuccess,
-    TResult? Function(_MentorsSuccess value)? mentorsSuccess,
     TResult? Function(_ChangeSortBy value)? changeSortBy,
     TResult? Function(_LoadingPagination value)? loadingPagination,
     TResult? Function(_FailurePagination value)? failurePagination,
@@ -4359,12 +2406,6 @@ class _$FetchCategoriesSuccessImpl implements _FetchCategoriesSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Save value)? save,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_CoursesSuccess value)? coursesSuccess,
-    TResult Function(_MentorsSuccess value)? mentorsSuccess,
     TResult Function(_ChangeSortBy value)? changeSortBy,
     TResult Function(_LoadingPagination value)? loadingPagination,
     TResult Function(_FailurePagination value)? failurePagination,

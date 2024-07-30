@@ -3,15 +3,6 @@ part of 'search_cubit.dart';
 @freezed
 class SearchState with _$SearchState {
   const factory SearchState.initial() = _Initial;
-  const factory SearchState.save() = _Save;
-  const factory SearchState.loading() = _Loading;
-  const factory SearchState.failure(NetworkExceptions? networkException) =
-      _Failure;
-  const factory SearchState.empty(String? message) = _Empty;
-  const factory SearchState.coursesSuccess(
-      List<CourseCardModel> courses, String? message) = _CoursesSuccess;
-  const factory SearchState.mentorsSuccess(dynamic data, String? message) =
-      _MentorsSuccess;
 
   const factory SearchState.changeSortBy() = _ChangeSortBy;
 

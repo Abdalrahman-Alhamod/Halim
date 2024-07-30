@@ -337,45 +337,6 @@ class SearchCubit extends Cubit<SearchState> {
   listen(BuildContext context, SearchState state) {
     const title = 'Search';
     state.maybeWhen(
-      failure: (NetworkExceptions? networkException) {
-        showTOAST(
-          context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
-          status: ToastStatus.failure,
-        );
-        logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
-          color: PrintColor.red,
-          title: '$title Error',
-        );
-      },
-      loading: () {
-        logger.print(
-          'Loading...',
-          color: PrintColor.red,
-          title: '$title Loading',
-        );
-      },
-      empty: (message) {
-        showTOAST(
-          context,
-          // textToast: title,
-          title: '$title no results',
-        );
-        logger.print(
-          message,
-          color: PrintColor.orange,
-          title: '$title Empty',
-        );
-      },
-      coursesSuccess: (data, message) {
-        logger.print(
-          data,
-          color: PrintColor.pink,
-          title: '$title Courses Success',
-        );
-      },
       loadingPagination: () {
         logger.print(
           'Pagination Loading...',
@@ -384,6 +345,13 @@ class SearchCubit extends Cubit<SearchState> {
         );
       },
       failurePagination: (NetworkExceptions? networkException) {
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessage(networkException),
+          title: '$title Error',
+          status: ToastStatus.failure,
+        );
+
         logger.print(
           NetworkExceptions.getErrorMessage(networkException),
           color: PrintColor.red,
