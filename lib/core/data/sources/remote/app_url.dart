@@ -29,14 +29,7 @@ abstract final class AppUrl {
 
   ///<------------------------------------------------------------------------------
 
-  static const all = "all";
-  static const beginner = "Beginner";
-  static const intermediate = "Intermediate";
-  static const advanced = "Advanced";
-  static const kCategories = "categories";
-  static const kSubcategories = "subcategories";
-
-  // Filters keys
+  // Sort By keys
   static const kMostRelevent = "most-relevent";
   static const kMostPopular = "most-popular";
   static const kTopRated = "top-rated";
@@ -46,25 +39,38 @@ abstract final class AppUrl {
   static const kLowPrice = "low-price";
   static const kHighPrice = "high-price";
 
-  static const duration = "duration";
-  static const levels = "levels";
-  static const price = "price";
-  static const ratings = "ratings";
+  // Filter keys
+  static const kDuration = "duration";
+  static const kLevels = "levels";
+  static const kPrice = "price";
+  static const kRatings = "ratings";
+  static const all = "all";
+  static const kBeginner = "Beginner";
+  static const kIntermediate = "Intermediate";
+  static const kAdvanced = "Advanced";
+  static const kCategories = "categories";
+  static const kSubcategories = "subcategories";
+
   static const sortBy = "sort-by";
   static const searchQuery = "search-query";
+
   static final searchKeywords = "${baseUrl}searchwords";
-  static final searchCourses = "${baseUrl}courses";
-  static final searchMentors = "${baseUrl}mentors";
 
   ///<------------------------------------------------------------------------------
 
   static const include = "include";
-  static const courseCardIncludes =
-      "subcategory,enrollments-count,reviews-avg,universalDiscount";
-  static const mentorCardIncludes = "";
+  static const courseCardIncludes = "subcategory,enrollments-count,reviews-avg";
+  static const mentorCardIncludes = "profile";
+  static const courseMainSectionIncludes =
+      "subcategory,enrollments-count,reviews-avg,reviews-count,level";
+  static const courseAboutSectionIncludes = "mentor,keywords,profile";
+
+  ///<------------------------------------------------------------------------------
 
   ///<------------------------------------------------------------------------------
 
   static final categories = "${baseUrl}categories";
   static final subcategories = "${baseUrl}subcategories";
+  static final courses = "${baseUrl}courses";
+  static final mentors = "${baseUrl}mentors";
 }

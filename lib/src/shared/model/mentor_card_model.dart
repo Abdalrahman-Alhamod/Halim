@@ -1,58 +1,18 @@
-class MentorCardModel {
-  int? id;
-  String? firstName;
-  String? lastName;
-  String? image;
-  String? headline;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  MentorCardModel({
-    this.id,
-    this.firstName,
-    this.lastName,
-    this.image,
-    this.headline,
-  });
+part 'mentor_card_model.freezed.dart';
+part 'mentor_card_model.g.dart';
 
-  @override
-  String toString() {
-    return 'MentorCardModel(id: $id, firstName: $firstName, lastName: $lastName, image: $image, headline: $headline)';
-  }
-
-  factory MentorCardModel.fromJson(Map<String, dynamic> json) {
-    return MentorCardModel(
-      id: json['id'] as int?,
-      firstName: json['first_name'] as String?,
-      lastName: json['last_name'] as String?,
-      image: json['image'] as dynamic,
-      headline: json['headline'] as String?,
-    );
-  }
-
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'first_name': firstName,
-        'last_name': lastName,
-        'image': image,
-        'headline': headline,
-      };
-
-  MentorCardModel copyWith({
+@freezed
+class MentorCardModel with _$MentorCardModel {
+  const factory MentorCardModel({
     int? id,
-    String? firstName,
-    String? lastName,
-    dynamic image,
+    @JsonKey(name: 'first_name') String? firstName,
+    @JsonKey(name: 'last_name') String? lastName,
+    String? image,
     String? headline,
-  }) {
-    return MentorCardModel(
-      id: id ?? this.id,
-      firstName: firstName ?? this.firstName,
-      lastName: lastName ?? this.lastName,
-      image: image ?? this.image,
-      headline: headline ?? this.headline,
-    );
-  }
+  }) = _MentorCardModel;
 
-  String get fullName {
-    return '$firstName $lastName';
-  }
+  factory MentorCardModel.fromJson(Map<String, dynamic> json) =>
+      _$MentorCardModelFromJson(json);
 }

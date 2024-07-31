@@ -18,9 +18,9 @@ class CourseDetailsBody extends StatelessWidget {
         const CourseIntroVideo(),
         Padding(
           padding: const EdgeInsets.only(
-            top: 16.0,
-            left: 16.0,
-            right: 16.0,
+            top: 8.0,
+            left: 8.0,
+            right: 8.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

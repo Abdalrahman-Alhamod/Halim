@@ -144,7 +144,10 @@ class AppRoute {
       GoRoute(
         path: kCourseDetailsView,
         builder: (BuildContext context, GoRouterState state) {
-          return const CourseDetailsView();
+          return CourseDetailsView(
+            courseId: (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.courseId] as int,
+          );
         },
       ),
       GoRoute(

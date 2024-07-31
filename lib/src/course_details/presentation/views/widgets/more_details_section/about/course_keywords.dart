@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../data/models/keyword_model.dart';
 
 class CourseKeywords extends StatelessWidget {
   const CourseKeywords({
     super.key,
+    required this.ketwords,
   });
-
+  final List<KeywordModel> ketwords;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,20 +26,16 @@ class CourseKeywords extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const Row(
-          children: [
-            KeywordText(
-              name: 'UI/UX',
+        SizedBox(
+          height: 30,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) => KeywordText(
+              name: ketwords[index].name ?? '',
             ),
-            KeywordsSeperator(),
-            KeywordText(
-              name: 'Figma',
-            ),
-            KeywordsSeperator(),
-            KeywordText(
-              name: 'Graphic Design',
-            ),
-          ],
+            separatorBuilder: (context, index) => const KeywordsSeperator(),
+            itemCount: ketwords.length,
+          ),
         ),
       ],
     );

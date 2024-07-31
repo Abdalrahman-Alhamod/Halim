@@ -27,15 +27,15 @@ class _LevelBarState extends State<LevelBar> {
       ),
       LevelBarItem(
         label: LocaleKeys.CourseDetails_Level_beginner.tr(),
-        value: AppUrl.beginner,
+        value: AppUrl.kBeginner,
       ),
       LevelBarItem(
         label: LocaleKeys.CourseDetails_Level_intermediate.tr(),
-        value: AppUrl.intermediate,
+        value: AppUrl.kIntermediate,
       ),
       LevelBarItem(
         label: LocaleKeys.CourseDetails_Level_advanced.tr(),
-        value: AppUrl.advanced,
+        value: AppUrl.kAdvanced,
       )
     ];
     super.initState();

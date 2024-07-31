@@ -9,7 +9,7 @@ class MentorCardLoadingList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        for (int i = 0; i < itemCount ; i++) content(context),
+        for (int i = 0; i < itemCount; i++) content(context),
       ],
     );
   }

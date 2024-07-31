@@ -7,6 +7,8 @@ import 'package:halim/src/shared/model/course_card_model.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/context_extensions.dart';
+import '../../../../../core/utils/navigation_extra_keys.dart';
+import '../../../../../core/widgets/shimmer_box.dart';
 import '../functions/remove_bookmark_bottom_sheet.dart';
 
 import '../../../../../core/themes/app_colors.dart';
@@ -37,7 +39,12 @@ class _CardCourseState extends State<CardCourse> {
     return GestureDetector(
       onTap: () {
         if (widget.isEnabled) {
-          GoRouter.of(context).push(AppRoute.kCourseDetailsView);
+          GoRouter.of(context).push(
+            AppRoute.kCourseDetailsView,
+            extra: {
+              NavKeys.courseId: widget.courseCardModel.id,
+            },
+          );
         }
       },
       child: Container(
@@ -59,6 +66,7 @@ class _CardCourseState extends State<CardCourse> {
                   width: 110,
                   height: 110,
                   fit: BoxFit.cover,
+                  placeholder: (context, url) => const ShimmerBox(),
                 ),
               ),
             ),

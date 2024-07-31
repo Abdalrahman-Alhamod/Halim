@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/helpers/string_helper.dart';
+import 'package:halim/src/shared/model/discount_model.dart';
 import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
@@ -6,15 +8,18 @@ import '../../../../../../core/themes/app_colors.dart';
 class CoursePrice extends StatelessWidget {
   const CoursePrice({
     super.key,
+    required this.price,
+    required this.discount,
   });
-
+  final num price;
+  final DiscountModel? discount;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
-          '\$40',
-          style: TextStyle(
+        Text(
+          '\$${discount != null ? StringHelper.getDiscount(price, discount!) : StringHelper.formatNum(price)}',
+          style: const TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.bold,
             color: AppColors.primaryColor,
@@ -23,18 +28,20 @@ class CoursePrice extends StatelessWidget {
         const SizedBox(
           width: 20,
         ),
-        Text(
-          '\$75',
-          style: TextStyle(
-            fontSize: 24,
-            color: context.isDarkMode
-                ? Colors.grey.shade400
-                : Colors.grey.shade500,
-            fontWeight: FontWeight.bold,
-            decoration: TextDecoration.lineThrough,
-            decorationThickness: context.isEnglish ? 2 : 10,
-          ),
-        )
+        discount != null
+            ? Text(
+                '\$${StringHelper.formatNum(price)}',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: context.isDarkMode
+                      ? Colors.grey.shade400
+                      : Colors.grey.shade500,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.lineThrough,
+                  decorationThickness: context.isEnglish ? 2 : 10,
+                ),
+              )
+            : const SizedBox(),
       ],
     );
   }

@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:halim/core/helpers/string_helper.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
 
 import '../../../../../../core/assets/app_svgs.dart';
@@ -11,8 +12,11 @@ import '../../../../../../core/assets/app_svgs.dart';
 class Rating extends StatelessWidget {
   const Rating({
     super.key,
+    required this.ratingCount,
+    required this.ratingAvg,
   });
-
+  final int ratingCount;
+  final num ratingAvg;
   @override
   Widget build(BuildContext context) {
     var autoSizeGroup = AutoSizeGroup();
@@ -29,7 +33,7 @@ class Rating extends StatelessWidget {
         Flexible(
           flex: 1,
           child: AutoSizeText(
-            '4.8',
+            StringHelper.formatNum(ratingAvg),
             style: const TextStyle(fontSize: 18),
             maxLines: 1,
             group: autoSizeGroup,
@@ -41,7 +45,7 @@ class Rating extends StatelessWidget {
         Flexible(
           flex: 4,
           child: AutoSizeText(
-            '(4,479 ${LocaleKeys.CourseDetails_reviews.tr()})',
+            '($ratingCount ${LocaleKeys.CourseDetails_reviews.tr()})',
             style: const TextStyle(fontSize: 18),
             maxLines: 1,
             group: autoSizeGroup,

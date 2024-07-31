@@ -6,9 +6,9 @@ import '../../../../../../core/assets/app_svgs.dart';
 
 class BookmarkButton extends StatefulWidget {
   const BookmarkButton({
-    super.key,
+    super.key, required this.isBookmarked,
   });
-
+  final bool isBookmarked;
   @override
   State<BookmarkButton> createState() => _BookmarkButtonState();
 }
@@ -17,7 +17,7 @@ class _BookmarkButtonState extends State<BookmarkButton> {
   late bool _isPressed;
   @override
   void initState() {
-    _isPressed = false;
+    _isPressed = widget.isBookmarked;
     super.initState();
   }
 

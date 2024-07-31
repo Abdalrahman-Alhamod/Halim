@@ -55,6 +55,7 @@ class _AuthFormState extends State<AuthForm> {
 
   @override
   Widget build(BuildContext context) {
+    // TODO fix bug
     _setInitialValues();
     return Form(
       key: _formKey,

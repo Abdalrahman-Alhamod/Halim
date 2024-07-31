@@ -13,7 +13,7 @@ class SubcategoriesButtonsList extends StatefulWidget {
   });
   final List<SubcategoryModel> subcategories;
   final int initialValueId;
-  final void Function(int id) onChange;
+  final void Function(SubcategoryModel selectedSubcategory) onChange;
   @override
   State<SubcategoriesButtonsList> createState() =>
       _SubcategoriesButtonsListState();
@@ -39,7 +39,7 @@ class _SubcategoriesButtonsListState extends State<SubcategoriesButtonsList> {
         onTap: () {
           setState(() {
             _id = widget.subcategories[index].id ?? allId;
-            widget.onChange.call(_id);
+            widget.onChange.call(widget.subcategories[index]);
           });
         },
       ),

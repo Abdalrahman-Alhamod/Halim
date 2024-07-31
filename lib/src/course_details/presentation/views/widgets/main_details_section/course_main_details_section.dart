@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
+import 'package:halim/src/course_details/data/models/level_model.dart';
+import 'package:halim/src/shared/model/subcategory_model.dart';
 
+import '../../../manager/course_details_cubit/course_details_cubit.dart';
 import 'bookmark_button.dart';
-import 'course_category_box.dart';
+import 'course_subcategory_box.dart';
 import 'course_info.dart';
 import 'course_price.dart';
 import 'course_title.dart';
@@ -16,45 +21,82 @@ class CourseMainDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(
-              flex: 20,
-              child: CourseTitle(),
-            ),
-            BookmarkButton(),
-          ],
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Row(
-          children: [
-            Flexible(
-              flex: 1,
-              child: CourseCategoryBox(),
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            Flexible(
-              flex: 1,
-              child: Rating(),
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        CoursePrice(),
-        SizedBox(
-          height: 20,
-        ),
-        CourseInfo(),
-      ],
+    context.read<CourseDetailsCubit>().getCourseMainSection();
+    CourseMainSectionModel courseMainSectionModel =
+        const CourseMainSectionModel();
+    return BlocConsumer<CourseDetailsCubit, CourseDetailsState>(
+      buildWhen: context.read<CourseDetailsCubit>().buildCourseMainSectionWhen,
+      listenWhen: context.read<CourseDetailsCubit>().listenWhen,
+      listener: context.read<CourseDetailsCubit>().listen,
+      builder: (context, state) {
+        state.whenOrNull(
+          fetchCourseMainSectionSuccess: (data, message) {
+            courseMainSectionModel = data;
+          },
+        );
+        return context.read<CourseDetailsCubit>().buildCourseMainSection(
+              context: context,
+              state: state,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Flexible(
+                        flex: 20,
+                        child: CourseTitle(
+                          title: courseMainSectionModel.title ?? '',
+                        ),
+                      ),
+                      BookmarkButton(
+                        isBookmarked: courseMainSectionModel.isSaved ?? false,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      Flexible(
+                        flex: 1,
+                        child: CourseSubcategoryBox(
+                          subcategory: courseMainSectionModel.subcategory ??
+                              const SubcategoryModel(),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Flexible(
+                        flex: 1,
+                        child: Rating(
+                          ratingCount: courseMainSectionModel.reviewsCount ?? 0,
+                          ratingAvg: courseMainSectionModel.reviewsAvg ?? 0,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  CoursePrice(
+                    price: courseMainSectionModel.price ?? 0,
+                    discount: courseMainSectionModel.discount,
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  CourseInfo(
+                    enrollmentsCount:
+                        courseMainSectionModel.enrollmentsCount ?? 0,
+                    hoursNum: courseMainSectionModel.numberOfHours ?? 0,
+                    level: courseMainSectionModel.level ?? const LevelModel(),
+                  ),
+                ],
+              ),
+            );
+      },
     );
   }
 }

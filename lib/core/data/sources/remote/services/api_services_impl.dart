@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:halim/core/functions/fake_delay.dart';
 import '../../../../utils/logger.dart';
 import 'package:http/http.dart' as http;
 
@@ -70,6 +71,8 @@ class ApiServicesImpl implements ApiServices {
         queryParameters: queryParams,
         options: Options(headers: _headers),
       );
+      // TODO remove fake delay
+      await fakeDelay();
       return _handleResponseAsJson(response);
     } catch (error) {
       rethrow;
@@ -263,7 +266,7 @@ class ApiServicesImpl implements ApiServices {
       );
       handler.next(options); //continue
     },
-    onResponse: (Response<dynamic> response, handler) async {
+    onResponse: (Response<dynamic> response, handler) {
       logger.print(
         response.data.toString().isEmpty
             ? jsonDecode("{}")

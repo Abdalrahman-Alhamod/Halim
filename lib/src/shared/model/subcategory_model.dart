@@ -1,29 +1,15 @@
-class SubcategoryModel {
-  int? id;
-  String? name;
-  SubcategoryModel({this.id, this.name});
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  @override
-  String toString() => 'Subcategory(id: $id, name: $name)';
+part 'subcategory_model.freezed.dart';
+part 'subcategory_model.g.dart';
 
-  factory SubcategoryModel.fromJson(Map<String, dynamic> json) =>
-      SubcategoryModel(
-        id: json['id'] as int?,
-        name: json['name'] as String?,
-      );
-
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'name': name,
-      };
-
-  SubcategoryModel copyWith({
+@freezed
+class SubcategoryModel with _$SubcategoryModel {
+  const factory SubcategoryModel({
     int? id,
     String? name,
-  }) {
-    return SubcategoryModel(
-      id: id ?? this.id,
-      name: name ?? this.name,
-    );
-  }
+  }) = _SubcategoryModel;
+
+  factory SubcategoryModel.fromJson(Map<String, dynamic> json) =>
+      _$SubcategoryModelFromJson(json);
 }

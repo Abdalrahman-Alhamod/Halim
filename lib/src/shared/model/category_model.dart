@@ -1,29 +1,15 @@
-class CategoryModel {
-  int? id;
-  String? name;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  CategoryModel({this.id, this.name});
+part 'category_model.freezed.dart';
+part 'category_model.g.dart';
 
-  @override
-  String toString() => 'CategoryModel(id: $id, name: $name)';
-
-  factory CategoryModel.fromJson(Map<String, dynamic> json) => CategoryModel(
-        id: json['id'] as int?,
-        name: json['name'] as String?,
-      );
-
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'name': name,
-      };
-
-  CategoryModel copyWith({
+@freezed
+class CategoryModel with _$CategoryModel {
+  const factory CategoryModel({
     int? id,
     String? name,
-  }) {
-    return CategoryModel(
-      id: id ?? this.id,
-      name: name ?? this.name,
-    );
-  }
+  }) = _CategoryModel;
+
+  factory CategoryModel.fromJson(Map<String, dynamic> json) =>
+      _$CategoryModelFromJson(json);
 }

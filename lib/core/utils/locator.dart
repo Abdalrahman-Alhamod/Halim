@@ -5,6 +5,11 @@ import 'package:halim/src/auth/data/data_sources/auth_remote_data_source.dart';
 import 'package:halim/src/auth/data/repos/auth_repo_impl.dart';
 import 'package:halim/src/auth/domain/repos/auth_repo.dart';
 import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
+import 'package:halim/src/course_details/data/data_sources/course_details_local_data_source.dart';
+import 'package:halim/src/course_details/data/data_sources/course_details_remote_data_source.dart';
+import 'package:halim/src/course_details/data/repos/course_details_repo_impl.dart';
+import 'package:halim/src/course_details/domain/repos/course_details_repo.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import 'package:halim/src/home/data/data_sources/home_local_data_source.dart';
 import 'package:halim/src/home/data/data_sources/home_remote_data_source.dart';
 import 'package:halim/src/home/data/repos/home_repo_impl.dart';
@@ -64,6 +69,15 @@ void setupLocators() {
       locator.get<ApiServices>(),
     ),
   );
+  // Course Details
+  locator.registerLazySingleton<CourseDetailsLocalDataSource>(
+    () => CourseDetailsLocalDataSource(),
+  );
+  locator.registerLazySingleton<CourseDetailsRemoteDataSource>(
+    () => CourseDetailsRemoteDataSource(
+      locator.get<ApiServices>(),
+    ),
+  );
 
   /// Repositories
 
@@ -86,6 +100,13 @@ void setupLocators() {
     () => HomeRepoImpl(
       locator.get<HomeLocalDataSource>(),
       locator.get<HomeRemoteDataSource>(),
+    ),
+  );
+  // Course Details
+  locator.registerLazySingleton<CourseDetailsRepo>(
+    () => CourseDetailsRepoImpl(
+      locator.get<CourseDetailsLocalDataSource>(),
+      locator.get<CourseDetailsRemoteDataSource>(),
     ),
   );
 
@@ -119,6 +140,12 @@ void setupLocators() {
   locator.registerFactory<HomeCubit>(
     () => HomeCubit(
       locator.get<HomeRepo>(),
+    ),
+  );
+  // Course Details
+  locator.registerFactory<CourseDetailsCubit>(
+    () => CourseDetailsCubit(
+      locator.get<CourseDetailsRepo>(),
     ),
   );
 }

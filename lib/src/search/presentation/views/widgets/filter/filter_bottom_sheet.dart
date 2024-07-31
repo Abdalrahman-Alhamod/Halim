@@ -151,8 +151,8 @@ class FilterBottomSheet extends StatelessWidget {
                                   .subcategory
                                   .id ??
                               allId,
-                          onChange: (id) {
-                            currentFilters.subcategory.id = id;
+                          onChange: (selectedSubcategory) {
+                            currentFilters.subcategory = selectedSubcategory;
                           },
                         ),
                       );

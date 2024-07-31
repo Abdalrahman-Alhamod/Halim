@@ -62,9 +62,9 @@ class LevelButton extends StatelessWidget {
   Color getColorFromValue(String value) {
     return switch (value) {
       AppUrl.all => AppColors.primaryColor,
-      AppUrl.beginner => Colors.green,
-      AppUrl.intermediate => Colors.orange,
-      AppUrl.advanced => Colors.red,
+      AppUrl.kBeginner => Colors.green,
+      AppUrl.kIntermediate => Colors.orange,
+      AppUrl.kAdvanced => Colors.red,
       String() => Colors.grey,
     };
   }

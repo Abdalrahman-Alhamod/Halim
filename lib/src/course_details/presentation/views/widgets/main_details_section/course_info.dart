@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/helpers/string_helper.dart';
+import 'package:halim/src/course_details/data/models/level_model.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
@@ -8,8 +10,13 @@ import '../../../../../../core/translations/locale_keys.g.dart';
 class CourseInfo extends StatelessWidget {
   const CourseInfo({
     super.key,
+    required this.enrollmentsCount,
+    required this.hoursNum,
+    required this.level,
   });
-
+  final int enrollmentsCount;
+  final num hoursNum;
+  final LevelModel level;
   @override
   Widget build(BuildContext context) {
     var autoSizeGroup = AutoSizeGroup();
@@ -33,7 +40,7 @@ class CourseInfo extends StatelessWidget {
               Flexible(
                 flex: 5,
                 child: AutoSizeText(
-                  '9,839 ${LocaleKeys.CourseDetails_students.tr()}',
+                  '$enrollmentsCount ${LocaleKeys.CourseDetails_students.tr()}',
                   style: const TextStyle(fontSize: 18),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -42,9 +49,6 @@ class CourseInfo extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        const SizedBox(
-          width: 10,
         ),
         Flexible(
           flex: 1,
@@ -63,7 +67,7 @@ class CourseInfo extends StatelessWidget {
               Flexible(
                 flex: 5,
                 child: AutoSizeText(
-                  '2,5 ${LocaleKeys.CourseDetails_hours.tr()}',
+                  '${StringHelper.formatNum(hoursNum)} ${LocaleKeys.CourseDetails_hours.tr()}',
                   style: const TextStyle(fontSize: 18),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -90,7 +94,7 @@ class CourseInfo extends StatelessWidget {
               Flexible(
                 flex: 5,
                 child: AutoSizeText(
-                  LocaleKeys.CourseDetails_Level_beginner.tr(),
+                  level.name ?? '',
                   style: const TextStyle(fontSize: 18),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,

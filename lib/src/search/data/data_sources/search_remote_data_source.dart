@@ -1,5 +1,4 @@
 import 'package:halim/core/data/model/base_models.dart';
-import 'package:halim/core/functions/fake_delay.dart';
 import 'package:halim/src/search/data/models/search_filter_model.dart';
 import 'package:halim/src/search/data/models/search_keyword_model.dart';
 import 'package:halim/src/shared/app_data.dart';
@@ -78,16 +77,16 @@ class SearchRemoteDateSource {
           sortBy,
         ),
         MapEntry(
-          AppUrl.duration,
+          AppUrl.kDuration,
           '${filters.startDuation},${filters.endDuration}',
         ),
         MapEntry(
-          AppUrl.price,
+          AppUrl.kPrice,
           '${filters.startPrice},${filters.endPrice}',
         ),
       ],
     );
-    if (filters.category.id !=allId) {
+    if (filters.category.id != allId) {
       queryParams.addEntries(
         [
           MapEntry(
@@ -111,7 +110,7 @@ class SearchRemoteDateSource {
       queryParams.addEntries(
         [
           MapEntry(
-            AppUrl.levels,
+            AppUrl.kLevels,
             filters.level,
           )
         ],
@@ -121,7 +120,7 @@ class SearchRemoteDateSource {
       queryParams.addEntries(
         [
           MapEntry(
-            AppUrl.ratings,
+            AppUrl.kRatings,
             filters.rating,
           )
         ],
@@ -138,11 +137,10 @@ class SearchRemoteDateSource {
       );
     }
     final response = await _apiServices.get(
-      AppUrl.searchCourses,
+      AppUrl.courses,
       queryParams: queryParams,
       hasToken: true,
     );
-    await fakeDelay();
     return BaseModel<BaseModels>.fromJson(
       response,
       (json) => BaseModels.fromJson(
@@ -181,11 +179,10 @@ class SearchRemoteDateSource {
       );
     }
     final response = await _apiServices.get(
-      AppUrl.searchMentors,
+      AppUrl.mentors,
       queryParams: queryParams,
       hasToken: true,
     );
-    await fakeDelay();
     return BaseModel<BaseModels>.fromJson(
       response,
       (json) => BaseModels.fromJson(
@@ -208,7 +205,6 @@ class SearchRemoteDateSource {
       url,
       hasToken: true,
     );
-    await fakeDelay();
     return BaseModel<BaseModels>.fromJson(
       response,
       (json) => BaseModels.fromJson(
@@ -225,7 +221,6 @@ class SearchRemoteDateSource {
       AppUrl.categories,
       hasToken: true,
     );
-    await fakeDelay();
     return BaseModel<BaseModels>.fromJson(
       response,
       (json) => BaseModels.fromJson(
