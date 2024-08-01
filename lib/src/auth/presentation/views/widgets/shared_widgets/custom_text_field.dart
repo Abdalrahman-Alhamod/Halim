@@ -5,16 +5,16 @@ import '../../../../../../core/utils/context_extensions.dart';
 import '../../../../../../core/themes/app_colors.dart';
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField({
-    super.key,
-    this.obscureText = false,
-    required this.hintText,
-    required this.onChanged,
-    this.validator,
-    this.keyboardType = TextInputType.text,
-    this.prefixIcon,
-    this.initialValue,
-  });
+  const CustomTextField(
+      {super.key,
+      this.obscureText = false,
+      required this.hintText,
+      required this.onChanged,
+      this.validator,
+      this.keyboardType = TextInputType.text,
+      this.prefixIcon,
+      this.initialValue,
+      this.unfocusedFillColor});
   final bool obscureText;
   final String hintText;
   final void Function(String) onChanged;
@@ -22,6 +22,7 @@ class CustomTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final IconData? prefixIcon;
   final String? initialValue;
+  final Color? unfocusedFillColor;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -85,10 +86,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
           fillColor: context.isDarkMode
               ? _isFocused
                   ? AppColors.primaryColor.withAlpha(20)
-                  : AppColors.loginWithButtonDarkColor
+                  : widget.unfocusedFillColor ??
+                      AppColors.loginWithButtonDarkColor
               : _isFocused
                   ? AppColors.primaryColor.withAlpha(30)
-                  : AppColors.textFieldColor,
+                  : widget.unfocusedFillColor ?? AppColors.textFieldColor,
           prefixIcon: widget.prefixIcon != null
               ? Padding(
                   padding: const EdgeInsets.all(14),

@@ -10,6 +10,7 @@ import 'package:halim/src/course_details/data/data_sources/course_details_remote
 import 'package:halim/src/course_details/data/repos/course_details_repo_impl.dart';
 import 'package:halim/src/course_details/domain/repos/course_details_repo.dart';
 import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import 'package:halim/src/course_details/presentation/manager/reviews_cubit/reviews_cubit.dart';
 import 'package:halim/src/home/data/data_sources/home_local_data_source.dart';
 import 'package:halim/src/home/data/data_sources/home_remote_data_source.dart';
 import 'package:halim/src/home/data/repos/home_repo_impl.dart';
@@ -145,6 +146,11 @@ void setupLocators() {
   // Course Details
   locator.registerFactory<CourseDetailsCubit>(
     () => CourseDetailsCubit(
+      locator.get<CourseDetailsRepo>(),
+    ),
+  );
+  locator.registerFactory<ReviewsCubit>(
+    () => ReviewsCubit(
       locator.get<CourseDetailsRepo>(),
     ),
   );

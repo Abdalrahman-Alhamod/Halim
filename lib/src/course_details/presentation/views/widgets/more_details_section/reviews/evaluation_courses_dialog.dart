@@ -1,19 +1,22 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../core/utils/context_extensions.dart';
+import 'package:halim/src/auth/presentation/views/widgets/shared_widgets/custom_text_field.dart';
+import '../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../../core/utils/context_extensions.dart';
 
-import '../../../../../../../core/assets/app_images.dart';
-import '../../../../../../../core/themes/app_colors.dart';
-import '../../../../../../../core/widgets/custome_elevated_button.dart';
-import '../../../../../../../core/widgets/custome_flat_button.dart';
+import '../../../../../../../../../core/assets/app_images.dart';
+import '../../../../../../../../../core/themes/app_colors.dart';
+import '../../../../../../../../../core/widgets/custome_elevated_button.dart';
 
 class EvaluationCoursesDialog extends StatefulWidget {
   const EvaluationCoursesDialog({
     super.key,
+    required this.onSubmit,
   });
-
+  final void Function(int rating, String? comment) onSubmit;
   @override
   State<EvaluationCoursesDialog> createState() =>
       _EvaluationCoursesDialogState();
@@ -21,12 +24,12 @@ class EvaluationCoursesDialog extends StatefulWidget {
 
 class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
   double _rating = 3.0;
-
+  String? _comment;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 350,
-      height: context.height * 0.65,
+      height: context.height * 0.7,
       child: Column(
         children: [
           const Spacer(
@@ -41,26 +44,6 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
                 scale: 1.1,
               ),
             ),
-            /* Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: SizedBox(
-                    
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Image.asset(
-                          AppImages.iconPublic,
-                          color: AppColors.primaryColor,
-                        ),
-                        Icon(
-                          Icons.star,
-                          size: 80,
-                          color: Colors.white, 
-                        ),
-                      ],
-                    ),
-                  ),
-                ),*/
           ),
           const Spacer(
             flex: 5,
@@ -95,7 +78,7 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
                 initialRating: _rating,
                 minRating: 1,
                 direction: Axis.horizontal,
-                allowHalfRating: true,
+                allowHalfRating: false,
                 itemCount: 5,
                 itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
                 itemBuilder: (context, _) => const Icon(
@@ -113,11 +96,28 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
           const Spacer(
             flex: 8,
           ),
+          CustomTextField(
+            hintText: 'Comment',
+            onChanged: (value) {
+              if (value.trim().isNotEmpty) {
+                _comment = value;
+              } else {
+                _comment = null;
+              }
+            },
+            unfocusedFillColor: context.isDarkMode
+                ? AppColors.darkFlatButtonColor.withAlpha(150)
+                : AppColors.textFieldColor,
+          ),
+          const Spacer(
+            flex: 8,
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: CustomElevatedButton(
               onPressed: () {
                 GoRouter.of(context).pop();
+                widget.onSubmit.call(_rating.toInt(), _comment);
               },
               title: 'Send Review',
               elevation: 0,
@@ -127,20 +127,16 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
             flex: 4,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
-            child: CustomFlatButton(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: CustomElevatedButton(
               onPressed: () {
                 GoRouter.of(context).pop();
               },
-              width: MediaQuery.of(context).size.width * 0.40,
-              height: 45,
-              title: 'Cancel',
-              kBackgroundcolor: context.isDarkMode
+              title: LocaleKeys.Buttons_cancel.tr(),
+              elevation: 0,
+              backgroundColor: context.isDarkMode
                   ? AppColors.darkFlatButtonColor
-                  : const Color.fromARGB(255, 113, 132, 204).withOpacity(0.25),
-              kTextcolor: context.isDarkMode
-                  ? AppColors.lightFlatButtonColor
-                  : AppColors.primaryColor,
+                  : Colors.grey.shade600,
             ),
           ),
           const Spacer(

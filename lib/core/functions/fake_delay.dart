@@ -1,3 +1,3 @@
 Future<void> fakeDelay() async {
-  await Future.delayed(const Duration(seconds: 2));
+  await Future.delayed(const Duration(seconds: 0));
 }

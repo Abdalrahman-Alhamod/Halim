@@ -4,13 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../../../core/assets/app_svgs.dart';
+import '../../../../../../../core/helpers/string_helper.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
 
 class CourseReviewsRatingHeader extends StatelessWidget {
   const CourseReviewsRatingHeader({
     super.key,
+    required this.ratingCount,
+    required this.ratingAvg,
   });
-
+  final int ratingCount;
+  final num ratingAvg;
   @override
   Widget build(BuildContext context) {
     var autoSizeGroup = AutoSizeGroup();
@@ -32,7 +36,7 @@ class CourseReviewsRatingHeader extends StatelessWidget {
               Flexible(
                 flex: 1,
                 child: AutoSizeText(
-                  '4.8',
+                  StringHelper.formatNum(ratingAvg),
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
@@ -47,7 +51,7 @@ class CourseReviewsRatingHeader extends StatelessWidget {
               Flexible(
                 flex: 4,
                 child: AutoSizeText(
-                  '(4,479 ${LocaleKeys.CourseDetails_reviews.tr()})',
+                  '($ratingCount ${LocaleKeys.CourseDetails_reviews.tr()})',
                   style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w600,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_reviews_list.dart';
 
-import '../more_details_section/reviews/course_reviews_sample.dart';
+import '../../../manager/reviews_cubit/reviews_cubit.dart';
 import '../more_details_section/reviews/review_stars_bar/course_reviews_stars_bar.dart';
 
 class CourseReviewsBody extends StatelessWidget {
@@ -10,21 +12,26 @@ class CourseReviewsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CourseReviewsStarsBar(
-              onChanged: (value) {},
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const CourseReviewsSample(),
-          ],
-        ),
+    context.read<ReviewsCubit>().refresh();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CourseReviewsStarsBar(
+            initialValue: context.read<ReviewsCubit>().courseRatingFilter,
+            onChanged: (value) {
+              context.read<ReviewsCubit>().courseRatingFilter = value;
+              context.read<ReviewsCubit>().refresh();
+            },
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Expanded(
+            child: CourseReviewsList(),
+          ),
+        ],
       ),
     );
   }

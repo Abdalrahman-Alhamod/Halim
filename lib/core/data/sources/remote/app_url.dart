@@ -67,6 +67,11 @@ abstract final class AppUrl {
 
   ///<------------------------------------------------------------------------------
 
+  static const kReviews = "reviews";
+  static const kUserReview = "userreview";
+  static const kRating = "rate";
+  static const kComment = "comment";
+
   ///<------------------------------------------------------------------------------
 
   static final categories = "${baseUrl}categories";

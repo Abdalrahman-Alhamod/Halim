@@ -3,6 +3,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:halim/core/utils/context_extensions.dart';
+import 'package:halim/core/widgets/shimmer_box.dart';
 import 'package:halim/src/course_details/data/models/course_about_section_model.dart';
 import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
 import 'package:halim/src/course_details/domain/repos/course_details_repo.dart';
@@ -143,6 +145,22 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
       fetchCourseAboutSectionSuccess: (_, __) => child,
       fetchCourseAboutSectionFailure: (_) => const SizedBox(),
       orElse: () => const SizedBox(),
+    );
+  }
+
+  Widget buildReviewsHeaderSection({
+    required BuildContext context,
+    required CourseDetailsState state,
+    required Widget child,
+  }) {
+    return state.maybeWhen(
+      fetchCourseMainSectionLoading: () => ShimmerBox(
+        height: 30,
+        width: context.width * 0.6,
+      ),
+      fetchCourseMainSectionSuccess: (_, __) => child,
+      fetchCourseMainSectionFailure: (_) => const SizedBox(),
+      orElse: () => child,
     );
   }
 

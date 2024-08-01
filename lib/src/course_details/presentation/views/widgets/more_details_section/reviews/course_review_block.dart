@@ -1,25 +1,20 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../../core/translations/locale_keys.g.dart';
+import 'package:halim/core/helpers/date_time_helper.dart';
+import 'package:halim/src/course_details/data/models/course_review_block_model.dart';
+import 'package:halim/src/course_details/data/models/student_card_model_extension.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 
-import '../../../../../../../core/assets/app_images.dart';
-import '../../../../../../../core/themes/app_colors.dart';
+import '../../../../../../../core/widgets/shimmer_box.dart';
 import 'review_stars_bar/course_reviews_stars_button.dart';
 
 class CourseReviewBlock extends StatelessWidget {
   const CourseReviewBlock({
     super.key,
-    required this.image,
-    required this.name,
-    required this.rating,
-    required this.review,
+    required this.courseReviewBlockModel,
   });
-  final String image;
-  final String name;
-  final int rating;
-  final String review;
+  final CourseReviewBlockModel courseReviewBlockModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,12 +29,14 @@ class CourseReviewBlock extends StatelessWidget {
                 flex: 1,
                 child: Row(
                   children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage(
-                        image != '' ? image : AppImages.emptyAvatar,
+                    ClipOval(
+                      child: CachedNetworkImage(
+                        imageUrl: courseReviewBlockModel.student?.image ?? '',
+                        fit: BoxFit.cover,
+                        width: 56,
+                        height: 56,
+                        placeholder: (context, url) => const ShimmerBox(),
                       ),
-                      backgroundColor: AppColors.primaryColor.withAlpha(30),
-                      radius: 24,
                     ),
                     const SizedBox(
                       width: 10,
@@ -47,7 +44,7 @@ class CourseReviewBlock extends StatelessWidget {
                     Flexible(
                       flex: 1,
                       child: AutoSizeText(
-                        name,
+                        courseReviewBlockModel.student?.fullName ?? '',
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
@@ -63,7 +60,7 @@ class CourseReviewBlock extends StatelessWidget {
                 child: CourseReviewsStarsButton(
                   isPressed: false,
                   onPressed: null,
-                  label: '$rating',
+                  label: '${courseReviewBlockModel.rating ?? 0}',
                 ),
               )
             ],
@@ -73,7 +70,7 @@ class CourseReviewBlock extends StatelessWidget {
           height: 10,
         ),
         Text(
-          review,
+          courseReviewBlockModel.comment ?? '',
           style: const TextStyle(
             fontSize: 14,
           ),
@@ -82,7 +79,10 @@ class CourseReviewBlock extends StatelessWidget {
           height: 15,
         ),
         Text(
-          LocaleKeys.CourseDetails_Test_Reviews_reviewDate.tr(),
+          courseReviewBlockModel.createdAt != null
+              ? DateTimeHelper.format(
+                  courseReviewBlockModel.createdAt!, DateTimeFormat.dateAndTime)
+              : '',
           style: TextStyle(
             fontSize: 13,
             color: context.isDarkMode

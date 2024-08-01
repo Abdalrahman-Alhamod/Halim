@@ -50,4 +50,92 @@ class CourseDetailsRepoImpl extends CourseDetailsRepo {
       );
     }
   }
+
+  @override
+  Future<ApiResponse<BaseModel>> getCourseLastReviews(
+      {required int courseId, required String ratingFilter}) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.getCourseLastReviews(
+        courseId: courseId,
+        ratingFilter: ratingFilter,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> getUserCourseReview(int courseId) async {
+    try {
+      final response = await _courseDetailsRemoteDateSource.getUserCourseReview(
+        courseId,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> submitUserReview({
+    required int courseId,
+    required int rating,
+    String? comment,
+  }) async {
+    try {
+      final response = await _courseDetailsRemoteDateSource.submitUserReview(
+        courseId: courseId,
+        rating: rating,
+        comment: comment,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> getCoursePaginatedReviews({
+    required int courseId,
+    required String ratingFilter,
+    required int? pageKey,
+  }) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.getCoursePaginatedReviews(
+        courseId: courseId,
+        ratingFilter: ratingFilter,
+        pageKey: pageKey,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
 }

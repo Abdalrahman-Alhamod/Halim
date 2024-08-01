@@ -35,6 +35,7 @@ class _CourseIntroVideoState extends State<CourseIntroVideo> {
   }
 
   Widget _buildCoverImage() {
+    // TODO fix cover disappearing
     return BlocBuilder<CourseDetailsCubit, CourseDetailsState>(
       buildWhen: context.read<CourseDetailsCubit>().buildCourseMainSectionWhen,
       builder: (context, state) {
