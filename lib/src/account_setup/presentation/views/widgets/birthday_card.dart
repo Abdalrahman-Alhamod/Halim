@@ -5,8 +5,8 @@ import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/context_extensions.dart';
 
 class BirthdayCard extends StatefulWidget {
-  const BirthdayCard({super.key});
-
+  const BirthdayCard({super.key, required this.onChanged});
+  final void Function(String date) onChanged;
   @override
   BirthdayCardState createState() => BirthdayCardState();
 }
@@ -45,6 +45,7 @@ class BirthdayCardState extends State<BirthdayCard> {
               lastDate: DateTime.now(),
               onDateChanged: (date) {
                 _tempSelectedDate = date;
+                widget.onChanged.call( DateFormat('yyyy-MM-dd', 'en').format(_tempSelectedDate!));
               },
             ),
           ),
@@ -59,6 +60,7 @@ class BirthdayCardState extends State<BirthdayCard> {
               onPressed: () {
                 setState(() {
                   _selectedDate = _tempSelectedDate;
+
                   _controller.text =
                       DateFormat('yyyy-MM-dd', 'en').format(_selectedDate!);
                 });

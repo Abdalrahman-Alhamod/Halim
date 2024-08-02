@@ -2,9 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/utils/context_extensions.dart';
-import '../../../../core/widgets/custome_flat_button.dart';
 import 'fill_profile_body.dart';
-import 'functions/show_choose_interests_bottom_sheet.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 
@@ -43,24 +41,12 @@ class _FillProfilViewState extends State<FillProfilView> {
         ),
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
-        body: SingleChildScrollView(
+        body: const SingleChildScrollView(
             child: Column(
           children: [
-            const FillProfileBody(),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: CustomFlatButton(
-                onPressed: () {
-                  chooseInterestsBottomSheet(context);
-                },
-                title: LocaleKeys.FillYourProfile_continue.tr(),
-                width: MediaQuery.of(context).size.width * 0.94,
-                height: 60,
-                kTextcolor: AppColors.lightFlatButtonColor,
-              ),
-            ),
-            Container(height: 20),
+             FillProfileBody(),
+            
           ],
-        )));
+        ),),);
   }
 }

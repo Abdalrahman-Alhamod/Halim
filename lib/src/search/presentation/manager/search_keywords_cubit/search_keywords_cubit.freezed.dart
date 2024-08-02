@@ -99,6 +99,9 @@ class _$SearchKeywordsStateCopyWithImpl<$Res, $Val extends SearchKeywordsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -115,6 +118,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -244,6 +250,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -378,6 +387,8 @@ class __$$FailureImplCopyWithImpl<$Res>
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -391,6 +402,8 @@ class __$$FailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -429,7 +442,9 @@ class _$FailureImpl implements _Failure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -530,7 +545,10 @@ abstract class _Failure implements SearchKeywordsState {
       _$FailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -552,6 +570,8 @@ class __$$EmptyImplCopyWithImpl<$Res>
       _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -590,7 +610,9 @@ class _$EmptyImpl implements _Empty {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EmptyImplCopyWith<_$EmptyImpl> get copyWith =>
@@ -690,7 +712,10 @@ abstract class _Empty implements SearchKeywordsState {
   const factory _Empty(final String? message) = _$EmptyImpl;
 
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmptyImplCopyWith<_$EmptyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -712,6 +737,8 @@ class __$$FetchSuccessImplCopyWithImpl<$Res>
       _$FetchSuccessImpl _value, $Res Function(_$FetchSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -766,7 +793,9 @@ class _$FetchSuccessImpl implements _FetchSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchSuccessImplCopyWith<_$FetchSuccessImpl> get copyWith =>
@@ -869,7 +898,10 @@ abstract class _FetchSuccess implements SearchKeywordsState {
 
   List<SearchKeywordModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchSuccessImplCopyWith<_$FetchSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -891,6 +923,8 @@ class __$$DeleteSuccessImplCopyWithImpl<$Res>
       _$DeleteSuccessImpl _value, $Res Function(_$DeleteSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -929,7 +963,9 @@ class _$DeleteSuccessImpl implements _DeleteSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteSuccessImplCopyWith<_$DeleteSuccessImpl> get copyWith =>
@@ -1029,7 +1065,10 @@ abstract class _DeleteSuccess implements SearchKeywordsState {
   const factory _DeleteSuccess(final String? message) = _$DeleteSuccessImpl;
 
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchKeywordsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteSuccessImplCopyWith<_$DeleteSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

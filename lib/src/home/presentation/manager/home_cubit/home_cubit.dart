@@ -2,6 +2,7 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:halim/src/home/data/models/student_profile_model.dart';
 import 'package:halim/src/home/domain/repos/home_repo.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 
@@ -39,4 +40,33 @@ class HomeCubit extends Cubit<HomeState> {
       },
     );
   }
+ // List<StudentModel> subcategories = [];
+StudentProfileModel? _user;
+  Future<void> getInfStudent({required int studentId}) async {
+    emit(
+      const HomeState.fetchInfStudentLoading(),
+    );
+    final response = await _homeRepo.getInfStudent(studentId);
+    response.when(
+      success: (data) {
+        _user = StudentProfileModel();
+        emit(
+          HomeState.fetchInfStudentSuccess(
+            _user as List<StudentProfileModel>,
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          HomeState.fetchInfStudentFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+
+
 }

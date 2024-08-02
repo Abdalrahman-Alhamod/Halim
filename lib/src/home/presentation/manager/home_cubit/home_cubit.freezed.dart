@@ -24,6 +24,11 @@ mixin _$HomeState {
         fetchSubcategoriesFailure,
     required TResult Function(List<SubcategoryModel> data, String? message)
         fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(List<StudentProfileModel> data, String? message)
+        fetchInfStudentSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +39,11 @@ mixin _$HomeState {
         fetchSubcategoriesFailure,
     TResult? Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +54,11 @@ mixin _$HomeState {
         fetchSubcategoriesFailure,
     TResult Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -56,6 +71,12 @@ mixin _$HomeState {
         fetchSubcategoriesFailure,
     required TResult Function(_FetchSubcategoriesSuccess value)
         fetchSubcategoriesSuccess,
+    required TResult Function(_FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(_FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(_FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -67,6 +88,9 @@ mixin _$HomeState {
         fetchSubcategoriesFailure,
     TResult? Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult? Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,6 +102,9 @@ mixin _$HomeState {
         fetchSubcategoriesFailure,
     TResult Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -98,6 +125,9 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -114,6 +144,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -144,6 +177,11 @@ class _$InitialImpl implements _Initial {
         fetchSubcategoriesFailure,
     required TResult Function(List<SubcategoryModel> data, String? message)
         fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(List<StudentProfileModel> data, String? message)
+        fetchInfStudentSuccess,
   }) {
     return initial();
   }
@@ -157,6 +195,11 @@ class _$InitialImpl implements _Initial {
         fetchSubcategoriesFailure,
     TResult? Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
   }) {
     return initial?.call();
   }
@@ -170,6 +213,11 @@ class _$InitialImpl implements _Initial {
         fetchSubcategoriesFailure,
     TResult Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -188,6 +236,12 @@ class _$InitialImpl implements _Initial {
         fetchSubcategoriesFailure,
     required TResult Function(_FetchSubcategoriesSuccess value)
         fetchSubcategoriesSuccess,
+    required TResult Function(_FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(_FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(_FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
   }) {
     return initial(this);
   }
@@ -202,6 +256,9 @@ class _$InitialImpl implements _Initial {
         fetchSubcategoriesFailure,
     TResult? Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult? Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
   }) {
     return initial?.call(this);
   }
@@ -216,6 +273,9 @@ class _$InitialImpl implements _Initial {
         fetchSubcategoriesFailure,
     TResult Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -245,6 +305,9 @@ class __$$FetchSubcategoriesLoadingImplCopyWithImpl<$Res>
       _$FetchSubcategoriesLoadingImpl _value,
       $Res Function(_$FetchSubcategoriesLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -276,6 +339,11 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
         fetchSubcategoriesFailure,
     required TResult Function(List<SubcategoryModel> data, String? message)
         fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(List<StudentProfileModel> data, String? message)
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesLoading();
   }
@@ -289,6 +357,11 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
         fetchSubcategoriesFailure,
     TResult? Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesLoading?.call();
   }
@@ -302,6 +375,11 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
         fetchSubcategoriesFailure,
     TResult Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesLoading != null) {
@@ -320,6 +398,12 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
         fetchSubcategoriesFailure,
     required TResult Function(_FetchSubcategoriesSuccess value)
         fetchSubcategoriesSuccess,
+    required TResult Function(_FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(_FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(_FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesLoading(this);
   }
@@ -334,6 +418,9 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
         fetchSubcategoriesFailure,
     TResult? Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult? Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesLoading?.call(this);
   }
@@ -348,6 +435,9 @@ class _$FetchSubcategoriesLoadingImpl implements _FetchSubcategoriesLoading {
         fetchSubcategoriesFailure,
     TResult Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesLoading != null) {
@@ -382,6 +472,8 @@ class __$$FetchSubcategoriesFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchSubcategoriesFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -395,6 +487,8 @@ class __$$FetchSubcategoriesFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -433,7 +527,9 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchSubcategoriesFailureImplCopyWith<_$FetchSubcategoriesFailureImpl>
@@ -449,6 +545,11 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
         fetchSubcategoriesFailure,
     required TResult Function(List<SubcategoryModel> data, String? message)
         fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(List<StudentProfileModel> data, String? message)
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesFailure(networkException);
   }
@@ -462,6 +563,11 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
         fetchSubcategoriesFailure,
     TResult? Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesFailure?.call(networkException);
   }
@@ -475,6 +581,11 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
         fetchSubcategoriesFailure,
     TResult Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesFailure != null) {
@@ -493,6 +604,12 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
         fetchSubcategoriesFailure,
     required TResult Function(_FetchSubcategoriesSuccess value)
         fetchSubcategoriesSuccess,
+    required TResult Function(_FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(_FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(_FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesFailure(this);
   }
@@ -507,6 +624,9 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
         fetchSubcategoriesFailure,
     TResult? Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult? Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesFailure?.call(this);
   }
@@ -521,6 +641,9 @@ class _$FetchSubcategoriesFailureImpl implements _FetchSubcategoriesFailure {
         fetchSubcategoriesFailure,
     TResult Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesFailure != null) {
@@ -536,7 +659,10 @@ abstract class _FetchSubcategoriesFailure implements HomeState {
       _$FetchSubcategoriesFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchSubcategoriesFailureImplCopyWith<_$FetchSubcategoriesFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -560,6 +686,8 @@ class __$$FetchSubcategoriesSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchSubcategoriesSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -615,7 +743,9 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchSubcategoriesSuccessImplCopyWith<_$FetchSubcategoriesSuccessImpl>
@@ -631,6 +761,11 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
         fetchSubcategoriesFailure,
     required TResult Function(List<SubcategoryModel> data, String? message)
         fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(List<StudentProfileModel> data, String? message)
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesSuccess(data, message);
   }
@@ -644,6 +779,11 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
         fetchSubcategoriesFailure,
     TResult? Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesSuccess?.call(data, message);
   }
@@ -657,6 +797,11 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
         fetchSubcategoriesFailure,
     TResult Function(List<SubcategoryModel> data, String? message)?
         fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesSuccess != null) {
@@ -675,6 +820,12 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
         fetchSubcategoriesFailure,
     required TResult Function(_FetchSubcategoriesSuccess value)
         fetchSubcategoriesSuccess,
+    required TResult Function(_FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(_FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(_FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesSuccess(this);
   }
@@ -689,6 +840,9 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
         fetchSubcategoriesFailure,
     TResult? Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult? Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
   }) {
     return fetchSubcategoriesSuccess?.call(this);
   }
@@ -703,6 +857,9 @@ class _$FetchSubcategoriesSuccessImpl implements _FetchSubcategoriesSuccess {
         fetchSubcategoriesFailure,
     TResult Function(_FetchSubcategoriesSuccess value)?
         fetchSubcategoriesSuccess,
+    TResult Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesSuccess != null) {
@@ -719,7 +876,604 @@ abstract class _FetchSubcategoriesSuccess implements HomeState {
 
   List<SubcategoryModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchSubcategoriesSuccessImplCopyWith<_$FetchSubcategoriesSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchInfStudentLoadingImplCopyWith<$Res> {
+  factory _$$FetchInfStudentLoadingImplCopyWith(
+          _$FetchInfStudentLoadingImpl value,
+          $Res Function(_$FetchInfStudentLoadingImpl) then) =
+      __$$FetchInfStudentLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchInfStudentLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$FetchInfStudentLoadingImpl>
+    implements _$$FetchInfStudentLoadingImplCopyWith<$Res> {
+  __$$FetchInfStudentLoadingImplCopyWithImpl(
+      _$FetchInfStudentLoadingImpl _value,
+      $Res Function(_$FetchInfStudentLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FetchInfStudentLoadingImpl implements _FetchInfStudentLoading {
+  const _$FetchInfStudentLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.fetchInfStudentLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchInfStudentLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchSubcategoriesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchSubcategoriesFailure,
+    required TResult Function(List<SubcategoryModel> data, String? message)
+        fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(List<StudentProfileModel> data, String? message)
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchSubcategoriesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult? Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchSubcategoriesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchInfStudentLoading != null) {
+      return fetchInfStudentLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchSubcategoriesLoading value)
+        fetchSubcategoriesLoading,
+    required TResult Function(_FetchSubcategoriesFailure value)
+        fetchSubcategoriesFailure,
+    required TResult Function(_FetchSubcategoriesSuccess value)
+        fetchSubcategoriesSuccess,
+    required TResult Function(_FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(_FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(_FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult? Function(_FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult? Function(_FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult? Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult Function(_FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult Function(_FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchInfStudentLoading != null) {
+      return fetchInfStudentLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchInfStudentLoading implements HomeState {
+  const factory _FetchInfStudentLoading() = _$FetchInfStudentLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchInfStudentFailureImplCopyWith<$Res> {
+  factory _$$FetchInfStudentFailureImplCopyWith(
+          _$FetchInfStudentFailureImpl value,
+          $Res Function(_$FetchInfStudentFailureImpl) then) =
+      __$$FetchInfStudentFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$FetchInfStudentFailureImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$FetchInfStudentFailureImpl>
+    implements _$$FetchInfStudentFailureImplCopyWith<$Res> {
+  __$$FetchInfStudentFailureImplCopyWithImpl(
+      _$FetchInfStudentFailureImpl _value,
+      $Res Function(_$FetchInfStudentFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$FetchInfStudentFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchInfStudentFailureImpl implements _FetchInfStudentFailure {
+  const _$FetchInfStudentFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'HomeState.fetchInfStudentFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchInfStudentFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchInfStudentFailureImplCopyWith<_$FetchInfStudentFailureImpl>
+      get copyWith => __$$FetchInfStudentFailureImplCopyWithImpl<
+          _$FetchInfStudentFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchSubcategoriesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchSubcategoriesFailure,
+    required TResult Function(List<SubcategoryModel> data, String? message)
+        fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(List<StudentProfileModel> data, String? message)
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchSubcategoriesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult? Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchSubcategoriesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchInfStudentFailure != null) {
+      return fetchInfStudentFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchSubcategoriesLoading value)
+        fetchSubcategoriesLoading,
+    required TResult Function(_FetchSubcategoriesFailure value)
+        fetchSubcategoriesFailure,
+    required TResult Function(_FetchSubcategoriesSuccess value)
+        fetchSubcategoriesSuccess,
+    required TResult Function(_FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(_FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(_FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult? Function(_FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult? Function(_FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult? Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult Function(_FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult Function(_FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchInfStudentFailure != null) {
+      return fetchInfStudentFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchInfStudentFailure implements HomeState {
+  const factory _FetchInfStudentFailure(
+      final NetworkExceptions? networkException) = _$FetchInfStudentFailureImpl;
+
+  NetworkExceptions? get networkException;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchInfStudentFailureImplCopyWith<_$FetchInfStudentFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchInfStudentSuccessImplCopyWith<$Res> {
+  factory _$$FetchInfStudentSuccessImplCopyWith(
+          _$FetchInfStudentSuccessImpl value,
+          $Res Function(_$FetchInfStudentSuccessImpl) then) =
+      __$$FetchInfStudentSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<StudentProfileModel> data, String? message});
+}
+
+/// @nodoc
+class __$$FetchInfStudentSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$FetchInfStudentSuccessImpl>
+    implements _$$FetchInfStudentSuccessImplCopyWith<$Res> {
+  __$$FetchInfStudentSuccessImplCopyWithImpl(
+      _$FetchInfStudentSuccessImpl _value,
+      $Res Function(_$FetchInfStudentSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$FetchInfStudentSuccessImpl(
+      null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<StudentProfileModel>,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchInfStudentSuccessImpl implements _FetchInfStudentSuccess {
+  const _$FetchInfStudentSuccessImpl(
+      final List<StudentProfileModel> data, this.message)
+      : _data = data;
+
+  final List<StudentProfileModel> _data;
+  @override
+  List<StudentProfileModel> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'HomeState.fetchInfStudentSuccess(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchInfStudentSuccessImpl &&
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_data), message);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchInfStudentSuccessImplCopyWith<_$FetchInfStudentSuccessImpl>
+      get copyWith => __$$FetchInfStudentSuccessImplCopyWithImpl<
+          _$FetchInfStudentSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchSubcategoriesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchSubcategoriesFailure,
+    required TResult Function(List<SubcategoryModel> data, String? message)
+        fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(List<StudentProfileModel> data, String? message)
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentSuccess(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchSubcategoriesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult? Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentSuccess?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchSubcategoriesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(List<StudentProfileModel> data, String? message)?
+        fetchInfStudentSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchInfStudentSuccess != null) {
+      return fetchInfStudentSuccess(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchSubcategoriesLoading value)
+        fetchSubcategoriesLoading,
+    required TResult Function(_FetchSubcategoriesFailure value)
+        fetchSubcategoriesFailure,
+    required TResult Function(_FetchSubcategoriesSuccess value)
+        fetchSubcategoriesSuccess,
+    required TResult Function(_FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(_FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(_FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult? Function(_FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult? Function(_FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult? Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+  }) {
+    return fetchInfStudentSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult Function(_FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult Function(_FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult Function(_FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(_FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(_FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchInfStudentSuccess != null) {
+      return fetchInfStudentSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchInfStudentSuccess implements HomeState {
+  const factory _FetchInfStudentSuccess(
+          final List<StudentProfileModel> data, final String? message) =
+      _$FetchInfStudentSuccessImpl;
+
+  List<StudentProfileModel> get data;
+  String? get message;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchInfStudentSuccessImplCopyWith<_$FetchInfStudentSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

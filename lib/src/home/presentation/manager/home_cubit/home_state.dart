@@ -10,4 +10,11 @@ class HomeState with _$HomeState {
   const factory HomeState.fetchSubcategoriesSuccess(
           List<SubcategoryModel> data, String? message) =
       _FetchSubcategoriesSuccess;
+
+  const factory HomeState.fetchInfStudentLoading() = _FetchInfStudentLoading;
+  const factory HomeState.fetchInfStudentFailure(
+      NetworkExceptions? networkException) = _FetchInfStudentFailure;
+  const factory HomeState.fetchInfStudentSuccess(
+          List<StudentProfileModel> data, String? message) =
+      _FetchInfStudentSuccess;
 }
