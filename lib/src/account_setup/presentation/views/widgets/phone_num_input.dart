@@ -7,7 +7,9 @@ import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 
 class PhoneNumberInputScreen extends StatefulWidget {
-  const PhoneNumberInputScreen({super.key});
+  final Function(String) onPhoneNumberChanged;
+
+  const PhoneNumberInputScreen({super.key, required this.onPhoneNumberChanged});
 
   @override
   PhoneNumberInputScreenState createState() => PhoneNumberInputScreenState();
@@ -19,6 +21,7 @@ class PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
   bool isValid = true;
   bool _isFocused = false;
   late FocusNode _focusNode;
+
   @override
   void initState() {
     super.initState();
@@ -29,7 +32,6 @@ class PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
   @override
   void dispose() {
     _focusNode.dispose();
-
     super.dispose();
   }
 
@@ -46,15 +48,13 @@ class PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
       child: InternationalPhoneNumberInput(
         focusNode: _focusNode,
         onInputChanged: (PhoneNumber number) {
-          // ignore: avoid_print
-          print(number.phoneNumber);
+          widget.onPhoneNumberChanged(
+              number.phoneNumber!); 
         },
         onInputValidated: (bool value) {
           setState(() {
             isValid = value;
           });
-          // ignore: avoid_print
-          print(value ? 'Valid' : 'Invalid');
         },
         selectorConfig: const SelectorConfig(
           selectorType: PhoneInputSelectorType.DIALOG,
@@ -102,10 +102,7 @@ class PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
             borderSide: const BorderSide(color: Colors.red),
           ),
         ),
-        onSaved: (PhoneNumber number) {
-          // ignore: avoid_print
-          print('On Saved: $number');
-        },
+        onSaved: (PhoneNumber number) {},
       ),
     );
   }

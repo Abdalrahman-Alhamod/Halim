@@ -1,5 +1,6 @@
 // ignore_for_file: unused_field
 
+import 'package:halim/src/home/data/models/student_profile_model.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 
 import '../../../../core/data/model/base_model.dart';
@@ -27,5 +28,10 @@ class HomeRemoteDataSource {
         ),
       ),
     );
+  }
+
+  Future<BaseModel> getInfStudent(int studentId) async {
+    final response = await _apiServices.get(AppUrl.student, hasToken: true);
+    return BaseModel.fromJson(response, (json) => StudentProfileModel.fromJson(json));
   }
 }

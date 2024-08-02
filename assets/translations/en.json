@@ -372,11 +372,11 @@
       "receipt": "E-Receipt"
     },
     "Recharge": {
-      "valueShip": "Recharge value",
-      "dateShip": "Date of Recharge",
+      "valueShip": "Transaction value",
+      "dateShip": "Date of Transaction",
       "idEmp": "Responsible employee ID",
-      "numShip": "Recharge process number",
-      "rechargeOperations": "Recharge operations"
+      "numShip": "Transaction process number",
+      "rechargeOperations": "Transaction operations"
     }
   },
   "Search": {

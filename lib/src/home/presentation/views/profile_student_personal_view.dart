@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../core/assets/app_images.dart';
+import 'package:halim/src/home/data/models/student_profile_model.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
@@ -16,6 +16,8 @@ class ProfileStudentPersonalView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final StudentProfileModel studentModel = StudentProfileModel();
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -52,15 +54,15 @@ class ProfileStudentPersonalView extends StatelessWidget {
           children: [
             Column(
               children: [
-                const CircleAvatar(
-                  backgroundImage: AssetImage(AppImages.testMentor),
+                CircleAvatar(
+                  backgroundImage: NetworkImage(studentModel.image ?? ''),
                   radius: 70,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
-                  LocaleKeys.CourseDetails_Test_courseMentorName.tr(),
+                  studentModel.firstName ?? '',
                   style: const TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -70,7 +72,7 @@ class ProfileStudentPersonalView extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  "${LocaleKeys.StudentProfile_Student.tr()} ${LocaleKeys.StudentProfile_Test.tr()} ",
+                  "${LocaleKeys.StudentProfile_Student.tr()} ${studentModel.educationLevel} ",
                   style: TextStyle(
                     fontSize: 18,
                     color: context.isDarkMode
@@ -86,7 +88,7 @@ class ProfileStudentPersonalView extends StatelessWidget {
             ),
             AchievementsNumbers(
               rank: Random().nextInt(20),
-              points: Random().nextInt(1000),
+              points: studentModel.pointsBalance ?? 0,
               totalHours: 683,
               totalCourses: 7,
               contributions: 120,

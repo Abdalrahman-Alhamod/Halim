@@ -82,7 +82,7 @@ void chooseInterestsBottomSheet(BuildContext context) {
                 children: [
                   CustomFlatButton(
                     onPressed: () {
-                      GoRouter.of(context).push(AppRoute.kHome);
+                      // GoRouter.of(context).push(AppRoute.kHome);
                     },
                     title: LocaleKeys.FillYourProfile_Interests_skip.tr(),
                     width: MediaQuery.of(context).size.width * 0.40,
@@ -97,7 +97,7 @@ void chooseInterestsBottomSheet(BuildContext context) {
                   ),
                   CustomFlatButton(
                     onPressed: () {
-                      GoRouter.of(context).push(AppRoute.kCreatePin);
+                      GoRouter.of(context).push(AppRoute.kHome);
                     },
                     title: LocaleKeys.FillYourProfile_Interests_continue.tr(),
                     width: MediaQuery.of(context).size.width * 0.40,

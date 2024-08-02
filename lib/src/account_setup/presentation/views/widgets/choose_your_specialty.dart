@@ -6,7 +6,10 @@ import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/themes/app_colors.dart';
 
 class ChooseYourSpecialtyWithRegister extends StatefulWidget {
-  const ChooseYourSpecialtyWithRegister({super.key});
+  final Function(String) onSpecialtySelected;
+
+  const ChooseYourSpecialtyWithRegister(
+      {super.key, required this.onSpecialtySelected});
 
   @override
   ChooseYourSpecialtyWithRegisterState createState() =>
@@ -100,6 +103,8 @@ class ChooseYourSpecialtyWithRegisterState
                         setState(() {
                           controller.text = filteredOptions[index];
                         });
+                        widget.onSpecialtySelected(
+                            filteredOptions[index]); // تحديث النموذج
                         Navigator.of(context).pop();
                       },
                     );

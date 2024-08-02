@@ -76,6 +76,9 @@ abstract final class AppUrl {
 
   static final categories = "${baseUrl}categories";
   static final subcategories = "${baseUrl}subcategories";
+
+  ///<------------------------------------------------------------------------------
+  static final student = "${baseUrl}students";
   static final courses = "${baseUrl}courses";
   static final mentors = "${baseUrl}mentors";
 }

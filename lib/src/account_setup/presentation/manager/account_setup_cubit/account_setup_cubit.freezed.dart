@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'logout_cubit.dart';
+part of 'account_setup_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,13 +15,14 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$LogoutState {
+mixin _$AccountSetupState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) success,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +30,7 @@ mixin _$LogoutState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? success,
+    TResult? Function(StudentInfomationsModel data, String? message)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +38,7 @@ mixin _$LogoutState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? success,
+    TResult Function(StudentInfomationsModel data, String? message)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,23 +70,23 @@ mixin _$LogoutState {
 }
 
 /// @nodoc
-abstract class $LogoutStateCopyWith<$Res> {
-  factory $LogoutStateCopyWith(
-          LogoutState value, $Res Function(LogoutState) then) =
-      _$LogoutStateCopyWithImpl<$Res, LogoutState>;
+abstract class $AccountSetupStateCopyWith<$Res> {
+  factory $AccountSetupStateCopyWith(
+          AccountSetupState value, $Res Function(AccountSetupState) then) =
+      _$AccountSetupStateCopyWithImpl<$Res, AccountSetupState>;
 }
 
 /// @nodoc
-class _$LogoutStateCopyWithImpl<$Res, $Val extends LogoutState>
-    implements $LogoutStateCopyWith<$Res> {
-  _$LogoutStateCopyWithImpl(this._value, this._then);
+class _$AccountSetupStateCopyWithImpl<$Res, $Val extends AccountSetupState>
+    implements $AccountSetupStateCopyWith<$Res> {
+  _$AccountSetupStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -98,13 +99,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$LogoutStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$AccountSetupStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -115,7 +116,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'LogoutState.initial()';
+    return 'AccountSetupState.initial()';
   }
 
   @override
@@ -133,7 +134,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) success,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        success,
   }) {
     return initial();
   }
@@ -144,7 +146,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? success,
+    TResult? Function(StudentInfomationsModel data, String? message)? success,
   }) {
     return initial?.call();
   }
@@ -155,7 +157,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? success,
+    TResult Function(StudentInfomationsModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -202,7 +204,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements LogoutState {
+abstract class _Initial implements AccountSetupState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -215,13 +217,13 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$LogoutStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$AccountSetupStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -232,7 +234,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'LogoutState.loading()';
+    return 'AccountSetupState.loading()';
   }
 
   @override
@@ -250,7 +252,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) success,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        success,
   }) {
     return loading();
   }
@@ -261,7 +264,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? success,
+    TResult? Function(StudentInfomationsModel data, String? message)? success,
   }) {
     return loading?.call();
   }
@@ -272,7 +275,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? success,
+    TResult Function(StudentInfomationsModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -319,7 +322,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements LogoutState {
+abstract class _Loading implements AccountSetupState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -336,13 +339,13 @@ abstract class _$$FailureImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FailureImplCopyWithImpl<$Res>
-    extends _$LogoutStateCopyWithImpl<$Res, _$FailureImpl>
+    extends _$AccountSetupStateCopyWithImpl<$Res, _$FailureImpl>
     implements _$$FailureImplCopyWith<$Res> {
   __$$FailureImplCopyWithImpl(
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -357,7 +360,7 @@ class __$$FailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
@@ -382,7 +385,7 @@ class _$FailureImpl implements _Failure {
 
   @override
   String toString() {
-    return 'LogoutState.failure(networkException: $networkException)';
+    return 'AccountSetupState.failure(networkException: $networkException)';
   }
 
   @override
@@ -397,7 +400,7 @@ class _$FailureImpl implements _Failure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -411,7 +414,8 @@ class _$FailureImpl implements _Failure {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) success,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        success,
   }) {
     return failure(networkException);
   }
@@ -422,7 +426,7 @@ class _$FailureImpl implements _Failure {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? success,
+    TResult? Function(StudentInfomationsModel data, String? message)? success,
   }) {
     return failure?.call(networkException);
   }
@@ -433,7 +437,7 @@ class _$FailureImpl implements _Failure {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? success,
+    TResult Function(StudentInfomationsModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -480,13 +484,13 @@ class _$FailureImpl implements _Failure {
   }
 }
 
-abstract class _Failure implements LogoutState {
+abstract class _Failure implements AccountSetupState {
   const factory _Failure(final NetworkExceptions? networkException) =
       _$FailureImpl;
 
   NetworkExceptions? get networkException;
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -499,25 +503,30 @@ abstract class _$$SuccessImplCopyWith<$Res> {
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String? message});
+  $Res call({StudentInfomationsModel data, String? message});
 }
 
 /// @nodoc
 class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$LogoutStateCopyWithImpl<$Res, _$SuccessImpl>
+    extends _$AccountSetupStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
   __$$SuccessImplCopyWithImpl(
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? data = null,
     Object? message = freezed,
   }) {
     return _then(_$SuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as StudentInfomationsModel,
       freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -529,14 +538,16 @@ class __$$SuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(this.message);
+  const _$SuccessImpl(this.data, this.message);
 
+  @override
+  final StudentInfomationsModel data;
   @override
   final String? message;
 
   @override
   String toString() {
-    return 'LogoutState.success(message: $message)';
+    return 'AccountSetupState.success(data: $data, message: $message)';
   }
 
   @override
@@ -544,13 +555,14 @@ class _$SuccessImpl implements _Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl &&
+            (identical(other.data, data) || other.data == data) &&
             (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, message);
+  int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -564,9 +576,10 @@ class _$SuccessImpl implements _Success {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(NetworkExceptions? networkException) failure,
-    required TResult Function(String? message) success,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        success,
   }) {
-    return success(message);
+    return success(data, message);
   }
 
   @override
@@ -575,9 +588,9 @@ class _$SuccessImpl implements _Success {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(NetworkExceptions? networkException)? failure,
-    TResult? Function(String? message)? success,
+    TResult? Function(StudentInfomationsModel data, String? message)? success,
   }) {
-    return success?.call(message);
+    return success?.call(data, message);
   }
 
   @override
@@ -586,11 +599,11 @@ class _$SuccessImpl implements _Success {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(NetworkExceptions? networkException)? failure,
-    TResult Function(String? message)? success,
+    TResult Function(StudentInfomationsModel data, String? message)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(message);
+      return success(data, message);
     }
     return orElse();
   }
@@ -633,12 +646,15 @@ class _$SuccessImpl implements _Success {
   }
 }
 
-abstract class _Success implements LogoutState {
-  const factory _Success(final String? message) = _$SuccessImpl;
+abstract class _Success implements AccountSetupState {
+  const factory _Success(
+          final StudentInfomationsModel data, final String? message) =
+      _$SuccessImpl;
 
+  StudentInfomationsModel get data;
   String? get message;
 
-  /// Create a copy of LogoutState
+  /// Create a copy of AccountSetupState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>

@@ -32,4 +32,14 @@ class HomeRepoImpl extends HomeRepo {
       );
     }
   }
+
+  @override
+  Future<ApiResponse<BaseModel>> getInfStudent(int studentId) async {
+    try {
+      final response = await _homeRemoteDateSource.getInfStudent(studentId);
+      return ApiResponse.success(response);
+    } catch (error) {
+      return ApiResponse.failure(NetworkExceptions.getException(error));
+    }
+  }
 }

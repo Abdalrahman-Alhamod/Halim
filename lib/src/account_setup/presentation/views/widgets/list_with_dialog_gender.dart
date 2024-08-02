@@ -6,7 +6,8 @@ import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/themes/app_colors.dart';
 
 class ListWithDialogGender extends StatefulWidget {
-  const ListWithDialogGender({super.key});
+  final Function(String) onGenderSelected;
+  const ListWithDialogGender({super.key, required this.onGenderSelected});
 
   @override
   ListWithDialogGenderState createState() => ListWithDialogGenderState();
@@ -62,6 +63,7 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
                         setState(() {
                           controller.text = filteredOptions[index];
                         });
+                        widget.onGenderSelected(filteredOptions[index]);
                         Navigator.of(context).pop();
                       },
                     );

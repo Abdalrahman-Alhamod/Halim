@@ -1,22 +1,23 @@
-import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ImageServices {
-  File? imageFile;
+  String? imageFile;
   final State state;
   double aspectRatio = 1.0;
-  void Function() refreshFunction;
+  void Function(String?) refreshFunction;
 
   ImageServices(this.state, this.refreshFunction);
+
   Future<void> imageFromGallery(BuildContext context) async {
-    final XFile? image =
-        await ImagePicker().pickImage(source: ImageSource.gallery);
+    final XFile? image = await ImagePicker().pickImage(
+      source: ImageSource.gallery,
+      imageQuality: 25,
+    );
     if (image != null && context.mounted) {
-      imageFile = File(image.path);
-
-      refreshFunction.call();
-
+      imageFile = image.path;
+      refreshFunction(imageFile);
       Navigator.of(context).pop();
     }
   }
@@ -25,9 +26,8 @@ class ImageServices {
     final XFile? image =
         await ImagePicker().pickImage(source: ImageSource.camera);
     if (image != null && context.mounted) {
-      imageFile = File(image.path);
-      // ignore: invalid_use_of_protected_member
-      state.setState(() {});
+      imageFile = image.path;
+      refreshFunction(imageFile);
       Navigator.of(context).pop();
     }
   }
