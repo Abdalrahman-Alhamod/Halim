@@ -263,6 +263,21 @@ void setupLocators() {
     ),
   );
 
+  // Profile Settings
+  locator.registerLazySingleton<ProfileSettingsRepo>(
+    () => ProfileSettingsRepolmpl(
+      locator.get<ProfileSettingsLocalDataSource>(),
+      locator.get<ProfileSettingsRemoteDataSource>(),
+    ),
+  );
+  // Account Setup
+  locator.registerLazySingleton<AccountSetupRepo>(
+    () => AccountSetupImpl(
+      locator.get<AccountSetupLocalDataSource>(),
+      locator.get<AccountSetupRemoteDataSource>(),
+    ),
+  );
+
   ///** Factory **///
 
   /// Cubits
@@ -307,6 +322,7 @@ void setupLocators() {
       locator.get<MentorDetailsRepo>(),
     ),
   );
+
   // Profile Settigs
   locator.registerFactory<ProfileSettingsCubit>(
     () => ProfileSettingsCubit(
