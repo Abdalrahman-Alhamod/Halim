@@ -53,7 +53,9 @@
       "about": "حول",
       "lessons": "الدروس",
       "reviews": "المراجعات",
-      "community": "المجتمع"
+      "community": "المجتمع",
+      "sections": "قسم",
+      "section": "القسم"
     },
     "About": {
       "mentor": "المعلّم",
@@ -213,7 +215,10 @@
       "wrongAnswers": "الأجوبة الخاطئة",
       "seeMyAnswers": "عرض إجاباتي",
       "returnToCourse": "العودة إلى الدورة",
-      "quizDone": "انتهى الاختبار"
+      "quizDone": "انتهى الاختبار",
+      "lastAttempt": "آخر محاولة",
+      "areYouSureYouWantToExit": "هل أنت متأكد من أنك تريد الخروج من الاختبار؟",
+      "youAnswersWillBeSubmitted": "سيتم تقديم إجاباتك، وستفقد فرصتك حتى تتاح الفرصة التالية."
     },
     "Video": {
       "loading": "جاري التحميل...",

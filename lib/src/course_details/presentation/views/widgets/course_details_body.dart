@@ -12,36 +12,38 @@ class CourseDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      children: [
-        const CourseIntroVideo(),
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 8.0,
-            left: 8.0,
-            right: 8.0,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const CourseMainDetailsSection(),
-              const SizedBox(
-                height: 20,
-              ),
-              Divider(
-                color: context.isDarkMode
-                    ? Colors.grey.shade800
-                    : Colors.grey.shade700,
-              ),
-              const CourseMoreDetailsSection(),
-              const SizedBox(
-                height: 150,
-              ),
-            ],
-          ),
-        )
-      ],
+    return SafeArea(
+      child: ListView(
+        shrinkWrap: true,
+        children: [
+          const CourseIntroVideo(),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 8.0,
+              left: 8.0,
+              right: 8.0,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const CourseMainDetailsSection(),
+                const SizedBox(
+                  height: 20,
+                ),
+                Divider(
+                  color: context.isDarkMode
+                      ? Colors.grey.shade800
+                      : Colors.grey.shade700,
+                ),
+                const CourseMoreDetailsSection(),
+                const SizedBox(
+                  height: 120,
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

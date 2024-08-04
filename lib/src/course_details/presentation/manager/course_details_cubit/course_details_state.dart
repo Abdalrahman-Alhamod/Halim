@@ -19,4 +19,45 @@ class CourseDetailsState with _$CourseDetailsState {
   const factory CourseDetailsState.fetchCourseAboutSectionSuccess(
           CourseAboutSectionModel data, String? message) =
       _FetchCourseAboutSectionSuccess;
+
+  const factory CourseDetailsState.loadingCourseLessonsSectionPagination() =
+      _LoadingCourseLessonsSectionPagination;
+  const factory CourseDetailsState.failureCourseLessonsSectionPagination(
+          NetworkExceptions? networkException) =
+      _FailureCourseLessonsSectionPagination;
+  const factory CourseDetailsState.successCourseLessonsSectionPagination(
+      String? message) = _SuccessCourseLessonsSectionPagination;
+
+  const factory CourseDetailsState.fetchCourseLessonDetailsLoading() =
+      _FetchCourseLessonDetailsLoading;
+  const factory CourseDetailsState.fetchCourseLessonDetailsFailure(
+      NetworkExceptions? networkException) = _FetchCourseLessonDetailsFailure;
+  const factory CourseDetailsState.fetchCourseLessonDetailsSuccess(
+          CourseLessonModel data, String? message) =
+      _FetchCourseLessonDetailsSuccess;
+
+  const factory CourseDetailsState.submitCourseLessonCompletionLoading() =
+      _SubmitCourseLessonCompletionLoading;
+  const factory CourseDetailsState.submitCourseLessonCompletionFailure(
+    NetworkExceptions? networkException,
+  ) = _SubmitCourseLessonCompletionFailure;
+  const factory CourseDetailsState.submitCourseLessonCompletionSuccess(
+    String? message,
+  ) = _SubmitCourseLessonCompletionSuccess;
+
+  const factory CourseDetailsState.saveCourseLoading(
+    int courseId,
+  ) = _SaveCourseLoading;
+  const factory CourseDetailsState.saveCourseFailure(
+    NetworkExceptions? networkException,
+    int courseId,
+  ) = _SaveCourseFailure;
+  const factory CourseDetailsState.saveCourseSuccess(
+    String? message,
+    int courseId,
+  ) = _SaveCourseSuccess;
+  const factory CourseDetailsState.unsaveCourseSuccess(
+    String? message,
+    int courseId,
+  ) = _UnsaveCourseSuccess;
 }

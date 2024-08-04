@@ -53,7 +53,9 @@
       "about": "About",
       "lessons": "Lessons",
       "reviews": "Reviews",
-      "community": "Community"
+      "community": "Community",
+      "sections": "Sections",
+      "section": "Section"
     },
     "About": {
       "mentor": "Mentor",
@@ -140,7 +142,7 @@
     },
     "enrollCourse": "Enroll Course",
     "Lessons": {
-      "lesson": "Lesson",
+      "lesson": "Lessons",
       "min": "min",
       "Type": {
         "video": "Video",
@@ -213,7 +215,10 @@
       "wrongAnswers": "Wrong answers",
       "seeMyAnswers": "See my answers",
       "returnToCourse": "Return to course",
-      "quizDone": "Quiz Done"
+      "quizDone": "Quiz Done",
+      "lastAttempt": "Last attempt",
+      "areYouSureYouWantToExit": "Are you sure you want to exit the quiz?",
+      "youAnswersWillBeSubmitted": "Your answers will be submitted, and you will lose your chance until the next opportunity is available."
     },
     "Video": {
       "loading": "Loading...",

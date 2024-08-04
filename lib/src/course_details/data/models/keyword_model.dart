@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
+import 'package:flutter/foundation.dart';
 part 'keyword_model.freezed.dart';
 part 'keyword_model.g.dart';
 

@@ -108,7 +108,7 @@ class AppRoute {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const SplashView();
+          return const PopScope(canPop: false, child: SplashView());
         },
       ),
       GoRoute(
@@ -159,10 +159,12 @@ class AppRoute {
       GoRoute(
         path: kQuizQuestionsView,
         builder: (BuildContext context, GoRouterState state) {
-          return QuizQuestionsView(
-            isAnswer: (GoRouterState.of(context).extra
-                    as Map<String, dynamic>)[NavKeys.IsQuizQuestionStateAnswers]
-                as bool,
+          return PopScope(
+            canPop: false,
+            child: QuizQuestionsView(
+              isAnswer: (GoRouterState.of(context).extra as Map<String,
+                  dynamic>)[NavKeys.IsQuizQuestionStateAnswers] as bool,
+            ),
           );
         },
       ),

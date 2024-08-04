@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
+import 'package:flutter/foundation.dart';
 part 'student_card_model.freezed.dart';
 part 'student_card_model.g.dart';
 

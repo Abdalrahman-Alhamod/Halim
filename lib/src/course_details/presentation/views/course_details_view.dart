@@ -11,7 +11,7 @@ class CourseDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     context.read<CourseDetailsCubit>().courseId = courseId;
-    
+
     return const Scaffold(
       bottomSheet: CourseDetailsBottomSheet(),
       body: Stack(

@@ -1,20 +1,20 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../core/assets/app_images.dart';
-// ignore: unused_import
-import 'package:halim/core/utils/app_route.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/widgets/custome_flat_button.dart';
 import '../../../../shared/model/course_card_model.dart';
-import '../../../../shared/model/subcategory_model.dart';
 import '../widgets/card_course.dart';
 
-void showRemoveBookmarkBottomSheet(
-    {required BuildContext context, required void Function() onConfirm}) {
+void showRemoveBookmarkBottomSheet({
+  required BuildContext context,
+  required CourseCardModel courseCardModel,
+}) {
   showModalBottomSheet(
     context: context,
     builder: (BuildContext context) {
@@ -52,19 +52,7 @@ void showRemoveBookmarkBottomSheet(
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: CardCourse(
-                    courseCardModel: CourseCardModel(
-                      id: 0,
-                      title: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
-                      image: AppImages.testCourseCover,
-                      price: 48,
-                      subcategory: SubcategoryModel(
-                        id: 0,
-                        name: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
-                      ),
-                      enrollmentsCount: 546,
-                      reviewsAvg: 4.8,
-                      isSaved: true,
-                    ),
+                    courseCardModel: courseCardModel,
                     isEnabled: false,
                   ),
                 ),
@@ -89,8 +77,10 @@ void showRemoveBookmarkBottomSheet(
                     const Spacer(flex: 1),
                     CustomFlatButton(
                       onPressed: () {
-                        onConfirm.call();
                         context.pop();
+                        context
+                            .read<CourseDetailsCubit>()
+                            .saveCourse(courseId: courseCardModel.id ?? -1);
                       },
                       title: LocaleKeys.MyCourses_Bookmark_yesRemove.tr(),
                       width: MediaQuery.of(context).size.width * 0.40,

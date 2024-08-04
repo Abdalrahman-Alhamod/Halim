@@ -4,6 +4,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:chewie/chewie.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../../../../../../core/functions/show_toast.dart';
+import '../../../../../../core/functions/toast_status.dart';
 import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
 import 'package:video_player/video_player.dart';
@@ -46,6 +50,13 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
     }
     try {
       await _videoPlayerController.initialize();
+
+      _videoPlayerController.addListener(() {
+        if (_videoPlayerController.value.position >=
+            _videoPlayerController.value.duration) {
+          context.read<CourseDetailsCubit>().submitCourseLessonCompletion();
+        }
+      });
       setState(
         () {
           _chewieController = ChewieController(
@@ -81,6 +92,12 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
     } catch (e) {
       // Handle error
       debugPrint('Error initializing video: $e');
+      showTOAST(
+        // ignore: use_build_context_synchronously
+        context,
+        title: 'Loading Video Error',
+        status: ToastStatus.failure,
+      );
     }
   }
 

@@ -1,8 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/course_details/data/models/lesson_block_model.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../../core/utils/app_route.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
@@ -14,36 +17,50 @@ import '../../../../../domain/entities/course_lesson_type.dart';
 class CourseLessonBlock extends StatelessWidget {
   const CourseLessonBlock({
     super.key,
-    required this.type,
-    required this.title,
-    required this.duration,
-    required this.isLocked,
-    required this.isDone,
-    this.questionNumber,
-    required this.isDownloaded,
+    required this.lessonBlockModel,
+    required this.sectionId,
   });
 
-  final CourseLessonType type;
-  final String title;
-  final int duration;
-  final bool isLocked;
-  final bool isDone;
-  final int? questionNumber;
-  final bool isDownloaded;
+  final LessonBlockModel lessonBlockModel;
+  final int sectionId;
   @override
   Widget build(BuildContext context) {
+    dynamic lesson;
+    late CourseLessonType type;
+    int questionsNumber = 0;
+    lessonBlockModel.when(
+      reading: (ReadingBlockModel reading) {
+        lesson = reading;
+        type = CourseLessonType.reading;
+      },
+      quiz: (QuizBlockModel quiz) {
+        lesson = quiz;
+        type = CourseLessonType.quiz;
+        questionsNumber = quiz.quizDetails?.questionsNumber ?? 0;
+      },
+      video: (VideoBlockModel video) {
+        lesson = video;
+        type = CourseLessonType.video;
+      },
+    );
     return GestureDetector(
-      onTap: isLocked
-          ? null
-          : () {
+      onTap: lesson.isPreview ?? false
+          ? () {
+              context.read<CourseDetailsCubit>().sectionId = sectionId;
+              context.read<CourseDetailsCubit>().lessonId = lesson.id;
+              context.read<CourseDetailsCubit>().getCourseLessonDetails();
               if (type == CourseLessonType.reading) {
+                context
+                    .read<CourseDetailsCubit>()
+                    .submitCourseLessonCompletion();
                 GoRouter.of(context).push(AppRoute.kCourseReadingView);
               } else if (type == CourseLessonType.quiz) {
                 GoRouter.of(context).push(AppRoute.kCourseQuizView);
               } else if (type == CourseLessonType.video) {
                 GoRouter.of(context).push(AppRoute.kCourseVideoView);
               }
-            },
+            }
+          : null,
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 2),
         height: 90,
@@ -72,12 +89,12 @@ class CourseLessonBlock extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: CourseLessonBlockElements(
             type: type,
-            title: title,
-            duration: duration,
-            isLocked: isLocked,
-            isDone: isDone,
-            questionNumber: questionNumber,
-            isDownloaded: isDownloaded,
+            title: lesson.title ?? '',
+            duration: lesson.duration ?? 0,
+            isLocked: !(lesson.isPreview ?? false),
+            isDone: lesson.isCompleted ?? false,
+            questionNumber: questionsNumber,
+            isDownloaded: false,
           ),
         ),
       ),
@@ -156,11 +173,12 @@ class CourseLessonBlockElements extends StatelessWidget {
             ],
           ),
         ),
-        !isLocked
-            ? DownloadIconButton(
-                isDownloaded: isDownloaded,
-              )
-            : const SizedBox(),
+        // TODO implement downloading
+        // !isLocked
+        //     ? DownloadIconButton(
+        //         isDownloaded: isDownloaded,
+        //       )
+        //     : const SizedBox(),
       ],
     );
   }

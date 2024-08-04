@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/helpers/string_helper.dart';
 import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
@@ -10,7 +11,7 @@ class QuizGradeListTile extends StatelessWidget {
     super.key,
     this.grade,
   });
-  final int? grade;
+  final num? grade;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -34,14 +35,14 @@ class QuizGradeListTile extends StatelessWidget {
           width: 10,
         ),
         Text(
-          '${grade ?? '--'}%',
+          grade != null ? '${StringHelper.formatNum(grade!)}%' : '--%',
           style: TextStyle(
             fontSize: 18,
             color: grade == null
                 ? context.isDarkMode
                     ? Colors.grey.shade200
                     : Colors.grey.shade600
-                : grade! < 60
+                : grade! < 80
                     ? Colors.red
                     : Colors.green,
           ),

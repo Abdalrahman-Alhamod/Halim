@@ -154,4 +154,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
   static const videoUrl =
       'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4';
+  static const testVideoUrl =
+      'https://vz-108fc501-f82.b-cdn.net/ee54aba8-2e4b-4516-8923-2183fac5c068/playlist.m3u8';
+  static const testIframeUrl =
+      'https://iframe.mediadelivery.net/play/280915/ee54aba8-2e4b-4516-8923-2183fac5c068';
 }

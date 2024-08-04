@@ -62,8 +62,9 @@ abstract final class AppUrl {
   static const courseCardIncludes = "subcategory,enrollments-count,reviews-avg";
   static const mentorCardIncludes = "profile";
   static const courseMainSectionIncludes =
-      "subcategory,enrollments-count,reviews-avg,reviews-count,level";
+      "subcategory,enrollments-count,reviews-avg,reviews-count,level,lessons-count,sections-count";
   static const courseAboutSectionIncludes = "mentor,keywords,profile";
+  static const courseLessonsSectionIncludes = "lessons,lessons-count,duration";
 
   ///<------------------------------------------------------------------------------
 
@@ -74,6 +75,22 @@ abstract final class AppUrl {
 
   ///<------------------------------------------------------------------------------
 
+  static const kSections = "sections";
+  static const kLessons = "lessons";
+  // Quiz Keys
+  static const kUntaken = "untaken";
+  static const kPassed = "passed";
+  static const kFailed = "failed";
+  static const kMultipleChoice = "multiple choice";
+  static const kCheckbox = "checkbox";
+  static const kResult = "result";
+
+  static const kSave = "save";
+  static const kSaved = "saved";
+  static const kUnsaved = "unsaved";
+
+
+  ///<------------------------------------------------------------------------------
   static final categories = "${baseUrl}categories";
   static final subcategories = "${baseUrl}subcategories";
 

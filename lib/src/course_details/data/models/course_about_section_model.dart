@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
+import 'package:flutter/foundation.dart';
 import '../../../shared/model/mentor_card_model.dart';
 import 'keyword_model.dart';
 

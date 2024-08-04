@@ -1,7 +1,5 @@
-
-
 import 'package:freezed_annotation/freezed_annotation.dart';
-
+import 'package:flutter/foundation.dart';
 import '../../../shared/model/discount_model.dart';
 import '../../../shared/model/subcategory_model.dart';
 import 'level_model.dart';
@@ -25,6 +23,8 @@ class CourseMainSectionModel with _$CourseMainSectionModel {
     @JsonKey(name: 'reviews_avg') num? reviewsAvg,
     @JsonKey(name: 'is_saved') bool? isSaved,
     @JsonKey(name: 'is_enrolled') bool? isEnrolled,
+    @JsonKey(name: 'lessons_count') int? lessonsCount,
+    @JsonKey(name: 'sections_count') int? sectionsCount,
     DiscountModel? discount,
   }) = _CourseMainSectionModel;
 

@@ -107,7 +107,7 @@ class __$$KeywordModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KeywordModelImpl implements _KeywordModel {
+class _$KeywordModelImpl with DiagnosticableTreeMixin implements _KeywordModel {
   const _$KeywordModelImpl({this.id, this.name});
 
   factory _$KeywordModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -119,8 +119,17 @@ class _$KeywordModelImpl implements _KeywordModel {
   final String? name;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'KeywordModel(id: $id, name: $name)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'KeywordModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('name', name));
   }
 
   @override

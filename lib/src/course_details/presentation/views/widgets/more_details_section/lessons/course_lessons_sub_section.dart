@@ -1,5 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/src/course_details/data/models/lessons_section_model.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lesson_block.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';
@@ -8,33 +11,31 @@ import 'expand_view/expand_child_widget.dart';
 class CourseLessonsSubSection extends StatelessWidget {
   const CourseLessonsSubSection({
     super.key,
-    required this.title,
-    required this.duration,
-    required this.widgets,
-    required this.description,
+    required this.lessonsSectionModel,
   });
-  final String title;
-  final String description;
-  final int duration;
-  final List<Widget> widgets;
+  final LessonsSectionModel lessonsSectionModel;
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
+            Expanded(
+              child: AutoSizeText(
+                lessonsSectionModel.title ?? '',
+                maxLines: 1,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
             Text(
-              '$duration ${LocaleKeys.CourseDetails_Lessons_min.tr()}',
+              '${lessonsSectionModel.duration ?? 0} ${LocaleKeys.CourseDetails_Lessons_min.tr()}',
               style: const TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryColor,
               ),
@@ -42,17 +43,35 @@ class CourseLessonsSubSection extends StatelessWidget {
           ],
         ),
         const SizedBox(
+          height: 10,
+        ),
+        Text(
+          '${lessonsSectionModel.lessonsCount ?? 0} ${LocaleKeys.CourseDetails_Lessons_lesson.tr()}',
+          style: const TextStyle(
+            fontSize: 16,
+          ),
+        ),
+        const SizedBox(
           height: 20,
         ),
-        Text(description),
+        Text(lessonsSectionModel.description ?? ''),
         const SizedBox(
           height: 20,
         ),
         ExpandChildWidget(
-          child: Column(
-            children: widgets,
+          child: ListView.separated(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) => CourseLessonBlock(
+              lessonBlockModel: lessonsSectionModel.lessons![index],
+              sectionId: lessonsSectionModel.id ?? -1,
+            ),
+            separatorBuilder: (context, index) => const SizedBox(
+              height: 20,
+            ),
+            itemCount: lessonsSectionModel.lessons!.length,
           ),
-        )
+        ),
       ],
     );
   }

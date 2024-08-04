@@ -40,6 +40,10 @@ mixin _$CourseMainSectionModel {
   bool? get isSaved => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_enrolled')
   bool? get isEnrolled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'lessons_count')
+  int? get lessonsCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'sections_count')
+  int? get sectionsCount => throw _privateConstructorUsedError;
   DiscountModel? get discount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -68,6 +72,8 @@ abstract class $CourseMainSectionModelCopyWith<$Res> {
       @JsonKey(name: 'reviews_avg') num? reviewsAvg,
       @JsonKey(name: 'is_saved') bool? isSaved,
       @JsonKey(name: 'is_enrolled') bool? isEnrolled,
+      @JsonKey(name: 'lessons_count') int? lessonsCount,
+      @JsonKey(name: 'sections_count') int? sectionsCount,
       DiscountModel? discount});
 
   $SubcategoryModelCopyWith<$Res>? get subcategory;
@@ -102,6 +108,8 @@ class _$CourseMainSectionModelCopyWithImpl<$Res,
     Object? reviewsAvg = freezed,
     Object? isSaved = freezed,
     Object? isEnrolled = freezed,
+    Object? lessonsCount = freezed,
+    Object? sectionsCount = freezed,
     Object? discount = freezed,
   }) {
     return _then(_value.copyWith(
@@ -157,6 +165,14 @@ class _$CourseMainSectionModelCopyWithImpl<$Res,
           ? _value.isEnrolled
           : isEnrolled // ignore: cast_nullable_to_non_nullable
               as bool?,
+      lessonsCount: freezed == lessonsCount
+          ? _value.lessonsCount
+          : lessonsCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sectionsCount: freezed == sectionsCount
+          ? _value.sectionsCount
+          : sectionsCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       discount: freezed == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
@@ -224,6 +240,8 @@ abstract class _$$CourseMainSectionModelImplCopyWith<$Res>
       @JsonKey(name: 'reviews_avg') num? reviewsAvg,
       @JsonKey(name: 'is_saved') bool? isSaved,
       @JsonKey(name: 'is_enrolled') bool? isEnrolled,
+      @JsonKey(name: 'lessons_count') int? lessonsCount,
+      @JsonKey(name: 'sections_count') int? sectionsCount,
       DiscountModel? discount});
 
   @override
@@ -260,6 +278,8 @@ class __$$CourseMainSectionModelImplCopyWithImpl<$Res>
     Object? reviewsAvg = freezed,
     Object? isSaved = freezed,
     Object? isEnrolled = freezed,
+    Object? lessonsCount = freezed,
+    Object? sectionsCount = freezed,
     Object? discount = freezed,
   }) {
     return _then(_$CourseMainSectionModelImpl(
@@ -315,6 +335,14 @@ class __$$CourseMainSectionModelImplCopyWithImpl<$Res>
           ? _value.isEnrolled
           : isEnrolled // ignore: cast_nullable_to_non_nullable
               as bool?,
+      lessonsCount: freezed == lessonsCount
+          ? _value.lessonsCount
+          : lessonsCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sectionsCount: freezed == sectionsCount
+          ? _value.sectionsCount
+          : sectionsCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       discount: freezed == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
@@ -325,7 +353,9 @@ class __$$CourseMainSectionModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CourseMainSectionModelImpl implements _CourseMainSectionModel {
+class _$CourseMainSectionModelImpl
+    with DiagnosticableTreeMixin
+    implements _CourseMainSectionModel {
   const _$CourseMainSectionModelImpl(
       {this.id,
       this.title,
@@ -340,6 +370,8 @@ class _$CourseMainSectionModelImpl implements _CourseMainSectionModel {
       @JsonKey(name: 'reviews_avg') this.reviewsAvg,
       @JsonKey(name: 'is_saved') this.isSaved,
       @JsonKey(name: 'is_enrolled') this.isEnrolled,
+      @JsonKey(name: 'lessons_count') this.lessonsCount,
+      @JsonKey(name: 'sections_count') this.sectionsCount,
       this.discount});
 
   factory _$CourseMainSectionModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -378,11 +410,40 @@ class _$CourseMainSectionModelImpl implements _CourseMainSectionModel {
   @JsonKey(name: 'is_enrolled')
   final bool? isEnrolled;
   @override
+  @JsonKey(name: 'lessons_count')
+  final int? lessonsCount;
+  @override
+  @JsonKey(name: 'sections_count')
+  final int? sectionsCount;
+  @override
   final DiscountModel? discount;
 
   @override
-  String toString() {
-    return 'CourseMainSectionModel(id: $id, title: $title, image: $image, price: $price, intro: $intro, numberOfHours: $numberOfHours, subcategory: $subcategory, level: $level, enrollmentsCount: $enrollmentsCount, reviewsCount: $reviewsCount, reviewsAvg: $reviewsAvg, isSaved: $isSaved, isEnrolled: $isEnrolled, discount: $discount)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CourseMainSectionModel(id: $id, title: $title, image: $image, price: $price, intro: $intro, numberOfHours: $numberOfHours, subcategory: $subcategory, level: $level, enrollmentsCount: $enrollmentsCount, reviewsCount: $reviewsCount, reviewsAvg: $reviewsAvg, isSaved: $isSaved, isEnrolled: $isEnrolled, lessonsCount: $lessonsCount, sectionsCount: $sectionsCount, discount: $discount)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'CourseMainSectionModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('title', title))
+      ..add(DiagnosticsProperty('image', image))
+      ..add(DiagnosticsProperty('price', price))
+      ..add(DiagnosticsProperty('intro', intro))
+      ..add(DiagnosticsProperty('numberOfHours', numberOfHours))
+      ..add(DiagnosticsProperty('subcategory', subcategory))
+      ..add(DiagnosticsProperty('level', level))
+      ..add(DiagnosticsProperty('enrollmentsCount', enrollmentsCount))
+      ..add(DiagnosticsProperty('reviewsCount', reviewsCount))
+      ..add(DiagnosticsProperty('reviewsAvg', reviewsAvg))
+      ..add(DiagnosticsProperty('isSaved', isSaved))
+      ..add(DiagnosticsProperty('isEnrolled', isEnrolled))
+      ..add(DiagnosticsProperty('lessonsCount', lessonsCount))
+      ..add(DiagnosticsProperty('sectionsCount', sectionsCount))
+      ..add(DiagnosticsProperty('discount', discount));
   }
 
   @override
@@ -409,6 +470,10 @@ class _$CourseMainSectionModelImpl implements _CourseMainSectionModel {
             (identical(other.isSaved, isSaved) || other.isSaved == isSaved) &&
             (identical(other.isEnrolled, isEnrolled) ||
                 other.isEnrolled == isEnrolled) &&
+            (identical(other.lessonsCount, lessonsCount) ||
+                other.lessonsCount == lessonsCount) &&
+            (identical(other.sectionsCount, sectionsCount) ||
+                other.sectionsCount == sectionsCount) &&
             (identical(other.discount, discount) ||
                 other.discount == discount));
   }
@@ -430,6 +495,8 @@ class _$CourseMainSectionModelImpl implements _CourseMainSectionModel {
       reviewsAvg,
       isSaved,
       isEnrolled,
+      lessonsCount,
+      sectionsCount,
       discount);
 
   @JsonKey(ignore: true)
@@ -462,6 +529,8 @@ abstract class _CourseMainSectionModel implements CourseMainSectionModel {
       @JsonKey(name: 'reviews_avg') final num? reviewsAvg,
       @JsonKey(name: 'is_saved') final bool? isSaved,
       @JsonKey(name: 'is_enrolled') final bool? isEnrolled,
+      @JsonKey(name: 'lessons_count') final int? lessonsCount,
+      @JsonKey(name: 'sections_count') final int? sectionsCount,
       final DiscountModel? discount}) = _$CourseMainSectionModelImpl;
 
   factory _CourseMainSectionModel.fromJson(Map<String, dynamic> json) =
@@ -499,6 +568,12 @@ abstract class _CourseMainSectionModel implements CourseMainSectionModel {
   @override
   @JsonKey(name: 'is_enrolled')
   bool? get isEnrolled;
+  @override
+  @JsonKey(name: 'lessons_count')
+  int? get lessonsCount;
+  @override
+  @JsonKey(name: 'sections_count')
+  int? get sectionsCount;
   @override
   DiscountModel? get discount;
   @override

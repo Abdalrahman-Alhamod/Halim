@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'student_card_model.dart';
-
+import 'package:flutter/foundation.dart';
 part 'course_review_block_model.freezed.dart';
 part 'course_review_block_model.g.dart';
 

@@ -6,6 +6,7 @@ import 'package:halim/src/course_details/data/models/course_review_block_model.d
 import 'package:halim/src/course_details/data/models/student_card_model_extension.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 
+import '../../../../../../../core/widgets/avatar_error_widget.dart';
 import '../../../../../../../core/widgets/shimmer_box.dart';
 import 'review_stars_bar/course_reviews_stars_button.dart';
 
@@ -36,6 +37,7 @@ class CourseReviewBlock extends StatelessWidget {
                         width: 56,
                         height: 56,
                         placeholder: (context, url) => const ShimmerBox(),
+                        errorWidget: (context, url, error) => const AvatarErrorWidget(),
                       ),
                     ),
                     const SizedBox(

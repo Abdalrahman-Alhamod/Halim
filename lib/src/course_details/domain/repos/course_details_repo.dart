@@ -21,4 +21,20 @@ abstract class CourseDetailsRepo {
     required String ratingFilter,
     required int? pageKey,
   });
+  Future<ApiResponse<BaseModel>> getCourseLessonsSection({
+    required int courseId,
+    required int? pageKey,
+  });
+  Future<ApiResponse<BaseModel>> getCourseLessonDetails({
+    required int courseId,
+    required int sectionId,
+    required int lessonId,
+  });
+  Future<ApiResponse<BaseModel>> submitCourseLessonCompletion({
+    required int courseId,
+    required int sectionId,
+    required int lessonId,
+    int? quizResult,
+  });
+  Future<ApiResponse<BaseModel>> saveCourse({required int courseId});
 }

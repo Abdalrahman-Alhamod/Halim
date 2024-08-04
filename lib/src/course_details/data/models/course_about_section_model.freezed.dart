@@ -160,7 +160,9 @@ class __$$CourseAboutSectionModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CourseAboutSectionModelImpl implements _CourseAboutSectionModel {
+class _$CourseAboutSectionModelImpl
+    with DiagnosticableTreeMixin
+    implements _CourseAboutSectionModel {
   const _$CourseAboutSectionModelImpl(
       {this.id,
       this.description,
@@ -189,8 +191,19 @@ class _$CourseAboutSectionModelImpl implements _CourseAboutSectionModel {
   }
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'CourseAboutSectionModel(id: $id, description: $description, mentor: $mentor, keywords: $keywords)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'CourseAboutSectionModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('description', description))
+      ..add(DiagnosticsProperty('mentor', mentor))
+      ..add(DiagnosticsProperty('keywords', keywords));
   }
 
   @override

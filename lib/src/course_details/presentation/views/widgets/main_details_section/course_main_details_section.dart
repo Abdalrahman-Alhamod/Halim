@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
 import 'package:halim/src/course_details/data/models/level_model.dart';
+import 'package:halim/src/shared/model/course_card_model.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 
 import '../../../manager/course_details_cubit/course_details_cubit.dart';
@@ -50,6 +51,18 @@ class CourseMainDetailsSection extends StatelessWidget {
                       ),
                       BookmarkButton(
                         isBookmarked: courseMainSectionModel.isSaved ?? false,
+                        courseCardModel: CourseCardModel(
+                          id: courseMainSectionModel.id,
+                          title: courseMainSectionModel.title,
+                          image: courseMainSectionModel.image,
+                          price: courseMainSectionModel.price,
+                          subcategory: courseMainSectionModel.subcategory,
+                          reviewsAvg: courseMainSectionModel.reviewsAvg,
+                          enrollmentsCount:
+                              courseMainSectionModel.enrollmentsCount,
+                          isSaved: courseMainSectionModel.isSaved,
+                          discount: courseMainSectionModel.discount,
+                        ),
                       ),
                     ],
                   ),

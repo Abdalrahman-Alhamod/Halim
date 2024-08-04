@@ -27,122 +27,124 @@ class _EvaluationCoursesDialogState extends State<EvaluationCoursesDialog> {
   String? _comment;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 350,
-      height: context.height * 0.7,
-      child: Column(
-        children: [
-          const Spacer(
-            flex: 3,
-          ),
-          SizedBox(
-            width: 200,
-            child: SizedBox(
+    return SingleChildScrollView(
+      child: SizedBox(
+        width: 350,
+        height: context.height * 0.7,
+        child: Column(
+          children: [
+            const Spacer(
+              flex: 3,
+            ),
+            SizedBox(
               width: 200,
-              child: Image.asset(
-                AppImages.enrollDone,
-                scale: 1.1,
-              ),
-            ),
-          ),
-          const Spacer(
-            flex: 5,
-          ),
-          const AutoSizeText(
-            'Course Completed!',
-            style: TextStyle(
-              fontSize: 32,
-              color: AppColors.primaryColor,
-              fontWeight: FontWeight.bold,
-            ),
-            maxLines: 1,
-          ),
-          const Spacer(
-            flex: 3,
-          ),
-          const Text(
-            'Please leave a review for your course',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          const Spacer(
-            flex: 2,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const SizedBox(height: 20),
-              RatingBar.builder(
-                initialRating: _rating,
-                minRating: 1,
-                direction: Axis.horizontal,
-                allowHalfRating: false,
-                itemCount: 5,
-                itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
-                itemBuilder: (context, _) => const Icon(
-                  Icons.star_rounded,
-                  color: AppColors.primaryColor,
+              child: SizedBox(
+                width: 200,
+                child: Image.asset(
+                  AppImages.enrollDone,
+                  scale: 1.1,
                 ),
-                onRatingUpdate: (rating) {
-                  setState(() {
-                    _rating = rating;
-                  });
-                },
               ),
-            ],
-          ),
-          const Spacer(
-            flex: 8,
-          ),
-          CustomTextField(
-            hintText: 'Comment',
-            onChanged: (value) {
-              if (value.trim().isNotEmpty) {
-                _comment = value;
-              } else {
-                _comment = null;
-              }
-            },
-            unfocusedFillColor: context.isDarkMode
-                ? AppColors.darkFlatButtonColor.withAlpha(150)
-                : AppColors.textFieldColor,
-          ),
-          const Spacer(
-            flex: 8,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: CustomElevatedButton(
-              onPressed: () {
-                GoRouter.of(context).pop();
-                widget.onSubmit.call(_rating.toInt(), _comment);
-              },
-              title: 'Send Review',
-              elevation: 0,
             ),
-          ),
-          const Spacer(
-            flex: 4,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: CustomElevatedButton(
-              onPressed: () {
-                GoRouter.of(context).pop();
-              },
-              title: LocaleKeys.Buttons_cancel.tr(),
-              elevation: 0,
-              backgroundColor: context.isDarkMode
-                  ? AppColors.darkFlatButtonColor
-                  : Colors.grey.shade600,
+            const Spacer(
+              flex: 5,
             ),
-          ),
-          const Spacer(
-            flex: 2,
-          ),
-        ],
+            const AutoSizeText(
+              'Course Completed!',
+              style: TextStyle(
+                fontSize: 32,
+                color: AppColors.primaryColor,
+                fontWeight: FontWeight.bold,
+              ),
+              maxLines: 1,
+            ),
+            const Spacer(
+              flex: 3,
+            ),
+            const Text(
+              'Please leave a review for your course',
+              style: TextStyle(
+                fontSize: 16,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const Spacer(
+              flex: 2,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const SizedBox(height: 20),
+                RatingBar.builder(
+                  initialRating: _rating,
+                  minRating: 1,
+                  direction: Axis.horizontal,
+                  allowHalfRating: false,
+                  itemCount: 5,
+                  itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  itemBuilder: (context, _) => const Icon(
+                    Icons.star_rounded,
+                    color: AppColors.primaryColor,
+                  ),
+                  onRatingUpdate: (rating) {
+                    setState(() {
+                      _rating = rating;
+                    });
+                  },
+                ),
+              ],
+            ),
+            const Spacer(
+              flex: 8,
+            ),
+            CustomTextField(
+              hintText: 'Comment',
+              onChanged: (value) {
+                if (value.trim().isNotEmpty) {
+                  _comment = value;
+                } else {
+                  _comment = null;
+                }
+              },
+              unfocusedFillColor: context.isDarkMode
+                  ? AppColors.darkFlatButtonColor.withAlpha(150)
+                  : AppColors.textFieldColor,
+            ),
+            const Spacer(
+              flex: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: CustomElevatedButton(
+                onPressed: () {
+                  GoRouter.of(context).pop();
+                  widget.onSubmit.call(_rating.toInt(), _comment);
+                },
+                title: 'Send Review',
+                elevation: 0,
+              ),
+            ),
+            const Spacer(
+              flex: 4,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: CustomElevatedButton(
+                onPressed: () {
+                  GoRouter.of(context).pop();
+                },
+                title: LocaleKeys.Buttons_cancel.tr(),
+                elevation: 0,
+                backgroundColor: context.isDarkMode
+                    ? AppColors.darkFlatButtonColor
+                    : Colors.grey.shade600,
+              ),
+            ),
+            const Spacer(
+              flex: 2,
+            ),
+          ],
+        ),
       ),
     );
   }

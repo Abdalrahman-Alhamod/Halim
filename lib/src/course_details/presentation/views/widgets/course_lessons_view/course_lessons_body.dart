@@ -9,21 +9,21 @@ class CourseLessonsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          Padding(
+    return const Column(
+      children: [
+        Expanded(
+          child: Padding(
             padding: EdgeInsets.only(
-              left: 24.0,
-              right: 24,
+              left: 8.0,
+              right: 8,
             ),
             child: CourseLessonsSectionSample(),
           ),
-          SizedBox(
-            height: 130,
-          )
-        ],
-      ),
+        ),
+        SizedBox(
+          height: 120,
+        )
+      ],
     );
   }
 }

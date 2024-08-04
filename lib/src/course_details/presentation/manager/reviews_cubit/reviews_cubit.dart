@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/functions/show_loading_dialog.dart';
 import 'package:halim/core/themes/app_colors.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/core/widgets/custom_loading_indicator.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_review_block_loading_list.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_review_block_loading.dart';
@@ -301,6 +302,9 @@ class ReviewsCubit extends Cubit<ReviewsState> {
         loadBuilder: const CustomLoadingIndicator(
           color: AppColors.primaryColor,
         ),
+        noItemsFoundIndicatorBuilder: EmptyView(
+          width: context.width * 0.85,
+        ),
       );
 
   bool listenCoursePaginatedReviewsWhen(
@@ -310,7 +314,7 @@ class ReviewsCubit extends Cubit<ReviewsState> {
       loadingPagination: () => true,
       failurePagination: (_) => true,
       successPagination: (_) => true,
-      orElse: () => true,
+      orElse: () => false,
     );
   }
 

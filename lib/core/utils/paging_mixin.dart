@@ -15,7 +15,8 @@ mixin PagingMixin<T> {
       PagingController<int, T> pagingController, ItemBuilder<T> itemBuilder,
       {ScrollPhysics? physics,
       Axis scrollDirection = Axis.vertical,
-      Widget? loadBuilder}) {
+      Widget? loadBuilder,
+      Widget? noItemsFoundIndicatorBuilder}) {
     return PagedListView<int, T>(
       scrollDirection: scrollDirection,
       physics: physics,
@@ -30,7 +31,8 @@ mixin PagingMixin<T> {
         newPageErrorIndicatorBuilder: null,
         newPageProgressIndicatorBuilder: (_) =>
             loadBuilder ?? const CustomLoadingIndicator(),
-        noItemsFoundIndicatorBuilder: (_) => const ResultNotFound(),
+        noItemsFoundIndicatorBuilder: (_) =>
+            noItemsFoundIndicatorBuilder ?? const ResultNotFound(),
         itemBuilder: itemBuilder,
       ),
     );

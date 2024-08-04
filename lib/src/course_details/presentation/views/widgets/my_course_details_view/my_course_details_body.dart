@@ -5,6 +5,13 @@ class _MyCourseDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
+    final tabTitles = [
+      LocaleKeys.CourseDetails_Sections_lessons.tr(),
+      LocaleKeys.CourseDetails_Sections_community.tr(),
+      LocaleKeys.CourseDetails_MyCourse_announcements.tr(),
+      LocaleKeys.CourseDetails_MyCourse_certificate.tr(),
+    ];
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: SingleChildScrollView(

@@ -4,8 +4,10 @@ import 'package:halim/core/data/model/base_model.dart';
 import 'package:halim/core/data/model/base_models.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
 import 'package:halim/src/course_details/data/models/course_about_section_model.dart';
+import 'package:halim/src/course_details/data/models/course_lesson_model.dart';
 import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
 import 'package:halim/src/course_details/data/models/course_review_block_model.dart';
+import 'package:halim/src/course_details/data/models/lessons_section_model.dart';
 
 import '../../../../core/data/sources/remote/services/api_services.dart';
 
@@ -135,6 +137,45 @@ class CourseDetailsRemoteDataSource {
     );
   }
 
+  Future<BaseModel> getCourseLessonsSection({
+    required int courseId,
+    required int? pageKey,
+  }) async {
+    Map<String, String> queryParams = {};
+    queryParams.addEntries(
+      [
+        const MapEntry(
+          AppUrl.include,
+          AppUrl.courseLessonsSectionIncludes,
+        ),
+      ],
+    );
+    if (pageKey != null) {
+      queryParams.addEntries(
+        [
+          MapEntry(
+            AppUrl.page,
+            pageKey.toString(),
+          )
+        ],
+      );
+    }
+    final response = await _apiServices.get(
+      '${AppUrl.courses}/$courseId/${AppUrl.kSections}',
+      queryParams: queryParams,
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => BaseModels.fromJson(
+        json,
+        (itemJson) => LessonsSectionModel.fromJson(
+          itemJson,
+        ),
+      ),
+    );
+  }
+
   Future<BaseModel> getCoursePaginatedReviews({
     required int courseId,
     required String ratingFilter,
@@ -182,6 +223,60 @@ class CourseDetailsRemoteDataSource {
           itemJson,
         ),
       ),
+    );
+  }
+
+  Future<BaseModel> getCourseLessonDetails({
+    required int courseId,
+    required int sectionId,
+    required int lessonId,
+  }) async {
+    final response = await _apiServices.get(
+      '${AppUrl.courses}/$courseId/${AppUrl.kSections}/$sectionId/${AppUrl.kLessons}/$lessonId',
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => CourseLessonModel.fromJson(
+        json,
+      ),
+    );
+  }
+
+  Future<BaseModel> submitCourseLessonCompletion({
+    required int courseId,
+    required int sectionId,
+    required int lessonId,
+    int? quizResult,
+  }) async {
+    Map<String, dynamic> body = {};
+    body.addEntries(
+      [
+        MapEntry(
+          AppUrl.kResult,
+          quizResult.toString(),
+        ),
+      ],
+    );
+    final response = await _apiServices.post(
+      '${AppUrl.courses}/$courseId/${AppUrl.kSections}/$sectionId/${AppUrl.kLessons}/$lessonId',
+      body: quizResult != null ? body : null,
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => () {},
+    );
+  }
+
+  Future<BaseModel> saveCourse({required int courseId}) async {
+    final response = await _apiServices.post(
+      '${AppUrl.courses}/$courseId/${AppUrl.kSave}',
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => () {},
     );
   }
 }

@@ -139,7 +139,9 @@ class __$$StudentCardModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$StudentCardModelImpl implements _StudentCardModel {
+class _$StudentCardModelImpl
+    with DiagnosticableTreeMixin
+    implements _StudentCardModel {
   const _$StudentCardModelImpl(
       {this.id,
       @JsonKey(name: 'first_name') this.firstName,
@@ -161,8 +163,19 @@ class _$StudentCardModelImpl implements _StudentCardModel {
   final String? image;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'StudentCardModel(id: $id, firstName: $firstName, lastName: $lastName, image: $image)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StudentCardModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('firstName', firstName))
+      ..add(DiagnosticsProperty('lastName', lastName))
+      ..add(DiagnosticsProperty('image', image));
   }
 
   @override

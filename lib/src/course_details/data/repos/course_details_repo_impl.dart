@@ -138,4 +138,97 @@ class CourseDetailsRepoImpl extends CourseDetailsRepo {
       );
     }
   }
+
+  @override
+  Future<ApiResponse<BaseModel>> getCourseLessonsSection({
+    required int courseId,
+    required int? pageKey,
+  }) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.getCourseLessonsSection(
+        courseId: courseId,
+        pageKey: pageKey,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> getCourseLessonDetails({
+    required int courseId,
+    required int sectionId,
+    required int lessonId,
+  }) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.getCourseLessonDetails(
+        courseId: courseId,
+        sectionId: sectionId,
+        lessonId: lessonId,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> submitCourseLessonCompletion({
+    required int courseId,
+    required int sectionId,
+    required int lessonId,
+    int? quizResult,
+  }) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.submitCourseLessonCompletion(
+        courseId: courseId,
+        sectionId: sectionId,
+        lessonId: lessonId,
+        quizResult: quizResult,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> saveCourse({required int courseId}) async {
+    try {
+      final response = await _courseDetailsRemoteDateSource.saveCourse(
+        courseId: courseId,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
 }

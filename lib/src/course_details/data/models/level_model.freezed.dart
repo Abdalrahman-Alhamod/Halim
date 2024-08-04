@@ -107,7 +107,7 @@ class __$$LevelModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$LevelModelImpl implements _LevelModel {
+class _$LevelModelImpl with DiagnosticableTreeMixin implements _LevelModel {
   const _$LevelModelImpl({this.id, this.name});
 
   factory _$LevelModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -119,8 +119,17 @@ class _$LevelModelImpl implements _LevelModel {
   final String? name;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'LevelModel(id: $id, name: $name)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'LevelModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('name', name));
   }
 
   @override

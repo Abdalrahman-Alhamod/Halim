@@ -29,7 +29,7 @@ List<BlocProvider> initProviders() {
       create: (context) => locator.get<HomeCubit>(),
     ),
     BlocProvider<CourseDetailsCubit>(
-      create: (context) => locator.get<CourseDetailsCubit>(),
+      create: (context) => locator.get<CourseDetailsCubit>()..init(context),
     ),
     BlocProvider<ReviewsCubit>(
       create: (context) => locator.get<ReviewsCubit>()..init(context),

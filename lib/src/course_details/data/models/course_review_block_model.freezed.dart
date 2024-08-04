@@ -188,7 +188,9 @@ class __$$CourseReviewBlockModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CourseReviewBlockModelImpl implements _CourseReviewBlockModel {
+class _$CourseReviewBlockModelImpl
+    with DiagnosticableTreeMixin
+    implements _CourseReviewBlockModel {
   const _$CourseReviewBlockModelImpl(
       {this.id,
       @JsonKey(name: 'student') this.student,
@@ -217,8 +219,21 @@ class _$CourseReviewBlockModelImpl implements _CourseReviewBlockModel {
   final bool? isReviewed;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'CourseReviewBlockModel(id: $id, student: $student, comment: $comment, rating: $rating, createdAt: $createdAt, isReviewed: $isReviewed)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'CourseReviewBlockModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('student', student))
+      ..add(DiagnosticsProperty('comment', comment))
+      ..add(DiagnosticsProperty('rating', rating))
+      ..add(DiagnosticsProperty('createdAt', createdAt))
+      ..add(DiagnosticsProperty('isReviewed', isReviewed));
   }
 
   @override

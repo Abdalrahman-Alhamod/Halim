@@ -96,6 +96,9 @@ class CourseAboutSection extends StatelessWidget {
                   CourseKeywords(
                     ketwords: courseAboutSectionModel.keywords ?? [],
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
             );

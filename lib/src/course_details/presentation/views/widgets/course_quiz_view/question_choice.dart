@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../data/models/course_lesson_model.dart';
 import '../../../../domain/entities/question_choice_state.dart';
 import '../../../../domain/entities/question_type.dart';
 import 'helpers/get_color_from_status.dart';
@@ -9,13 +10,12 @@ class QuestionChoice extends StatelessWidget {
     super.key,
     required this.state,
     this.onPressed,
-    required this.questionType,
-    required this.title,
+    required this.questionType, required this.answer,
   });
-  final String title;
   final QuestionChoiceState state;
   final void Function()? onPressed;
   final QuestionType questionType;
+  final Answer answer;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -78,7 +78,7 @@ class QuestionChoice extends StatelessWidget {
           ),
           Expanded(
             child: Text(
-              title,
+              answer.statement??'',
               style: TextStyle(
                 fontSize: 18,
                 color: Theme.of(context).colorScheme.inverseSurface,

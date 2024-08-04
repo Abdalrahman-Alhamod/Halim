@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../manager/course_details_cubit/course_details_cubit.dart';
 import 'course_lessons_section_sample.dart';
 import 'course_lessons_section_header.dart';
 
@@ -7,19 +10,21 @@ class CourseLessonsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    context.read<CourseDetailsCubit>().refresh();
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        CourseLessonsSectionHeader(
-          lessonsNumber: 124,
-        ),
-        SizedBox(
+        const CourseLessonsSectionHeader(),
+        const SizedBox(
           height: 20,
         ),
-        CourseLessonsSectionSample(),
+        SizedBox(
+          height: context.height * 0.7,
+          child: const CourseLessonsSectionSample(),
+        ),
       ],
     );
   }

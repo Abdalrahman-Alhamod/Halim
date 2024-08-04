@@ -1,6 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/course_details/domain/entities/quiz_result.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../core/assets/app_images.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
@@ -19,6 +22,14 @@ class QuizFinishView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final QuizResult quizResult =
+        context.read<CourseDetailsCubit>().quizResult ??
+            const QuizResult(
+                totalQuestions: 0,
+                correctAnswers: 0,
+                wrongAnswers: 0,
+                grade: 0,
+                quizStatus: QuizStatus.notTaken);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -50,7 +61,7 @@ class QuizFinishView extends StatelessWidget {
                   QuizDetailsListTile(
                     icon: Icons.numbers,
                     label: LocaleKeys.CourseDetails_Quiz_totalQuestions.tr(),
-                    description: '10',
+                    description: quizResult.totalQuestions.toString(),
                   ),
                   const SizedBox(
                     height: 10,
@@ -58,7 +69,7 @@ class QuizFinishView extends StatelessWidget {
                   QuizDetailsListTile(
                     icon: Icons.done,
                     label: LocaleKeys.CourseDetails_Quiz_correctAnswers.tr(),
-                    description: '7',
+                    description: quizResult.correctAnswers.toString(),
                     descriptionColor: Colors.green,
                   ),
                   const SizedBox(
@@ -67,19 +78,19 @@ class QuizFinishView extends StatelessWidget {
                   QuizDetailsListTile(
                     icon: Icons.clear,
                     label: LocaleKeys.CourseDetails_Quiz_wrongAnswers.tr(),
-                    description: '3',
+                    description: quizResult.wrongAnswers.toString(),
                     descriptionColor: Colors.red,
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  const QuizGradeListTile(
-                    grade: 85,
+                  QuizGradeListTile(
+                    grade: quizResult.grade,
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  const QuizStatusListTile(status: QuizStatus.passed),
+                  QuizStatusListTile(status: quizResult.quizStatus),
                 ],
               ),
             ),

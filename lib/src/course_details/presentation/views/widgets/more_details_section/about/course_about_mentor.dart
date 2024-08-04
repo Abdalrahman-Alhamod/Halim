@@ -6,6 +6,7 @@ import 'package:halim/src/shared/model/mentor_card_model.dart';
 import 'package:halim/src/shared/model/mentor_card_model_extension.dart';
 import '../../../../../../../core/utils/app_route.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
+import '../../../../../../../core/widgets/avatar_error_widget.dart';
 import '../../../../../../../core/widgets/shimmer_box.dart';
 
 class CourseAboutMentor extends StatelessWidget {
@@ -32,6 +33,7 @@ class CourseAboutMentor extends StatelessWidget {
                     width: 56,
                     height: 56,
                     placeholder: (context, url) => const ShimmerBox(),
+                    errorWidget: (context, url, error) => const AvatarErrorWidget(),
                   ),
                 ),
                 const SizedBox(
