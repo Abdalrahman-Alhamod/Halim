@@ -39,6 +39,13 @@ mixin _$CourseDetailsState {
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -74,6 +81,12 @@ mixin _$CourseDetailsState {
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -107,6 +120,12 @@ mixin _$CourseDetailsState {
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -146,6 +165,12 @@ mixin _$CourseDetailsState {
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -185,6 +210,12 @@ mixin _$CourseDetailsState {
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -224,6 +255,12 @@ mixin _$CourseDetailsState {
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -316,6 +353,13 @@ class _$InitialImpl implements _Initial {
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -354,6 +398,12 @@ class _$InitialImpl implements _Initial {
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -390,6 +440,12 @@ class _$InitialImpl implements _Initial {
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -435,6 +491,12 @@ class _$InitialImpl implements _Initial {
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -477,6 +539,12 @@ class _$InitialImpl implements _Initial {
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -519,6 +587,12 @@ class _$InitialImpl implements _Initial {
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -606,6 +680,13 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -644,6 +725,12 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -680,6 +767,12 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -725,6 +818,12 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -767,6 +866,12 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -809,6 +914,12 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -939,6 +1050,13 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -977,6 +1095,12 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -1013,6 +1137,12 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -1058,6 +1188,12 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -1100,6 +1236,12 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -1142,6 +1284,12 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -1282,6 +1430,13 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -1320,6 +1475,12 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -1356,6 +1517,12 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -1401,6 +1568,12 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -1443,6 +1616,12 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -1485,6 +1664,12 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -1581,6 +1766,13 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -1619,6 +1811,12 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -1655,6 +1853,12 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -1700,6 +1904,12 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -1742,6 +1952,12 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -1784,6 +2000,12 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -1914,6 +2136,13 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -1952,6 +2181,12 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -1988,6 +2223,12 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -2033,6 +2274,12 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -2075,6 +2322,12 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -2117,6 +2370,12 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -2257,6 +2516,13 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -2295,6 +2561,12 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -2331,6 +2603,12 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -2376,6 +2654,12 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -2418,6 +2702,12 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -2460,6 +2750,12 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -2556,6 +2852,13 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -2594,6 +2897,12 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -2630,6 +2939,12 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -2675,6 +2990,12 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -2717,6 +3038,12 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -2759,6 +3086,12 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -2890,6 +3223,13 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -2928,6 +3268,12 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -2964,6 +3310,12 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -3009,6 +3361,12 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -3051,6 +3409,12 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -3093,6 +3457,12 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -3216,6 +3586,13 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -3254,6 +3631,12 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -3290,6 +3673,12 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -3335,6 +3724,12 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -3377,6 +3772,12 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -3419,6 +3820,12 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -3514,6 +3921,13 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -3552,6 +3966,12 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -3588,6 +4008,12 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -3633,6 +4059,12 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -3675,6 +4107,12 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -3717,6 +4155,12 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -3847,6 +4291,13 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -3885,6 +4336,12 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -3921,6 +4378,12 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -3966,6 +4429,12 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -4008,6 +4477,12 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -4050,6 +4525,12 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -4190,6 +4671,13 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -4228,6 +4716,12 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -4264,6 +4758,12 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -4309,6 +4809,12 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -4351,6 +4857,12 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -4393,6 +4905,12 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -4422,6 +4940,1100 @@ abstract class _FetchCourseLessonDetailsSuccess implements CourseDetailsState {
   @JsonKey(ignore: true)
   _$$FetchCourseLessonDetailsSuccessImplCopyWith<
           _$FetchCourseLessonDetailsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchCourseLessonsSectionsPageLoadingImplCopyWith<$Res> {
+  factory _$$FetchCourseLessonsSectionsPageLoadingImplCopyWith(
+          _$FetchCourseLessonsSectionsPageLoadingImpl value,
+          $Res Function(_$FetchCourseLessonsSectionsPageLoadingImpl) then) =
+      __$$FetchCourseLessonsSectionsPageLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchCourseLessonsSectionsPageLoadingImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res,
+        _$FetchCourseLessonsSectionsPageLoadingImpl>
+    implements _$$FetchCourseLessonsSectionsPageLoadingImplCopyWith<$Res> {
+  __$$FetchCourseLessonsSectionsPageLoadingImplCopyWithImpl(
+      _$FetchCourseLessonsSectionsPageLoadingImpl _value,
+      $Res Function(_$FetchCourseLessonsSectionsPageLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FetchCourseLessonsSectionsPageLoadingImpl
+    implements _FetchCourseLessonsSectionsPageLoading {
+  const _$FetchCourseLessonsSectionsPageLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchCourseLessonsSectionsPageLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchCourseLessonsSectionsPageLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseLessonsSectionsPageLoading != null) {
+      return fetchCourseLessonsSectionsPageLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseLessonsSectionsPageLoading != null) {
+      return fetchCourseLessonsSectionsPageLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchCourseLessonsSectionsPageLoading
+    implements CourseDetailsState {
+  const factory _FetchCourseLessonsSectionsPageLoading() =
+      _$FetchCourseLessonsSectionsPageLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchCourseLessonsSectionsPageFailureImplCopyWith<$Res> {
+  factory _$$FetchCourseLessonsSectionsPageFailureImplCopyWith(
+          _$FetchCourseLessonsSectionsPageFailureImpl value,
+          $Res Function(_$FetchCourseLessonsSectionsPageFailureImpl) then) =
+      __$$FetchCourseLessonsSectionsPageFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$FetchCourseLessonsSectionsPageFailureImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res,
+        _$FetchCourseLessonsSectionsPageFailureImpl>
+    implements _$$FetchCourseLessonsSectionsPageFailureImplCopyWith<$Res> {
+  __$$FetchCourseLessonsSectionsPageFailureImplCopyWithImpl(
+      _$FetchCourseLessonsSectionsPageFailureImpl _value,
+      $Res Function(_$FetchCourseLessonsSectionsPageFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$FetchCourseLessonsSectionsPageFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchCourseLessonsSectionsPageFailureImpl
+    implements _FetchCourseLessonsSectionsPageFailure {
+  const _$FetchCourseLessonsSectionsPageFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchCourseLessonsSectionsPageFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchCourseLessonsSectionsPageFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchCourseLessonsSectionsPageFailureImplCopyWith<
+          _$FetchCourseLessonsSectionsPageFailureImpl>
+      get copyWith => __$$FetchCourseLessonsSectionsPageFailureImplCopyWithImpl<
+          _$FetchCourseLessonsSectionsPageFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseLessonsSectionsPageFailure != null) {
+      return fetchCourseLessonsSectionsPageFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseLessonsSectionsPageFailure != null) {
+      return fetchCourseLessonsSectionsPageFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchCourseLessonsSectionsPageFailure
+    implements CourseDetailsState {
+  const factory _FetchCourseLessonsSectionsPageFailure(
+          final NetworkExceptions? networkException) =
+      _$FetchCourseLessonsSectionsPageFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$FetchCourseLessonsSectionsPageFailureImplCopyWith<
+          _$FetchCourseLessonsSectionsPageFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchCourseLessonsSectionsPageSuccessImplCopyWith<$Res> {
+  factory _$$FetchCourseLessonsSectionsPageSuccessImplCopyWith(
+          _$FetchCourseLessonsSectionsPageSuccessImpl value,
+          $Res Function(_$FetchCourseLessonsSectionsPageSuccessImpl) then) =
+      __$$FetchCourseLessonsSectionsPageSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {List<LessonsSectionModel> courseLessonsSectionsPage, String? message});
+}
+
+/// @nodoc
+class __$$FetchCourseLessonsSectionsPageSuccessImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res,
+        _$FetchCourseLessonsSectionsPageSuccessImpl>
+    implements _$$FetchCourseLessonsSectionsPageSuccessImplCopyWith<$Res> {
+  __$$FetchCourseLessonsSectionsPageSuccessImplCopyWithImpl(
+      _$FetchCourseLessonsSectionsPageSuccessImpl _value,
+      $Res Function(_$FetchCourseLessonsSectionsPageSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? courseLessonsSectionsPage = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$FetchCourseLessonsSectionsPageSuccessImpl(
+      null == courseLessonsSectionsPage
+          ? _value._courseLessonsSectionsPage
+          : courseLessonsSectionsPage // ignore: cast_nullable_to_non_nullable
+              as List<LessonsSectionModel>,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchCourseLessonsSectionsPageSuccessImpl
+    implements _FetchCourseLessonsSectionsPageSuccess {
+  const _$FetchCourseLessonsSectionsPageSuccessImpl(
+      final List<LessonsSectionModel> courseLessonsSectionsPage, this.message)
+      : _courseLessonsSectionsPage = courseLessonsSectionsPage;
+
+  final List<LessonsSectionModel> _courseLessonsSectionsPage;
+  @override
+  List<LessonsSectionModel> get courseLessonsSectionsPage {
+    if (_courseLessonsSectionsPage is EqualUnmodifiableListView)
+      return _courseLessonsSectionsPage;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_courseLessonsSectionsPage);
+  }
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchCourseLessonsSectionsPageSuccess(courseLessonsSectionsPage: $courseLessonsSectionsPage, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchCourseLessonsSectionsPageSuccessImpl &&
+            const DeepCollectionEquality().equals(
+                other._courseLessonsSectionsPage, _courseLessonsSectionsPage) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_courseLessonsSectionsPage), message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchCourseLessonsSectionsPageSuccessImplCopyWith<
+          _$FetchCourseLessonsSectionsPageSuccessImpl>
+      get copyWith => __$$FetchCourseLessonsSectionsPageSuccessImplCopyWithImpl<
+          _$FetchCourseLessonsSectionsPageSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageSuccess(
+        courseLessonsSectionsPage, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageSuccess?.call(
+        courseLessonsSectionsPage, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseLessonsSectionsPageSuccess != null) {
+      return fetchCourseLessonsSectionsPageSuccess(
+          courseLessonsSectionsPage, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+  }) {
+    return fetchCourseLessonsSectionsPageSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseLessonsSectionsPageSuccess != null) {
+      return fetchCourseLessonsSectionsPageSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchCourseLessonsSectionsPageSuccess
+    implements CourseDetailsState {
+  const factory _FetchCourseLessonsSectionsPageSuccess(
+      final List<LessonsSectionModel> courseLessonsSectionsPage,
+      final String? message) = _$FetchCourseLessonsSectionsPageSuccessImpl;
+
+  List<LessonsSectionModel> get courseLessonsSectionsPage;
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$FetchCourseLessonsSectionsPageSuccessImplCopyWith<
+          _$FetchCourseLessonsSectionsPageSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -4489,6 +6101,13 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -4527,6 +6146,12 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -4563,6 +6188,12 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -4608,6 +6239,12 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -4650,6 +6287,12 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -4692,6 +6335,12 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -4823,6 +6472,13 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -4861,6 +6517,12 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -4897,6 +6559,12 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -4942,6 +6610,12 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -4984,6 +6658,12 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -5026,6 +6706,12 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -5149,6 +6835,13 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -5187,6 +6880,12 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -5223,6 +6922,12 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -5268,6 +6973,12 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -5310,6 +7021,12 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -5352,6 +7069,12 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -5470,6 +7193,13 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -5508,6 +7238,12 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -5544,6 +7280,12 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -5589,6 +7331,12 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -5631,6 +7379,12 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -5673,6 +7427,12 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -5812,6 +7572,13 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -5850,6 +7617,12 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -5886,6 +7659,12 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -5931,6 +7710,12 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -5973,6 +7758,12 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -6015,6 +7806,12 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -6141,6 +7938,13 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -6179,6 +7983,12 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -6215,6 +8025,12 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -6260,6 +8076,12 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -6302,6 +8124,12 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -6344,6 +8172,12 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?
@@ -6469,6 +8303,13 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     required TResult Function(CourseLessonModel data, String? message)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function() submitCourseLessonCompletionLoading,
     required TResult Function(NetworkExceptions? networkException)
         submitCourseLessonCompletionFailure,
@@ -6507,6 +8348,12 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     TResult? Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function()? submitCourseLessonCompletionLoading,
     TResult? Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -6543,6 +8390,12 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     TResult Function(CourseLessonModel data, String? message)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function()? submitCourseLessonCompletionLoading,
     TResult Function(NetworkExceptions? networkException)?
         submitCourseLessonCompletionFailure,
@@ -6588,6 +8441,12 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     required TResult Function(_FetchCourseLessonDetailsSuccess value)
         fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
     required TResult Function(_SubmitCourseLessonCompletionLoading value)
         submitCourseLessonCompletionLoading,
     required TResult Function(_SubmitCourseLessonCompletionFailure value)
@@ -6630,6 +8489,12 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     TResult? Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult? Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult? Function(_SubmitCourseLessonCompletionFailure value)?
@@ -6672,6 +8537,12 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseLessonDetailsFailure,
     TResult Function(_FetchCourseLessonDetailsSuccess value)?
         fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
     TResult Function(_SubmitCourseLessonCompletionLoading value)?
         submitCourseLessonCompletionLoading,
     TResult Function(_SubmitCourseLessonCompletionFailure value)?

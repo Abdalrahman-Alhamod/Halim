@@ -4,8 +4,8 @@ import 'package:halim/src/course_details/presentation/manager/course_details_cub
 
 import 'course_lessons_sub_section.dart';
 
-class CourseLessonsSectionSample extends StatelessWidget {
-  const CourseLessonsSectionSample({
+class CourseLessonsSectionList extends StatelessWidget {
+  const CourseLessonsSectionList({
     super.key,
   });
 

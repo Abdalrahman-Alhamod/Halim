@@ -36,6 +36,14 @@ class CourseDetailsState with _$CourseDetailsState {
           CourseLessonModel data, String? message) =
       _FetchCourseLessonDetailsSuccess;
 
+      const factory CourseDetailsState.fetchCourseLessonsSectionsPageLoading() =
+      _FetchCourseLessonsSectionsPageLoading;
+  const factory CourseDetailsState.fetchCourseLessonsSectionsPageFailure(
+      NetworkExceptions? networkException) = _FetchCourseLessonsSectionsPageFailure;
+  const factory CourseDetailsState.fetchCourseLessonsSectionsPageSuccess(
+          List<LessonsSectionModel> courseLessonsSectionsPage, String? message) =
+      _FetchCourseLessonsSectionsPageSuccess;
+
   const factory CourseDetailsState.submitCourseLessonCompletionLoading() =
       _SubmitCourseLessonCompletionLoading;
   const factory CourseDetailsState.submitCourseLessonCompletionFailure(

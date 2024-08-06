@@ -18,6 +18,8 @@ import 'package:halim/src/course_details/presentation/views/widgets/course_quiz_
 import 'package:halim/src/course_details/presentation/views/widgets/main_details_section/course_main_details_section_loading.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/main_details_section/course_video_cover_loading.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/about/course_about_section_loading.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lessons_sub_section_load_list.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lessons_sub_section_loading_list.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/video_player_view/course_video_loading.dart';
 import 'package:halim/src/shared/model/discount_model.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -255,9 +257,7 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
         context,
         pagingController,
         itemBuilder,
-        loadBuilder: const CustomLoadingIndicator(
-          color: AppColors.primaryColor,
-        ),
+        loadBuilder: const CourseLessonsSubSectionLoadList(),
       );
 
   bool listenCourseLessonsSectionsWhen(
@@ -748,6 +748,111 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
         ),
       ),
       orElse: () => child,
+    );
+  }
+
+  List<LessonsSectionModel> courseLessonsSectionsPage = [];
+  Future<void> getCourseLessonsSectionsPage() async {
+    emit(
+      const CourseDetailsState.fetchCourseLessonsSectionsPageLoading(),
+    );
+    final response = await _courseDetailsRepo.getCourseLessonsSection(
+      courseId: courseId,
+      pageKey: null,
+    );
+    response.when(
+      success: (data) {
+        courseLessonsSectionsPage =
+            List<LessonsSectionModel>.from(data.data.list);
+        emit(
+          CourseDetailsState.fetchCourseLessonsSectionsPageSuccess(
+            courseLessonsSectionsPage,
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          CourseDetailsState.fetchCourseLessonsSectionsPageFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+  bool buildCourseLessonsSectionsPageWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchCourseLessonsSectionsPageLoading: () => true,
+      fetchCourseLessonsSectionsPageFailure: (_) => true,
+      fetchCourseLessonsSectionsPageSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  Widget buildCourseLessonsSectionsPage({
+    required BuildContext context,
+    required CourseDetailsState state,
+    required Widget child,
+  }) {
+    return state.maybeWhen(
+      fetchCourseLessonsSectionsPageLoading: () =>
+          const CourseLessonsSubSectionLoadingList(),
+      fetchCourseLessonsSectionsPageSuccess: (_, __) => child,
+      fetchCourseLessonsSectionsPageFailure: (_) => const SizedBox(),
+      orElse: () => const SizedBox(),
+    );
+  }
+
+  bool listenCourseLessonsSectionsPageWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchCourseLessonsSectionsPageLoading: () => true,
+      fetchCourseLessonsSectionsPageFailure: (_) => true,
+      fetchCourseLessonsSectionsPageSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenCourseLessonsSectionsPage(
+      BuildContext context, CourseDetailsState state) {
+    const title = 'Course Lessons Sections Page';
+    state.maybeWhen(
+      fetchCourseLessonsSectionsPageLoading: () {
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      fetchCourseLessonsSectionsPageFailure:
+          (NetworkExceptions? networkException) {
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessage(networkException),
+          title: '$title Error',
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessage(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      fetchCourseLessonsSectionsPageSuccess:
+          (List<LessonsSectionModel> courseLessonsSectionsPage,
+              String? message) {
+        logger.print(
+          '$title Success',
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+      },
+      orElse: () {},
     );
   }
 
