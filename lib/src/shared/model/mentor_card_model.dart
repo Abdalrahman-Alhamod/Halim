@@ -5,6 +5,7 @@ part 'mentor_card_model.g.dart';
 
 @freezed
 class MentorCardModel with _$MentorCardModel {
+  const MentorCardModel._();
   const factory MentorCardModel({
     int? id,
     @JsonKey(name: 'first_name') String? firstName,
@@ -15,4 +16,5 @@ class MentorCardModel with _$MentorCardModel {
 
   factory MentorCardModel.fromJson(Map<String, dynamic> json) =>
       _$MentorCardModelFromJson(json);
+      String get fullName => '$firstName $lastName';
 }

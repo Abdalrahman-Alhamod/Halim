@@ -12,7 +12,7 @@ class ReviewsState with _$ReviewsState {
     NetworkExceptions? networkException,
   ) = _FetchCourseLastReviewsFailure;
   const factory ReviewsState.fetchCourseLastReviewsSuccess(
-    List<CourseReviewBlockModel> data,
+    List<ReviewBlockModel> data,
     String? message,
   ) = _FetchCourseLastReviewsSuccess;
 
@@ -22,11 +22,11 @@ class ReviewsState with _$ReviewsState {
     NetworkExceptions? networkException,
   ) = _FetchUserCourseReviewFailure;
   const factory ReviewsState.fetchUserCourseReviewSuccess(
-    CourseReviewBlockModel data,
+    ReviewBlockModel data,
     String? message,
   ) = _FetchUserCourseReviewSuccess;
 
-   const factory ReviewsState.submitUserReviewLoading() =
+  const factory ReviewsState.submitUserReviewLoading() =
       _SubmitUserReviewLoading;
   const factory ReviewsState.submitUserReviewFailure(
     NetworkExceptions? networkException,

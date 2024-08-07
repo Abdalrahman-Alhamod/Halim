@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/context_extensions.dart';
+import '../../../../../core/utils/navigation_extra_keys.dart';
 
 class TeacherAvatar extends StatelessWidget {
   final String imageUrl;
@@ -14,7 +15,12 @@ class TeacherAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        GoRouter.of(context).push(AppRoute.kMentorDetailsView);
+        GoRouter.of(context).push(
+          AppRoute.kMentorDetailsView,
+          extra: {
+            NavKeys.mentorId: -1,
+          },
+        );
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),

@@ -36,6 +36,7 @@ class CourseLessonsSectionPageList extends StatelessWidget {
               child: ListView.builder(
                 itemCount: courseLessonsSectionsPage.length,
                 shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: CourseLessonsSubSection(

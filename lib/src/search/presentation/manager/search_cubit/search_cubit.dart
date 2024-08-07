@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:halim/core/widgets/shimmer_box.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/about/mentor_card_loading_list.dart';
+import 'package:halim/src/mentor_details/presentation/views/widgets/mentor_card_loading_list.dart';
 import 'package:halim/src/search/domain/repos/search_repo.dart';
 import 'package:halim/src/search/presentation/views/widgets/filter/widgets/subcategories_buttons_loading_list.dart';
 import 'package:halim/src/shared/app_data.dart';

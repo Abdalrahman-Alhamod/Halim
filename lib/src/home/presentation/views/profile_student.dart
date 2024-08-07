@@ -8,7 +8,7 @@ import '../../../../core/themes/app_colors.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/context_extensions.dart';
 import '../../../achievements/presentation/views/widgets/achievemenets_numbers.dart';
-import '../../../course_details/presentation/views/widgets/mentor_details_view.dart/sections/mentor_courses_section.dart';
+import '../../../mentor_details/presentation/views/widgets/sections/mentor_courses_section.dart';
 
 import '../../../../core/constants/app_constrains.dart';
 import '../../../../core/widgets/back_arrow_icon.dart';

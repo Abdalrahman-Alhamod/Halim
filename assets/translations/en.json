@@ -186,7 +186,10 @@
       "coursesNum": "Courses",
       "aboutMe": "About Me",
       "message": "Message",
-      "website": "Website"
+      "website": "Website",
+      "email": "E-mail",
+      "bestCourses": "Best Courses",
+      "mentorCourses": "Mentor Courses"
     },
     "MyCourse": {
       "continueTheCourse": "Continue The Course",

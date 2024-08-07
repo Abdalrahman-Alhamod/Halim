@@ -170,6 +170,9 @@ abstract class  LocaleKeys {
   static const CourseDetails_Mentor_aboutMe = 'CourseDetails.Mentor.aboutMe';
   static const CourseDetails_Mentor_message = 'CourseDetails.Mentor.message';
   static const CourseDetails_Mentor_website = 'CourseDetails.Mentor.website';
+  static const CourseDetails_Mentor_email = 'CourseDetails.Mentor.email';
+  static const CourseDetails_Mentor_bestCourses = 'CourseDetails.Mentor.bestCourses';
+  static const CourseDetails_Mentor_mentorCourses = 'CourseDetails.Mentor.mentorCourses';
   static const CourseDetails_Mentor = 'CourseDetails.Mentor';
   static const CourseDetails_MyCourse_continueTheCourse = 'CourseDetails.MyCourse.continueTheCourse';
   static const CourseDetails_MyCourse_startCourseAgain = 'CourseDetails.MyCourse.startCourseAgain';

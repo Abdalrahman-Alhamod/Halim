@@ -39,6 +39,7 @@ class _MyCourseDetailsBody extends StatelessWidget {
                   ),
                 ),
               ],
+              isScrollable: true,
             ),
             const SizedBox(
               height: 20,

@@ -23,13 +23,12 @@ mixin _$ReviewsState {
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -48,12 +47,12 @@ mixin _$ReviewsState {
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -71,12 +70,12 @@ mixin _$ReviewsState {
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -230,13 +229,12 @@ class _$InitialImpl implements _Initial {
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -258,12 +256,12 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -284,12 +282,12 @@ class _$InitialImpl implements _Initial {
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -450,13 +448,12 @@ class _$FetchCourseLastReviewsLoadingImpl
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -478,12 +475,12 @@ class _$FetchCourseLastReviewsLoadingImpl
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -504,12 +501,12 @@ class _$FetchCourseLastReviewsLoadingImpl
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -670,13 +667,12 @@ class _$FetchCourseLastReviewsEmptyImpl
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -698,12 +694,12 @@ class _$FetchCourseLastReviewsEmptyImpl
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -724,12 +720,12 @@ class _$FetchCourseLastReviewsEmptyImpl
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -933,13 +929,12 @@ class _$FetchCourseLastReviewsFailureImpl
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -961,12 +956,12 @@ class _$FetchCourseLastReviewsFailureImpl
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -987,12 +982,12 @@ class _$FetchCourseLastReviewsFailureImpl
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -1120,7 +1115,7 @@ abstract class _$$FetchCourseLastReviewsSuccessImplCopyWith<$Res> {
           $Res Function(_$FetchCourseLastReviewsSuccessImpl) then) =
       __$$FetchCourseLastReviewsSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<CourseReviewBlockModel> data, String? message});
+  $Res call({List<ReviewBlockModel> data, String? message});
 }
 
 /// @nodoc
@@ -1143,7 +1138,7 @@ class __$$FetchCourseLastReviewsSuccessImplCopyWithImpl<$Res>
       null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<CourseReviewBlockModel>,
+              as List<ReviewBlockModel>,
       freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -1157,12 +1152,12 @@ class __$$FetchCourseLastReviewsSuccessImplCopyWithImpl<$Res>
 class _$FetchCourseLastReviewsSuccessImpl
     implements _FetchCourseLastReviewsSuccess {
   const _$FetchCourseLastReviewsSuccessImpl(
-      final List<CourseReviewBlockModel> data, this.message)
+      final List<ReviewBlockModel> data, this.message)
       : _data = data;
 
-  final List<CourseReviewBlockModel> _data;
+  final List<ReviewBlockModel> _data;
   @override
-  List<CourseReviewBlockModel> get data {
+  List<ReviewBlockModel> get data {
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
@@ -1205,13 +1200,12 @@ class _$FetchCourseLastReviewsSuccessImpl
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -1233,12 +1227,12 @@ class _$FetchCourseLastReviewsSuccessImpl
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -1259,12 +1253,12 @@ class _$FetchCourseLastReviewsSuccessImpl
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -1375,10 +1369,10 @@ class _$FetchCourseLastReviewsSuccessImpl
 
 abstract class _FetchCourseLastReviewsSuccess implements ReviewsState {
   const factory _FetchCourseLastReviewsSuccess(
-          final List<CourseReviewBlockModel> data, final String? message) =
+          final List<ReviewBlockModel> data, final String? message) =
       _$FetchCourseLastReviewsSuccessImpl;
 
-  List<CourseReviewBlockModel> get data;
+  List<ReviewBlockModel> get data;
   String? get message;
   @JsonKey(ignore: true)
   _$$FetchCourseLastReviewsSuccessImplCopyWith<
@@ -1433,13 +1427,12 @@ class _$FetchUserCourseReviewLoadingImpl
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -1461,12 +1454,12 @@ class _$FetchUserCourseReviewLoadingImpl
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -1487,12 +1480,12 @@ class _$FetchUserCourseReviewLoadingImpl
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -1695,13 +1688,12 @@ class _$FetchUserCourseReviewFailureImpl
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -1723,12 +1715,12 @@ class _$FetchUserCourseReviewFailureImpl
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -1749,12 +1741,12 @@ class _$FetchUserCourseReviewFailureImpl
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -1882,9 +1874,9 @@ abstract class _$$FetchUserCourseReviewSuccessImplCopyWith<$Res> {
           $Res Function(_$FetchUserCourseReviewSuccessImpl) then) =
       __$$FetchUserCourseReviewSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({CourseReviewBlockModel data, String? message});
+  $Res call({ReviewBlockModel data, String? message});
 
-  $CourseReviewBlockModelCopyWith<$Res> get data;
+  $ReviewBlockModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -1906,7 +1898,7 @@ class __$$FetchUserCourseReviewSuccessImplCopyWithImpl<$Res>
       null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as CourseReviewBlockModel,
+              as ReviewBlockModel,
       freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -1916,8 +1908,8 @@ class __$$FetchUserCourseReviewSuccessImplCopyWithImpl<$Res>
 
   @override
   @pragma('vm:prefer-inline')
-  $CourseReviewBlockModelCopyWith<$Res> get data {
-    return $CourseReviewBlockModelCopyWith<$Res>(_value.data, (value) {
+  $ReviewBlockModelCopyWith<$Res> get data {
+    return $ReviewBlockModelCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
     });
   }
@@ -1930,7 +1922,7 @@ class _$FetchUserCourseReviewSuccessImpl
   const _$FetchUserCourseReviewSuccessImpl(this.data, this.message);
 
   @override
-  final CourseReviewBlockModel data;
+  final ReviewBlockModel data;
   @override
   final String? message;
 
@@ -1967,13 +1959,12 @@ class _$FetchUserCourseReviewSuccessImpl
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -1995,12 +1986,12 @@ class _$FetchUserCourseReviewSuccessImpl
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -2021,12 +2012,12 @@ class _$FetchUserCourseReviewSuccessImpl
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -2137,10 +2128,10 @@ class _$FetchUserCourseReviewSuccessImpl
 
 abstract class _FetchUserCourseReviewSuccess implements ReviewsState {
   const factory _FetchUserCourseReviewSuccess(
-          final CourseReviewBlockModel data, final String? message) =
+          final ReviewBlockModel data, final String? message) =
       _$FetchUserCourseReviewSuccessImpl;
 
-  CourseReviewBlockModel get data;
+  ReviewBlockModel get data;
   String? get message;
   @JsonKey(ignore: true)
   _$$FetchUserCourseReviewSuccessImplCopyWith<
@@ -2194,13 +2185,12 @@ class _$SubmitUserReviewLoadingImpl implements _SubmitUserReviewLoading {
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -2222,12 +2212,12 @@ class _$SubmitUserReviewLoadingImpl implements _SubmitUserReviewLoading {
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -2248,12 +2238,12 @@ class _$SubmitUserReviewLoadingImpl implements _SubmitUserReviewLoading {
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -2453,13 +2443,12 @@ class _$SubmitUserReviewFailureImpl implements _SubmitUserReviewFailure {
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -2481,12 +2470,12 @@ class _$SubmitUserReviewFailureImpl implements _SubmitUserReviewFailure {
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -2507,12 +2496,12 @@ class _$SubmitUserReviewFailureImpl implements _SubmitUserReviewFailure {
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -2704,13 +2693,12 @@ class _$SubmitUserReviewSuccessImpl implements _SubmitUserReviewSuccess {
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -2732,12 +2720,12 @@ class _$SubmitUserReviewSuccessImpl implements _SubmitUserReviewSuccess {
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -2758,12 +2746,12 @@ class _$SubmitUserReviewSuccessImpl implements _SubmitUserReviewSuccess {
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -2925,13 +2913,12 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -2953,12 +2940,12 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -2979,12 +2966,12 @@ class _$LoadingPaginationImpl implements _LoadingPagination {
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -3182,13 +3169,12 @@ class _$FailurePaginationImpl implements _FailurePagination {
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -3210,12 +3196,12 @@ class _$FailurePaginationImpl implements _FailurePagination {
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -3236,12 +3222,12 @@ class _$FailurePaginationImpl implements _FailurePagination {
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
@@ -3430,13 +3416,12 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
     required TResult Function() fetchCourseLastReviewsEmpty,
     required TResult Function(NetworkExceptions? networkException)
         fetchCourseLastReviewsFailure,
-    required TResult Function(
-            List<CourseReviewBlockModel> data, String? message)
+    required TResult Function(List<ReviewBlockModel> data, String? message)
         fetchCourseLastReviewsSuccess,
     required TResult Function() fetchUserCourseReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchUserCourseReviewFailure,
-    required TResult Function(CourseReviewBlockModel data, String? message)
+    required TResult Function(ReviewBlockModel data, String? message)
         fetchUserCourseReviewSuccess,
     required TResult Function() submitUserReviewLoading,
     required TResult Function(NetworkExceptions? networkException)
@@ -3458,12 +3443,12 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
     TResult? Function()? fetchCourseLastReviewsEmpty,
     TResult? Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult? Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult? Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult? Function()? fetchUserCourseReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult? Function(CourseReviewBlockModel data, String? message)?
+    TResult? Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult? Function()? submitUserReviewLoading,
     TResult? Function(NetworkExceptions? networkException)?
@@ -3484,12 +3469,12 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
     TResult Function()? fetchCourseLastReviewsEmpty,
     TResult Function(NetworkExceptions? networkException)?
         fetchCourseLastReviewsFailure,
-    TResult Function(List<CourseReviewBlockModel> data, String? message)?
+    TResult Function(List<ReviewBlockModel> data, String? message)?
         fetchCourseLastReviewsSuccess,
     TResult Function()? fetchUserCourseReviewLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchUserCourseReviewFailure,
-    TResult Function(CourseReviewBlockModel data, String? message)?
+    TResult Function(ReviewBlockModel data, String? message)?
         fetchUserCourseReviewSuccess,
     TResult Function()? submitUserReviewLoading,
     TResult Function(NetworkExceptions? networkException)?

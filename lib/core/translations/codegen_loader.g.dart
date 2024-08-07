@@ -202,7 +202,10 @@ class CodegenLoader extends AssetLoader{
       "coursesNum": "دورة",
       "aboutMe": "عنِّي",
       "message": "مراسلة",
-      "website": "ويب"
+      "website": "ويب",
+      "email": "إيميل",
+      "bestCourses": "أفضل الدورات",
+      "mentorCourses": "دورات المدرّب"
     },
     "MyCourse": {
       "continueTheCourse": "أكمل الدورة",
@@ -717,7 +720,10 @@ static const Map<String,dynamic> en = {
       "coursesNum": "Courses",
       "aboutMe": "About Me",
       "message": "Message",
-      "website": "Website"
+      "website": "Website",
+      "email": "E-mail",
+      "bestCourses": "Best Courses",
+      "mentorCourses": "Mentor Courses"
     },
     "MyCourse": {
       "continueTheCourse": "Continue The Course",

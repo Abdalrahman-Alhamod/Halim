@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'course_reviews_section_header.dart';
 
 import 'course_last_reviews.dart';
-import 'review_stars_bar/course_reviews_stars_bar.dart';
+import 'review_stars_bar/reviews_stars_bar.dart';
 import 'user_review_block.dart';
 
 class CourseReviewsSection extends StatelessWidget {
@@ -32,7 +32,7 @@ class CourseReviewsSection extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        CourseReviewsStarsBar(
+        ReviewsStarsBar(
           initialValue: context.read<ReviewsCubit>().courseRatingFilter,
           onChanged: (value) {
             context.read<ReviewsCubit>().courseRatingFilter = value;

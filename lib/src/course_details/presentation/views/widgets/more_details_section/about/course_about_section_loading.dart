@@ -5,7 +5,7 @@ import 'package:halim/core/utils/context_extensions.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../../core/widgets/shimmer_box.dart';
 import 'course_keywords.dart';
-import 'mentor_card_loading.dart';
+import '../../../../../../mentor_details/presentation/views/widgets/mentor_card_loading.dart';
 
 class CourseAboutSectionLoading extends StatelessWidget {
   const CourseAboutSectionLoading({
@@ -46,6 +46,7 @@ class CourseAboutSectionLoading extends StatelessWidget {
         ),
         ListView.separated(
           shrinkWrap: true,
+           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) => ShimmerBox(
             width: context.width * 0.9,
             height: 10,

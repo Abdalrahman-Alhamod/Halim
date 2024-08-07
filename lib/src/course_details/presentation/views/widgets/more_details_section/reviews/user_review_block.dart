@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../../../core/functions/show_custom_dialog.dart';
 import '../../../../../../../core/widgets/custome_elevated_button.dart';
-import '../../../../../data/models/course_review_block_model.dart';
+import '../../../../../../shared/model/review_block_model.dart';
 import '../../../../manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../manager/reviews_cubit/reviews_cubit.dart';
 import 'course_review_block.dart';
@@ -16,7 +16,7 @@ class UserReviewBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    CourseReviewBlockModel userReviewModel = const CourseReviewBlockModel();
+    ReviewBlockModel userReviewModel = const ReviewBlockModel();
     return BlocConsumer<ReviewsCubit, ReviewsState>(
       buildWhen: context.read<ReviewsCubit>().buildUserCourseReviewWhen,
       listenWhen: context.read<ReviewsCubit>().listenSubmitUserReviewWhen,

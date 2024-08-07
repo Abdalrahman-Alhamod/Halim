@@ -9,7 +9,7 @@ import 'package:readmore/readmore.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
-import 'course_about_mentor.dart';
+import '../../../../../../mentor_details/presentation/views/widgets/mentor_card.dart';
 import 'course_keywords.dart';
 
 class CourseAboutSection extends StatelessWidget {
@@ -49,7 +49,7 @@ class CourseAboutSection extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  CourseAboutMentor(
+                  MentorCard(
                     mentorCardModel: courseAboutSectionModel.mentor ??
                         const MentorCardModel(),
                   ),

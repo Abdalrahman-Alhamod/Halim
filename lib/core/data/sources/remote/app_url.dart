@@ -65,6 +65,7 @@ abstract final class AppUrl {
       "subcategory,enrollments-count,reviews-avg,reviews-count,level,lessons-count,sections-count";
   static const courseAboutSectionIncludes = "mentor,keywords,profile";
   static const courseLessonsSectionIncludes = "lessons,lessons-count,duration";
+  static const mentorDetailsIncludes = "enrollments-number,profile";
 
   ///<------------------------------------------------------------------------------
 
@@ -89,8 +90,10 @@ abstract final class AppUrl {
   static const kSaved = "saved";
   static const kUnsaved = "unsaved";
 
+  static const kCourses = "courses";
 
   ///<------------------------------------------------------------------------------
+
   static final categories = "${baseUrl}categories";
   static final subcategories = "${baseUrl}subcategories";
 

@@ -4,6 +4,7 @@ import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/utils/navigation_extra_keys.dart';
 
 class TeacherCard extends StatelessWidget {
   final String imageUrl;
@@ -74,7 +75,12 @@ class TeacherCard extends StatelessWidget {
                             color: Colors.blue),
                       ),
                       onPressed: () {
-                        GoRouter.of(context).push(AppRoute.kMentorDetailsView);
+                        GoRouter.of(context).push(
+                          AppRoute.kMentorDetailsView,
+                          extra: {
+                            NavKeys.mentorId: -1,
+                          },
+                        );
                       },
                     ),
                   ],

@@ -186,7 +186,10 @@
       "coursesNum": "دورة",
       "aboutMe": "عنِّي",
       "message": "مراسلة",
-      "website": "ويب"
+      "website": "ويب",
+      "email": "إيميل",
+      "bestCourses": "أفضل الدورات",
+      "mentorCourses": "دورات المدرّب"
     },
     "MyCourse": {
       "continueTheCourse": "أكمل الدورة",

@@ -13,7 +13,7 @@ import 'level_bar/level_bar.dart';
 import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/custome_elevated_button.dart';
-import '../../../../../course_details/presentation/views/widgets/more_details_section/reviews/review_stars_bar/course_reviews_stars_bar.dart';
+import '../../../../../course_details/presentation/views/widgets/more_details_section/reviews/review_stars_bar/reviews_stars_bar.dart';
 import 'widgets/subcategories_buttons_list.dart';
 
 part './widgets/price_range_slider.dart';
@@ -216,7 +216,7 @@ class FilterBottomSheet extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            CourseReviewsStarsBar(
+            ReviewsStarsBar(
               initialValue: context.read<SearchCubit>().filters.rating,
               onChanged: (value) {
                 currentFilters.rating = value;

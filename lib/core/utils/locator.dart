@@ -21,6 +21,10 @@ import 'package:halim/src/home/data/data_sources/home_remote_data_source.dart';
 import 'package:halim/src/home/data/repos/home_repo_impl.dart';
 import 'package:halim/src/home/domain/repos/home_repo.dart';
 import 'package:halim/src/home/presentation/manager/home_cubit/home_cubit.dart';
+import 'package:halim/src/mentor_details/data/data_sources/mentor_details_local_data_source.dart';
+import 'package:halim/src/mentor_details/data/data_sources/mentor_details_remote_data_source.dart';
+import 'package:halim/src/mentor_details/data/repos/mentor_details_repo_impl.dart';
+import 'package:halim/src/mentor_details/presentation/manager/mentor_details_cubit/mentor_details_cubit.dart';
 import 'package:halim/src/profile_settings/data/data_sources/profile_settings_local_data_source.dart';
 import 'package:halim/src/profile_settings/data/data_sources/profile_settings_remote_data_source.dart';
 import 'package:halim/src/profile_settings/data/repos/profile_settings_repo_impl.dart';
@@ -34,6 +38,7 @@ import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.
 import 'package:halim/src/search/presentation/manager/search_keywords_cubit/search_keywords_cubit.dart';
 
 import '../../src/auth/presentation/manager/logout_cubit/logout_cubit.dart';
+import '../../src/mentor_details/domain/repos/mentor_details_repo.dart';
 import '../data/sources/remote/services/api_services.dart';
 import '../data/sources/remote/services/api_services_impl.dart';
 
@@ -89,6 +94,15 @@ void setupLocators() {
       locator.get<ApiServices>(),
     ),
   );
+  // Mentor Details
+  locator.registerLazySingleton<MentorDetailsLocalDataSource>(
+    () => MentorDetailsLocalDataSource(),
+  );
+  locator.registerLazySingleton<MentorDetailsRemoteDataSource>(
+    () => MentorDetailsRemoteDataSource(
+      locator.get<ApiServices>(),
+    ),
+  );
   // Profile Settings
   locator.registerLazySingleton<ProfileSettingsLocalDataSource>(
     () => ProfileSettingsLocalDataSource(),
@@ -100,7 +114,7 @@ void setupLocators() {
   );
 
   // Account Setup
-   locator.registerLazySingleton<AccountSetupLocalDataSource>(
+  locator.registerLazySingleton<AccountSetupLocalDataSource>(
     () => AccountSetupLocalDataSource(),
   );
   locator.registerLazySingleton<AccountSetupRemoteDataSource>(
@@ -139,7 +153,13 @@ void setupLocators() {
       locator.get<CourseDetailsRemoteDataSource>(),
     ),
   );
-
+  // Mentor Details
+  locator.registerLazySingleton<MentorDetailsRepo>(
+    () => MentorDetailsRepoImpl(
+      locator.get<MentorDetailsLocalDataSource>(),
+      locator.get<MentorDetailsRemoteDataSource>(),
+    ),
+  );
   // Profile Settings
   locator.registerLazySingleton<ProfileSettingsRepo>(
     () => ProfileSettingsRepolmpl(
@@ -198,7 +218,12 @@ void setupLocators() {
       locator.get<CourseDetailsRepo>(),
     ),
   );
-
+  // Mentor Details
+  locator.registerFactory<MentorDetailsCubit>(
+    () => MentorDetailsCubit(
+      locator.get<MentorDetailsRepo>(),
+    ),
+  );
   // Profile Settigs
   locator.registerFactory<ProfileSettingsCubit>(
     () => ProfileSettingsCubit(

@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/functions/show_loading_dialog.dart';
-import 'package:halim/core/themes/app_colors.dart';
 import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/custom_loading_indicator.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_review_block_loading_list.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_review_block_loading.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/review_block_loading_list.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 import '../../../../../core/data/sources/remote/app_url.dart';
@@ -17,8 +14,9 @@ import '../../../../../core/functions/toast_status.dart';
 import '../../../../../core/utils/logger.dart';
 import '../../../../../core/utils/pagination_adapter.dart';
 import '../../../../../core/widgets/empty_view.dart';
-import '../../../data/models/course_review_block_model.dart';
+import '../../../../shared/model/review_block_model.dart';
 import '../../../domain/repos/course_details_repo.dart';
+import '../../views/widgets/more_details_section/reviews/review_block_loading.dart';
 
 part 'reviews_state.dart';
 part 'reviews_cubit.freezed.dart';
@@ -30,7 +28,7 @@ class ReviewsCubit extends Cubit<ReviewsState> {
   int courseId = -1;
 
   String courseRatingFilter = AppUrl.all;
-  List<CourseReviewBlockModel> courseLastReview = [];
+  List<ReviewBlockModel> courseLastReview = [];
   Future<void> getCourseLastReviews() async {
     emit(
       const ReviewsState.fetchCourseLastReviewsLoading(),
@@ -41,7 +39,7 @@ class ReviewsCubit extends Cubit<ReviewsState> {
     );
     response.when(
       success: (data) {
-        courseLastReview = List<CourseReviewBlockModel>.from(data.data.list);
+        courseLastReview = List<ReviewBlockModel>.from(data.data.list);
         courseLastReview.isEmpty
             ? emit(
                 const ReviewsState.fetchCourseLastReviewsEmpty(),
@@ -80,15 +78,15 @@ class ReviewsCubit extends Cubit<ReviewsState> {
     required Widget child,
   }) {
     return state.maybeWhen(
-      fetchCourseLastReviewsLoading: () => const CourseReviewBlockLoadingList(),
+      fetchCourseLastReviewsLoading: () => const ReviewBlockLoadingList(),
       fetchCourseLastReviewsEmpty: () => const EmptyView(),
       fetchCourseLastReviewsSuccess: (_, __) => child,
       fetchCourseLastReviewsFailure: (_) => const SizedBox(),
-      orElse: () => const CourseReviewBlockLoadingList(),
+      orElse: () => const ReviewBlockLoadingList(),
     );
   }
 
-  CourseReviewBlockModel? userCourseReview;
+  ReviewBlockModel? userCourseReview;
   Future<void> getUserCourseReview() async {
     emit(
       const ReviewsState.fetchUserCourseReviewLoading(),
@@ -132,7 +130,7 @@ class ReviewsCubit extends Cubit<ReviewsState> {
     required Widget child,
   }) {
     return state.maybeWhen(
-      fetchUserCourseReviewLoading: () => const CourseReviewBlockLoading(),
+      fetchUserCourseReviewLoading: () => const ReviewBlockLoading(),
       fetchUserCourseReviewSuccess: (_, __) => child,
       fetchUserCourseReviewFailure: (_) => const SizedBox(),
       orElse: () => const SizedBox(),
@@ -226,9 +224,9 @@ class ReviewsCubit extends Cubit<ReviewsState> {
     );
   }
 
-  List<CourseReviewBlockModel> courseReviews = [];
+  List<ReviewBlockModel> courseReviews = [];
 
-  late final PagingAdapter<CourseReviewBlockModel> courseReviewsPagingAdapter;
+  late final PagingAdapter<ReviewBlockModel> courseReviewsPagingAdapter;
 
   void refresh() {
     courseReviewsPagingAdapter.refresh();
@@ -291,17 +289,14 @@ class ReviewsCubit extends Cubit<ReviewsState> {
 
   Widget buildCoursePaginatedReviewssList(
     BuildContext context, {
-    required PagingController<int, CourseReviewBlockModel> pagingController,
-    required Widget Function(BuildContext, CourseReviewBlockModel, int)
-        itemBuilder,
+    required PagingController<int, ReviewBlockModel> pagingController,
+    required Widget Function(BuildContext, ReviewBlockModel, int) itemBuilder,
   }) =>
       courseReviewsPagingAdapter.buildListView(
         context,
         pagingController,
         itemBuilder,
-        loadBuilder: const CustomLoadingIndicator(
-          color: AppColors.primaryColor,
-        ),
+        loadBuilder: const ReviewBlockLoadList(),
         noItemsFoundIndicatorBuilder: EmptyView(
           width: context.width * 0.85,
         ),

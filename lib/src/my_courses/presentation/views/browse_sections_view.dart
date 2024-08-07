@@ -85,7 +85,9 @@ class BrowseSectionsCoursesState extends State<BrowseSectionsCourses> {
               title: LocaleKeys.MyCourses_downloaded.tr(),
               child: const DownloadedCoursesPage(),
             ),
+            
           ],
+          isScrollable: true,
         ),
       ),
     );

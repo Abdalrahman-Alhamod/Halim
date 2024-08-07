@@ -6,10 +6,10 @@ import 'package:halim/core/data/sources/remote/app_url.dart';
 import 'package:halim/src/course_details/data/models/course_about_section_model.dart';
 import 'package:halim/src/course_details/data/models/course_lesson_model.dart';
 import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
-import 'package:halim/src/course_details/data/models/course_review_block_model.dart';
 import 'package:halim/src/course_details/data/models/lessons_section_model.dart';
 
 import '../../../../core/data/sources/remote/services/api_services.dart';
+import '../../../shared/model/review_block_model.dart';
 
 class CourseDetailsRemoteDataSource {
   final ApiServices _apiServices;
@@ -80,7 +80,7 @@ class CourseDetailsRemoteDataSource {
       response,
       (json) => BaseModels.fromJson(
         json,
-        (itemJson) => CourseReviewBlockModel.fromJson(
+        (itemJson) => ReviewBlockModel.fromJson(
           itemJson,
         ),
       ),
@@ -96,7 +96,7 @@ class CourseDetailsRemoteDataSource {
     );
     return BaseModel.fromJson(
       response,
-      (json) => CourseReviewBlockModel.fromJson(
+      (json) => ReviewBlockModel.fromJson(
         json,
       ),
     );
@@ -219,7 +219,7 @@ class CourseDetailsRemoteDataSource {
       response,
       (json) => BaseModels.fromJson(
         json,
-        (itemJson) => CourseReviewBlockModel.fromJson(
+        (itemJson) => ReviewBlockModel.fromJson(
           itemJson,
         ),
       ),

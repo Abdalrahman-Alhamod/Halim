@@ -13,6 +13,8 @@ import 'package:halim/src/forgot_password/presentation/views/enter_email_view.da
 import 'package:halim/src/forgot_password/presentation/views/enter_phone_num_view.dart';
 import 'package:halim/src/home/presentation/views/profile_student.dart';
 import 'package:halim/src/home/presentation/views/profile_student_personal_view.dart';
+import 'package:halim/src/mentor_details/presentation/views/mentor_courses_view.dart';
+import 'package:halim/src/mentor_details/presentation/views/mentor_reviews_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
@@ -22,9 +24,9 @@ import 'package:halim/src/course_details/presentation/views/course_details_view.
 import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_reading_view.dart';
 import 'package:halim/src/course_details/presentation/views/enroll_course_view.dart';
-import 'package:halim/src/course_details/presentation/views/mentor_details_view.dart';
+import 'package:halim/src/mentor_details/presentation/views/mentor_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/my_course_details_view.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/mentor_details_view.dart/mentor_details_app_bar.dart';
+import 'package:halim/src/mentor_details/presentation/views/widgets/mentor_details_view/mentor_details_app_bar.dart';
 import 'package:halim/src/forgot_password/presentation/views/new_pass_view.dart';
 import 'package:halim/src/home/presentation/views/home_view.dart';
 import 'package:halim/src/auth/presentation/views/confirm_email_view.dart';
@@ -73,6 +75,8 @@ class AppRoute {
   static const kQuizQuestionsView = '/quizQuestions';
   static const kQuizFinishView = '/quizFinish';
   static const kCourseVideoView = '/courseVideo';
+  static const kMentorCoursesView = '/mentorCourses';
+  static const kMentorReviewsView= '/mentorReviews';
 
   static const kFillProfile = '/fillProfile';
   static const kCreatePin = '/kCreatePin';
@@ -225,7 +229,22 @@ class AppRoute {
       GoRoute(
         path: kMentorDetailsView,
         builder: (BuildContext context, GoRouterState state) {
-          return const MentorDetailsView();
+          return MentorDetailsView(
+            mentorId: (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.mentorId] as int,
+          );
+        },
+      ),
+       GoRoute(
+        path: kMentorCoursesView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const MentorCoursesView();
+        },
+      ),
+        GoRoute(
+        path: kMentorReviewsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const MentorReviewsView();
         },
       ),
       GoRoute(

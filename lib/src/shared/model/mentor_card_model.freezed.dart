@@ -152,13 +152,14 @@ class __$$MentorCardModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MentorCardModelImpl implements _MentorCardModel {
+class _$MentorCardModelImpl extends _MentorCardModel {
   const _$MentorCardModelImpl(
       {this.id,
       @JsonKey(name: 'first_name') this.firstName,
       @JsonKey(name: 'last_name') this.lastName,
       this.image,
-      this.headline});
+      this.headline})
+      : super._();
 
   factory _$MentorCardModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$MentorCardModelImplFromJson(json);
@@ -216,13 +217,14 @@ class _$MentorCardModelImpl implements _MentorCardModel {
   }
 }
 
-abstract class _MentorCardModel implements MentorCardModel {
+abstract class _MentorCardModel extends MentorCardModel {
   const factory _MentorCardModel(
       {final int? id,
       @JsonKey(name: 'first_name') final String? firstName,
       @JsonKey(name: 'last_name') final String? lastName,
       final String? image,
       final String? headline}) = _$MentorCardModelImpl;
+  const _MentorCardModel._() : super._();
 
   factory _MentorCardModel.fromJson(Map<String, dynamic> json) =
       _$MentorCardModelImpl.fromJson;

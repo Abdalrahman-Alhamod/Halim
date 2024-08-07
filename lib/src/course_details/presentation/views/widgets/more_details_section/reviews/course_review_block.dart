@@ -1,21 +1,18 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/helpers/date_time_helper.dart';
-import 'package:halim/src/course_details/data/models/course_review_block_model.dart';
-import 'package:halim/src/course_details/data/models/student_card_model_extension.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 
-import '../../../../../../../core/widgets/avatar_error_widget.dart';
-import '../../../../../../../core/widgets/shimmer_box.dart';
-import 'review_stars_bar/course_reviews_stars_button.dart';
+import '../../../../../../../core/widgets/avatar_image_loader.dart';
+import '../../../../../../shared/model/review_block_model.dart';
+import 'review_stars_bar/reviews_stars_button.dart';
 
 class CourseReviewBlock extends StatelessWidget {
   const CourseReviewBlock({
     super.key,
     required this.courseReviewBlockModel,
   });
-  final CourseReviewBlockModel courseReviewBlockModel;
+  final ReviewBlockModel courseReviewBlockModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,15 +27,9 @@ class CourseReviewBlock extends StatelessWidget {
                 flex: 1,
                 child: Row(
                   children: [
-                    ClipOval(
-                      child: CachedNetworkImage(
-                        imageUrl: courseReviewBlockModel.student?.image ?? '',
-                        fit: BoxFit.cover,
-                        width: 56,
-                        height: 56,
-                        placeholder: (context, url) => const ShimmerBox(),
-                        errorWidget: (context, url, error) => const AvatarErrorWidget(),
-                      ),
+                    AvatarImageLoader(
+                      image: courseReviewBlockModel.student?.image,
+                      radius: 28,
                     ),
                     const SizedBox(
                       width: 10,
@@ -59,7 +50,7 @@ class CourseReviewBlock extends StatelessWidget {
               ),
               Transform.scale(
                 scale: 0.8,
-                child: CourseReviewsStarsButton(
+                child: ReviewsStarsButton(
                   isPressed: false,
                   onPressed: null,
                   label: '${courseReviewBlockModel.rating ?? 0}',

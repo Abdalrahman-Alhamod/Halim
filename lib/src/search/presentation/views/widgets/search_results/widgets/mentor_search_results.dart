@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/about/course_about_mentor.dart';
+import 'package:halim/src/mentor_details/presentation/views/widgets/mentor_card.dart';
 import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
 
 class MentorsSearchResults extends StatelessWidget {
@@ -22,7 +22,7 @@ class MentorsSearchResults extends StatelessWidget {
           itemBuilder: (_, item, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: CourseAboutMentor(
+              child: MentorCard(
                 mentorCardModel: item,
               ),
             );

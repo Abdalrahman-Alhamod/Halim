@@ -70,6 +70,7 @@ class CourseLessonsSubSectionLoading extends StatelessWidget {
           ),
           ListView.separated(
             shrinkWrap: true,
+             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) => ShimmerBox(
               width: context.width * 0.8,
               height: 15,
