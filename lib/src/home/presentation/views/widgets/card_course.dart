@@ -1,5 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,7 +11,7 @@ import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/utils/navigation_extra_keys.dart';
-import '../../../../../core/widgets/shimmer_box.dart';
+import '../../../../../core/utils/network_image_loader.dart';
 import '../../../../course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import '../functions/remove_bookmark_bottom_sheet.dart';
 
@@ -66,12 +65,10 @@ class _CardCourseState extends State<CardCourse> {
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(24),
-                child: CachedNetworkImage(
-                  imageUrl: courseCardModel.image ?? '',
+                child: NetworkImageLoader(
+                  imageUrl: courseCardModel.image,
                   width: 110,
                   height: 110,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) => const ShimmerBox(),
                 ),
               ),
             ),

@@ -2,35 +2,31 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/helpers/string_helper.dart';
+import 'package:halim/src/my_courses/data/models/my_course_card_model.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/utils/navigation_extra_keys.dart';
+import '../../../../../core/utils/network_image_loader.dart';
 
-class FollowCourse extends StatefulWidget {
-  final String name;
-  final int hours;
-  final int min;
-  final int completedEpisodes;
-  final int allEpisodes;
-  final String imageUrl;
-  const FollowCourse({
+class MyCourseCard extends StatefulWidget {
+  const MyCourseCard({
     super.key,
-    required this.name,
-    required this.hours,
-    required this.min,
-    required this.completedEpisodes,
-    required this.allEpisodes,
-    required this.imageUrl,
+    required this.myCourseCardModel,
   });
-
+  final MyCourseCardModel myCourseCardModel;
   @override
-  State<FollowCourse> createState() => _FollowCourseState();
+  State<MyCourseCard> createState() => _MyCourseCardState();
 }
 
-class _FollowCourseState extends State<FollowCourse> {
+class _MyCourseCardState extends State<MyCourseCard> {
+  late num numberOfHours;
+  late int lessonsCount;
+  late int completedLessonsCount;
   Color getProgressColro(double progress) {
     if (progress >= 0 && progress < 0.35) {
       return Colors.green;
@@ -45,8 +41,16 @@ class _FollowCourseState extends State<FollowCourse> {
 
   @override
   Widget build(BuildContext context) {
+    numberOfHours = widget.myCourseCardModel.numberOfHours ?? 0;
+    lessonsCount = widget.myCourseCardModel.lessonsCount ?? 0;
+    completedLessonsCount = widget.myCourseCardModel.completedLessons ?? 0;
     return GestureDetector(
-      onTap: () => GoRouter.of(context).push(AppRoute.kMyCourseDetailsView),
+      onTap: () => GoRouter.of(context).push(
+        AppRoute.kMyCourseDetailsView,
+        extra: {
+          NavKeys.myCourseId: widget.myCourseCardModel.id ?? -1,
+        },
+      ),
       child: Container(
         height: 150,
         decoration: BoxDecoration(
@@ -55,21 +59,19 @@ class _FollowCourseState extends State<FollowCourse> {
               : AppColors.lightFlatButtonColor,
           borderRadius: BorderRadius.circular(32),
         ),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(15, 15, 5, 15),
-              child: Container(
+            ClipRRect(
+              borderRadius: BorderRadius.circular(24),
+              child: NetworkImageLoader(
+                imageUrl: widget.myCourseCardModel.image,
                 width: 110,
                 height: 110,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(widget.imageUrl),
-                  ),
-                ),
               ),
+            ),
+            const SizedBox(
+              width: 4,
             ),
             Expanded(
               child: Column(
@@ -82,7 +84,7 @@ class _FollowCourseState extends State<FollowCourse> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: AutoSizeText(
-                      widget.name,
+                      widget.myCourseCardModel.title ?? '',
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
@@ -97,7 +99,7 @@ class _FollowCourseState extends State<FollowCourse> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Text(
-                      '${widget.hours} ${LocaleKeys.CourseDetails_hrs.tr()} ${widget.min} ${LocaleKeys.CourseDetails_mins.tr()}',
+                      '${StringHelper.getHoursNum(numberOfHours)} ${LocaleKeys.CourseDetails_hrs.tr()} - ${StringHelper.getMinutesNum(numberOfHours)} ${LocaleKeys.CourseDetails_mins.tr()}',
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
@@ -109,17 +111,16 @@ class _FollowCourseState extends State<FollowCourse> {
                   ),
                   LinearPercentIndicator(
                     alignment: MainAxisAlignment.start,
-                    width: 150.0,
                     animation: true,
                     lineHeight: 9.0,
-                    percent: widget.completedEpisodes / widget.allEpisodes,
+                    percent: (completedLessonsCount) / (lessonsCount),
                     barRadius: const Radius.circular(10),
                     backgroundColor: Colors.grey[300],
                     progressColor: getProgressColro(
-                        widget.completedEpisodes / widget.allEpisodes),
+                        (completedLessonsCount) / (lessonsCount)),
                     clipLinearGradient: true,
                     trailing: Text(
-                      "${widget.completedEpisodes} / ${widget.allEpisodes}",
+                      "$completedLessonsCount / $lessonsCount",
                       style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w300,

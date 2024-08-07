@@ -6,17 +6,17 @@ import 'package:halim/core/widgets/shimmer_box.dart';
 class AvatarImageLoader extends StatelessWidget {
   const AvatarImageLoader({
     super.key,
-    required this.image,
+    required this.imageUrl,
     required this.radius,
   });
 
-  final String? image;
+  final String? imageUrl;
   final double radius;
   @override
   Widget build(BuildContext context) {
     return ClipOval(
       child: CachedNetworkImage(
-        imageUrl: image ?? '',
+        imageUrl: imageUrl ?? '',
         fit: BoxFit.cover,
         width: radius * 2,
         height: radius * 2,

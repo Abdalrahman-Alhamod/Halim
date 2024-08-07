@@ -6,6 +6,7 @@ import 'package:halim/src/course_details/presentation/manager/course_details_cub
 import 'package:halim/src/course_details/presentation/manager/reviews_cubit/reviews_cubit.dart';
 import 'package:halim/src/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:halim/src/mentor_details/presentation/manager/mentor_details_cubit/mentor_details_cubit.dart';
+import 'package:halim/src/my_courses/presentation/manager/my_courses_cubit/my_courses_cubit.dart';
 import 'package:halim/src/profile_settings/presentation/manager/cubit/profile_settings_cubit.dart';
 import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
 import 'package:halim/src/search/presentation/manager/search_keywords_cubit/search_keywords_cubit.dart';
@@ -43,6 +44,9 @@ List<BlocProvider> initProviders() {
     ),
     BlocProvider<AccountSetupCubit>(
       create: (context) => locator.get<AccountSetupCubit>(),
+    ),
+    BlocProvider<MyCoursesCubit>(
+      create: (context) => locator.get<MyCoursesCubit>()..init(context),
     ),
   ];
 }

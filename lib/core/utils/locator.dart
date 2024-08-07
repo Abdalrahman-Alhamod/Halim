@@ -25,6 +25,11 @@ import 'package:halim/src/mentor_details/data/data_sources/mentor_details_local_
 import 'package:halim/src/mentor_details/data/data_sources/mentor_details_remote_data_source.dart';
 import 'package:halim/src/mentor_details/data/repos/mentor_details_repo_impl.dart';
 import 'package:halim/src/mentor_details/presentation/manager/mentor_details_cubit/mentor_details_cubit.dart';
+import 'package:halim/src/my_courses/data/data_sources/my_courses_local_data_source.dart';
+import 'package:halim/src/my_courses/data/data_sources/my_courses_remote_data_source.dart';
+import 'package:halim/src/my_courses/data/repos/my_courses_repo_impl.dart';
+import 'package:halim/src/my_courses/domain/repos/my_courses_repo.dart';
+import 'package:halim/src/my_courses/presentation/manager/my_courses_cubit/my_courses_cubit.dart';
 import 'package:halim/src/profile_settings/data/data_sources/profile_settings_local_data_source.dart';
 import 'package:halim/src/profile_settings/data/data_sources/profile_settings_remote_data_source.dart';
 import 'package:halim/src/profile_settings/data/repos/profile_settings_repo_impl.dart';
@@ -112,13 +117,21 @@ void setupLocators() {
       locator.get<ApiServices>(),
     ),
   );
-
   // Account Setup
   locator.registerLazySingleton<AccountSetupLocalDataSource>(
     () => AccountSetupLocalDataSource(),
   );
   locator.registerLazySingleton<AccountSetupRemoteDataSource>(
     () => AccountSetupRemoteDataSource(
+      locator.get<ApiServices>(),
+    ),
+  );
+  // My Courses
+  locator.registerLazySingleton<MyCoursesLocalDataSource>(
+    () => MyCoursesLocalDataSource(),
+  );
+  locator.registerLazySingleton<MyCoursesRemoteDataSource>(
+    () => MyCoursesRemoteDataSource(
       locator.get<ApiServices>(),
     ),
   );
@@ -172,6 +185,13 @@ void setupLocators() {
     () => AccountSetupImpl(
       locator.get<AccountSetupLocalDataSource>(),
       locator.get<AccountSetupRemoteDataSource>(),
+    ),
+  );
+  // My Courses
+  locator.registerLazySingleton<MyCoursesRepo>(
+    () => MyCoursesRepoImpl(
+      locator.get<MyCoursesLocalDataSource>(),
+      locator.get<MyCoursesRemoteDataSource>(),
     ),
   );
 
@@ -234,6 +254,12 @@ void setupLocators() {
   locator.registerFactory<AccountSetupCubit>(
     () => AccountSetupCubit(
       locator.get<AccountSetupRepo>(),
+    ),
+  );
+  // My Courses
+  locator.registerFactory<MyCoursesCubit>(
+    () => MyCoursesCubit(
+      locator.get<MyCoursesRepo>(),
     ),
   );
 }

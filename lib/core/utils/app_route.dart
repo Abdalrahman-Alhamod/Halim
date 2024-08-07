@@ -49,7 +49,7 @@ import '../../src/home/presentation/views/notifications_view.dart';
 import '../../src/home/presentation/views/popular_courses_view.dart';
 import '../../src/home/presentation/views/top_mentors_view.dart';
 import '../../src/home/presentation/views/widgets/bottom_bar.dart';
-import '../../src/my_courses/presentation/views/browse_sections_view.dart';
+import '../../src/my_courses/presentation/views/my_courses_view.dart';
 import '../../src/profile_settings/presentation/views/edit_profile.dart';
 import '../../src/profile_settings/presentation/views/language_settings_view.dart';
 import '../../src/profile_settings/presentation/views/security_view.dart';
@@ -76,7 +76,7 @@ class AppRoute {
   static const kQuizFinishView = '/quizFinish';
   static const kCourseVideoView = '/courseVideo';
   static const kMentorCoursesView = '/mentorCourses';
-  static const kMentorReviewsView= '/mentorReviews';
+  static const kMentorReviewsView = '/mentorReviews';
 
   static const kFillProfile = '/fillProfile';
   static const kCreatePin = '/kCreatePin';
@@ -90,7 +90,7 @@ class AppRoute {
   static const kNotifications = '/kNotifications';
   static const kBookMark = '/kBookMark';
   static const kSearch = '/kSearch';
-  static const kBrowseSectionsCourses = '/kBrowseSectionsCourses';
+  static const kMyCourses = '/kMyCourses';
   static const kEditProfile = '/kEditProfile';
   static const kNotificationSettingsView = '/kNotificationSettingsView';
   static const kSecurityView = '/kSecurityView';
@@ -235,13 +235,13 @@ class AppRoute {
           );
         },
       ),
-       GoRoute(
+      GoRoute(
         path: kMentorCoursesView,
         builder: (BuildContext context, GoRouterState state) {
           return const MentorCoursesView();
         },
       ),
-        GoRoute(
+      GoRoute(
         path: kMentorReviewsView,
         builder: (BuildContext context, GoRouterState state) {
           return const MentorReviewsView();
@@ -250,7 +250,8 @@ class AppRoute {
       GoRoute(
         path: kMyCourseDetailsView,
         builder: (BuildContext context, GoRouterState state) {
-          return const MyCourseDetailsView();
+          return  MyCourseDetailsView(courseId:    (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.myCourseId] as int,);
         },
       ),
       GoRoute(
@@ -320,9 +321,9 @@ class AppRoute {
         },
       ),
       GoRoute(
-        path: kBrowseSectionsCourses,
+        path: kMyCourses,
         builder: (BuildContext context, GoRouterState state) {
-          return const BrowseSectionsCourses();
+          return const MyCoursesView();
         },
       ),
       GoRoute(

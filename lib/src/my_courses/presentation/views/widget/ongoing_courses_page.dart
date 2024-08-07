@@ -1,34 +1,37 @@
-import 'dart:math';
-
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/assets/app_images.dart';
-import '../../../../../core/translations/locale_keys.g.dart';
-import '../../../../../core/utils/context_extensions.dart';
-import 'follow_course.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/my_courses/presentation/views/widget/my_course_card.dart';
+import '../../manager/my_courses_cubit/my_courses_cubit.dart';
 
 class OngoingCoursesPage extends StatelessWidget {
   const OngoingCoursesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: context.height - 220,
-      child: ListView.builder(
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: FollowCourse(
-              imageUrl: AppImages.testCourseCover,
-              name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
-              allEpisodes: 40,
-              completedEpisodes: Random().nextInt(40),
-              hours: Random().nextInt(80),
-              min: Random().nextInt(55),
-            ),
+    context.read<MyCoursesCubit>().refreshOngoingCourses();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: BlocConsumer<MyCoursesCubit, MyCoursesState>(
+        buildWhen: context.read<MyCoursesCubit>().buildOngoingCoursesListWhen,
+        listenWhen: context.read<MyCoursesCubit>().listenOngoingCoursesWhen,
+        listener: context.read<MyCoursesCubit>().listenOngoingCourses,
+        builder: (context, state) {
+          return context.read<MyCoursesCubit>().buildOngoingCoursesList(
+            context,
+            pagingController: context
+                .read<MyCoursesCubit>()
+                .ongoingCoursesPagingAdapter
+                .pagingController,
+            itemBuilder: (_, item, index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: MyCourseCard(
+                  myCourseCardModel: item,
+                ),
+              );
+            },
           );
         },
-        itemCount: 10,
       ),
     );
   }

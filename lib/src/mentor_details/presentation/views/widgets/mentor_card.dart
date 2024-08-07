@@ -30,7 +30,7 @@ class MentorCard extends StatelessWidget {
             child: Row(
               children: [
                 AvatarImageLoader(
-                  image: mentorCardModel.image,
+                  imageUrl: mentorCardModel.image,
                   radius: 28,
                 ),
                 const SizedBox(

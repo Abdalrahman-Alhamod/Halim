@@ -1,7 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../core/widgets/sections_view/data/section_page.dart';
 import '../../../../core/widgets/sections_view/sections_view.dart';
 import 'widgets/more_details_section/commuinty/course_community_section.dart';
@@ -18,10 +20,11 @@ part 'widgets/my_course_details_view/my_course_details_body.dart';
 part 'widgets/my_course_details_view/my_course_details_bottom_sheet.dart';
 
 class MyCourseDetailsView extends StatelessWidget {
-  const MyCourseDetailsView({super.key});
-
+  const MyCourseDetailsView({super.key, required this.courseId});
+  final int courseId;
   @override
   Widget build(BuildContext context) {
+    context.read<CourseDetailsCubit>().courseId = courseId;
     return const Scaffold(
       appBar: _MyCourseDetailsAppBar(),
       body: _MyCourseDetailsBody(),

@@ -66,6 +66,7 @@ abstract final class AppUrl {
   static const courseAboutSectionIncludes = "mentor,keywords,profile";
   static const courseLessonsSectionIncludes = "lessons,lessons-count,duration";
   static const mentorDetailsIncludes = "enrollments-number,profile";
+  static const ongoingCoursesIncludes = "lessons-count,completed-lessons-count";
 
   ///<------------------------------------------------------------------------------
 
@@ -100,5 +101,15 @@ abstract final class AppUrl {
   ///<------------------------------------------------------------------------------
   static final student = "${baseUrl}students";
   static final courses = "${baseUrl}courses";
+
   static final mentors = "${baseUrl}mentors";
+
+  ///<------------------------------------------------------------------------------
+
+  static final myCourses = "$courses/mycourses";
+  static const kState = "state";
+  static const kOngoing = "ongoing";
+  static const kCompleted = "completed";
+
+  ///<------------------------------------------------------------------------------
 }

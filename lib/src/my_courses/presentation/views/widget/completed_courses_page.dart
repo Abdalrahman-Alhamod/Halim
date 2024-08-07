@@ -1,35 +1,38 @@
-import 'dart:math';
-
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/context_extensions.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/assets/app_images.dart';
-import '../../../../../core/translations/locale_keys.g.dart';
-import 'follow_course.dart';
+import '../../manager/my_courses_cubit/my_courses_cubit.dart';
+import 'my_course_card.dart';
 
 class CompletedCoursesPage extends StatelessWidget {
   const CompletedCoursesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: context.height - 220,
-      child: ListView.builder(
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: FollowCourse(
-              imageUrl: AppImages.testCourseCover,
-              name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
-              allEpisodes: 40,
-              completedEpisodes: 40,
-              hours: Random().nextInt(80),
-              min: Random().nextInt(55),
-            ),
+    context.read<MyCoursesCubit>().refreshCompletedCourses();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: BlocConsumer<MyCoursesCubit, MyCoursesState>(
+        buildWhen: context.read<MyCoursesCubit>().buildCompletedCoursesListWhen,
+        listenWhen: context.read<MyCoursesCubit>().listenCompletedCoursesWhen,
+        listener: context.read<MyCoursesCubit>().listenCompletedCourses,
+        builder: (context, state) {
+          return context.read<MyCoursesCubit>().buildCompletedCoursesList(
+            context,
+            pagingController: context
+                .read<MyCoursesCubit>()
+                .completedCoursesPagingAdapter
+                .pagingController,
+            itemBuilder: (_, item, index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: MyCourseCard(
+                  myCourseCardModel: item,
+                ),
+              );
+            },
           );
         },
-        itemCount: 10,
       ),
     );
   }

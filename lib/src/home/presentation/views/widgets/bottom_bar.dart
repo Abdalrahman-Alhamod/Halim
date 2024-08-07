@@ -6,7 +6,7 @@ import '../../../../profile_settings/presentation/views/settings_view.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
-import '../../../../my_courses/presentation/views/browse_sections_view.dart';
+import '../../../../my_courses/presentation/views/my_courses_view.dart';
 import '../home_view.dart';
 
 class BottomBar extends StatefulWidget {
@@ -36,7 +36,7 @@ class BottomBarState extends State<BottomBar> {
 
   final List<Widget> _pages = [
     const HomeView(),
-    const BrowseSectionsCourses(),
+    const MyCoursesView(),
     const AchievementsView(),
     const SettingsView(),
   ];

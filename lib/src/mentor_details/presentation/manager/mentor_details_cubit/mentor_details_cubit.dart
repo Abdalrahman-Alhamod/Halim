@@ -510,9 +510,5 @@ class MentorDetailsCubit extends Cubit<MentorDetailsState> {
         context,
         pagingController,
         itemBuilder,
-        loadBuilder: const ReviewBlockLoadList(),
-        noItemsFoundIndicatorBuilder: EmptyView(
-          width: context.width * 0.85,
-        ),
       );
 }

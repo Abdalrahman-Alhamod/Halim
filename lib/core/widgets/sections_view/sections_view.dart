@@ -9,10 +9,15 @@ part 'widgets/section_nav_button.dart';
 part 'widgets/sections_nav_bar.dart';
 
 class SectionsView extends StatefulWidget {
-  const SectionsView(
-      {super.key, required this.pages, this.isScrollable = false});
+  const SectionsView({
+    super.key,
+    required this.pages,
+    this.isScrollable = false,
+    this.isChildrenExpandable = true,
+  });
   final List<SectionPage> pages;
   final bool isScrollable;
+  final bool isChildrenExpandable;
   @override
   State<SectionsView> createState() => _SectionsViewState();
 }
@@ -81,16 +86,29 @@ class _SectionsViewState extends State<SectionsView>
                 .toList(),
           ),
         ),
-        ExpandablePageView(
-          physics: const NeverScrollableScrollPhysics(),
-          controller: _pageController,
-          dragStartBehavior: DragStartBehavior.down,
-          children: widget.pages
-              .map(
-                (page) => page.child,
+        widget.isChildrenExpandable
+            ? ExpandablePageView(
+                physics: const NeverScrollableScrollPhysics(),
+                controller: _pageController,
+                dragStartBehavior: DragStartBehavior.down,
+                children: widget.pages
+                    .map(
+                      (page) => page.child,
+                    )
+                    .toList(),
               )
-              .toList(),
-        )
+            : Expanded(
+                child: PageView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  controller: _pageController,
+                  dragStartBehavior: DragStartBehavior.down,
+                  children: widget.pages
+                      .map(
+                        (page) => page.child,
+                      )
+                      .toList(),
+                ),
+              )
       ],
     );
   }

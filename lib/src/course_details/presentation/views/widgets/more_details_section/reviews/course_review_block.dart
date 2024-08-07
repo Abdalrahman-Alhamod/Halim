@@ -28,7 +28,7 @@ class CourseReviewBlock extends StatelessWidget {
                 child: Row(
                   children: [
                     AvatarImageLoader(
-                      image: courseReviewBlockModel.student?.image,
+                      imageUrl: courseReviewBlockModel.student?.image,
                       radius: 28,
                     ),
                     const SizedBox(

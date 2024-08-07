@@ -18,6 +18,7 @@ abstract final class AppImages {
   static const facebook = '$mainPath/facebook.png';
   static const emptyAvatar = '$mainPath/emptyAvatar.png';
   static const iconPublic = '$mainPath/icon.png';
+  static const emptyImage = '$mainPath/emptyImage.png';
 
   static const testPath = 'assets/images/test';
   static const testCourseCover = '$testPath/course_cover.png';
@@ -50,6 +51,7 @@ abstract final class AppImages {
     facebook,
     emptyAvatar,
     iconPublic,
+    emptyImage,
 
     // Test
     testCourseCover,

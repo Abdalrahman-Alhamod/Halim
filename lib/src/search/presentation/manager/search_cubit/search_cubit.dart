@@ -5,6 +5,7 @@ import 'package:halim/core/widgets/shimmer_box.dart';
 import 'package:halim/src/mentor_details/presentation/views/widgets/mentor_card_loading_list.dart';
 import 'package:halim/src/search/domain/repos/search_repo.dart';
 import 'package:halim/src/search/presentation/views/widgets/filter/widgets/subcategories_buttons_loading_list.dart';
+import 'package:halim/src/search/presentation/views/widgets/search_results/result_not_found.dart';
 import 'package:halim/src/shared/app_data.dart';
 import 'package:halim/src/shared/model/course_card_model.dart';
 import 'package:halim/src/shared/model/mentor_card_model.dart';
@@ -249,6 +250,7 @@ class SearchCubit extends Cubit<SearchState> {
         pagingController,
         itemBuilder,
         loadBuilder: const CardCourseLoadList(),
+        noItemsFoundIndicatorBuilder: const ResultNotFound(),
       );
 
   Widget buildMentorsSearchResultsList(
@@ -261,6 +263,7 @@ class SearchCubit extends Cubit<SearchState> {
         pagingController,
         itemBuilder,
         loadBuilder: const MentorCardLoadingList(),
+        noItemsFoundIndicatorBuilder: const ResultNotFound(),
       );
 
   bool listenWhen(SearchState previous, SearchState current) {

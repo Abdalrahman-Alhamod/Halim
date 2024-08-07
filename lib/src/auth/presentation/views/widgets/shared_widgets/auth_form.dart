@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
-
+import 'package:flutter/material.dart' as material;
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/custome_elevated_button.dart';
 import 'custom_text_field.dart';
@@ -61,40 +61,46 @@ class _AuthFormState extends State<AuthForm> {
       key: _formKey,
       child: Column(
         children: [
-          CustomTextField(
-            initialValue: email,
-            obscureText: false,
-            hintText: LocaleKeys.Auth_email.tr(),
-            onChanged: (value) {
-              email = value;
-              setState(() {
-                if (value != '') {
-                  isEmailFilled = true;
-                } else {
-                  isEmailFilled = false;
-                }
-              });
-            },
-            keyboardType: TextInputType.emailAddress,
-            validator: _emailValidator.call,
-            prefixIcon: Icons.email,
+          Directionality(
+            textDirection: material.TextDirection.ltr,
+            child: CustomTextField(
+              initialValue: email,
+              obscureText: false,
+              hintText: LocaleKeys.Auth_email.tr(),
+              onChanged: (value) {
+                email = value;
+                setState(() {
+                  if (value != '') {
+                    isEmailFilled = true;
+                  } else {
+                    isEmailFilled = false;
+                  }
+                });
+              },
+              keyboardType: TextInputType.emailAddress,
+              validator: _emailValidator.call,
+              prefixIcon: Icons.email,
+            ),
           ),
-          CustomTextField(
-            obscureText: true,
-            hintText: LocaleKeys.Auth_password.tr(),
-            onChanged: (value) {
-              password = value;
-              setState(() {
-                if (value != '') {
-                  isPasswordFilled = true;
-                } else {
-                  isPasswordFilled = false;
-                }
-              });
-            },
-            keyboardType: TextInputType.text,
-            validator: _passwordValidator.call,
-            prefixIcon: Icons.lock,
+          Directionality(
+            textDirection: material.TextDirection.ltr,
+            child: CustomTextField(
+              obscureText: true,
+              hintText: LocaleKeys.Auth_password.tr(),
+              onChanged: (value) {
+                password = value;
+                setState(() {
+                  if (value != '') {
+                    isPasswordFilled = true;
+                  } else {
+                    isPasswordFilled = false;
+                  }
+                });
+              },
+              keyboardType: TextInputType.text,
+              validator: _passwordValidator.call,
+              prefixIcon: Icons.lock,
+            ),
           ),
           const SizedBox(
             height: 10,

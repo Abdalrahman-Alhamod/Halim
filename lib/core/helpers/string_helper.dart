@@ -12,4 +12,12 @@ class StringHelper {
     num result = price - price * (discount.value ?? 1);
     return formatNum(result);
   }
+
+  static String getHoursNum(num hoursNum) {
+    return hoursNum.floor().toString();
+  }
+
+  static String getMinutesNum(num hoursNum) {
+    return ((hoursNum * 60) % 60).toString();
+  }
 }

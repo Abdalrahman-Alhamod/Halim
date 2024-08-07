@@ -40,7 +40,7 @@ class MentorMainDetails extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   AvatarImageLoader(
-                    image: mentorDetailsModel.image,
+                    imageUrl: mentorDetailsModel.image,
                     radius: 70,
                   ),
                   const SizedBox(
