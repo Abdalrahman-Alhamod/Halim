@@ -1,3 +1,1 @@
-class AccountSetupLocalDataSource{
-  
-}
+class AccountSetupLocalDataSource {}

@@ -3,10 +3,12 @@ import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
+// ignore: must_be_immutable
 class InterestsWidget extends StatefulWidget {
-  final String category;
-
-  const InterestsWidget(this.category, {super.key});
+  final String? category;
+  VoidCallback? onTap;
+  InterestsWidget(
+      {this.category, this.onTap, super.key, required bool isSelected});
 
   @override
   InterestsWidgetState createState() => InterestsWidgetState();
@@ -20,6 +22,9 @@ class InterestsWidgetState extends State<InterestsWidget> {
     return InkWell(
       borderRadius: BorderRadius.circular(15),
       onTap: () {
+        if (widget.onTap != null) {
+          widget.onTap!();
+        }
         setState(() {
           isSelected = !isSelected;
         });
@@ -45,7 +50,7 @@ class InterestsWidgetState extends State<InterestsWidget> {
               ),
             ),
             child: Text(
-              widget.category,
+              widget.category ?? '',
               style: TextStyle(
                 color: isSelected ? Colors.white : Colors.blue.withOpacity(0.9),
                 fontSize: 18,

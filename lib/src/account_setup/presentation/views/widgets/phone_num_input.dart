@@ -48,8 +48,7 @@ class PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
       child: InternationalPhoneNumberInput(
         focusNode: _focusNode,
         onInputChanged: (PhoneNumber number) {
-          widget.onPhoneNumberChanged(
-              number.phoneNumber!); 
+          widget.onPhoneNumberChanged(number.phoneNumber!);
         },
         onInputValidated: (bool value) {
           setState(() {

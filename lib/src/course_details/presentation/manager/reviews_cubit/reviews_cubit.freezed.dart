@@ -184,6 +184,9 @@ class _$ReviewsStateCopyWithImpl<$Res, $Val extends ReviewsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -200,6 +203,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -417,6 +423,9 @@ class __$$FetchCourseLastReviewsLoadingImplCopyWithImpl<$Res>
       _$FetchCourseLastReviewsLoadingImpl _value,
       $Res Function(_$FetchCourseLastReviewsLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -636,6 +645,9 @@ class __$$FetchCourseLastReviewsEmptyImplCopyWithImpl<$Res>
       _$FetchCourseLastReviewsEmptyImpl _value,
       $Res Function(_$FetchCourseLastReviewsEmptyImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -861,6 +873,8 @@ class __$$FetchCourseLastReviewsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseLastReviewsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -874,6 +888,8 @@ class __$$FetchCourseLastReviewsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -913,7 +929,9 @@ class _$FetchCourseLastReviewsFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseLastReviewsFailureImplCopyWith<
@@ -1102,7 +1120,10 @@ abstract class _FetchCourseLastReviewsFailure implements ReviewsState {
       _$FetchCourseLastReviewsFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchCourseLastReviewsFailureImplCopyWith<
           _$FetchCourseLastReviewsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1128,6 +1149,8 @@ class __$$FetchCourseLastReviewsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseLastReviewsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1184,7 +1207,9 @@ class _$FetchCourseLastReviewsSuccessImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseLastReviewsSuccessImplCopyWith<
@@ -1374,7 +1399,10 @@ abstract class _FetchCourseLastReviewsSuccess implements ReviewsState {
 
   List<ReviewBlockModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchCourseLastReviewsSuccessImplCopyWith<
           _$FetchCourseLastReviewsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1396,6 +1424,9 @@ class __$$FetchUserCourseReviewLoadingImplCopyWithImpl<$Res>
       _$FetchUserCourseReviewLoadingImpl _value,
       $Res Function(_$FetchUserCourseReviewLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1620,6 +1651,8 @@ class __$$FetchUserCourseReviewFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchUserCourseReviewFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1633,6 +1666,8 @@ class __$$FetchUserCourseReviewFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1672,7 +1707,9 @@ class _$FetchUserCourseReviewFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchUserCourseReviewFailureImplCopyWith<
@@ -1861,7 +1898,10 @@ abstract class _FetchUserCourseReviewFailure implements ReviewsState {
       _$FetchUserCourseReviewFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchUserCourseReviewFailureImplCopyWith<
           _$FetchUserCourseReviewFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1888,6 +1928,8 @@ class __$$FetchUserCourseReviewSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchUserCourseReviewSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1906,6 +1948,8 @@ class __$$FetchUserCourseReviewSuccessImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReviewBlockModelCopyWith<$Res> get data {
@@ -1943,7 +1987,9 @@ class _$FetchUserCourseReviewSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchUserCourseReviewSuccessImplCopyWith<
@@ -2133,7 +2179,10 @@ abstract class _FetchUserCourseReviewSuccess implements ReviewsState {
 
   ReviewBlockModel get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchUserCourseReviewSuccessImplCopyWith<
           _$FetchUserCourseReviewSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2155,6 +2204,9 @@ class __$$SubmitUserReviewLoadingImplCopyWithImpl<$Res>
       _$SubmitUserReviewLoadingImpl _value,
       $Res Function(_$SubmitUserReviewLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2377,6 +2429,8 @@ class __$$SubmitUserReviewFailureImplCopyWithImpl<$Res>
       $Res Function(_$SubmitUserReviewFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2390,6 +2444,8 @@ class __$$SubmitUserReviewFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -2428,7 +2484,9 @@ class _$SubmitUserReviewFailureImpl implements _SubmitUserReviewFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SubmitUserReviewFailureImplCopyWith<_$SubmitUserReviewFailureImpl>
@@ -2616,7 +2674,10 @@ abstract class _SubmitUserReviewFailure implements ReviewsState {
       _$SubmitUserReviewFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SubmitUserReviewFailureImplCopyWith<_$SubmitUserReviewFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2640,6 +2701,8 @@ class __$$SubmitUserReviewSuccessImplCopyWithImpl<$Res>
       $Res Function(_$SubmitUserReviewSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2678,7 +2741,9 @@ class _$SubmitUserReviewSuccessImpl implements _SubmitUserReviewSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SubmitUserReviewSuccessImplCopyWith<_$SubmitUserReviewSuccessImpl>
@@ -2865,7 +2930,10 @@ abstract class _SubmitUserReviewSuccess implements ReviewsState {
       _$SubmitUserReviewSuccessImpl;
 
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SubmitUserReviewSuccessImplCopyWith<_$SubmitUserReviewSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2884,6 +2952,9 @@ class __$$LoadingPaginationImplCopyWithImpl<$Res>
   __$$LoadingPaginationImplCopyWithImpl(_$LoadingPaginationImpl _value,
       $Res Function(_$LoadingPaginationImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3103,6 +3174,8 @@ class __$$FailurePaginationImplCopyWithImpl<$Res>
       $Res Function(_$FailurePaginationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3116,6 +3189,8 @@ class __$$FailurePaginationImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -3154,7 +3229,9 @@ class _$FailurePaginationImpl implements _FailurePagination {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailurePaginationImplCopyWith<_$FailurePaginationImpl> get copyWith =>
@@ -3341,7 +3418,10 @@ abstract class _FailurePagination implements ReviewsState {
       _$FailurePaginationImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailurePaginationImplCopyWith<_$FailurePaginationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3363,6 +3443,8 @@ class __$$SuccessPaginationImplCopyWithImpl<$Res>
       $Res Function(_$SuccessPaginationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3401,7 +3483,9 @@ class _$SuccessPaginationImpl implements _SuccessPagination {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessPaginationImplCopyWith<_$SuccessPaginationImpl> get copyWith =>
@@ -3588,7 +3672,10 @@ abstract class _SuccessPagination implements ReviewsState {
       _$SuccessPaginationImpl;
 
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessPaginationImplCopyWith<_$SuccessPaginationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

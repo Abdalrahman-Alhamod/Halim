@@ -9,23 +9,26 @@ class StudentInfomationsModel {
   dynamic image;
   String? phoneNumber;
   String? educationLevel;
+  String? major;
+  List<int>? interests;
 
-  StudentInfomationsModel({
-    this.id,
-    this.pin,
-    this.firstName,
-    this.lastName,
-    this.email,
-    this.gender,
-    this.birthDate,
-    this.image,
-    this.phoneNumber,
-    this.educationLevel,
-  });
+  StudentInfomationsModel(
+      {this.id,
+      this.pin,
+      this.firstName,
+      this.lastName,
+      this.email,
+      this.gender,
+      this.birthDate,
+      this.image,
+      this.phoneNumber,
+      this.educationLevel,
+      this.major,
+      this.interests});
 
   @override
   String toString() {
-    return 'StudentInfomationsModel(id: $id,pin: $pin, firstName: $firstName, lastName: $lastName, email: $email, gender: $gender, birthDate: $birthDate, image: $image, phoneNumber: $phoneNumber, educationLevel: $educationLevel)';
+    return 'StudentInfomationsModel(id: $id,pin: $pin, firstName: $firstName, lastName: $lastName, email: $email, gender: $gender, birthDate: $birthDate, image: $image, phoneNumber: $phoneNumber, education_level: $educationLevel,major: $major,interests: $interests)';
   }
 
   factory StudentInfomationsModel.fromJson(Map<String, dynamic> json) {
@@ -40,6 +43,10 @@ class StudentInfomationsModel {
       image: json['image'] as String?,
       phoneNumber: json['phone_number'] as String?,
       educationLevel: json['education_level'] as String?,
+      major: json['major'] as String?,
+      interests:
+           (json['interests'] as List<int>?)?.map((e) => e).toList(),
+          // json['interests'] as List<int>?,
     );
   }
 
@@ -53,6 +60,8 @@ class StudentInfomationsModel {
         'birth_date': birthDate,
         'phone_number': phoneNumber,
         'education_level': educationLevel,
+        'interests': interests,
+        'major': major
       };
 
   StudentInfomationsModel copyWith({
@@ -66,6 +75,8 @@ class StudentInfomationsModel {
     dynamic image,
     String? phoneNumber,
     String? educationLevel,
+    String? major,
+    List<int>? interests,
   }) {
     return StudentInfomationsModel(
       id: id ?? this.id,
@@ -78,6 +89,8 @@ class StudentInfomationsModel {
       image: image ?? this.image,
       phoneNumber: phoneNumber ?? this.phoneNumber,
       educationLevel: educationLevel ?? this.educationLevel,
+      major: major ?? this.major,
+      interests: interests ?? this.interests,
     );
   }
 }

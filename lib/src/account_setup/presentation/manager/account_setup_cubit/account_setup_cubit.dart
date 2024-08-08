@@ -12,6 +12,9 @@ import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/logger.dart';
 import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
 import 'package:halim/src/account_setup/domain/repos/account_setup_repo.dart';
+
+import '../../../../../core/functions/show_custom_dialog.dart';
+import '../../../../forgot_password/presentation/views/widget/accont_sucsses_dialog.dart';
 part 'account_setup_state.dart';
 part 'account_setup_cubit.freezed.dart';
 
@@ -22,6 +25,7 @@ class AccountSetupCubit extends Cubit<AccountSetupState> {
 
   StudentInfomationsModel student = StudentInfomationsModel();
   int pin = 0;
+  List<int>? interests = [];
   Future<void> postInformationStudent() async {
     emit(const AccountSetupState.loading());
     final response = await _accountSetupRepo.postInformationStudent(student);
@@ -94,7 +98,14 @@ class AccountSetupCubit extends Cubit<AccountSetupState> {
           color: PrintColor.pink,
           title: '$title Success',
         );
-        GoRouter.of(context).go(AppRoute.kHome);
+        showCustomDialog(
+          context: context,
+          widget: AccontSucssesDialog(
+            () {
+              GoRouter.of(context).go(AppRoute.kHome);
+            },
+          ),
+        );
       },
       orElse: () {},
     );

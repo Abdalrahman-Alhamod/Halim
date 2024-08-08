@@ -4,6 +4,5 @@ import 'package:halim/src/account_setup/data/models/student_infomations_model.da
 
 abstract class AccountSetupRepo {
   Future<ApiResponse<BaseModel>> postInformationStudent(
-    StudentInfomationsModel student
-  );
+      StudentInfomationsModel student);
 }

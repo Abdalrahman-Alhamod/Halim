@@ -250,6 +250,22 @@ abstract class  LocaleKeys {
   static const FillYourProfile_Interests_skip = 'FillYourProfile.Interests.skip';
   static const FillYourProfile_Interests_continue = 'FillYourProfile.Interests.continue';
   static const FillYourProfile_Interests = 'FillYourProfile.Interests';
+  static const FillYourProfile_EducationLevel_ph =
+      'FillYourProfile.EducationLevel.ph';
+  static const FillYourProfile_EducationLevel_master =
+      'FillYourProfile.EducationLevel.master';
+  static const FillYourProfile_EducationLevel_diploma =
+      'FillYourProfile.EducationLevel.diploma';
+  static const FillYourProfile_EducationLevel_bachelor =
+      'FillYourProfile.EducationLevel.bachelor';
+  static const FillYourProfile_EducationLevel_school =
+      'FillYourProfile.EducationLevel.school';
+  static const FillYourProfile_EducationLevel_primary =
+      'FillYourProfile.EducationLevel.primary';
+  static const FillYourProfile_EducationLevel_EducationLev =
+      'FillYourProfile.EducationLevel.EducationLev';
+  static const FillYourProfile_EducationLevel =
+      'FillYourProfile.EducationLevel';
   static const FillYourProfile = 'FillYourProfile';
   static const CreatePin_add_a_pin = 'CreatePin.add_a_pin';
   static const CreatePin_enter_pin = 'CreatePin.enter_pin';

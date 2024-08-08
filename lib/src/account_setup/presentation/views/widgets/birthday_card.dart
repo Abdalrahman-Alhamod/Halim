@@ -45,7 +45,8 @@ class BirthdayCardState extends State<BirthdayCard> {
               lastDate: DateTime.now(),
               onDateChanged: (date) {
                 _tempSelectedDate = date;
-                widget.onChanged.call( DateFormat('yyyy-MM-dd', 'en').format(_tempSelectedDate!));
+                widget.onChanged.call(
+                    DateFormat('yyyy-MM-dd', 'en').format(_tempSelectedDate!));
               },
             ),
           ),

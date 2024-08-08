@@ -25,7 +25,6 @@ class AccountSetupImpl extends AccountSetupRepo {
         response,
       );
     } catch (error) {
-      
       return ApiResponse.failure(
         NetworkExceptions.getException(
           error,

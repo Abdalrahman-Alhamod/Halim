@@ -1,115 +1,158 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import '../../../../../core/utils/app_route.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/core/widgets/custome_flat_button.dart';
+import 'package:halim/src/shared/model/subcategory_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
+import '../../manager/account_setup_cubit/account_setup_cubit.dart';
 import '../widgets/interests_widget.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
-import '../../../../../core/widgets/custome_flat_button.dart';
 
-void chooseInterestsBottomSheet(BuildContext context) {
-  List<String> interests = [
-    '🔥 All',
-    '📊 BA',
-    '💰 Business',
-    '💡 AI',
-    '🧮 Mathematical',
-    '📊 BA',
-    '🔥 All',
-    '🔥 All',
-    '📊 BA',
-    '💰 Business',
-    '💡 AI',
-    '🖋 3D Design',
-    '💊 Medicine',
-    '💡 AI',
-  ];
+class ChooseInterestsBottomSheet {
+  static List<SubcategoryModel> selectedCategories = [];
 
-  showModalBottomSheet(
-    context: context,
-    builder: (BuildContext context) {
-      return Container(
-        height: 400,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: context.isDarkMode
-              ? AppColors.darkColor
-              : AppColors.lightFlatButtonColor,
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(25),
-            topRight: Radius.circular(25),
+  static Widget buildChooseInterestsBottomSheet(
+      BuildContext context, List<SubcategoryModel> categories) {
+    return StatefulBuilder(
+      builder: (context, setState) {
+        return Container(
+          height: MediaQuery.of(context).size.height * 0.8,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: context.isDarkMode
+                ? AppColors.darkColor
+                : AppColors.lightFlatButtonColor,
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(25),
+              topRight: Radius.circular(25),
+            ),
           ),
-        ),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                LocaleKeys.FillYourProfile_Interests_choose.tr(),
-                style: const TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w700,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  LocaleKeys.FillYourProfile_Interests_choose.tr(),
+                  style: const TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: Divider(
-                height: 1,
-                color: Colors.grey[300],
-              ),
-            ),
-            Expanded(
-              child: Padding(
+              Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
-                child: Wrap(
-                  spacing: 8.0,
-                  runSpacing: 8.0,
-                  children: interests
-                      .map((interest) => InterestsWidget(interest))
-                      .toList(),
+                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+                child: Divider(
+                  height: 1,
+                  color: Colors.grey[300],
                 ),
               ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CustomFlatButton(
-                    onPressed: () {
-                      // GoRouter.of(context).push(AppRoute.kHome);
-                    },
-                    title: LocaleKeys.FillYourProfile_Interests_skip.tr(),
-                    width: MediaQuery.of(context).size.width * 0.40,
-                    height: 45,
-                    kBackgroundcolor: context.isDarkMode
-                        ? AppColors.darkFlatButtonColor
-                        : const Color.fromARGB(255, 113, 132, 204)
-                            .withOpacity(0.25),
-                    kTextcolor: context.isDarkMode
-                        ? AppColors.lightFlatButtonColor
-                        : AppColors.primaryColor,
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 15.0, vertical: 20),
+                    child: Wrap(
+                      spacing: 8.0,
+                      runSpacing: 8.0,
+                      children: categories.map((category) {
+                        return InterestsWidget(
+                          category: category.name,
+                          isSelected: true,
+                          onTap: () {
+                            setState(() {
+                              if (selectedCategories.contains(category)) {
+                                selectedCategories.remove(category);
+                              } else {
+                                selectedCategories.add(category);
+                              }
+                            });
+                          },
+                        );
+                      }).toList(),
+                    ),
                   ),
-                  CustomFlatButton(
-                    onPressed: () {
-                      GoRouter.of(context).push(AppRoute.kHome);
-                    },
-                    title: LocaleKeys.FillYourProfile_Interests_continue.tr(),
-                    width: MediaQuery.of(context).size.width * 0.40,
-                    height: 45,
-                    kTextcolor: AppColors.lightFlatButtonColor,
-                  ),
-                ],
+                ),
               ),
-            ),
-          ],
-        ),
-      );
-    },
-  );
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 15.0, horizontal: 10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CustomFlatButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+
+                        context
+                            .read<AccountSetupCubit>()
+                            .postInformationStudent();
+                      },
+                      title: LocaleKeys.FillYourProfile_Interests_skip.tr(),
+                      width: MediaQuery.of(context).size.width * 0.40,
+                      height: 45,
+                      kBackgroundcolor: context.isDarkMode
+                          ? AppColors.darkFlatButtonColor
+                          : const Color.fromARGB(255, 113, 132, 204)
+                              .withOpacity(0.25),
+                      kTextcolor: context.isDarkMode
+                          ? AppColors.lightFlatButtonColor
+                          : AppColors.primaryColor,
+                    ),
+                    CustomFlatButton(
+                      isEnabled: selectedCategories.length == 3 ? true : false,
+                      onPressed: () {
+                        // Navigator.pop(context);
+                        context.read<AccountSetupCubit>().student.interests =
+                            selectedCategories.map((subcategory) => subcategory.id)
+                            .whereType<int>()
+                            .toList();
+                        context
+                            .read<AccountSetupCubit>()
+                            .postInformationStudent();
+                        // List<int> selectedId = selectedCategories
+                        //     .map((subcategory) => subcategory.id)
+                        //     .whereType<int>()
+                        //     .toList();
+
+                        // context.read<AccountSetupCubit>().student = context
+                        //     .read<AccountSetupCubit>()
+                        //     .student
+                        //     .copyWith(interests: selectedId);
+
+                        // print(
+                        //     '+++++++++++++++++++++++++++++++++++${selectedId}');
+                        print(
+                            '**********************************${context.read<AccountSetupCubit>().student.interests}');
+                        
+                      },
+                      title: LocaleKeys.FillYourProfile_Interests_continue.tr(),
+                      width: MediaQuery.of(context).size.width * 0.40,
+                      height: 45,
+                      kBackgroundcolor: selectedCategories.length == 3
+                          ? AppColors.primaryColor
+                          : AppColors.lightFlatButtonColor.withOpacity(0.25),
+                      kTextcolor: AppColors.lightFlatButtonColor,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  static void chooseInterestsBottomSheet(
+      BuildContext context, List<SubcategoryModel> categories) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return buildChooseInterestsBottomSheet(context, categories);
+      },
+    );
+  }
 }

@@ -12,9 +12,7 @@ class CourseVideoCoverLoading extends StatelessWidget {
     return const Center(
       child: AspectRatio(
         aspectRatio: 16 / 9,
-        child: ShimmerBox(
-         
-        ),
+        child: ShimmerBox(),
       ),
     );
   }

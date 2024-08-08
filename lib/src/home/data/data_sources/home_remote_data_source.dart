@@ -32,6 +32,7 @@ class HomeRemoteDataSource {
 
   Future<BaseModel> getInfStudent(int studentId) async {
     final response = await _apiServices.get(AppUrl.student, hasToken: true);
-    return BaseModel.fromJson(response, (json) => StudentProfileModel.fromJson(json));
+    return BaseModel.fromJson(
+        response, (json) => StudentProfileModel.fromJson(json));
   }
 }

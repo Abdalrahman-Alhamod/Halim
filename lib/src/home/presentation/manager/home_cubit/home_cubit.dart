@@ -40,8 +40,9 @@ class HomeCubit extends Cubit<HomeState> {
       },
     );
   }
- // List<StudentModel> subcategories = [];
-StudentProfileModel? _user;
+
+  // List<StudentModel> subcategories = [];
+  StudentProfileModel? _user;
   Future<void> getInfStudent({required int studentId}) async {
     emit(
       const HomeState.fetchInfStudentLoading(),
@@ -66,7 +67,4 @@ StudentProfileModel? _user;
       },
     );
   }
-
-
-
 }

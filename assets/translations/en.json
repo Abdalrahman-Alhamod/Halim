@@ -276,6 +276,15 @@
       "choose": "Choose three topics that you would like to follow?",
       "skip": "skip",
       "continue": "continue"
+    },
+    "EducationLevel": {
+      "ph": "Phd",
+      "master": "Master",
+      "diploma": "Diploma",
+      "bachelor": "Bachelor Degree",
+      "school": "High School Education",
+      "primary": "Primary Education",
+      "EducationLev": "Education Level "
     }
   },
   "CreatePin": {

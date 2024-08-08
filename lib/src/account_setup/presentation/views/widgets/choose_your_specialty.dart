@@ -1,15 +1,19 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
+import 'package:halim/src/shared/model/category_model.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/context_extensions.dart';
-
 import '../../../../../core/themes/app_colors.dart';
 
 class ChooseYourSpecialtyWithRegister extends StatefulWidget {
   final Function(String) onSpecialtySelected;
 
-  const ChooseYourSpecialtyWithRegister(
-      {super.key, required this.onSpecialtySelected});
+  const ChooseYourSpecialtyWithRegister({
+    super.key,
+    required this.onSpecialtySelected,
+  });
 
   @override
   ChooseYourSpecialtyWithRegisterState createState() =>
@@ -20,39 +24,20 @@ class ChooseYourSpecialtyWithRegisterState
     extends State<ChooseYourSpecialtyWithRegister> {
   TextEditingController controller = TextEditingController();
   bool _isFocused = false;
+  late dynamic searchCubit;
+
   late FocusNode _focusNode;
-  final List<String> options = [
-    'المرحلة الإعدادية- سابع',
-    'المرحلة الإعدادية- ثامن',
-    'المرحلة الإعدادية- تاسع',
-    'المرحلة الثانوية - عاشر',
-    'المرحلة الثانوية - حادي عشر',
-    'المرحلة الثانوية - بكالوريا',
-    'المرحلة الجامعية - طب أسنان',
-    'المرحلة الجامعية - طب بشري',
-    'المرحلة الجامعية - الهندسة المعلوماتية',
-    'المرحلة الجامعية - الهندسة الميكانيكية',
-    'المرحلة الجامعية - الهنسة المعمارية',
-    'Undergraduate - Dentistry',
-    'Undergraduate - Human Medicine',
-    'Undergraduate level - Information Engineering',
-    'Undergraduate - Mechanical Engineering',
-    'Undergraduate - Architecture',
-  ];
-  List<String> filteredOptions = [];
+  late List<CategoryModel> allCategories = [];
+  late List<CategoryModel> filteredCategories = [];
 
   @override
   void initState() {
     super.initState();
+
     _focusNode = FocusNode();
     _focusNode.addListener(_onFocusChange);
-    filteredOptions = options;
-  }
-
-  @override
-  void dispose() {
-    _focusNode.dispose();
-    super.dispose();
+    searchCubit = context.read<SearchCubit>();
+    searchCubit.getCategories();
   }
 
   void _onFocusChange() {
@@ -61,6 +46,7 @@ class ChooseYourSpecialtyWithRegisterState
     });
   }
 
+  bool isWaitingForCategories = true;
   void _showDialog() {
     showDialog(
       context: context,
@@ -80,37 +66,51 @@ class ChooseYourSpecialtyWithRegisterState
                     ),
                     onChanged: (value) {
                       setState(() {
-                        filteredOptions = options
-                            .where((option) => option
-                                .toLowerCase()
-                                .contains(value.toLowerCase()))
+                        filteredCategories = allCategories
+                            .where((category) => category.name!.contains(value))
                             .toList();
                       });
                     },
                   ),
                 ],
               ),
-              content: SizedBox(
-                width: double.maxFinite,
-                height: 500.0,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: filteredOptions.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      title: Text(filteredOptions[index]),
-                      onTap: () {
-                        setState(() {
-                          controller.text = filteredOptions[index];
-                        });
-                        widget.onSpecialtySelected(
-                            filteredOptions[index]); // تحديث النموذج
-                        Navigator.of(context).pop();
-                      },
-                    );
+              content: BlocBuilder<SearchCubit, SearchState>(
+                  builder: (context, state) {
+                state.whenOrNull(
+                  fetchCategoriesSuccess: (data, message) {
+                    allCategories = data;
+
+                    if (isWaitingForCategories) {
+                      filteredCategories = data;
+                      isWaitingForCategories = false;
+                    }
                   },
-                ),
-              ),
+                );
+                return allCategories.isEmpty
+                    ? const Center(child: CircularProgressIndicator())
+                    : SizedBox(
+                        width: double.maxFinite,
+                        height: 500.0,
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: filteredCategories.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return ListTile(
+                              title: Text(filteredCategories[index].name ?? ""),
+                              onTap: () {
+                                setState(() {
+                                  controller.text =
+                                      filteredCategories[index].name ?? '';
+                                });
+                                widget.onSpecialtySelected(
+                                    filteredCategories[index].name ?? '');
+                                Navigator.of(context).pop();
+                              },
+                            );
+                          },
+                        ),
+                      );
+              }),
             );
           },
         );

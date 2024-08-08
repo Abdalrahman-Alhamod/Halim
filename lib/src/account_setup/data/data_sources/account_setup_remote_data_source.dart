@@ -1,5 +1,4 @@
-// ignore_for_file: prefer_final_fields
-
+import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:halim/core/data/model/base_model.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
@@ -15,13 +14,20 @@ class AccountSetupRemoteDataSource {
       'id': student.id ?? '',
       'first_name': student.firstName ?? '',
       'last_name': student.lastName ?? '',
-      'education_evel': student.educationLevel ?? '',
+      'education_level': student.educationLevel ?? '',
       'phone_number': student.phoneNumber ?? '',
       'birth_date': student.birthDate ?? '',
       'PIN': student.pin ?? '',
       'gender': student.gender?.toLowerCase(),
-      'email': student.email ?? ''
+      'email': student.email ?? '',
+      'interests': jsonEncode(student.interests),
+      'major': student.major ?? ''
     };
+    var jsonObject = {
+      'interests': student.interests,
+    };
+    String jsonString = jsonEncode(jsonObject);
+    print('${jsonString}');
     if (student.image != null) {
       final imageName = student.image.split('/').last;
       map.addEntries([
