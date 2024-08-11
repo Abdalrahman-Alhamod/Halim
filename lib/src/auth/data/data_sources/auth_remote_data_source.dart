@@ -41,4 +41,23 @@ class AuthRemoteDataSource {
       (json) {},
     );
   }
+
+   Future<BaseModel> register({
+    required String email,
+    required String password,
+  }) async {
+    final response = await _apiServices.post(
+      AppUrl.register,
+      body: {
+        "email": email,
+        "password": password,
+      },
+      hasToken: false,
+    );
+
+    return BaseModel.fromJson(
+      response,
+      (json) => UserModel.fromJson(json),
+    );
+  }
 }

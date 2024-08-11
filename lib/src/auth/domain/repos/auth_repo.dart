@@ -15,4 +15,9 @@ abstract class AuthRepo {
 
   Future<ApiResponse<BaseModel>> logout();
   void deleteToken();
+
+  Future<ApiResponse<BaseModel>> register({
+    required String email,
+    required String password,
+  });
 }

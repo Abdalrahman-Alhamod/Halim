@@ -74,4 +74,23 @@ class AuthRepoImpl extends AuthRepo {
   void deleteToken() {
     _authLocalDataSource.deleteToken();
   }
+
+  @override
+  Future<ApiResponse<BaseModel>> register({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final response = await _authRemoteDataSource.register(
+        email: email,
+        password: password,
+      );
+
+      return ApiResponse.success(response);
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(error),
+      );
+    }
+  }
 }

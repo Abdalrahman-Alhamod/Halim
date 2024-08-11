@@ -20,14 +20,6 @@ class AuthCubit extends Cubit<AuthState> {
   final AuthRepo _authRepo;
   UserModel? _user;
 
-  void _saveUser(bool rememeberMe) {
-    emit(const AuthState.save());
-    _authRepo.saveToken(_user!);
-    if (rememeberMe) {
-      _authRepo.saveUserEmail(_user!);
-    }
-  }
-
   Future<void> login({
     required String email,
     required String password,
@@ -44,11 +36,48 @@ class AuthCubit extends Cubit<AuthState> {
         emit(
           AuthState.loginSuccess(_user!, data.message),
         );
-        _saveUser(rememeberMe);
+        _authRepo.saveToken(_user!);
+        if (rememeberMe) {
+          _authRepo.saveUserEmail(_user!);
+        }
+        emit(
+          const AuthState.save(),
+        );
       },
       failure: (networkException) {
         emit(
           AuthState.loginFailure(networkException),
+        );
+      },
+    );
+  }
+
+  Future<void> register({
+    required String email,
+    required String password,
+    required bool rememeberMe,
+  }) async {
+    emit(const AuthState.registerLoading());
+    final response = await _authRepo.register(
+      email: email,
+      password: password,
+    );
+    response.when(
+      success: (data) {
+        _user = data.data;
+        emit(
+          AuthState.registerSuccess(_user!, data.message),
+        );
+        if (rememeberMe) {
+          _authRepo.saveUserEmail(_user!);
+        }
+        emit(
+          const AuthState.save(),
+        );
+      },
+      failure: (networkException) {
+        emit(
+          AuthState.registerFailure(networkException),
         );
       },
     );
@@ -192,6 +221,65 @@ class AuthCubit extends Cubit<AuthState> {
           title: '$title Success',
         );
         GoRouter.of(context).go(AppRoute.kLoginWithView);
+      },
+      orElse: () {},
+    );
+  }
+
+  bool listenRegisterWhen(AuthState previous, AuthState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      registerLoading: () => true,
+      registerSuccess: (_, __) => true,
+      registerFailure: (_) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenRegister(BuildContext context, AuthState state) {
+    const title = 'Register';
+    state.maybeWhen(
+      registerLoading: () {
+        showLoadingDialog(context);
+
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      registerFailure: (NetworkExceptions? networkException) {
+        context.pop();
+
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessage(networkException),
+          title: '$title Error',
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessage(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      registerSuccess: (data, message) {
+        context.pop();
+
+        showTOAST(
+          context,
+          textToast: message,
+          title: '$title Success',
+          status: ToastStatus.success,
+        );
+
+        logger.print(
+          data,
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+        GoRouter.of(context).go(AppRoute.kFillProfile);
       },
       orElse: () {},
     );
