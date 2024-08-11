@@ -7,7 +7,7 @@ import '../../../../../home/presentation/views/functions/remove_bookmark_bottom_
 import '../../../../../../core/assets/app_svgs.dart';
 import '../../../manager/course_details_cubit/course_details_cubit.dart';
 
-class BookmarkButton extends StatelessWidget {
+class BookmarkButton extends StatefulWidget {
   const BookmarkButton({
     super.key,
     required this.isBookmarked,
@@ -15,27 +15,44 @@ class BookmarkButton extends StatelessWidget {
   });
   final bool isBookmarked;
   final CourseCardModel courseCardModel;
+
+  @override
+  State<BookmarkButton> createState() => _BookmarkButtonState();
+}
+
+class _BookmarkButtonState extends State<BookmarkButton> {
+  late CourseCardModel courseCardModel;
+  @override
+  void initState() {
+    courseCardModel = widget.courseCardModel;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<CourseDetailsCubit, CourseDetailsState>(
       buildWhen: (previous, current) => context
           .read<CourseDetailsCubit>()
-          .buildSaveCourseWhen(previous, current, courseCardModel.id ?? -1),
+          .buildSaveCourseWhen(
+              previous, current, widget.courseCardModel.id ?? -1),
       listenWhen: (previous, current) => context
           .read<CourseDetailsCubit>()
-          .listenSaveCourseWhen(previous, current, courseCardModel.id ?? -1),
+          .listenSaveCourseWhen(
+              previous, current, widget.courseCardModel.id ?? -1),
       listener: context.read<CourseDetailsCubit>().listenSaveCourse,
       builder: (context, state) {
-        bool isBookmarked = courseCardModel.isSaved ?? false;
+        bool isBookmarked = widget.courseCardModel.isSaved ?? false;
         state.whenOrNull(
           saveCourseSuccess: (message, stateCoursId) {
-            if (stateCoursId == courseCardModel.id) {
+            if (stateCoursId == widget.courseCardModel.id) {
               isBookmarked = true;
+              courseCardModel = widget.courseCardModel.copyWith(isSaved: true);
             }
           },
           unsaveCourseSuccess: (message, stateCoursId) {
-            if (stateCoursId == courseCardModel.id) {
+            if (stateCoursId == widget.courseCardModel.id) {
               isBookmarked = false;
+              courseCardModel = widget.courseCardModel.copyWith(isSaved: false);
             }
           },
         );
@@ -51,11 +68,11 @@ class BookmarkButton extends StatelessWidget {
                     if (courseCardModel.isSaved ?? false) {
                       showRemoveBookmarkBottomSheet(
                         context: context,
-                        courseCardModel: courseCardModel,
+                        courseCardModel: widget.courseCardModel,
                       );
                     } else {
                       context.read<CourseDetailsCubit>().saveCourse(
-                            courseId: courseCardModel.id ?? -1,
+                            courseId: widget.courseCardModel.id ?? -1,
                           );
                     }
                   }),
