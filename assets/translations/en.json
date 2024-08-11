@@ -514,5 +514,27 @@
     "Student": "Student at",
     "FollowCourses": "Follow-up courses",
     "Test": "Business Management"
+  },
+  "Errors": {
+    "notImplemented": "Not Implemented",
+    "requestCancelled": "Request Cancelled",
+    "loggingInRequired": "Log in First",
+    "internalServerError": "Internal Server Error",
+    "notFound": "Not Found",
+    "serviceUnavailable": "Service unavailable",
+    "methodNotAllowed": "Method Not Allowed",
+    "badRequest": "Bad Request",
+    "unauthorizedRequest": "Unauthorized Request",
+    "unprocessableEntity": "Unprocessable Entity",
+    "unexpectedError": "Unexpected Error Occurred",
+    "requestTimeout": "Connection Request Timeout",
+    "noInternetConnection": "No Internet Connection",
+    "conflict": "Error Due to a Conflict",
+    "sendTimeout": "Send Timeout in Connection with API Server",
+    "unableToProcess": "Unable to Process the Data",
+    "defaultError": "Default Error",
+    "formatException": "Unable to Format the Data",
+    "notAcceptable": "Not Acceptable",
+    "error": "Error"
   }
 }

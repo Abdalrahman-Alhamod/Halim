@@ -1,6 +1,7 @@
 // ignore_for_file: unused_field
 
 import 'package:bloc/bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
@@ -28,6 +29,7 @@ import '../../../../../core/domain/error_handler/network_exceptions.dart';
 import '../../../../../core/functions/show_toast.dart';
 import '../../../../../core/functions/toast_status.dart';
 import '../../../../../core/themes/app_colors.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/logger.dart';
 import '../../../../../core/utils/pagination_adapter.dart';
@@ -301,13 +303,13 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
           (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Pagination Error',
         );
@@ -442,13 +444,13 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
       fetchCourseLessonDetailsFailure: (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Error',
         );
@@ -519,13 +521,13 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
           (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Error',
         );
@@ -592,13 +594,13 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
         context.pop();
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Error',
         );
@@ -672,13 +674,13 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
       saveCourseFailure: (NetworkExceptions? networkException, stateCourseId) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Error\nId = $stateCourseId',
         );
@@ -832,13 +834,13 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
           (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Error',
         );
@@ -876,13 +878,13 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
       fetchCourseMainSectionFailure: (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Fetch Course Main Section Error',
         );

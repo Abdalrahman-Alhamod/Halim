@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
@@ -6,6 +7,7 @@ import 'package:halim/core/domain/error_handler/network_exceptions.dart';
 import 'package:halim/core/functions/show_loading_dialog.dart';
 import 'package:halim/core/functions/show_toast.dart';
 import 'package:halim/core/functions/toast_status.dart';
+import 'package:halim/core/translations/locale_keys.g.dart';
 import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/logger.dart';
 import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
@@ -19,7 +21,7 @@ class AccountSetupCubit extends Cubit<AccountSetupState> {
   final AccountSetupRepo _accountSetupRepo;
 
   StudentInfomationsModel student = StudentInfomationsModel();
-  int pin=0;
+  int pin = 0;
   Future<void> postInformationStudent() async {
     emit(const AccountSetupState.loading());
     final response = await _accountSetupRepo.postInformationStudent(student);
@@ -66,13 +68,13 @@ class AccountSetupCubit extends Cubit<AccountSetupState> {
 
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Error',
         );

@@ -530,6 +530,28 @@ class CodegenLoader extends AssetLoader{
     "Student": "طالب لدى",
     "FollowCourses": "الكورسات المتابعة",
     "Test": "إدارة الأعمال"
+  },
+  "Errors": {
+    "notImplemented": "لم يتم التنفيذ",
+    "requestCancelled": "تم إلغاء الطلب",
+    "loggingInRequired": "قم بتسجيل الدخول أولاً",
+    "internalServerError": "خطأ في الخادم",
+    "notFound": "غير موجود",
+    "serviceUnavailable": "الخدمة غير متوفرة",
+    "methodNotAllowed": "الطريقة غير مسموحة",
+    "badRequest": "طلب غير صحيح",
+    "unauthorizedRequest": "طلب غير مصرح به",
+    "unprocessableEntity": "كيان غير قابل للمعالجة",
+    "unexpectedError": "حدث خطأ غير متوقع",
+    "requestTimeout": "انتهت مهلة طلب الاتصال",
+    "noInternetConnection": "لا يوجد اتصال بالإنترنت",
+    "conflict": "خطأ بسبب تعارض",
+    "sendTimeout": "انتهاء مهلة الإرسال في الاتصال بالخادم",
+    "unableToProcess": "غير قادر على معالجة البيانات",
+    "defaultError": "خطأ افتراضي",
+    "formatException": "غير قادر على تنسيق البيانات",
+    "notAcceptable": "غير مقبول",
+    "error": "خطأ"
   }
 };
 static const Map<String,dynamic> en = {
@@ -1048,6 +1070,28 @@ static const Map<String,dynamic> en = {
     "Student": "Student at",
     "FollowCourses": "Follow-up courses",
     "Test": "Business Management"
+  },
+  "Errors": {
+    "notImplemented": "Not Implemented",
+    "requestCancelled": "Request Cancelled",
+    "loggingInRequired": "Log in First",
+    "internalServerError": "Internal Server Error",
+    "notFound": "Not Found",
+    "serviceUnavailable": "Service unavailable",
+    "methodNotAllowed": "Method Not Allowed",
+    "badRequest": "Bad Request",
+    "unauthorizedRequest": "Unauthorized Request",
+    "unprocessableEntity": "Unprocessable Entity",
+    "unexpectedError": "Unexpected Error Occurred",
+    "requestTimeout": "Connection Request Timeout",
+    "noInternetConnection": "No Internet Connection",
+    "conflict": "Error Due to a Conflict",
+    "sendTimeout": "Send Timeout in Connection with API Server",
+    "unableToProcess": "Unable to Process the Data",
+    "defaultError": "Default Error",
+    "formatException": "Unable to Format the Data",
+    "notAcceptable": "Not Acceptable",
+    "error": "Error"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

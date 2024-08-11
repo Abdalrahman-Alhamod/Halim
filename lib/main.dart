@@ -16,7 +16,7 @@ void main() async {
         Locale(AppLocales.ar),
       ],
       path: AppLocales.translationsAssetsPath,
-      startLocale: const Locale(AppLocales.en),
+      startLocale: const Locale(AppLocales.ar),
       fallbackLocale: const Locale(AppLocales.en),
       assetLoader: const CodegenLoader(),
       useOnlyLangCode: true,

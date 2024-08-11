@@ -447,5 +447,26 @@ abstract class  LocaleKeys {
   static const StudentProfile_FollowCourses = 'StudentProfile.FollowCourses';
   static const StudentProfile_Test = 'StudentProfile.Test';
   static const StudentProfile = 'StudentProfile';
+  static const Errors_notImplemented = 'Errors.notImplemented';
+  static const Errors_requestCancelled = 'Errors.requestCancelled';
+  static const Errors_loggingInRequired = 'Errors.loggingInRequired';
+  static const Errors_internalServerError = 'Errors.internalServerError';
+  static const Errors_notFound = 'Errors.notFound';
+  static const Errors_serviceUnavailable = 'Errors.serviceUnavailable';
+  static const Errors_methodNotAllowed = 'Errors.methodNotAllowed';
+  static const Errors_badRequest = 'Errors.badRequest';
+  static const Errors_unauthorizedRequest = 'Errors.unauthorizedRequest';
+  static const Errors_unprocessableEntity = 'Errors.unprocessableEntity';
+  static const Errors_unexpectedError = 'Errors.unexpectedError';
+  static const Errors_requestTimeout = 'Errors.requestTimeout';
+  static const Errors_noInternetConnection = 'Errors.noInternetConnection';
+  static const Errors_conflict = 'Errors.conflict';
+  static const Errors_sendTimeout = 'Errors.sendTimeout';
+  static const Errors_unableToProcess = 'Errors.unableToProcess';
+  static const Errors_defaultError = 'Errors.defaultError';
+  static const Errors_formatException = 'Errors.formatException';
+  static const Errors_notAcceptable = 'Errors.notAcceptable';
+  static const Errors_error = 'Errors.error';
+  static const Errors = 'Errors';
 
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/themes/app_colors.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 import '../widgets/toast_widget.dart';
 import 'toast_status.dart';
 
@@ -18,7 +19,7 @@ showTOAST(
       icon: switch (status) {
         null => Icons.info,
         ToastStatus.success => Icons.check_circle,
-        ToastStatus.failure => Icons.cancel,
+        ToastStatus.failure => Icons.error,
       },
       color: switch (status) {
         null => AppColors.primaryColor,
@@ -28,5 +29,6 @@ showTOAST(
     ),
     context: context,
     position: StyledToastPosition.top,
+    textDirection: context.isEnglish ? TextDirection.ltr : TextDirection.rtl,
   );
 }

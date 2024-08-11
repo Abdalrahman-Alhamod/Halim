@@ -1,6 +1,7 @@
 // ignore_for_file: unused_field
 
 import 'package:bloc/bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:halim/core/utils/context_extensions.dart';
@@ -16,6 +17,7 @@ import '../../../../../core/data/sources/remote/app_url.dart';
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
 import '../../../../../core/functions/show_toast.dart';
 import '../../../../../core/functions/toast_status.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/logger.dart';
 import '../../../../../core/utils/pagination_adapter.dart';
 import '../../../../../core/widgets/empty_view.dart';
@@ -121,13 +123,13 @@ class MentorDetailsCubit extends Cubit<MentorDetailsState> {
       fetchMentorDetailsFailure: (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Error',
         );
@@ -250,13 +252,13 @@ class MentorDetailsCubit extends Cubit<MentorDetailsState> {
       failureMentorCoursesPagination: (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Pagination Error',
         );
@@ -349,13 +351,13 @@ class MentorDetailsCubit extends Cubit<MentorDetailsState> {
       fetchMentorCoursesPageFailure: (NetworkExceptions? networkException) {
         showTOAST(
           context,
-          textToast: NetworkExceptions.getErrorMessage(networkException),
-          title: '$title Error',
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
           status: ToastStatus.failure,
         );
 
         logger.print(
-          NetworkExceptions.getErrorMessage(networkException),
+          NetworkExceptions.getErrorMessageTr(networkException),
           color: PrintColor.red,
           title: '$title Error',
         );

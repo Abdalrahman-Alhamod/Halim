@@ -1,8 +1,12 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../translations/locale_keys.g.dart';
+import '../../utils/logger.dart';
 import '../entities/error_entity.dart';
 part 'network_exceptions.freezed.dart';
 
@@ -78,9 +82,8 @@ abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
   }
 
   static NetworkExceptions handleResponse(Response<dynamic>? response) {
-    // TODO: TEST THE CHANGES fromJson(jsonDecode(response?.data));
     ErrorEntity errorModel = ErrorEntity.fromJson(
-      response?.data as Map<String, dynamic>,
+      jsonDecode(response?.data),
     );
 
     int statusCode = response?.statusCode ?? 0;
@@ -114,15 +117,14 @@ abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
   }
 
   static NetworkExceptions getException(error) {
+    logger.e(error);
     if (error is Exception) {
       try {
         NetworkExceptions networkExceptions;
-        // TODO: IMPLEMENT LOGGER ON ERRORS
-        // print(error);
         if (error is DioException) {
-          // print(error.type);
-          // print(error.message);
-          // print(error.response);
+          logger.e(error.type);
+          logger.e(error.message);
+          logger.e(error.response);
           switch (error.type) {
             case DioExceptionType.cancel:
               networkExceptions = const NetworkExceptions.requestCancelled();
@@ -181,7 +183,7 @@ abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
   }
 
   static String getErrorMessage(NetworkExceptions? networkExceptions) {
-    //  return getErrorMessageTr(networkExceptions);
+    //  return getErrorMessageTrTr(networkExceptions);
     var errorMessage = "";
     networkExceptions?.whenOrNull(
           notImplemented: () {
@@ -252,94 +254,91 @@ abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
         '';
     return errorMessage;
   }
-  // TODO: Translate Messages
-  // static String getErrorMessageTr(NetworkExceptions networkExceptions) {
-  //   var errorMessage = "";
-  //
-  //   networkExceptions.when(
-  //     notImplemented: () {
-  //       errorMessage = tr(LocaleKeys.network_exceptions_not_implemented);
-  //     },
-  //     requestCancelled: () {
-  //       errorMessage = tr(LocaleKeys.network_exceptions_request_cancelled);
-  //     },
-  //     loggingInRequired: () {
-  //       errorMessage = tr(LocaleKeys.network_exceptions_logging_in_required);
-  //     },
-  //     internalServerError: () {
-  //       errorMessage = tr(LocaleKeys.network_exceptions_internal_server_error);
-  //     },
-  //     notFound: (String reason) {
-  //       errorMessage = reason;
-  //       if (reason.toLowerCase().contains("not found"))
-  //         errorMessage = tr(LocaleKeys.network_exceptions_not_found);
-  //     },
-  //     serviceUnavailable: () {
-  //       errorMessage = errorMessage =
-  //           tr(LocaleKeys.network_exceptions_service_unavailable);
-  //     },
-  //     methodNotAllowed: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_method_not_allowed);
-  //     },
-  //     badRequest: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_bad_request);
-  //     },
-  //     unauthorizedRequest: (String error) {
-  //       errorMessage = error;
-  //       if (error.toLowerCase().contains("unauthorized request"))
-  //         errorMessage = tr(LocaleKeys.network_exceptions_unauthorized_request);
-  //     },
-  //     unprocessableEntity: (String error) {
-  //       errorMessage = error;
-  //       if (error.toLowerCase().contains("unprocessable entity"))
-  //         errorMessage = tr(LocaleKeys.network_exceptions_unprocessable_entity);
-  //     },
-  //     unexpectedError: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_unexpected_error);
-  //     },
-  //     requestTimeout: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_request_timeout);
-  //     },
-  //     noInternetConnection: () {
-  //       errorMessage  =
-  //           tr(LocaleKeys.network_exceptions_no_internet_connection);
-  //     },
-  //     conflict: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_conflict);
-  //     },
-  //     sendTimeout: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_send_timeout);
-  //     },
-  //     unableToProcess: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_unable_to_process);
-  //     },
-  //     defaultError: (String error) {
-  //       errorMessage = error;
-  //       if (error.toLowerCase().contains("default error"))
-  //         errorMessage = tr(LocaleKeys.network_exceptions_default_error);
-  //     },
-  //     formatException: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_format_exception);
-  //     },
-  //     notAcceptable: () {
-  //       errorMessage =
-  //           errorMessage = tr(LocaleKeys.network_exceptions_not_acceptable);
-  //     },
-  //     // firebaseAuthException: (String message) {
-  //     //   errorMessage = message;
-  //     // },
-  //     // firebaseException: (String message) {
-  //     //   errorMessage = message;
-  //     // },
-  //   );
-  //   return errorMessage;
-  // }
+
+  static String getErrorMessageTr(NetworkExceptions? networkExceptions) {
+    var errorMessage = "";
+    if (networkExceptions != null) {
+      networkExceptions.when(
+        notImplemented: () {
+          errorMessage = tr(LocaleKeys.Errors_notImplemented);
+        },
+        requestCancelled: () {
+          errorMessage = tr(LocaleKeys.Errors_requestCancelled);
+        },
+        loggingInRequired: () {
+          errorMessage = tr(LocaleKeys.Errors_loggingInRequired);
+        },
+        internalServerError: () {
+          errorMessage = tr(LocaleKeys.Errors_internalServerError);
+        },
+        notFound: (String reason) {
+          errorMessage = reason;
+          if (reason.toLowerCase().contains("not found")) {
+            errorMessage = tr(LocaleKeys.Errors_notFound);
+          }
+        },
+        serviceUnavailable: () {
+          errorMessage =
+              errorMessage = tr(LocaleKeys.Errors_serviceUnavailable);
+        },
+        methodNotAllowed: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_methodNotAllowed);
+        },
+        badRequest: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_badRequest);
+        },
+        unauthorizedRequest: (String error) {
+          errorMessage = error;
+          if (error.toLowerCase().contains("unauthorized request")) {
+            errorMessage = tr(LocaleKeys.Errors_unauthorizedRequest);
+          }
+        },
+        unprocessableEntity: (String error) {
+          errorMessage = error;
+          if (error.toLowerCase().contains("unprocessable entity")) {
+            errorMessage = tr(LocaleKeys.Errors_unprocessableEntity);
+          }
+        },
+        unexpectedError: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_unexpectedError);
+        },
+        requestTimeout: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_requestTimeout);
+        },
+        noInternetConnection: () {
+          errorMessage = tr(LocaleKeys.Errors_noInternetConnection);
+        },
+        conflict: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_conflict);
+        },
+        sendTimeout: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_sendTimeout);
+        },
+        unableToProcess: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_unableToProcess);
+        },
+        defaultError: (String error) {
+          errorMessage = error;
+          if (error.toLowerCase().contains("default error")) {
+            errorMessage = tr(LocaleKeys.Errors_defaultError);
+          }
+        },
+        formatException: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_formatException);
+        },
+        notAcceptable: () {
+          errorMessage = errorMessage = tr(LocaleKeys.Errors_notAcceptable);
+        },
+        // firebaseAuthException: (String message) {
+        //   errorMessage = message;
+        // },
+        // firebaseException: (String message) {
+        //   errorMessage = message;
+        // },
+      );
+      return errorMessage;
+    } else {
+      return 'Unknown error';
+    }
+  }
 }

@@ -20,93 +20,80 @@ class ToastWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FadeInUp(
-      child: Stack(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                margin: const EdgeInsets.all(12),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                decoration: BoxDecoration(
-                  color: context.isDarkMode
-                      ? AppColors.loginWithButtonDarkColor
-                      : Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: IntrinsicHeight(
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 6,
-                        decoration: BoxDecoration(
-                            color: color,
-                            borderRadius: BorderRadius.circular(6)),
+          Container(
+            margin: const EdgeInsets.all(12),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: context.isDarkMode
+                  ? AppColors.loginWithButtonDarkColor
+                  : Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: IntrinsicHeight(
+              child: Row(
+                children: [
+                  Container(
+                    width: 6,
+                    decoration: BoxDecoration(
+                      color: color,
+                      borderRadius: BorderRadius.circular(
+                        6,
                       ),
-                      Flexible(
-                        child: ListTile(
-                          title: Row(
-                            children: [
-                              if (icon != null) ...[
-                                Icon(
-                                  icon,
-                                  color: color,
-                                  size: 20,
-                                ),
-                                const SizedBox(
-                                  width: 8,
-                                ),
-                              ],
-                              Text(
-                                title,
-                                maxLines: 1,
+                    ),
+                  ),
+                  Flexible(
+                    child: ListTile(
+                      title: Row(
+                        children: [
+                          if (icon != null) ...[
+                            Icon(
+                              icon,
+                              color: color,
+                              size: 20,
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                          ],
+                          Text(
+                            title,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: color.withOpacity(
+                                .8,
+                              ),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                      subtitle: description == null || description == ''
+                          ? null
+                          : Padding(
+                              padding: const EdgeInsets.only(
+                                top: 10,
+                              ),
+                              child: Text(
+                                description!,
+                                maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                    color: color.withOpacity(.8),
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          subtitle: description == null || description == ''
-                              ? null
-                              : Padding(
-                                  padding: const EdgeInsets.only(top: 10),
-                                  child: Text(
-                                    description!,
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: color,
-                                    ),
-                                  ),
+                                  fontSize: 12,
+                                  color: color,
                                 ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Positioned(
-            right: 10,
-            top: 10,
-            child: ZoomIn(
-              delay: const Duration(milliseconds: 500),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(
-                  Icons.cancel,
-                  color: color,
-                ),
+                              ),
+                            ),
+                    ),
+                  )
+                ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

@@ -514,5 +514,27 @@
     "Student": "طالب لدى",
     "FollowCourses": "الكورسات المتابعة",
     "Test": "إدارة الأعمال"
+  },
+  "Errors": {
+    "notImplemented": "لم يتم التنفيذ",
+    "requestCancelled": "تم إلغاء الطلب",
+    "loggingInRequired": "قم بتسجيل الدخول أولاً",
+    "internalServerError": "خطأ في الخادم",
+    "notFound": "غير موجود",
+    "serviceUnavailable": "الخدمة غير متوفرة",
+    "methodNotAllowed": "الطريقة غير مسموحة",
+    "badRequest": "طلب غير صحيح",
+    "unauthorizedRequest": "طلب غير مصرح به",
+    "unprocessableEntity": "كيان غير قابل للمعالجة",
+    "unexpectedError": "حدث خطأ غير متوقع",
+    "requestTimeout": "انتهت مهلة طلب الاتصال",
+    "noInternetConnection": "لا يوجد اتصال بالإنترنت",
+    "conflict": "خطأ بسبب تعارض",
+    "sendTimeout": "انتهاء مهلة الإرسال في الاتصال بالخادم",
+    "unableToProcess": "غير قادر على معالجة البيانات",
+    "defaultError": "خطأ افتراضي",
+    "formatException": "غير قادر على تنسيق البيانات",
+    "notAcceptable": "غير مقبول",
+    "error": "خطأ"
   }
 }
