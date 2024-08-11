@@ -6,7 +6,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../translations/locale_keys.g.dart';
-import '../../utils/logger.dart';
 import '../entities/error_entity.dart';
 part 'network_exceptions.freezed.dart';
 
@@ -117,14 +116,14 @@ abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
   }
 
   static NetworkExceptions getException(error) {
-    logger.e(error);
+    // logger.e(error);
     if (error is Exception) {
       try {
         NetworkExceptions networkExceptions;
         if (error is DioException) {
-          logger.e(error.type);
-          logger.e(error.message);
-          logger.e(error.response);
+          // logger.e(error.type);
+          // logger.e(error.message);
+          // logger.e(error.response);
           switch (error.type) {
             case DioExceptionType.cancel:
               networkExceptions = const NetworkExceptions.requestCancelled();

@@ -6,6 +6,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:halim/core/data/sources/local/app_storage.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import '../core/constants/app_strings.dart';
 import '../core/utils/custom_bloc_observer.dart';
 import '../core/utils/locator.dart';
 import '../core/utils/logger.dart';
@@ -16,7 +17,7 @@ Future<void> initAppConfig() async {
   try {
     await EasyLocalization.ensureInitialized();
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-    await Hive.initFlutter();
+    await Hive.initFlutter(AppStrings.appTitle);
     await AppStorage.instance.init();
     await dotenv.load(fileName: ".env");
   } catch (error, stackTrace) {

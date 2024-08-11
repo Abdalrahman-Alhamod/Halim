@@ -29,11 +29,12 @@ class ApiServicesImpl implements ApiServices {
   Future<void> setHeaders(bool hasToken) async {
     _headers = {
       "Accept": "application/json",
-      "accept-timezone": DateTime.now().timeZoneName,
+      "Accept-Timezone": DateTime.now().timeZoneName,
       "Authorization": hasToken
           ? "Bearer ${(AppStorage.instance.readData(AppStorageKeys.TOKEN))}"
           : null,
-      // "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1hZDEiLCJleHAiOjE2NzE4Nzc2MTMsImlhdCI6MTY3MTUxNzYxM30.ipa9KNJP2QhloBMtC0g0P0lwfGZlhGw9aWXQTC02G74":null,
+      "Accept-Language":
+          AppStorage.instance.readData(AppStorageKeys.LANGUAGE_CODE) ?? 'ar',
     };
   }
 
@@ -71,7 +72,6 @@ class ApiServicesImpl implements ApiServices {
         queryParameters: queryParams,
         options: Options(headers: _headers),
       );
-      // TODO remove fake delay
       await fakeDelay();
       return _handleResponseAsJson(response);
     } catch (error) {
