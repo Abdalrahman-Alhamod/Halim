@@ -9,7 +9,7 @@ import 'package:halim/src/auth/data/data_sources/auth_local_data_source.dart';
 import 'package:halim/src/auth/data/data_sources/auth_remote_data_source.dart';
 import 'package:halim/src/auth/data/repos/auth_repo_impl.dart';
 import 'package:halim/src/auth/domain/repos/auth_repo.dart';
-import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
+import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:halim/src/course_details/data/data_sources/course_details_local_data_source.dart';
 import 'package:halim/src/course_details/data/data_sources/course_details_remote_data_source.dart';
 import 'package:halim/src/course_details/data/repos/course_details_repo_impl.dart';
@@ -42,7 +42,6 @@ import 'package:halim/src/search/domain/repos/search_repo.dart';
 import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
 import 'package:halim/src/search/presentation/manager/search_keywords_cubit/search_keywords_cubit.dart';
 
-import '../../src/auth/presentation/manager/logout_cubit/logout_cubit.dart';
 import '../../src/mentor_details/domain/repos/mentor_details_repo.dart';
 import '../data/sources/remote/services/api_services.dart';
 import '../data/sources/remote/services/api_services_impl.dart';
@@ -211,13 +210,8 @@ void setupLocators() {
     ),
   );
   // Auth
-  locator.registerFactory<LoginCubit>(
-    () => LoginCubit(
-      locator.get<AuthRepo>(),
-    ),
-  );
-  locator.registerFactory<LogoutCubit>(
-    () => LogoutCubit(
+  locator.registerFactory<AuthCubit>(
+    () => AuthCubit(
       locator.get<AuthRepo>(),
     ),
   );

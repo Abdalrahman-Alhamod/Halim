@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:flutter/material.dart' as material;
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/widgets/custome_elevated_button.dart';
+import '../../../manager/auth_cubit/auth_cubit.dart';
 import 'custom_text_field.dart';
 import 'remember_me_check_box.dart';
 
@@ -43,20 +43,22 @@ class _AuthFormState extends State<AuthForm> {
   final _formKey = GlobalKey<FormState>();
 
   _setInitialValues() {
-    email = context.read<LoginCubit>().getUserEmail() ?? '';
-    setState(() {
-      if (email != '') {
+    if (context.read<AuthCubit>().getUserEmail() != null) {
+      email = context.read<AuthCubit>().getUserEmail()!;
+      setState(() {
         isEmailFilled = true;
-      } else {
-        isEmailFilled = false;
-      }
-    });
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    _setInitialValues();
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    // TODO fix bug
-    // _setInitialValues();
     return Form(
       key: _formKey,
       child: Column(

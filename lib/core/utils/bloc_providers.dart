@@ -1,7 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:halim/src/account_setup/presentation/manager/account_setup_cubit/account_setup_cubit.dart';
-import 'package:halim/src/auth/presentation/manager/login_cubit/login_cubit.dart';
-import 'package:halim/src/auth/presentation/manager/logout_cubit/logout_cubit.dart';
+import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import 'package:halim/src/course_details/presentation/manager/reviews_cubit/reviews_cubit.dart';
 import 'package:halim/src/home/presentation/manager/home_cubit/home_cubit.dart';
@@ -21,11 +20,8 @@ List<BlocProvider> initProviders() {
     BlocProvider<SearchCubit>(
       create: (context) => locator.get<SearchCubit>()..init(context),
     ),
-    BlocProvider<LoginCubit>(
-      create: (context) => locator.get<LoginCubit>(),
-    ),
-    BlocProvider<LogoutCubit>(
-      create: (context) => locator.get<LogoutCubit>(),
+    BlocProvider<AuthCubit>(
+      create: (context) => locator.get<AuthCubit>(),
     ),
     BlocProvider<HomeCubit>(
       create: (context) => locator.get<HomeCubit>(),

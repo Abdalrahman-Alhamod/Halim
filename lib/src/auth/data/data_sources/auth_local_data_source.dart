@@ -1,4 +1,5 @@
 import 'package:halim/core/data/sources/local/app_storage_keys.dart';
+import 'package:halim/core/utils/logger.dart';
 import 'package:halim/src/shared/model/user_model.dart';
 
 import '../../../../core/data/sources/local/app_storage.dart';
@@ -16,6 +17,9 @@ class AuthLocalDataSource {
   }
 
   void saveUserEmail(UserModel user) {
+    AppStorage.instance.removeData(
+      AppStorageKeys.USER_EMAIL,
+    );
     AppStorage.instance.writeData(
       AppStorageKeys.USER_EMAIL,
       user.email,
@@ -23,9 +27,11 @@ class AuthLocalDataSource {
   }
 
   String? getUserEmail() {
-    return AppStorage.instance.readData(
+    final email = AppStorage.instance.readData(
       AppStorageKeys.USER_EMAIL,
     );
+    logger.e(email);
+    return email;
   }
 
   bool isUserLoggedIn() {
