@@ -42,4 +42,7 @@ abstract class CourseDetailsRepo {
   Future<ApiResponse<BaseModel>> getCourseAnnouncementsSection({
     required int courseId,
   });
+  Future<ApiResponse<BaseModel>> getCourseCertificate({
+    required int courseId,
+  });
 }

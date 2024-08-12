@@ -78,4 +78,11 @@ class CourseDetailsState with _$CourseDetailsState {
   const factory CourseDetailsState.fetchCourseAnnouncementsSectionSuccess(
           List<AnnouncementBoxModel> data, String? message) =
       _FetchCourseAnnouncementsSectionSuccess;
+
+  const factory CourseDetailsState.fetchCourseCertificateLoading() =
+      _FetchCourseCertificateLoading;
+  const factory CourseDetailsState.fetchCourseCertificateFailure(
+      NetworkExceptions? networkException) = _FetchCourseCertificateFailure;
+  const factory CourseDetailsState.fetchCourseCertificateSuccess(
+      CertificateModel data, String? message) = _FetchCourseCertificateSuccess;
 }

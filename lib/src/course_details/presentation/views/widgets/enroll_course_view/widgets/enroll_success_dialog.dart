@@ -8,6 +8,7 @@ import '../../../../../../../core/utils/context_extensions.dart';
 import '../../../../../../../core/assets/app_images.dart';
 import '../../../../../../../core/themes/app_colors.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../../core/utils/navigation_extra_keys.dart';
 import '../../../../../../../core/widgets/custome_elevated_button.dart';
 
 class EnrollSuccessDialog extends StatelessWidget {
@@ -64,7 +65,13 @@ class EnrollSuccessDialog extends StatelessWidget {
                 children: [
                   CustomElevatedButton(
                     onPressed: () {
-                      GoRouter.of(context).push(AppRoute.kMyCourseDetailsView);
+                      GoRouter.of(context).push(
+                        AppRoute.kMyCourseDetailsView,
+                        extra: {
+                          NavKeys.myCourseId: -1,
+                          NavKeys.myCourseIsCompleted: false,
+                        },
+                      );
                     },
                     title: LocaleKeys.CourseDetails_viewCourse.tr(),
                     elevation: 0,

@@ -22,6 +22,7 @@ import 'package:halim/src/course_details/presentation/views/widgets/main_details
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/about/course_about_section_loading.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lessons_sub_section_load_list.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lessons_sub_section_loading_list.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/my_course_details_view/sections/my_course_certificate_section.dart/my_course_certificate_loading.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/video_player_view/course_video_loading.dart';
 import 'package:halim/src/shared/model/discount_model.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -35,6 +36,7 @@ import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/logger.dart';
 import '../../../../../core/utils/pagination_adapter.dart';
 import '../../../../../core/widgets/custom_loading_indicator.dart';
+import '../../../data/models/certificate_model.dart';
 import '../../../domain/entities/quiz_result.dart';
 import '../../views/widgets/course_reading_view/course_reading_loading.dart';
 import '../../views/widgets/my_course_details_view/sections/my_course_announcements_section/widgets/announcement_box_loading_list.dart';
@@ -952,6 +954,107 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
       },
       fetchCourseAnnouncementsSectionSuccess: (
         List<AnnouncementBoxModel> courseAnnouncementsSection,
+        String? message,
+      ) {
+        logger.print(
+          '$title Success',
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+      },
+      orElse: () {},
+    );
+  }
+
+  CertificateModel? courseCertificate;
+  Future<void> getCourseCertificate() async {
+    emit(
+      const CourseDetailsState.fetchCourseCertificateLoading(),
+    );
+    final response = await _courseDetailsRepo.getCourseCertificate(
+      courseId: courseId,
+    );
+    response.when(
+      success: (data) {
+        courseCertificate = data.data;
+        emit(
+          CourseDetailsState.fetchCourseCertificateSuccess(
+            courseCertificate!,
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          CourseDetailsState.fetchCourseCertificateFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+  bool buildCourseCertificateWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchCourseCertificateLoading: () => true,
+      fetchCourseCertificateFailure: (_) => true,
+      fetchCourseCertificateSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  Widget buildCourseCertificate({
+    required BuildContext context,
+    required CourseDetailsState state,
+    required Widget child,
+  }) {
+    return state.maybeWhen(
+      fetchCourseCertificateLoading: () => const MyCourseCertificateLoading(),
+      fetchCourseCertificateSuccess: (_, __) => child,
+      fetchCourseCertificateFailure: (_) => const SizedBox(),
+      orElse: () => const SizedBox(),
+    );
+  }
+
+  bool listenCourseCertificateWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchCourseCertificateLoading: () => true,
+      fetchCourseCertificateFailure: (_) => true,
+      fetchCourseCertificateSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenCourseCertificate(BuildContext context, CourseDetailsState state) {
+    const title = 'Course Certificate';
+    state.maybeWhen(
+      fetchCourseCertificateLoading: () {
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      fetchCourseCertificateFailure: (NetworkExceptions? networkException) {
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      fetchCourseCertificateSuccess: (
+        CertificateModel certificate,
         String? message,
       ) {
         logger.print(

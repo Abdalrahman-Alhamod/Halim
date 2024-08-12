@@ -5,5 +5,6 @@ abstract final class NavKeys {
   static const IsQuizQuestionStateAnswers = 'IsQuizQuestionStateAnswers';
   static const courseId = 'courseId';
   static const myCourseId = 'myCourseId';
+  static const myCourseIsCompleted = 'myCourseIsCompleted';
   static const mentorId = 'mentorId';
 }

@@ -11,6 +11,7 @@ import 'package:halim/src/course_details/data/models/lessons_section_model.dart'
 
 import '../../../../core/data/sources/remote/services/api_services.dart';
 import '../../../shared/model/review_block_model.dart';
+import '../models/certificate_model.dart';
 
 class CourseDetailsRemoteDataSource {
   final ApiServices _apiServices;
@@ -295,6 +296,22 @@ class CourseDetailsRemoteDataSource {
         (itemJson) => AnnouncementBoxModel.fromJson(
           itemJson,
         ),
+      ),
+    );
+  }
+
+  Future<BaseModel> getCourseCertificate({
+    required int courseId,
+  }) async {
+    final response = await _apiServices.get(
+      '${AppUrl.courses}/$courseId/${AppUrl.kCertificate}',
+      hasToken: true,
+    );
+
+    return BaseModel.fromJson(
+      response,
+      (json) => CertificateModel.fromJson(
+        json,
       ),
     );
   }

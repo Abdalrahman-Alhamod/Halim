@@ -250,8 +250,12 @@ class AppRoute {
       GoRoute(
         path: kMyCourseDetailsView,
         builder: (BuildContext context, GoRouterState state) {
-          return  MyCourseDetailsView(courseId:    (GoRouterState.of(context).extra
-                as Map<String, dynamic>)[NavKeys.myCourseId] as int,);
+          return MyCourseDetailsView(
+            courseId: (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.myCourseId] as int,
+            isCompleted: (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.myCourseIsCompleted] as bool,
+          );
         },
       ),
       GoRoute(

@@ -237,7 +237,29 @@ class CourseDetailsRepoImpl extends CourseDetailsRepo {
     required int courseId,
   }) async {
     try {
-      final response = await _courseDetailsRemoteDateSource.getCourseAnnouncementsSection(
+      final response =
+          await _courseDetailsRemoteDateSource.getCourseAnnouncementsSection(
+        courseId: courseId,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> getCourseCertificate({
+    required int courseId,
+  }) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.getCourseCertificate(
         courseId: courseId,
       );
       return ApiResponse.success(
