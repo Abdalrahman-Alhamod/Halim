@@ -12,7 +12,7 @@ class MentorReviewsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.read<MentorDetailsCubit>().refreshMentorCourses();
+    context.read<MentorDetailsCubit>().refreshMentorReviews();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Column(

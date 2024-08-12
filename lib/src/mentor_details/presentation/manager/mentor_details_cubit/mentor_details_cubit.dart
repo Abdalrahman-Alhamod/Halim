@@ -512,5 +512,6 @@ class MentorDetailsCubit extends Cubit<MentorDetailsState> {
         context,
         pagingController,
         itemBuilder,
+        loadBuilder: const ReviewBlockLoadList(),
       );
 }

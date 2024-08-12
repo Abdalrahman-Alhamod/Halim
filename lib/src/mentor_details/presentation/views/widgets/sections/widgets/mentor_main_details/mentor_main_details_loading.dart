@@ -16,24 +16,25 @@ class MentorMainDetailsLoading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-       
-        const AvatarLoading(radius: 70,),
+        const AvatarLoading(
+          radius: 70,
+        ),
         const SizedBox(
-          height: 10,
+          height: 20,
         ),
         ShimmerBox(
           height: 28,
           width: context.width * 0.5,
         ),
         const SizedBox(
-          height: 10,
+          height: 20,
         ),
         ShimmerBox(
           height: 24,
           width: context.width * 0.8,
         ),
         const SizedBox(
-          height: 30,
+          height: 35,
         ),
         SizedBox(
           height: 70,
@@ -63,7 +64,7 @@ class MentorMainDetailsLoading extends StatelessWidget {
             Expanded(
               flex: 1,
               child: ShimmerBox(
-                height: 68,
+                height: 50,
                 radius: 32,
               ),
             ),
@@ -73,7 +74,7 @@ class MentorMainDetailsLoading extends StatelessWidget {
             Expanded(
               flex: 1,
               child: ShimmerBox(
-                height: 68,
+                height: 50,
                 radius: 32,
               ),
             ),
