@@ -18,7 +18,7 @@ import 'package:halim/src/mentor_details/presentation/views/mentor_reviews_view.
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/payments_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
-import 'package:halim/src/profile_settings/presentation/views/recharge_view.dart';
+import 'package:halim/src/profile_settings/presentation/views/transactions_view.dart';
 import 'package:halim/src/search/presentation/views/search_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_details_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_lessons_view.dart';
@@ -396,7 +396,7 @@ class AppRoute {
       GoRoute(
         path: kShippingView,
         builder: (BuildContext context, GoRouterState state) {
-          return const ShippingView();
+          return const TransactionsView();
         },
       ),
       GoRoute(

@@ -176,4 +176,8 @@ abstract final class AppUrl {
    static const kReplyTo = "reply_to";
 
   ///<------------------------------------------------------------------------------
+
+  ///<------------------------------------------------------------------------------
+  static final transaction = "${baseUrl}transactions";
+  
 }

@@ -106,9 +106,10 @@ class ChooseInterestsBottomSheet {
                       onPressed: () {
                         // Navigator.pop(context);
                         context.read<AccountSetupCubit>().student.interests =
-                            selectedCategories.map((subcategory) => subcategory.id)
-                            .whereType<int>()
-                            .toList();
+                            selectedCategories
+                                .map((subcategory) => subcategory.id)
+                                .whereType<int>()
+                                .toList();
                         context
                             .read<AccountSetupCubit>()
                             .postInformationStudent();
@@ -126,7 +127,6 @@ class ChooseInterestsBottomSheet {
                         //     '+++++++++++++++++++++++++++++++++++${selectedId}');
                         print(
                             '**********************************${context.read<AccountSetupCubit>().student.interests}');
-                        
                       },
                       title: LocaleKeys.FillYourProfile_Interests_continue.tr(),
                       width: MediaQuery.of(context).size.width * 0.40,

@@ -100,13 +100,6 @@ class CreatePinBodyState extends State<CreatePinBody> {
                     context.read<AccountSetupCubit>().student.pin = pinCode;
                     ChooseInterestsBottomSheet.chooseInterestsBottomSheet(
                         context, searchCubit.subcategories);
-
-
-
-
-
-
-                    
                   },
                   title: LocaleKeys.FillYourProfile_continue.tr(),
                   width: MediaQuery.of(context).size.width * 0.90,

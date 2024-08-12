@@ -1,33 +1,26 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/src/profile_settings/data/models/transaction_model.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/themes/app_colors.dart';
 
-class ShippingCard extends StatefulWidget {
-  final double valueShipping;
-  final int idEmployee;
-  final DateTime dateShipping;
-  final int idShipping;
+class TransactionsCard extends StatefulWidget {
+  final TransactionModel transactionModel;
 
-  const ShippingCard({
+  const TransactionsCard({
     super.key,
-    required this.valueShipping,
-    required this.idEmployee,
-    required this.dateShipping,
-    required this.idShipping,
+    required this.transactionModel,
   });
 
   @override
-  State<ShippingCard> createState() => _ShippingCardState();
+  State<TransactionsCard> createState() => _TransactionsCardState();
 }
 
-class _ShippingCardState extends State<ShippingCard> {
+class _TransactionsCardState extends State<TransactionsCard> {
   @override
   Widget build(BuildContext context) {
-    String formattedDate = DateFormat('dd-MM-yyyy').format(widget.dateShipping);
-
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 5.0),
@@ -35,7 +28,7 @@ class _ShippingCardState extends State<ShippingCard> {
           children: [
             const SizedBox(height: 10),
             Container(
-              height: 147,
+              height: 153,
               decoration: BoxDecoration(
                 color: context.isDarkMode
                     ? AppColors.loginWithButtonDarkColor
@@ -74,7 +67,7 @@ class _ShippingCardState extends State<ShippingCard> {
                         ),
                         child: Center(
                           child: AutoSizeText(
-                            '${widget.idShipping}',
+                            '${widget.transactionModel.id ?? ''}',
                             style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,
@@ -87,34 +80,6 @@ class _ShippingCardState extends State<ShippingCard> {
                         ),
                       ),
                     ]),
-
-                    // Row(children: [
-                    //   AutoSizeText(
-                    //     '${LocaleKeys.Settings_Shipping_numShip.tr()}',
-                    //     style: TextStyle(
-                    //       color: context.isDarkMode
-                    //           ? Colors.white70
-                    //           : Colors.black45,
-                    //       fontWeight: FontWeight.w400,
-                    //     ),
-                    //     overflow: TextOverflow.ellipsis,
-                    //     maxFontSize: 16,
-                    //     minFontSize: 14,
-                    //     maxLines: 1,
-                    //   ),
-                    //   const Spacer(),
-                    //   AutoSizeText(
-                    //     '${widget.idShipping}',
-                    //     style: TextStyle(
-                    //       color: context.isDarkMode ? Colors.white : Colors.black,
-                    //       fontWeight: FontWeight.w400,
-                    //     ),
-                    //     overflow: TextOverflow.ellipsis,
-                    //     maxFontSize: 16,
-                    //     minFontSize: 14,
-                    //     maxLines: 1,
-                    //   ),
-                    // ]),
                     const SizedBox(height: 12),
                     Row(children: [
                       AutoSizeText(
@@ -132,7 +97,7 @@ class _ShippingCardState extends State<ShippingCard> {
                       ),
                       const Spacer(),
                       AutoSizeText(
-                        '${widget.valueShipping} \$',
+                        '${widget.transactionModel.transactionValue ?? ''} \$',
                         style: TextStyle(
                           color:
                               context.isDarkMode ? Colors.white : Colors.black,
@@ -161,7 +126,7 @@ class _ShippingCardState extends State<ShippingCard> {
                       ),
                       const Spacer(),
                       AutoSizeText(
-                        '${widget.idEmployee}',
+                        '${widget.transactionModel.walletId ?? ''}',
                         style: TextStyle(
                           color:
                               context.isDarkMode ? Colors.white : Colors.black,
@@ -190,7 +155,7 @@ class _ShippingCardState extends State<ShippingCard> {
                       ),
                       const Spacer(),
                       AutoSizeText(
-                        formattedDate,
+                        widget.transactionModel.createdAt!.substring(0, 10),
                         style: TextStyle(
                           color:
                               context.isDarkMode ? Colors.white : Colors.black,
