@@ -12,41 +12,29 @@ class _MyCourseDetailsBody extends StatelessWidget {
       LocaleKeys.CourseDetails_MyCourse_announcements.tr(),
       LocaleKeys.CourseDetails_MyCourse_certificate.tr(),
     ];
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            SectionsView(
-              pages: [
-                SectionPage(
-                  title: LocaleKeys.CourseDetails_Sections_lessons.tr(),
-                  child: const CourseLessonsSection(),
-                ),
-                SectionPage(
-                  title: LocaleKeys.CourseDetails_Sections_community.tr(),
-                  child: const CourseCommunitySection(),
-                ),
-                SectionPage(
-                  title: LocaleKeys.CourseDetails_MyCourse_announcements.tr(),
-                  child: const MyCourseAnouncementsSection(),
-                ),
-                SectionPage(
-                  title: LocaleKeys.CourseDetails_MyCourse_certificate.tr(),
-                  child: const MyCourseCertificateSection(
-                    certificateUrl:
-                        'https://www.soundczech.cz/temp/lorem-ipsum.pdf',
-                  ),
-                ),
-              ],
-              isScrollable: true,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-          ],
+    return SectionsView(
+      pages: [
+        SectionPage(
+          title: LocaleKeys.CourseDetails_Sections_lessons.tr(),
+          child: const CourseLessonsSectionList(),
         ),
-      ),
+        SectionPage(
+          title: LocaleKeys.CourseDetails_Sections_community.tr(),
+          child: const CourseCommunitySection(),
+        ),
+        SectionPage(
+          title: LocaleKeys.CourseDetails_MyCourse_announcements.tr(),
+          child: const MyCourseAnnouncementsSection(),
+        ),
+        SectionPage(
+          title: LocaleKeys.CourseDetails_MyCourse_certificate.tr(),
+          child: const MyCourseCertificateSection(
+            certificateUrl: 'https://www.soundczech.cz/temp/lorem-ipsum.pdf',
+          ),
+        ),
+      ],
+      isScrollable: true,
+      isChildrenExpandable: false,
     );
   }
 }

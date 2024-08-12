@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
+import '../../../../../../../core/widgets/avatar_loading.dart';
 import '../../../../../../../core/widgets/shimmer_box.dart';
 
 class ReviewBlockLoading extends StatelessWidget {
@@ -24,11 +25,8 @@ class ReviewBlockLoading extends StatelessWidget {
                   flex: 1,
                   child: Row(
                     children: [
-                      const ClipOval(
-                        child: ShimmerBox(
-                          height: 56,
-                          width: 56,
-                        ),
+                      const AvatarLoading(
+                        radius: 28,
                       ),
                       const SizedBox(
                         width: 10,
@@ -53,7 +51,7 @@ class ReviewBlockLoading extends StatelessWidget {
           ),
           ListView.separated(
             shrinkWrap: true,
-             physics: const NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) => ShimmerBox(
               width: context.width * 0.7,
               height: 11,

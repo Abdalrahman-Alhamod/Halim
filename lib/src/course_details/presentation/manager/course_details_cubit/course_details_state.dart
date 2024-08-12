@@ -69,4 +69,13 @@ class CourseDetailsState with _$CourseDetailsState {
     String? message,
     int courseId,
   ) = _UnsaveCourseSuccess;
+
+  const factory CourseDetailsState.fetchCourseAnnouncementsSectionLoading() =
+      _FetchCourseAnnouncementsSectionLoading;
+  const factory CourseDetailsState.fetchCourseAnnouncementsSectionFailure(
+          NetworkExceptions? networkException) =
+      _FetchCourseAnnouncementsSectionFailure;
+  const factory CourseDetailsState.fetchCourseAnnouncementsSectionSuccess(
+          List<AnnouncementBoxModel> data, String? message) =
+      _FetchCourseAnnouncementsSectionSuccess;
 }

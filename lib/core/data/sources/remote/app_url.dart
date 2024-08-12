@@ -93,6 +93,8 @@ abstract final class AppUrl {
 
   static const kCourses = "courses";
 
+  static const kAnnouncements = "announcements";
+
   ///<------------------------------------------------------------------------------
 
   static final categories = "${baseUrl}categories";

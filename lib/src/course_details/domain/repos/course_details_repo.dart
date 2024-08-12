@@ -36,5 +36,10 @@ abstract class CourseDetailsRepo {
     required int lessonId,
     int? quizResult,
   });
-  Future<ApiResponse<BaseModel>> saveCourse({required int courseId});
+  Future<ApiResponse<BaseModel>> saveCourse({
+    required int courseId,
+  });
+  Future<ApiResponse<BaseModel>> getCourseAnnouncementsSection({
+    required int courseId,
+  });
 }

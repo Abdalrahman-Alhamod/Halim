@@ -7,7 +7,7 @@ import 'package:halim/src/course_details/presentation/manager/course_details_cub
 import '../../../../core/widgets/sections_view/data/section_page.dart';
 import '../../../../core/widgets/sections_view/sections_view.dart';
 import 'widgets/more_details_section/commuinty/course_community_section.dart';
-import 'widgets/more_details_section/lessons/course_lessons_section.dart';
+import 'widgets/more_details_section/lessons/course_lessons_section_list.dart';
 import 'widgets/my_course_details_view/sections/my_course_announcements_section/my_course_announcements_section.dart';
 import 'widgets/my_course_details_view/sections/my_course_certificate_section.dart/my_course_certificate_section.dart';
 

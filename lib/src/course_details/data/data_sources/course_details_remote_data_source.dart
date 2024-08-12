@@ -3,6 +3,7 @@
 import 'package:halim/core/data/model/base_model.dart';
 import 'package:halim/core/data/model/base_models.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
+import 'package:halim/src/course_details/data/models/anouncement_box_model.dart';
 import 'package:halim/src/course_details/data/models/course_about_section_model.dart';
 import 'package:halim/src/course_details/data/models/course_lesson_model.dart';
 import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
@@ -277,6 +278,24 @@ class CourseDetailsRemoteDataSource {
     return BaseModel.fromJson(
       response,
       (json) => () {},
+    );
+  }
+
+  Future<BaseModel> getCourseAnnouncementsSection({
+    required int courseId,
+  }) async {
+    final response = await _apiServices.get(
+      '${AppUrl.courses}/$courseId/${AppUrl.kAnnouncements}',
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => BaseModels.fromJson(
+        json,
+        (itemJson) => AnnouncementBoxModel.fromJson(
+          itemJson,
+        ),
+      ),
     );
   }
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 import 'package:halim/core/widgets/shimmer_box.dart';
 
+import '../../../../../core/widgets/avatar_loading.dart';
+
 class MentorCardLoading extends StatelessWidget {
   const MentorCardLoading({super.key});
 
@@ -12,11 +14,9 @@ class MentorCardLoading extends StatelessWidget {
         Expanded(
           child: Row(
             children: [
-              const ClipOval(
-                  child: ShimmerBox(
-                width: 56,
-                height: 56,
-              )),
+              const AvatarLoading(
+                radius: 28,
+              ),
               const SizedBox(
                 width: 20,
               ),

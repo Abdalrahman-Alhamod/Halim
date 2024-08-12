@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/helpers/date_time_helper.dart';
-import 'package:halim/core/widgets/avatar_image_loader.dart';
-import 'package:halim/src/course_details/data/models/anouncement_box_model.dart';
+import 'package:halim/core/utils/context_extensions.dart';
 
 import '../../../../../../../../../core/themes/app_colors.dart';
+import '../../../../../../../../../core/widgets/avatar_loading.dart';
+import '../../../../../../../../../core/widgets/shimmer_box.dart';
 
-class AnnouncementBox extends StatelessWidget {
-  const AnnouncementBox({
+class AnnouncementBoxLoading extends StatelessWidget {
+  const AnnouncementBoxLoading({
     super.key,
-    required this.announcementBoxModel,
   });
-  final AnnouncementBoxModel announcementBoxModel;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -29,8 +28,7 @@ class AnnouncementBox extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  AvatarImageLoader(
-                    imageUrl: announcementBoxModel.mentor?.image ?? '',
+                  const AvatarLoading(
                     radius: 24,
                   ),
                   const SizedBox(
@@ -40,44 +38,39 @@ class AnnouncementBox extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          announcementBoxModel.mentor?.fullName ?? '',
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        ShimmerBox(
+                          height: 18,
+                          width: context.width * 0.4,
                         ),
                         const SizedBox(
-                          height: 8,
+                          height: 16,
                         ),
-                        Text(
-                          announcementBoxModel.title ?? '',
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
+                        ShimmerBox(
+                          height: 16,
+                          width: context.width * 0.7,
                         ),
                         const SizedBox(
-                          height: 4,
+                          height: 12,
                         ),
-                        Text(
-                          announcementBoxModel.content ?? '',
-                          style: const TextStyle(fontSize: 14),
+                        ListView.separated(
+                          shrinkWrap: true,
+                          itemBuilder: (context, index) => ShimmerBox(
+                            height: 14,
+                            width: context.width * 0.8,
+                          ),
+                          separatorBuilder: (context, index) => const SizedBox(
+                            height: 8,
+                          ),
+                          itemCount: 4,
                         ),
                         const SizedBox(
                           height: 8,
                         ),
                         Align(
                           alignment: Alignment.centerRight,
-                          child: Text(
-                            DateTimeHelper.format(
-                              announcementBoxModel.createdAt ?? DateTime.now(),
-                              DateTimeFormat.dateAndTime,
-                            ),
-                            style: const TextStyle(
-                              fontSize: 12,
-                              color: Colors.grey,
-                            ),
+                          child: ShimmerBox(
+                            height: 12,
+                            width: context.width * 0.3,
                           ),
                         ),
                       ],
