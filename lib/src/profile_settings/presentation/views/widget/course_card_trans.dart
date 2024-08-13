@@ -8,12 +8,12 @@ import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
-class CardCourseTrancations extends StatefulWidget {
+class CardCourseReceipt extends StatefulWidget {
   final String category;
   final String name;
   final String imageUrl;
   final bool paid;
-  const CardCourseTrancations({
+  const CardCourseReceipt({
     super.key,
     required this.category,
     required this.name,
@@ -22,10 +22,10 @@ class CardCourseTrancations extends StatefulWidget {
   });
 
   @override
-  State<CardCourseTrancations> createState() => _CardCourseTrancationsState();
+  State<CardCourseReceipt> createState() => _CardCourseReceiptState();
 }
 
-class _CardCourseTrancationsState extends State<CardCourseTrancations> {
+class _CardCourseReceiptState extends State<CardCourseReceipt> {
   @override
   @override
   Widget build(BuildContext context) {
@@ -72,9 +72,9 @@ class _CardCourseTrancationsState extends State<CardCourseTrancations> {
                         overflow: TextOverflow.ellipsis,
                         maxFontSize: 20,
                         minFontSize: 18,
-                        maxLines: 2,
+                        maxLines: 1,
                       ),
-                      const SizedBox(height: 25),
+                      const SizedBox(height: 15),
                       AutoSizeText(
                         widget.category,
                         style: TextStyle(
@@ -88,60 +88,41 @@ class _CardCourseTrancationsState extends State<CardCourseTrancations> {
                         minFontSize: 16,
                         maxLines: 1,
                       ),
-                      // SizedBox(height: 10),
-                      // Container(
-                      //   height: 25,
-                      //   width: 80,
-                      //   padding: EdgeInsets.symmetric(
-                      //     vertical: 4,
-                      //     horizontal: 6,
-                      //   ),
-                      //   decoration: BoxDecoration(
-                      //       borderRadius: BorderRadius.circular(0),
-                      //       color: AppColors.primaryColor),
-                      //   child: Center(
-                      //     child: AutoSizeText(
-                      //       '${widget.paid ? '${LocaleKeys.Settings_Payments_paid.tr()}' : '${LocaleKeys.Settings_Payments_unpaid.tr()}'}',
-                      //       style: const TextStyle(
-                      //         color: Colors.white,
-                      //         fontWeight: FontWeight.w700,
-                      //       ),
-                      //       maxFontSize: 16,
-                      //       minFontSize: 14,
-                      //       overflow: TextOverflow.ellipsis,
-                      //       maxLines: 1,
-                      //     ),
-                      //   ),
-                      // ),
+                      const SizedBox(height: 12.5),
+                      Row(
+                        children: [
+                          const SizedBox(
+                            width: 100,
+                          ),
+                          Container(
+                            height: 35,
+                            width: 80,
+                            decoration: const BoxDecoration(
+                                color: AppColors.primaryColor,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20))),
+                            child: Center(
+                              child: GestureDetector(
+                                child: AutoSizeText(
+                                  LocaleKeys.Settings_Payments_receipt.tr(),
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                  maxFontSize: 13,
+                                  minFontSize: 10,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
               ),
-              Container(
-                height: 30,
-                width: 80,
-                decoration: const BoxDecoration(
-                    color: AppColors.primaryColor,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Center(
-                  child: GestureDetector(
-                    child: AutoSizeText(
-                      LocaleKeys.Settings_Payments_receipt.tr(),
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
-                      maxFontSize: 13,
-                      minFontSize: 10,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                width: 20,
-              )
             ],
           ),
         ),

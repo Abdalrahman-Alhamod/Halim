@@ -105,7 +105,7 @@ class NotificationsCard extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: Container(
-                                  height: 22,
+                                  height: 23,
                                   decoration: BoxDecoration(
                                       color: context.isDarkMode
                                           ? Colors.black38

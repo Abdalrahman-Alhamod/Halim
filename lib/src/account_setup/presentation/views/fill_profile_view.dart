@@ -18,6 +18,7 @@ class _FillProfilViewState extends State<FillProfilView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor:
             context.isDarkMode ? AppColors.darkColor : Colors.white,
         title: Text(
@@ -29,15 +30,6 @@ class _FillProfilViewState extends State<FillProfilView> {
           ),
         ),
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: context.isDarkMode ? Colors.white : Colors.black,
-          ),
-          onPressed: () {
-            GoRouter.of(context).pop();
-          },
-        ),
       ),
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: const SingleChildScrollView(

@@ -30,13 +30,13 @@ class PaymentsViewState extends State<PaymentsView> {
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: SingleChildScrollView(
         child: Column(children: [
-          CardCourseTrancations(
+          CardCourseReceipt(
             category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
             name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
             paid: false,
             imageUrl: AppImages.testCourseCover,
           ),
-          CardCourseTrancations(
+          CardCourseReceipt(
             category: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
             name: LocaleKeys.CourseDetails_Test_courseTitle.tr(),
             paid: true,
