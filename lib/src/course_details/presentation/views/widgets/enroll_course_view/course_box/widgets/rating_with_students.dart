@@ -2,9 +2,10 @@ part of '../course_box.dart';
 
 class RatingWithStudents extends StatelessWidget {
   const RatingWithStudents({
-    super.key,
+    super.key, required this.ratingAvg, required this.enrollmentsCount,
   });
-
+  final num ratingAvg;
+  final int enrollmentsCount;
   @override
   Widget build(BuildContext context) {
     var autoSizeGroup = AutoSizeGroup();
@@ -23,7 +24,7 @@ class RatingWithStudents extends StatelessWidget {
           Flexible(
             flex: 1,
             child: AutoSizeText(
-              '4.8',
+              StringHelper.formatNum(ratingAvg),
               style: const TextStyle(fontSize: 20),
               maxLines: 1,
               group: autoSizeGroup,
@@ -35,7 +36,7 @@ class RatingWithStudents extends StatelessWidget {
           Flexible(
             flex: 4,
             child: AutoSizeText(
-              '  |   7,596 ${LocaleKeys.CourseDetails_students.tr()}',
+              '  |   $enrollmentsCount ${LocaleKeys.CourseDetails_students.tr()}',
               style: const TextStyle(fontSize: 20),
               maxLines: 1,
               group: autoSizeGroup,

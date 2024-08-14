@@ -8,6 +8,8 @@ import 'package:halim/src/course_details/data/models/course_about_section_model.
 import 'package:halim/src/course_details/data/models/course_lesson_model.dart';
 import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
 import 'package:halim/src/course_details/data/models/lessons_section_model.dart';
+import 'package:halim/src/course_details/data/models/wallet_model.dart';
+import 'package:halim/src/shared/model/discount_model.dart';
 
 import '../../../../core/data/sources/remote/services/api_services.dart';
 import '../../../shared/model/review_block_model.dart';
@@ -311,6 +313,93 @@ class CourseDetailsRemoteDataSource {
     return BaseModel.fromJson(
       response,
       (json) => CertificateModel.fromJson(
+        json,
+      ),
+    );
+  }
+
+  Future<BaseModel> getCourseCouponDetails({
+    required int courseId,
+    required String code,
+  }) async {
+    Map<String, String> queryParams = {};
+    queryParams.addEntries(
+      [
+        MapEntry(
+          AppUrl.kCode,
+          code,
+        ),
+      ],
+    );
+    final response = await _apiServices.get(
+      '${AppUrl.courses}/$courseId/${AppUrl.kCouponDetails}',
+      queryParams: queryParams,
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => DiscountModel.fromJson(
+        json,
+      ),
+    );
+  }
+
+  Future<BaseModel> enrollCourse({
+    required int courseId,
+    required String code,
+    required String pin,
+  }) async {
+    Map<String, String> body = {};
+    body.addEntries(
+      [
+        MapEntry(
+          AppUrl.kPIN,
+          pin,
+        ),
+      ],
+    );
+    if (code.isNotEmpty) {
+      body.addEntries(
+        [
+          MapEntry(
+            AppUrl.kCode,
+            code,
+          ),
+        ],
+      );
+    }
+
+    final response = await _apiServices.post(
+      '${AppUrl.courses}/$courseId/${AppUrl.kEnroll}',
+      body: body,
+      hasToken: true,
+    );
+
+    return BaseModel.fromJson(
+      response,
+      (json) => () {},
+    );
+  }
+
+  Future<BaseModel> getWallet() async {
+    // TODO remove query parameters
+    Map<String, String> queryParams = {};
+    queryParams.addEntries(
+      [
+        const MapEntry(
+          "student",
+          "1061",
+        ),
+      ],
+    );
+    final response = await _apiServices.get(
+      AppUrl.wallet,
+      queryParams: queryParams,
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => WalletModel.fromJson(
         json,
       ),
     );

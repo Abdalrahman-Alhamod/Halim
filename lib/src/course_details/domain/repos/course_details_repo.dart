@@ -45,4 +45,14 @@ abstract class CourseDetailsRepo {
   Future<ApiResponse<BaseModel>> getCourseCertificate({
     required int courseId,
   });
+  Future<ApiResponse<BaseModel>> getCourseCouponDetails({
+    required int courseId,
+    required String code,
+  });
+  Future<ApiResponse<BaseModel>> enrollCourse({
+    required int courseId,
+    required String code,
+    required String pin,
+  });
+  Future<ApiResponse<BaseModel>> getWallet();
 }

@@ -6,17 +6,22 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
+import 'package:halim/core/functions/show_custom_dialog.dart';
 import 'package:halim/core/functions/show_loading_dialog.dart';
 import 'package:halim/core/utils/context_extensions.dart';
+import 'package:halim/core/widgets/bottom_sheet_button_loading.dart';
 import 'package:halim/core/widgets/shimmer_box.dart';
 import 'package:halim/src/course_details/data/models/anouncement_box_model.dart';
 import 'package:halim/src/course_details/data/models/course_about_section_model.dart';
 import 'package:halim/src/course_details/data/models/course_lesson_model.dart';
 import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
 import 'package:halim/src/course_details/data/models/lessons_section_model.dart';
+import 'package:halim/src/course_details/data/models/wallet_model.dart';
 import 'package:halim/src/course_details/domain/entities/quiz_status.dart';
 import 'package:halim/src/course_details/domain/repos/course_details_repo.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/course_quiz_view/course_quiz_loading.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/widgets/enroll_success_dialog.dart';
+import 'package:halim/src/course_details/presentation/views/widgets/enroll_course_view/widgets/wallet_loading.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/main_details_section/course_main_details_section_loading.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/main_details_section/course_video_cover_loading.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/about/course_about_section_loading.dart';
@@ -24,7 +29,6 @@ import 'package:halim/src/course_details/presentation/views/widgets/more_details
 import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lessons_sub_section_loading_list.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/my_course_details_view/sections/my_course_certificate_section.dart/my_course_certificate_loading.dart';
 import 'package:halim/src/course_details/presentation/views/widgets/video_player_view/course_video_loading.dart';
-import 'package:halim/src/shared/model/discount_model.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
@@ -36,9 +40,11 @@ import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/logger.dart';
 import '../../../../../core/utils/pagination_adapter.dart';
 import '../../../../../core/widgets/custom_loading_indicator.dart';
+import '../../../../shared/model/discount_model.dart';
 import '../../../data/models/certificate_model.dart';
 import '../../../domain/entities/quiz_result.dart';
 import '../../views/widgets/course_reading_view/course_reading_loading.dart';
+import '../../views/widgets/enroll_course_view/widgets/course_enroll_checkout_loading.dart';
 import '../../views/widgets/my_course_details_view/sections/my_course_announcements_section/widgets/announcement_box_loading_list.dart';
 
 part 'course_details_state.dart';
@@ -60,11 +66,7 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
     final response = await _courseDetailsRepo.getCourseMainSection(courseId);
     response.when(
       success: (data) {
-        final courseMainSectionWithoutDiscount = data.data;
-        const newDiscount = DiscountModel(id: -1, value: 0.34, code: '8HADJAJ');
-        courseMainSection = courseMainSectionWithoutDiscount!.copyWith(
-          discount: newDiscount,
-        );
+        courseMainSection = data.data;
         emit(
           CourseDetailsState.fetchCourseMainSectionSuccess(
             courseMainSection!,
@@ -116,7 +118,7 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
       fetchCourseMainSectionLoading: () => const CourseVideoCoverLoading(),
       fetchCourseMainSectionSuccess: (_, __) => child,
       fetchCourseMainSectionFailure: (_) => const SizedBox(),
-      orElse: () => courseMainSection != null ? child : const SizedBox(),
+      orElse: () => child,
     );
   }
 
@@ -1055,6 +1057,300 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
       },
       fetchCourseCertificateSuccess: (
         CertificateModel certificate,
+        String? message,
+      ) {
+        logger.print(
+          '$title Success',
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+      },
+      orElse: () {},
+    );
+  }
+
+  Widget buildCourseEnrollBottomSheet({
+    required BuildContext context,
+    required CourseDetailsState state,
+    required Widget child,
+  }) {
+    return state.maybeWhen(
+      fetchCourseMainSectionLoading: () => const BottomSheetButtonLoading(),
+      fetchCourseMainSectionSuccess: (_, __) => child,
+      fetchCourseMainSectionFailure: (_) => const SizedBox(),
+      orElse: () => const SizedBox(),
+    );
+  }
+
+  DiscountModel? discount;
+  String discountCode = '';
+  Future<void> getCourseCodeDetails() async {
+    emit(
+      const CourseDetailsState.fetchCourseCodeDetailsLoading(),
+    );
+    final response = await _courseDetailsRepo.getCourseCouponDetails(
+      courseId: courseId,
+      code: discountCode,
+    );
+    response.when(
+      success: (data) {
+        discount = data.data;
+        emit(
+          CourseDetailsState.fetchCourseCodeDetailsSuccess(
+            discount!,
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          CourseDetailsState.fetchCourseCodeDetailsFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+  bool buildCourseEnrollCheckoutWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchCourseCodeDetailsLoading: () => true,
+      fetchCourseCodeDetailsFailure: (_) => true,
+      fetchCourseCodeDetailsSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  Widget buildCourseEnrollCheckout({
+    required BuildContext context,
+    required CourseDetailsState state,
+    required Widget child,
+  }) {
+    return state.maybeWhen(
+      fetchCourseCodeDetailsLoading: () => const CourseEnrollCheckoutLoading(),
+      orElse: () => child,
+    );
+  }
+
+  bool listenCourseCodeDetailsWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchCourseCodeDetailsLoading: () => true,
+      fetchCourseCodeDetailsFailure: (_) => true,
+      fetchCourseCodeDetailsSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenCourseCodeDetails(BuildContext context, CourseDetailsState state) {
+    const title = 'Course Code Details';
+    state.maybeWhen(
+      fetchCourseCodeDetailsLoading: () {
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      fetchCourseCodeDetailsFailure: (NetworkExceptions? networkException) {
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      fetchCourseCodeDetailsSuccess: (
+        DiscountModel discount,
+        String? message,
+      ) {
+        logger.print(
+          '$title Success',
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+      },
+      orElse: () {},
+    );
+  }
+
+  Future<void> enrollCourse() async {
+    emit(
+      const CourseDetailsState.enrollCourseLoading(),
+    );
+    final code = discount?.code ?? '';
+    final response = await _courseDetailsRepo.enrollCourse(
+        courseId: courseId, code: code, pin: "1234");
+    response.when(
+      success: (data) {
+        emit(
+          CourseDetailsState.enrollCourseSuccess(
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          CourseDetailsState.enrollCourseFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+  bool listenEnrollCourseWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      enrollCourseLoading: () => true,
+      enrollCourseFailure: (_) => true,
+      enrollCourseSuccess: (_) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenEnrollCourse(BuildContext context, CourseDetailsState state) {
+    const title = 'EnrollCourse';
+    state.maybeWhen(
+      enrollCourseLoading: () {
+        showLoadingDialog(context);
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      enrollCourseFailure: (NetworkExceptions? networkException) {
+        context.pop();
+
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      enrollCourseSuccess: (
+        String? message,
+      ) {
+        context.pop();
+
+        showCustomDialog(
+          context: context,
+          widget: const EnrollSuccessDialog(),
+        );
+
+        logger.print(
+          '$title Success',
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+      },
+      orElse: () {},
+    );
+  }
+
+  WalletModel? wallet;
+  Future<void> getWallet() async {
+    emit(
+      const CourseDetailsState.fetchWalletLoading(),
+    );
+    final response = await _courseDetailsRepo.getWallet();
+    response.when(
+      success: (data) {
+        wallet = data.data;
+        emit(
+          CourseDetailsState.fetchWalletSuccess(
+            wallet!,
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          CourseDetailsState.fetchWalletFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+  bool buildWalletWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchWalletLoading: () => true,
+      fetchWalletFailure: (_) => true,
+      fetchWalletSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  Widget buildWallet({
+    required BuildContext context,
+    required CourseDetailsState state,
+    required Widget child,
+  }) {
+    return state.maybeWhen(
+      fetchWalletLoading: () => const WalletLoading(),
+      orElse: () => child,
+    );
+  }
+
+  bool listenWalletWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchWalletLoading: () => true,
+      fetchWalletFailure: (_) => true,
+      fetchWalletSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenWallet(BuildContext context, CourseDetailsState state) {
+    const title = 'Wallet';
+    state.maybeWhen(
+      fetchWalletLoading: () {
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      fetchWalletFailure: (NetworkExceptions? networkException) {
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      fetchWalletSuccess: (
+        WalletModel wallet,
         String? message,
       ) {
         logger.print(

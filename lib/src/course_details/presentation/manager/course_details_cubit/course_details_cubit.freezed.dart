@@ -67,6 +67,20 @@ mixin _$CourseDetailsState {
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -116,6 +130,17 @@ mixin _$CourseDetailsState {
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -165,6 +190,17 @@ mixin _$CourseDetailsState {
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -223,6 +259,18 @@ mixin _$CourseDetailsState {
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -280,6 +328,18 @@ mixin _$CourseDetailsState {
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -337,6 +397,18 @@ mixin _$CourseDetailsState {
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -447,6 +519,20 @@ class _$InitialImpl implements _Initial {
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return initial();
   }
@@ -499,6 +585,17 @@ class _$InitialImpl implements _Initial {
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return initial?.call();
   }
@@ -551,6 +648,17 @@ class _$InitialImpl implements _Initial {
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -615,6 +723,18 @@ class _$InitialImpl implements _Initial {
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return initial(this);
   }
@@ -675,6 +795,18 @@ class _$InitialImpl implements _Initial {
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return initial?.call(this);
   }
@@ -735,6 +867,18 @@ class _$InitialImpl implements _Initial {
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -840,6 +984,20 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionLoading();
   }
@@ -892,6 +1050,17 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionLoading?.call();
   }
@@ -944,6 +1113,17 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseMainSectionLoading != null) {
@@ -1008,6 +1188,18 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionLoading(this);
   }
@@ -1068,6 +1260,18 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionLoading?.call(this);
   }
@@ -1128,6 +1332,18 @@ class _$FetchCourseMainSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseMainSectionLoading != null) {
@@ -1276,6 +1492,20 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionFailure(networkException);
   }
@@ -1328,6 +1558,17 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionFailure?.call(networkException);
   }
@@ -1380,6 +1621,17 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseMainSectionFailure != null) {
@@ -1444,6 +1696,18 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionFailure(this);
   }
@@ -1504,6 +1768,18 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionFailure?.call(this);
   }
@@ -1564,6 +1840,18 @@ class _$FetchCourseMainSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseMainSectionFailure != null) {
@@ -1722,6 +2010,20 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionSuccess(data, message);
   }
@@ -1774,6 +2076,17 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionSuccess?.call(data, message);
   }
@@ -1826,6 +2139,17 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseMainSectionSuccess != null) {
@@ -1890,6 +2214,18 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionSuccess(this);
   }
@@ -1950,6 +2286,18 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseMainSectionSuccess?.call(this);
   }
@@ -2010,6 +2358,18 @@ class _$FetchCourseMainSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseMainSectionSuccess != null) {
@@ -2124,6 +2484,20 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionLoading();
   }
@@ -2176,6 +2550,17 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionLoading?.call();
   }
@@ -2228,6 +2613,17 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAboutSectionLoading != null) {
@@ -2292,6 +2688,18 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionLoading(this);
   }
@@ -2352,6 +2760,18 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionLoading?.call(this);
   }
@@ -2412,6 +2832,18 @@ class _$FetchCourseAboutSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAboutSectionLoading != null) {
@@ -2560,6 +2992,20 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionFailure(networkException);
   }
@@ -2612,6 +3058,17 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionFailure?.call(networkException);
   }
@@ -2664,6 +3121,17 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAboutSectionFailure != null) {
@@ -2728,6 +3196,18 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionFailure(this);
   }
@@ -2788,6 +3268,18 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionFailure?.call(this);
   }
@@ -2848,6 +3340,18 @@ class _$FetchCourseAboutSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAboutSectionFailure != null) {
@@ -3006,6 +3510,20 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionSuccess(data, message);
   }
@@ -3058,6 +3576,17 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionSuccess?.call(data, message);
   }
@@ -3110,6 +3639,17 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAboutSectionSuccess != null) {
@@ -3174,6 +3714,18 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionSuccess(this);
   }
@@ -3234,6 +3786,18 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseAboutSectionSuccess?.call(this);
   }
@@ -3294,6 +3858,18 @@ class _$FetchCourseAboutSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAboutSectionSuccess != null) {
@@ -3408,6 +3984,20 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return loadingCourseLessonsSectionPagination();
   }
@@ -3460,6 +4050,17 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return loadingCourseLessonsSectionPagination?.call();
   }
@@ -3512,6 +4113,17 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (loadingCourseLessonsSectionPagination != null) {
@@ -3576,6 +4188,18 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return loadingCourseLessonsSectionPagination(this);
   }
@@ -3636,6 +4260,18 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return loadingCourseLessonsSectionPagination?.call(this);
   }
@@ -3696,6 +4332,18 @@ class _$LoadingCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (loadingCourseLessonsSectionPagination != null) {
@@ -3845,6 +4493,20 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return failureCourseLessonsSectionPagination(networkException);
   }
@@ -3897,6 +4559,17 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return failureCourseLessonsSectionPagination?.call(networkException);
   }
@@ -3949,6 +4622,17 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (failureCourseLessonsSectionPagination != null) {
@@ -4013,6 +4697,18 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return failureCourseLessonsSectionPagination(this);
   }
@@ -4073,6 +4769,18 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return failureCourseLessonsSectionPagination?.call(this);
   }
@@ -4133,6 +4841,18 @@ class _$FailureCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (failureCourseLessonsSectionPagination != null) {
@@ -4274,6 +4994,20 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return successCourseLessonsSectionPagination(message);
   }
@@ -4326,6 +5060,17 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return successCourseLessonsSectionPagination?.call(message);
   }
@@ -4378,6 +5123,17 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (successCourseLessonsSectionPagination != null) {
@@ -4442,6 +5198,18 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return successCourseLessonsSectionPagination(this);
   }
@@ -4502,6 +5270,18 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return successCourseLessonsSectionPagination?.call(this);
   }
@@ -4562,6 +5342,18 @@ class _$SuccessCourseLessonsSectionPaginationImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (successCourseLessonsSectionPagination != null) {
@@ -4675,6 +5467,20 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsLoading();
   }
@@ -4727,6 +5533,17 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsLoading?.call();
   }
@@ -4779,6 +5596,17 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonDetailsLoading != null) {
@@ -4843,6 +5671,18 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsLoading(this);
   }
@@ -4903,6 +5743,18 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsLoading?.call(this);
   }
@@ -4963,6 +5815,18 @@ class _$FetchCourseLessonDetailsLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonDetailsLoading != null) {
@@ -5111,6 +5975,20 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsFailure(networkException);
   }
@@ -5163,6 +6041,17 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsFailure?.call(networkException);
   }
@@ -5215,6 +6104,17 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonDetailsFailure != null) {
@@ -5279,6 +6179,18 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsFailure(this);
   }
@@ -5339,6 +6251,18 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsFailure?.call(this);
   }
@@ -5399,6 +6323,18 @@ class _$FetchCourseLessonDetailsFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonDetailsFailure != null) {
@@ -5557,6 +6493,20 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsSuccess(data, message);
   }
@@ -5609,6 +6559,17 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsSuccess?.call(data, message);
   }
@@ -5661,6 +6622,17 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonDetailsSuccess != null) {
@@ -5725,6 +6697,18 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsSuccess(this);
   }
@@ -5785,6 +6769,18 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonDetailsSuccess?.call(this);
   }
@@ -5845,6 +6841,18 @@ class _$FetchCourseLessonDetailsSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonDetailsSuccess != null) {
@@ -5959,6 +6967,20 @@ class _$FetchCourseLessonsSectionsPageLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageLoading();
   }
@@ -6011,6 +7033,17 @@ class _$FetchCourseLessonsSectionsPageLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageLoading?.call();
   }
@@ -6063,6 +7096,17 @@ class _$FetchCourseLessonsSectionsPageLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonsSectionsPageLoading != null) {
@@ -6127,6 +7171,18 @@ class _$FetchCourseLessonsSectionsPageLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageLoading(this);
   }
@@ -6187,6 +7243,18 @@ class _$FetchCourseLessonsSectionsPageLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageLoading?.call(this);
   }
@@ -6247,6 +7315,18 @@ class _$FetchCourseLessonsSectionsPageLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonsSectionsPageLoading != null) {
@@ -6396,6 +7476,20 @@ class _$FetchCourseLessonsSectionsPageFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageFailure(networkException);
   }
@@ -6448,6 +7542,17 @@ class _$FetchCourseLessonsSectionsPageFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageFailure?.call(networkException);
   }
@@ -6500,6 +7605,17 @@ class _$FetchCourseLessonsSectionsPageFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonsSectionsPageFailure != null) {
@@ -6564,6 +7680,18 @@ class _$FetchCourseLessonsSectionsPageFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageFailure(this);
   }
@@ -6624,6 +7752,18 @@ class _$FetchCourseLessonsSectionsPageFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageFailure?.call(this);
   }
@@ -6684,6 +7824,18 @@ class _$FetchCourseLessonsSectionsPageFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonsSectionsPageFailure != null) {
@@ -6845,6 +7997,20 @@ class _$FetchCourseLessonsSectionsPageSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageSuccess(
         courseLessonsSectionsPage, message);
@@ -6898,6 +8064,17 @@ class _$FetchCourseLessonsSectionsPageSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageSuccess?.call(
         courseLessonsSectionsPage, message);
@@ -6951,6 +8128,17 @@ class _$FetchCourseLessonsSectionsPageSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonsSectionsPageSuccess != null) {
@@ -7016,6 +8204,18 @@ class _$FetchCourseLessonsSectionsPageSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageSuccess(this);
   }
@@ -7076,6 +8276,18 @@ class _$FetchCourseLessonsSectionsPageSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseLessonsSectionsPageSuccess?.call(this);
   }
@@ -7136,6 +8348,18 @@ class _$FetchCourseLessonsSectionsPageSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseLessonsSectionsPageSuccess != null) {
@@ -7251,6 +8475,20 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionLoading();
   }
@@ -7303,6 +8541,17 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionLoading?.call();
   }
@@ -7355,6 +8604,17 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (submitCourseLessonCompletionLoading != null) {
@@ -7419,6 +8679,18 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionLoading(this);
   }
@@ -7479,6 +8751,18 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionLoading?.call(this);
   }
@@ -7539,6 +8823,18 @@ class _$SubmitCourseLessonCompletionLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (submitCourseLessonCompletionLoading != null) {
@@ -7688,6 +8984,20 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionFailure(networkException);
   }
@@ -7740,6 +9050,17 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionFailure?.call(networkException);
   }
@@ -7792,6 +9113,17 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (submitCourseLessonCompletionFailure != null) {
@@ -7856,6 +9188,18 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionFailure(this);
   }
@@ -7916,6 +9260,18 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionFailure?.call(this);
   }
@@ -7976,6 +9332,18 @@ class _$SubmitCourseLessonCompletionFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (submitCourseLessonCompletionFailure != null) {
@@ -8117,6 +9485,20 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionSuccess(message);
   }
@@ -8169,6 +9551,17 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionSuccess?.call(message);
   }
@@ -8221,6 +9614,17 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (submitCourseLessonCompletionSuccess != null) {
@@ -8285,6 +9689,18 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionSuccess(this);
   }
@@ -8345,6 +9761,18 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return submitCourseLessonCompletionSuccess?.call(this);
   }
@@ -8405,6 +9833,18 @@ class _$SubmitCourseLessonCompletionSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (submitCourseLessonCompletionSuccess != null) {
@@ -8541,6 +9981,20 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return saveCourseLoading(courseId);
   }
@@ -8593,6 +10047,17 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return saveCourseLoading?.call(courseId);
   }
@@ -8645,6 +10110,17 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (saveCourseLoading != null) {
@@ -8709,6 +10185,18 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return saveCourseLoading(this);
   }
@@ -8769,6 +10257,18 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return saveCourseLoading?.call(this);
   }
@@ -8829,6 +10329,18 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (saveCourseLoading != null) {
@@ -8986,6 +10498,20 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return saveCourseFailure(networkException, courseId);
   }
@@ -9038,6 +10564,17 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return saveCourseFailure?.call(networkException, courseId);
   }
@@ -9090,6 +10627,17 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (saveCourseFailure != null) {
@@ -9154,6 +10702,18 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return saveCourseFailure(this);
   }
@@ -9214,6 +10774,18 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return saveCourseFailure?.call(this);
   }
@@ -9274,6 +10846,18 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (saveCourseFailure != null) {
@@ -9418,6 +11002,20 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return saveCourseSuccess(message, courseId);
   }
@@ -9470,6 +11068,17 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return saveCourseSuccess?.call(message, courseId);
   }
@@ -9522,6 +11131,17 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (saveCourseSuccess != null) {
@@ -9586,6 +11206,18 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return saveCourseSuccess(this);
   }
@@ -9646,6 +11278,18 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return saveCourseSuccess?.call(this);
   }
@@ -9706,6 +11350,18 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (saveCourseSuccess != null) {
@@ -9849,6 +11505,20 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return unsaveCourseSuccess(message, courseId);
   }
@@ -9901,6 +11571,17 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return unsaveCourseSuccess?.call(message, courseId);
   }
@@ -9953,6 +11634,17 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (unsaveCourseSuccess != null) {
@@ -10017,6 +11709,18 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return unsaveCourseSuccess(this);
   }
@@ -10077,6 +11781,18 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return unsaveCourseSuccess?.call(this);
   }
@@ -10137,6 +11853,18 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (unsaveCourseSuccess != null) {
@@ -10249,6 +11977,20 @@ class _$FetchCourseAnnouncementsSectionLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionLoading();
   }
@@ -10301,6 +12043,17 @@ class _$FetchCourseAnnouncementsSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionLoading?.call();
   }
@@ -10353,6 +12106,17 @@ class _$FetchCourseAnnouncementsSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAnnouncementsSectionLoading != null) {
@@ -10417,6 +12181,18 @@ class _$FetchCourseAnnouncementsSectionLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionLoading(this);
   }
@@ -10477,6 +12253,18 @@ class _$FetchCourseAnnouncementsSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionLoading?.call(this);
   }
@@ -10537,6 +12325,18 @@ class _$FetchCourseAnnouncementsSectionLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAnnouncementsSectionLoading != null) {
@@ -10687,6 +12487,20 @@ class _$FetchCourseAnnouncementsSectionFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionFailure(networkException);
   }
@@ -10739,6 +12553,17 @@ class _$FetchCourseAnnouncementsSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionFailure?.call(networkException);
   }
@@ -10791,6 +12616,17 @@ class _$FetchCourseAnnouncementsSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAnnouncementsSectionFailure != null) {
@@ -10855,6 +12691,18 @@ class _$FetchCourseAnnouncementsSectionFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionFailure(this);
   }
@@ -10915,6 +12763,18 @@ class _$FetchCourseAnnouncementsSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionFailure?.call(this);
   }
@@ -10975,6 +12835,18 @@ class _$FetchCourseAnnouncementsSectionFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAnnouncementsSectionFailure != null) {
@@ -11134,6 +13006,20 @@ class _$FetchCourseAnnouncementsSectionSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionSuccess(data, message);
   }
@@ -11186,6 +13072,17 @@ class _$FetchCourseAnnouncementsSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionSuccess?.call(data, message);
   }
@@ -11238,6 +13135,17 @@ class _$FetchCourseAnnouncementsSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAnnouncementsSectionSuccess != null) {
@@ -11302,6 +13210,18 @@ class _$FetchCourseAnnouncementsSectionSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionSuccess(this);
   }
@@ -11362,6 +13282,18 @@ class _$FetchCourseAnnouncementsSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseAnnouncementsSectionSuccess?.call(this);
   }
@@ -11422,6 +13354,18 @@ class _$FetchCourseAnnouncementsSectionSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseAnnouncementsSectionSuccess != null) {
@@ -11537,6 +13481,20 @@ class _$FetchCourseCertificateLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseCertificateLoading();
   }
@@ -11589,6 +13547,17 @@ class _$FetchCourseCertificateLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseCertificateLoading?.call();
   }
@@ -11641,6 +13610,17 @@ class _$FetchCourseCertificateLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseCertificateLoading != null) {
@@ -11705,6 +13685,18 @@ class _$FetchCourseCertificateLoadingImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseCertificateLoading(this);
   }
@@ -11765,6 +13757,18 @@ class _$FetchCourseCertificateLoadingImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseCertificateLoading?.call(this);
   }
@@ -11825,6 +13829,18 @@ class _$FetchCourseCertificateLoadingImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseCertificateLoading != null) {
@@ -11973,6 +13989,20 @@ class _$FetchCourseCertificateFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseCertificateFailure(networkException);
   }
@@ -12025,6 +14055,17 @@ class _$FetchCourseCertificateFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseCertificateFailure?.call(networkException);
   }
@@ -12077,6 +14118,17 @@ class _$FetchCourseCertificateFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseCertificateFailure != null) {
@@ -12141,6 +14193,18 @@ class _$FetchCourseCertificateFailureImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseCertificateFailure(this);
   }
@@ -12201,6 +14265,18 @@ class _$FetchCourseCertificateFailureImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseCertificateFailure?.call(this);
   }
@@ -12261,6 +14337,18 @@ class _$FetchCourseCertificateFailureImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseCertificateFailure != null) {
@@ -12419,6 +14507,20 @@ class _$FetchCourseCertificateSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(CertificateModel data, String? message)
         fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
   }) {
     return fetchCourseCertificateSuccess(data, message);
   }
@@ -12471,6 +14573,17 @@ class _$FetchCourseCertificateSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
   }) {
     return fetchCourseCertificateSuccess?.call(data, message);
   }
@@ -12523,6 +14636,17 @@ class _$FetchCourseCertificateSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(CertificateModel data, String? message)?
         fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseCertificateSuccess != null) {
@@ -12587,6 +14711,18 @@ class _$FetchCourseCertificateSuccessImpl
         fetchCourseCertificateFailure,
     required TResult Function(_FetchCourseCertificateSuccess value)
         fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
   }) {
     return fetchCourseCertificateSuccess(this);
   }
@@ -12647,6 +14783,18 @@ class _$FetchCourseCertificateSuccessImpl
         fetchCourseCertificateFailure,
     TResult? Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
   }) {
     return fetchCourseCertificateSuccess?.call(this);
   }
@@ -12707,6 +14855,18 @@ class _$FetchCourseCertificateSuccessImpl
         fetchCourseCertificateFailure,
     TResult Function(_FetchCourseCertificateSuccess value)?
         fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
     required TResult orElse(),
   }) {
     if (fetchCourseCertificateSuccess != null) {
@@ -12727,4 +14887,4448 @@ abstract class _FetchCourseCertificateSuccess implements CourseDetailsState {
   _$$FetchCourseCertificateSuccessImplCopyWith<
           _$FetchCourseCertificateSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchCourseCodeDetailsLoadingImplCopyWith<$Res> {
+  factory _$$FetchCourseCodeDetailsLoadingImplCopyWith(
+          _$FetchCourseCodeDetailsLoadingImpl value,
+          $Res Function(_$FetchCourseCodeDetailsLoadingImpl) then) =
+      __$$FetchCourseCodeDetailsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchCourseCodeDetailsLoadingImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res,
+        _$FetchCourseCodeDetailsLoadingImpl>
+    implements _$$FetchCourseCodeDetailsLoadingImplCopyWith<$Res> {
+  __$$FetchCourseCodeDetailsLoadingImplCopyWithImpl(
+      _$FetchCourseCodeDetailsLoadingImpl _value,
+      $Res Function(_$FetchCourseCodeDetailsLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FetchCourseCodeDetailsLoadingImpl
+    implements _FetchCourseCodeDetailsLoading {
+  const _$FetchCourseCodeDetailsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchCourseCodeDetailsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchCourseCodeDetailsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseCodeDetailsLoading != null) {
+      return fetchCourseCodeDetailsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseCodeDetailsLoading != null) {
+      return fetchCourseCodeDetailsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchCourseCodeDetailsLoading implements CourseDetailsState {
+  const factory _FetchCourseCodeDetailsLoading() =
+      _$FetchCourseCodeDetailsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchCourseCodeDetailsFailureImplCopyWith<$Res> {
+  factory _$$FetchCourseCodeDetailsFailureImplCopyWith(
+          _$FetchCourseCodeDetailsFailureImpl value,
+          $Res Function(_$FetchCourseCodeDetailsFailureImpl) then) =
+      __$$FetchCourseCodeDetailsFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$FetchCourseCodeDetailsFailureImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res,
+        _$FetchCourseCodeDetailsFailureImpl>
+    implements _$$FetchCourseCodeDetailsFailureImplCopyWith<$Res> {
+  __$$FetchCourseCodeDetailsFailureImplCopyWithImpl(
+      _$FetchCourseCodeDetailsFailureImpl _value,
+      $Res Function(_$FetchCourseCodeDetailsFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$FetchCourseCodeDetailsFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchCourseCodeDetailsFailureImpl
+    implements _FetchCourseCodeDetailsFailure {
+  const _$FetchCourseCodeDetailsFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchCourseCodeDetailsFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchCourseCodeDetailsFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchCourseCodeDetailsFailureImplCopyWith<
+          _$FetchCourseCodeDetailsFailureImpl>
+      get copyWith => __$$FetchCourseCodeDetailsFailureImplCopyWithImpl<
+          _$FetchCourseCodeDetailsFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseCodeDetailsFailure != null) {
+      return fetchCourseCodeDetailsFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseCodeDetailsFailure != null) {
+      return fetchCourseCodeDetailsFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchCourseCodeDetailsFailure implements CourseDetailsState {
+  const factory _FetchCourseCodeDetailsFailure(
+          final NetworkExceptions? networkException) =
+      _$FetchCourseCodeDetailsFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$FetchCourseCodeDetailsFailureImplCopyWith<
+          _$FetchCourseCodeDetailsFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchCourseCodeDetailsSuccessImplCopyWith<$Res> {
+  factory _$$FetchCourseCodeDetailsSuccessImplCopyWith(
+          _$FetchCourseCodeDetailsSuccessImpl value,
+          $Res Function(_$FetchCourseCodeDetailsSuccessImpl) then) =
+      __$$FetchCourseCodeDetailsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DiscountModel discount, String? message});
+
+  $DiscountModelCopyWith<$Res> get discount;
+}
+
+/// @nodoc
+class __$$FetchCourseCodeDetailsSuccessImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res,
+        _$FetchCourseCodeDetailsSuccessImpl>
+    implements _$$FetchCourseCodeDetailsSuccessImplCopyWith<$Res> {
+  __$$FetchCourseCodeDetailsSuccessImplCopyWithImpl(
+      _$FetchCourseCodeDetailsSuccessImpl _value,
+      $Res Function(_$FetchCourseCodeDetailsSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? discount = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$FetchCourseCodeDetailsSuccessImpl(
+      null == discount
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as DiscountModel,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DiscountModelCopyWith<$Res> get discount {
+    return $DiscountModelCopyWith<$Res>(_value.discount, (value) {
+      return _then(_value.copyWith(discount: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchCourseCodeDetailsSuccessImpl
+    implements _FetchCourseCodeDetailsSuccess {
+  const _$FetchCourseCodeDetailsSuccessImpl(this.discount, this.message);
+
+  @override
+  final DiscountModel discount;
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchCourseCodeDetailsSuccess(discount: $discount, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchCourseCodeDetailsSuccessImpl &&
+            (identical(other.discount, discount) ||
+                other.discount == discount) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, discount, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchCourseCodeDetailsSuccessImplCopyWith<
+          _$FetchCourseCodeDetailsSuccessImpl>
+      get copyWith => __$$FetchCourseCodeDetailsSuccessImplCopyWithImpl<
+          _$FetchCourseCodeDetailsSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsSuccess(discount, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsSuccess?.call(discount, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseCodeDetailsSuccess != null) {
+      return fetchCourseCodeDetailsSuccess(discount, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return fetchCourseCodeDetailsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchCourseCodeDetailsSuccess != null) {
+      return fetchCourseCodeDetailsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchCourseCodeDetailsSuccess implements CourseDetailsState {
+  const factory _FetchCourseCodeDetailsSuccess(
+          final DiscountModel discount, final String? message) =
+      _$FetchCourseCodeDetailsSuccessImpl;
+
+  DiscountModel get discount;
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$FetchCourseCodeDetailsSuccessImplCopyWith<
+          _$FetchCourseCodeDetailsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EnrollCourseLoadingImplCopyWith<$Res> {
+  factory _$$EnrollCourseLoadingImplCopyWith(_$EnrollCourseLoadingImpl value,
+          $Res Function(_$EnrollCourseLoadingImpl) then) =
+      __$$EnrollCourseLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EnrollCourseLoadingImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res, _$EnrollCourseLoadingImpl>
+    implements _$$EnrollCourseLoadingImplCopyWith<$Res> {
+  __$$EnrollCourseLoadingImplCopyWithImpl(_$EnrollCourseLoadingImpl _value,
+      $Res Function(_$EnrollCourseLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EnrollCourseLoadingImpl implements _EnrollCourseLoading {
+  const _$EnrollCourseLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.enrollCourseLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EnrollCourseLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return enrollCourseLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return enrollCourseLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (enrollCourseLoading != null) {
+      return enrollCourseLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return enrollCourseLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return enrollCourseLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (enrollCourseLoading != null) {
+      return enrollCourseLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EnrollCourseLoading implements CourseDetailsState {
+  const factory _EnrollCourseLoading() = _$EnrollCourseLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$EnrollCourseFailureImplCopyWith<$Res> {
+  factory _$$EnrollCourseFailureImplCopyWith(_$EnrollCourseFailureImpl value,
+          $Res Function(_$EnrollCourseFailureImpl) then) =
+      __$$EnrollCourseFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$EnrollCourseFailureImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res, _$EnrollCourseFailureImpl>
+    implements _$$EnrollCourseFailureImplCopyWith<$Res> {
+  __$$EnrollCourseFailureImplCopyWithImpl(_$EnrollCourseFailureImpl _value,
+      $Res Function(_$EnrollCourseFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$EnrollCourseFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$EnrollCourseFailureImpl implements _EnrollCourseFailure {
+  const _$EnrollCourseFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.enrollCourseFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EnrollCourseFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EnrollCourseFailureImplCopyWith<_$EnrollCourseFailureImpl> get copyWith =>
+      __$$EnrollCourseFailureImplCopyWithImpl<_$EnrollCourseFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return enrollCourseFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return enrollCourseFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (enrollCourseFailure != null) {
+      return enrollCourseFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return enrollCourseFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return enrollCourseFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (enrollCourseFailure != null) {
+      return enrollCourseFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EnrollCourseFailure implements CourseDetailsState {
+  const factory _EnrollCourseFailure(
+      final NetworkExceptions? networkException) = _$EnrollCourseFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$EnrollCourseFailureImplCopyWith<_$EnrollCourseFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EnrollCourseSuccessImplCopyWith<$Res> {
+  factory _$$EnrollCourseSuccessImplCopyWith(_$EnrollCourseSuccessImpl value,
+          $Res Function(_$EnrollCourseSuccessImpl) then) =
+      __$$EnrollCourseSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$EnrollCourseSuccessImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res, _$EnrollCourseSuccessImpl>
+    implements _$$EnrollCourseSuccessImplCopyWith<$Res> {
+  __$$EnrollCourseSuccessImplCopyWithImpl(_$EnrollCourseSuccessImpl _value,
+      $Res Function(_$EnrollCourseSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$EnrollCourseSuccessImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EnrollCourseSuccessImpl implements _EnrollCourseSuccess {
+  const _$EnrollCourseSuccessImpl(this.message);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.enrollCourseSuccess(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EnrollCourseSuccessImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EnrollCourseSuccessImplCopyWith<_$EnrollCourseSuccessImpl> get copyWith =>
+      __$$EnrollCourseSuccessImplCopyWithImpl<_$EnrollCourseSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return enrollCourseSuccess(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return enrollCourseSuccess?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (enrollCourseSuccess != null) {
+      return enrollCourseSuccess(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return enrollCourseSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return enrollCourseSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (enrollCourseSuccess != null) {
+      return enrollCourseSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EnrollCourseSuccess implements CourseDetailsState {
+  const factory _EnrollCourseSuccess(final String? message) =
+      _$EnrollCourseSuccessImpl;
+
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$EnrollCourseSuccessImplCopyWith<_$EnrollCourseSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchWalletLoadingImplCopyWith<$Res> {
+  factory _$$FetchWalletLoadingImplCopyWith(_$FetchWalletLoadingImpl value,
+          $Res Function(_$FetchWalletLoadingImpl) then) =
+      __$$FetchWalletLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchWalletLoadingImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res, _$FetchWalletLoadingImpl>
+    implements _$$FetchWalletLoadingImplCopyWith<$Res> {
+  __$$FetchWalletLoadingImplCopyWithImpl(_$FetchWalletLoadingImpl _value,
+      $Res Function(_$FetchWalletLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FetchWalletLoadingImpl implements _FetchWalletLoading {
+  const _$FetchWalletLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchWalletLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FetchWalletLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return fetchWalletLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return fetchWalletLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchWalletLoading != null) {
+      return fetchWalletLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return fetchWalletLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return fetchWalletLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchWalletLoading != null) {
+      return fetchWalletLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchWalletLoading implements CourseDetailsState {
+  const factory _FetchWalletLoading() = _$FetchWalletLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchWalletFailureImplCopyWith<$Res> {
+  factory _$$FetchWalletFailureImplCopyWith(_$FetchWalletFailureImpl value,
+          $Res Function(_$FetchWalletFailureImpl) then) =
+      __$$FetchWalletFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$FetchWalletFailureImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res, _$FetchWalletFailureImpl>
+    implements _$$FetchWalletFailureImplCopyWith<$Res> {
+  __$$FetchWalletFailureImplCopyWithImpl(_$FetchWalletFailureImpl _value,
+      $Res Function(_$FetchWalletFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$FetchWalletFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchWalletFailureImpl implements _FetchWalletFailure {
+  const _$FetchWalletFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchWalletFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchWalletFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchWalletFailureImplCopyWith<_$FetchWalletFailureImpl> get copyWith =>
+      __$$FetchWalletFailureImplCopyWithImpl<_$FetchWalletFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return fetchWalletFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return fetchWalletFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchWalletFailure != null) {
+      return fetchWalletFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return fetchWalletFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return fetchWalletFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchWalletFailure != null) {
+      return fetchWalletFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchWalletFailure implements CourseDetailsState {
+  const factory _FetchWalletFailure(final NetworkExceptions? networkException) =
+      _$FetchWalletFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$FetchWalletFailureImplCopyWith<_$FetchWalletFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchWalletSuccessImplCopyWith<$Res> {
+  factory _$$FetchWalletSuccessImplCopyWith(_$FetchWalletSuccessImpl value,
+          $Res Function(_$FetchWalletSuccessImpl) then) =
+      __$$FetchWalletSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({WalletModel wallet, String? message});
+
+  $WalletModelCopyWith<$Res> get wallet;
+}
+
+/// @nodoc
+class __$$FetchWalletSuccessImplCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res, _$FetchWalletSuccessImpl>
+    implements _$$FetchWalletSuccessImplCopyWith<$Res> {
+  __$$FetchWalletSuccessImplCopyWithImpl(_$FetchWalletSuccessImpl _value,
+      $Res Function(_$FetchWalletSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? wallet = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$FetchWalletSuccessImpl(
+      null == wallet
+          ? _value.wallet
+          : wallet // ignore: cast_nullable_to_non_nullable
+              as WalletModel,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WalletModelCopyWith<$Res> get wallet {
+    return $WalletModelCopyWith<$Res>(_value.wallet, (value) {
+      return _then(_value.copyWith(wallet: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchWalletSuccessImpl implements _FetchWalletSuccess {
+  const _$FetchWalletSuccessImpl(this.wallet, this.message);
+
+  @override
+  final WalletModel wallet;
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.fetchWalletSuccess(wallet: $wallet, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchWalletSuccessImpl &&
+            (identical(other.wallet, wallet) || other.wallet == wallet) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, wallet, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchWalletSuccessImplCopyWith<_$FetchWalletSuccessImpl> get copyWith =>
+      __$$FetchWalletSuccessImplCopyWithImpl<_$FetchWalletSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchCourseMainSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseMainSectionFailure,
+    required TResult Function(CourseMainSectionModel data, String? message)
+        fetchCourseMainSectionSuccess,
+    required TResult Function() fetchCourseAboutSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(CourseAboutSectionModel data, String? message)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function() loadingCourseLessonsSectionPagination,
+    required TResult Function(NetworkExceptions? networkException)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(String? message)
+        successCourseLessonsSectionPagination,
+    required TResult Function() fetchCourseLessonDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(CourseLessonModel data, String? message)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function() fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(
+            List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function() submitCourseLessonCompletionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(String? message)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(int courseId) saveCourseLoading,
+    required TResult Function(NetworkExceptions? networkException, int courseId)
+        saveCourseFailure,
+    required TResult Function(String? message, int courseId) saveCourseSuccess,
+    required TResult Function(String? message, int courseId)
+        unsaveCourseSuccess,
+    required TResult Function() fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(List<AnnouncementBoxModel> data, String? message)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function() fetchCourseCertificateLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCertificateFailure,
+    required TResult Function(CertificateModel data, String? message)
+        fetchCourseCertificateSuccess,
+    required TResult Function() fetchCourseCodeDetailsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(DiscountModel discount, String? message)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function() enrollCourseLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        enrollCourseFailure,
+    required TResult Function(String? message) enrollCourseSuccess,
+    required TResult Function() fetchWalletLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchWalletFailure,
+    required TResult Function(WalletModel wallet, String? message)
+        fetchWalletSuccess,
+  }) {
+    return fetchWalletSuccess(wallet, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchCourseMainSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function()? fetchCourseAboutSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function()? loadingCourseLessonsSectionPagination,
+    TResult? Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(String? message)? successCourseLessonsSectionPagination,
+    TResult? Function()? fetchCourseLessonDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function()? submitCourseLessonCompletionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult? Function(int courseId)? saveCourseLoading,
+    TResult? Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult? Function(String? message, int courseId)? saveCourseSuccess,
+    TResult? Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult? Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function()? fetchCourseCertificateLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult? Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult? Function()? fetchCourseCodeDetailsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function()? enrollCourseLoading,
+    TResult? Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult? Function(String? message)? enrollCourseSuccess,
+    TResult? Function()? fetchWalletLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult? Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+  }) {
+    return fetchWalletSuccess?.call(wallet, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchCourseMainSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseMainSectionFailure,
+    TResult Function(CourseMainSectionModel data, String? message)?
+        fetchCourseMainSectionSuccess,
+    TResult Function()? fetchCourseAboutSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(CourseAboutSectionModel data, String? message)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function()? loadingCourseLessonsSectionPagination,
+    TResult Function(NetworkExceptions? networkException)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(String? message)? successCourseLessonsSectionPagination,
+    TResult Function()? fetchCourseLessonDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(CourseLessonModel data, String? message)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function()? fetchCourseLessonsSectionsPageLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(List<LessonsSectionModel> courseLessonsSectionsPage,
+            String? message)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function()? submitCourseLessonCompletionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(String? message)? submitCourseLessonCompletionSuccess,
+    TResult Function(int courseId)? saveCourseLoading,
+    TResult Function(NetworkExceptions? networkException, int courseId)?
+        saveCourseFailure,
+    TResult Function(String? message, int courseId)? saveCourseSuccess,
+    TResult Function(String? message, int courseId)? unsaveCourseSuccess,
+    TResult Function()? fetchCourseAnnouncementsSectionLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(List<AnnouncementBoxModel> data, String? message)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function()? fetchCourseCertificateLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCertificateFailure,
+    TResult Function(CertificateModel data, String? message)?
+        fetchCourseCertificateSuccess,
+    TResult Function()? fetchCourseCodeDetailsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(DiscountModel discount, String? message)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function()? enrollCourseLoading,
+    TResult Function(NetworkExceptions? networkException)? enrollCourseFailure,
+    TResult Function(String? message)? enrollCourseSuccess,
+    TResult Function()? fetchWalletLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchWalletFailure,
+    TResult Function(WalletModel wallet, String? message)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchWalletSuccess != null) {
+      return fetchWalletSuccess(wallet, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FetchCourseMainSectionLoading value)
+        fetchCourseMainSectionLoading,
+    required TResult Function(_FetchCourseMainSectionFailure value)
+        fetchCourseMainSectionFailure,
+    required TResult Function(_FetchCourseMainSectionSuccess value)
+        fetchCourseMainSectionSuccess,
+    required TResult Function(_FetchCourseAboutSectionLoading value)
+        fetchCourseAboutSectionLoading,
+    required TResult Function(_FetchCourseAboutSectionFailure value)
+        fetchCourseAboutSectionFailure,
+    required TResult Function(_FetchCourseAboutSectionSuccess value)
+        fetchCourseAboutSectionSuccess,
+    required TResult Function(_LoadingCourseLessonsSectionPagination value)
+        loadingCourseLessonsSectionPagination,
+    required TResult Function(_FailureCourseLessonsSectionPagination value)
+        failureCourseLessonsSectionPagination,
+    required TResult Function(_SuccessCourseLessonsSectionPagination value)
+        successCourseLessonsSectionPagination,
+    required TResult Function(_FetchCourseLessonDetailsLoading value)
+        fetchCourseLessonDetailsLoading,
+    required TResult Function(_FetchCourseLessonDetailsFailure value)
+        fetchCourseLessonDetailsFailure,
+    required TResult Function(_FetchCourseLessonDetailsSuccess value)
+        fetchCourseLessonDetailsSuccess,
+    required TResult Function(_FetchCourseLessonsSectionsPageLoading value)
+        fetchCourseLessonsSectionsPageLoading,
+    required TResult Function(_FetchCourseLessonsSectionsPageFailure value)
+        fetchCourseLessonsSectionsPageFailure,
+    required TResult Function(_FetchCourseLessonsSectionsPageSuccess value)
+        fetchCourseLessonsSectionsPageSuccess,
+    required TResult Function(_SubmitCourseLessonCompletionLoading value)
+        submitCourseLessonCompletionLoading,
+    required TResult Function(_SubmitCourseLessonCompletionFailure value)
+        submitCourseLessonCompletionFailure,
+    required TResult Function(_SubmitCourseLessonCompletionSuccess value)
+        submitCourseLessonCompletionSuccess,
+    required TResult Function(_SaveCourseLoading value) saveCourseLoading,
+    required TResult Function(_SaveCourseFailure value) saveCourseFailure,
+    required TResult Function(_SaveCourseSuccess value) saveCourseSuccess,
+    required TResult Function(_UnsaveCourseSuccess value) unsaveCourseSuccess,
+    required TResult Function(_FetchCourseAnnouncementsSectionLoading value)
+        fetchCourseAnnouncementsSectionLoading,
+    required TResult Function(_FetchCourseAnnouncementsSectionFailure value)
+        fetchCourseAnnouncementsSectionFailure,
+    required TResult Function(_FetchCourseAnnouncementsSectionSuccess value)
+        fetchCourseAnnouncementsSectionSuccess,
+    required TResult Function(_FetchCourseCertificateLoading value)
+        fetchCourseCertificateLoading,
+    required TResult Function(_FetchCourseCertificateFailure value)
+        fetchCourseCertificateFailure,
+    required TResult Function(_FetchCourseCertificateSuccess value)
+        fetchCourseCertificateSuccess,
+    required TResult Function(_FetchCourseCodeDetailsLoading value)
+        fetchCourseCodeDetailsLoading,
+    required TResult Function(_FetchCourseCodeDetailsFailure value)
+        fetchCourseCodeDetailsFailure,
+    required TResult Function(_FetchCourseCodeDetailsSuccess value)
+        fetchCourseCodeDetailsSuccess,
+    required TResult Function(_EnrollCourseLoading value) enrollCourseLoading,
+    required TResult Function(_EnrollCourseFailure value) enrollCourseFailure,
+    required TResult Function(_EnrollCourseSuccess value) enrollCourseSuccess,
+    required TResult Function(_FetchWalletLoading value) fetchWalletLoading,
+    required TResult Function(_FetchWalletFailure value) fetchWalletFailure,
+    required TResult Function(_FetchWalletSuccess value) fetchWalletSuccess,
+  }) {
+    return fetchWalletSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult? Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult? Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult? Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult? Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult? Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult? Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult? Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult? Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult? Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult? Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult? Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult? Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult? Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult? Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult? Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult? Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult? Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult? Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult? Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult? Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult? Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult? Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult? Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult? Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult? Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult? Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult? Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult? Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult? Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult? Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult? Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult? Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult? Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult? Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult? Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult? Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+  }) {
+    return fetchWalletSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FetchCourseMainSectionLoading value)?
+        fetchCourseMainSectionLoading,
+    TResult Function(_FetchCourseMainSectionFailure value)?
+        fetchCourseMainSectionFailure,
+    TResult Function(_FetchCourseMainSectionSuccess value)?
+        fetchCourseMainSectionSuccess,
+    TResult Function(_FetchCourseAboutSectionLoading value)?
+        fetchCourseAboutSectionLoading,
+    TResult Function(_FetchCourseAboutSectionFailure value)?
+        fetchCourseAboutSectionFailure,
+    TResult Function(_FetchCourseAboutSectionSuccess value)?
+        fetchCourseAboutSectionSuccess,
+    TResult Function(_LoadingCourseLessonsSectionPagination value)?
+        loadingCourseLessonsSectionPagination,
+    TResult Function(_FailureCourseLessonsSectionPagination value)?
+        failureCourseLessonsSectionPagination,
+    TResult Function(_SuccessCourseLessonsSectionPagination value)?
+        successCourseLessonsSectionPagination,
+    TResult Function(_FetchCourseLessonDetailsLoading value)?
+        fetchCourseLessonDetailsLoading,
+    TResult Function(_FetchCourseLessonDetailsFailure value)?
+        fetchCourseLessonDetailsFailure,
+    TResult Function(_FetchCourseLessonDetailsSuccess value)?
+        fetchCourseLessonDetailsSuccess,
+    TResult Function(_FetchCourseLessonsSectionsPageLoading value)?
+        fetchCourseLessonsSectionsPageLoading,
+    TResult Function(_FetchCourseLessonsSectionsPageFailure value)?
+        fetchCourseLessonsSectionsPageFailure,
+    TResult Function(_FetchCourseLessonsSectionsPageSuccess value)?
+        fetchCourseLessonsSectionsPageSuccess,
+    TResult Function(_SubmitCourseLessonCompletionLoading value)?
+        submitCourseLessonCompletionLoading,
+    TResult Function(_SubmitCourseLessonCompletionFailure value)?
+        submitCourseLessonCompletionFailure,
+    TResult Function(_SubmitCourseLessonCompletionSuccess value)?
+        submitCourseLessonCompletionSuccess,
+    TResult Function(_SaveCourseLoading value)? saveCourseLoading,
+    TResult Function(_SaveCourseFailure value)? saveCourseFailure,
+    TResult Function(_SaveCourseSuccess value)? saveCourseSuccess,
+    TResult Function(_UnsaveCourseSuccess value)? unsaveCourseSuccess,
+    TResult Function(_FetchCourseAnnouncementsSectionLoading value)?
+        fetchCourseAnnouncementsSectionLoading,
+    TResult Function(_FetchCourseAnnouncementsSectionFailure value)?
+        fetchCourseAnnouncementsSectionFailure,
+    TResult Function(_FetchCourseAnnouncementsSectionSuccess value)?
+        fetchCourseAnnouncementsSectionSuccess,
+    TResult Function(_FetchCourseCertificateLoading value)?
+        fetchCourseCertificateLoading,
+    TResult Function(_FetchCourseCertificateFailure value)?
+        fetchCourseCertificateFailure,
+    TResult Function(_FetchCourseCertificateSuccess value)?
+        fetchCourseCertificateSuccess,
+    TResult Function(_FetchCourseCodeDetailsLoading value)?
+        fetchCourseCodeDetailsLoading,
+    TResult Function(_FetchCourseCodeDetailsFailure value)?
+        fetchCourseCodeDetailsFailure,
+    TResult Function(_FetchCourseCodeDetailsSuccess value)?
+        fetchCourseCodeDetailsSuccess,
+    TResult Function(_EnrollCourseLoading value)? enrollCourseLoading,
+    TResult Function(_EnrollCourseFailure value)? enrollCourseFailure,
+    TResult Function(_EnrollCourseSuccess value)? enrollCourseSuccess,
+    TResult Function(_FetchWalletLoading value)? fetchWalletLoading,
+    TResult Function(_FetchWalletFailure value)? fetchWalletFailure,
+    TResult Function(_FetchWalletSuccess value)? fetchWalletSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchWalletSuccess != null) {
+      return fetchWalletSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchWalletSuccess implements CourseDetailsState {
+  const factory _FetchWalletSuccess(
+          final WalletModel wallet, final String? message) =
+      _$FetchWalletSuccessImpl;
+
+  WalletModel get wallet;
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$FetchWalletSuccessImplCopyWith<_$FetchWalletSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

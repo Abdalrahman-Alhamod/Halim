@@ -20,14 +20,19 @@ part 'widgets/my_course_details_view/my_course_details_body.dart';
 part 'widgets/my_course_details_view/my_course_details_bottom_sheet.dart';
 
 class MyCourseDetailsView extends StatelessWidget {
-  const MyCourseDetailsView({super.key, required this.courseId, required this.isCompleted});
+  const MyCourseDetailsView({
+    super.key,
+    required this.courseId,
+    required this.isCompleted, required this.title,
+  });
   final int courseId;
+  final String title;
   final bool isCompleted;
   @override
   Widget build(BuildContext context) {
     context.read<CourseDetailsCubit>().courseId = courseId;
-    return  Scaffold(
-      appBar: const _MyCourseDetailsAppBar(),
+    return Scaffold(
+      appBar:  _MyCourseDetailsAppBar(title),
       body: _MyCourseDetailsBody(isCompleted),
       // bottomSheet: _MyCourseBottomSheet(),
     );

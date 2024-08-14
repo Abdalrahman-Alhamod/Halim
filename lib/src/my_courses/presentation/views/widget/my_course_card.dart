@@ -50,6 +50,7 @@ class _MyCourseCardState extends State<MyCourseCard> {
         extra: {
           NavKeys.myCourseId: widget.myCourseCardModel.id ?? -1,
           NavKeys.myCourseIsCompleted: lessonsCount == completedLessonsCount,
+          NavKeys.myCourseTitle: widget.myCourseCardModel.title ?? '',
         },
       ),
       child: Container(

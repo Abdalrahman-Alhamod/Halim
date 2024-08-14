@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../../../../../../core/utils/context_extensions.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import 'widgets/coupon_text_field.dart';
 
 import 'course_box/course_box.dart';
@@ -13,24 +14,26 @@ class EnrollCourseBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0),
-      child: SizedBox(
-        height: context.height - 200,
+    return BlocListener<CourseDetailsCubit, CourseDetailsState>(
+      listenWhen: context.read<CourseDetailsCubit>().listenEnrollCourseWhen,
+      listener: context.read<CourseDetailsCubit>().listenEnrollCourse,
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const CourseBox(),
-              const SizedBox(
+              CourseBox(),
+              SizedBox(
                 height: 20,
               ),
-              CouponTextField(
-                onApplyPressed: () {},
-              ),
-              const SizedBox(
+              CouponTextField(),
+              SizedBox(
                 height: 20,
               ),
-              const CourseEnrollCheckout(wallet: 550, price: 70, discount: 30),
+              CourseEnrollCheckout(),
+              SizedBox(
+                height: 130,
+              ),
             ],
           ),
         ),

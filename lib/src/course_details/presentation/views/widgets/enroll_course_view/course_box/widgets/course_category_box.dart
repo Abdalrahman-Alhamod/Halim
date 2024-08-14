@@ -2,9 +2,9 @@ part of '../course_box.dart';
 
 class CourseCategoryBox extends StatelessWidget {
   const CourseCategoryBox({
-    super.key,
+    super.key, required this.title,
   });
-
+ final String title;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +15,7 @@ class CourseCategoryBox extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 12),
         child: AutoSizeText(
-          LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+          title,
           style: const TextStyle(
             color: AppColors.primaryColor,
             fontWeight: FontWeight.w600,

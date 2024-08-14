@@ -228,7 +228,8 @@
       "notes": "ملاحظات",
       "playbackSpeed": "سرعة التشغيل",
       "subtitles": "الترجمات النصية"
-    }
+    },
+    "goToCourse": "اذهب إلى الدورة"
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور",

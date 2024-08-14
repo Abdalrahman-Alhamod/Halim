@@ -51,7 +51,7 @@ class MyCourseCertificateSection extends StatelessWidget {
                       Expanded(
                         child: SfPdfViewer.network(
                           certificateModel.url ?? AppTest.testPdfUrl,
-                          enableDoubleTapZooming: false,
+                          enableDoubleTapZooming: true,
                         ),
                       ),
                       const SizedBox(

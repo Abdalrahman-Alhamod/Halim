@@ -32,27 +32,28 @@ class _CourseIntroVideoState extends State<CourseIntroVideo> {
   }
 
   Widget _buildCoverImage(BuildContext context) {
+    CourseMainSectionModel courseMainSectionModel =
+        context.read<CourseDetailsCubit>().courseMainSection ??
+            const CourseMainSectionModel();
     return BlocBuilder<CourseDetailsCubit, CourseDetailsState>(
       buildWhen: context.read<CourseDetailsCubit>().buildCourseMainSectionWhen,
       builder: (context, state) {
-        final courseMainSectionModel =
-            context.read<CourseDetailsCubit>().courseMainSection;
-
-        if (courseMainSectionModel == null) {
-          return context.read<CourseDetailsCubit>().buildCourseVideoCover(
-                context: context,
-                state: state,
-                child: _buildCoverImageContent(context),
-              );
-        } else {
-          return _buildCoverImageContent(context, courseMainSectionModel);
-        }
+        state.whenOrNull(
+          fetchCourseMainSectionSuccess: (data, message) {
+            courseMainSectionModel = data;
+          },
+        );
+        return context.read<CourseDetailsCubit>().buildCourseVideoCover(
+              context: context,
+              state: state,
+              child: _buildCoverImageContent(context, courseMainSectionModel),
+            );
       },
     );
   }
 
-  Widget _buildCoverImageContent(BuildContext context,
-      [CourseMainSectionModel? model]) {
+  Widget _buildCoverImageContent(
+      BuildContext context, CourseMainSectionModel? model) {
     final imageUrl = model?.image ?? '';
     return Stack(
       children: [

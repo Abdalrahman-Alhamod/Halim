@@ -255,6 +255,8 @@ class AppRoute {
                 as Map<String, dynamic>)[NavKeys.myCourseId] as int,
             isCompleted: (GoRouterState.of(context).extra
                 as Map<String, dynamic>)[NavKeys.myCourseIsCompleted] as bool,
+            title: (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.myCourseTitle] as String,
           );
         },
       ),

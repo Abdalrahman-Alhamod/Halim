@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../../../core/utils/app_route.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
@@ -10,6 +11,8 @@ import '../../../../../../../core/themes/app_colors.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../../core/utils/navigation_extra_keys.dart';
 import '../../../../../../../core/widgets/custome_elevated_button.dart';
+import '../../../../../data/models/course_main_section_model.dart';
+import '../../../../manager/course_details_cubit/course_details_cubit.dart';
 
 class EnrollSuccessDialog extends StatelessWidget {
   const EnrollSuccessDialog({
@@ -65,11 +68,21 @@ class EnrollSuccessDialog extends StatelessWidget {
                 children: [
                   CustomElevatedButton(
                     onPressed: () {
-                      GoRouter.of(context).push(
+                      CourseMainSectionModel courseMainSectionModel = context
+                              .read<CourseDetailsCubit>()
+                              .courseMainSection ??
+                          const CourseMainSectionModel();
+                      bool isCompleted =
+                          courseMainSectionModel.completedLessons ==
+                              courseMainSectionModel.lessonsCount;
+                      int id = courseMainSectionModel.id ?? -1;
+                      context.read<CourseDetailsCubit>().getCourseMainSection();
+                      GoRouter.of(context).pushReplacement(
                         AppRoute.kMyCourseDetailsView,
                         extra: {
-                          NavKeys.myCourseId: -1,
-                          NavKeys.myCourseIsCompleted: false,
+                          NavKeys.myCourseId: id,
+                          NavKeys.myCourseIsCompleted: isCompleted,
+                          NavKeys.myCourseTitle:courseMainSectionModel.title??'',
                         },
                       );
                     },
@@ -81,7 +94,8 @@ class EnrollSuccessDialog extends StatelessWidget {
                   ),
                   CustomElevatedButton(
                     onPressed: () {
-                      GoRouter.of(context).push(AppRoute.kReceiptView);
+                      GoRouter.of(context)
+                          .pushReplacement(AppRoute.kReceiptView);
                     },
                     title: LocaleKeys.CourseDetails_Enroll_viewEReceipt.tr(),
                     elevation: 0,

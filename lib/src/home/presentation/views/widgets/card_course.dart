@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/helpers/string_helper.dart';
 import 'package:halim/src/shared/model/course_card_model.dart';
+import 'package:halim/src/shared/model/discount_model.dart';
 import '../../../../../core/assets/app_svgs.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/app_route.dart';
@@ -32,9 +33,13 @@ class CardCourse extends StatefulWidget {
 
 class _CardCourseState extends State<CardCourse> {
   late CourseCardModel courseCardModel;
+  late num price;
+  late DiscountModel? discount;
   @override
   void initState() {
     courseCardModel = widget.courseCardModel;
+    price = widget.courseCardModel.price ?? 0;
+    discount = widget.courseCardModel.discount;
     super.initState();
   }
 
@@ -185,13 +190,28 @@ class _CardCourseState extends State<CardCourse> {
                     Row(
                       children: [
                         Text(
-                          '\$${courseCardModel.price ?? 0}  ',
+                          '\$${discount != null ? StringHelper.getDiscount(price, discount!) : StringHelper.formatNum(price)}  ',
                           style: const TextStyle(
                             color: Colors.blue,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
+                        discount != null
+                            ? Text(
+                                '\$${StringHelper.formatNum(price)}',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: context.isDarkMode
+                                      ? Colors.grey.shade400
+                                      : Colors.grey.shade500,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.lineThrough,
+                                  decorationThickness:
+                                      context.isEnglish ? 2 : 10,
+                                ),
+                              )
+                            : const SizedBox(),
                       ],
                     ),
                     Row(

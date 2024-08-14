@@ -9,7 +9,12 @@ class StringHelper {
   }
 
   static String getDiscount(num price, DiscountModel discount) {
-    num result = price - price * (discount.value ?? 1);
+    num result = price - price * (discount.value ?? 0.0);
+    return formatNum(result);
+  }
+
+  static String getDiscountValue(num price, DiscountModel discount) {
+    num result = price * (discount.value ?? 0.0);
     return formatNum(result);
   }
 

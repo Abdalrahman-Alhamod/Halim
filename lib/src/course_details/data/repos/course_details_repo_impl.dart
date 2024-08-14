@@ -273,4 +273,64 @@ class CourseDetailsRepoImpl extends CourseDetailsRepo {
       );
     }
   }
+
+  @override
+  Future<ApiResponse<BaseModel>> getCourseCouponDetails({
+    required int courseId,
+    required String code,
+  }) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.getCourseCouponDetails(
+        courseId: courseId,
+        code: code,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> enrollCourse({
+    required int courseId,
+    required String code,
+    required String pin,
+  }) async {
+    try {
+      final response = await _courseDetailsRemoteDateSource.enrollCourse(
+          courseId: courseId, code: code, pin: pin);
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> getWallet() async {
+    try {
+      final response = await _courseDetailsRemoteDateSource.getWallet();
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
 }

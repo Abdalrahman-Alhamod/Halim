@@ -244,7 +244,8 @@ class CodegenLoader extends AssetLoader{
       "notes": "ملاحظات",
       "playbackSpeed": "سرعة التشغيل",
       "subtitles": "الترجمات النصية"
-    }
+    },
+    "goToCourse": "اذهب إلى الدورة"
   },
   "ForgotPassword": {
     "confirmPassword": "تأكيد كلمة المرور",
@@ -784,7 +785,8 @@ static const Map<String,dynamic> en = {
       "notes": "Notes",
       "playbackSpeed": "Playback speed",
       "subtitles": "Subtitles"
-    }
+    },
+    "goToCourse": "Go To Course"
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password",

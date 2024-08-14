@@ -24,6 +24,7 @@ class CourseMainSectionModel with _$CourseMainSectionModel {
     @JsonKey(name: 'is_saved') bool? isSaved,
     @JsonKey(name: 'is_enrolled') bool? isEnrolled,
     @JsonKey(name: 'lessons_count') int? lessonsCount,
+    @JsonKey(name: 'completed_lessons') int? completedLessons,
     @JsonKey(name: 'sections_count') int? sectionsCount,
     DiscountModel? discount,
   }) = _CourseMainSectionModel;

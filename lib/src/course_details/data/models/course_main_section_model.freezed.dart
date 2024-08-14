@@ -42,6 +42,8 @@ mixin _$CourseMainSectionModel {
   bool? get isEnrolled => throw _privateConstructorUsedError;
   @JsonKey(name: 'lessons_count')
   int? get lessonsCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'completed_lessons')
+  int? get completedLessons => throw _privateConstructorUsedError;
   @JsonKey(name: 'sections_count')
   int? get sectionsCount => throw _privateConstructorUsedError;
   DiscountModel? get discount => throw _privateConstructorUsedError;
@@ -73,6 +75,7 @@ abstract class $CourseMainSectionModelCopyWith<$Res> {
       @JsonKey(name: 'is_saved') bool? isSaved,
       @JsonKey(name: 'is_enrolled') bool? isEnrolled,
       @JsonKey(name: 'lessons_count') int? lessonsCount,
+      @JsonKey(name: 'completed_lessons') int? completedLessons,
       @JsonKey(name: 'sections_count') int? sectionsCount,
       DiscountModel? discount});
 
@@ -109,6 +112,7 @@ class _$CourseMainSectionModelCopyWithImpl<$Res,
     Object? isSaved = freezed,
     Object? isEnrolled = freezed,
     Object? lessonsCount = freezed,
+    Object? completedLessons = freezed,
     Object? sectionsCount = freezed,
     Object? discount = freezed,
   }) {
@@ -168,6 +172,10 @@ class _$CourseMainSectionModelCopyWithImpl<$Res,
       lessonsCount: freezed == lessonsCount
           ? _value.lessonsCount
           : lessonsCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      completedLessons: freezed == completedLessons
+          ? _value.completedLessons
+          : completedLessons // ignore: cast_nullable_to_non_nullable
               as int?,
       sectionsCount: freezed == sectionsCount
           ? _value.sectionsCount
@@ -241,6 +249,7 @@ abstract class _$$CourseMainSectionModelImplCopyWith<$Res>
       @JsonKey(name: 'is_saved') bool? isSaved,
       @JsonKey(name: 'is_enrolled') bool? isEnrolled,
       @JsonKey(name: 'lessons_count') int? lessonsCount,
+      @JsonKey(name: 'completed_lessons') int? completedLessons,
       @JsonKey(name: 'sections_count') int? sectionsCount,
       DiscountModel? discount});
 
@@ -279,6 +288,7 @@ class __$$CourseMainSectionModelImplCopyWithImpl<$Res>
     Object? isSaved = freezed,
     Object? isEnrolled = freezed,
     Object? lessonsCount = freezed,
+    Object? completedLessons = freezed,
     Object? sectionsCount = freezed,
     Object? discount = freezed,
   }) {
@@ -339,6 +349,10 @@ class __$$CourseMainSectionModelImplCopyWithImpl<$Res>
           ? _value.lessonsCount
           : lessonsCount // ignore: cast_nullable_to_non_nullable
               as int?,
+      completedLessons: freezed == completedLessons
+          ? _value.completedLessons
+          : completedLessons // ignore: cast_nullable_to_non_nullable
+              as int?,
       sectionsCount: freezed == sectionsCount
           ? _value.sectionsCount
           : sectionsCount // ignore: cast_nullable_to_non_nullable
@@ -371,6 +385,7 @@ class _$CourseMainSectionModelImpl
       @JsonKey(name: 'is_saved') this.isSaved,
       @JsonKey(name: 'is_enrolled') this.isEnrolled,
       @JsonKey(name: 'lessons_count') this.lessonsCount,
+      @JsonKey(name: 'completed_lessons') this.completedLessons,
       @JsonKey(name: 'sections_count') this.sectionsCount,
       this.discount});
 
@@ -413,6 +428,9 @@ class _$CourseMainSectionModelImpl
   @JsonKey(name: 'lessons_count')
   final int? lessonsCount;
   @override
+  @JsonKey(name: 'completed_lessons')
+  final int? completedLessons;
+  @override
   @JsonKey(name: 'sections_count')
   final int? sectionsCount;
   @override
@@ -420,7 +438,7 @@ class _$CourseMainSectionModelImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CourseMainSectionModel(id: $id, title: $title, image: $image, price: $price, intro: $intro, numberOfHours: $numberOfHours, subcategory: $subcategory, level: $level, enrollmentsCount: $enrollmentsCount, reviewsCount: $reviewsCount, reviewsAvg: $reviewsAvg, isSaved: $isSaved, isEnrolled: $isEnrolled, lessonsCount: $lessonsCount, sectionsCount: $sectionsCount, discount: $discount)';
+    return 'CourseMainSectionModel(id: $id, title: $title, image: $image, price: $price, intro: $intro, numberOfHours: $numberOfHours, subcategory: $subcategory, level: $level, enrollmentsCount: $enrollmentsCount, reviewsCount: $reviewsCount, reviewsAvg: $reviewsAvg, isSaved: $isSaved, isEnrolled: $isEnrolled, lessonsCount: $lessonsCount, completedLessons: $completedLessons, sectionsCount: $sectionsCount, discount: $discount)';
   }
 
   @override
@@ -442,6 +460,7 @@ class _$CourseMainSectionModelImpl
       ..add(DiagnosticsProperty('isSaved', isSaved))
       ..add(DiagnosticsProperty('isEnrolled', isEnrolled))
       ..add(DiagnosticsProperty('lessonsCount', lessonsCount))
+      ..add(DiagnosticsProperty('completedLessons', completedLessons))
       ..add(DiagnosticsProperty('sectionsCount', sectionsCount))
       ..add(DiagnosticsProperty('discount', discount));
   }
@@ -472,6 +491,8 @@ class _$CourseMainSectionModelImpl
                 other.isEnrolled == isEnrolled) &&
             (identical(other.lessonsCount, lessonsCount) ||
                 other.lessonsCount == lessonsCount) &&
+            (identical(other.completedLessons, completedLessons) ||
+                other.completedLessons == completedLessons) &&
             (identical(other.sectionsCount, sectionsCount) ||
                 other.sectionsCount == sectionsCount) &&
             (identical(other.discount, discount) ||
@@ -496,6 +517,7 @@ class _$CourseMainSectionModelImpl
       isSaved,
       isEnrolled,
       lessonsCount,
+      completedLessons,
       sectionsCount,
       discount);
 
@@ -530,6 +552,7 @@ abstract class _CourseMainSectionModel implements CourseMainSectionModel {
       @JsonKey(name: 'is_saved') final bool? isSaved,
       @JsonKey(name: 'is_enrolled') final bool? isEnrolled,
       @JsonKey(name: 'lessons_count') final int? lessonsCount,
+      @JsonKey(name: 'completed_lessons') final int? completedLessons,
       @JsonKey(name: 'sections_count') final int? sectionsCount,
       final DiscountModel? discount}) = _$CourseMainSectionModelImpl;
 
@@ -571,6 +594,9 @@ abstract class _CourseMainSectionModel implements CourseMainSectionModel {
   @override
   @JsonKey(name: 'lessons_count')
   int? get lessonsCount;
+  @override
+  @JsonKey(name: 'completed_lessons')
+  int? get completedLessons;
   @override
   @JsonKey(name: 'sections_count')
   int? get sectionsCount;

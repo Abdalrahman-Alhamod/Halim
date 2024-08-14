@@ -2,8 +2,8 @@ part of '../../my_course_details_view.dart';
 
 class _MyCourseDetailsAppBar extends StatelessWidget
     implements PreferredSizeWidget {
-  const _MyCourseDetailsAppBar();
-
+  const _MyCourseDetailsAppBar(this.title);
+  final String title;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -14,9 +14,9 @@ class _MyCourseDetailsAppBar extends StatelessWidget
       ),
       toolbarHeight: AppConstrains.maxAppBarHeight,
       title: AutoSizeText(
-        LocaleKeys.CourseDetails_Test_courseTitle.tr(),
+        title,
         style: const TextStyle(
-          fontSize: 24,
+          fontSize: 18,
           fontWeight: FontWeight.w600,
         ),
         maxLines: 1,

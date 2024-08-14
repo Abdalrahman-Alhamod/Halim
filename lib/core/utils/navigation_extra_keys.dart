@@ -6,5 +6,6 @@ abstract final class NavKeys {
   static const courseId = 'courseId';
   static const myCourseId = 'myCourseId';
   static const myCourseIsCompleted = 'myCourseIsCompleted';
+  static const myCourseTitle = 'myCourseTitle';
   static const mentorId = 'mentorId';
 }

@@ -7,14 +7,22 @@ class CourseBoxContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    CourseMainSectionModel courseMainSectionModel =
+        context.read<CourseDetailsCubit>().courseMainSection ??
+            const CourseMainSectionModel();
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Flexible(
-          flex: 1,
-          child: CourseImage(),
-        ),
-        SizedBox(
+            flex: 1,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: NetworkImageLoader(
+                width: double.infinity,
+                imageUrl: courseMainSectionModel.image ?? '',
+              ),
+            )),
+        const SizedBox(
           width: 10,
         ),
         Flexible(
@@ -23,23 +31,33 @@ class CourseBoxContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(
+              const Spacer(
                 flex: 1,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CourseCategoryBox(),
-                ],
+              CourseCategoryBox(
+                title: courseMainSectionModel.subcategory?.name ?? '',
               ),
-              Spacer(
+              const Spacer(
                 flex: 1,
               ),
-              CourseTitle(),
-              Spacer(
+              Flexible(
+                flex: 8,
+                child: AutoSizeText(
+                  courseMainSectionModel.title ?? '',
+                  style: const TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  maxLines: 2,
+                ),
+              ),
+              const Spacer(
                 flex: 1,
               ),
-              RatingWithStudents(),
+              RatingWithStudents(
+                ratingAvg: courseMainSectionModel.reviewsAvg ?? 0,
+                enrollmentsCount: courseMainSectionModel.enrollmentsCount ?? 0,
+              ),
             ],
           ),
         )

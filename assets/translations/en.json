@@ -228,7 +228,8 @@
       "notes": "Notes",
       "playbackSpeed": "Playback speed",
       "subtitles": "Subtitles"
-    }
+    },
+    "goToCourse": "Go To Course"
   },
   "ForgotPassword": {
     "confirmPassword": "Confirm Password",

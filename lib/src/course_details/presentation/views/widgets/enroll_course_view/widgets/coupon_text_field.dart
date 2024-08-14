@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../../../../core/assets/app_svgs.dart';
 import '../../../../../../../core/constants/app_constrains.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
@@ -11,9 +13,7 @@ import '../../../../../../../core/themes/app_colors.dart';
 class CouponTextField extends StatefulWidget {
   const CouponTextField({
     super.key,
-    required this.onApplyPressed,
   });
-  final void Function() onApplyPressed;
   @override
   State<CouponTextField> createState() => _CouponTextFieldState();
 }
@@ -28,6 +28,10 @@ class _CouponTextFieldState extends State<CouponTextField> {
     _focusNode = FocusNode();
     _focusNode.addListener(_onFocusChange);
     _controller = TextEditingController();
+    final code =
+        context.read<CourseDetailsCubit>().courseMainSection?.discount?.code ??
+            '';
+    _controller.text = code;
   }
 
   @override
@@ -79,7 +83,13 @@ class _CouponTextFieldState extends State<CouponTextField> {
         suffixIcon: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: TextButton(
-            onPressed: _controller.text.isEmpty ? null : widget.onApplyPressed,
+            onPressed: _controller.text.isEmpty
+                ? null
+                : () {
+                    context.read<CourseDetailsCubit>().discountCode =
+                        _controller.text;
+                    context.read<CourseDetailsCubit>().getCourseCodeDetails();
+                  },
             child: Text(
               LocaleKeys.Buttons_apply.tr(),
               style: const TextStyle(

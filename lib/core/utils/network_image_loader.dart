@@ -7,14 +7,14 @@ import '../widgets/shimmer_box.dart';
 class NetworkImageLoader extends StatelessWidget {
   const NetworkImageLoader({
     super.key,
-    this.imageUrl,
-    required this.width,
-    required this.height,
+    required this.imageUrl,
+    this.width,
+    this.height,
   });
 
   final String? imageUrl;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {

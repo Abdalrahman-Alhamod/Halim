@@ -85,4 +85,23 @@ class CourseDetailsState with _$CourseDetailsState {
       NetworkExceptions? networkException) = _FetchCourseCertificateFailure;
   const factory CourseDetailsState.fetchCourseCertificateSuccess(
       CertificateModel data, String? message) = _FetchCourseCertificateSuccess;
+
+  const factory CourseDetailsState.fetchCourseCodeDetailsLoading() =
+      _FetchCourseCodeDetailsLoading;
+  const factory CourseDetailsState.fetchCourseCodeDetailsFailure(
+      NetworkExceptions? networkException) = _FetchCourseCodeDetailsFailure;
+  const factory CourseDetailsState.fetchCourseCodeDetailsSuccess(
+      DiscountModel discount, String? message) = _FetchCourseCodeDetailsSuccess;
+
+  const factory CourseDetailsState.enrollCourseLoading() = _EnrollCourseLoading;
+  const factory CourseDetailsState.enrollCourseFailure(
+      NetworkExceptions? networkException) = _EnrollCourseFailure;
+  const factory CourseDetailsState.enrollCourseSuccess(String? message) =
+      _EnrollCourseSuccess;
+
+  const factory CourseDetailsState.fetchWalletLoading() = _FetchWalletLoading;
+  const factory CourseDetailsState.fetchWalletFailure(
+      NetworkExceptions? networkException) = _FetchWalletFailure;
+  const factory CourseDetailsState.fetchWalletSuccess(
+      WalletModel wallet, String? message) = _FetchWalletSuccess;
 }

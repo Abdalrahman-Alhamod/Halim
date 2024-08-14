@@ -62,7 +62,7 @@ abstract final class AppUrl {
   static const courseCardIncludes = "subcategory,enrollments-count,reviews-avg";
   static const mentorCardIncludes = "profile";
   static const courseMainSectionIncludes =
-      "subcategory,enrollments-count,reviews-avg,reviews-count,level,lessons-count,sections-count";
+      "subcategory,enrollments-count,reviews-avg,reviews-count,level,lessons-count,sections-count,completed-lessons-count";
   static const courseAboutSectionIncludes = "mentor,keywords,profile";
   static const courseLessonsSectionIncludes = "lessons,lessons-count,duration";
   static const mentorDetailsIncludes = "enrollments-number,profile";
@@ -97,6 +97,12 @@ abstract final class AppUrl {
 
   static const kCertificate = "certificates";
 
+  static const kCouponDetails = "discounts/details";
+  static const kCode = "code";
+
+  static const kEnroll = "enrollments";
+  static const kPIN = "PIN";
+
   ///<------------------------------------------------------------------------------
 
   static final categories = "${baseUrl}categories";
@@ -105,8 +111,8 @@ abstract final class AppUrl {
   ///<------------------------------------------------------------------------------
   static final student = "${baseUrl}students";
   static final courses = "${baseUrl}courses";
-
   static final mentors = "${baseUrl}mentors";
+static final wallet = "${baseUrl}wallets";
 
   ///<------------------------------------------------------------------------------
 

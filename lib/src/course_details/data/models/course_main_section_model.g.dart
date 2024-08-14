@@ -28,6 +28,7 @@ _$CourseMainSectionModelImpl _$$CourseMainSectionModelImplFromJson(
       isSaved: json['is_saved'] as bool?,
       isEnrolled: json['is_enrolled'] as bool?,
       lessonsCount: (json['lessons_count'] as num?)?.toInt(),
+      completedLessons: (json['completed_lessons'] as num?)?.toInt(),
       sectionsCount: (json['sections_count'] as num?)?.toInt(),
       discount: json['discount'] == null
           ? null
@@ -51,6 +52,7 @@ Map<String, dynamic> _$$CourseMainSectionModelImplToJson(
       'is_saved': instance.isSaved,
       'is_enrolled': instance.isEnrolled,
       'lessons_count': instance.lessonsCount,
+      'completed_lessons': instance.completedLessons,
       'sections_count': instance.sectionsCount,
       'discount': instance.discount,
     };
