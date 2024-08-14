@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:halim/src/shared/model/course_card_model.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 import '../../../../core/assets/app_images.dart';
@@ -20,154 +22,162 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return BlocBuilder<HomeCubit, HomeState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(
+              backgroundColor:
+                  context.isDarkMode ? AppColors.darkColor : Colors.white,
+              toolbarHeight: 90,
+              automaticallyImplyLeading: false,
+              title: const WelcomeCard()),
           backgroundColor:
               context.isDarkMode ? AppColors.darkColor : Colors.white,
-          toolbarHeight: 90,
-          automaticallyImplyLeading: false,
-          title: const WelcomeCard()),
-      backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const MotivationalCounterWidget(
-              points: 20,
-            ),
-            const CardAdvertisement(),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    LocaleKeys.HomePage_Home_topMentors.tr(),
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const Spacer(),
-                  InkWell(
-                    onTap: () {
-                      GoRouter.of(context).push(AppRoute.kTopMentors);
-                    },
-                    child: Text(
-                      LocaleKeys.HomePage_Home_seeAll.tr(),
-                      style: const TextStyle(
-                        fontSize: 14,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: SizedBox(
-                height: 100,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  physics: const ScrollPhysics(),
-                  children: const [
-                    TeacherAvatar(
-                        imageUrl: AppImages.testAvatarAlaa, name: 'Alaa'),
-                    TeacherAvatar(
-                        imageUrl: AppImages.testAvatarAbd,
-                        name: 'Abd Alrahman'),
-                    TeacherAvatar(
-                        imageUrl: AppImages.testAvatarObada, name: 'Obada'),
-                    TeacherAvatar(
-                        imageUrl: AppImages.testAvatarYassin, name: 'Yaseen'),
-                  ],
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                const MotivationalCounterWidget(
+                  points: 20,
                 ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    LocaleKeys.HomePage_Home_mostPopularCourses.tr(),
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const Spacer(),
-                  InkWell(
-                    onTap: () {
-                      GoRouter.of(context).push(AppRoute.kPopularCourses);
-                    },
-                    child: Text(
-                      LocaleKeys.HomePage_Home_seeAll.tr(),
-                      style: const TextStyle(
-                        fontSize: 14,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.w600,
+                const CardAdvertisement(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        LocaleKeys.HomePage_Home_topMentors.tr(),
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
-                    ),
+                      const Spacer(),
+                      InkWell(
+                        onTap: () {
+                          GoRouter.of(context).push(AppRoute.kTopMentors);
+                        },
+                        child: Text(
+                          LocaleKeys.HomePage_Home_seeAll.tr(),
+                          style: const TextStyle(
+                            fontSize: 14,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: SizedBox(
-                height: 40,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  physics: const ScrollPhysics(),
-                  children: const [
-                    // TODO fix subcategories list
-                    // CategoryWidget('🔥 All'),
-                    // CategoryWidget('📊 BA'),
-                    // CategoryWidget('💰 Business'),
-                    // CategoryWidget('💡 AI'),
-                    // CategoryWidget('🖋 3D Design'),
-                    // CategoryWidget('💊 Medicine '),
-                    // CategoryWidget('🧮 Mathematical analysis'),
-                  ],
                 ),
-              ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
-              child: ListView.separated(
-                itemCount: 10,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) {
-                  return CardCourse(
-                    courseCardModel: CourseCardModel(
-                      id: 0,
-                      title: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
-                      image: AppImages.testCourseCover,
-                      price: 48,
-                      subcategory: SubcategoryModel(
-                        id: 0,
-                        name: LocaleKeys.CourseDetails_Test_courseCategory.tr(),
-                      ),
-                      enrollmentsCount: 546,
-                      reviewsAvg: 4.8,
-                      isSaved: false,
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: SizedBox(
+                    height: 100,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      physics: const ScrollPhysics(),
+                      children: const [
+                        TeacherAvatar(
+                            imageUrl: AppImages.testAvatarAlaa, name: 'Alaa'),
+                        TeacherAvatar(
+                            imageUrl: AppImages.testAvatarAbd,
+                            name: 'Abd Alrahman'),
+                        TeacherAvatar(
+                            imageUrl: AppImages.testAvatarObada, name: 'Obada'),
+                        TeacherAvatar(
+                            imageUrl: AppImages.testAvatarYassin,
+                            name: 'Yaseen'),
+                      ],
                     ),
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return const SizedBox(
-                    height: 16,
-                  );
-                },
-              ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        LocaleKeys.HomePage_Home_mostPopularCourses.tr(),
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const Spacer(),
+                      InkWell(
+                        onTap: () {
+                          GoRouter.of(context).push(AppRoute.kPopularCourses);
+                        },
+                        child: Text(
+                          LocaleKeys.HomePage_Home_seeAll.tr(),
+                          style: const TextStyle(
+                            fontSize: 14,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: SizedBox(
+                    height: 40,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      physics: const ScrollPhysics(),
+                      children: const [
+                        // TODO fix subcategories list
+                        // CategoryWidget('🔥 All'),
+                        // CategoryWidget('📊 BA'),
+                        // CategoryWidget('💰 Business'),
+                        // CategoryWidget('💡 AI'),
+                        // CategoryWidget('🖋 3D Design'),
+                        // CategoryWidget('💊 Medicine '),
+                        // CategoryWidget('🧮 Mathematical analysis'),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+                  child: ListView.separated(
+                    itemCount: 10,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      return CardCourse(
+                        courseCardModel: CourseCardModel(
+                          id: 0,
+                          title:
+                              LocaleKeys.CourseDetails_Test_courseCategory.tr(),
+                          image: AppImages.testCourseCover,
+                          price: 48,
+                          subcategory: SubcategoryModel(
+                            id: 0,
+                            name: LocaleKeys.CourseDetails_Test_courseCategory
+                                .tr(),
+                          ),
+                          enrollmentsCount: 546,
+                          reviewsAvg: 4.8,
+                          isSaved: false,
+                        ),
+                      );
+                    },
+                    separatorBuilder: (context, index) {
+                      return const SizedBox(
+                        height: 16,
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

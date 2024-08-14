@@ -17,4 +17,10 @@ class HomeState with _$HomeState {
   const factory HomeState.fetchInfStudentSuccess(
           List<StudentProfileModel> data, String? message) =
       _FetchInfStudentSuccess;
+  const factory HomeState.fetchCoursesLoading() = _FetchCoursesLoading;
+  const factory HomeState.fetchCoursesFailure(
+      NetworkExceptions? networkException) = _FetchCoursesFailure;
+  const factory HomeState.fetchCoursesSuccess(
+          List<CourseCardModel> data, String? message) =
+      _FetchCoursesSuccess;
 }

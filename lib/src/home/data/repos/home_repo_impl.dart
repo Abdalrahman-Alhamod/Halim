@@ -42,4 +42,17 @@ class HomeRepoImpl extends HomeRepo {
       return ApiResponse.failure(NetworkExceptions.getException(error));
     }
   }
+
+  @override
+  Future<ApiResponse<BaseModel>> getAllCourses () async {
+    try {
+      final response = await _homeRemoteDateSource.getAllCourses();
+      return ApiResponse.success(response);
+    } catch (error) {
+      return ApiResponse.failure(NetworkExceptions.getException(error));
+    }
+  }
+
+
+
 }

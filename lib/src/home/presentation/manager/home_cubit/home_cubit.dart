@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:halim/src/home/data/models/student_profile_model.dart';
 import 'package:halim/src/home/domain/repos/home_repo.dart';
+import 'package:halim/src/shared/model/course_card_model.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
@@ -16,6 +17,8 @@ class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
 
   List<SubcategoryModel> subcategories = [];
+    List<CourseCardModel> courses = [];
+
   Future<void> getSubcategories({required int categoryId}) async {
     emit(
       const HomeState.fetchSubcategoriesLoading(),
@@ -67,4 +70,24 @@ class HomeCubit extends Cubit<HomeState> {
       },
     );
   }
+
+
+ Future<void> getAllCourses() async {
+    emit(const HomeState.fetchCoursesLoading());
+
+    final response = await _homeRepo.getAllCourses();
+
+    response.when(
+      success: (data) {
+        courses = List<CourseCardModel>.from(data.data.list);
+        emit(HomeState.fetchCoursesSuccess(courses, data.message));
+      },
+      failure: (networkExceptions) {
+        emit(HomeState.fetchCoursesFailure(networkExceptions));
+      },
+    );
+  }
 }
+
+
+

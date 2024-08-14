@@ -1,6 +1,7 @@
 // ignore_for_file: unused_field
 
 import 'package:halim/src/home/data/models/student_profile_model.dart';
+import 'package:halim/src/shared/model/course_card_model.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 
 import '../../../../core/data/model/base_model.dart';
@@ -24,6 +25,23 @@ class HomeRemoteDataSource {
       (json) => BaseModels.fromJson(
         json,
         (itemJson) => SubcategoryModel.fromJson(
+          itemJson,
+        ),
+      ),
+    );
+  }
+
+  Future<BaseModel> getAllCourses() async {
+    final response = await _apiServices.get(
+      AppUrl.courses,
+      hasToken: true,
+    );
+
+    return BaseModel<BaseModels>.fromJson(
+      response,
+      (json) => BaseModels.fromJson(
+        json,
+        (itemJson) => CourseCardModel.fromJson(
           itemJson,
         ),
       ),
