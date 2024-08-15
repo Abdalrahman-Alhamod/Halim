@@ -55,37 +55,35 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
         ),
       ),
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const ChooseYourSpecialtyWithCourses(),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
-              child: SizedBox(
-                height: 40,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  physics: const ScrollPhysics(),
-                  children: const [
-                    // TODO fix subcategories list
-                    // CategoryWidget('🔥 All'),
-                    // CategoryWidget('💡 AI'),
-                    // CategoryWidget('🖋 3D Design'),
-                    // CategoryWidget('💊 Medicine '),
-                    // CategoryWidget('🧮 Mathematical analysis'),
-                    // CategoryWidget('📊 BA'),
-                    // CategoryWidget('💰 Business'),
-                  ],
-                ),
+      body: Column(
+        children: [
+          const ChooseYourSpecialtyWithCourses(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
+            child: SizedBox(
+              height: 40,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                physics: const ScrollPhysics(),
+                children: const [
+                  // TODO fix subcategories list
+                  // CategoryWidget('🔥 All'),
+                  // CategoryWidget('💡 AI'),
+                  // CategoryWidget('🖋 3D Design'),
+                  // CategoryWidget('💊 Medicine '),
+                  // CategoryWidget('🧮 Mathematical analysis'),
+                  // CategoryWidget('📊 BA'),
+                  // CategoryWidget('💰 Business'),
+                ],
               ),
             ),
-            Padding(
+          ),
+          Expanded(
+            child: Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
               child: ListView.separated(
                 itemCount: 10,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return CardCourse(
                     courseCardModel: CourseCardModel(
@@ -110,8 +108,8 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
                 },
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

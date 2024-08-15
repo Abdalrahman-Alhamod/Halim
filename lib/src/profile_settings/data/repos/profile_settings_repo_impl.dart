@@ -14,7 +14,7 @@ class ProfileSettingsRepolmpl extends ProfileSettingsRepo {
   ProfileSettingsRepolmpl(this._profileSettingsLocalDataSource,
       this._profileSettingsRemoteDataSource);
 
-       @override
+  @override
   Future<ApiResponse<BaseModel>> getTransactions() async {
     try {
       final response = await _profileSettingsRemoteDataSource.getTransactions();

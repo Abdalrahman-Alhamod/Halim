@@ -5,6 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:halim/src/home/data/models/student_profile_model.dart';
 import 'package:halim/src/home/domain/repos/home_repo.dart';
 import 'package:halim/src/shared/model/course_card_model.dart';
+import 'package:halim/src/shared/model/mentor_card_model.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
@@ -17,7 +18,14 @@ class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
 
   List<SubcategoryModel> subcategories = [];
-    List<CourseCardModel> courses = [];
+  List<CourseCardModel> courses = [];
+  List<MentorCardModel> mentors = [];
+
+  int selectedCategoryIndex = 2;
+  void selectCategory(int index) {
+    selectedCategoryIndex = index;
+    emit(state); // Emit new state if necessary
+  }
 
   Future<void> getSubcategories({required int categoryId}) async {
     emit(
@@ -44,8 +52,7 @@ class HomeCubit extends Cubit<HomeState> {
     );
   }
 
-  // List<StudentModel> subcategories = [];
-  StudentProfileModel? _user;
+  StudentProfileModel? studentProfileModel;
   Future<void> getInfStudent({required int studentId}) async {
     emit(
       const HomeState.fetchInfStudentLoading(),
@@ -53,10 +60,10 @@ class HomeCubit extends Cubit<HomeState> {
     final response = await _homeRepo.getInfStudent(studentId);
     response.when(
       success: (data) {
-        _user = StudentProfileModel();
+        studentProfileModel = data.data;
         emit(
           HomeState.fetchInfStudentSuccess(
-            _user as List<StudentProfileModel>,
+            studentProfileModel!,
             data.message,
           ),
         );
@@ -71,11 +78,11 @@ class HomeCubit extends Cubit<HomeState> {
     );
   }
 
-
- Future<void> getAllCourses() async {
+  int subCategoryId = -1;
+  Future<void> getAllCourses() async {
     emit(const HomeState.fetchCoursesLoading());
 
-    final response = await _homeRepo.getAllCourses();
+    final response = await _homeRepo.getAllCourses(subCategoryId);
 
     response.when(
       success: (data) {
@@ -87,7 +94,20 @@ class HomeCubit extends Cubit<HomeState> {
       },
     );
   }
+
+  Future<void> getAllMentors() async {
+    emit(const HomeState.fetchMentorsLoading());
+
+    final response = await _homeRepo.getAllMentors();
+
+    response.when(
+      success: (data) {
+        emit(HomeState.fetchMentorsSuccess(
+            List<MentorCardModel>.from(data.data.list), data.message));
+      },
+      failure: (networkExceptions) {
+        emit(HomeState.fetchMentorsFailure(networkExceptions));
+      },
+    );
+  }
 }
-
-
-

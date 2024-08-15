@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:halim/core/widgets/custome_flat_button.dart';
+import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import '../../manager/account_setup_cubit/account_setup_cubit.dart';
@@ -107,26 +108,14 @@ class ChooseInterestsBottomSheet {
                         // Navigator.pop(context);
                         context.read<AccountSetupCubit>().student.interests =
                             selectedCategories
-                                .map((subcategory) => subcategory.id)
-                                .whereType<int>()
+                                .map((subcategory) => Interests(id: subcategory.id))
+                                .whereType<Interests>()
                                 .toList();
                         context
                             .read<AccountSetupCubit>()
                             .postInformationStudent();
-                        // List<int> selectedId = selectedCategories
-                        //     .map((subcategory) => subcategory.id)
-                        //     .whereType<int>()
-                        //     .toList();
-
-                        // context.read<AccountSetupCubit>().student = context
-                        //     .read<AccountSetupCubit>()
-                        //     .student
-                        //     .copyWith(interests: selectedId);
-
-                        // print(
-                        //     '+++++++++++++++++++++++++++++++++++${selectedId}');
-                        print(
-                            '**********************************${context.read<AccountSetupCubit>().student.interests}');
+                  
+                       
                       },
                       title: LocaleKeys.FillYourProfile_Interests_continue.tr(),
                       width: MediaQuery.of(context).size.width * 0.40,

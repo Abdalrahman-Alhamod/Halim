@@ -6,7 +6,7 @@ import 'package:halim/core/data/sources/remote/services/api_services.dart';
 import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
 
 class AccountSetupRemoteDataSource {
-  ApiServices _apiServices;
+  final ApiServices _apiServices;
   AccountSetupRemoteDataSource(this._apiServices);
   Future<BaseModel> postInformationStudent(
       StudentInfomationsModel student) async {
@@ -20,20 +20,16 @@ class AccountSetupRemoteDataSource {
       'PIN': student.pin ?? '',
       'gender': student.gender?.toLowerCase(),
       'email': student.email ?? '',
-      'interests': jsonEncode(student.interests),
-      'major': student.major ?? ''
+      'interests':jsonEncode( student.interests?.map((interest) => interest.id).toList()),
+      'major': student.major?.name ?? ''
     };
-    var jsonObject = {
-      'interests': student.interests,
-    };
-    String jsonString = jsonEncode(jsonObject);
-    print('${jsonString}');
     if (student.image != null) {
-      final imageName = student.image.split('/').last;
+      final imageName = student.image?.split('/').last;
       map.addEntries([
         MapEntry(
           'image',
-          await MultipartFile.fromFile(student.image, filename: imageName),
+          await MultipartFile.fromFile(student.image ?? '',
+              filename: imageName),
         )
       ]);
     }

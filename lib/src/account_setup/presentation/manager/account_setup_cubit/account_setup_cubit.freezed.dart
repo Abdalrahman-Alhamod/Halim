@@ -504,6 +504,8 @@ abstract class _$$SuccessImplCopyWith<$Res> {
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({StudentInfomationsModel data, String? message});
+
+  $StudentInfomationsModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -532,6 +534,16 @@ class __$$SuccessImplCopyWithImpl<$Res>
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+
+  /// Create a copy of AccountSetupState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $StudentInfomationsModelCopyWith<$Res> get data {
+    return $StudentInfomationsModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
   }
 }
 

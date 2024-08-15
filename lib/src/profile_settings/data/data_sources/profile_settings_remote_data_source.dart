@@ -11,7 +11,7 @@ class ProfileSettingsRemoteDataSource {
   final ApiServices _apiServices;
   ProfileSettingsRemoteDataSource(this._apiServices);
 
-   Future<BaseModel> getTransactions() async {
+  Future<BaseModel> getTransactions() async {
     final response = await _apiServices.get(
       AppUrl.transaction,
       hasToken: true,

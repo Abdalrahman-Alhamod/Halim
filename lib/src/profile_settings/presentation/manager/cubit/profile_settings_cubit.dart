@@ -9,7 +9,6 @@ import 'package:halim/core/widgets/toast_widget.dart';
 import 'package:halim/src/profile_settings/data/models/transaction_model.dart';
 import 'package:halim/src/profile_settings/domain/repos/profile_settings_repo.dart';
 
-
 part 'profile_settings_state.dart';
 part 'profile_settings_cubit.freezed.dart';
 
@@ -18,10 +17,8 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
       : super(const ProfileSettingsState.initial());
 
   final ProfileSettingsRepo _profileSettingsRepo;
-    List<TransactionModel> transactions = [];
+  List<TransactionModel> transactions = [];
 
-
-    
   Future<void> getTransactions() async {
     emit(
       const ProfileSettingsState.fetchTransactionsLoading(),
@@ -30,7 +27,7 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
     response.when(
       success: (data) {
         transactions = List<TransactionModel>.from(data.data.list);
-       // transactions.insert(0, getCategoryAll());
+        // transactions.insert(0, getCategoryAll());
         emit(
           ProfileSettingsState.fetchTransactionsSuccess(
             transactions,
@@ -47,7 +44,9 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
       },
     );
   }
-  bool buildTransactionWhen(ProfileSettingsState previous, ProfileSettingsState current) {
+
+  bool buildTransactionWhen(
+      ProfileSettingsState previous, ProfileSettingsState current) {
     if (current == previous) return false;
     return current.maybeWhen(
       fetchTransactionsLoading: () => true,
@@ -55,9 +54,8 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
       fetchTransactionsSuccess: (_, __) => true,
       orElse: () => false,
     );
-
-
   }
+
   Widget buildtransactions({
     required BuildContext context,
     required ProfileSettingsState state,
@@ -74,7 +72,8 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
         );
       },
       fetchTransactionsSuccess: (transaction, message) => child,
-      fetchTransactionsFailure: (message) => const ToastWidget(title: 'networkExceptions'),
+      fetchTransactionsFailure: (message) =>
+          const ToastWidget(title: 'networkExceptions'),
       orElse: () => const SizedBox(),
     );
   }

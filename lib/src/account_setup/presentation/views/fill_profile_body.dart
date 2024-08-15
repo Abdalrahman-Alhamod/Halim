@@ -179,7 +179,7 @@ class FillProfileBodyState extends State<FillProfileBody> {
         if (showSpecialtyRegister)
           ChooseYourSpecialtyWithRegister(
             onSpecialtySelected: (specialty) {
-              studentInfModel.major = specialty;
+              studentInfModel.major=Major(name: specialty);
 
               isCategorySelected = specialty.isNotEmpty;
               _checkFormValidity();
@@ -193,8 +193,7 @@ class FillProfileBodyState extends State<FillProfileBody> {
             onPressed: () {
               if (isFormValid) {
                 GoRouter.of(context).push(AppRoute.kCreatePin);
-                studentInfModel.id = 1061;
-                // studentInfModel.interests = [10, 11, 12];
+                studentInfModel.id = 1068;
 
                 context.read<AccountSetupCubit>().student = studentInfModel;
               }

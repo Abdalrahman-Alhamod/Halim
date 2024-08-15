@@ -1,15 +1,18 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/src/shared/model/mentor_card_model.dart';
 import '../../../../../core/utils/app_route.dart';
-import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/utils/navigation_extra_keys.dart';
+import '../../../../../core/widgets/avatar_image_loader.dart';
 
 class TeacherAvatar extends StatelessWidget {
-  final String imageUrl;
-  final String name;
-  final double rad;
-  const TeacherAvatar(
-      {super.key, required this.imageUrl, required this.name, this.rad = 35});
+  const TeacherAvatar({
+    super.key,
+    required this.mentorCardModel,
+  });
+
+  final MentorCardModel mentorCardModel;
 
   @override
   Widget build(BuildContext context) {
@@ -27,18 +30,19 @@ class TeacherAvatar extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              CircleAvatar(
-                radius: rad,
-                backgroundImage: AssetImage(imageUrl),
+              AvatarImageLoader(
+                imageUrl: mentorCardModel.image,
+                radius: 30,
               ),
               const SizedBox(height: 8),
-              Text(
-                name,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: context.isDarkMode ? Colors.white : Colors.black,
-                  fontWeight: FontWeight.w500,
+              AutoSizeText(
+                mentorCardModel.firstName ?? '',
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
                 ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
             ],
           ),

@@ -2,6 +2,7 @@
 
 import 'package:halim/src/home/data/models/student_profile_model.dart';
 import 'package:halim/src/shared/model/course_card_model.dart';
+import 'package:halim/src/shared/model/mentor_card_model.dart';
 import 'package:halim/src/shared/model/subcategory_model.dart';
 
 import '../../../../core/data/model/base_model.dart';
@@ -31,9 +32,16 @@ class HomeRemoteDataSource {
     );
   }
 
-  Future<BaseModel> getAllCourses() async {
+  Future<BaseModel> getAllCourses(int subCategoryId) async {
+    Map<String, String> queryParams = {
+      AppUrl.include: AppUrl.courseCardIncludes,
+    };
+    if (subCategoryId != -1) {
+      queryParams.addEntries([MapEntry(AppUrl.kSubcategories, subCategoryId.toString(),),],);
+    }
     final response = await _apiServices.get(
       AppUrl.courses,
+      queryParams: queryParams,
       hasToken: true,
     );
 
@@ -48,8 +56,26 @@ class HomeRemoteDataSource {
     );
   }
 
+  Future<BaseModel> getAllMentors() async {
+    final response = await _apiServices.get(
+      AppUrl.mentors,
+      hasToken: true,
+    );
+
+    return BaseModel<BaseModels>.fromJson(
+      response,
+      (json) => BaseModels.fromJson(
+        json,
+        (itemJson) => MentorCardModel.fromJson(
+          itemJson,
+        ),
+      ),
+    );
+  }
+
   Future<BaseModel> getInfStudent(int studentId) async {
-    final response = await _apiServices.get(AppUrl.student, hasToken: true);
+    final response =
+        await _apiServices.get("${AppUrl.student}/$studentId", hasToken: true);
     return BaseModel.fromJson(
         response, (json) => StudentProfileModel.fromJson(json));
   }

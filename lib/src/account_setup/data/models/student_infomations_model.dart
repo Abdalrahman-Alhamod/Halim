@@ -1,96 +1,47 @@
-class StudentInfomationsModel {
-  int? id;
-  int? pin;
-  String? firstName;
-  String? lastName;
-  String? email;
-  String? gender;
-  String? birthDate;
-  dynamic image;
-  String? phoneNumber;
-  String? educationLevel;
-  String? major;
-  List<int>? interests;
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/foundation.dart';
+part 'student_infomations_model.freezed.dart';
+part 'student_infomations_model.g.dart';
 
-  StudentInfomationsModel(
-      {this.id,
-      this.pin,
-      this.firstName,
-      this.lastName,
-      this.email,
-      this.gender,
-      this.birthDate,
-      this.image,
-      this.phoneNumber,
-      this.educationLevel,
-      this.major,
-      this.interests});
+@unfreezed
+class StudentInfomationsModel with _$StudentInfomationsModel {
+   factory StudentInfomationsModel({
+    @JsonKey(name: 'id') int? id,
+    @JsonKey(name: 'first_name') String? firstName,
+    @JsonKey(name: 'last_name') String? lastName,
+    @JsonKey(name: 'email') String? email,
+    @JsonKey(name: 'PIN') int? pin,
+    @JsonKey(name: 'gender') String? gender,
+    @JsonKey(name: 'birth_date') String? birthDate,
+    @JsonKey(name: 'image') String? image,
+    @JsonKey(name: 'phone_number') String? phoneNumber,
+    @JsonKey(name: 'education_level') String? educationLevel,
+    @JsonKey(name: 'major') Major? major,
+    @JsonKey(name: 'interests') List<Interests>? interests,
+    @JsonKey(name: 'points_balance') int? pointsBalance,
+  }) = _StudentInfomationsModel;
 
-  @override
-  String toString() {
-    return 'StudentInfomationsModel(id: $id,pin: $pin, firstName: $firstName, lastName: $lastName, email: $email, gender: $gender, birthDate: $birthDate, image: $image, phoneNumber: $phoneNumber, education_level: $educationLevel,major: $major,interests: $interests)';
-  }
+  factory StudentInfomationsModel.fromJson(Map<String, Object?> json) =>
+      _$StudentInfomationsModelFromJson(json);
+}
 
-  factory StudentInfomationsModel.fromJson(Map<String, dynamic> json) {
-    return StudentInfomationsModel(
-      id: json['id'] as int?,
-      pin: json['pin'] as int?,
-      firstName: json['first_name'] as String?,
-      lastName: json['last_name'] as String?,
-      email: json['email'] as String?,
-      gender: json['gender'] as String?,
-      birthDate: json['birth_date'] as String?,
-      image: json['image'] as String?,
-      phoneNumber: json['phone_number'] as String?,
-      educationLevel: json['education_level'] as String?,
-      major: json['major'] as String?,
-      interests:
-           (json['interests'] as List<int>?)?.map((e) => e).toList(),
-          // json['interests'] as List<int>?,
-    );
-  }
+@unfreezed
+class Major with _$Major {
+   factory Major({
+    @JsonKey(name: 'id') int? id,
+    @JsonKey(name: 'name') String? name,
+  }) = _Major;
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'PIN': pin,
-        'first_name': firstName,
-        'last_name': lastName,
-        'email': email,
-        'gender': gender,
-        'birth_date': birthDate,
-        'phone_number': phoneNumber,
-        'education_level': educationLevel,
-        'interests': interests,
-        'major': major
-      };
+  factory Major.fromJson(Map<String, Object?> json) => _$MajorFromJson(json);
+}
 
-  StudentInfomationsModel copyWith({
-    int? id,
-    int? pin,
-    String? firstName,
-    String? lastName,
-    String? email,
-    String? gender,
-    String? birthDate,
-    dynamic image,
-    String? phoneNumber,
-    String? educationLevel,
-    String? major,
-    List<int>? interests,
-  }) {
-    return StudentInfomationsModel(
-      id: id ?? this.id,
-      pin: pin ?? this.pin,
-      firstName: firstName ?? this.firstName,
-      lastName: lastName ?? this.lastName,
-      email: email ?? this.email,
-      gender: gender ?? this.gender,
-      birthDate: birthDate ?? this.birthDate,
-      image: image ?? this.image,
-      phoneNumber: phoneNumber ?? this.phoneNumber,
-      educationLevel: educationLevel ?? this.educationLevel,
-      major: major ?? this.major,
-      interests: interests ?? this.interests,
-    );
-  }
+@unfreezed
+class Interests with _$Interests {
+ factory Interests({
+    @JsonKey(name: 'id') int? id,
+    @JsonKey(name: 'name') String? name,
+  }) = _Interests;
+
+  factory Interests.fromJson(Map<String, Object?> json) =>
+      _$InterestsFromJson(json);
 }
