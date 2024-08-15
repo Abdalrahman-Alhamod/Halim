@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/navigation_extra_keys.dart';
 import 'package:halim/src/achievements/presentation/views/achievements_view.dart';
-import 'package:halim/src/achievements/presentation/views/store_view.dart';
+import 'package:halim/src/store/presentation/views/store_view.dart';
 import 'package:halim/src/course_details/presentation/views/course_quiz_view.dart';
 import 'package:halim/src/course_details/presentation/views/quiz_finish_view.dart';
 import 'package:halim/src/course_details/presentation/views/quiz_questions_view.dart';

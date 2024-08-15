@@ -53,6 +53,11 @@ import 'package:halim/src/search/data/repos/search_repo_impl.dart';
 import 'package:halim/src/search/domain/repos/search_repo.dart';
 import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
 import 'package:halim/src/search/presentation/manager/search_keywords_cubit/search_keywords_cubit.dart';
+import 'package:halim/src/store/data/data_sources/store_local_data_source.dart';
+import 'package:halim/src/store/data/data_sources/store_remote_data_source.dart';
+import 'package:halim/src/store/data/repos/store_repo_impl.dart';
+import 'package:halim/src/store/domain/repos/store_repo.dart';
+import 'package:halim/src/store/presentation/manager/store_cubit/store_cubit.dart';
 
 import '../../src/mentor_details/domain/repos/mentor_details_repo.dart';
 import '../data/sources/remote/services/api_services.dart';
@@ -168,6 +173,15 @@ void setupLocators() {
       locator.get<ApiServices>(),
     ),
   );
+  // Achievements
+  locator.registerLazySingleton<StoreLocalDataSource>(
+    () => StoreLocalDataSource(),
+  );
+  locator.registerLazySingleton<StoreRemoteDataSource>(
+    () => StoreRemoteDataSource(
+      locator.get<ApiServices>(),
+    ),
+  );
 
   /// Repositories
 
@@ -239,6 +253,13 @@ void setupLocators() {
     () => AchievementsRepoImpl(
       locator.get<AchievementsLocalDataSource>(),
       locator.get<AchievementsRemoteDataSource>(),
+    ),
+  );
+  // Achievements
+  locator.registerLazySingleton<StoreRepo>(
+    () => StoreRepoImpl(
+      locator.get<StoreLocalDataSource>(),
+      locator.get<StoreRemoteDataSource>(),
     ),
   );
 
@@ -314,6 +335,12 @@ void setupLocators() {
   locator.registerFactory<AchievementsCubit>(
     () => AchievementsCubit(
       locator.get<AchievementsRepo>(),
+    ),
+  );
+  // Store
+  locator.registerFactory<StoreCubit>(
+    () => StoreCubit(
+      locator.get<StoreRepo>(),
     ),
   );
 }

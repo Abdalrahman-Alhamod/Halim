@@ -1,18 +1,19 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../../core/utils/context_extensions.dart';
+import '../../../../../core/utils/context_extensions.dart';
 
-import '../../../../../../../core/functions/show_confirm_dialog.dart';
-import '../../../../../../../core/functions/show_custom_dialog.dart';
-import '../../../../../../../core/translations/locale_keys.g.dart';
-import '../../../../../../course_details/presentation/views/widgets/enroll_course_view/widgets/authenticate_using_dialog.dart';
+import '../../../../../core/functions/show_confirm_dialog.dart';
+import '../../../../../core/functions/show_custom_dialog.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../course_details/presentation/views/widgets/enroll_course_view/widgets/authenticate_using_dialog.dart';
 import 'show_purchase_success.dart';
 
-showProductPurchaseDialog({
+showCouponPurchaseDialog({
   required BuildContext context,
-  required String productName,
-  required int productPrice,
+  required String courseName,
+  required int discount,
+  required int couponPrice,
   required int totalPoints,
 }) {
   showConfirmDialog(
@@ -31,7 +32,7 @@ showProductPurchaseDialog({
             height: 10,
           ),
           Text(
-            LocaleKeys.Achievements_Store_Dialog_sureToPurchaseProduct.tr(),
+            LocaleKeys.Achievements_Store_Dialog_sureToPurchaseCoupon.tr(),
             textAlign: TextAlign.center,
           ),
           const SizedBox(
@@ -41,7 +42,7 @@ showProductPurchaseDialog({
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '${LocaleKeys.Achievements_Store_Dialog_productName.tr()}:',
+                '${LocaleKeys.Achievements_Store_Dialog_courseName.tr()}:',
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 18,
@@ -50,7 +51,7 @@ showProductPurchaseDialog({
               SizedBox(
                 width: context.width * 0.45,
                 child: AutoSizeText(
-                  productName,
+                  courseName,
                   textAlign: TextAlign.end,
                   maxLines: 2,
                   minFontSize: 8,
@@ -69,13 +70,35 @@ showProductPurchaseDialog({
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '${LocaleKeys.Achievements_Store_Dialog_productPrice.tr()}:',
+                '${LocaleKeys.Achievements_Store_Dialog_discount.tr()}:',
                 style: const TextStyle(
                   fontSize: 18,
                 ),
               ),
               Text(
-                '$productPrice ${LocaleKeys.Achievements_Store_point.tr()}',
+                '$discount%',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: context.isDarkMode ? Colors.yellow : Colors.orange,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '${LocaleKeys.Achievements_Store_Dialog_couponPrice.tr()}:',
+                style: const TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+              Text(
+                '$couponPrice ${LocaleKeys.Achievements_Store_point.tr()}',
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.green,
@@ -121,7 +144,8 @@ showProductPurchaseDialog({
           showPurchaseSuccess(
             context: context,
             message: LocaleKeys
-                .Achievements_Store_Dialog_getTheProductFromCenter.tr(),
+                    .Achievements_Store_Dialog_youWillRecieveCouponNotification
+                .tr(),
           );
         },
       ),

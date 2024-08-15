@@ -12,6 +12,7 @@ import 'package:halim/src/profile_settings/presentation/manager/cubit/profile_se
 import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
 import 'package:halim/src/search/presentation/manager/search_keywords_cubit/search_keywords_cubit.dart';
 
+import '../../src/store/presentation/manager/store_cubit/store_cubit.dart';
 import 'locator.dart';
 
 List<BlocProvider> initProviders() {
@@ -51,6 +52,9 @@ List<BlocProvider> initProviders() {
     ),
     BlocProvider<AchievementsCubit>(
       create: (context) => locator.get<AchievementsCubit>(),
+    ),
+    BlocProvider<StoreCubit>(
+      create: (context) => locator.get<StoreCubit>(),
     ),
   ];
 }

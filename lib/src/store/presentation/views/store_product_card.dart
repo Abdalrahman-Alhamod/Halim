@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../core/utils/context_extensions.dart';
+import '../../../../core/utils/context_extensions.dart';
 import 'functions/show_product_purchase_dialog.dart';
-import '../../../../../../core/themes/app_colors.dart';
-import '../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/themes/app_colors.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 
 class StoreProductCard extends StatelessWidget {
   const StoreProductCard(

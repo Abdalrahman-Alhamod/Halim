@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../../search/presentation/views/widgets/sortBy/widgets/data/sort_by_list_item.dart';
+import '../../../../../search/presentation/views/widgets/sortBy/widgets/data/sort_by_list_item.dart';
 
-import '../../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
 
 class FilterCouponsList extends StatefulWidget {
   const FilterCouponsList(

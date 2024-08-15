@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../core/translations/locale_keys.g.dart';
 import 'store_section_button.dart';
 
 class StoreSectionBar extends StatefulWidget {
