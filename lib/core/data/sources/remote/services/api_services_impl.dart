@@ -34,7 +34,7 @@ class ApiServicesImpl implements ApiServices {
           ? "Bearer ${(AppStorage.instance.readData(AppStorageKeys.TOKEN))}"
           : null,
       "Accept-Language":
-          AppStorage.instance.readData(AppStorageKeys.LANGUAGE_CODE) ?? 'ar',
+          AppStorage.instance.readData(AppStorageKeys.LANGUAGE_CODE) ?? 'en',
     };
   }
 

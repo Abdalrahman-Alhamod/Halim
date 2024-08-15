@@ -16,9 +16,9 @@ class AchievementsNumbers extends StatelessWidget {
     required this.contributions,
     required this.monthlyRate,
   });
-  final int rank;
+  final String rank;
   final int points;
-  final int totalHours;
+  final num totalHours;
   final int totalCourses;
   final int contributions;
   final num monthlyRate;

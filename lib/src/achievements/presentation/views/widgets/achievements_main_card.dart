@@ -72,41 +72,50 @@ class RankText extends StatelessWidget {
     super.key,
     required this.rank,
   });
-  final int rank;
+  final String rank;
   @override
   Widget build(BuildContext context) {
     double fontSize = 36;
     switch (rank) {
-      case 1:
+      case '1st':
         return Text(
-          '1st',
+          rank,
           style: TextStyle(
             fontSize: fontSize,
             color: Colors.yellow,
           ),
         );
 
-      case 2:
+      case '2nd':
         return Text(
-          '2nd',
+          rank,
           style: TextStyle(
             fontSize: fontSize,
             color: Colors.blueGrey,
           ),
         );
 
-      case 3:
+      case '3rd':
         return Text(
-          '3rd',
+          rank,
           style: TextStyle(
             fontSize: fontSize,
             color: Colors.brown,
           ),
         );
 
+      case 'unranked':
+        return Text(
+          ' - - ',
+          style: TextStyle(
+            fontSize: fontSize,
+            color: Colors.grey,
+          ),
+        );
+
       default:
         return Text(
-          '${rank}th',
+          rank,
           style: TextStyle(
             fontSize: fontSize,
             color: Colors.red,

@@ -1,27 +1,27 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/network_image_loader.dart';
+import 'package:halim/src/achievements/data/models/avatar_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
-import '../../../data/models/badge_model.dart';
 
-class TrackedBadge extends StatelessWidget {
-  const TrackedBadge({
+class AvatarProgressBar extends StatelessWidget {
+  const AvatarProgressBar({
     super.key,
-    required this.badgeModel,
+    required this.avatarModel,
   });
-  final BadgeModel badgeModel;
+  final AvatarModel avatarModel;
   @override
   Widget build(BuildContext context) {
-    int current = badgeModel.numberAchieved ?? 0;
-    int total = badgeModel.requiredNumber ?? 0;
+    int current = avatarModel.badgesAchieved ?? 0;
+    int total = avatarModel.badgesNeeded ?? 0;
     return Row(
       children: [
         NetworkImageLoader(
-          imageUrl: badgeModel.image,
+          imageUrl: avatarModel.image,
           width: 80,
         ),
         const SizedBox(
@@ -32,7 +32,7 @@ class TrackedBadge extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                badgeModel.name ?? '',
+                avatarModel.name ?? '',
                 style: const TextStyle(fontSize: 18),
               ),
               const SizedBox(

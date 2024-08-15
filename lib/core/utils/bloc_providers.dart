@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:halim/src/account_setup/presentation/manager/account_setup_cubit/account_setup_cubit.dart';
+import 'package:halim/src/achievements/presentation/manager/achievements_cubit/achievements_cubit.dart';
 import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:halim/src/chat/presentation/manager/chat_cubit/chat_cubit.dart';
 import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
@@ -47,6 +48,9 @@ List<BlocProvider> initProviders() {
     ),
     BlocProvider<ChatCubit>(
       create: (context) => locator.get<ChatCubit>(),
+    ),
+    BlocProvider<AchievementsCubit>(
+      create: (context) => locator.get<AchievementsCubit>(),
     ),
   ];
 }

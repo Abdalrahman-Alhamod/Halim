@@ -146,4 +146,16 @@ abstract final class AppUrl {
   static final chats = "${baseUrl}chats";
 
   ///<------------------------------------------------------------------------------
+
+  static final achievementsBoard = "${baseUrl}achievemtsboard";
+  static final achievementsSummery = "${baseUrl}summary";
+  static final badges = "${baseUrl}badges";
+  static const kType = "type";
+  static const kContributions = "contributions";
+  static const kFirstTime = "first_time";
+  static const kHours = "hours";
+  // static const kCourses = "courses";
+  static final avatars = "${baseUrl}avatars";
+
+  ///<------------------------------------------------------------------------------
 }

@@ -67,7 +67,7 @@ class ProfileStudentView extends StatelessWidget {
               ],
             ),
             AchievementsNumbers(
-              rank: Random().nextInt(20),
+              rank: '1st',
               points: Random().nextInt(1000),
               totalHours: 683,
               totalCourses: 7,

@@ -382,19 +382,8 @@ class CourseDetailsRemoteDataSource {
   }
 
   Future<BaseModel> getWallet() async {
-    // TODO remove query parameters
-    Map<String, String> queryParams = {};
-    queryParams.addEntries(
-      [
-        const MapEntry(
-          "student",
-          "1061",
-        ),
-      ],
-    );
     final response = await _apiServices.get(
       AppUrl.wallet,
-      queryParams: queryParams,
       hasToken: true,
     );
     return BaseModel.fromJson(

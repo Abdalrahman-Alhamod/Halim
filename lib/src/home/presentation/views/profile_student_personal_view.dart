@@ -1,4 +1,4 @@
-import 'dart:math';
+
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +87,7 @@ class ProfileStudentPersonalView extends StatelessWidget {
               ],
             ),
             AchievementsNumbers(
-              rank: Random().nextInt(20),
+              rank: '1st',
               points: studentModel.pointsBalance ?? 0,
               totalHours: 683,
               totalCourses: 7,

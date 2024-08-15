@@ -1,28 +1,26 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/widgets/avatar_image_loader.dart';
+import 'package:halim/src/achievements/data/models/avatar_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/assets/app_font.dart';
-import '../../../../../core/assets/app_images.dart';
 import '../../../../../core/themes/app_colors.dart';
-import '../../../../../core/translations/locale_keys.g.dart';
 
 class AchievementsAvatar extends StatelessWidget {
   const AchievementsAvatar({
     super.key,
+    required this.avatarModel,
   });
-
+  final AvatarModel avatarModel;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const CircleAvatar(
+        CircleAvatar(
           backgroundColor: AppColors.primaryColor,
           radius: 105,
-          child: CircleAvatar(
-            backgroundImage: AssetImage(
-              AppImages.testHalimAvatar,
-            ),
+          child: AvatarImageLoader(
+            imageUrl: avatarModel.image,
             radius: 100,
           ),
         ),
@@ -30,7 +28,7 @@ class AchievementsAvatar extends StatelessWidget {
           height: 10,
         ),
         Text(
-          LocaleKeys.Achievements_Test_halim.tr(),
+          avatarModel.name ?? '',
           style: TextStyle(
             fontSize: 28,
             fontFamily: context.isEnglish ? AppFonts.satisfy : AppFonts.zahey,

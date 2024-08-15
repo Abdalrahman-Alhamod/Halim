@@ -13,7 +13,7 @@ class AchievementsNumbersListTile extends StatelessWidget {
     required this.svgPath,
   });
   final String title;
-  final num value;
+  final num? value;
   final String svgPath;
   @override
   Widget build(BuildContext context) {
@@ -31,10 +31,15 @@ class AchievementsNumbersListTile extends StatelessWidget {
                 ? Colors.grey.shade400
                 : Colors.grey.shade700),
       ),
-      subtitle: AnimatedCounter(
-        value: value,
-        duration: const Duration(milliseconds: 700),
-      ),
+      subtitle: value != null
+          ? AnimatedCounter(
+              value: value!,
+              duration: const Duration(milliseconds: 700),
+            )
+          : const Text(
+              ' - - ',
+              style: TextStyle(fontSize: 28),
+            ),
     );
   }
 }

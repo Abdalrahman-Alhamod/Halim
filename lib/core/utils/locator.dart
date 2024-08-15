@@ -7,6 +7,11 @@ import 'package:halim/src/account_setup/data/data_sources/account_setup_remote_d
 import 'package:halim/src/account_setup/data/repos/account_setup_impl.dart';
 import 'package:halim/src/account_setup/domain/repos/account_setup_repo.dart';
 import 'package:halim/src/account_setup/presentation/manager/account_setup_cubit/account_setup_cubit.dart';
+import 'package:halim/src/achievements/data/data_sources/achievements_local_data_source.dart';
+import 'package:halim/src/achievements/data/data_sources/achievements_remote_data_source.dart';
+import 'package:halim/src/achievements/data/repos/achievements_repo_impl.dart';
+import 'package:halim/src/achievements/domain/repos/achievements_repo.dart';
+import 'package:halim/src/achievements/presentation/manager/achievements_cubit/achievements_cubit.dart';
 import 'package:halim/src/auth/data/data_sources/auth_local_data_source.dart';
 import 'package:halim/src/auth/data/data_sources/auth_remote_data_source.dart';
 import 'package:halim/src/auth/data/repos/auth_repo_impl.dart';
@@ -154,6 +159,15 @@ void setupLocators() {
       locator.get<WebSocketServices>(),
     ),
   );
+  // Achievements
+  locator.registerLazySingleton<AchievementsLocalDataSource>(
+    () => AchievementsLocalDataSource(),
+  );
+  locator.registerLazySingleton<AchievementsRemoteDataSource>(
+    () => AchievementsRemoteDataSource(
+      locator.get<ApiServices>(),
+    ),
+  );
 
   /// Repositories
 
@@ -220,6 +234,13 @@ void setupLocators() {
       locator.get<ChatRemoteDataSource>(),
     ),
   );
+  // Achievements
+  locator.registerLazySingleton<AchievementsRepo>(
+    () => AchievementsRepoImpl(
+      locator.get<AchievementsLocalDataSource>(),
+      locator.get<AchievementsRemoteDataSource>(),
+    ),
+  );
 
   ///** Factory **///
 
@@ -283,10 +304,16 @@ void setupLocators() {
       locator.get<MyCoursesRepo>(),
     ),
   );
-  // My Courses
+  // Chat
   locator.registerFactory<ChatCubit>(
     () => ChatCubit(
       locator.get<ChatRepo>(),
+    ),
+  );
+  // Achievements
+  locator.registerFactory<AchievementsCubit>(
+    () => AchievementsCubit(
+      locator.get<AchievementsRepo>(),
     ),
   );
 }
