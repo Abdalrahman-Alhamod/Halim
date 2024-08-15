@@ -1,12 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/context_extensions.dart';
+import '../../../../../../core/utils/context_extensions.dart';
 
-import '../../../../../core/functions/show_confirm_dialog.dart';
-import '../../../../../core/functions/show_custom_dialog.dart';
-import '../../../../../core/translations/locale_keys.g.dart';
-import '../../../../course_details/presentation/views/widgets/enroll_course_view/widgets/authenticate_using_dialog.dart';
+import '../../../../../../core/functions/show_confirm_dialog.dart';
+import '../../../../../../core/functions/show_custom_dialog.dart';
+import '../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../course_details/presentation/views/widgets/enroll_course_view/widgets/authenticate_using_dialog.dart';
 import 'show_purchase_success.dart';
 
 showCouponPurchaseDialog({

@@ -1,12 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/translations/locale_keys.g.dart';
-import '../../../../core/utils/context_extensions.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/utils/context_extensions.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'functions/show_coupon_purchase_dialog.dart';
-import '../../../../core/themes/app_colors.dart';
+import '../../../../../core/themes/app_colors.dart';
 import 'helpers/coupon_clipper.dart';
 
 class CourseCoupon extends StatelessWidget {

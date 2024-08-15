@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/translations/locale_keys.g.dart';
-import 'store_app_bar.dart';
-import 'store_sections_bar.dart';
+import 'widgets/store_app_bar.dart';
+import 'widgets/store_sections_bar.dart';
 
-import 'coupons_section.dart';
-import 'products_section.dart';
+import 'widgets/coupons_section.dart';
+import 'widgets/products_section.dart';
 
 class StoreView extends StatefulWidget {
   const StoreView({super.key});

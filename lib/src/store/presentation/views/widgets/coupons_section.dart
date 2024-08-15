@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'functions/show_filter_coupons_bottomsheet.dart';
 
-import '../../../../core/assets/app_images.dart';
-import '../../../../core/assets/app_svgs.dart';
-import '../../../../core/translations/locale_keys.g.dart';
+import '../../../../../core/assets/app_images.dart';
+import '../../../../../core/assets/app_svgs.dart';
+import '../../../../../core/translations/locale_keys.g.dart';
 import 'course_coupon.dart';
 
 class CouponsSection extends StatelessWidget {
