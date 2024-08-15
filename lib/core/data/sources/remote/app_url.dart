@@ -10,6 +10,15 @@ abstract final class AppUrl {
 
   ///<------------------------------------------------------------------------------
 
+  static final baseWebsocket =
+      dotenv.env['WebSocket_URL'] ?? 'ws://127.0.0.1:6001/';
+  static const kEvent = "event";
+  static const kPusherConnectionEstablished = 'pusher:connection_established';
+  static const kPusherInternalSubscriptionSucceeded =
+      'pusher_internal:subscription_succeeded';
+
+  ///<------------------------------------------------------------------------------
+
   static const testUrl = "https://reqres.in/api/users/2";
   static const testEmptyUrl = "https://reqres.in/api/users/23";
 
@@ -112,7 +121,7 @@ abstract final class AppUrl {
   static final student = "${baseUrl}students";
   static final courses = "${baseUrl}courses";
   static final mentors = "${baseUrl}mentors";
-static final wallet = "${baseUrl}wallets";
+  static final wallet = "${baseUrl}wallets";
 
   ///<------------------------------------------------------------------------------
 
@@ -120,6 +129,21 @@ static final wallet = "${baseUrl}wallets";
   static const kState = "state";
   static const kOngoing = "ongoing";
   static const kCompleted = "completed";
+
+  ///<------------------------------------------------------------------------------
+
+  static final chatWebsocket = "${baseWebsocket}app/local";
+  static final chatBroadcastToken = '${auth}broadcasting/token';
+  static const kChannelName = "channel_name";
+  static const kPrivateChatTo = "private-chats-to";
+  static const kSocketId = "socket_id";
+  static const kEventMessageSent = "App\\Events\\MessageSent";
+  static const kData = "data";
+  static const kMessage = "message";
+  static final messages = "${baseUrl}messages";
+  static const kMessages = "messages";
+  static const kTo = "to";
+  static final chats = "${baseUrl}chats";
 
   ///<------------------------------------------------------------------------------
 }

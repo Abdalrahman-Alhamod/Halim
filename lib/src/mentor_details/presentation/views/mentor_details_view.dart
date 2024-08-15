@@ -10,7 +10,6 @@ class MentorDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     context.read<MentorDetailsCubit>().mentorId = mentorId;
-    context.read<MentorDetailsCubit>().getMentorDetails();
     return const Scaffold(
       appBar: MentorDetailsAppBar(),
       body: MentorDetailsBody(),

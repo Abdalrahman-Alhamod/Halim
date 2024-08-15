@@ -8,4 +8,7 @@ abstract final class NavKeys {
   static const myCourseIsCompleted = 'myCourseIsCompleted';
   static const myCourseTitle = 'myCourseTitle';
   static const mentorId = 'mentorId';
+  static const chatRecieverName = 'chatRecieverName';
+  static const chatRecieverId = 'chatRecieverId';
+  static const chatSenderId = 'chatSenderId';
 }

@@ -90,4 +90,5 @@ abstract final class PrintTitles {
   PrintTitles._();
   static const blocObserver = 'Bloc Observer';
   static const dioInterceptors = 'Dio Interceptors';
+  static const websocketServices = 'WebSocket Services';
 }

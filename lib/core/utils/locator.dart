@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:halim/core/data/sources/remote/services/web_socket_service.dart';
+import 'package:halim/core/data/sources/remote/services/web_socket_service_impl.dart';
 import 'package:halim/src/account_setup/data/data_sources/account_setup_local_data_source.dart';
 import 'package:halim/src/account_setup/data/data_sources/account_setup_remote_data_source.dart';
 import 'package:halim/src/account_setup/data/repos/account_setup_impl.dart';
@@ -10,6 +12,11 @@ import 'package:halim/src/auth/data/data_sources/auth_remote_data_source.dart';
 import 'package:halim/src/auth/data/repos/auth_repo_impl.dart';
 import 'package:halim/src/auth/domain/repos/auth_repo.dart';
 import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import 'package:halim/src/chat/data/data_sources/chat_local_data_source.dart';
+import 'package:halim/src/chat/data/data_sources/chat_remote_data_source.dart';
+import 'package:halim/src/chat/data/repos/chat_repo_impl.dart';
+import 'package:halim/src/chat/domain/repos/chat_repo.dart';
+import 'package:halim/src/chat/presentation/manager/chat_cubit/chat_cubit.dart';
 import 'package:halim/src/course_details/data/data_sources/course_details_local_data_source.dart';
 import 'package:halim/src/course_details/data/data_sources/course_details_remote_data_source.dart';
 import 'package:halim/src/course_details/data/repos/course_details_repo_impl.dart';
@@ -58,6 +65,9 @@ void setupLocators() {
     () => ApiServicesImpl(
       locator.get<Dio>(),
     ),
+  );
+  locator.registerLazySingleton<WebSocketServices>(
+    () => WebSocketServicesImpl(),
   );
 
   /// Data Sources
@@ -134,6 +144,16 @@ void setupLocators() {
       locator.get<ApiServices>(),
     ),
   );
+  // Chat
+  locator.registerLazySingleton<ChatLocalDataSource>(
+    () => ChatLocalDataSource(),
+  );
+  locator.registerLazySingleton<ChatRemoteDataSource>(
+    () => ChatRemoteDataSource(
+      locator.get<ApiServices>(),
+      locator.get<WebSocketServices>(),
+    ),
+  );
 
   /// Repositories
 
@@ -191,6 +211,13 @@ void setupLocators() {
     () => MyCoursesRepoImpl(
       locator.get<MyCoursesLocalDataSource>(),
       locator.get<MyCoursesRemoteDataSource>(),
+    ),
+  );
+  // Chat
+  locator.registerLazySingleton<ChatRepo>(
+    () => ChatRepoImpl(
+      locator.get<ChatLocalDataSource>(),
+      locator.get<ChatRemoteDataSource>(),
     ),
   );
 
@@ -254,6 +281,12 @@ void setupLocators() {
   locator.registerFactory<MyCoursesCubit>(
     () => MyCoursesCubit(
       locator.get<MyCoursesRepo>(),
+    ),
+  );
+  // My Courses
+  locator.registerFactory<ChatCubit>(
+    () => ChatCubit(
+      locator.get<ChatRepo>(),
     ),
   );
 }

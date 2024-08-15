@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/constants/app_constrains.dart';
 import '../../../../../core/widgets/back_arrow_icon.dart';
+import '../../manager/chat_cubit/chat_cubit.dart';
 
 class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ChatAppBar({super.key, required this.chatWithName});
@@ -12,6 +14,7 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading: BackArrowIcon(
         onPressed: () {
+          context.read<ChatCubit>().disconnectFromChatSocket();
           GoRouter.of(context).pop();
         },
       ),

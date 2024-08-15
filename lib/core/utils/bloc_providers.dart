@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:halim/src/account_setup/presentation/manager/account_setup_cubit/account_setup_cubit.dart';
 import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import 'package:halim/src/chat/presentation/manager/chat_cubit/chat_cubit.dart';
 import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import 'package:halim/src/course_details/presentation/manager/reviews_cubit/reviews_cubit.dart';
 import 'package:halim/src/home/presentation/manager/home_cubit/home_cubit.dart';
@@ -43,6 +44,9 @@ List<BlocProvider> initProviders() {
     ),
     BlocProvider<MyCoursesCubit>(
       create: (context) => locator.get<MyCoursesCubit>()..init(context),
+    ),
+    BlocProvider<ChatCubit>(
+      create: (context) => locator.get<ChatCubit>(),
     ),
   ];
 }

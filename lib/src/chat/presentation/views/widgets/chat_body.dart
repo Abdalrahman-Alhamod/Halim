@@ -1,94 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/chat/data/models/chat_message_model.dart';
+import 'package:halim/src/chat/presentation/manager/chat_cubit/chat_cubit.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import 'chat_text_field.dart';
 import 'send_chat_box.dart';
 
-import '../../../domain/entities/message.dart';
 import 'recieve_chat_box.dart';
 
 class ChatBody extends StatefulWidget {
   const ChatBody({
     super.key,
+    required this.recieverId,
+    required this.senderId,
   });
-
+  final int recieverId;
+  final int senderId;
   @override
   State<ChatBody> createState() => _ChatBodyState();
 }
 
 class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
   late final ScrollController _scrollController;
-  late final String _email;
-  late final List<Message> _messagesList;
+  // ignore: prefer_final_fields
+  List<ChatMessageModel> _messages = [];
   @override
   void initState() {
     _scrollController = ScrollController();
     WidgetsBinding.instance.addObserver(this);
-    _email = 'abd@gmail.com';
-    _messagesList = [
-      Message(
-        email: 'abd@gmail.com',
-        content: 'Hey Alaa, how are you?',
-        time: DateTime.now().subtract(const Duration(minutes: 15)),
-      ),
-      Message(
-        email: 'alaa@gmail.com',
-        content: 'I\'m good, Abd. How about you?',
-        time: DateTime.now().subtract(const Duration(minutes: 14)),
-      ),
-      Message(
-        email: 'abd@gmail.com',
-        content: 'Doing well, just working on a project.',
-        time: DateTime.now().subtract(const Duration(minutes: 13)),
-      ),
-      Message(
-        email: 'alaa@gmail.com',
-        content: 'That sounds interesting. What project is it?',
-        time: DateTime.now().subtract(const Duration(minutes: 12)),
-      ),
-      Message(
-        email: 'abd@gmail.com',
-        content: 'It\'s a chat application. Trying to improve its UI.',
-        time: DateTime.now().subtract(const Duration(minutes: 11)),
-      ),
-      Message(
-        email: 'alaa@gmail.com',
-        content: 'Nice! Need any help?',
-        time: DateTime.now().subtract(const Duration(minutes: 10)),
-      ),
-      Message(
-        email: 'abd@gmail.com',
-        content: 'Sure, some feedback would be great.',
-        time: DateTime.now().subtract(const Duration(minutes: 9)),
-      ),
-      Message(
-        email: 'alaa@gmail.com',
-        content: 'Alright, send me the details.',
-        time: DateTime.now().subtract(const Duration(minutes: 8)),
-      ),
-      Message(
-        email: 'abd@gmail.com',
-        content: 'Just emailed you the project specs.',
-        time: DateTime.now().subtract(const Duration(minutes: 7)),
-      ),
-      Message(
-        email: 'alaa@gmail.com',
-        content: 'Got it. I\'ll take a look and get back to you.',
-        time: DateTime.now().subtract(const Duration(minutes: 6)),
-      ),
-      Message(
-        email: 'abd@gmail.com',
-        content: 'Thanks, Alaa! Appreciate it.',
-        time: DateTime.now().subtract(const Duration(minutes: 5)),
-      ),
-      Message(
-        email: 'alaa@gmail.com',
-        content: 'No problem! Talk to you soon.',
-        time: DateTime.now().subtract(const Duration(minutes: 4)),
-      ),
-    ];
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scrollToBottom();
     });
+    context.read<ChatCubit>().connectToChatWebsocket();
+    context.read<ChatCubit>().getMessages();
     super.initState();
   }
 
@@ -131,42 +75,114 @@ class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: ListView.builder(
-            controller: _scrollController,
-            itemCount: _messagesList.length,
-            itemBuilder: (context, index) {
-              return _messagesList[index].email == _email
-                  ? SendChatBox(message: _messagesList[index])
-                  : RecieveChatBox(message: _messagesList[index]);
-            },
-          ),
-        ),
-        Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSizes.pad16,
-            vertical: AppSizes.pad12,
-          ),
-          child: ChatTextField(
-            onSendPressed: (message) {
-              setState(() {
-                _messagesList.add(
-                  Message(
-                    email: _email,
-                    content: message,
-                    time: DateTime.now(),
-                  ),
+    return BlocListener<ChatCubit, ChatState>(
+      listenWhen: context.read<ChatCubit>().listenRecievedChatMessagesWhen,
+      listener: (context, state) {
+        context.read<ChatCubit>().listenRecievedChatMessages(context, state);
+        state.whenOrNull(
+          messageReceivedSuccess: (message) {
+            setState(() {
+              _messages.add(message);
+            });
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              _scrollToBottomWithAnimation();
+            });
+          },
+        );
+      },
+      child: Column(
+        children: [
+          Expanded(
+            child: BlocConsumer<ChatCubit, ChatState>(
+              buildWhen: context.read<ChatCubit>().buildFetchedMessagesWhen,
+              listenWhen: context.read<ChatCubit>().listenFetchedMessagesWhen,
+              listener: (context, state) {
+                context.read<ChatCubit>().listenFetchedMessages(context, state);
+                state.whenOrNull(
+                  fetchMessagesSuccess: (messages) {
+                    _messages.addAll(messages);
+                  },
                 );
-              });
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                _scrollToBottomWithAnimation();
-              });
-            },
+              },
+              builder: (context, state) {
+                return context.read<ChatCubit>().buildFetchedMessages(
+                      context: context,
+                      state: state,
+                      child: ListView.builder(
+                        controller: _scrollController,
+                        itemCount: _messages.length,
+                        itemBuilder: (context, index) {
+                          return _messages[index].sender == widget.senderId
+                              ? SendChatBox(message: _messages[index])
+                              : _messages[index].sender == widget.recieverId
+                                  ? RecieveChatBox(message: _messages[index])
+                                  : const SizedBox();
+                        },
+                      ),
+                    );
+              },
+            ),
           ),
-        ),
-      ],
+          Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSizes.pad16,
+              vertical: AppSizes.pad12,
+            ),
+            child: BlocListener<ChatCubit, ChatState>(
+              listenWhen: context.read<ChatCubit>().listenSendMessageWhen,
+              listener: (context, state) {
+                context.read<ChatCubit>().listenSendMessage(context, state);
+                state.whenOrNull(
+                  sendMessageSuccess: (message) {
+                    setState(() {
+                      _messages.removeWhere((model) {
+                        return model.id == '-1';
+                      });
+                      _messages.add(message);
+                    });
+                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                      _scrollToBottomWithAnimation();
+                    });
+                  },
+                  sendMessageLoading: () {
+                    setState(() {
+                      _messages.add(
+                        ChatMessageModel(
+                          sender: widget.senderId,
+                          createdAt: DateTime.now(),
+                          text: ' . . . ',
+                          id: '-1',
+                        ),
+                      );
+                    });
+                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                      _scrollToBottomWithAnimation();
+                    });
+                  },
+                  sendMessageFailure: (networkException) {
+                    setState(() {
+                      _messages.removeWhere((model) {
+                        return model.id == '-1';
+                      });
+                    });
+                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                      _scrollToBottomWithAnimation();
+                    });
+                  },
+                );
+              },
+              child: ChatTextField(
+                onSendPressed: (message) {
+                  context.read<ChatCubit>().sendMessage(
+                        recieverId: widget.recieverId,
+                        message: message,
+                      );
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

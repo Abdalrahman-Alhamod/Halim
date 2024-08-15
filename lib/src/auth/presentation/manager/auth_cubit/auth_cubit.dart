@@ -20,7 +20,7 @@ part 'auth_cubit.freezed.dart';
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit(this._authRepo) : super(const AuthState.initial());
   final AuthRepo _authRepo;
-  UserModel? _user;
+  UserModel? user;
 
   Future<void> login({
     required String email,
@@ -34,13 +34,13 @@ class AuthCubit extends Cubit<AuthState> {
     );
     response.when(
       success: (data) {
-        _user = data.data;
+        user = data.data;
         emit(
-          AuthState.loginSuccess(_user!, data.message),
+          AuthState.loginSuccess(user!, data.message),
         );
-        _authRepo.saveToken(_user!);
+        _authRepo.saveToken(user!);
         if (rememeberMe) {
-          _authRepo.saveUserEmail(_user!);
+          _authRepo.saveUserEmail(user!);
         }
         emit(
           const AuthState.save(),
@@ -66,12 +66,12 @@ class AuthCubit extends Cubit<AuthState> {
     );
     response.when(
       success: (data) {
-        _user = data.data;
+        user = data.data;
         emit(
-          AuthState.registerSuccess(_user!, data.message),
+          AuthState.registerSuccess(user!, data.message),
         );
         if (rememeberMe) {
-          _authRepo.saveUserEmail(_user!);
+          _authRepo.saveUserEmail(user!);
         }
         emit(
           const AuthState.save(),

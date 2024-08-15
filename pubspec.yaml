@@ -118,6 +118,7 @@ dependencies:
   animate_do: ^3.3.4
   # For toast(notification) widget
   flutter_styled_toast: ^2.2.1
+  web_socket_channel: ^3.0.1
   
   
 dev_dependencies:

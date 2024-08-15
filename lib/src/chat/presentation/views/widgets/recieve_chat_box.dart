@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:halim/src/chat/data/models/chat_message_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';
-import '../../../domain/entities/message.dart';
 
 class RecieveChatBox extends StatelessWidget {
   const RecieveChatBox({
     super.key,
     required this.message,
   });
-  final Message message;
+  final ChatMessageModel message;
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -36,7 +36,7 @@ class RecieveChatBox extends StatelessWidget {
           children: [
             Flexible(
               child: Text(
-                message.content,
+                message.text ?? '',
                 style: const TextStyle(),
               ),
             ),
@@ -44,7 +44,8 @@ class RecieveChatBox extends StatelessWidget {
               width: 10,
             ),
             Text(
-              TimeOfDay.fromDateTime(message.time).format(context),
+              TimeOfDay.fromDateTime(message.createdAt ?? DateTime.now())
+                  .format(context),
               style: TextStyle(
                 fontSize: 10,
                 color: context.isDarkMode

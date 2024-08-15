@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/utils/context_extensions.dart';
+import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:halim/src/mentor_details/presentation/manager/mentor_details_cubit/mentor_details_cubit.dart';
 import '../../../../../../../../core/utils/app_route.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../../../../core/assets/app_svgs.dart';
 import '../../../../../../../../core/translations/locale_keys.g.dart';
+import '../../../../../../../../core/utils/navigation_extra_keys.dart';
 import '../../../../../../../../core/widgets/avatar_image_loader.dart';
 import '../../../../../../data/models/mentor_details_model.dart';
 import 'mentor_main_details_vertical_divider.dart';
@@ -105,8 +107,14 @@ class MentorMainDetails extends StatelessWidget {
                           onPressed: () {
                             GoRouter.of(context).push(
                               AppRoute.kChatView,
-                              extra: LocaleKeys
-                                  .CourseDetails_Test_courseMentorName.tr(),
+                              extra: {
+                                NavKeys.chatRecieverName:
+                                    mentorDetailsModel.fullName,
+                                NavKeys.chatRecieverId:
+                                    mentorDetailsModel.id ?? -1,
+                                NavKeys.chatSenderId:
+                                    context.read<AuthCubit>().user?.id ?? -1,
+                              },
                             );
                           },
                           svgPicture: AppSVGs.chatFilled,

@@ -199,7 +199,14 @@ class AppRoute {
       GoRoute(
         path: kChatView,
         builder: (BuildContext context, GoRouterState state) {
-          return const ChatView();
+          return ChatView(
+            recieverName: (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.chatRecieverName] as String,
+            recieverId: (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.chatRecieverId] as int,
+            senderId: (GoRouterState.of(context).extra
+                as Map<String, dynamic>)[NavKeys.chatSenderId] as int,
+          );
         },
       ),
       GoRoute(

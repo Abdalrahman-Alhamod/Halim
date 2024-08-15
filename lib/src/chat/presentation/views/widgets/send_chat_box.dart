@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:halim/src/chat/data/models/chat_message_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
-import '../../../domain/entities/message.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 
@@ -9,7 +9,7 @@ class SendChatBox extends StatelessWidget {
     super.key,
     required this.message,
   });
-  final Message message;
+  final ChatMessageModel message;
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -35,7 +35,7 @@ class SendChatBox extends StatelessWidget {
           children: [
             Flexible(
               child: Text(
-                message.content,
+                message.text ?? '',
                 style: const TextStyle(color: Colors.white),
               ),
             ),
@@ -43,7 +43,8 @@ class SendChatBox extends StatelessWidget {
               width: 10,
             ),
             Text(
-              TimeOfDay.fromDateTime(message.time).format(context),
+              TimeOfDay.fromDateTime(message.createdAt ?? DateTime.now())
+                  .format(context),
               style: TextStyle(
                 fontSize: 10,
                 color: Colors.grey.shade300,

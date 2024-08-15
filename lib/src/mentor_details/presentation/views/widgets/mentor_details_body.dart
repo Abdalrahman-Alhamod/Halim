@@ -1,8 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/widgets/sections_view/data/section_page.dart';
 import '../../../../../core/widgets/sections_view/sections_view.dart';
+import '../../manager/mentor_details_cubit/mentor_details_cubit.dart';
 import 'sections/widgets/mentor_about_me/mentor_about_me_section.dart';
 import 'sections/mentor_courses_section.dart';
 import 'sections/mentor_reviews_section.dart';
@@ -15,6 +17,7 @@ class MentorDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.read<MentorDetailsCubit>().getMentorDetails();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: SizedBox(
