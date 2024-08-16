@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/assets/app_images.dart';
-import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/widgets/custom_loading_indicator.dart';
 
 class SplashBody extends StatelessWidget {
@@ -12,42 +11,28 @@ class SplashBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.primaryColor,
-        gradient: LinearGradient(
-          colors: [
-            AppColors.primaryColor,
-            AppColors.primaryColor.withOpacity(.7),
-          ],
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Spacer(
+          flex: 2,
         ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Spacer(
-            flex: 2,
+        Center(
+          child: Image.asset(
+            AppImages.logo,
+            width: context.width * 0.8,
           ),
-          Center(
-            child: Image.asset(
-              AppImages.logoWhite,
-              width: context.width * 0.4,
-            ),
-          ),
-          const Spacer(
-            flex: 1,
-          ),
-          const CustomLoadingIndicator(
-            color: Colors.white,
-            size: 75,
-          ),
-          const Spacer(
-            flex: 1,
-          ),
-        ],
-      ),
+        ),
+        const Spacer(
+          flex: 1,
+        ),
+        const CustomLoadingIndicator(
+          size: 75,
+        ),
+        const Spacer(
+          flex: 1,
+        ),
+      ],
     );
   }
 }

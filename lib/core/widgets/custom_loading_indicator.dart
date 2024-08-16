@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:halim/core/themes/app_colors.dart';
 
 class CustomLoadingIndicator extends StatefulWidget {
   const CustomLoadingIndicator({
     super.key,
-    this.color = Colors.white,
+    this.color = AppColors.primaryColor,
     this.size = 50.0,
     this.onComplete,
     this.durationInSeconds = 2,

@@ -2,8 +2,7 @@ abstract final class AppImages {
   AppImages._();
   static const mainPath = 'assets/images';
   static const appLogo = '$mainPath/app_logo.png';
-  static const logoWhite = '$mainPath/logo_white.png';
-  static const logoBlue = '$mainPath/logo_blue.png';
+  static const logo = '$mainPath/logo.png';
   static const intro1 = '$mainPath/intro_1.png';
   static const intro2 = '$mainPath/intro_2.png';
   static const intro3 = '$mainPath/intro_3.png';
@@ -35,8 +34,8 @@ abstract final class AppImages {
 
   static const List<String> allImages = [
     appLogo,
-    logoWhite,
-    logoBlue,
+    logo,
+
     intro1,
     intro2,
     intro3,

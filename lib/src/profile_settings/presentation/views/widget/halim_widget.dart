@@ -32,7 +32,7 @@ class HalimWidget extends StatelessWidget {
             width: 23,
           ),
           Image.asset(
-            AppImages.logoWhite,
+            AppImages.logo,
             width: 23,
             color: context.isDarkMode ? Colors.white : Colors.black,
           ),
