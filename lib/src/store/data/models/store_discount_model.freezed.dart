@@ -365,7 +365,7 @@ mixin _$StoreDiscountCourseCard {
   @JsonKey(name: 'mentor')
   StoreDiscountCourseMentor? get mentor => throw _privateConstructorUsedError;
   @JsonKey(name: 'price')
-  int? get price => throw _privateConstructorUsedError;
+  num? get price => throw _privateConstructorUsedError;
   @JsonKey(name: 'subcategory')
   SubcategoryModel? get subcategory => throw _privateConstructorUsedError;
   @JsonKey(name: 'reviews_avg')
@@ -388,7 +388,7 @@ abstract class $StoreDiscountCourseCardCopyWith<$Res> {
       @JsonKey(name: 'title') String? title,
       @JsonKey(name: 'image') String? image,
       @JsonKey(name: 'mentor') StoreDiscountCourseMentor? mentor,
-      @JsonKey(name: 'price') int? price,
+      @JsonKey(name: 'price') num? price,
       @JsonKey(name: 'subcategory') SubcategoryModel? subcategory,
       @JsonKey(name: 'reviews_avg') int? reviewsAvg});
 
@@ -438,7 +438,7 @@ class _$StoreDiscountCourseCardCopyWithImpl<$Res,
       price: freezed == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       subcategory: freezed == subcategory
           ? _value.subcategory
           : subcategory // ignore: cast_nullable_to_non_nullable
@@ -489,7 +489,7 @@ abstract class _$$StoreDiscountCourseCardImplCopyWith<$Res>
       @JsonKey(name: 'title') String? title,
       @JsonKey(name: 'image') String? image,
       @JsonKey(name: 'mentor') StoreDiscountCourseMentor? mentor,
-      @JsonKey(name: 'price') int? price,
+      @JsonKey(name: 'price') num? price,
       @JsonKey(name: 'subcategory') SubcategoryModel? subcategory,
       @JsonKey(name: 'reviews_avg') int? reviewsAvg});
 
@@ -540,7 +540,7 @@ class __$$StoreDiscountCourseCardImplCopyWithImpl<$Res>
       price: freezed == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       subcategory: freezed == subcategory
           ? _value.subcategory
           : subcategory // ignore: cast_nullable_to_non_nullable
@@ -584,7 +584,7 @@ class _$StoreDiscountCourseCardImpl
   final StoreDiscountCourseMentor? mentor;
   @override
   @JsonKey(name: 'price')
-  final int? price;
+  final num? price;
   @override
   @JsonKey(name: 'subcategory')
   final SubcategoryModel? subcategory;
@@ -653,7 +653,7 @@ abstract class _StoreDiscountCourseCard implements StoreDiscountCourseCard {
           @JsonKey(name: 'title') final String? title,
           @JsonKey(name: 'image') final String? image,
           @JsonKey(name: 'mentor') final StoreDiscountCourseMentor? mentor,
-          @JsonKey(name: 'price') final int? price,
+          @JsonKey(name: 'price') final num? price,
           @JsonKey(name: 'subcategory') final SubcategoryModel? subcategory,
           @JsonKey(name: 'reviews_avg') final int? reviewsAvg}) =
       _$StoreDiscountCourseCardImpl;
@@ -675,7 +675,7 @@ abstract class _StoreDiscountCourseCard implements StoreDiscountCourseCard {
   StoreDiscountCourseMentor? get mentor;
   @override
   @JsonKey(name: 'price')
-  int? get price;
+  num? get price;
   @override
   @JsonKey(name: 'subcategory')
   SubcategoryModel? get subcategory;
@@ -806,13 +806,13 @@ class __$$StoreDiscountCourseMentorImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$StoreDiscountCourseMentorImpl
-    with DiagnosticableTreeMixin
-    implements _StoreDiscountCourseMentor {
+class _$StoreDiscountCourseMentorImpl extends _StoreDiscountCourseMentor
+    with DiagnosticableTreeMixin {
   const _$StoreDiscountCourseMentorImpl(
       {@JsonKey(name: 'id') this.id,
       @JsonKey(name: 'first_name') this.firstName,
-      @JsonKey(name: 'last_name') this.lastName});
+      @JsonKey(name: 'last_name') this.lastName})
+      : super._();
 
   factory _$StoreDiscountCourseMentorImpl.fromJson(Map<String, dynamic> json) =>
       _$$StoreDiscountCourseMentorImplFromJson(json);
@@ -873,12 +873,13 @@ class _$StoreDiscountCourseMentorImpl
   }
 }
 
-abstract class _StoreDiscountCourseMentor implements StoreDiscountCourseMentor {
+abstract class _StoreDiscountCourseMentor extends StoreDiscountCourseMentor {
   const factory _StoreDiscountCourseMentor(
           {@JsonKey(name: 'id') final int? id,
           @JsonKey(name: 'first_name') final String? firstName,
           @JsonKey(name: 'last_name') final String? lastName}) =
       _$StoreDiscountCourseMentorImpl;
+  const _StoreDiscountCourseMentor._() : super._();
 
   factory _StoreDiscountCourseMentor.fromJson(Map<String, dynamic> json) =
       _$StoreDiscountCourseMentorImpl.fromJson;

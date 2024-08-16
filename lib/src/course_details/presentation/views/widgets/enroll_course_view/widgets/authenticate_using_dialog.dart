@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 import 'pin_auth_dialog.dart';
@@ -64,7 +65,7 @@ class AuthenticateUsingDialog extends StatelessWidget {
               children: [
                 _AuthenticationMethodButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    context.pop();
                     showCustomDialog(
                       context: context,
                       widget: PINAuthDialog(
@@ -80,7 +81,7 @@ class AuthenticateUsingDialog extends StatelessWidget {
                 ),
                 _AuthenticationMethodButton(
                   onPressed: () async {
-                    Navigator.pop(context);
+                    context.pop();
                     bool authenticated = await authenticate();
                     if (authenticated) {
                       onSuccess.call();

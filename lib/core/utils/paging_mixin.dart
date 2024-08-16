@@ -41,6 +41,37 @@ mixin PagingMixin<T> {
     );
   }
 
+  Widget buildGridView(BuildContext context,
+      PagingController<int, T> pagingController, ItemBuilder<T> itemBuilder,
+      {ScrollPhysics? physics,
+      Axis scrollDirection = Axis.vertical,
+      Widget? loadBuilder,
+      Widget? noItemsFoundIndicatorBuilder,required SliverGridDelegate gridDelegate}) {
+    return PagedGridView<int, T>(
+      scrollDirection: scrollDirection,
+      physics: physics,
+      pagingController: pagingController,
+      builderDelegate: PagedChildBuilderDelegate<T>(
+        animateTransitions: true,
+        transitionDuration: const Duration(milliseconds: 350),
+        // TODO uncomment views
+        // firstPageErrorIndicatorBuilder: (_) => ErrorView(),
+        firstPageProgressIndicatorBuilder: (_) =>
+            loadBuilder ?? const CustomLoadingIndicator(),
+        newPageErrorIndicatorBuilder: null,
+        newPageProgressIndicatorBuilder: (_) =>
+            loadBuilder ?? const CustomLoadingIndicator(),
+        noItemsFoundIndicatorBuilder: (_) =>
+            noItemsFoundIndicatorBuilder ??  EmptyView(
+          width: context.width * 0.85,
+        ),
+        itemBuilder: itemBuilder,
+        
+      ),
+      gridDelegate: gridDelegate,
+    );
+  }
+
   void changeBaseModel(BaseModel? baseModel) {
     this.baseModel = baseModel;
   }

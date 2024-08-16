@@ -28,7 +28,7 @@ class StoreDiscountCourseCard with _$StoreDiscountCourseCard {
     @JsonKey(name: 'title') String? title,
     @JsonKey(name: 'image') String? image,
     @JsonKey(name: 'mentor') StoreDiscountCourseMentor? mentor,
-    @JsonKey(name: 'price') int? price,
+    @JsonKey(name: 'price') num? price,
     @JsonKey(name: 'subcategory') SubcategoryModel? subcategory,
     @JsonKey(name: 'reviews_avg') int? reviewsAvg,
   }) = _StoreDiscountCourseCard;
@@ -39,6 +39,7 @@ class StoreDiscountCourseCard with _$StoreDiscountCourseCard {
 
 @freezed
 class StoreDiscountCourseMentor with _$StoreDiscountCourseMentor {
+  const StoreDiscountCourseMentor._();
   const factory StoreDiscountCourseMentor({
     @JsonKey(name: 'id') int? id,
     @JsonKey(name: 'first_name') String? firstName,
@@ -47,4 +48,5 @@ class StoreDiscountCourseMentor with _$StoreDiscountCourseMentor {
 
   factory StoreDiscountCourseMentor.fromJson(Map<String, Object?> json) =>
       _$StoreDiscountCourseMentorFromJson(json);
+  String get fullName => '$firstName $lastName';
 }

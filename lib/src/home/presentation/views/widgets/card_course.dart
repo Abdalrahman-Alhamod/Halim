@@ -12,7 +12,7 @@ import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/utils/navigation_extra_keys.dart';
-import '../../../../../core/utils/network_image_loader.dart';
+import '../../../../../core/widgets/network_image_loader.dart';
 import '../../../../course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 import '../functions/remove_bookmark_bottom_sheet.dart';
 

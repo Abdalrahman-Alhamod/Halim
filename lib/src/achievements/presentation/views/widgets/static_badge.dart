@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:halim/core/utils/context_extensions.dart';
 
-import '../../../../../core/utils/network_image_loader.dart';
+import '../../../../../core/widgets/network_image_loader.dart';
 
 class StaticBadge extends StatelessWidget {
   const StaticBadge({

@@ -11,7 +11,7 @@ import '../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../core/assets/app_svgs.dart';
 import '../../../../../../../core/themes/app_colors.dart';
-import '../../../../../../../core/utils/network_image_loader.dart';
+import '../../../../../../../core/widgets/network_image_loader.dart';
 part 'widgets/course_box_content.dart';
 part 'widgets/rating_with_students.dart';
 part 'widgets/course_category_box.dart';

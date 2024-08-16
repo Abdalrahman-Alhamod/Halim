@@ -1,30 +1,29 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/widgets/network_image_loader.dart';
+import 'package:halim/src/store/data/models/store_item_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'functions/show_product_purchase_dialog.dart';
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 
 class StoreProductCard extends StatelessWidget {
-  const StoreProductCard(
-      {super.key,
-      required this.image,
-      required this.name,
-      required this.description,
-      required this.price});
-  final String image;
-  final String name;
-  final String description;
-  final int price;
+  const StoreProductCard({
+    super.key,
+    required this.storeItemModel,
+  });
+  final StoreItemModel storeItemModel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         showProductPurchaseDialog(
           context: context,
-          productName: name,
-          productPrice: price,
+          productName: storeItemModel.name ?? '',
+          productPrice: storeItemModel.pointsCost ?? 0,
           totalPoints: 1265,
+          itemId: storeItemModel.id ?? 0,
         );
       },
       child: Container(
@@ -43,38 +42,46 @@ class StoreProductCard extends StatelessWidget {
         ),
         padding: const EdgeInsets.all(4),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
-              flex: 2,
+              flex: 5,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  image,
-                  height: 200,
-                  fit: BoxFit.cover,
+                child: NetworkImageLoader(
+                  imageUrl: storeItemModel.image ?? '',
                 ),
               ),
             ),
-            Text(
-              name,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
+            Flexible(
+              flex: 1,
+              child: AutoSizeText(
+                storeItemModel.name ?? '',
+                maxLines: 2,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
-            Text(
-              description,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 14,
-                color: Colors.grey,
+            Flexible(
+              flex: 4,
+              child: AutoSizeText(
+                storeItemModel.description ?? '',
+                textAlign: TextAlign.center,
+                maxLines: 4,
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '$price ',
+                  '${storeItemModel.pointsCost ?? 0} ',
                   style: const TextStyle(
                     color: Colors.green,
                     fontSize: 24,

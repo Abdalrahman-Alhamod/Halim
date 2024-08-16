@@ -11,7 +11,7 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/navigation_extra_keys.dart';
-import '../../../../../core/utils/network_image_loader.dart';
+import '../../../../../core/widgets/network_image_loader.dart';
 
 class MyCourseCard extends StatefulWidget {
   const MyCourseCard({

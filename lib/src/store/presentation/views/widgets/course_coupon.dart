@@ -1,36 +1,24 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/helpers/string_helper.dart';
+import 'package:halim/core/widgets/network_image_loader.dart';
+import 'package:halim/src/shared/model/discount_model.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'package:dotted_line/dotted_line.dart';
+import '../../../data/models/store_discount_model.dart';
 import 'functions/show_coupon_purchase_dialog.dart';
 import '../../../../../core/themes/app_colors.dart';
 import 'helpers/coupon_clipper.dart';
 
 class CourseCoupon extends StatelessWidget {
-  final double rating;
-  final String category;
-  final String courseName;
-  final String mentorName;
-  final num coursePrice;
-  final String imageUrl;
-  final num discount;
-  final int couponPrice;
-  final int leftAmount;
+  final StoreDiscountModel storeDiscountModel;
 
   const CourseCoupon({
     super.key,
-    required this.rating,
-    required this.category,
-    required this.coursePrice,
-    required this.courseName,
-    required this.imageUrl,
-    required this.mentorName,
-    required this.discount,
-    required this.couponPrice,
-    required this.leftAmount,
+    required this.storeDiscountModel,
   });
 
   @override
@@ -39,10 +27,11 @@ class CourseCoupon extends StatelessWidget {
       onTap: () {
         showCouponPurchaseDialog(
           context: context,
-          courseName: courseName,
-          discount: (discount * 100).toInt(),
-          couponPrice: couponPrice,
+          courseName: storeDiscountModel.course?.title ?? '',
+          discount: ((storeDiscountModel.discount?.value ?? 0.0) * 100).toInt(),
+          couponPrice: storeDiscountModel.pointsCost ?? 0,
           totalPoints: 1265,
+          itemId: storeDiscountModel.id ?? 0,
         );
       },
       child: ClipPath(
@@ -65,15 +54,25 @@ class CourseCoupon extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                    child: Container(
-                      width: 110,
-                      height: 110,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24),
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage(imageUrl),
-                        ),
+                    // child: Container(
+                    //   width: 110,
+                    //   height: 110,
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(24),
+                    //     image: DecorationImage(
+                    //       fit: BoxFit.cover,
+                    //       image: AssetImage(imageUrl),
+                    //     ),
+                    //   ),
+                    // ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                        24,
+                      ),
+                      child: NetworkImageLoader(
+                        imageUrl: storeDiscountModel.course?.image,
+                        width: 110,
+                        height: 110,
                       ),
                     ),
                   ),
@@ -100,7 +99,9 @@ class CourseCoupon extends StatelessWidget {
                                           .withOpacity(0.1),
                                 ),
                                 child: AutoSizeText(
-                                  category,
+                                  storeDiscountModel
+                                          .course?.subcategory?.name ??
+                                      '',
                                   maxLines: 1,
                                   minFontSize: 8,
                                   style: const TextStyle(
@@ -131,7 +132,7 @@ class CourseCoupon extends StatelessWidget {
                                       size: 18,
                                     ),
                                     Text(
-                                      ' $rating',
+                                      ' ${StringHelper.formatNum(storeDiscountModel.course?.reviewsAvg ?? 0.0)}',
                                       style: const TextStyle(
                                         fontSize: 12,
                                       ),
@@ -143,7 +144,7 @@ class CourseCoupon extends StatelessWidget {
                             ],
                           ),
                           AutoSizeText(
-                            courseName,
+                            storeDiscountModel.course?.title ?? '',
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
@@ -162,7 +163,8 @@ class CourseCoupon extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                mentorName,
+                                storeDiscountModel.course?.mentor?.fullName ??
+                                    '',
                                 style: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
@@ -175,7 +177,7 @@ class CourseCoupon extends StatelessWidget {
                               children: [
                                 TextSpan(
                                   text:
-                                      '\$${getPriceAfterDiscount(price: coursePrice, discount: discount)}  ',
+                                      '\$${StringHelper.getDiscount(storeDiscountModel.course?.price ?? 0.0, storeDiscountModel.discount ?? const DiscountModel())}  ',
                                   style: const TextStyle(
                                     color: AppColors.primaryColor,
                                     fontSize: 24,
@@ -183,7 +185,8 @@ class CourseCoupon extends StatelessWidget {
                                   ),
                                 ),
                                 TextSpan(
-                                  text: '\$$coursePrice',
+                                  text:
+                                      '\$${StringHelper.formatNum(storeDiscountModel.course?.price ?? 0.0)}',
                                   style: const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 18,
@@ -227,7 +230,7 @@ class CourseCoupon extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        '${(discount * 100).toInt()}%',
+                        '${((storeDiscountModel.discount?.value ?? 0.0) * 100).toInt()}%',
                         style: TextStyle(
                           color: context.isDarkMode
                               ? Colors.yellow
@@ -263,7 +266,7 @@ class CourseCoupon extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            '$couponPrice ',
+                            '${storeDiscountModel.pointsCost ?? 0} ',
                             style: const TextStyle(
                               color: Colors.green,
                               fontSize: 32,
@@ -284,7 +287,8 @@ class CourseCoupon extends StatelessWidget {
                         TextSpan(
                           children: [
                             TextSpan(
-                              text: '$leftAmount',
+                              text:
+                                  '${storeDiscountModel.discount?.amountAvailable ?? 0}',
                               style: const TextStyle(
                                 color: Colors.green,
                                 fontWeight: FontWeight.bold,
@@ -313,12 +317,4 @@ class CourseCoupon extends StatelessWidget {
       ),
     );
   }
-}
-
-String getPriceAfterDiscount({required num price, required num discount}) {
-  num result = price - price * discount;
-  result *= 100;
-  result = result.round();
-  result /= 100;
-  return result.toString();
 }

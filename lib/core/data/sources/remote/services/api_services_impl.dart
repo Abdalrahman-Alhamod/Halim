@@ -97,7 +97,7 @@ class ApiServicesImpl implements ApiServices {
         options:
             Options(headers: _headers, contentType: Headers.jsonContentType),
       );
-
+      await fakeDelay();
       return _handleResponseAsJson(response);
     } catch (error) {
       rethrow;

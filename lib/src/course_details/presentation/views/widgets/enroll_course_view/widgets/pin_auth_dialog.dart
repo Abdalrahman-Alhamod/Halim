@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 import '../../../../../../../core/themes/app_colors.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
@@ -88,7 +89,7 @@ class _PINAuthDialogState extends State<PINAuthDialog> {
           CustomFlatButton(
             onPressed: () {
               if (_pinControllers[3].text != '') {
-                Navigator.pop(context);
+                context.pop();
                 widget.onSuccess.call();
               }
             },

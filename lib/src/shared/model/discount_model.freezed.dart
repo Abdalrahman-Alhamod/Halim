@@ -20,9 +20,22 @@ DiscountModel _$DiscountModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DiscountModel {
+  @JsonKey(name: 'id')
   int? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'title')
+  String? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: 'value')
   num? get value => throw _privateConstructorUsedError;
+  @JsonKey(name: 'code')
   String? get code => throw _privateConstructorUsedError;
+  @JsonKey(name: 'starts_at')
+  DateTime? get startsAt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ends_at')
+  DateTime? get endsAt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_available')
+  int? get amountAvailable => throw _privateConstructorUsedError;
+  @JsonKey(name: 'discount_type')
+  String? get discountType => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +49,15 @@ abstract class $DiscountModelCopyWith<$Res> {
           DiscountModel value, $Res Function(DiscountModel) then) =
       _$DiscountModelCopyWithImpl<$Res, DiscountModel>;
   @useResult
-  $Res call({int? id, num? value, String? code});
+  $Res call(
+      {@JsonKey(name: 'id') int? id,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'value') num? value,
+      @JsonKey(name: 'code') String? code,
+      @JsonKey(name: 'starts_at') DateTime? startsAt,
+      @JsonKey(name: 'ends_at') DateTime? endsAt,
+      @JsonKey(name: 'amount_available') int? amountAvailable,
+      @JsonKey(name: 'discount_type') String? discountType});
 }
 
 /// @nodoc
@@ -53,14 +74,23 @@ class _$DiscountModelCopyWithImpl<$Res, $Val extends DiscountModel>
   @override
   $Res call({
     Object? id = freezed,
+    Object? title = freezed,
     Object? value = freezed,
     Object? code = freezed,
+    Object? startsAt = freezed,
+    Object? endsAt = freezed,
+    Object? amountAvailable = freezed,
+    Object? discountType = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -68,6 +98,22 @@ class _$DiscountModelCopyWithImpl<$Res, $Val extends DiscountModel>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
+              as String?,
+      startsAt: freezed == startsAt
+          ? _value.startsAt
+          : startsAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      endsAt: freezed == endsAt
+          ? _value.endsAt
+          : endsAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      amountAvailable: freezed == amountAvailable
+          ? _value.amountAvailable
+          : amountAvailable // ignore: cast_nullable_to_non_nullable
+              as int?,
+      discountType: freezed == discountType
+          ? _value.discountType
+          : discountType // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -81,7 +127,15 @@ abstract class _$$DiscountModelImplCopyWith<$Res>
       __$$DiscountModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? id, num? value, String? code});
+  $Res call(
+      {@JsonKey(name: 'id') int? id,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'value') num? value,
+      @JsonKey(name: 'code') String? code,
+      @JsonKey(name: 'starts_at') DateTime? startsAt,
+      @JsonKey(name: 'ends_at') DateTime? endsAt,
+      @JsonKey(name: 'amount_available') int? amountAvailable,
+      @JsonKey(name: 'discount_type') String? discountType});
 }
 
 /// @nodoc
@@ -96,14 +150,23 @@ class __$$DiscountModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? title = freezed,
     Object? value = freezed,
     Object? code = freezed,
+    Object? startsAt = freezed,
+    Object? endsAt = freezed,
+    Object? amountAvailable = freezed,
+    Object? discountType = freezed,
   }) {
     return _then(_$DiscountModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -112,28 +175,87 @@ class __$$DiscountModelImplCopyWithImpl<$Res>
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String?,
+      startsAt: freezed == startsAt
+          ? _value.startsAt
+          : startsAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      endsAt: freezed == endsAt
+          ? _value.endsAt
+          : endsAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      amountAvailable: freezed == amountAvailable
+          ? _value.amountAvailable
+          : amountAvailable // ignore: cast_nullable_to_non_nullable
+              as int?,
+      discountType: freezed == discountType
+          ? _value.discountType
+          : discountType // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$DiscountModelImpl implements _DiscountModel {
-  const _$DiscountModelImpl({this.id, this.value, this.code});
+class _$DiscountModelImpl
+    with DiagnosticableTreeMixin
+    implements _DiscountModel {
+  const _$DiscountModelImpl(
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'value') this.value,
+      @JsonKey(name: 'code') this.code,
+      @JsonKey(name: 'starts_at') this.startsAt,
+      @JsonKey(name: 'ends_at') this.endsAt,
+      @JsonKey(name: 'amount_available') this.amountAvailable,
+      @JsonKey(name: 'discount_type') this.discountType});
 
   factory _$DiscountModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$DiscountModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'id')
   final int? id;
   @override
+  @JsonKey(name: 'title')
+  final String? title;
+  @override
+  @JsonKey(name: 'value')
   final num? value;
   @override
+  @JsonKey(name: 'code')
   final String? code;
+  @override
+  @JsonKey(name: 'starts_at')
+  final DateTime? startsAt;
+  @override
+  @JsonKey(name: 'ends_at')
+  final DateTime? endsAt;
+  @override
+  @JsonKey(name: 'amount_available')
+  final int? amountAvailable;
+  @override
+  @JsonKey(name: 'discount_type')
+  final String? discountType;
 
   @override
-  String toString() {
-    return 'DiscountModel(id: $id, value: $value, code: $code)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'DiscountModel(id: $id, title: $title, value: $value, code: $code, startsAt: $startsAt, endsAt: $endsAt, amountAvailable: $amountAvailable, discountType: $discountType)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'DiscountModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('title', title))
+      ..add(DiagnosticsProperty('value', value))
+      ..add(DiagnosticsProperty('code', code))
+      ..add(DiagnosticsProperty('startsAt', startsAt))
+      ..add(DiagnosticsProperty('endsAt', endsAt))
+      ..add(DiagnosticsProperty('amountAvailable', amountAvailable))
+      ..add(DiagnosticsProperty('discountType', discountType));
   }
 
   @override
@@ -142,13 +264,22 @@ class _$DiscountModelImpl implements _DiscountModel {
         (other.runtimeType == runtimeType &&
             other is _$DiscountModelImpl &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.value, value) || other.value == value) &&
-            (identical(other.code, code) || other.code == code));
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.startsAt, startsAt) ||
+                other.startsAt == startsAt) &&
+            (identical(other.endsAt, endsAt) || other.endsAt == endsAt) &&
+            (identical(other.amountAvailable, amountAvailable) ||
+                other.amountAvailable == amountAvailable) &&
+            (identical(other.discountType, discountType) ||
+                other.discountType == discountType));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, value, code);
+  int get hashCode => Object.hash(runtimeType, id, title, value, code, startsAt,
+      endsAt, amountAvailable, discountType);
 
   @JsonKey(ignore: true)
   @override
@@ -166,19 +297,43 @@ class _$DiscountModelImpl implements _DiscountModel {
 
 abstract class _DiscountModel implements DiscountModel {
   const factory _DiscountModel(
-      {final int? id,
-      final num? value,
-      final String? code}) = _$DiscountModelImpl;
+          {@JsonKey(name: 'id') final int? id,
+          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'value') final num? value,
+          @JsonKey(name: 'code') final String? code,
+          @JsonKey(name: 'starts_at') final DateTime? startsAt,
+          @JsonKey(name: 'ends_at') final DateTime? endsAt,
+          @JsonKey(name: 'amount_available') final int? amountAvailable,
+          @JsonKey(name: 'discount_type') final String? discountType}) =
+      _$DiscountModelImpl;
 
   factory _DiscountModel.fromJson(Map<String, dynamic> json) =
       _$DiscountModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'id')
   int? get id;
   @override
+  @JsonKey(name: 'title')
+  String? get title;
+  @override
+  @JsonKey(name: 'value')
   num? get value;
   @override
+  @JsonKey(name: 'code')
   String? get code;
+  @override
+  @JsonKey(name: 'starts_at')
+  DateTime? get startsAt;
+  @override
+  @JsonKey(name: 'ends_at')
+  DateTime? get endsAt;
+  @override
+  @JsonKey(name: 'amount_available')
+  int? get amountAvailable;
+  @override
+  @JsonKey(name: 'discount_type')
+  String? get discountType;
   @override
   @JsonKey(ignore: true)
   _$$DiscountModelImplCopyWith<_$DiscountModelImpl> get copyWith =>

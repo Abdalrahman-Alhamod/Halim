@@ -45,7 +45,7 @@ _$StoreDiscountCourseCardImpl _$$StoreDiscountCourseCardImplFromJson(
           ? null
           : StoreDiscountCourseMentor.fromJson(
               json['mentor'] as Map<String, dynamic>),
-      price: (json['price'] as num?)?.toInt(),
+      price: json['price'] as num?,
       subcategory: json['subcategory'] == null
           ? null
           : SubcategoryModel.fromJson(

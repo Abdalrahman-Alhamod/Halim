@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../assets/app_images.dart';
-import '../widgets/shimmer_box.dart';
+import 'shimmer_box.dart';
 
 class NetworkImageLoader extends StatelessWidget {
   const NetworkImageLoader({

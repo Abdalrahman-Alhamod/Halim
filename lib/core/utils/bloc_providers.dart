@@ -54,7 +54,7 @@ List<BlocProvider> initProviders() {
       create: (context) => locator.get<AchievementsCubit>(),
     ),
     BlocProvider<StoreCubit>(
-      create: (context) => locator.get<StoreCubit>(),
+      create: (context) => locator.get<StoreCubit>()..init(context),
     ),
   ];
 }

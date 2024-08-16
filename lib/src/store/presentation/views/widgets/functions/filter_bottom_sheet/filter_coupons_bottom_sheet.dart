@@ -1,24 +1,22 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:halim/core/data/sources/remote/app_url.dart';
+import 'package:halim/src/store/presentation/manager/store_cubit/store_cubit.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 import 'filter_coupons_list.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../../core/widgets/custome_elevated_button.dart';
 
-class FilterCouponsBottomSheet extends StatefulWidget {
+class FilterCouponsBottomSheet extends StatelessWidget {
   const FilterCouponsBottomSheet({
     super.key,
   });
 
   @override
-  State<FilterCouponsBottomSheet> createState() =>
-      _FilterCouponsBottomSheetState();
-}
-
-class _FilterCouponsBottomSheetState extends State<FilterCouponsBottomSheet> {
-  @override
   Widget build(BuildContext context) {
+    String discountFilter = context.read<StoreCubit>().discountFilter;
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,
@@ -63,8 +61,10 @@ class _FilterCouponsBottomSheetState extends State<FilterCouponsBottomSheet> {
               color: Colors.grey,
             ),
             FilterCouponsList(
-              key: UniqueKey(),
-              onChanged: (value) {},
+              onChanged: (value) {
+                discountFilter = value;
+              },
+              initialValue: discountFilter,
             ),
             const SizedBox(
               height: 10,
@@ -82,7 +82,9 @@ class _FilterCouponsBottomSheetState extends State<FilterCouponsBottomSheet> {
                   flex: 1,
                   child: CustomElevatedButton(
                     onPressed: () {
-                      setState(() {});
+                      context.read<StoreCubit>().discountFilter = AppUrl.all;
+                      context.read<StoreCubit>().refreshStoreDiscounts();
+                      context.pop();
                     },
                     title: LocaleKeys.Search_reset.tr(),
                     elevation: 0,
@@ -98,6 +100,9 @@ class _FilterCouponsBottomSheetState extends State<FilterCouponsBottomSheet> {
                   flex: 1,
                   child: CustomElevatedButton(
                     onPressed: () {
+                      context.read<StoreCubit>().discountFilter =
+                          discountFilter;
+                      context.read<StoreCubit>().refreshStoreDiscounts();
                       context.pop();
                     },
                     title: LocaleKeys.Search_Filter_filter.tr(),

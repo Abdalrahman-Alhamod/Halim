@@ -1,8 +1,7 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../core/assets/app_images.dart';
-import '../../../../../core/translations/locale_keys.g.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/store/presentation/views/widgets/products_grid_view_loading.dart';
+import '../../manager/store_cubit/store_cubit.dart';
 import 'store_product_card.dart';
 
 class ProductsSection extends StatelessWidget {
@@ -10,19 +9,34 @@ class ProductsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      itemBuilder: (context, index) => StoreProductCard(
-        image: AppImages.testNotebook,
-        name: LocaleKeys.Achievements_Store_Test_itemName.tr(),
-        description: LocaleKeys.Achievements_Store_Test_itemDesc.tr(),
-        price: 200,
-      ),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: 16,
-        crossAxisSpacing: 16,
-        childAspectRatio: 0.75,
-      ),
+    context.read<StoreCubit>().refreshStoreItems();
+    return BlocConsumer<StoreCubit, StoreState>(
+      buildWhen: context.read<StoreCubit>().buildStoreItemsWhen,
+      listenWhen: context.read<StoreCubit>().listenStoreItemsWhen,
+      listener: context.read<StoreCubit>().listenStoreItems,
+      builder: (context, state) {
+        return state.maybeWhen(
+          fetchStoreItemsLoading: () => const ProductsGirdViewLoading(),
+          orElse: () => context.read<StoreCubit>().buildStoreItemsGridView(
+            context,
+            pagingController: context
+                .read<StoreCubit>()
+                .storeItemsPagingAdapter
+                .pagingController,
+            itemBuilder: (_, item, index) {
+              return StoreProductCard(
+                storeItemModel: item,
+              );
+            },
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisSpacing: 8,
+              crossAxisSpacing: 8,
+              childAspectRatio: 0.65,
+            ),
+          ),
+        );
+      },
     );
   }
 }

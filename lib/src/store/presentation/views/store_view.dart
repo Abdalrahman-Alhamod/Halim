@@ -1,6 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import 'package:halim/src/store/data/models/student_points_model.dart';
 import '../../../../core/translations/locale_keys.g.dart';
+import '../manager/store_cubit/store_cubit.dart';
 import 'widgets/store_app_bar.dart';
 import 'widgets/store_sections_bar.dart';
 
@@ -30,10 +34,15 @@ class _StoreViewState extends State<StoreView> {
 
   @override
   Widget build(BuildContext context) {
+    StudentPointsModel studentPointsModel =
+        context.read<StoreCubit>().studentPointsModel ??
+            const StudentPointsModel();
+    int studentId = context.read<AuthCubit>().user?.id ?? 0;
+    context.read<StoreCubit>().getStudentPoints(studentId: studentId);
     return Scaffold(
       appBar: const StoreAppBar(),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+        padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
         child: Column(
           children: [
             Row(
@@ -43,13 +52,31 @@ class _StoreViewState extends State<StoreView> {
                   '${LocaleKeys.Achievements_Store_yourTotalPoints.tr()}: ',
                   style: const TextStyle(fontSize: 24),
                 ),
-                const Text(
-                  '1265',
-                  style: TextStyle(
-                    fontSize: 26,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold,
-                  ),
+                BlocConsumer<StoreCubit, StoreState>(
+                  buildWhen: context.read<StoreCubit>().buildStudentPointsWhen,
+                  listenWhen:
+                      context.read<StoreCubit>().listenStudentPointsWhen,
+                  listener: context.read<StoreCubit>().listenStudentPoints,
+                  builder: (context, state) {
+                    state.whenOrNull(
+                      fetchStudentPointsSuccess:
+                          (stateStudentPointsModel, message) {
+                        studentPointsModel = stateStudentPointsModel;
+                      },
+                    );
+                    return context.read<StoreCubit>().buildStudentPoints(
+                          context: context,
+                          state: state,
+                          child: Text(
+                            '${studentPointsModel.pointsBalance ?? 0}',
+                            style: const TextStyle(
+                              fontSize: 26,
+                              color: Colors.green,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        );
+                  },
                 ),
               ],
             ),
@@ -62,13 +89,17 @@ class _StoreViewState extends State<StoreView> {
             const SizedBox(
               height: 20,
             ),
-            Expanded(
-              child: PageView(
-                controller: _pageController,
-                children: const [
-                  CouponsSection(),
-                  ProductsSection(),
-                ],
+            BlocListener<StoreCubit, StoreState>(
+              listenWhen: context.read<StoreCubit>().listenPurchaseItemWhen,
+              listener: context.read<StoreCubit>().listenPurchaseItem,
+              child: Expanded(
+                child: PageView(
+                  controller: _pageController,
+                  children: const [
+                    CouponsSection(),
+                    ProductsSection(),
+                  ],
+                ),
               ),
             ),
           ],

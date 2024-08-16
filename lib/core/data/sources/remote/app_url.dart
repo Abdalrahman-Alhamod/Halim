@@ -158,4 +158,16 @@ abstract final class AppUrl {
   static final avatars = "${baseUrl}avatars";
 
   ///<------------------------------------------------------------------------------
+
+  static final storeItems = "${baseUrl}storeItems";
+  static const kFilter = "filter";
+  static const kRelevant = "relevant";
+  static const kPurshasable = "purshasable";
+  static const kPointCost = "points_cost";
+  // static const kType = "type";
+  static const kItems = "items";
+  static const kDiscounts = "discounts";
+  static const kPurchase = "purchase";
+
+  ///<------------------------------------------------------------------------------
 }
