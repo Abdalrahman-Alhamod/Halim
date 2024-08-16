@@ -179,4 +179,6 @@ abstract final class AppUrl {
 
   ///<------------------------------------------------------------------------------
   static final transaction = "${baseUrl}transactions";
+  ///<------------------------------------------------------------------------------
+  static final advertisements = "${baseUrl}advertisements";
 }

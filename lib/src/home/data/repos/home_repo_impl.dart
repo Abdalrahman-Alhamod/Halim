@@ -18,7 +18,7 @@ class HomeRepoImpl extends HomeRepo {
   );
 
   @override
-  Future<ApiResponse<BaseModel>> getSubcategories(int categoryId) async {
+  Future<ApiResponse<BaseModel>> getSubcategories(int? categoryId) async {
     try {
       final response = await _homeRemoteDateSource.getSubcategories(categoryId);
       return ApiResponse.success(
@@ -42,12 +42,18 @@ class HomeRepoImpl extends HomeRepo {
       return ApiResponse.failure(NetworkExceptions.getException(error));
     }
   }
- 
 
   @override
-  Future<ApiResponse<BaseModel>> getAllCourses(int subCategoryId) async {
+  Future<ApiResponse<BaseModel>> getAllCourses({
+    required int subCategoryId,
+    int? categoryId,
+    required int? pageKay,
+  }) async {
     try {
-      final response = await _homeRemoteDateSource.getAllCourses( subCategoryId);
+      final response = await _homeRemoteDateSource.getAllCourses(
+          subCategoryId: subCategoryId,
+          categoryId: categoryId,
+          pageKay: pageKay);
       return ApiResponse.success(response);
     } catch (error) {
       return ApiResponse.failure(NetworkExceptions.getException(error));
@@ -55,12 +61,31 @@ class HomeRepoImpl extends HomeRepo {
   }
 
   @override
-  Future<ApiResponse<BaseModel>> getAllMentors() async {
+  Future<ApiResponse<BaseModel>> getAllMentors({
+    required int? pageKay,
+  }) async {
     try {
-      final response = await _homeRemoteDateSource.getAllMentors();
+      final response =
+          await _homeRemoteDateSource.getAllMentors(pageKay: pageKay);
       return ApiResponse.success(response);
     } catch (error) {
       return ApiResponse.failure(NetworkExceptions.getException(error));
+    }
+  }
+  
+  @override
+  Future<ApiResponse<BaseModel>> getAdvertisements() async {
+    try {
+      final response = await _homeRemoteDateSource.getAdvertisements();
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
     }
   }
 }

@@ -8,7 +8,7 @@ import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/themes/app_colors.dart';
 
 class ChooseYourSpecialtyWithRegister extends StatefulWidget {
-  final Function(String) onSpecialtySelected;
+  final Function(CategoryModel) onSpecialtySelected;
 
   const ChooseYourSpecialtyWithRegister({
     super.key,
@@ -103,7 +103,8 @@ class ChooseYourSpecialtyWithRegisterState
                                       filteredCategories[index].name ?? '';
                                 });
                                 widget.onSpecialtySelected(
-                                    filteredCategories[index].name ?? '');
+                                  filteredCategories[index],
+                                );
                                 Navigator.of(context).pop();
                               },
                             );

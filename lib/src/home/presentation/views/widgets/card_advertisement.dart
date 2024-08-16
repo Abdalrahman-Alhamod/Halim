@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/assets/app_images.dart';
+import 'package:halim/core/widgets/network_image_loader.dart';
+import 'package:halim/src/home/data/models/adv_model.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class CardAdvertisement extends StatefulWidget {
-  const CardAdvertisement({super.key});
+  final List<AdvModel> advModels;
+
+  const CardAdvertisement({super.key, required this.advModels});
 
   @override
   State<CardAdvertisement> createState() => _CardAdvertisementState();
@@ -13,30 +16,46 @@ class CardAdvertisement extends StatefulWidget {
 
 class _CardAdvertisementState extends State<CardAdvertisement> {
   final CarouselController _carouselController = CarouselController();
-  final List<String> _imageUrls = [
-    AppImages.testCourseCover,
-    AppImages.testCertificate,
-    AppImages.testCourseCover,
-  ];
   int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
 
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: Column(
-        children: [
-          _buildImageCarousel(screenSize, context),
-          const SizedBox(height: 10),
-          _buildPageIndicator(context),
-        ],
-      ),
+    // إنشاء قائمة من عناوين الصور باستخدام `map`
+    List<String> imageUrls = widget.advModels
+        .map((advModel) => advModel.image ?? "")
+        .where((image) => image.isNotEmpty)
+        .toList();
+
+    return Column(
+      children: [
+        _buildImageCarousel(screenSize, context, imageUrls),
+        const SizedBox(height: 10),
+        _buildPageIndicator(context, imageUrls.length),
+      ],
     );
   }
 
-  Widget _buildImageCarousel(Size screenSize, BuildContext context) {
+  Widget _buildImageCarousel(
+      Size screenSize, BuildContext context, List<String> imageUrls) {
+    if (imageUrls.isEmpty) {
+      return Container(
+        width: screenSize.width * 0.90,
+        height: 150,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.grey[200],
+        ),
+        child: Center(
+          child: Text(
+            'No images available',
+            style: TextStyle(color: Colors.grey[600]),
+          ),
+        ),
+      );
+    }
+
     return Container(
       width: screenSize.width * 0.90,
       height: 150,
@@ -47,18 +66,17 @@ class _CardAdvertisementState extends State<CardAdvertisement> {
         borderRadius: BorderRadius.circular(20),
         child: CarouselSlider.builder(
           carouselController: _carouselController,
-          itemCount: _imageUrls.length,
+          itemCount: imageUrls.length,
           itemBuilder: (context, index, realIndex) {
-            return Image.asset(
-              _imageUrls[index],
+            return NetworkImageLoader(
+              imageUrl: imageUrls[index],
               width: double.infinity,
               height: double.infinity,
-              fit: BoxFit.cover,
             );
           },
           options: CarouselOptions(
             autoPlay: true,
-            autoPlayInterval: const Duration(seconds: 8),
+            autoPlayInterval: const Duration(seconds: 20),
             enlargeCenterPage: true,
             viewportFraction: 1.0,
             onPageChanged: (index, reason) {
@@ -72,20 +90,25 @@ class _CardAdvertisementState extends State<CardAdvertisement> {
     );
   }
 
-  Widget _buildPageIndicator(BuildContext context) {
-    return AnimatedSmoothIndicator(
-      activeIndex: _currentIndex,
-      count: _imageUrls.length,
-      effect: ExpandingDotsEffect(
-        activeDotColor: context.isDarkMode ? Colors.blue : Colors.blue,
-        dotColor: Colors.grey,
-        dotHeight: 8,
-        dotWidth: 8,
-        spacing: 8,
+  Widget _buildPageIndicator(BuildContext context, int count) {
+    if (count <= 1) return const SizedBox.shrink();
+
+    return Padding(
+      padding: const EdgeInsets.only(right: 8.0),
+      child: AnimatedSmoothIndicator(
+        activeIndex: _currentIndex,
+        count: count,
+        effect: ExpandingDotsEffect(
+          activeDotColor: context.isDarkMode ? Colors.blue : Colors.blue,
+          dotColor: Colors.grey,
+          dotHeight: 8,
+          dotWidth: 8,
+          spacing: 8,
+        ),
+        onDotClicked: (index) {
+          _carouselController.animateToPage(index);
+        },
       ),
-      onDotClicked: (index) {
-        _carouselController.animateToPage(index);
-      },
     );
   }
 }

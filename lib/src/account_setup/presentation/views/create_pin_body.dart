@@ -20,12 +20,11 @@ class CreatePinBody extends StatefulWidget {
 
 class CreatePinBodyState extends State<CreatePinBody> {
   late final List<TextEditingController> _pinControllers;
-  late dynamic searchCubit;
   @override
   void initState() {
     _pinControllers = List.generate(4, (_) => TextEditingController());
-    searchCubit = context.read<SearchCubit>();
-    searchCubit.getSubcategories();
+    // searchCubit = context.read<SearchCubit>();
+    context.read<SearchCubit>().getSubcategories();
 
     super.initState();
   }
@@ -98,8 +97,11 @@ class CreatePinBodyState extends State<CreatePinBody> {
                   onPressed: () {
                     int pinCode = _getPinCode();
                     context.read<AccountSetupCubit>().student.pin = pinCode;
+                    context.read<SearchCubit>().subcategories.removeWhere(
+                          (category) => category.id == -1,
+                        );
                     ChooseInterestsBottomSheet.chooseInterestsBottomSheet(
-                        context, searchCubit.subcategories);
+                        context, context.read<SearchCubit>().subcategories);
                   },
                   title: LocaleKeys.FillYourProfile_continue.tr(),
                   width: MediaQuery.of(context).size.width * 0.90,

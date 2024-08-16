@@ -179,9 +179,9 @@ class FillProfileBodyState extends State<FillProfileBody> {
         if (showSpecialtyRegister)
           ChooseYourSpecialtyWithRegister(
             onSpecialtySelected: (specialty) {
-              studentInfModel.major=Major(name: specialty);
+              studentInfModel.major = Major(name: specialty.name ?? '');
 
-              isCategorySelected = specialty.isNotEmpty;
+              isCategorySelected = specialty.name?.isNotEmpty ?? false;
               _checkFormValidity();
             },
           ),

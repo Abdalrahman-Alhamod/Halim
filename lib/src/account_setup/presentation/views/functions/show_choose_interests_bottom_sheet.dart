@@ -108,14 +108,13 @@ class ChooseInterestsBottomSheet {
                         // Navigator.pop(context);
                         context.read<AccountSetupCubit>().student.interests =
                             selectedCategories
-                                .map((subcategory) => Interests(id: subcategory.id))
+                                .map((subcategory) =>
+                                    Interests(id: subcategory.id))
                                 .whereType<Interests>()
                                 .toList();
                         context
                             .read<AccountSetupCubit>()
                             .postInformationStudent();
-                  
-                       
                       },
                       title: LocaleKeys.FillYourProfile_Interests_continue.tr(),
                       width: MediaQuery.of(context).size.width * 0.40,

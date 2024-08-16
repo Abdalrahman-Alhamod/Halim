@@ -25,7 +25,7 @@ class AccountSetupCubit extends Cubit<AccountSetupState> {
 
   StudentInfomationsModel student = StudentInfomationsModel();
   int pin = 0;
-  List<int>? interests = [];
+  // List<int>? sinterests = [];
   Future<void> postInformationStudent() async {
     emit(const AccountSetupState.loading());
     final response = await _accountSetupRepo.postInformationStudent(student);

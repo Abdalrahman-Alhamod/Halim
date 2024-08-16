@@ -2,21 +2,20 @@
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/src/home/data/models/student_profile_model.dart';
-import '../../../../core/themes/app_colors.dart';
+import 'package:halim/core/widgets/avatar_image_loader.dart';
+import 'package:halim/src/home/presentation/manager/home_cubit/home_cubit.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/app_route.dart';
 import '../../../../core/utils/context_extensions.dart';
 import '../../../achievements/presentation/views/widgets/achievemenets_numbers.dart';
-import '../../../mentor_details/presentation/views/widgets/sections/mentor_courses_section.dart';
 
 class ProfileStudentPersonalView extends StatelessWidget {
   const ProfileStudentPersonalView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final StudentProfileModel studentModel = StudentProfileModel();
 
     return Scaffold(
       appBar: AppBar(
@@ -54,27 +53,31 @@ class ProfileStudentPersonalView extends StatelessWidget {
           children: [
             Column(
               children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(studentModel.image ?? ''),
-                  radius: 70,
+                const SizedBox(
+                  height: 40,
+                ),
+                AvatarImageLoader(
+                  imageUrl:
+                      context.read<HomeCubit>().studentProfileModel!.image,
+                  radius: 90,
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
                 Text(
-                  studentModel.firstName ?? '',
+                  "${context.read<HomeCubit>().studentProfileModel!.firstName} ${context.read<HomeCubit>().studentProfileModel!.lastName} ",
                   style: const TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 25,
                 ),
                 Text(
-                  "${LocaleKeys.StudentProfile_Student.tr()} ${studentModel.educationLevel} ",
+                  "${LocaleKeys.StudentProfile_Student.tr()} ${context.read<HomeCubit>().studentProfileModel!.educationLevel} ",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 20,
                     color: context.isDarkMode
                         ? Colors.grey.shade400
                         : Colors.grey.shade600,
@@ -88,41 +91,15 @@ class ProfileStudentPersonalView extends StatelessWidget {
             ),
             AchievementsNumbers(
               rank: '1st',
-              points: studentModel.pointsBalance ?? 0,
+              points: context
+                      .read<HomeCubit>()
+                      .studentProfileModel!
+                      .pointsBalance ??
+                  0,
               totalHours: 683,
               totalCourses: 7,
               contributions: 120,
               monthlyRate: 56.3,
-            ),
-            Container(
-              alignment: AlignmentDirectional.topStart,
-              decoration: const BoxDecoration(
-                  border: Border.symmetric(
-                horizontal: BorderSide(
-                  color: AppColors.primaryColor,
-                  width: 3.5,
-                ),
-              )),
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    LocaleKeys.StudentProfile_FollowCourses.tr(),
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                        color: AppColors.primaryColor,
-                        fontSize: 21,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12.0),
-              child: MentorCoursesSection(),
             ),
           ],
         ),

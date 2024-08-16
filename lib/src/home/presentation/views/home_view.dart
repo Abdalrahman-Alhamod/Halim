@@ -5,8 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
 import 'package:halim/core/widgets/empty_view.dart';
 import 'package:halim/core/widgets/shimmer_box.dart';
-import 'package:halim/core/widgets/toast_widget.dart';
 import 'package:halim/src/home/presentation/manager/home_cubit/home_cubit.dart';
+import 'package:halim/src/home/presentation/views/widgets/card_advertisement_local.dart';
 import 'package:halim/src/home/presentation/views/widgets/card_course_loading_list.dart';
 import 'package:halim/src/home/presentation/views/widgets/category_widget.dart';
 import 'package:halim/src/home/presentation/views/widgets/mentor_card_loading_horizental.dart';
@@ -38,10 +38,11 @@ class _HomeViewState extends State<HomeView> {
   void initState() {
     super.initState();
     homeCubit = context.read<HomeCubit>();
-    homeCubit.getAllCourses();
+    homeCubit.getHomeCourses();
     homeCubit.getAllMentors();
-    homeCubit.getInfStudent(studentId: 1061);
+    homeCubit.getInfStudent(studentId: 1071);
     homeCubit.getSubcategories(categoryId: 1);
+    homeCubit.getAdvertisements();
   }
 
   @override
@@ -69,11 +70,8 @@ class _HomeViewState extends State<HomeView> {
                 );
                 return state.maybeWhen(
                   fetchInfStudentLoading: () => const WelcomeCardLoading(),
-                  fetchInfStudentFailure: (networkException) => ToastWidget(
-                    title:
-                        'Error: ${networkException?.toString().substring(0, 28)}',
-                    color: Colors.red,
-                  ),
+                  fetchInfStudentFailure: (networkException) =>
+                      const SizedBox.shrink(),
                   fetchInfStudentSuccess: (data, message) {
                     return WelcomeCard(
                       name: studentProfileModel.firstName,
@@ -96,35 +94,68 @@ class _HomeViewState extends State<HomeView> {
             child: Column(
               children: [
                 BlocBuilder<HomeCubit, HomeState>(
-                  buildWhen: (previous, current) =>
-                      current is FetchInfStudentLoading ||
-                      current is FetchInfStudentSuccess ||
-                      current is FetchInfStudentFailure,
-                  builder: (context, state) {
-                    return state.whenOrNull(
-                          fetchInfStudentLoading: () => const ShimmerBox(
-                            radius: 15,
-                            width: 330,
-                            height: 130,
-                          ),
-                          fetchCoursesFailure: (networkException) =>
-                              ToastWidget(
-                            title:
-                                'Error: ${networkException?.toString().substring(0, 28)}',
-                            color: Colors.red,
-                          ),
-                          fetchInfStudentSuccess: (data, message) =>
-                              MotivationalCounterWidget(
-                                  points: data.pointsBalance ?? 355),
-                        ) ??
-                        const ShimmerBox(
-                          radius: 15,
-                          width: 330,
+                    buildWhen: (previous, current) =>
+                        current is FetchInfStudentLoading ||
+                        current is FetchInfStudentSuccess ||
+                        current is FetchInfStudentFailure,
+                    builder: (context, state) {
+                      return state.maybeWhen(
+                        fetchInfStudentLoading: () => const ShimmerBox(
+                          radius: 20,
+                          width: 350,
                           height: 130,
+                        ),
+                        fetchInfStudentFailure: (networkException) =>
+                            const SizedBox.shrink(),
+                        fetchInfStudentSuccess: (data, message) {
+                          return MotivationalCounterWidget(
+                              points: data.pointsBalance ?? 355);
+                        },
+                        orElse: () {
+                          return const ShimmerBox(
+                            radius: 20,
+                            width: 350,
+                            height: 130,
+                          );
+                        },
+                      );
+                    }),
+                const SizedBox(
+                  height: 10,
+                ),
+                BlocBuilder<HomeCubit, HomeState>(
+                  buildWhen: (previous, current) =>
+                      current is FetchAdvertisementsLoading ||
+                      current is FetchAdvertisementsSuccess ||
+                      current is FetchAdvertisementsFailure,
+                  builder: (context, state) {
+                    return state.maybeWhen(
+                      fetchAdvertisementsFailure: (networkException) =>
+                          const SizedBox.shrink(),
+                      fetchAdvertisementsLoading: () => const ShimmerBox(
+                        radius: 20,
+                        width: 350,
+                        height: 150,
+                      ),
+                      fetchAdvertisementsSuccess: (advertisements, message) {
+                        return Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 10.0),
+                            child: CardAdvertisement(
+                              advModels: advertisements,
+                            ),
+                          ),
                         );
+                      },
+                      orElse: () => const CardAdvertisementLocal(),
+                    );
                   },
                 ),
-                const CardAdvertisement(),
+                const SizedBox(
+                  height: 10,
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Row(
@@ -140,7 +171,7 @@ class _HomeViewState extends State<HomeView> {
                       const Spacer(),
                       InkWell(
                         onTap: () {
-                          GoRouter.of(context).push(AppRoute.kPopularCourses);
+                          GoRouter.of(context).push(AppRoute.kTopMentors);
                         },
                         child: Text(
                           LocaleKeys.HomePage_Home_seeAll.tr(),
@@ -163,16 +194,13 @@ class _HomeViewState extends State<HomeView> {
                     return state.maybeWhen(
                       fetchMentorsLoading: () =>
                           const CircularProgressIndicator(),
-                      fetchMentorsFailure: (networkException) => ToastWidget(
-                        title:
-                            'Error: ${networkException?.toString().substring(0, 28)}',
-                        color: Colors.red,
-                      ),
+                      fetchMentorsFailure: (networkException) =>
+                          const SizedBox.shrink(),
                       fetchMentorsSuccess: (data, message) {
                         return Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: SizedBox(
-                            height: 100,
+                            height: 95,
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               physics: const ScrollPhysics(),
@@ -180,9 +208,6 @@ class _HomeViewState extends State<HomeView> {
                               itemBuilder: (context, index) => TeacherAvatar(
                                 mentorCardModel: data[index],
                               ),
-                              // CardCourse(
-                              //   courseCardModel: data[index],
-                              // );
                             ),
                           ),
                         );
@@ -195,6 +220,9 @@ class _HomeViewState extends State<HomeView> {
                       },
                     );
                   },
+                ),
+                const SizedBox(
+                  height: 8,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -241,8 +269,7 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       fetchSubcategoriesFailure: (networkException) =>
-                          const Text(
-                              'LocaleKeys.error_loading_subcategories.tr()'),
+                          const SizedBox.shrink(),
                       fetchSubcategoriesSuccess: (data, message) {
                         List<SubcategoryModel> subcategories = List.from(data);
                         subcategories.insert(0,
@@ -267,7 +294,9 @@ class _HomeViewState extends State<HomeView> {
                                     onTap: () {
                                       context.read<HomeCubit>().subCategoryId =
                                           subcategories[index].id ?? 0;
-                                      context.read<HomeCubit>().getAllCourses();
+                                      context
+                                          .read<HomeCubit>()
+                                          .getHomeCourses();
                                       setState(() {
                                         homeCubit.selectCategory(index);
                                       });
@@ -283,7 +312,7 @@ class _HomeViewState extends State<HomeView> {
                           padding: EdgeInsets.symmetric(
                               horizontal: 15.0, vertical: 10),
                           child: SizedBox(
-                            height: 120,
+                            height: 40,
                             child: SubcategoriesButtonsLoadingList(),
                           ),
                         );
@@ -298,11 +327,13 @@ class _HomeViewState extends State<HomeView> {
                       current is FetchCoursesFailure,
                   builder: (context, state) {
                     return state.maybeWhen(
-                        fetchCoursesLoading: () =>
-                            const Center(child: CircularProgressIndicator()),
-                        fetchCoursesFailure: (networkException) => const Center(
-                            child:
-                                Text('LocaleKeys.error_loading_courses.tr()')),
+                        fetchCoursesLoading: () => const Center(
+                                child: SizedBox(
+                              height: 100,
+                              child: Center(child: CircularProgressIndicator()),
+                            )),
+                        fetchCoursesFailure: (networkException) =>
+                            const SizedBox.shrink(),
                         fetchCoursesSuccess: (data, message) {
                           return data.isEmpty
                               ? const EmptyView()

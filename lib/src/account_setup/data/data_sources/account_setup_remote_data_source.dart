@@ -3,6 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:halim/core/data/model/base_model.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
 import 'package:halim/core/data/sources/remote/services/api_services.dart';
+import 'package:halim/core/utils/logger.dart';
 import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
 
 class AccountSetupRemoteDataSource {
@@ -20,9 +21,19 @@ class AccountSetupRemoteDataSource {
       'PIN': student.pin ?? '',
       'gender': student.gender?.toLowerCase(),
       'email': student.email ?? '',
-      'interests':jsonEncode( student.interests?.map((interest) => interest.id).toList()),
-      'major': student.major?.name ?? ''
+      'interests': jsonEncode(
+          student.interests?.map((interest) => interest.id).toList()),
     };
+    if (student.major?.name?.isNotEmpty ?? false) {
+      map.addEntries(
+        [
+          MapEntry(
+            'major',
+            student.major?.name ?? '',
+          )
+        ],
+      );
+    }
     if (student.image != null) {
       final imageName = student.image?.split('/').last;
       map.addEntries([
@@ -35,7 +46,7 @@ class AccountSetupRemoteDataSource {
     }
 
     FormData formData = FormData.fromMap(map);
-
+    logger.e(map);
     final response = await _apiServices.post(
       '${AppUrl.register}/${student.id ?? 0}',
       formData: formData,

@@ -5,7 +5,7 @@ part 'student_infomations_model.g.dart';
 
 @unfreezed
 class StudentInfomationsModel with _$StudentInfomationsModel {
-   factory StudentInfomationsModel({
+  factory StudentInfomationsModel({
     @JsonKey(name: 'id') int? id,
     @JsonKey(name: 'first_name') String? firstName,
     @JsonKey(name: 'last_name') String? lastName,
@@ -27,7 +27,7 @@ class StudentInfomationsModel with _$StudentInfomationsModel {
 
 @unfreezed
 class Major with _$Major {
-   factory Major({
+  factory Major({
     @JsonKey(name: 'id') int? id,
     @JsonKey(name: 'name') String? name,
   }) = _Major;
@@ -37,7 +37,7 @@ class Major with _$Major {
 
 @unfreezed
 class Interests with _$Interests {
- factory Interests({
+  factory Interests({
     @JsonKey(name: 'id') int? id,
     @JsonKey(name: 'name') String? name,
   }) = _Interests;
