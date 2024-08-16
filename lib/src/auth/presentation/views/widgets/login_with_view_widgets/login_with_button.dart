@@ -7,14 +7,15 @@ class LoginWithButton extends StatelessWidget {
   const LoginWithButton({
     super.key,
     required this.icon,
-    required this.label,
+    required this.label, required this.onPressed,
   });
   final Widget icon;
   final String label;
+  final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: context.isDarkMode
             ? AppColors.loginWithButtonDarkColor

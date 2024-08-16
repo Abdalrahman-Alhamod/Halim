@@ -91,4 +91,5 @@ abstract final class PrintTitles {
   static const blocObserver = 'Bloc Observer';
   static const dioInterceptors = 'Dio Interceptors';
   static const websocketServices = 'WebSocket Services';
+  static const firebaseUril = 'Firebase Util';
 }

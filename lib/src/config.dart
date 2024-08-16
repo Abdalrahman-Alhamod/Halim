@@ -1,21 +1,34 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:halim/core/data/sources/local/app_storage.dart';
+import 'package:halim/core/data/sources/remote/firebase_util.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../core/constants/app_strings.dart';
 import '../core/utils/custom_bloc_observer.dart';
 import '../core/utils/locator.dart';
 import '../core/utils/logger.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+import '../firebase_options.dart';
 
 Future<void> initAppConfig() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
   try {
+    WidgetsFlutterBinding.ensureInitialized();
     await EasyLocalization.ensureInitialized();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    FirebaseMessaging.onBackgroundMessage(
+      FirebaseUtil.firebaseMessagingBackgroundHandler,
+    );
+    await FirebaseUtil.requestPermissions();
+    await FirebaseUtil.getRegisterationToken();
+    FirebaseUtil.handleForgroundMessages();
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     await Hive.initFlutter(AppStrings.appTitle);
     await AppStorage.instance.init();

@@ -51,3 +51,8 @@ pubspec.lock
 # "JSON to Dart Model" generator tracker files locations.
 /.json_models/
 models.jsonc
+
+# google-services.json
+# GoogleService-Info.plist
+# firebase_options.dart
+# firebase.json

@@ -1,8 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../../core/data/sources/remote/firebase_util.dart';
 import '../../../../../../core/utils/app_route.dart';
 import '../../../../../../core/utils/context_extensions.dart';
+import '../../../../../../core/utils/logger.dart';
 import '../shared_widgets/divider_with_text.dart';
 
 import '../../../../../../core/assets/app_images.dart';
@@ -20,9 +22,11 @@ class LoginWithBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const Spacer(
+            flex: 2,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -34,6 +38,9 @@ class LoginWithBody extends StatelessWidget {
               context.isEnglish ? Container() : const SizedBox(width: 30),
             ],
           ),
+          const Spacer(
+            flex: 1,
+          ),
           Text(
             LocaleKeys.Auth_startMessage.tr(),
             style: const TextStyle(
@@ -41,30 +48,47 @@ class LoginWithBody extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          LoginWithButton(
-            icon: Image.asset(
-              AppImages.facebook,
-              width: 24,
-            ),
-            label: LocaleKeys.Auth_continueWithFacebook.tr(),
+          const Spacer(
+            flex: 1,
           ),
+          // LoginWithButton(
+          //   icon: Image.asset(
+          //     AppImages.facebook,
+          //     width: 24,
+          //   ),
+          //   label: LocaleKeys.Auth_continueWithFacebook.tr(),
+          //   onPressed: () {},
+          // ),
           LoginWithButton(
             icon: Image.asset(
               AppImages.google,
               width: 24,
             ),
             label: LocaleKeys.Auth_continueWithGoogle.tr(),
+            onPressed: () async {
+              final userCredential = await FirebaseUtil.signInWithGoogle();
+              if (userCredential != null) {
+                logger.e(userCredential.user!);
+              }
+            },
           ),
-          LoginWithButton(
-            icon: Icon(
-              Icons.apple,
-              size: 32,
-              color: Theme.of(context).colorScheme.inverseSurface,
-            ),
-            label: LocaleKeys.Auth_continueWithApple.tr(),
+          const Spacer(
+            flex: 1,
           ),
+          // LoginWithButton(
+          //   icon: Icon(
+          //     Icons.apple,
+          //     size: 32,
+          //     color: Theme.of(context).colorScheme.inverseSurface,
+          //   ),
+          //   label: LocaleKeys.Auth_continueWithApple.tr(),
+          //   onPressed: () {},
+          // ),
           DividerWithText(
             title: LocaleKeys.Auth_or.tr(),
+          ),
+          const Spacer(
+            flex: 1,
           ),
           CustomElevatedButton(
             onPressed: () {
@@ -73,7 +97,13 @@ class LoginWithBody extends StatelessWidget {
             title: LocaleKeys.Auth_signInWithPassword.tr(),
             width: 380,
           ),
-          const DontHaveAnAccountTextButton()
+          const Spacer(
+            flex: 1,
+          ),
+          const DontHaveAnAccountTextButton(),
+          const Spacer(
+            flex: 2,
+          ),
         ],
       ),
     );
