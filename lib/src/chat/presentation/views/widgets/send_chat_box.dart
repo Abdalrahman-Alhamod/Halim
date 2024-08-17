@@ -35,7 +35,7 @@ class SendChatBox extends StatelessWidget {
           children: [
             Flexible(
               child: Text(
-                message.text ?? '',
+                message.content ?? '',
                 style: const TextStyle(color: Colors.white),
               ),
             ),

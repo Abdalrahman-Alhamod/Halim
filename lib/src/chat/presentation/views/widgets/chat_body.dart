@@ -112,9 +112,9 @@ class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
                         controller: _scrollController,
                         itemCount: _messages.length,
                         itemBuilder: (context, index) {
-                          return _messages[index].sender == widget.senderId
+                          return _messages[index].senderId == widget.senderId
                               ? SendChatBox(message: _messages[index])
-                              : _messages[index].sender == widget.recieverId
+                              : _messages[index].senderId == widget.recieverId
                                   ? RecieveChatBox(message: _messages[index])
                                   : const SizedBox();
                         },
@@ -148,9 +148,9 @@ class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
                     setState(() {
                       _messages.add(
                         ChatMessageModel(
-                          sender: widget.senderId,
+                          senderId: widget.senderId,
                           createdAt: DateTime.now(),
-                          text: ' . . . ',
+                          content: ' . . . ',
                           id: '-1',
                         ),
                       );

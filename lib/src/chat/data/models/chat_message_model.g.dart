@@ -10,8 +10,8 @@ _$ChatMessageModelImpl _$$ChatMessageModelImplFromJson(
         Map<String, dynamic> json) =>
     _$ChatMessageModelImpl(
       createdAt: _fromTimestamp((json['created_at'] as num?)?.toInt()),
-      sender: (json['sender'] as num?)?.toInt(),
-      text: json['text'] as String?,
+      senderId: (json['sender_id'] as num?)?.toInt(),
+      content: json['content'] as String?,
       id: json['id'] as String?,
       chatId: json['chatId'] as String?,
     );
@@ -20,8 +20,8 @@ Map<String, dynamic> _$$ChatMessageModelImplToJson(
         _$ChatMessageModelImpl instance) =>
     <String, dynamic>{
       'created_at': _toTimestamp(instance.createdAt),
-      'sender': instance.sender,
-      'text': instance.text,
+      'sender_id': instance.senderId,
+      'content': instance.content,
       'id': instance.id,
       'chatId': instance.chatId,
     };

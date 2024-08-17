@@ -7,7 +7,6 @@ import 'dart:typed_data';
 import 'package:halim/core/data/model/base_model.dart';
 import 'package:halim/core/data/model/base_models.dart';
 import 'package:halim/core/data/sources/remote/services/web_socket_service.dart';
-import 'package:halim/core/functions/fake_delay.dart';
 import 'package:halim/src/chat/data/models/chat_broadcast_token_model.dart';
 
 import '../../../../core/data/model/socket_data_model.dart';
@@ -198,7 +197,7 @@ class ChatRemoteDataSource {
       '${AppUrl.chats}/$senderId/${AppUrl.kMessages}',
       hasToken: true,
     );
-    await fakeDelay();
+
     return BaseModel.fromJson(
       response,
       (json) => BaseModels.fromJson(

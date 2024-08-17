@@ -37,8 +37,8 @@ class ChatCubit extends Cubit<ChatState> {
         emit(
           ChatState.sendMessageSuccess(
             ChatMessageModel(
-              sender: senderId,
-              text: message,
+              senderId: senderId,
+              content: message,
               createdAt: DateTime.now(),
             ),
           ),

@@ -36,7 +36,7 @@ class RecieveChatBox extends StatelessWidget {
           children: [
             Flexible(
               child: Text(
-                message.text ?? '',
+                message.content ?? '',
                 style: const TextStyle(),
               ),
             ),

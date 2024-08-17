@@ -8,8 +8,8 @@ class ChatMessageModel with _$ChatMessageModel {
   const factory ChatMessageModel({
     @JsonKey(name: 'created_at', fromJson: _fromTimestamp, toJson: _toTimestamp)
     DateTime? createdAt,
-    int? sender,
-    String? text,
+    @JsonKey(name: 'sender_id') int? senderId,
+    String? content,
     String? id,
     String? chatId,
   }) = _ChatMessageModel;

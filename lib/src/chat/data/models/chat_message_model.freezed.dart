@@ -22,8 +22,9 @@ ChatMessageModel _$ChatMessageModelFromJson(Map<String, dynamic> json) {
 mixin _$ChatMessageModel {
   @JsonKey(name: 'created_at', fromJson: _fromTimestamp, toJson: _toTimestamp)
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  int? get sender => throw _privateConstructorUsedError;
-  String? get text => throw _privateConstructorUsedError;
+  @JsonKey(name: 'sender_id')
+  int? get senderId => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   String? get chatId => throw _privateConstructorUsedError;
 
@@ -43,8 +44,8 @@ abstract class $ChatMessageModelCopyWith<$Res> {
       {@JsonKey(
           name: 'created_at', fromJson: _fromTimestamp, toJson: _toTimestamp)
       DateTime? createdAt,
-      int? sender,
-      String? text,
+      @JsonKey(name: 'sender_id') int? senderId,
+      String? content,
       String? id,
       String? chatId});
 }
@@ -63,8 +64,8 @@ class _$ChatMessageModelCopyWithImpl<$Res, $Val extends ChatMessageModel>
   @override
   $Res call({
     Object? createdAt = freezed,
-    Object? sender = freezed,
-    Object? text = freezed,
+    Object? senderId = freezed,
+    Object? content = freezed,
     Object? id = freezed,
     Object? chatId = freezed,
   }) {
@@ -73,13 +74,13 @@ class _$ChatMessageModelCopyWithImpl<$Res, $Val extends ChatMessageModel>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      sender: freezed == sender
-          ? _value.sender
-          : sender // ignore: cast_nullable_to_non_nullable
+      senderId: freezed == senderId
+          ? _value.senderId
+          : senderId // ignore: cast_nullable_to_non_nullable
               as int?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
               as String?,
       id: freezed == id
           ? _value.id
@@ -105,8 +106,8 @@ abstract class _$$ChatMessageModelImplCopyWith<$Res>
       {@JsonKey(
           name: 'created_at', fromJson: _fromTimestamp, toJson: _toTimestamp)
       DateTime? createdAt,
-      int? sender,
-      String? text,
+      @JsonKey(name: 'sender_id') int? senderId,
+      String? content,
       String? id,
       String? chatId});
 }
@@ -123,8 +124,8 @@ class __$$ChatMessageModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? createdAt = freezed,
-    Object? sender = freezed,
-    Object? text = freezed,
+    Object? senderId = freezed,
+    Object? content = freezed,
     Object? id = freezed,
     Object? chatId = freezed,
   }) {
@@ -133,13 +134,13 @@ class __$$ChatMessageModelImplCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      sender: freezed == sender
-          ? _value.sender
-          : sender // ignore: cast_nullable_to_non_nullable
+      senderId: freezed == senderId
+          ? _value.senderId
+          : senderId // ignore: cast_nullable_to_non_nullable
               as int?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
               as String?,
       id: freezed == id
           ? _value.id
@@ -162,8 +163,8 @@ class _$ChatMessageModelImpl
       {@JsonKey(
           name: 'created_at', fromJson: _fromTimestamp, toJson: _toTimestamp)
       this.createdAt,
-      this.sender,
-      this.text,
+      @JsonKey(name: 'sender_id') this.senderId,
+      this.content,
       this.id,
       this.chatId});
 
@@ -174,9 +175,10 @@ class _$ChatMessageModelImpl
   @JsonKey(name: 'created_at', fromJson: _fromTimestamp, toJson: _toTimestamp)
   final DateTime? createdAt;
   @override
-  final int? sender;
+  @JsonKey(name: 'sender_id')
+  final int? senderId;
   @override
-  final String? text;
+  final String? content;
   @override
   final String? id;
   @override
@@ -184,7 +186,7 @@ class _$ChatMessageModelImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ChatMessageModel(createdAt: $createdAt, sender: $sender, text: $text, id: $id, chatId: $chatId)';
+    return 'ChatMessageModel(createdAt: $createdAt, senderId: $senderId, content: $content, id: $id, chatId: $chatId)';
   }
 
   @override
@@ -193,8 +195,8 @@ class _$ChatMessageModelImpl
     properties
       ..add(DiagnosticsProperty('type', 'ChatMessageModel'))
       ..add(DiagnosticsProperty('createdAt', createdAt))
-      ..add(DiagnosticsProperty('sender', sender))
-      ..add(DiagnosticsProperty('text', text))
+      ..add(DiagnosticsProperty('senderId', senderId))
+      ..add(DiagnosticsProperty('content', content))
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('chatId', chatId));
   }
@@ -206,8 +208,9 @@ class _$ChatMessageModelImpl
             other is _$ChatMessageModelImpl &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            (identical(other.sender, sender) || other.sender == sender) &&
-            (identical(other.text, text) || other.text == text) &&
+            (identical(other.senderId, senderId) ||
+                other.senderId == senderId) &&
+            (identical(other.content, content) || other.content == content) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.chatId, chatId) || other.chatId == chatId));
   }
@@ -215,7 +218,7 @@ class _$ChatMessageModelImpl
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, createdAt, sender, text, id, chatId);
+      Object.hash(runtimeType, createdAt, senderId, content, id, chatId);
 
   @JsonKey(ignore: true)
   @override
@@ -237,8 +240,8 @@ abstract class _ChatMessageModel implements ChatMessageModel {
       {@JsonKey(
           name: 'created_at', fromJson: _fromTimestamp, toJson: _toTimestamp)
       final DateTime? createdAt,
-      final int? sender,
-      final String? text,
+      @JsonKey(name: 'sender_id') final int? senderId,
+      final String? content,
       final String? id,
       final String? chatId}) = _$ChatMessageModelImpl;
 
@@ -249,9 +252,10 @@ abstract class _ChatMessageModel implements ChatMessageModel {
   @JsonKey(name: 'created_at', fromJson: _fromTimestamp, toJson: _toTimestamp)
   DateTime? get createdAt;
   @override
-  int? get sender;
+  @JsonKey(name: 'sender_id')
+  int? get senderId;
   @override
-  String? get text;
+  String? get content;
   @override
   String? get id;
   @override
