@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:halim/core/widgets/avatar_image_loader.dart';
 
-import '../data/comment.dart';
+import '../../../../../../../data/models/comment_model.dart';
 
 PreferredSize buildCommentAvatar({
-  required Comment data,
+  required CommentModel data,
   required double radius,
 }) {
   return PreferredSize(
     preferredSize: Size.fromRadius(radius),
-    child: CircleAvatar(
+    child: AvatarImageLoader(
+      imageUrl: data.user?.image,
       radius: radius,
-      backgroundColor: Colors.grey,
-      backgroundImage: AssetImage(data.avatar),
     ),
   );
 }

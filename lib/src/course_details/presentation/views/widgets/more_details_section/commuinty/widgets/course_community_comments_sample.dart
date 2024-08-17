@@ -1,10 +1,11 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/widgets/refresh_base.dart';
+import 'package:halim/src/course_details/data/models/comment_model.dart';
+import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
 
-import '../../../../../../../../core/assets/app_images.dart';
-import '../../../../../../../../core/translations/locale_keys.g.dart';
 import '../comments_tree/comments_tree.dart';
-import '../comments_tree/data/comment.dart';
 import 'enter_comment_bottom_sheet.dart';
 
 class CourseCommunityCommentsSample extends StatelessWidget {
@@ -14,104 +15,83 @@ class CourseCommunityCommentsSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(
-          height: 10,
-        ),
-        CommentsTree(
-          onReply: () {
-            showModalBottomSheet(
-              isScrollControlled: true,
-              context: context,
-              builder: (context) => EnterCommentBottomSheet(
-                replyOnUsername:
-                    LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
-                onSend: (comment) {},
-              ),
-            );
-          },
-          rootComment: Comment(
-            avatar: AppImages.testAvatarAbd,
-            userName: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
-            content: LocaleKeys.CourseDetails_Test_Community_comment1.tr(),
-            isApproved: true,
+    List<CommentModel> comments =
+        context.read<CourseDetailsCubit>().comunityComments ?? [];
+    context.read<CourseDetailsCubit>().getCourseCommunityComments();
+
+    return RefreshBase(
+      onRefresh: () async {
+        context.read<CourseDetailsCubit>().getCourseCommunityComments();
+      },
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(8, 8, 8, 100),
+        child: Expanded(
+          child: BlocConsumer<CourseDetailsCubit, CourseDetailsState>(
+            buildWhen: context
+                .read<CourseDetailsCubit>()
+                .buildCourseCommunityCommentsWhen,
+            listenWhen: (previous, current) {
+              return context
+                      .read<CourseDetailsCubit>()
+                      .listenCourseCommunityCommentsWhen(previous, current) ||
+                  context
+                      .read<CourseDetailsCubit>()
+                      .listenPostCommunityCommentWhen(previous, current);
+            },
+            listener: (context, state) {
+              context
+                  .read<CourseDetailsCubit>()
+                  .listenCourseCommunityComments(context, state);
+
+              context
+                  .read<CourseDetailsCubit>()
+                  .listenPostCommunityComment(context, state);
+            },
+            builder: (context, state) {
+              state.whenOrNull(
+                fetchCourseCommunityCommentsSuccess: (data, message) {
+                  comments = data;
+                },
+              );
+              return context
+                  .read<CourseDetailsCubit>()
+                  .buildCourseCommunityComments(
+                    context: context,
+                    state: state,
+                    child: ListView.separated(
+                      itemBuilder: (context, index) => CommentsTree(
+                        rootComment: comments[index],
+                        replies: comments[index].comments ?? [],
+                        onReply: () {
+                          showModalBottomSheet(
+                            isScrollControlled: true,
+                            context: context,
+                            builder: (context) => EnterCommentBottomSheet(
+                              replyOnUsername:
+                                  comments[index].user?.fullName ?? '',
+                              onSend: (comment) {
+                                context.pop();
+                                context
+                                    .read<CourseDetailsCubit>()
+                                    .postCommunityComment(
+                                      content: comment,
+                                      repyToId: comments[index].id ?? 0,
+                                    );
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                      separatorBuilder: (context, index) => const SizedBox(
+                        height: 10,
+                      ),
+                      itemCount: comments.length,
+                    ),
+                  );
+            },
           ),
-          replies: [
-            Comment(
-              avatar: AppImages.testAvatarYassin,
-              userName: LocaleKeys.CourseDetails_Test_Reviews_Names_yassin.tr(),
-              content: LocaleKeys.CourseDetails_Test_Community_reply1.tr(),
-            ),
-            Comment(
-              avatar: AppImages.testAvatarAbd,
-              userName: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
-              content: LocaleKeys.CourseDetails_Test_Community_reply2.tr(),
-            ),
-          ],
         ),
-        const SizedBox(
-          height: 10,
-        ),
-        CommentsTree(
-          onReply: () {
-            showModalBottomSheet(
-              isScrollControlled: true,
-              context: context,
-              builder: (context) => EnterCommentBottomSheet(
-                replyOnUsername:
-                    LocaleKeys.CourseDetails_Test_Reviews_Names_alaa.tr(),
-                onSend: (comment) {},
-              ),
-            );
-          },
-          rootComment: Comment(
-            avatar: AppImages.testAvatarAlaa,
-            userName: LocaleKeys.CourseDetails_Test_Reviews_Names_alaa.tr(),
-            content: LocaleKeys.CourseDetails_Test_Community_comment2.tr(),
-          ),
-          replies: const [],
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        CommentsTree(
-          onReply: () {
-            showModalBottomSheet(
-              isScrollControlled: true,
-              context: context,
-              builder: (context) => EnterCommentBottomSheet(
-                replyOnUsername:
-                    LocaleKeys.CourseDetails_Test_Reviews_Names_obada.tr(),
-                onSend: (comment) {},
-              ),
-            );
-          },
-          rootComment: Comment(
-            avatar: AppImages.testAvatarObada,
-            userName: LocaleKeys.CourseDetails_Test_Reviews_Names_obada.tr(),
-            content: LocaleKeys.CourseDetails_Test_Community_comment3.tr(),
-          ),
-          replies: [
-            Comment(
-              avatar: AppImages.testAvatarAlaa,
-              userName: LocaleKeys.CourseDetails_Test_Reviews_Names_alaa.tr(),
-              content: LocaleKeys.CourseDetails_Test_Community_reply3.tr(),
-            ),
-            Comment(
-              avatar: AppImages.testAvatarAbd,
-              userName: LocaleKeys.CourseDetails_Test_Reviews_Names_abd.tr(),
-              content: LocaleKeys.CourseDetails_Test_Community_reply4.tr(),
-              isApproved: true,
-            ),
-            Comment(
-              avatar: AppImages.emptyAvatar,
-              userName: LocaleKeys.CourseDetails_Test_Reviews_Names_ahmad.tr(),
-              content: LocaleKeys.CourseDetails_Test_Community_reply5.tr(),
-            ),
-          ],
-        ),
-      ],
+      ),
     );
   }
 }

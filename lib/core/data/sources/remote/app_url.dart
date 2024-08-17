@@ -170,4 +170,10 @@ abstract final class AppUrl {
   static const kPurchase = "purchase";
 
   ///<------------------------------------------------------------------------------
+  
+   static const kPosts = "posts";
+   static const kContent = "content";
+   static const kReplyTo = "reply_to";
+
+  ///<------------------------------------------------------------------------------
 }

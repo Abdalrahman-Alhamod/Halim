@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:halim/src/course_details/data/models/comment_model.dart';
 
 import '../../../../../../../../core/themes/app_colors.dart';
-import 'data/comment.dart';
 import 'functions/build_comment_avatar.dart';
 import 'widgets/comment_box.dart';
 import 'widgets/comment_tree_widget.dart';
@@ -14,12 +14,12 @@ class CommentsTree extends StatelessWidget {
     required this.replies,
     required this.onReply,
   });
-  final Comment rootComment;
-  final List<Comment> replies;
+  final CommentModel rootComment;
+  final List<CommentModel> replies;
   final void Function() onReply;
   @override
   Widget build(BuildContext context) {
-    return CommentTreeWidget<Comment, Comment>(
+    return CommentTreeWidget<CommentModel, CommentModel>(
       rootComment,
       replies,
       treeThemeData: const TreeThemeData(

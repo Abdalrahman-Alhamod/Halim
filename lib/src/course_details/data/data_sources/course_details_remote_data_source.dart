@@ -4,6 +4,7 @@ import 'package:halim/core/data/model/base_model.dart';
 import 'package:halim/core/data/model/base_models.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
 import 'package:halim/src/course_details/data/models/anouncement_box_model.dart';
+import 'package:halim/src/course_details/data/models/comment_model.dart';
 import 'package:halim/src/course_details/data/models/course_about_section_model.dart';
 import 'package:halim/src/course_details/data/models/course_lesson_model.dart';
 import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
@@ -391,6 +392,53 @@ class CourseDetailsRemoteDataSource {
       (json) => WalletModel.fromJson(
         json,
       ),
+    );
+  }
+
+  Future<BaseModel> getCourseCommunityComments({
+    required int courseId,
+  }) async {
+    final response = await _apiServices.get(
+      '${AppUrl.courses}/$courseId/${AppUrl.kPosts}',
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => BaseModels.fromJson(
+        json,
+        (itemJson) => CommentModel.fromJson(
+          itemJson,
+        ),
+      ),
+    );
+  }
+
+  Future<BaseModel> postCommunityComment({
+    required int courseId,
+    required String content,
+    int? replyToId,
+  }) async {
+    Map<String, dynamic> body = {
+      AppUrl.kContent: content,
+    };
+    if (replyToId != null) {
+      body.addEntries(
+        [
+          MapEntry<String, dynamic>(
+            AppUrl.kReplyTo,
+            replyToId,
+          ),
+        ],
+      );
+    }
+    final response = await _apiServices.post(
+      '${AppUrl.courses}/$courseId/${AppUrl.kPosts}',
+      body: body,
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => () {},
     );
   }
 }

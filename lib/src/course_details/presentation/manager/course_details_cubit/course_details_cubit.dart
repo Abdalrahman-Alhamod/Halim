@@ -42,6 +42,7 @@ import '../../../../../core/utils/pagination_adapter.dart';
 import '../../../../../core/widgets/custom_loading_indicator.dart';
 import '../../../../shared/model/discount_model.dart';
 import '../../../data/models/certificate_model.dart';
+import '../../../data/models/comment_model.dart';
 import '../../../domain/entities/quiz_result.dart';
 import '../../views/widgets/course_reading_view/course_reading_loading.dart';
 import '../../views/widgets/enroll_course_view/widgets/course_enroll_checkout_loading.dart';
@@ -1353,6 +1354,188 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
         WalletModel wallet,
         String? message,
       ) {
+        logger.print(
+          '$title Success',
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+      },
+      orElse: () {},
+    );
+  }
+
+  List<CommentModel>? comunityComments;
+  Future<void> getCourseCommunityComments() async {
+    emit(
+      const CourseDetailsState.fetchCourseCommunityCommentsLoading(),
+    );
+    final response = await _courseDetailsRepo.getCourseCommunityComments(
+      courseId: courseId,
+    );
+    response.when(
+      success: (data) {
+        comunityComments = List<CommentModel>.from(data.data.list);
+        emit(
+          CourseDetailsState.fetchCourseCommunityCommentsSuccess(
+            comunityComments!,
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          CourseDetailsState.fetchCourseCommunityCommentsFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+  bool buildCourseCommunityCommentsWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchCourseCommunityCommentsLoading: () => true,
+      fetchCourseCommunityCommentsFailure: (_) => true,
+      fetchCourseCommunityCommentsSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  Widget buildCourseCommunityComments({
+    required BuildContext context,
+    required CourseDetailsState state,
+    required Widget child,
+  }) {
+    return state.maybeWhen(
+      fetchCourseCommunityCommentsLoading: () => const CustomLoadingIndicator(),
+      fetchCourseCommunityCommentsSuccess: (_, __) => child,
+      fetchCourseCommunityCommentsFailure: (_) => const SizedBox(),
+      orElse: () => const SizedBox(),
+    );
+  }
+
+  bool listenCourseCommunityCommentsWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      fetchCourseCommunityCommentsLoading: () => true,
+      fetchCourseCommunityCommentsFailure: (_) => true,
+      fetchCourseCommunityCommentsSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenCourseCommunityComments(
+      BuildContext context, CourseDetailsState state) {
+    const title = 'Course Community Comments';
+    state.maybeWhen(
+      fetchCourseCommunityCommentsLoading: () {
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      fetchCourseCommunityCommentsFailure:
+          (NetworkExceptions? networkException) {
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      fetchCourseCommunityCommentsSuccess: (
+        List<CommentModel> data,
+        String? message,
+      ) {
+        logger.print(
+          '$title Success',
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+      },
+      orElse: () {},
+    );
+  }
+
+  Future<void> postCommunityComment({
+    required String content,
+    int? repyToId,
+  }) async {
+    emit(
+      const CourseDetailsState.postCommunityCommentLoading(),
+    );
+    final response = await _courseDetailsRepo.postCommunityComment(
+      courseId: courseId,
+      content: content,
+      replyToId: repyToId,
+    );
+    response.when(
+      success: (data) {
+        emit(
+          CourseDetailsState.postCommunityCommentSuccess(
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          CourseDetailsState.postCommunityCommentFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+  bool listenPostCommunityCommentWhen(
+      CourseDetailsState previous, CourseDetailsState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      postCommunityCommentLoading: () => true,
+      postCommunityCommentFailure: (_) => true,
+      postCommunityCommentSuccess: (_) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenPostCommunityComment(BuildContext context, CourseDetailsState state) {
+    const title = 'Post Community Comment';
+    state.maybeWhen(
+      postCommunityCommentLoading: () {
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      postCommunityCommentFailure: (NetworkExceptions? networkException) {
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      postCommunityCommentSuccess: (
+        String? message,
+      ) {
+        getCourseCommunityComments();
         logger.print(
           '$title Success',
           color: PrintColor.pink,

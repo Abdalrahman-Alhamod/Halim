@@ -104,4 +104,22 @@ class CourseDetailsState with _$CourseDetailsState {
       NetworkExceptions? networkException) = _FetchWalletFailure;
   const factory CourseDetailsState.fetchWalletSuccess(
       WalletModel wallet, String? message) = _FetchWalletSuccess;
+
+  const factory CourseDetailsState.fetchCourseCommunityCommentsLoading() =
+      _FetchCourseCommunityCommentsLoading;
+  const factory CourseDetailsState.fetchCourseCommunityCommentsFailure(
+          NetworkExceptions? networkException) =
+      _FetchCourseCommunityCommentsFailure;
+  const factory CourseDetailsState.fetchCourseCommunityCommentsSuccess(
+          List<CommentModel> data, String? message) =
+      _FetchCourseCommunityCommentsSuccess;
+
+  const factory CourseDetailsState.postCommunityCommentLoading() =
+      _PostCommunityCommentLoading;
+  const factory CourseDetailsState.postCommunityCommentFailure(
+    NetworkExceptions? networkException,
+  ) = _PostCommunityCommentFailure;
+  const factory CourseDetailsState.postCommunityCommentSuccess(
+    String? message,
+  ) = _PostCommunityCommentSuccess;
 }

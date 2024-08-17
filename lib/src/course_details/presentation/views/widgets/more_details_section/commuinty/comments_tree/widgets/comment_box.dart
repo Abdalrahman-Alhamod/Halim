@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../../../../core/themes/app_colors.dart';
-import '../data/comment.dart';
+import '../../../../../../../data/models/comment_model.dart';
 import 'root_comment_action_button.dart';
 
 class CommentBox extends StatelessWidget {
   const CommentBox(
       {super.key, required this.data, this.isRoot = false, this.onReply});
-  final Comment data;
+  final CommentModel data;
   final bool isRoot;
   final void Function()? onReply;
   @override
@@ -20,7 +20,7 @@ class CommentBox extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.primaryColor.withAlpha(30),
             borderRadius: BorderRadius.circular(12),
-            border: data.isApproved
+            border: data.isApproved??false
                 ? Border.all(
                     color: Colors.green,
                   )
@@ -30,7 +30,7 @@ class CommentBox extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                data.userName,
+                data.user?.fullName??'',
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
@@ -40,7 +40,7 @@ class CommentBox extends StatelessWidget {
                 height: 4,
               ),
               Text(
-                data.content,
+                data.content??'',
                 style: const TextStyle(fontSize: 14),
               ),
             ],
@@ -48,7 +48,7 @@ class CommentBox extends StatelessWidget {
         ),
         RootCommentActionButton(
           onReplyPressed: onReply,
-          isApproved: data.isApproved,
+          isApproved: data.isApproved??false,
           isRoot: isRoot,
         ),
       ],

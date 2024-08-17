@@ -55,4 +55,12 @@ abstract class CourseDetailsRepo {
     required String pin,
   });
   Future<ApiResponse<BaseModel>> getWallet();
+  Future<ApiResponse<BaseModel>> getCourseCommunityComments({
+    required int courseId,
+  });
+  Future<ApiResponse<BaseModel>> postCommunityComment({
+    required int courseId,
+    required String content,
+    int? replyToId,
+  });
 }

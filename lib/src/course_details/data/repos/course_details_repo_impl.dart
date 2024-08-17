@@ -333,4 +333,50 @@ class CourseDetailsRepoImpl extends CourseDetailsRepo {
       );
     }
   }
+
+  @override
+  Future<ApiResponse<BaseModel>> getCourseCommunityComments({
+    required int courseId,
+  }) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.getCourseCommunityComments(
+        courseId: courseId,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> postCommunityComment({
+    required int courseId,
+    required String content,
+    int? replyToId,
+  }) async {
+    try {
+      final response =
+          await _courseDetailsRemoteDateSource.postCommunityComment(
+        courseId: courseId,
+        content: content,
+        replyToId: replyToId,
+      );
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
 }
