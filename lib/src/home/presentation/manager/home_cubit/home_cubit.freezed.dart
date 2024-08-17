@@ -256,9 +256,6 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -275,9 +272,6 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -567,9 +561,6 @@ class __$$FetchSubcategoriesLoadingImplCopyWithImpl<$Res>
       _$FetchSubcategoriesLoadingImpl _value,
       $Res Function(_$FetchSubcategoriesLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -865,8 +856,6 @@ class __$$FetchSubcategoriesFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchSubcategoriesFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -880,8 +869,6 @@ class __$$FetchSubcategoriesFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -920,9 +907,7 @@ class _$FetchSubcategoriesFailureImpl implements FetchSubcategoriesFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchSubcategoriesFailureImplCopyWith<_$FetchSubcategoriesFailureImpl>
@@ -1183,10 +1168,7 @@ abstract class FetchSubcategoriesFailure implements HomeState {
       _$FetchSubcategoriesFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchSubcategoriesFailureImplCopyWith<_$FetchSubcategoriesFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1210,8 +1192,6 @@ class __$$FetchSubcategoriesSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchSubcategoriesSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1267,9 +1247,7 @@ class _$FetchSubcategoriesSuccessImpl implements FetchSubcategoriesSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchSubcategoriesSuccessImplCopyWith<_$FetchSubcategoriesSuccessImpl>
@@ -1531,10 +1509,7 @@ abstract class FetchSubcategoriesSuccess implements HomeState {
 
   List<SubcategoryModel> get data;
   String? get message;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchSubcategoriesSuccessImplCopyWith<_$FetchSubcategoriesSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1555,9 +1530,6 @@ class __$$FetchInfStudentLoadingImplCopyWithImpl<$Res>
       _$FetchInfStudentLoadingImpl _value,
       $Res Function(_$FetchInfStudentLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1853,8 +1825,6 @@ class __$$FetchInfStudentFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchInfStudentFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1868,8 +1838,6 @@ class __$$FetchInfStudentFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1908,9 +1876,7 @@ class _$FetchInfStudentFailureImpl implements FetchInfStudentFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchInfStudentFailureImplCopyWith<_$FetchInfStudentFailureImpl>
@@ -2170,10 +2136,7 @@ abstract class FetchInfStudentFailure implements HomeState {
       final NetworkExceptions? networkException) = _$FetchInfStudentFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchInfStudentFailureImplCopyWith<_$FetchInfStudentFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2197,8 +2160,6 @@ class __$$FetchInfStudentSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchInfStudentSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2245,9 +2206,7 @@ class _$FetchInfStudentSuccessImpl implements FetchInfStudentSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchInfStudentSuccessImplCopyWith<_$FetchInfStudentSuccessImpl>
@@ -2509,10 +2468,7 @@ abstract class FetchInfStudentSuccess implements HomeState {
 
   StudentProfileModel get data;
   String? get message;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchInfStudentSuccessImplCopyWith<_$FetchInfStudentSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2531,9 +2487,6 @@ class __$$FetchCoursesLoadingImplCopyWithImpl<$Res>
   __$$FetchCoursesLoadingImplCopyWithImpl(_$FetchCoursesLoadingImpl _value,
       $Res Function(_$FetchCoursesLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2827,8 +2780,6 @@ class __$$FetchCoursesFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCoursesFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2842,8 +2793,6 @@ class __$$FetchCoursesFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -2882,9 +2831,7 @@ class _$FetchCoursesFailureImpl implements FetchCoursesFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCoursesFailureImplCopyWith<_$FetchCoursesFailureImpl> get copyWith =>
@@ -3144,10 +3091,7 @@ abstract class FetchCoursesFailure implements HomeState {
       _$FetchCoursesFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCoursesFailureImplCopyWith<_$FetchCoursesFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3169,8 +3113,6 @@ class __$$FetchCoursesSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCoursesSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3226,9 +3168,7 @@ class _$FetchCoursesSuccessImpl implements FetchCoursesSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCoursesSuccessImplCopyWith<_$FetchCoursesSuccessImpl> get copyWith =>
@@ -3490,10 +3430,7 @@ abstract class FetchCoursesSuccess implements HomeState {
 
   List<CourseCardModel> get data;
   String? get message;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCoursesSuccessImplCopyWith<_$FetchCoursesSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3514,9 +3451,6 @@ class __$$FetchPopularCoursesLoadingImplCopyWithImpl<$Res>
       _$FetchPopularCoursesLoadingImpl _value,
       $Res Function(_$FetchPopularCoursesLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3812,8 +3746,6 @@ class __$$FetchPopularCoursesFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchPopularCoursesFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3827,8 +3759,6 @@ class __$$FetchPopularCoursesFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -3867,9 +3797,7 @@ class _$FetchPopularCoursesFailureImpl implements FetchPopularCoursesFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchPopularCoursesFailureImplCopyWith<_$FetchPopularCoursesFailureImpl>
@@ -4130,10 +4058,7 @@ abstract class FetchPopularCoursesFailure implements HomeState {
       _$FetchPopularCoursesFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchPopularCoursesFailureImplCopyWith<_$FetchPopularCoursesFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4157,8 +4082,6 @@ class __$$FetchPopularCoursesSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchPopularCoursesSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4197,9 +4120,7 @@ class _$FetchPopularCoursesSuccessImpl implements FetchPopularCoursesSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchPopularCoursesSuccessImplCopyWith<_$FetchPopularCoursesSuccessImpl>
@@ -4459,10 +4380,7 @@ abstract class FetchPopularCoursesSuccess implements HomeState {
       _$FetchPopularCoursesSuccessImpl;
 
   String? get message;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchPopularCoursesSuccessImplCopyWith<_$FetchPopularCoursesSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4481,9 +4399,6 @@ class __$$FetchMentorsLoadingImplCopyWithImpl<$Res>
   __$$FetchMentorsLoadingImplCopyWithImpl(_$FetchMentorsLoadingImpl _value,
       $Res Function(_$FetchMentorsLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4777,8 +4692,6 @@ class __$$FetchMentorsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchMentorsFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4792,8 +4705,6 @@ class __$$FetchMentorsFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -4832,9 +4743,7 @@ class _$FetchMentorsFailureImpl implements FetchMentorsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchMentorsFailureImplCopyWith<_$FetchMentorsFailureImpl> get copyWith =>
@@ -5094,10 +5003,7 @@ abstract class FetchMentorsFailure implements HomeState {
       _$FetchMentorsFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchMentorsFailureImplCopyWith<_$FetchMentorsFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5119,8 +5025,6 @@ class __$$FetchMentorsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchMentorsSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5176,9 +5080,7 @@ class _$FetchMentorsSuccessImpl implements FetchMentorsSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchMentorsSuccessImplCopyWith<_$FetchMentorsSuccessImpl> get copyWith =>
@@ -5440,10 +5342,7 @@ abstract class FetchMentorsSuccess implements HomeState {
 
   List<MentorCardModel> get data;
   String? get message;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchMentorsSuccessImplCopyWith<_$FetchMentorsSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5464,9 +5363,6 @@ class __$$FetchTopMentorsLoadingImplCopyWithImpl<$Res>
       _$FetchTopMentorsLoadingImpl _value,
       $Res Function(_$FetchTopMentorsLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5762,8 +5658,6 @@ class __$$FetchTopMentorsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchTopMentorsFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5777,8 +5671,6 @@ class __$$FetchTopMentorsFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -5817,9 +5709,7 @@ class _$FetchTopMentorsFailureImpl implements FetchTopMentorsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchTopMentorsFailureImplCopyWith<_$FetchTopMentorsFailureImpl>
@@ -6079,10 +5969,7 @@ abstract class FetchTopMentorsFailure implements HomeState {
       final NetworkExceptions? networkException) = _$FetchTopMentorsFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchTopMentorsFailureImplCopyWith<_$FetchTopMentorsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -6106,8 +5993,6 @@ class __$$FetchTopMentorsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchTopMentorsSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6146,9 +6031,7 @@ class _$FetchTopMentorsSuccessImpl implements FetchTopMentorsSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchTopMentorsSuccessImplCopyWith<_$FetchTopMentorsSuccessImpl>
@@ -6408,10 +6291,7 @@ abstract class FetchTopMentorsSuccess implements HomeState {
       _$FetchTopMentorsSuccessImpl;
 
   String? get message;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchTopMentorsSuccessImplCopyWith<_$FetchTopMentorsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -6432,9 +6312,6 @@ class __$$FetchAdvertisementsLoadingImplCopyWithImpl<$Res>
       _$FetchAdvertisementsLoadingImpl _value,
       $Res Function(_$FetchAdvertisementsLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -6730,8 +6607,6 @@ class __$$FetchAdvertisementsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchAdvertisementsFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6745,8 +6620,6 @@ class __$$FetchAdvertisementsFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -6785,9 +6658,7 @@ class _$FetchAdvertisementsFailureImpl implements FetchAdvertisementsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchAdvertisementsFailureImplCopyWith<_$FetchAdvertisementsFailureImpl>
@@ -7048,10 +6919,7 @@ abstract class FetchAdvertisementsFailure implements HomeState {
       _$FetchAdvertisementsFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchAdvertisementsFailureImplCopyWith<_$FetchAdvertisementsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7075,8 +6943,6 @@ class __$$FetchAdvertisementsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchAdvertisementsSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7132,9 +6998,7 @@ class _$FetchAdvertisementsSuccessImpl implements FetchAdvertisementsSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchAdvertisementsSuccessImplCopyWith<_$FetchAdvertisementsSuccessImpl>
@@ -7396,10 +7260,7 @@ abstract class FetchAdvertisementsSuccess implements HomeState {
 
   List<AdvModel> get data;
   String? get message;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchAdvertisementsSuccessImplCopyWith<_$FetchAdvertisementsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

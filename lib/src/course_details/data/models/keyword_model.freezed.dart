@@ -23,12 +23,8 @@ mixin _$KeywordModel {
   int? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
 
-  /// Serializes this KeywordModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of KeywordModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $KeywordModelCopyWith<KeywordModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,8 +48,6 @@ class _$KeywordModelCopyWithImpl<$Res, $Val extends KeywordModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of KeywordModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,8 +86,6 @@ class __$$KeywordModelImplCopyWithImpl<$Res>
       _$KeywordModelImpl _value, $Res Function(_$KeywordModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of KeywordModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,13 +141,11 @@ class _$KeywordModelImpl with DiagnosticableTreeMixin implements _KeywordModel {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  /// Create a copy of KeywordModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$KeywordModelImplCopyWith<_$KeywordModelImpl> get copyWith =>
@@ -180,11 +170,8 @@ abstract class _KeywordModel implements KeywordModel {
   int? get id;
   @override
   String? get name;
-
-  /// Create a copy of KeywordModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$KeywordModelImplCopyWith<_$KeywordModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

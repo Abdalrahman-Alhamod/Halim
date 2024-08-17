@@ -292,6 +292,15 @@ class CodegenLoader extends AssetLoader{
       "choose": "اختر ثلاثة من المواضيع التي تحب متابعتها؟",
       "skip": "تخطى",
       "continue": "تابع"
+    },
+    "EducationLevel": {
+      "ph": "دكتوراه",
+      "master": "ماجستير",
+      "diploma": "دبلوم",
+      "bachelor": "دراسة جامعية",
+      "school": "دراسة ثانوية",
+      "primary": "دراسة إعدادية",
+      "EducationLev": "المستوى التعليمي"
     }
   },
   "CreatePin": {
@@ -833,6 +842,15 @@ static const Map<String,dynamic> en = {
       "choose": "Choose three topics that you would like to follow?",
       "skip": "skip",
       "continue": "continue"
+    },
+    "EducationLevel": {
+      "ph": "Phd",
+      "master": "Master",
+      "diploma": "Diploma",
+      "bachelor": "Bachelor Degree",
+      "school": "High School Education",
+      "primary": "Primary Education",
+      "EducationLev": "Education Level "
     }
   },
   "CreatePin": {

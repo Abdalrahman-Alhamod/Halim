@@ -74,12 +74,8 @@ mixin _$StudentInfomationsModel {
   @JsonKey(name: 'points_balance')
   set pointsBalance(int? value) => throw _privateConstructorUsedError;
 
-  /// Serializes this StudentInfomationsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of StudentInfomationsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StudentInfomationsModelCopyWith<StudentInfomationsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -119,8 +115,6 @@ class _$StudentInfomationsModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StudentInfomationsModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -194,8 +188,6 @@ class _$StudentInfomationsModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of StudentInfomationsModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MajorCopyWith<$Res>? get major {
@@ -247,8 +239,6 @@ class __$$StudentInfomationsModelImplCopyWithImpl<$Res>
       $Res Function(_$StudentInfomationsModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StudentInfomationsModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -411,9 +401,7 @@ class _$StudentInfomationsModelImpl
       ..add(DiagnosticsProperty('pointsBalance', pointsBalance));
   }
 
-  /// Create a copy of StudentInfomationsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StudentInfomationsModelImplCopyWith<_$StudentInfomationsModelImpl>
@@ -513,11 +501,8 @@ abstract class _StudentInfomationsModel implements StudentInfomationsModel {
   int? get pointsBalance;
   @JsonKey(name: 'points_balance')
   set pointsBalance(int? value);
-
-  /// Create a copy of StudentInfomationsModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StudentInfomationsModelImplCopyWith<_$StudentInfomationsModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -537,12 +522,8 @@ mixin _$Major {
   @JsonKey(name: 'name')
   set name(String? value) => throw _privateConstructorUsedError;
 
-  /// Serializes this Major to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Major
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MajorCopyWith<Major> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -565,8 +546,6 @@ class _$MajorCopyWithImpl<$Res, $Val extends Major>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Major
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -605,8 +584,6 @@ class __$$MajorImplCopyWithImpl<$Res>
       _$MajorImpl _value, $Res Function(_$MajorImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Major
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -655,9 +632,7 @@ class _$MajorImpl with DiagnosticableTreeMixin implements _Major {
       ..add(DiagnosticsProperty('name', name));
   }
 
-  /// Create a copy of Major
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MajorImplCopyWith<_$MajorImpl> get copyWith =>
@@ -688,11 +663,8 @@ abstract class _Major implements Major {
   String? get name;
   @JsonKey(name: 'name')
   set name(String? value);
-
-  /// Create a copy of Major
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MajorImplCopyWith<_$MajorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -712,12 +684,8 @@ mixin _$Interests {
   @JsonKey(name: 'name')
   set name(String? value) => throw _privateConstructorUsedError;
 
-  /// Serializes this Interests to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Interests
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $InterestsCopyWith<Interests> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -741,8 +709,6 @@ class _$InterestsCopyWithImpl<$Res, $Val extends Interests>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Interests
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -782,8 +748,6 @@ class __$$InterestsImplCopyWithImpl<$Res>
       _$InterestsImpl _value, $Res Function(_$InterestsImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Interests
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -833,9 +797,7 @@ class _$InterestsImpl with DiagnosticableTreeMixin implements _Interests {
       ..add(DiagnosticsProperty('name', name));
   }
 
-  /// Create a copy of Interests
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$InterestsImplCopyWith<_$InterestsImpl> get copyWith =>
@@ -867,11 +829,8 @@ abstract class _Interests implements Interests {
   String? get name;
   @JsonKey(name: 'name')
   set name(String? value);
-
-  /// Create a copy of Interests
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$InterestsImplCopyWith<_$InterestsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

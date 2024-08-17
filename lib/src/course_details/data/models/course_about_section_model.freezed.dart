@@ -27,12 +27,8 @@ mixin _$CourseAboutSectionModel {
   MentorCardModel? get mentor => throw _privateConstructorUsedError;
   List<KeywordModel>? get keywords => throw _privateConstructorUsedError;
 
-  /// Serializes this CourseAboutSectionModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CourseAboutSectionModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CourseAboutSectionModelCopyWith<CourseAboutSectionModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63,8 +59,6 @@ class _$CourseAboutSectionModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CourseAboutSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,8 +87,6 @@ class _$CourseAboutSectionModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of CourseAboutSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MentorCardModelCopyWith<$Res>? get mentor {
@@ -137,8 +129,6 @@ class __$$CourseAboutSectionModelImplCopyWithImpl<$Res>
       $Res Function(_$CourseAboutSectionModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseAboutSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -228,14 +218,12 @@ class _$CourseAboutSectionModelImpl
             const DeepCollectionEquality().equals(other._keywords, _keywords));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, description, mentor,
       const DeepCollectionEquality().hash(_keywords));
 
-  /// Create a copy of CourseAboutSectionModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CourseAboutSectionModelImplCopyWith<_$CourseAboutSectionModelImpl>
@@ -269,11 +257,8 @@ abstract class _CourseAboutSectionModel implements CourseAboutSectionModel {
   MentorCardModel? get mentor;
   @override
   List<KeywordModel>? get keywords;
-
-  /// Create a copy of CourseAboutSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CourseAboutSectionModelImplCopyWith<_$CourseAboutSectionModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -3,7 +3,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/about/mentor_card_loading_list.dart';
 import 'package:halim/src/home/data/models/adv_model.dart';
 import 'package:halim/src/home/data/models/student_profile_model.dart';
 import 'package:halim/src/home/domain/repos/home_repo.dart';
@@ -14,6 +13,7 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
 import '../../../../../core/utils/pagination_adapter.dart';
+import '../../../../mentor_details/presentation/views/widgets/mentor_card_loading_list.dart';
 import '../../views/widgets/card_course_loading_list.dart';
 
 part 'home_state.dart';

@@ -29,12 +29,8 @@ mixin _$ReceiptModel {
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
-  /// Serializes this ReceiptModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ReceiptModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ReceiptModelCopyWith<ReceiptModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,8 +61,6 @@ class _$ReceiptModelCopyWithImpl<$Res, $Val extends ReceiptModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ReceiptModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,8 +89,6 @@ class _$ReceiptModelCopyWithImpl<$Res, $Val extends ReceiptModel>
     ) as $Val);
   }
 
-  /// Create a copy of ReceiptModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReceiptUserModelCopyWith<$Res>? get user {
@@ -109,8 +101,6 @@ class _$ReceiptModelCopyWithImpl<$Res, $Val extends ReceiptModel>
     });
   }
 
-  /// Create a copy of ReceiptModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReceiptCourseModelCopyWith<$Res>? get course {
@@ -152,8 +142,6 @@ class __$$ReceiptModelImplCopyWithImpl<$Res>
       _$ReceiptModelImpl _value, $Res Function(_$ReceiptModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReceiptModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -237,14 +225,12 @@ class _$ReceiptModelImpl with DiagnosticableTreeMixin implements _ReceiptModel {
                 other.createdAt == createdAt));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, user, course, priceBeforeDiscount, createdAt);
 
-  /// Create a copy of ReceiptModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReceiptModelImplCopyWith<_$ReceiptModelImpl> get copyWith =>
@@ -281,11 +267,8 @@ abstract class _ReceiptModel implements ReceiptModel {
   @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-
-  /// Create a copy of ReceiptModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReceiptModelImplCopyWith<_$ReceiptModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -305,12 +288,8 @@ mixin _$ReceiptUserModel {
   @JsonKey(name: 'email')
   String? get email => throw _privateConstructorUsedError;
 
-  /// Serializes this ReceiptUserModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ReceiptUserModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ReceiptUserModelCopyWith<ReceiptUserModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -338,8 +317,6 @@ class _$ReceiptUserModelCopyWithImpl<$Res, $Val extends ReceiptUserModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ReceiptUserModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -392,8 +369,6 @@ class __$$ReceiptUserModelImplCopyWithImpl<$Res>
       $Res Function(_$ReceiptUserModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReceiptUserModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -479,13 +454,11 @@ class _$ReceiptUserModelImpl
             (identical(other.email, email) || other.email == email));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, firstName, lastName, email);
 
-  /// Create a copy of ReceiptUserModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReceiptUserModelImplCopyWith<_$ReceiptUserModelImpl> get copyWith =>
@@ -522,11 +495,8 @@ abstract class _ReceiptUserModel implements ReceiptUserModel {
   @override
   @JsonKey(name: 'email')
   String? get email;
-
-  /// Create a copy of ReceiptUserModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReceiptUserModelImplCopyWith<_$ReceiptUserModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -548,12 +518,8 @@ mixin _$ReceiptCourseModel {
   @JsonKey(name: 'subcategory')
   SubcategoryModel? get subcategory => throw _privateConstructorUsedError;
 
-  /// Serializes this ReceiptCourseModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ReceiptCourseModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ReceiptCourseModelCopyWith<ReceiptCourseModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -584,8 +550,6 @@ class _$ReceiptCourseModelCopyWithImpl<$Res, $Val extends ReceiptCourseModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ReceiptCourseModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -619,8 +583,6 @@ class _$ReceiptCourseModelCopyWithImpl<$Res, $Val extends ReceiptCourseModel>
     ) as $Val);
   }
 
-  /// Create a copy of ReceiptCourseModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SubcategoryModelCopyWith<$Res>? get subcategory {
@@ -661,8 +623,6 @@ class __$$ReceiptCourseModelImplCopyWithImpl<$Res>
       $Res Function(_$ReceiptCourseModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReceiptCourseModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -758,14 +718,12 @@ class _$ReceiptCourseModelImpl
                 other.subcategory == subcategory));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, title, image, price, subcategory);
 
-  /// Create a copy of ReceiptCourseModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReceiptCourseModelImplCopyWith<_$ReceiptCourseModelImpl> get copyWith =>
@@ -807,11 +765,8 @@ abstract class _ReceiptCourseModel implements ReceiptCourseModel {
   @override
   @JsonKey(name: 'subcategory')
   SubcategoryModel? get subcategory;
-
-  /// Create a copy of ReceiptCourseModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReceiptCourseModelImplCopyWith<_$ReceiptCourseModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

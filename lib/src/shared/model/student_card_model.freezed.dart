@@ -27,12 +27,8 @@ mixin _$StudentCardModel {
   String? get lastName => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
 
-  /// Serializes this StudentCardModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of StudentCardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StudentCardModelCopyWith<StudentCardModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,8 +56,6 @@ class _$StudentCardModelCopyWithImpl<$Res, $Val extends StudentCardModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StudentCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,8 +108,6 @@ class __$$StudentCardModelImplCopyWithImpl<$Res>
       $Res Function(_$StudentCardModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StudentCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -199,13 +191,11 @@ class _$StudentCardModelImpl extends _StudentCardModel
             (identical(other.image, image) || other.image == image));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, firstName, lastName, image);
 
-  /// Create a copy of StudentCardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StudentCardModelImplCopyWith<_$StudentCardModelImpl> get copyWith =>
@@ -241,11 +231,8 @@ abstract class _StudentCardModel extends StudentCardModel {
   String? get lastName;
   @override
   String? get image;
-
-  /// Create a copy of StudentCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StudentCardModelImplCopyWith<_$StudentCardModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -28,12 +28,8 @@ mixin _$MentorCardModel {
   String? get image => throw _privateConstructorUsedError;
   String? get headline => throw _privateConstructorUsedError;
 
-  /// Serializes this MentorCardModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MentorCardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MentorCardModelCopyWith<MentorCardModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,8 +58,6 @@ class _$MentorCardModelCopyWithImpl<$Res, $Val extends MentorCardModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MentorCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,8 +116,6 @@ class __$$MentorCardModelImplCopyWithImpl<$Res>
       _$MentorCardModelImpl _value, $Res Function(_$MentorCardModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MentorCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -205,14 +197,12 @@ class _$MentorCardModelImpl extends _MentorCardModel {
                 other.headline == headline));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, firstName, lastName, image, headline);
 
-  /// Create a copy of MentorCardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MentorCardModelImplCopyWith<_$MentorCardModelImpl> get copyWith =>
@@ -251,11 +241,8 @@ abstract class _MentorCardModel extends MentorCardModel {
   String? get image;
   @override
   String? get headline;
-
-  /// Create a copy of MentorCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MentorCardModelImplCopyWith<_$MentorCardModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

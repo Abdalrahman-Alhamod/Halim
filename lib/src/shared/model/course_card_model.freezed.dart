@@ -33,12 +33,8 @@ mixin _$CourseCardModel {
   bool? get isSaved => throw _privateConstructorUsedError;
   DiscountModel? get discount => throw _privateConstructorUsedError;
 
-  /// Serializes this CourseCardModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CourseCardModelCopyWith<CourseCardModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,8 +70,6 @@ class _$CourseCardModelCopyWithImpl<$Res, $Val extends CourseCardModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,8 +123,6 @@ class _$CourseCardModelCopyWithImpl<$Res, $Val extends CourseCardModel>
     ) as $Val);
   }
 
-  /// Create a copy of CourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SubcategoryModelCopyWith<$Res>? get subcategory {
@@ -143,8 +135,6 @@ class _$CourseCardModelCopyWithImpl<$Res, $Val extends CourseCardModel>
     });
   }
 
-  /// Create a copy of CourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DiscountModelCopyWith<$Res>? get discount {
@@ -191,8 +181,6 @@ class __$$CourseCardModelImplCopyWithImpl<$Res>
       _$CourseCardModelImpl _value, $Res Function(_$CourseCardModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -311,14 +299,12 @@ class _$CourseCardModelImpl implements _CourseCardModel {
                 other.discount == discount));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, title, image, price,
       subcategory, reviewsAvg, enrollmentsCount, isSaved, discount);
 
-  /// Create a copy of CourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CourseCardModelImplCopyWith<_$CourseCardModelImpl> get copyWith =>
@@ -369,11 +355,8 @@ abstract class _CourseCardModel implements CourseCardModel {
   bool? get isSaved;
   @override
   DiscountModel? get discount;
-
-  /// Create a copy of CourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CourseCardModelImplCopyWith<_$CourseCardModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
