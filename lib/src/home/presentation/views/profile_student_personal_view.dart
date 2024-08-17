@@ -16,7 +16,6 @@ class ProfileStudentPersonalView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -75,7 +74,7 @@ class ProfileStudentPersonalView extends StatelessWidget {
                   height: 25,
                 ),
                 Text(
-                  "${LocaleKeys.StudentProfile_Student.tr()} ${context.read<HomeCubit>().studentProfileModel!.educationLevel} ",
+                  "${LocaleKeys.StudentProfile_Student.tr()} ${context.read<HomeCubit>().studentProfileModel!.major?.name} ",
                   style: TextStyle(
                     fontSize: 20,
                     color: context.isDarkMode

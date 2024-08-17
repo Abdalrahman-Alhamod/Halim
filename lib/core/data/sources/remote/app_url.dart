@@ -179,6 +179,11 @@ abstract final class AppUrl {
 
   ///<------------------------------------------------------------------------------
   static final transaction = "${baseUrl}transactions";
+
   ///<------------------------------------------------------------------------------
   static final advertisements = "${baseUrl}advertisements";
+  ///<------------------------------------------------------------------------------
+  static final receipt = "${baseUrl}enrollments/myenrollments";
+  ///<------------------------------------------------------------------------------
+  static final leaderboard = "${baseUrl}leaderboard";
 }

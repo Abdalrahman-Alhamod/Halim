@@ -7,8 +7,9 @@ import '../../../../../core/themes/app_colors.dart';
 
 class ListWithDialogGender extends StatefulWidget {
   final Function(String) onGenderSelected;
-  const ListWithDialogGender({super.key, required this.onGenderSelected});
-
+  const ListWithDialogGender(
+      {super.key, required this.onGenderSelected, required this.hintText});
+  final String hintText;
   @override
   ListWithDialogGenderState createState() => ListWithDialogGenderState();
 }
@@ -87,7 +88,7 @@ class ListWithDialogGenderState extends State<ListWithDialogGender> {
         readOnly: true,
         onTap: _showDialog,
         decoration: InputDecoration(
-          hintText: LocaleKeys.FillYourProfile_gender.tr(),
+          hintText: widget.hintText,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(

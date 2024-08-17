@@ -7,8 +7,9 @@ import '../../../../../core/themes/app_colors.dart';
 
 class ListWithEducationLevel extends StatefulWidget {
   final Function(String) onOptionSelected;
-  const ListWithEducationLevel({super.key, required this.onOptionSelected});
-
+  const ListWithEducationLevel(
+      {super.key, required this.onOptionSelected, required this.hintText});
+  final String hintText;
   @override
   ListWithEducationLevelState createState() => ListWithEducationLevelState();
 }
@@ -90,7 +91,7 @@ class ListWithEducationLevelState extends State<ListWithEducationLevel> {
         readOnly: true,
         onTap: _showDialog,
         decoration: InputDecoration(
-          hintText: LocaleKeys.FillYourProfile_EducationLevel_EducationLev.tr(),
+          hintText: widget.hintText,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(

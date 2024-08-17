@@ -1,13 +1,13 @@
 // ignore_for_file: unused_field
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:halim/core/domain/error_handler/network_exceptions.dart';
-import 'package:halim/core/widgets/shimmer_box.dart';
-import 'package:halim/core/widgets/toast_widget.dart';
 import 'package:halim/src/profile_settings/data/models/transaction_model.dart';
 import 'package:halim/src/profile_settings/domain/repos/profile_settings_repo.dart';
+
+import '../../../../account_setup/data/models/student_infomations_model.dart';
+import '../../../data/models/receipt_model.dart';
 
 part 'profile_settings_state.dart';
 part 'profile_settings_cubit.freezed.dart';
@@ -18,6 +18,7 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
 
   final ProfileSettingsRepo _profileSettingsRepo;
   List<TransactionModel> transactions = [];
+  List<ReceiptModel> receipt = [];
 
   Future<void> getTransactions() async {
     emit(
@@ -45,36 +46,52 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
     );
   }
 
-  bool buildTransactionWhen(
-      ProfileSettingsState previous, ProfileSettingsState current) {
-    if (current == previous) return false;
-    return current.maybeWhen(
-      fetchTransactionsLoading: () => true,
-      fetchTransactionsFailure: (_) => true,
-      fetchTransactionsSuccess: (_, __) => true,
-      orElse: () => false,
+  Future<void> getReceipt() async {
+    emit(
+      const ProfileSettingsState.fetchReceiptLoading(),
     );
-  }
-
-  Widget buildtransactions({
-    required BuildContext context,
-    required ProfileSettingsState state,
-    required Widget child,
-  }) {
-    return state.maybeWhen(
-      fetchTransactionsLoading: () {
-        return ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: const ShimmerBox(
-            height: 32,
-            width: 120,
+    final response = await _profileSettingsRepo.getReceipt();
+    response.when(
+      success: (data) {
+        receipt = List<ReceiptModel>.from(data.data.list);
+        // transactions.insert(0, getCategoryAll());
+        emit(
+          ProfileSettingsState.fetchReceiptSuccess(
+            receipt,
+            data.message,
           ),
         );
       },
-      fetchTransactionsSuccess: (transaction, message) => child,
-      fetchTransactionsFailure: (message) =>
-          const ToastWidget(title: 'networkExceptions'),
-      orElse: () => const SizedBox(),
+      failure: (networkExceptions) {
+        emit(
+          ProfileSettingsState.fetchReceiptFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+
+  StudentInfomationsModel upStudent = StudentInfomationsModel();
+
+  Future<void> updateInformationStudent() async {
+    final response =
+        await _profileSettingsRepo.updateInformationStudent(upStudent);
+
+    response.when(
+      success: (data) {
+        upStudent = data.data;
+        emit(
+          ProfileSettingsState.updateInformationStudentsuccess(
+              upStudent, data.message),
+        );
+      },
+      failure: (networkException) {
+        emit(
+          ProfileSettingsState.updateInformationStudentfailure(
+              networkException),
+        );
+      },
     );
   }
 }

@@ -22,8 +22,9 @@ class AccountSetupCubit extends Cubit<AccountSetupState> {
   AccountSetupCubit(this._accountSetupRepo)
       : super(const AccountSetupState.initial());
   final AccountSetupRepo _accountSetupRepo;
-
+  
   StudentInfomationsModel student = StudentInfomationsModel();
+   
   int pin = 0;
   // List<int>? sinterests = [];
   Future<void> postInformationStudent() async {

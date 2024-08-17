@@ -11,4 +11,5 @@ abstract final class NavKeys {
   static const chatRecieverName = 'chatRecieverName';
   static const chatRecieverId = 'chatRecieverId';
   static const chatSenderId = 'chatSenderId';
+  static const receiptModel = 'receiptModel';
 }

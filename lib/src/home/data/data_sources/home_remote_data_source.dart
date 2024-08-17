@@ -38,6 +38,7 @@ class HomeRemoteDataSource {
       ),
     );
   }
+
   Future<BaseModel> getAdvertisements() async {
     final response = await _apiServices.get(
       AppUrl.advertisements,

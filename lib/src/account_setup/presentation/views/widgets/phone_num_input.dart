@@ -1,15 +1,14 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-import '../../../../../core/translations/locale_keys.g.dart';
 
 class PhoneNumberInputScreen extends StatefulWidget {
   final Function(String) onPhoneNumberChanged;
-
-  const PhoneNumberInputScreen({super.key, required this.onPhoneNumberChanged});
+  final String hintText;
+  const PhoneNumberInputScreen(
+      {super.key, required this.onPhoneNumberChanged, required this.hintText});
 
   @override
   PhoneNumberInputScreenState createState() => PhoneNumberInputScreenState();
@@ -69,7 +68,7 @@ class PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
         keyboardType:
             const TextInputType.numberWithOptions(signed: true, decimal: true),
         inputDecoration: InputDecoration(
-          hintText: LocaleKeys.FillYourProfile_phone.tr(),
+          hintText: widget.hintText,
           hintStyle: TextStyle(
             fontWeight: FontWeight.w600,
             color: context.isDarkMode

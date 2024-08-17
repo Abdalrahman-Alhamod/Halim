@@ -9,10 +9,11 @@ import '../../../../../core/themes/app_colors.dart';
 
 class ChooseYourSpecialtyWithRegister extends StatefulWidget {
   final Function(CategoryModel) onSpecialtySelected;
-
+  final String hintText;
   const ChooseYourSpecialtyWithRegister({
     super.key,
     required this.onSpecialtySelected,
+    required this.hintText,
   });
 
   @override
@@ -129,7 +130,7 @@ class ChooseYourSpecialtyWithRegisterState
         readOnly: true,
         onTap: _showDialog,
         decoration: InputDecoration(
-          hintText: LocaleKeys.FillYourProfile_Specialty_choose_specialty.tr(),
+          hintText: widget.hintText,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
           hintStyle: TextStyle(

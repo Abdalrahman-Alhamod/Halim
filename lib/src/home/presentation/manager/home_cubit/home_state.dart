@@ -41,10 +41,11 @@ class HomeState with _$HomeState {
       NetworkExceptions? networkException) = FetchTopMentorsFailure;
   const factory HomeState.fetchTopMentorsSuccess(String? message) =
       FetchTopMentorsSuccess;
-      
-  const factory HomeState.fetchAdvertisementsLoading() = FetchAdvertisementsLoading;
+
+  const factory HomeState.fetchAdvertisementsLoading() =
+      FetchAdvertisementsLoading;
   const factory HomeState.fetchAdvertisementsFailure(
       NetworkExceptions? networkException) = FetchAdvertisementsFailure;
-  const factory HomeState.fetchAdvertisementsSuccess( List<AdvModel> data, String? message) =
-       FetchAdvertisementsSuccess;
+  const factory HomeState.fetchAdvertisementsSuccess(
+      List<AdvModel> data, String? message) = FetchAdvertisementsSuccess;
 }

@@ -15,6 +15,7 @@ import 'package:halim/src/home/presentation/views/profile_student.dart';
 import 'package:halim/src/home/presentation/views/profile_student_personal_view.dart';
 import 'package:halim/src/mentor_details/presentation/views/mentor_courses_view.dart';
 import 'package:halim/src/mentor_details/presentation/views/mentor_reviews_view.dart';
+import 'package:halim/src/profile_settings/data/models/receipt_model.dart';
 import 'package:halim/src/profile_settings/presentation/views/leaderboards_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/my_purchases_view.dart';
 import 'package:halim/src/profile_settings/presentation/views/receipt_course.dart';
@@ -390,7 +391,9 @@ class AppRoute {
       GoRoute(
         path: kReceiptView,
         builder: (BuildContext context, GoRouterState state) {
-          return const ReceiptView();
+          return  ReceiptView(receiptModel: (GoRouterState.of(context).extra
+                    as Map<String, dynamic>)[NavKeys.receiptModel]
+                as ReceiptModel,);
         },
       ),
       GoRoute(

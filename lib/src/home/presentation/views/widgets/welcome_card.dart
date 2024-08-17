@@ -11,7 +11,7 @@ import '../../../../../core/utils/app_route.dart';
 
 class WelcomeCard extends StatefulWidget {
   final String? name;
-   final String? image;
+  final String? image;
   const WelcomeCard({super.key, this.image, this.name});
 
   @override
@@ -29,8 +29,10 @@ class _WelcomeCardState extends State<WelcomeCard> {
           },
           child: Row(
             children: [
-
-              AvatarImageLoader(imageUrl: widget.image, radius: 25,),
+              AvatarImageLoader(
+                imageUrl: widget.image,
+                radius: 25,
+              ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Wrap(

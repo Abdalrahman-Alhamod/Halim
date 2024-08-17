@@ -1,8 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:halim/core/utils/app_route.dart';
+import 'package:halim/src/profile_settings/presentation/views/widget/edit_profile_body.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/context_extensions.dart';
-import '../../../account_setup/presentation/views/fill_profile_body.dart';
 
 import '../../../../core/themes/app_colors.dart';
 
@@ -26,30 +28,20 @@ class EditProfileViewState extends State<EditProfileView> {
           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         elevation: 0,
+        leading:  IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: context.isDarkMode ? Colors.white : Colors.black,
+            ),
+            onPressed: () {
+              GoRouter.of(context).pushReplacement(AppRoute.kHome);
+            },
+          ),
       ),
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: const SingleChildScrollView(
         child: Column(children: [
-          FillProfileBody(),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 10),
-          //   child: CustomFlatButton(
-          //     onPressed: () {
-          //       showCustomDialog(
-          //           context: context,
-          //           widget: AccontSucssesDialog(
-          //             () {
-          //               GoRouter.of(context).push(AppRoute.kHome);
-          //             },
-          //           ));
-          //     },
-          //     title: LocaleKeys.FillYourProfile_continue.tr(),
-          //     width: MediaQuery.of(context).size.width * 0.94,
-          //     height: 60,
-          //     kTextcolor: AppColors.lightFlatButtonColor,
-          //   ),
-          // ),
-          // Container(height: 20),
+          EditProfileBody(),
         ]),
       ),
     );

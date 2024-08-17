@@ -16,7 +16,6 @@ import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/context_extensions.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
-import '../../data/models/student_profile_model.dart';
 import 'widgets/counter_widget.dart';
 import 'widgets/welcome_card.dart';
 import 'widgets/card_advertisement.dart';
@@ -37,18 +36,16 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     homeCubit = context.read<HomeCubit>();
     homeCubit.getHomeCourses();
     homeCubit.getAllMentors();
     homeCubit.getInfStudent(studentId: 1071);
     homeCubit.getSubcategories(categoryId: 1);
     homeCubit.getAdvertisements();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    StudentProfileModel studentProfileModel =
-        context.read<HomeCubit>().studentProfileModel ?? StudentProfileModel();
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return Scaffold(
@@ -63,26 +60,19 @@ class _HomeViewState extends State<HomeView> {
                   current is FetchInfStudentSuccess ||
                   current is FetchInfStudentFailure,
               builder: (context, state) {
-                state.whenOrNull(
-                  fetchInfStudentSuccess: (data, message) {
-                    studentProfileModel = data;
-                  },
-                );
-                return state.maybeWhen(
+                 return state.maybeWhen(
                   fetchInfStudentLoading: () => const WelcomeCardLoading(),
                   fetchInfStudentFailure: (networkException) =>
                       const SizedBox.shrink(),
                   fetchInfStudentSuccess: (data, message) {
+                    
                     return WelcomeCard(
-                      name: studentProfileModel.firstName,
-                      image: studentProfileModel.image,
+                      name: data.firstName,
+                      image: data.image,
                     );
                   },
                   orElse: () {
-                    return WelcomeCard(
-                      name: studentProfileModel.firstName,
-                      image: studentProfileModel.image,
-                    );
+                    return const WelcomeCardLoading();
                   },
                 );
               },

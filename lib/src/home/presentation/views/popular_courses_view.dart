@@ -60,6 +60,8 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
       body: Column(
         children: [
           ChooseYourSpecialtyWithRegister(
+            hintText:
+                LocaleKeys.FillYourProfile_Specialty_choose_specialty.tr(),
             onSpecialtySelected: (category) {
               context.read<HomeCubit>().categoryId = category.id ?? 0;
               context.read<HomeCubit>().getSubcategories(
@@ -170,7 +172,6 @@ class PopularCoursesViewState extends State<PopularCoursesView> {
             child: Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
-             
               child: BlocBuilder<HomeCubit, HomeState>(
                 buildWhen: context.read<HomeCubit>().buildPopularCoursesWhen,
                 builder: (context, state) {

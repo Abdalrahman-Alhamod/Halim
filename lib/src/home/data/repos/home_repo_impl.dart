@@ -72,7 +72,7 @@ class HomeRepoImpl extends HomeRepo {
       return ApiResponse.failure(NetworkExceptions.getException(error));
     }
   }
-  
+
   @override
   Future<ApiResponse<BaseModel>> getAdvertisements() async {
     try {

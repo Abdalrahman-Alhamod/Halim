@@ -41,8 +41,8 @@ class TransactionsViewState extends State<TransactionsView> {
       backgroundColor: context.isDarkMode ? AppColors.darkColor : Colors.white,
       body: BlocBuilder<ProfileSettingsCubit, ProfileSettingsState>(
         builder: (context, state) {
-          return state.when(
-            initial: () => const Center(child: CircularProgressIndicator()),
+          return state.maybeWhen(
+            // initial: () => const Center(child: CircularProgressIndicator()),
             fetchTransactionsLoading: () => Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: ListView.separated(
@@ -70,6 +70,21 @@ class TransactionsViewState extends State<TransactionsView> {
                 itemCount: data.length,
                 itemBuilder: (context, index) => TransactionsCard(
                   transactionModel: data[index],
+                ),
+              ),
+            ),orElse: () =>Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              child: ListView.separated(
+                shrinkWrap: true,
+                itemCount:
+                    context.read<ProfileSettingsCubit>().transactions.length,
+                itemBuilder: (context, index) => ShimmerBox(
+                  height: 155,
+                  width: context.width * 0.8,
+                  radius: 15.5,
+                ),
+                separatorBuilder: (context, index) => const SizedBox(
+                  height: 20,
                 ),
               ),
             ),

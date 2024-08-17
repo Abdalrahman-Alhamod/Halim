@@ -19,62 +19,114 @@ mixin _$ProfileSettingsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
     required TResult Function() fetchTransactionsLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult? Function()? fetchTransactionsLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult Function()? fetchTransactionsLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_FetchTransactionsLoading value)
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
         fetchTransactionsLoading,
-    required TResult Function(_FetchTransactionsFailure value)
+    required TResult Function(FetchTransactionsFailure value)
         fetchTransactionsFailure,
-    required TResult Function(_FetchTransactionsSuccess value)
+    required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_FetchTransactionsLoading value)?
-        fetchTransactionsLoading,
-    TResult? Function(_FetchTransactionsFailure value)?
-        fetchTransactionsFailure,
-    TResult? Function(_FetchTransactionsSuccess value)?
-        fetchTransactionsSuccess,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_FetchTransactionsLoading value)? fetchTransactionsLoading,
-    TResult Function(_FetchTransactionsFailure value)? fetchTransactionsFailure,
-    TResult Function(_FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -144,11 +196,21 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
     required TResult Function() fetchTransactionsLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
   }) {
     return initial();
   }
@@ -157,11 +219,20 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult? Function()? fetchTransactionsLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
   }) {
     return initial?.call();
   }
@@ -170,11 +241,20 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult Function()? fetchTransactionsLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -187,12 +267,21 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_FetchTransactionsLoading value)
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
         fetchTransactionsLoading,
-    required TResult Function(_FetchTransactionsFailure value)
+    required TResult Function(FetchTransactionsFailure value)
         fetchTransactionsFailure,
-    required TResult Function(_FetchTransactionsSuccess value)
+    required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
   }) {
     return initial(this);
   }
@@ -201,12 +290,18 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_FetchTransactionsLoading value)?
-        fetchTransactionsLoading,
-    TResult? Function(_FetchTransactionsFailure value)?
-        fetchTransactionsFailure,
-    TResult? Function(_FetchTransactionsSuccess value)?
-        fetchTransactionsSuccess,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
   }) {
     return initial?.call(this);
   }
@@ -215,9 +310,18 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_FetchTransactionsLoading value)? fetchTransactionsLoading,
-    TResult Function(_FetchTransactionsFailure value)? fetchTransactionsFailure,
-    TResult Function(_FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -229,6 +333,681 @@ class _$InitialImpl implements _Initial {
 
 abstract class _Initial implements ProfileSettingsState {
   const factory _Initial() = _$InitialImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateInformationStudentLoadingImplCopyWith<$Res> {
+  factory _$$UpdateInformationStudentLoadingImplCopyWith(
+          _$UpdateInformationStudentLoadingImpl value,
+          $Res Function(_$UpdateInformationStudentLoadingImpl) then) =
+      __$$UpdateInformationStudentLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateInformationStudentLoadingImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res,
+        _$UpdateInformationStudentLoadingImpl>
+    implements _$$UpdateInformationStudentLoadingImplCopyWith<$Res> {
+  __$$UpdateInformationStudentLoadingImplCopyWithImpl(
+      _$UpdateInformationStudentLoadingImpl _value,
+      $Res Function(_$UpdateInformationStudentLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UpdateInformationStudentLoadingImpl
+    implements UpdateInformationStudentLoading {
+  const _$UpdateInformationStudentLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.updateInformationStudentLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateInformationStudentLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateInformationStudentLoading != null) {
+      return updateInformationStudentLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateInformationStudentLoading != null) {
+      return updateInformationStudentLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateInformationStudentLoading implements ProfileSettingsState {
+  const factory UpdateInformationStudentLoading() =
+      _$UpdateInformationStudentLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateInformationStudentFailureImplCopyWith<$Res> {
+  factory _$$UpdateInformationStudentFailureImplCopyWith(
+          _$UpdateInformationStudentFailureImpl value,
+          $Res Function(_$UpdateInformationStudentFailureImpl) then) =
+      __$$UpdateInformationStudentFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$UpdateInformationStudentFailureImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res,
+        _$UpdateInformationStudentFailureImpl>
+    implements _$$UpdateInformationStudentFailureImplCopyWith<$Res> {
+  __$$UpdateInformationStudentFailureImplCopyWithImpl(
+      _$UpdateInformationStudentFailureImpl _value,
+      $Res Function(_$UpdateInformationStudentFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$UpdateInformationStudentFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$UpdateInformationStudentFailureImpl
+    implements UpdateInformationStudentFailure {
+  const _$UpdateInformationStudentFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.updateInformationStudentfailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateInformationStudentFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateInformationStudentFailureImplCopyWith<
+          _$UpdateInformationStudentFailureImpl>
+      get copyWith => __$$UpdateInformationStudentFailureImplCopyWithImpl<
+          _$UpdateInformationStudentFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentfailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentfailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateInformationStudentfailure != null) {
+      return updateInformationStudentfailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentfailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentfailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateInformationStudentfailure != null) {
+      return updateInformationStudentfailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateInformationStudentFailure implements ProfileSettingsState {
+  const factory UpdateInformationStudentFailure(
+          final NetworkExceptions? networkException) =
+      _$UpdateInformationStudentFailureImpl;
+
+  NetworkExceptions? get networkException;
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UpdateInformationStudentFailureImplCopyWith<
+          _$UpdateInformationStudentFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateInformationStudentSuccessImplCopyWith<$Res> {
+  factory _$$UpdateInformationStudentSuccessImplCopyWith(
+          _$UpdateInformationStudentSuccessImpl value,
+          $Res Function(_$UpdateInformationStudentSuccessImpl) then) =
+      __$$UpdateInformationStudentSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({StudentInfomationsModel data, String? message});
+
+  $StudentInfomationsModelCopyWith<$Res> get data;
+}
+
+/// @nodoc
+class __$$UpdateInformationStudentSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res,
+        _$UpdateInformationStudentSuccessImpl>
+    implements _$$UpdateInformationStudentSuccessImplCopyWith<$Res> {
+  __$$UpdateInformationStudentSuccessImplCopyWithImpl(
+      _$UpdateInformationStudentSuccessImpl _value,
+      $Res Function(_$UpdateInformationStudentSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$UpdateInformationStudentSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as StudentInfomationsModel,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $StudentInfomationsModelCopyWith<$Res> get data {
+    return $StudentInfomationsModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$UpdateInformationStudentSuccessImpl
+    implements UpdateInformationStudentSuccess {
+  const _$UpdateInformationStudentSuccessImpl(this.data, this.message);
+
+  @override
+  final StudentInfomationsModel data;
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.updateInformationStudentsuccess(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateInformationStudentSuccessImpl &&
+            (identical(other.data, data) || other.data == data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data, message);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateInformationStudentSuccessImplCopyWith<
+          _$UpdateInformationStudentSuccessImpl>
+      get copyWith => __$$UpdateInformationStudentSuccessImplCopyWithImpl<
+          _$UpdateInformationStudentSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentsuccess(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentsuccess?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateInformationStudentsuccess != null) {
+      return updateInformationStudentsuccess(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentsuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return updateInformationStudentsuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateInformationStudentsuccess != null) {
+      return updateInformationStudentsuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateInformationStudentSuccess implements ProfileSettingsState {
+  const factory UpdateInformationStudentSuccess(
+          final StudentInfomationsModel data, final String? message) =
+      _$UpdateInformationStudentSuccessImpl;
+
+  StudentInfomationsModel get data;
+  String? get message;
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UpdateInformationStudentSuccessImplCopyWith<
+          _$UpdateInformationStudentSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -255,7 +1034,7 @@ class __$$FetchTransactionsLoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FetchTransactionsLoadingImpl implements _FetchTransactionsLoading {
+class _$FetchTransactionsLoadingImpl implements FetchTransactionsLoading {
   const _$FetchTransactionsLoadingImpl();
 
   @override
@@ -277,11 +1056,21 @@ class _$FetchTransactionsLoadingImpl implements _FetchTransactionsLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
     required TResult Function() fetchTransactionsLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
   }) {
     return fetchTransactionsLoading();
   }
@@ -290,11 +1079,20 @@ class _$FetchTransactionsLoadingImpl implements _FetchTransactionsLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult? Function()? fetchTransactionsLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
   }) {
     return fetchTransactionsLoading?.call();
   }
@@ -303,11 +1101,20 @@ class _$FetchTransactionsLoadingImpl implements _FetchTransactionsLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult Function()? fetchTransactionsLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
     required TResult orElse(),
   }) {
     if (fetchTransactionsLoading != null) {
@@ -320,12 +1127,21 @@ class _$FetchTransactionsLoadingImpl implements _FetchTransactionsLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_FetchTransactionsLoading value)
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
         fetchTransactionsLoading,
-    required TResult Function(_FetchTransactionsFailure value)
+    required TResult Function(FetchTransactionsFailure value)
         fetchTransactionsFailure,
-    required TResult Function(_FetchTransactionsSuccess value)
+    required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
   }) {
     return fetchTransactionsLoading(this);
   }
@@ -334,12 +1150,18 @@ class _$FetchTransactionsLoadingImpl implements _FetchTransactionsLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_FetchTransactionsLoading value)?
-        fetchTransactionsLoading,
-    TResult? Function(_FetchTransactionsFailure value)?
-        fetchTransactionsFailure,
-    TResult? Function(_FetchTransactionsSuccess value)?
-        fetchTransactionsSuccess,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
   }) {
     return fetchTransactionsLoading?.call(this);
   }
@@ -348,9 +1170,18 @@ class _$FetchTransactionsLoadingImpl implements _FetchTransactionsLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_FetchTransactionsLoading value)? fetchTransactionsLoading,
-    TResult Function(_FetchTransactionsFailure value)? fetchTransactionsFailure,
-    TResult Function(_FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
     required TResult orElse(),
   }) {
     if (fetchTransactionsLoading != null) {
@@ -360,8 +1191,8 @@ class _$FetchTransactionsLoadingImpl implements _FetchTransactionsLoading {
   }
 }
 
-abstract class _FetchTransactionsLoading implements ProfileSettingsState {
-  const factory _FetchTransactionsLoading() = _$FetchTransactionsLoadingImpl;
+abstract class FetchTransactionsLoading implements ProfileSettingsState {
+  const factory FetchTransactionsLoading() = _$FetchTransactionsLoadingImpl;
 }
 
 /// @nodoc
@@ -418,7 +1249,7 @@ class __$$FetchTransactionsFailureImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FetchTransactionsFailureImpl implements _FetchTransactionsFailure {
+class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
   const _$FetchTransactionsFailureImpl(this.networkException);
 
   @override
@@ -454,11 +1285,21 @@ class _$FetchTransactionsFailureImpl implements _FetchTransactionsFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
     required TResult Function() fetchTransactionsLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
   }) {
     return fetchTransactionsFailure(networkException);
   }
@@ -467,11 +1308,20 @@ class _$FetchTransactionsFailureImpl implements _FetchTransactionsFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult? Function()? fetchTransactionsLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
   }) {
     return fetchTransactionsFailure?.call(networkException);
   }
@@ -480,11 +1330,20 @@ class _$FetchTransactionsFailureImpl implements _FetchTransactionsFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult Function()? fetchTransactionsLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
     required TResult orElse(),
   }) {
     if (fetchTransactionsFailure != null) {
@@ -497,12 +1356,21 @@ class _$FetchTransactionsFailureImpl implements _FetchTransactionsFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_FetchTransactionsLoading value)
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
         fetchTransactionsLoading,
-    required TResult Function(_FetchTransactionsFailure value)
+    required TResult Function(FetchTransactionsFailure value)
         fetchTransactionsFailure,
-    required TResult Function(_FetchTransactionsSuccess value)
+    required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
   }) {
     return fetchTransactionsFailure(this);
   }
@@ -511,12 +1379,18 @@ class _$FetchTransactionsFailureImpl implements _FetchTransactionsFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_FetchTransactionsLoading value)?
-        fetchTransactionsLoading,
-    TResult? Function(_FetchTransactionsFailure value)?
-        fetchTransactionsFailure,
-    TResult? Function(_FetchTransactionsSuccess value)?
-        fetchTransactionsSuccess,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
   }) {
     return fetchTransactionsFailure?.call(this);
   }
@@ -525,9 +1399,18 @@ class _$FetchTransactionsFailureImpl implements _FetchTransactionsFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_FetchTransactionsLoading value)? fetchTransactionsLoading,
-    TResult Function(_FetchTransactionsFailure value)? fetchTransactionsFailure,
-    TResult Function(_FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
     required TResult orElse(),
   }) {
     if (fetchTransactionsFailure != null) {
@@ -537,8 +1420,8 @@ class _$FetchTransactionsFailureImpl implements _FetchTransactionsFailure {
   }
 }
 
-abstract class _FetchTransactionsFailure implements ProfileSettingsState {
-  const factory _FetchTransactionsFailure(
+abstract class FetchTransactionsFailure implements ProfileSettingsState {
+  const factory FetchTransactionsFailure(
           final NetworkExceptions? networkException) =
       _$FetchTransactionsFailureImpl;
 
@@ -594,7 +1477,7 @@ class __$$FetchTransactionsSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FetchTransactionsSuccessImpl implements _FetchTransactionsSuccess {
+class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
   const _$FetchTransactionsSuccessImpl(
       final List<TransactionModel> data, this.message)
       : _data = data;
@@ -641,11 +1524,21 @@ class _$FetchTransactionsSuccessImpl implements _FetchTransactionsSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
     required TResult Function() fetchTransactionsLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
   }) {
     return fetchTransactionsSuccess(data, message);
   }
@@ -654,11 +1547,20 @@ class _$FetchTransactionsSuccessImpl implements _FetchTransactionsSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult? Function()? fetchTransactionsLoading,
     TResult? Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
   }) {
     return fetchTransactionsSuccess?.call(data, message);
   }
@@ -667,11 +1569,20 @@ class _$FetchTransactionsSuccessImpl implements _FetchTransactionsSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
     TResult Function()? fetchTransactionsLoading,
     TResult Function(NetworkExceptions? networkException)?
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
     required TResult orElse(),
   }) {
     if (fetchTransactionsSuccess != null) {
@@ -684,12 +1595,21 @@ class _$FetchTransactionsSuccessImpl implements _FetchTransactionsSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_FetchTransactionsLoading value)
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
         fetchTransactionsLoading,
-    required TResult Function(_FetchTransactionsFailure value)
+    required TResult Function(FetchTransactionsFailure value)
         fetchTransactionsFailure,
-    required TResult Function(_FetchTransactionsSuccess value)
+    required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
   }) {
     return fetchTransactionsSuccess(this);
   }
@@ -698,12 +1618,18 @@ class _$FetchTransactionsSuccessImpl implements _FetchTransactionsSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_FetchTransactionsLoading value)?
-        fetchTransactionsLoading,
-    TResult? Function(_FetchTransactionsFailure value)?
-        fetchTransactionsFailure,
-    TResult? Function(_FetchTransactionsSuccess value)?
-        fetchTransactionsSuccess,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
   }) {
     return fetchTransactionsSuccess?.call(this);
   }
@@ -712,9 +1638,18 @@ class _$FetchTransactionsSuccessImpl implements _FetchTransactionsSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_FetchTransactionsLoading value)? fetchTransactionsLoading,
-    TResult Function(_FetchTransactionsFailure value)? fetchTransactionsFailure,
-    TResult Function(_FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
     required TResult orElse(),
   }) {
     if (fetchTransactionsSuccess != null) {
@@ -724,8 +1659,8 @@ class _$FetchTransactionsSuccessImpl implements _FetchTransactionsSuccess {
   }
 }
 
-abstract class _FetchTransactionsSuccess implements ProfileSettingsState {
-  const factory _FetchTransactionsSuccess(
+abstract class FetchTransactionsSuccess implements ProfileSettingsState {
+  const factory FetchTransactionsSuccess(
           final List<TransactionModel> data, final String? message) =
       _$FetchTransactionsSuccessImpl;
 
@@ -737,4 +1672,657 @@ abstract class _FetchTransactionsSuccess implements ProfileSettingsState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchTransactionsSuccessImplCopyWith<_$FetchTransactionsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchReceiptLoadingImplCopyWith<$Res> {
+  factory _$$FetchReceiptLoadingImplCopyWith(_$FetchReceiptLoadingImpl value,
+          $Res Function(_$FetchReceiptLoadingImpl) then) =
+      __$$FetchReceiptLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchReceiptLoadingImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res, _$FetchReceiptLoadingImpl>
+    implements _$$FetchReceiptLoadingImplCopyWith<$Res> {
+  __$$FetchReceiptLoadingImplCopyWithImpl(_$FetchReceiptLoadingImpl _value,
+      $Res Function(_$FetchReceiptLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FetchReceiptLoadingImpl implements FetchReceiptLoading {
+  const _$FetchReceiptLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.fetchReceiptLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchReceiptLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return fetchReceiptLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return fetchReceiptLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchReceiptLoading != null) {
+      return fetchReceiptLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return fetchReceiptLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return fetchReceiptLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchReceiptLoading != null) {
+      return fetchReceiptLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchReceiptLoading implements ProfileSettingsState {
+  const factory FetchReceiptLoading() = _$FetchReceiptLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchReceiptFailureImplCopyWith<$Res> {
+  factory _$$FetchReceiptFailureImplCopyWith(_$FetchReceiptFailureImpl value,
+          $Res Function(_$FetchReceiptFailureImpl) then) =
+      __$$FetchReceiptFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$FetchReceiptFailureImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res, _$FetchReceiptFailureImpl>
+    implements _$$FetchReceiptFailureImplCopyWith<$Res> {
+  __$$FetchReceiptFailureImplCopyWithImpl(_$FetchReceiptFailureImpl _value,
+      $Res Function(_$FetchReceiptFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$FetchReceiptFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
+  const _$FetchReceiptFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.fetchReceiptFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchReceiptFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchReceiptFailureImplCopyWith<_$FetchReceiptFailureImpl> get copyWith =>
+      __$$FetchReceiptFailureImplCopyWithImpl<_$FetchReceiptFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return fetchReceiptFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return fetchReceiptFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchReceiptFailure != null) {
+      return fetchReceiptFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return fetchReceiptFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return fetchReceiptFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchReceiptFailure != null) {
+      return fetchReceiptFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchReceiptFailure implements ProfileSettingsState {
+  const factory FetchReceiptFailure(final NetworkExceptions? networkException) =
+      _$FetchReceiptFailureImpl;
+
+  NetworkExceptions? get networkException;
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchReceiptFailureImplCopyWith<_$FetchReceiptFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchReceiptSuccessImplCopyWith<$Res> {
+  factory _$$FetchReceiptSuccessImplCopyWith(_$FetchReceiptSuccessImpl value,
+          $Res Function(_$FetchReceiptSuccessImpl) then) =
+      __$$FetchReceiptSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ReceiptModel> data, String? message});
+}
+
+/// @nodoc
+class __$$FetchReceiptSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res, _$FetchReceiptSuccessImpl>
+    implements _$$FetchReceiptSuccessImplCopyWith<$Res> {
+  __$$FetchReceiptSuccessImplCopyWithImpl(_$FetchReceiptSuccessImpl _value,
+      $Res Function(_$FetchReceiptSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$FetchReceiptSuccessImpl(
+      null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<ReceiptModel>,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
+  const _$FetchReceiptSuccessImpl(final List<ReceiptModel> data, this.message)
+      : _data = data;
+
+  final List<ReceiptModel> _data;
+  @override
+  List<ReceiptModel> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.fetchReceiptSuccess(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchReceiptSuccessImpl &&
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_data), message);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchReceiptSuccessImplCopyWith<_$FetchReceiptSuccessImpl> get copyWith =>
+      __$$FetchReceiptSuccessImplCopyWithImpl<_$FetchReceiptSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return fetchReceiptSuccess(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return fetchReceiptSuccess?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchReceiptSuccess != null) {
+      return fetchReceiptSuccess(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return fetchReceiptSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return fetchReceiptSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchReceiptSuccess != null) {
+      return fetchReceiptSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchReceiptSuccess implements ProfileSettingsState {
+  const factory FetchReceiptSuccess(
+          final List<ReceiptModel> data, final String? message) =
+      _$FetchReceiptSuccessImpl;
+
+  List<ReceiptModel> get data;
+  String? get message;
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchReceiptSuccessImplCopyWith<_$FetchReceiptSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

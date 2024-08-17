@@ -5,8 +5,10 @@ import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/context_extensions.dart';
 
 class BirthdayCard extends StatefulWidget {
-  const BirthdayCard({super.key, required this.onChanged});
+  const BirthdayCard(
+      {super.key, required this.onChanged, required this.hintText});
   final void Function(String date) onChanged;
+  final String hintText;
   @override
   BirthdayCardState createState() => BirthdayCardState();
 }
@@ -89,7 +91,7 @@ class BirthdayCardState extends State<BirthdayCard> {
             controller: _controller,
             readOnly: true,
             decoration: InputDecoration(
-              hintText: LocaleKeys.FillYourProfile_dateOfBirth.tr(),
+              hintText: widget.hintText,
               hintStyle: TextStyle(
                 fontWeight: FontWeight.w600,
                 color: context.isDarkMode

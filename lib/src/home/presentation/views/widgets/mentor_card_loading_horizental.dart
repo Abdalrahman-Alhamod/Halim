@@ -13,9 +13,11 @@ class MentorCardLoadingListHorizontal extends StatelessWidget {
       physics: const ScrollPhysics(),
       itemCount: 20,
       itemBuilder: (context, index) {
-        return  Row(
+        return Row(
           children: [
-            Container(width: 15,),
+            Container(
+              width: 15,
+            ),
             const Column(
               children: [
                 Padding(
@@ -26,9 +28,11 @@ class MentorCardLoadingListHorizontal extends StatelessWidget {
                     width: 60,
                     height: 60,
                   )),
-            
                 ),
-                ShimmerBox(height: 20,width: 40,)
+                ShimmerBox(
+                  height: 20,
+                  width: 40,
+                )
               ],
             ),
           ],
