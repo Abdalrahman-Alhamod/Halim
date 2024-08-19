@@ -21,7 +21,7 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit(this._authRepo) : super(const AuthState.initial());
   final AuthRepo _authRepo;
   UserModel? user;
-  void saveUser() {
+  void saveUser(){
     _authRepo.saveToken(user!);
   }
 

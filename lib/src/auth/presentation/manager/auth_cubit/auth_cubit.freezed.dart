@@ -1493,6 +1493,8 @@ abstract class _$$LoginSuccessImplCopyWith<$Res> {
   $Res call({UserModel data, String? message});
 
   $UserModelCopyWith<$Res> get data;
+
+  $UserModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -1523,8 +1525,6 @@ class __$$LoginSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserModelCopyWith<$Res> get data {
@@ -2510,8 +2510,6 @@ class __$$RegisterSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserModelCopyWith<$Res> get data {

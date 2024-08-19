@@ -77,6 +77,10 @@ mixin _$StudentInfomationsModel {
   String? get accessToken => throw _privateConstructorUsedError;
   @JsonKey(name: 'access_token')
   set accessToken(String? value) => throw _privateConstructorUsedError;
+  @JsonKey(name: 'access_token')
+  String? get accessToken => throw _privateConstructorUsedError;
+  @JsonKey(name: 'access_token')
+  set accessToken(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this StudentInfomationsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
