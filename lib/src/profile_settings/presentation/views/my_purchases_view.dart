@@ -48,7 +48,7 @@ class PaymentsViewState extends State<PaymentsView> {
           return state.maybeWhen(
             // initial: () => const Center(child: CircularProgressIndicator()),
             fetchReceiptLoading: () => Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              padding: const EdgeInsets.all(4),
               child: ListView.separated(
                 shrinkWrap: true,
                 itemCount: 10,
@@ -58,7 +58,7 @@ class PaymentsViewState extends State<PaymentsView> {
                   radius: 32,
                 ),
                 separatorBuilder: (context, index) => const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
               ),
             ),
@@ -67,8 +67,8 @@ class PaymentsViewState extends State<PaymentsView> {
               color: Colors.red,
             ),
             fetchReceiptSuccess: (data, message) => Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: ListView.builder(
+              padding: const EdgeInsets.all(4),
+              child: ListView.separated(
                 scrollDirection: Axis.vertical,
                 itemCount: data.length,
                 itemBuilder: (context, index) => CardCourseReceipt(
@@ -81,6 +81,9 @@ class PaymentsViewState extends State<PaymentsView> {
                       },
                     );
                   },
+                ),
+                separatorBuilder: (context, index) => const SizedBox(
+                  height: 10,
                 ),
               ),
             ),

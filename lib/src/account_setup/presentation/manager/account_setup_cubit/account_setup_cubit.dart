@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halim/core/domain/error_handler/network_exceptions.dart';
@@ -12,6 +13,8 @@ import 'package:halim/core/utils/app_route.dart';
 import 'package:halim/core/utils/logger.dart';
 import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
 import 'package:halim/src/account_setup/domain/repos/account_setup_repo.dart';
+import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import 'package:halim/src/shared/model/user_model.dart';
 
 import '../../../../../core/functions/show_custom_dialog.dart';
 import '../../../../forgot_password/presentation/views/widget/accont_sucsses_dialog.dart';
@@ -22,9 +25,9 @@ class AccountSetupCubit extends Cubit<AccountSetupState> {
   AccountSetupCubit(this._accountSetupRepo)
       : super(const AccountSetupState.initial());
   final AccountSetupRepo _accountSetupRepo;
-  
+
   StudentInfomationsModel student = StudentInfomationsModel();
-   
+  
   int pin = 0;
   // List<int>? sinterests = [];
   Future<void> postInformationStudent() async {
@@ -86,6 +89,23 @@ class AccountSetupCubit extends Cubit<AccountSetupState> {
       },
       success: (data, message) {
         context.pop();
+        context.read<AuthCubit>().user = UserModel(
+          id: data.id,
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          pin: data.pin,
+          gender: data.gender,
+          birthDate: data.birthDate,
+          image: data.image,
+          phoneNumber: data.phoneNumber,
+          educationLevel: data.educationLevel,
+          major: data.major,
+          interests: data.interests,
+          pointsBalance: data.pointsBalance,
+          accessToken: data.accessToken,
+        );
+        context.read<AuthCubit>().saveUser();
 
         showTOAST(
           context,

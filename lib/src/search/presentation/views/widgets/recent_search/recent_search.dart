@@ -53,8 +53,7 @@ class RecentSearch extends StatelessWidget {
               ? AppColors.darkFlatButtonColor
               : Colors.grey.shade300,
         ),
-        SizedBox(
-          height: context.height * 0.75,
+        Expanded(
           child: RefreshBase(
             onRefresh: () =>
                 context.read<SearchKeywordsCubit>().getSearchKeywords(),

@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
 import 'package:halim/core/widgets/empty_view.dart';
 import 'package:halim/core/widgets/shimmer_box.dart';
+import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:halim/src/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:halim/src/home/presentation/views/widgets/card_advertisement_local.dart';
 import 'package:halim/src/home/presentation/views/widgets/card_course_loading_list.dart';
@@ -49,7 +50,7 @@ class _HomeViewState extends State<HomeView> {
     homeCubit = context.read<HomeCubit>();
     homeCubit.getHomeCourses();
     homeCubit.getAllMentors();
-    homeCubit.getInfStudent(studentId: 1071);
+    homeCubit.getInfStudent(studentId: context.read<AuthCubit>().user?.id??0);
     homeCubit.getSubcategories(categoryId: 1);
     homeCubit.getAdvertisements();
     return BlocBuilder<HomeCubit, HomeState>(

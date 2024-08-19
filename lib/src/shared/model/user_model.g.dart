@@ -1,14 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'student_infomations_model.dart';
+part of 'user_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StudentInfomationsModelImpl _$$StudentInfomationsModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$StudentInfomationsModelImpl(
+_$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
+    _$UserModelImpl(
       id: (json['id'] as num?)?.toInt(),
       firstName: json['first_name'] as String?,
       lastName: json['last_name'] as String?,
@@ -29,8 +28,7 @@ _$StudentInfomationsModelImpl _$$StudentInfomationsModelImplFromJson(
       accessToken: json['access_token'] as String?,
     );
 
-Map<String, dynamic> _$$StudentInfomationsModelImplToJson(
-        _$StudentInfomationsModelImpl instance) =>
+Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'first_name': instance.firstName,
@@ -46,27 +44,4 @@ Map<String, dynamic> _$$StudentInfomationsModelImplToJson(
       'interests': instance.interests,
       'points_balance': instance.pointsBalance,
       'access_token': instance.accessToken,
-    };
-
-_$MajorImpl _$$MajorImplFromJson(Map<String, dynamic> json) => _$MajorImpl(
-      id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String?,
-    );
-
-Map<String, dynamic> _$$MajorImplToJson(_$MajorImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
-
-_$InterestsImpl _$$InterestsImplFromJson(Map<String, dynamic> json) =>
-    _$InterestsImpl(
-      id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String?,
-    );
-
-Map<String, dynamic> _$$InterestsImplToJson(_$InterestsImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
     };

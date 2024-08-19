@@ -108,7 +108,7 @@ showProductPurchaseDialog({
       widget: AuthenticateUsingDialog(
         message:
             LocaleKeys.CourseDetails_Enroll_verifyYourIdentityToPurchse.tr(),
-        onSuccess: () {
+        onSuccess: ([String? pin]) {
           context.read<StoreCubit>().purchaseItem(
                 itemId: itemId,
                 type: AppUrl.kItems,

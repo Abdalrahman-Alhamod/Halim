@@ -19,6 +19,7 @@ class StudentInfomationsModel with _$StudentInfomationsModel {
     @JsonKey(name: 'major') Major? major,
     @JsonKey(name: 'interests') List<Interests>? interests,
     @JsonKey(name: 'points_balance') int? pointsBalance,
+     @JsonKey(name: 'access_token') String? accessToken,
   }) = _StudentInfomationsModel;
 
   factory StudentInfomationsModel.fromJson(Map<String, Object?> json) =>

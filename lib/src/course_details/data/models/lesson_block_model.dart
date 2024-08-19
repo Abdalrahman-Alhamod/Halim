@@ -38,8 +38,6 @@ class VideoBlockModel with _$VideoBlockModel {
     @JsonKey(name: 'is_completed') bool? isCompleted,
     @JsonKey(
       name: 'is_preview',
-      fromJson: _boolFromJson,
-      toJson: _boolToJson,
     )
     bool? isPreview,
   }) = _VideoBlockModel;
@@ -57,8 +55,6 @@ class ReadingBlockModel with _$ReadingBlockModel {
     @JsonKey(name: 'is_completed') bool? isCompleted,
     @JsonKey(
       name: 'is_preview',
-      fromJson: _boolFromJson,
-      toJson: _boolToJson,
     )
     bool? isPreview,
   }) = _ReadingBlockModel;
@@ -76,8 +72,6 @@ class QuizBlockModel with _$QuizBlockModel {
     @JsonKey(name: 'is_completed') bool? isCompleted,
     @JsonKey(
       name: 'is_preview',
-      fromJson: _boolFromJson,
-      toJson: _boolToJson,
     )
     bool? isPreview,
     @JsonKey(name: 'quiz') QuizBlockDetailsModel? quizDetails,
@@ -96,7 +90,3 @@ class QuizBlockDetailsModel with _$QuizBlockDetailsModel {
   factory QuizBlockDetailsModel.fromJson(Map<String, dynamic> json) =>
       _$QuizBlockDetailsModelFromJson(json);
 }
-
-// Custom functions to handle the conversion between 0/1 and true/false
-bool _boolFromJson(dynamic value) => value == 1;
-int _boolToJson(bool? value) => value == true ? 1 : 0;

@@ -21,7 +21,7 @@ class TeacherAvatar extends StatelessWidget {
         GoRouter.of(context).push(
           AppRoute.kMentorDetailsView,
           extra: {
-            NavKeys.mentorId: -1,
+            NavKeys.mentorId: mentorCardModel.id ?? 0,
           },
         );
       },

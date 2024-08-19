@@ -21,6 +21,9 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit(this._authRepo) : super(const AuthState.initial());
   final AuthRepo _authRepo;
   UserModel? user;
+  void saveUser(){
+    _authRepo.saveToken(user!);
+  }
 
   Future<void> login({
     required String email,
@@ -38,7 +41,7 @@ class AuthCubit extends Cubit<AuthState> {
         emit(
           AuthState.loginSuccess(user!, data.message),
         );
-        _authRepo.saveToken(user!);
+        saveUser();
         if (rememeberMe) {
           _authRepo.saveUserEmail(user!);
         }

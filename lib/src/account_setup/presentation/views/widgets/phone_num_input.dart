@@ -3,7 +3,6 @@ import '../../../../../core/themes/app_colors.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-
 class PhoneNumberInputScreen extends StatefulWidget {
   final Function(String) onPhoneNumberChanged;
   final String hintText;
@@ -58,7 +57,7 @@ class PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
           selectorType: PhoneInputSelectorType.DIALOG,
         ),
         ignoreBlank: false,
-        autoValidateMode: AutovalidateMode.onUserInteraction,
+        autoValidateMode: AutovalidateMode.disabled,
         selectorTextStyle: TextStyle(
           color: context.isDarkMode ? Colors.white : Colors.black,
         ),

@@ -1,75 +1,29 @@
-class UserModel {
-  int? id;
-  String? firstName;
-  String? lastName;
-  String? email;
-  String? gender;
-  String? birthDate;
-  dynamic image;
-  String? phoneNumber;
-  String? accessToken;
-  UserModel({
-    this.id,
-    this.firstName,
-    this.lastName,
-    this.email,
-    this.gender,
-    this.birthDate,
-    this.image,
-    this.phoneNumber,
-    this.accessToken,
-  });
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/foundation.dart';
 
-  @override
-  String toString() {
-    return 'UserModel(id: $id, firstName: $firstName, lastName: $lastName, email: $email, gender: $gender, birthDate: $birthDate, image: $image, phoneNumber: $phoneNumber, accessToken: $accessToken)';
-  }
+import '../../account_setup/data/models/student_infomations_model.dart';
+part 'user_model.freezed.dart';
+part 'user_model.g.dart';
 
-  factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
-        id: json['id'] as int?,
-        firstName: json['first_name'] as String?,
-        lastName: json['last_name'] as String?,
-        email: json['email'] as String?,
-        gender: json['gender'] as String?,
-        birthDate: json['birth_date'] as String?,
-        image: json['image'] as dynamic,
-        phoneNumber: json['phone_number'] as String?,
-        accessToken: json['access_token'] as String?,
-      );
+@unfreezed
+class UserModel with _$UserModel {
+  factory UserModel({
+    @JsonKey(name: 'id') int? id,
+    @JsonKey(name: 'first_name') String? firstName,
+    @JsonKey(name: 'last_name') String? lastName,
+    @JsonKey(name: 'email') String? email,
+    @JsonKey(name: 'PIN') int? pin,
+    @JsonKey(name: 'gender') String? gender,
+    @JsonKey(name: 'birth_date') String? birthDate,
+    @JsonKey(name: 'image') String? image,
+    @JsonKey(name: 'phone_number') String? phoneNumber,
+    @JsonKey(name: 'education_level') String? educationLevel,
+    @JsonKey(name: 'major') Major? major,
+    @JsonKey(name: 'interests') List<Interests>? interests,
+    @JsonKey(name: 'points_balance') int? pointsBalance,
+    @JsonKey(name: 'access_token') String? accessToken,
+  }) = _UserModel;
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'first_name': firstName,
-        'last_name': lastName,
-        'email': email,
-        'gender': gender,
-        'birth_date': birthDate,
-        'image': image,
-        'phone_number': phoneNumber,
-        'access_token': accessToken,
-      };
-
-  UserModel copyWith({
-    int? id,
-    String? firstName,
-    String? lastName,
-    String? email,
-    String? gender,
-    String? birthDate,
-    dynamic image,
-    String? phoneNumber,
-    String? accessToken,
-  }) {
-    return UserModel(
-      id: id ?? this.id,
-      firstName: firstName ?? this.firstName,
-      lastName: lastName ?? this.lastName,
-      email: email ?? this.email,
-      gender: gender ?? this.gender,
-      birthDate: birthDate ?? this.birthDate,
-      image: image ?? this.image,
-      phoneNumber: phoneNumber ?? this.phoneNumber,
-      accessToken: accessToken ?? this.accessToken,
-    );
-  }
+  factory UserModel.fromJson(Map<String, Object?> json) =>
+      _$UserModelFromJson(json);
 }

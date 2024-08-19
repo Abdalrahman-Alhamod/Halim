@@ -3,7 +3,7 @@ import '../utils/context_extensions.dart';
 
 import '../themes/app_colors.dart';
 
-showCustomDialog({required BuildContext context, required Widget widget}) {
+showCustomDialog({required BuildContext context, required Widget widget,bool isDismissible=true,}) {
   showDialog(
     context: context,
     builder: (context) {
@@ -20,7 +20,7 @@ showCustomDialog({required BuildContext context, required Widget widget}) {
         ),
       );
     },
-    barrierDismissible: true,
+    barrierDismissible: isDismissible,
     barrierColor: const Color.fromARGB(255, 0, 5, 23).withAlpha(150),
   );
 }

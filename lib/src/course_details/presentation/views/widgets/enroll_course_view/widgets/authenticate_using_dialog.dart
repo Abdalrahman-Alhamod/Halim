@@ -18,7 +18,7 @@ class AuthenticateUsingDialog extends StatelessWidget {
     required this.onSuccess,
   });
   final String message;
-  final void Function() onSuccess;
+  final void Function([String? pin]) onSuccess;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -69,7 +69,9 @@ class AuthenticateUsingDialog extends StatelessWidget {
                     showCustomDialog(
                       context: context,
                       widget: PINAuthDialog(
-                        onSuccess: onSuccess,
+                        onSuccess: (pin) {
+                          onSuccess.call( pin);
+                        },
                       ),
                     );
                   },

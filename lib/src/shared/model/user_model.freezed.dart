@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'student_infomations_model.dart';
+part of 'user_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-StudentInfomationsModel _$StudentInfomationsModelFromJson(
-    Map<String, dynamic> json) {
-  return _StudentInfomationsModel.fromJson(json);
+UserModel _$UserModelFromJson(Map<String, dynamic> json) {
+  return _UserModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$StudentInfomationsModel {
+mixin _$UserModel {
   @JsonKey(name: 'id')
   int? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
@@ -80,15 +79,14 @@ mixin _$StudentInfomationsModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StudentInfomationsModelCopyWith<StudentInfomationsModel> get copyWith =>
+  $UserModelCopyWith<UserModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $StudentInfomationsModelCopyWith<$Res> {
-  factory $StudentInfomationsModelCopyWith(StudentInfomationsModel value,
-          $Res Function(StudentInfomationsModel) then) =
-      _$StudentInfomationsModelCopyWithImpl<$Res, StudentInfomationsModel>;
+abstract class $UserModelCopyWith<$Res> {
+  factory $UserModelCopyWith(UserModel value, $Res Function(UserModel) then) =
+      _$UserModelCopyWithImpl<$Res, UserModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') int? id,
@@ -110,10 +108,9 @@ abstract class $StudentInfomationsModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$StudentInfomationsModelCopyWithImpl<$Res,
-        $Val extends StudentInfomationsModel>
-    implements $StudentInfomationsModelCopyWith<$Res> {
-  _$StudentInfomationsModelCopyWithImpl(this._value, this._then);
+class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
+    implements $UserModelCopyWith<$Res> {
+  _$UserModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -212,12 +209,11 @@ class _$StudentInfomationsModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$StudentInfomationsModelImplCopyWith<$Res>
-    implements $StudentInfomationsModelCopyWith<$Res> {
-  factory _$$StudentInfomationsModelImplCopyWith(
-          _$StudentInfomationsModelImpl value,
-          $Res Function(_$StudentInfomationsModelImpl) then) =
-      __$$StudentInfomationsModelImplCopyWithImpl<$Res>;
+abstract class _$$UserModelImplCopyWith<$Res>
+    implements $UserModelCopyWith<$Res> {
+  factory _$$UserModelImplCopyWith(
+          _$UserModelImpl value, $Res Function(_$UserModelImpl) then) =
+      __$$UserModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -241,13 +237,11 @@ abstract class _$$StudentInfomationsModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$StudentInfomationsModelImplCopyWithImpl<$Res>
-    extends _$StudentInfomationsModelCopyWithImpl<$Res,
-        _$StudentInfomationsModelImpl>
-    implements _$$StudentInfomationsModelImplCopyWith<$Res> {
-  __$$StudentInfomationsModelImplCopyWithImpl(
-      _$StudentInfomationsModelImpl _value,
-      $Res Function(_$StudentInfomationsModelImpl) _then)
+class __$$UserModelImplCopyWithImpl<$Res>
+    extends _$UserModelCopyWithImpl<$Res, _$UserModelImpl>
+    implements _$$UserModelImplCopyWith<$Res> {
+  __$$UserModelImplCopyWithImpl(
+      _$UserModelImpl _value, $Res Function(_$UserModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -268,7 +262,7 @@ class __$$StudentInfomationsModelImplCopyWithImpl<$Res>
     Object? pointsBalance = freezed,
     Object? accessToken = freezed,
   }) {
-    return _then(_$StudentInfomationsModelImpl(
+    return _then(_$UserModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -331,10 +325,8 @@ class __$$StudentInfomationsModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$StudentInfomationsModelImpl
-    with DiagnosticableTreeMixin
-    implements _StudentInfomationsModel {
-  _$StudentInfomationsModelImpl(
+class _$UserModelImpl with DiagnosticableTreeMixin implements _UserModel {
+  _$UserModelImpl(
       {@JsonKey(name: 'id') this.id,
       @JsonKey(name: 'first_name') this.firstName,
       @JsonKey(name: 'last_name') this.lastName,
@@ -350,8 +342,8 @@ class _$StudentInfomationsModelImpl
       @JsonKey(name: 'points_balance') this.pointsBalance,
       @JsonKey(name: 'access_token') this.accessToken});
 
-  factory _$StudentInfomationsModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$StudentInfomationsModelImplFromJson(json);
+  factory _$UserModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -398,14 +390,14 @@ class _$StudentInfomationsModelImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'StudentInfomationsModel(id: $id, firstName: $firstName, lastName: $lastName, email: $email, pin: $pin, gender: $gender, birthDate: $birthDate, image: $image, phoneNumber: $phoneNumber, educationLevel: $educationLevel, major: $major, interests: $interests, pointsBalance: $pointsBalance, accessToken: $accessToken)';
+    return 'UserModel(id: $id, firstName: $firstName, lastName: $lastName, email: $email, pin: $pin, gender: $gender, birthDate: $birthDate, image: $image, phoneNumber: $phoneNumber, educationLevel: $educationLevel, major: $major, interests: $interests, pointsBalance: $pointsBalance, accessToken: $accessToken)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'StudentInfomationsModel'))
+      ..add(DiagnosticsProperty('type', 'UserModel'))
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('firstName', firstName))
       ..add(DiagnosticsProperty('lastName', lastName))
@@ -425,38 +417,36 @@ class _$StudentInfomationsModelImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$StudentInfomationsModelImplCopyWith<_$StudentInfomationsModelImpl>
-      get copyWith => __$$StudentInfomationsModelImplCopyWithImpl<
-          _$StudentInfomationsModelImpl>(this, _$identity);
+  _$$UserModelImplCopyWith<_$UserModelImpl> get copyWith =>
+      __$$UserModelImplCopyWithImpl<_$UserModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StudentInfomationsModelImplToJson(
+    return _$$UserModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _StudentInfomationsModel implements StudentInfomationsModel {
-  factory _StudentInfomationsModel(
-          {@JsonKey(name: 'id') int? id,
-          @JsonKey(name: 'first_name') String? firstName,
-          @JsonKey(name: 'last_name') String? lastName,
-          @JsonKey(name: 'email') String? email,
-          @JsonKey(name: 'PIN') int? pin,
-          @JsonKey(name: 'gender') String? gender,
-          @JsonKey(name: 'birth_date') String? birthDate,
-          @JsonKey(name: 'image') String? image,
-          @JsonKey(name: 'phone_number') String? phoneNumber,
-          @JsonKey(name: 'education_level') String? educationLevel,
-          @JsonKey(name: 'major') Major? major,
-          @JsonKey(name: 'interests') List<Interests>? interests,
-          @JsonKey(name: 'points_balance') int? pointsBalance,
-          @JsonKey(name: 'access_token') String? accessToken}) =
-      _$StudentInfomationsModelImpl;
+abstract class _UserModel implements UserModel {
+  factory _UserModel(
+      {@JsonKey(name: 'id') int? id,
+      @JsonKey(name: 'first_name') String? firstName,
+      @JsonKey(name: 'last_name') String? lastName,
+      @JsonKey(name: 'email') String? email,
+      @JsonKey(name: 'PIN') int? pin,
+      @JsonKey(name: 'gender') String? gender,
+      @JsonKey(name: 'birth_date') String? birthDate,
+      @JsonKey(name: 'image') String? image,
+      @JsonKey(name: 'phone_number') String? phoneNumber,
+      @JsonKey(name: 'education_level') String? educationLevel,
+      @JsonKey(name: 'major') Major? major,
+      @JsonKey(name: 'interests') List<Interests>? interests,
+      @JsonKey(name: 'points_balance') int? pointsBalance,
+      @JsonKey(name: 'access_token') String? accessToken}) = _$UserModelImpl;
 
-  factory _StudentInfomationsModel.fromJson(Map<String, dynamic> json) =
-      _$StudentInfomationsModelImpl.fromJson;
+  factory _UserModel.fromJson(Map<String, dynamic> json) =
+      _$UserModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -530,334 +520,6 @@ abstract class _StudentInfomationsModel implements StudentInfomationsModel {
   set accessToken(String? value);
   @override
   @JsonKey(ignore: true)
-  _$$StudentInfomationsModelImplCopyWith<_$StudentInfomationsModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-Major _$MajorFromJson(Map<String, dynamic> json) {
-  return _Major.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Major {
-  @JsonKey(name: 'id')
-  int? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'id')
-  set id(int? value) => throw _privateConstructorUsedError;
-  @JsonKey(name: 'name')
-  String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'name')
-  set name(String? value) => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MajorCopyWith<Major> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MajorCopyWith<$Res> {
-  factory $MajorCopyWith(Major value, $Res Function(Major) then) =
-      _$MajorCopyWithImpl<$Res, Major>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') int? id, @JsonKey(name: 'name') String? name});
-}
-
-/// @nodoc
-class _$MajorCopyWithImpl<$Res, $Val extends Major>
-    implements $MajorCopyWith<$Res> {
-  _$MajorCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$MajorImplCopyWith<$Res> implements $MajorCopyWith<$Res> {
-  factory _$$MajorImplCopyWith(
-          _$MajorImpl value, $Res Function(_$MajorImpl) then) =
-      __$$MajorImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') int? id, @JsonKey(name: 'name') String? name});
-}
-
-/// @nodoc
-class __$$MajorImplCopyWithImpl<$Res>
-    extends _$MajorCopyWithImpl<$Res, _$MajorImpl>
-    implements _$$MajorImplCopyWith<$Res> {
-  __$$MajorImplCopyWithImpl(
-      _$MajorImpl _value, $Res Function(_$MajorImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-  }) {
-    return _then(_$MajorImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$MajorImpl with DiagnosticableTreeMixin implements _Major {
-  _$MajorImpl({@JsonKey(name: 'id') this.id, @JsonKey(name: 'name') this.name});
-
-  factory _$MajorImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MajorImplFromJson(json);
-
-  @override
-  @JsonKey(name: 'id')
-  int? id;
-  @override
-  @JsonKey(name: 'name')
-  String? name;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Major(id: $id, name: $name)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Major'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('name', name));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$MajorImplCopyWith<_$MajorImpl> get copyWith =>
-      __$$MajorImplCopyWithImpl<_$MajorImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$MajorImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Major implements Major {
-  factory _Major(
-      {@JsonKey(name: 'id') int? id,
-      @JsonKey(name: 'name') String? name}) = _$MajorImpl;
-
-  factory _Major.fromJson(Map<String, dynamic> json) = _$MajorImpl.fromJson;
-
-  @override
-  @JsonKey(name: 'id')
-  int? get id;
-  @JsonKey(name: 'id')
-  set id(int? value);
-  @override
-  @JsonKey(name: 'name')
-  String? get name;
-  @JsonKey(name: 'name')
-  set name(String? value);
-  @override
-  @JsonKey(ignore: true)
-  _$$MajorImplCopyWith<_$MajorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Interests _$InterestsFromJson(Map<String, dynamic> json) {
-  return _Interests.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Interests {
-  @JsonKey(name: 'id')
-  int? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'id')
-  set id(int? value) => throw _privateConstructorUsedError;
-  @JsonKey(name: 'name')
-  String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'name')
-  set name(String? value) => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $InterestsCopyWith<Interests> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $InterestsCopyWith<$Res> {
-  factory $InterestsCopyWith(Interests value, $Res Function(Interests) then) =
-      _$InterestsCopyWithImpl<$Res, Interests>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') int? id, @JsonKey(name: 'name') String? name});
-}
-
-/// @nodoc
-class _$InterestsCopyWithImpl<$Res, $Val extends Interests>
-    implements $InterestsCopyWith<$Res> {
-  _$InterestsCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$InterestsImplCopyWith<$Res>
-    implements $InterestsCopyWith<$Res> {
-  factory _$$InterestsImplCopyWith(
-          _$InterestsImpl value, $Res Function(_$InterestsImpl) then) =
-      __$$InterestsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') int? id, @JsonKey(name: 'name') String? name});
-}
-
-/// @nodoc
-class __$$InterestsImplCopyWithImpl<$Res>
-    extends _$InterestsCopyWithImpl<$Res, _$InterestsImpl>
-    implements _$$InterestsImplCopyWith<$Res> {
-  __$$InterestsImplCopyWithImpl(
-      _$InterestsImpl _value, $Res Function(_$InterestsImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-  }) {
-    return _then(_$InterestsImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$InterestsImpl with DiagnosticableTreeMixin implements _Interests {
-  _$InterestsImpl(
-      {@JsonKey(name: 'id') this.id, @JsonKey(name: 'name') this.name});
-
-  factory _$InterestsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$InterestsImplFromJson(json);
-
-  @override
-  @JsonKey(name: 'id')
-  int? id;
-  @override
-  @JsonKey(name: 'name')
-  String? name;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Interests(id: $id, name: $name)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Interests'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('name', name));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$InterestsImplCopyWith<_$InterestsImpl> get copyWith =>
-      __$$InterestsImplCopyWithImpl<_$InterestsImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$InterestsImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Interests implements Interests {
-  factory _Interests(
-      {@JsonKey(name: 'id') int? id,
-      @JsonKey(name: 'name') String? name}) = _$InterestsImpl;
-
-  factory _Interests.fromJson(Map<String, dynamic> json) =
-      _$InterestsImpl.fromJson;
-
-  @override
-  @JsonKey(name: 'id')
-  int? get id;
-  @JsonKey(name: 'id')
-  set id(int? value);
-  @override
-  @JsonKey(name: 'name')
-  String? get name;
-  @JsonKey(name: 'name')
-  set name(String? value);
-  @override
-  @JsonKey(ignore: true)
-  _$$InterestsImplCopyWith<_$InterestsImpl> get copyWith =>
+  _$$UserModelImplCopyWith<_$UserModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

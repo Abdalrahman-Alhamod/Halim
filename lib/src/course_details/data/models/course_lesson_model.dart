@@ -12,8 +12,6 @@ class CourseLessonModel with _$CourseLessonModel {
     @JsonKey(name: 'duration') int? duration,
     @JsonKey(
       name: 'is_preview',
-      fromJson: _boolFromJson,
-      toJson: _boolToJson,
     )
     bool? isPreview,
     @JsonKey(name: 'quiz') Quiz? quiz,

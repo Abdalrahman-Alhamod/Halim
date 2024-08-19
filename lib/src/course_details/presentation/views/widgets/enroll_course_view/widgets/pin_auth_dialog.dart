@@ -9,7 +9,7 @@ import 'pin_text_field.dart';
 
 class PINAuthDialog extends StatefulWidget {
   const PINAuthDialog({super.key, required this.onSuccess});
-  final void Function() onSuccess;
+  final void Function(String pin) onSuccess;
   @override
   State<PINAuthDialog> createState() => _PINAuthDialogState();
 }
@@ -88,9 +88,19 @@ class _PINAuthDialogState extends State<PINAuthDialog> {
           ),
           CustomFlatButton(
             onPressed: () {
-              if (_pinControllers[3].text != '') {
+              bool valid = true;
+              String pin = '';
+              for (var controller in _pinControllers) {
+                if (controller.text == '') {
+                  valid = false;
+                }
+              }
+              if (valid) {
                 context.pop();
-                widget.onSuccess.call();
+                for (var controller in _pinControllers) {
+                  pin += controller.text;
+                }
+                widget.onSuccess.call(pin);
               }
             },
             title: LocaleKeys.FillYourProfile_continue.tr(),

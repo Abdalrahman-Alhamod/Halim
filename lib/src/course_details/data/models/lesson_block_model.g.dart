@@ -31,7 +31,7 @@ _$VideoBlockModelImpl _$$VideoBlockModelImplFromJson(
       title: json['title'] as String?,
       duration: (json['duration'] as num?)?.toInt(),
       isCompleted: json['is_completed'] as bool?,
-      isPreview: _boolFromJson(json['is_preview']),
+      isPreview: json['is_preview'] as bool?,
     );
 
 Map<String, dynamic> _$$VideoBlockModelImplToJson(
@@ -41,7 +41,7 @@ Map<String, dynamic> _$$VideoBlockModelImplToJson(
       'title': instance.title,
       'duration': instance.duration,
       'is_completed': instance.isCompleted,
-      'is_preview': _boolToJson(instance.isPreview),
+      'is_preview': instance.isPreview,
     };
 
 _$ReadingBlockModelImpl _$$ReadingBlockModelImplFromJson(
@@ -51,7 +51,7 @@ _$ReadingBlockModelImpl _$$ReadingBlockModelImplFromJson(
       title: json['title'] as String?,
       duration: (json['duration'] as num?)?.toInt(),
       isCompleted: json['is_completed'] as bool?,
-      isPreview: _boolFromJson(json['is_preview']),
+      isPreview: json['is_preview'] as bool?,
     );
 
 Map<String, dynamic> _$$ReadingBlockModelImplToJson(
@@ -61,7 +61,7 @@ Map<String, dynamic> _$$ReadingBlockModelImplToJson(
       'title': instance.title,
       'duration': instance.duration,
       'is_completed': instance.isCompleted,
-      'is_preview': _boolToJson(instance.isPreview),
+      'is_preview': instance.isPreview,
     };
 
 _$QuizBlockModelImpl _$$QuizBlockModelImplFromJson(Map<String, dynamic> json) =>
@@ -70,7 +70,7 @@ _$QuizBlockModelImpl _$$QuizBlockModelImplFromJson(Map<String, dynamic> json) =>
       title: json['title'] as String?,
       duration: (json['duration'] as num?)?.toInt(),
       isCompleted: json['is_completed'] as bool?,
-      isPreview: _boolFromJson(json['is_preview']),
+      isPreview: json['is_preview'] as bool?,
       quizDetails: json['quiz'] == null
           ? null
           : QuizBlockDetailsModel.fromJson(
@@ -84,7 +84,7 @@ Map<String, dynamic> _$$QuizBlockModelImplToJson(
       'title': instance.title,
       'duration': instance.duration,
       'is_completed': instance.isCompleted,
-      'is_preview': _boolToJson(instance.isPreview),
+      'is_preview': instance.isPreview,
       'quiz': instance.quizDetails,
     };
 

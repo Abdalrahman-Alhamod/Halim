@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:halim/core/helpers/date_time_helper.dart';
 import 'package:halim/src/profile_settings/data/models/receipt_model.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/context_extensions.dart';
@@ -314,9 +315,10 @@ class ReceiptViewState extends State<ReceiptView> {
                           ),
                           const Spacer(),
                           AutoSizeText(
-                            widget.receiptModel.createdAt
-                                .toString()
-                                .substring(0, 10),
+                            DateTimeHelper.format(
+                              widget.receiptModel.createdAt ?? DateTime.now(),
+                              DateTimeFormat.onlyDate,
+                            ),
                             style: TextStyle(
                               color: context.isDarkMode
                                   ? Colors.white

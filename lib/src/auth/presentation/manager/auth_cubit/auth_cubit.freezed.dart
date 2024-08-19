@@ -815,6 +815,8 @@ abstract class _$$LoginSuccessImplCopyWith<$Res> {
       __$$LoginSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({UserModel data, String? message});
+
+  $UserModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -841,6 +843,14 @@ class __$$LoginSuccessImplCopyWithImpl<$Res>
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserModelCopyWith<$Res> get data {
+    return $UserModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
   }
 }
 
@@ -1378,6 +1388,8 @@ abstract class _$$RegisterSuccessImplCopyWith<$Res> {
       __$$RegisterSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({UserModel data, String? message});
+
+  $UserModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -1404,6 +1416,14 @@ class __$$RegisterSuccessImplCopyWithImpl<$Res>
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserModelCopyWith<$Res> get data {
+    return $UserModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
   }
 }
 

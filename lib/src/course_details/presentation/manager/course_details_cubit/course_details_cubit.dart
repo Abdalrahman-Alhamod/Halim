@@ -1184,13 +1184,16 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
     );
   }
 
-  Future<void> enrollCourse() async {
+  Future<void> enrollCourse({required String pin}) async {
     emit(
       const CourseDetailsState.enrollCourseLoading(),
     );
     final code = discount?.code ?? '';
     final response = await _courseDetailsRepo.enrollCourse(
-        courseId: courseId, code: code, pin: "1234");
+      courseId: courseId,
+      code: code,
+      pin: pin,
+    );
     response.when(
       success: (data) {
         emit(
@@ -1254,7 +1257,10 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
 
         showCustomDialog(
           context: context,
-          widget: const EnrollSuccessDialog(),
+          widget: EnrollSuccessDialog(
+            parentContext: context,
+          ),
+          isDismissible: false,
         );
 
         logger.print(

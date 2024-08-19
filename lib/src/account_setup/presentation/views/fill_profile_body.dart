@@ -9,6 +9,7 @@ import 'package:halim/core/widgets/custome_flat_button.dart';
 import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
 import 'package:halim/src/account_setup/presentation/views/widgets/choose_your_specialty.dart';
 import 'package:halim/src/account_setup/presentation/views/widgets/list_with_education_level.dart';
+import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
 import 'package:provider/provider.dart';
 import '../../../../core/assets/app_images.dart';
@@ -202,8 +203,7 @@ class FillProfileBodyState extends State<FillProfileBody> {
             onPressed: () {
               if (isFormValid) {
                 GoRouter.of(context).push(AppRoute.kCreatePin);
-                studentInfModel.id = 1068;
-
+                studentInfModel.id = context.read<AuthCubit>().user?.id ?? 0;
                 context.read<AccountSetupCubit>().student = studentInfModel;
               }
             },

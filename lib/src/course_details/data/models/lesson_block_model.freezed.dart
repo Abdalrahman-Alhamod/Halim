@@ -597,7 +597,7 @@ mixin _$VideoBlockModel {
   int? get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_completed')
   bool? get isCompleted => throw _privateConstructorUsedError;
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   bool? get isPreview => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -617,8 +617,7 @@ abstract class $VideoBlockModelCopyWith<$Res> {
       String? title,
       int? duration,
       @JsonKey(name: 'is_completed') bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      bool? isPreview});
+      @JsonKey(name: 'is_preview') bool? isPreview});
 }
 
 /// @nodoc
@@ -678,8 +677,7 @@ abstract class _$$VideoBlockModelImplCopyWith<$Res>
       String? title,
       int? duration,
       @JsonKey(name: 'is_completed') bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      bool? isPreview});
+      @JsonKey(name: 'is_preview') bool? isPreview});
 }
 
 /// @nodoc
@@ -734,8 +732,7 @@ class _$VideoBlockModelImpl
       this.title,
       this.duration,
       @JsonKey(name: 'is_completed') this.isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      this.isPreview});
+      @JsonKey(name: 'is_preview') this.isPreview});
 
   factory _$VideoBlockModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$VideoBlockModelImplFromJson(json);
@@ -750,7 +747,7 @@ class _$VideoBlockModelImpl
   @JsonKey(name: 'is_completed')
   final bool? isCompleted;
   @override
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   final bool? isPreview;
 
   @override
@@ -807,12 +804,12 @@ class _$VideoBlockModelImpl
 
 abstract class _VideoBlockModel implements VideoBlockModel {
   const factory _VideoBlockModel(
-      {final int? id,
-      final String? title,
-      final int? duration,
-      @JsonKey(name: 'is_completed') final bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      final bool? isPreview}) = _$VideoBlockModelImpl;
+          {final int? id,
+          final String? title,
+          final int? duration,
+          @JsonKey(name: 'is_completed') final bool? isCompleted,
+          @JsonKey(name: 'is_preview') final bool? isPreview}) =
+      _$VideoBlockModelImpl;
 
   factory _VideoBlockModel.fromJson(Map<String, dynamic> json) =
       _$VideoBlockModelImpl.fromJson;
@@ -827,7 +824,7 @@ abstract class _VideoBlockModel implements VideoBlockModel {
   @JsonKey(name: 'is_completed')
   bool? get isCompleted;
   @override
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   bool? get isPreview;
   @override
   @JsonKey(ignore: true)
@@ -846,7 +843,7 @@ mixin _$ReadingBlockModel {
   int? get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_completed')
   bool? get isCompleted => throw _privateConstructorUsedError;
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   bool? get isPreview => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -866,8 +863,7 @@ abstract class $ReadingBlockModelCopyWith<$Res> {
       String? title,
       int? duration,
       @JsonKey(name: 'is_completed') bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      bool? isPreview});
+      @JsonKey(name: 'is_preview') bool? isPreview});
 }
 
 /// @nodoc
@@ -927,8 +923,7 @@ abstract class _$$ReadingBlockModelImplCopyWith<$Res>
       String? title,
       int? duration,
       @JsonKey(name: 'is_completed') bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      bool? isPreview});
+      @JsonKey(name: 'is_preview') bool? isPreview});
 }
 
 /// @nodoc
@@ -983,8 +978,7 @@ class _$ReadingBlockModelImpl
       this.title,
       this.duration,
       @JsonKey(name: 'is_completed') this.isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      this.isPreview});
+      @JsonKey(name: 'is_preview') this.isPreview});
 
   factory _$ReadingBlockModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ReadingBlockModelImplFromJson(json);
@@ -999,7 +993,7 @@ class _$ReadingBlockModelImpl
   @JsonKey(name: 'is_completed')
   final bool? isCompleted;
   @override
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   final bool? isPreview;
 
   @override
@@ -1056,12 +1050,12 @@ class _$ReadingBlockModelImpl
 
 abstract class _ReadingBlockModel implements ReadingBlockModel {
   const factory _ReadingBlockModel(
-      {final int? id,
-      final String? title,
-      final int? duration,
-      @JsonKey(name: 'is_completed') final bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      final bool? isPreview}) = _$ReadingBlockModelImpl;
+          {final int? id,
+          final String? title,
+          final int? duration,
+          @JsonKey(name: 'is_completed') final bool? isCompleted,
+          @JsonKey(name: 'is_preview') final bool? isPreview}) =
+      _$ReadingBlockModelImpl;
 
   factory _ReadingBlockModel.fromJson(Map<String, dynamic> json) =
       _$ReadingBlockModelImpl.fromJson;
@@ -1076,7 +1070,7 @@ abstract class _ReadingBlockModel implements ReadingBlockModel {
   @JsonKey(name: 'is_completed')
   bool? get isCompleted;
   @override
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   bool? get isPreview;
   @override
   @JsonKey(ignore: true)
@@ -1095,7 +1089,7 @@ mixin _$QuizBlockModel {
   int? get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_completed')
   bool? get isCompleted => throw _privateConstructorUsedError;
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   bool? get isPreview => throw _privateConstructorUsedError;
   @JsonKey(name: 'quiz')
   QuizBlockDetailsModel? get quizDetails => throw _privateConstructorUsedError;
@@ -1117,8 +1111,7 @@ abstract class $QuizBlockModelCopyWith<$Res> {
       String? title,
       int? duration,
       @JsonKey(name: 'is_completed') bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      bool? isPreview,
+      @JsonKey(name: 'is_preview') bool? isPreview,
       @JsonKey(name: 'quiz') QuizBlockDetailsModel? quizDetails});
 
   $QuizBlockDetailsModelCopyWith<$Res>? get quizDetails;
@@ -1198,8 +1191,7 @@ abstract class _$$QuizBlockModelImplCopyWith<$Res>
       String? title,
       int? duration,
       @JsonKey(name: 'is_completed') bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      bool? isPreview,
+      @JsonKey(name: 'is_preview') bool? isPreview,
       @JsonKey(name: 'quiz') QuizBlockDetailsModel? quizDetails});
 
   @override
@@ -1263,8 +1255,7 @@ class _$QuizBlockModelImpl
       this.title,
       this.duration,
       @JsonKey(name: 'is_completed') this.isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      this.isPreview,
+      @JsonKey(name: 'is_preview') this.isPreview,
       @JsonKey(name: 'quiz') this.quizDetails});
 
   factory _$QuizBlockModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -1280,7 +1271,7 @@ class _$QuizBlockModelImpl
   @JsonKey(name: 'is_completed')
   final bool? isCompleted;
   @override
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   final bool? isPreview;
   @override
   @JsonKey(name: 'quiz')
@@ -1343,14 +1334,13 @@ class _$QuizBlockModelImpl
 
 abstract class _QuizBlockModel implements QuizBlockModel {
   const factory _QuizBlockModel(
-      {final int? id,
-      final String? title,
-      final int? duration,
-      @JsonKey(name: 'is_completed') final bool? isCompleted,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      final bool? isPreview,
-      @JsonKey(name: 'quiz')
-      final QuizBlockDetailsModel? quizDetails}) = _$QuizBlockModelImpl;
+          {final int? id,
+          final String? title,
+          final int? duration,
+          @JsonKey(name: 'is_completed') final bool? isCompleted,
+          @JsonKey(name: 'is_preview') final bool? isPreview,
+          @JsonKey(name: 'quiz') final QuizBlockDetailsModel? quizDetails}) =
+      _$QuizBlockModelImpl;
 
   factory _QuizBlockModel.fromJson(Map<String, dynamic> json) =
       _$QuizBlockModelImpl.fromJson;
@@ -1365,7 +1355,7 @@ abstract class _QuizBlockModel implements QuizBlockModel {
   @JsonKey(name: 'is_completed')
   bool? get isCompleted;
   @override
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   bool? get isPreview;
   @override
   @JsonKey(name: 'quiz')
