@@ -14,6 +14,7 @@ import 'package:halim/src/profile_settings/data/models/receipt_model.dart';
 import 'package:halim/src/profile_settings/data/models/transaction_model.dart';
 
 import '../../../../core/utils/logger.dart';
+import '../models/student_leaderboards_model.dart';
 
 class ProfileSettingsRemoteDataSource {
   final ApiServices _apiServices;
@@ -47,6 +48,22 @@ class ProfileSettingsRemoteDataSource {
       (json) => BaseModels.fromJson(
         json,
         (itemJson) => ReceiptModel.fromJson(
+          itemJson,
+        ),
+      ),
+    );
+  }
+
+  Future<BaseModel> getLeadrboards() async {
+    final response = await _apiServices.get(
+      AppUrl.leaderboard,
+      hasToken: true,
+    );
+    return BaseModel<BaseModels>.fromJson(
+      response,
+      (json) => BaseModels.fromJson(
+        json,
+        (itemJson) => StudentLeaderboards.fromJson(
           itemJson,
         ),
       ),

@@ -29,6 +29,11 @@ mixin _$ProfileSettingsState {
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -49,6 +54,11 @@ mixin _$ProfileSettingsState {
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -68,6 +78,11 @@ mixin _$ProfileSettingsState {
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -90,6 +105,12 @@ mixin _$ProfileSettingsState {
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -107,6 +128,9 @@ mixin _$ProfileSettingsState {
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -124,6 +148,9 @@ mixin _$ProfileSettingsState {
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -149,6 +176,9 @@ class _$ProfileSettingsStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -165,6 +195,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -200,6 +233,11 @@ class _$InitialImpl implements _Initial {
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -223,6 +261,11 @@ class _$InitialImpl implements _Initial {
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -245,6 +288,11 @@ class _$InitialImpl implements _Initial {
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -273,6 +321,12 @@ class _$InitialImpl implements _Initial {
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -293,6 +347,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -313,6 +370,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -346,6 +406,9 @@ class __$$UpdateInformationStudentLoadingImplCopyWithImpl<$Res>
       _$UpdateInformationStudentLoadingImpl _value,
       $Res Function(_$UpdateInformationStudentLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -383,6 +446,11 @@ class _$UpdateInformationStudentLoadingImpl
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -406,6 +474,11 @@ class _$UpdateInformationStudentLoadingImpl
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -428,6 +501,11 @@ class _$UpdateInformationStudentLoadingImpl
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -456,6 +534,12 @@ class _$UpdateInformationStudentLoadingImpl
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -476,6 +560,9 @@ class _$UpdateInformationStudentLoadingImpl
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -496,6 +583,9 @@ class _$UpdateInformationStudentLoadingImpl
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -535,6 +625,8 @@ class __$$UpdateInformationStudentFailureImplCopyWithImpl<$Res>
       $Res Function(_$UpdateInformationStudentFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -548,6 +640,8 @@ class __$$UpdateInformationStudentFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -587,7 +681,9 @@ class _$UpdateInformationStudentFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateInformationStudentFailureImplCopyWith<
@@ -609,6 +705,11 @@ class _$UpdateInformationStudentFailureImpl
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -632,6 +733,11 @@ class _$UpdateInformationStudentFailureImpl
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -654,6 +760,11 @@ class _$UpdateInformationStudentFailureImpl
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -682,6 +793,12 @@ class _$UpdateInformationStudentFailureImpl
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -702,6 +819,9 @@ class _$UpdateInformationStudentFailureImpl
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -722,6 +842,9 @@ class _$UpdateInformationStudentFailureImpl
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -740,7 +863,10 @@ abstract class UpdateInformationStudentFailure implements ProfileSettingsState {
       _$UpdateInformationStudentFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateInformationStudentFailureImplCopyWith<
           _$UpdateInformationStudentFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -768,6 +894,8 @@ class __$$UpdateInformationStudentSuccessImplCopyWithImpl<$Res>
       $Res Function(_$UpdateInformationStudentSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -786,6 +914,8 @@ class __$$UpdateInformationStudentSuccessImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StudentInfomationsModelCopyWith<$Res> get data {
@@ -823,7 +953,9 @@ class _$UpdateInformationStudentSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateInformationStudentSuccessImplCopyWith<
@@ -845,6 +977,11 @@ class _$UpdateInformationStudentSuccessImpl
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -868,6 +1005,11 @@ class _$UpdateInformationStudentSuccessImpl
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -890,6 +1032,11 @@ class _$UpdateInformationStudentSuccessImpl
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -918,6 +1065,12 @@ class _$UpdateInformationStudentSuccessImpl
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -938,6 +1091,9 @@ class _$UpdateInformationStudentSuccessImpl
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -958,6 +1114,9 @@ class _$UpdateInformationStudentSuccessImpl
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -977,7 +1136,10 @@ abstract class UpdateInformationStudentSuccess implements ProfileSettingsState {
 
   StudentInfomationsModel get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateInformationStudentSuccessImplCopyWith<
           _$UpdateInformationStudentSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1000,6 +1162,9 @@ class __$$FetchTransactionsLoadingImplCopyWithImpl<$Res>
       _$FetchTransactionsLoadingImpl _value,
       $Res Function(_$FetchTransactionsLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1036,6 +1201,11 @@ class _$FetchTransactionsLoadingImpl implements FetchTransactionsLoading {
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -1059,6 +1229,11 @@ class _$FetchTransactionsLoadingImpl implements FetchTransactionsLoading {
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -1081,6 +1256,11 @@ class _$FetchTransactionsLoadingImpl implements FetchTransactionsLoading {
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -1109,6 +1289,12 @@ class _$FetchTransactionsLoadingImpl implements FetchTransactionsLoading {
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -1129,6 +1315,9 @@ class _$FetchTransactionsLoadingImpl implements FetchTransactionsLoading {
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -1149,6 +1338,9 @@ class _$FetchTransactionsLoadingImpl implements FetchTransactionsLoading {
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -1187,6 +1379,8 @@ class __$$FetchTransactionsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchTransactionsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1200,6 +1394,8 @@ class __$$FetchTransactionsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1238,7 +1434,9 @@ class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchTransactionsFailureImplCopyWith<_$FetchTransactionsFailureImpl>
@@ -1259,6 +1457,11 @@ class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -1282,6 +1485,11 @@ class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -1304,6 +1512,11 @@ class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -1332,6 +1545,12 @@ class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -1352,6 +1571,9 @@ class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -1372,6 +1594,9 @@ class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -1390,7 +1615,10 @@ abstract class FetchTransactionsFailure implements ProfileSettingsState {
       _$FetchTransactionsFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchTransactionsFailureImplCopyWith<_$FetchTransactionsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1415,6 +1643,8 @@ class __$$FetchTransactionsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchTransactionsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1470,7 +1700,9 @@ class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchTransactionsSuccessImplCopyWith<_$FetchTransactionsSuccessImpl>
@@ -1491,6 +1723,11 @@ class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -1514,6 +1751,11 @@ class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -1536,6 +1778,11 @@ class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -1564,6 +1811,12 @@ class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -1584,6 +1837,9 @@ class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -1604,6 +1860,9 @@ class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -1623,8 +1882,756 @@ abstract class FetchTransactionsSuccess implements ProfileSettingsState {
 
   List<TransactionModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchTransactionsSuccessImplCopyWith<_$FetchTransactionsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchLeadrboardsLoadingImplCopyWith<$Res> {
+  factory _$$FetchLeadrboardsLoadingImplCopyWith(
+          _$FetchLeadrboardsLoadingImpl value,
+          $Res Function(_$FetchLeadrboardsLoadingImpl) then) =
+      __$$FetchLeadrboardsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchLeadrboardsLoadingImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res,
+        _$FetchLeadrboardsLoadingImpl>
+    implements _$$FetchLeadrboardsLoadingImplCopyWith<$Res> {
+  __$$FetchLeadrboardsLoadingImplCopyWithImpl(
+      _$FetchLeadrboardsLoadingImpl _value,
+      $Res Function(_$FetchLeadrboardsLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FetchLeadrboardsLoadingImpl implements FetchLeadrboardsLoading {
+  const _$FetchLeadrboardsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.fetchLeadrboardsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchLeadrboardsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchLeadrboardsLoading != null) {
+      return fetchLeadrboardsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchLeadrboardsLoading != null) {
+      return fetchLeadrboardsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchLeadrboardsLoading implements ProfileSettingsState {
+  const factory FetchLeadrboardsLoading() = _$FetchLeadrboardsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchLeadrboardsFailureImplCopyWith<$Res> {
+  factory _$$FetchLeadrboardsFailureImplCopyWith(
+          _$FetchLeadrboardsFailureImpl value,
+          $Res Function(_$FetchLeadrboardsFailureImpl) then) =
+      __$$FetchLeadrboardsFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$FetchLeadrboardsFailureImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res,
+        _$FetchLeadrboardsFailureImpl>
+    implements _$$FetchLeadrboardsFailureImplCopyWith<$Res> {
+  __$$FetchLeadrboardsFailureImplCopyWithImpl(
+      _$FetchLeadrboardsFailureImpl _value,
+      $Res Function(_$FetchLeadrboardsFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$FetchLeadrboardsFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchLeadrboardsFailureImpl implements FetchLeadrboardsFailure {
+  const _$FetchLeadrboardsFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.fetchLeadrboardsFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchLeadrboardsFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchLeadrboardsFailureImplCopyWith<_$FetchLeadrboardsFailureImpl>
+      get copyWith => __$$FetchLeadrboardsFailureImplCopyWithImpl<
+          _$FetchLeadrboardsFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchLeadrboardsFailure != null) {
+      return fetchLeadrboardsFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchLeadrboardsFailure != null) {
+      return fetchLeadrboardsFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchLeadrboardsFailure implements ProfileSettingsState {
+  const factory FetchLeadrboardsFailure(
+          final NetworkExceptions? networkException) =
+      _$FetchLeadrboardsFailureImpl;
+
+  NetworkExceptions? get networkException;
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchLeadrboardsFailureImplCopyWith<_$FetchLeadrboardsFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchLeadrboardsSuccessImplCopyWith<$Res> {
+  factory _$$FetchLeadrboardsSuccessImplCopyWith(
+          _$FetchLeadrboardsSuccessImpl value,
+          $Res Function(_$FetchLeadrboardsSuccessImpl) then) =
+      __$$FetchLeadrboardsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<StudentLeaderboards> data, String? message});
+}
+
+/// @nodoc
+class __$$FetchLeadrboardsSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileSettingsStateCopyWithImpl<$Res,
+        _$FetchLeadrboardsSuccessImpl>
+    implements _$$FetchLeadrboardsSuccessImplCopyWith<$Res> {
+  __$$FetchLeadrboardsSuccessImplCopyWithImpl(
+      _$FetchLeadrboardsSuccessImpl _value,
+      $Res Function(_$FetchLeadrboardsSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$FetchLeadrboardsSuccessImpl(
+      null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<StudentLeaderboards>,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchLeadrboardsSuccessImpl implements FetchLeadrboardsSuccess {
+  const _$FetchLeadrboardsSuccessImpl(
+      final List<StudentLeaderboards> data, this.message)
+      : _data = data;
+
+  final List<StudentLeaderboards> _data;
+  @override
+  List<StudentLeaderboards> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'ProfileSettingsState.fetchLeadrboardsSuccess(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchLeadrboardsSuccessImpl &&
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_data), message);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchLeadrboardsSuccessImplCopyWith<_$FetchLeadrboardsSuccessImpl>
+      get copyWith => __$$FetchLeadrboardsSuccessImplCopyWithImpl<
+          _$FetchLeadrboardsSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateInformationStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        updateInformationStudentfailure,
+    required TResult Function(StudentInfomationsModel data, String? message)
+        updateInformationStudentsuccess,
+    required TResult Function() fetchTransactionsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTransactionsFailure,
+    required TResult Function(List<TransactionModel> data, String? message)
+        fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
+    required TResult Function() fetchReceiptLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchReceiptFailure,
+    required TResult Function(List<ReceiptModel> data, String? message)
+        fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsSuccess(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateInformationStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult? Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult? Function()? fetchTransactionsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult? Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
+    TResult? Function()? fetchReceiptLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult? Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsSuccess?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateInformationStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        updateInformationStudentfailure,
+    TResult Function(StudentInfomationsModel data, String? message)?
+        updateInformationStudentsuccess,
+    TResult Function()? fetchTransactionsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTransactionsFailure,
+    TResult Function(List<TransactionModel> data, String? message)?
+        fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
+    TResult Function()? fetchReceiptLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
+    TResult Function(List<ReceiptModel> data, String? message)?
+        fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchLeadrboardsSuccess != null) {
+      return fetchLeadrboardsSuccess(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UpdateInformationStudentLoading value)
+        updateInformationStudentLoading,
+    required TResult Function(UpdateInformationStudentFailure value)
+        updateInformationStudentfailure,
+    required TResult Function(UpdateInformationStudentSuccess value)
+        updateInformationStudentsuccess,
+    required TResult Function(FetchTransactionsLoading value)
+        fetchTransactionsLoading,
+    required TResult Function(FetchTransactionsFailure value)
+        fetchTransactionsFailure,
+    required TResult Function(FetchTransactionsSuccess value)
+        fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
+    required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
+    required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
+    required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult? Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult? Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
+    TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+  }) {
+    return fetchLeadrboardsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UpdateInformationStudentLoading value)?
+        updateInformationStudentLoading,
+    TResult Function(UpdateInformationStudentFailure value)?
+        updateInformationStudentfailure,
+    TResult Function(UpdateInformationStudentSuccess value)?
+        updateInformationStudentsuccess,
+    TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
+    TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
+    TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
+    TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
+    TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
+    TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchLeadrboardsSuccess != null) {
+      return fetchLeadrboardsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchLeadrboardsSuccess implements ProfileSettingsState {
+  const factory FetchLeadrboardsSuccess(
+          final List<StudentLeaderboards> data, final String? message) =
+      _$FetchLeadrboardsSuccessImpl;
+
+  List<StudentLeaderboards> get data;
+  String? get message;
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchLeadrboardsSuccessImplCopyWith<_$FetchLeadrboardsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1642,6 +2649,9 @@ class __$$FetchReceiptLoadingImplCopyWithImpl<$Res>
   __$$FetchReceiptLoadingImplCopyWithImpl(_$FetchReceiptLoadingImpl _value,
       $Res Function(_$FetchReceiptLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1678,6 +2688,11 @@ class _$FetchReceiptLoadingImpl implements FetchReceiptLoading {
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -1701,6 +2716,11 @@ class _$FetchReceiptLoadingImpl implements FetchReceiptLoading {
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -1723,6 +2743,11 @@ class _$FetchReceiptLoadingImpl implements FetchReceiptLoading {
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -1751,6 +2776,12 @@ class _$FetchReceiptLoadingImpl implements FetchReceiptLoading {
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -1771,6 +2802,9 @@ class _$FetchReceiptLoadingImpl implements FetchReceiptLoading {
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -1791,6 +2825,9 @@ class _$FetchReceiptLoadingImpl implements FetchReceiptLoading {
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -1826,6 +2863,8 @@ class __$$FetchReceiptFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchReceiptFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1839,6 +2878,8 @@ class __$$FetchReceiptFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1877,7 +2918,9 @@ class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchReceiptFailureImplCopyWith<_$FetchReceiptFailureImpl> get copyWith =>
@@ -1898,6 +2941,11 @@ class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -1921,6 +2969,11 @@ class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -1943,6 +2996,11 @@ class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -1971,6 +3029,12 @@ class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -1991,6 +3055,9 @@ class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -2011,6 +3078,9 @@ class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -2028,7 +3098,10 @@ abstract class FetchReceiptFailure implements ProfileSettingsState {
       _$FetchReceiptFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchReceiptFailureImplCopyWith<_$FetchReceiptFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2050,6 +3123,8 @@ class __$$FetchReceiptSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchReceiptSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2104,7 +3179,9 @@ class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchReceiptSuccessImplCopyWith<_$FetchReceiptSuccessImpl> get copyWith =>
@@ -2125,6 +3202,11 @@ class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
         fetchTransactionsFailure,
     required TResult Function(List<TransactionModel> data, String? message)
         fetchTransactionsSuccess,
+    required TResult Function() fetchLeadrboardsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchLeadrboardsFailure,
+    required TResult Function(List<StudentLeaderboards> data, String? message)
+        fetchLeadrboardsSuccess,
     required TResult Function() fetchReceiptLoading,
     required TResult Function(NetworkExceptions? networkException)
         fetchReceiptFailure,
@@ -2148,6 +3230,11 @@ class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
         fetchTransactionsFailure,
     TResult? Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult? Function()? fetchLeadrboardsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult? Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult? Function()? fetchReceiptLoading,
     TResult? Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult? Function(List<ReceiptModel> data, String? message)?
@@ -2170,6 +3257,11 @@ class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
         fetchTransactionsFailure,
     TResult Function(List<TransactionModel> data, String? message)?
         fetchTransactionsSuccess,
+    TResult Function()? fetchLeadrboardsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchLeadrboardsFailure,
+    TResult Function(List<StudentLeaderboards> data, String? message)?
+        fetchLeadrboardsSuccess,
     TResult Function()? fetchReceiptLoading,
     TResult Function(NetworkExceptions? networkException)? fetchReceiptFailure,
     TResult Function(List<ReceiptModel> data, String? message)?
@@ -2198,6 +3290,12 @@ class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
         fetchTransactionsFailure,
     required TResult Function(FetchTransactionsSuccess value)
         fetchTransactionsSuccess,
+    required TResult Function(FetchLeadrboardsLoading value)
+        fetchLeadrboardsLoading,
+    required TResult Function(FetchLeadrboardsFailure value)
+        fetchLeadrboardsFailure,
+    required TResult Function(FetchLeadrboardsSuccess value)
+        fetchLeadrboardsSuccess,
     required TResult Function(FetchReceiptLoading value) fetchReceiptLoading,
     required TResult Function(FetchReceiptFailure value) fetchReceiptFailure,
     required TResult Function(FetchReceiptSuccess value) fetchReceiptSuccess,
@@ -2218,6 +3316,9 @@ class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
     TResult? Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult? Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult? Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult? Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult? Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult? Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult? Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult? Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult? Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -2238,6 +3339,9 @@ class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
     TResult Function(FetchTransactionsLoading value)? fetchTransactionsLoading,
     TResult Function(FetchTransactionsFailure value)? fetchTransactionsFailure,
     TResult Function(FetchTransactionsSuccess value)? fetchTransactionsSuccess,
+    TResult Function(FetchLeadrboardsLoading value)? fetchLeadrboardsLoading,
+    TResult Function(FetchLeadrboardsFailure value)? fetchLeadrboardsFailure,
+    TResult Function(FetchLeadrboardsSuccess value)? fetchLeadrboardsSuccess,
     TResult Function(FetchReceiptLoading value)? fetchReceiptLoading,
     TResult Function(FetchReceiptFailure value)? fetchReceiptFailure,
     TResult Function(FetchReceiptSuccess value)? fetchReceiptSuccess,
@@ -2257,7 +3361,10 @@ abstract class FetchReceiptSuccess implements ProfileSettingsState {
 
   List<ReceiptModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchReceiptSuccessImplCopyWith<_$FetchReceiptSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

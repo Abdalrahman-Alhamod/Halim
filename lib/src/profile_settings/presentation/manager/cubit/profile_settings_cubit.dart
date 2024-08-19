@@ -8,6 +8,7 @@ import 'package:halim/src/profile_settings/domain/repos/profile_settings_repo.da
 
 import '../../../../account_setup/data/models/student_infomations_model.dart';
 import '../../../data/models/receipt_model.dart';
+import '../../../data/models/student_leaderboards_model.dart';
 
 part 'profile_settings_state.dart';
 part 'profile_settings_cubit.freezed.dart';
@@ -19,6 +20,7 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
   final ProfileSettingsRepo _profileSettingsRepo;
   List<TransactionModel> transactions = [];
   List<ReceiptModel> receipt = [];
+  List<StudentLeaderboards> studentLeaderboards = [];
 
   Future<void> getTransactions() async {
     emit(
@@ -39,6 +41,31 @@ class ProfileSettingsCubit extends Cubit<ProfileSettingsState> {
       failure: (networkExceptions) {
         emit(
           ProfileSettingsState.fetchTransactionsFailure(
+            networkExceptions,
+          ),
+        );
+      },
+    );
+  }
+  Future<void> getLeadrboards() async {
+    emit(
+      const ProfileSettingsState.fetchLeadrboardsLoading(),
+    );
+    final response = await _profileSettingsRepo.getLeadrboards();
+    response.when(
+      success: (data) {
+        studentLeaderboards = List<StudentLeaderboards>.from(data.data.list);
+        // transactions.insert(0, getCategoryAll());
+        emit(
+          ProfileSettingsState.fetchLeadrboardsSuccess(
+            studentLeaderboards,
+            data.message,
+          ),
+        );
+      },
+      failure: (networkExceptions) {
+        emit(
+          ProfileSettingsState.fetchLeadrboardsFailure(
             networkExceptions,
           ),
         );

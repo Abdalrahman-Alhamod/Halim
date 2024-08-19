@@ -51,7 +51,7 @@ class PaymentsViewState extends State<PaymentsView> {
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: ListView.separated(
                 shrinkWrap: true,
-                itemCount: context.read<ProfileSettingsCubit>().receipt.length,
+                itemCount: 10,
                 itemBuilder: (context, index) => ShimmerBox(
                   height: 155,
                   width: context.width * 0.8,
@@ -86,7 +86,7 @@ class PaymentsViewState extends State<PaymentsView> {
             ),
             orElse: () => ListView.separated(
               shrinkWrap: true,
-              itemCount: context.read<ProfileSettingsCubit>().receipt.length,
+              itemCount: 10,
               itemBuilder: (context, index) => ShimmerBox(
                 height: 155,
                 width: context.width * 0.8,

@@ -138,6 +138,7 @@ class ChooseInterestsBottomSheetWhithEdit {
                         context.read<HomeCubit>().getInfStudent(studentId: 1071);
                         showCustomDialog(
                           context: context,
+                          
                           widget: AccontSucssesDialog(
                             () {
                               GoRouter.of(context).go(AppRoute.kHome);

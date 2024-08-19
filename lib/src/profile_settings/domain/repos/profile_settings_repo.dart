@@ -4,6 +4,7 @@ import 'package:halim/src/account_setup/data/models/student_infomations_model.da
 
 abstract class ProfileSettingsRepo {
   Future<ApiResponse<BaseModel>> getTransactions();
+  Future<ApiResponse<BaseModel>> getLeadrboards();
   Future<ApiResponse<BaseModel>> getReceipt();
   Future<ApiResponse<BaseModel>> updateInformationStudent(StudentInfomationsModel upStudent);
 }

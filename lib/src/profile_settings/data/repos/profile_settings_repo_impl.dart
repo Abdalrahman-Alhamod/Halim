@@ -46,6 +46,21 @@ class ProfileSettingsRepolmpl extends ProfileSettingsRepo {
     }
   }
   @override
+  Future<ApiResponse<BaseModel>> getLeadrboards () async {
+    try {
+      final response = await _profileSettingsRemoteDataSource.getLeadrboards();
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
+  @override
   Future<ApiResponse<BaseModel>> updateInformationStudent(StudentInfomationsModel upStudent) async {
     try {
       final response = await _profileSettingsRemoteDataSource.updateStudentInformation(upStudent);

@@ -17,6 +17,13 @@ class ProfileSettingsState with _$ProfileSettingsState {
   const factory ProfileSettingsState.fetchTransactionsSuccess(
       List<TransactionModel> data, String? message) = FetchTransactionsSuccess;
 
+  const factory ProfileSettingsState.fetchLeadrboardsLoading() =
+      FetchLeadrboardsLoading;
+  const factory ProfileSettingsState.fetchLeadrboardsFailure(
+      NetworkExceptions? networkException) = FetchLeadrboardsFailure;
+  const factory ProfileSettingsState.fetchLeadrboardsSuccess(
+      List<StudentLeaderboards> data, String? message) = FetchLeadrboardsSuccess;
+
   const factory ProfileSettingsState.fetchReceiptLoading() =
       FetchReceiptLoading;
   const factory ProfileSettingsState.fetchReceiptFailure(
