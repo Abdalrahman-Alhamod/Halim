@@ -31,8 +31,12 @@ mixin _$AvatarModel {
   @JsonKey(name: 'badges_achieved')
   int? get badgesAchieved => throw _privateConstructorUsedError;
 
+  /// Serializes this AvatarModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AvatarModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AvatarModelCopyWith<AvatarModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$AvatarModelCopyWithImpl<$Res, $Val extends AvatarModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AvatarModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$AvatarModelImplCopyWithImpl<$Res>
       _$AvatarModelImpl _value, $Res Function(_$AvatarModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AvatarModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -214,12 +222,14 @@ class _$AvatarModelImpl with DiagnosticableTreeMixin implements _AvatarModel {
                 other.badgesAchieved == badgesAchieved));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, name, image, badgesNeeded, rewardPoints, badgesAchieved);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AvatarModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AvatarModelImplCopyWith<_$AvatarModelImpl> get copyWith =>
@@ -260,8 +270,11 @@ abstract class _AvatarModel implements AvatarModel {
   @override
   @JsonKey(name: 'badges_achieved')
   int? get badgesAchieved;
+
+  /// Create a copy of AvatarModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AvatarModelImplCopyWith<_$AvatarModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

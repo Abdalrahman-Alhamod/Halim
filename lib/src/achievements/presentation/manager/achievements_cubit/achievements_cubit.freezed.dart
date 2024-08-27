@@ -176,6 +176,9 @@ class _$AchievementsStateCopyWithImpl<$Res, $Val extends AchievementsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -192,6 +195,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -401,6 +407,9 @@ class __$$FetchAchievemenetsBoardLoadingImplCopyWithImpl<$Res>
       _$FetchAchievemenetsBoardLoadingImpl _value,
       $Res Function(_$FetchAchievemenetsBoardLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -618,6 +627,8 @@ class __$$FetchAchievemenetsBoardFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchAchievemenetsBoardFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -631,6 +642,8 @@ class __$$FetchAchievemenetsBoardFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -670,7 +683,9 @@ class _$FetchAchievemenetsBoardFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchAchievemenetsBoardFailureImplCopyWith<
@@ -851,7 +866,10 @@ abstract class _FetchAchievemenetsBoardFailure implements AchievementsState {
       _$FetchAchievemenetsBoardFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchAchievemenetsBoardFailureImplCopyWith<
           _$FetchAchievemenetsBoardFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -879,6 +897,8 @@ class __$$FetchAchievemenetsBoardSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchAchievemenetsBoardSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -897,6 +917,8 @@ class __$$FetchAchievemenetsBoardSuccessImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AchievementsBoardModelCopyWith<$Res> get data {
@@ -934,7 +956,9 @@ class _$FetchAchievemenetsBoardSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchAchievemenetsBoardSuccessImplCopyWith<
@@ -1116,7 +1140,10 @@ abstract class _FetchAchievemenetsBoardSuccess implements AchievementsState {
 
   AchievementsBoardModel get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchAchievemenetsBoardSuccessImplCopyWith<
           _$FetchAchievemenetsBoardSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1139,6 +1166,9 @@ class __$$FetchAchievemenetsSummeryLoadingImplCopyWithImpl<$Res>
       _$FetchAchievemenetsSummeryLoadingImpl _value,
       $Res Function(_$FetchAchievemenetsSummeryLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1356,6 +1386,8 @@ class __$$FetchAchievemenetsSummeryFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchAchievemenetsSummeryFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1369,6 +1401,8 @@ class __$$FetchAchievemenetsSummeryFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1408,7 +1442,9 @@ class _$FetchAchievemenetsSummeryFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchAchievemenetsSummeryFailureImplCopyWith<
@@ -1589,7 +1625,10 @@ abstract class _FetchAchievemenetsSummeryFailure implements AchievementsState {
       _$FetchAchievemenetsSummeryFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchAchievemenetsSummeryFailureImplCopyWith<
           _$FetchAchievemenetsSummeryFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1617,6 +1656,8 @@ class __$$FetchAchievemenetsSummerySuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchAchievemenetsSummerySuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1635,6 +1676,8 @@ class __$$FetchAchievemenetsSummerySuccessImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AchievementsSummeryModelCopyWith<$Res> get data {
@@ -1672,7 +1715,9 @@ class _$FetchAchievemenetsSummerySuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchAchievemenetsSummerySuccessImplCopyWith<
@@ -1854,7 +1899,10 @@ abstract class _FetchAchievemenetsSummerySuccess implements AchievementsState {
 
   AchievementsSummeryModel get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchAchievemenetsSummerySuccessImplCopyWith<
           _$FetchAchievemenetsSummerySuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1874,6 +1922,9 @@ class __$$FetchAvatarsLoadingImplCopyWithImpl<$Res>
   __$$FetchAvatarsLoadingImplCopyWithImpl(_$FetchAvatarsLoadingImpl _value,
       $Res Function(_$FetchAvatarsLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2086,6 +2137,8 @@ class __$$FetchAvatarsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchAvatarsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2099,6 +2152,8 @@ class __$$FetchAvatarsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -2137,7 +2192,9 @@ class _$FetchAvatarsFailureImpl implements _FetchAvatarsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchAvatarsFailureImplCopyWith<_$FetchAvatarsFailureImpl> get copyWith =>
@@ -2316,7 +2373,10 @@ abstract class _FetchAvatarsFailure implements AchievementsState {
       final NetworkExceptions? networkException) = _$FetchAvatarsFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchAvatarsFailureImplCopyWith<_$FetchAvatarsFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2338,6 +2398,8 @@ class __$$FetchAvatarsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchAvatarsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2392,7 +2454,9 @@ class _$FetchAvatarsSuccessImpl implements _FetchAvatarsSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchAvatarsSuccessImplCopyWith<_$FetchAvatarsSuccessImpl> get copyWith =>
@@ -2573,7 +2637,10 @@ abstract class _FetchAvatarsSuccess implements AchievementsState {
 
   List<AvatarModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchAvatarsSuccessImplCopyWith<_$FetchAvatarsSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2595,6 +2662,8 @@ class __$$FetchBadgesLoadingImplCopyWithImpl<$Res>
       $Res Function(_$FetchBadgesLoadingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2633,7 +2702,9 @@ class _$FetchBadgesLoadingImpl implements _FetchBadgesLoading {
   @override
   int get hashCode => Object.hash(runtimeType, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchBadgesLoadingImplCopyWith<_$FetchBadgesLoadingImpl> get copyWith =>
@@ -2812,7 +2883,10 @@ abstract class _FetchBadgesLoading implements AchievementsState {
       _$FetchBadgesLoadingImpl;
 
   String get type;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchBadgesLoadingImplCopyWith<_$FetchBadgesLoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2836,6 +2910,8 @@ class __$$FetchBadgesFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchBadgesFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2854,6 +2930,8 @@ class __$$FetchBadgesFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -2895,7 +2973,9 @@ class _$FetchBadgesFailureImpl implements _FetchBadgesFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchBadgesFailureImplCopyWith<_$FetchBadgesFailureImpl> get copyWith =>
@@ -3076,7 +3156,10 @@ abstract class _FetchBadgesFailure implements AchievementsState {
 
   NetworkExceptions? get networkException;
   String get type;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchBadgesFailureImplCopyWith<_$FetchBadgesFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3098,6 +3181,8 @@ class __$$FetchBadgesSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchBadgesSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3152,7 +3237,9 @@ class _$FetchBadgesSuccessImpl implements _FetchBadgesSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchBadgesSuccessImplCopyWith<_$FetchBadgesSuccessImpl> get copyWith =>
@@ -3333,7 +3420,10 @@ abstract class _FetchBadgesSuccess implements AchievementsState {
 
   List<BadgeModel> get data;
   String get type;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchBadgesSuccessImplCopyWith<_$FetchBadgesSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -31,8 +31,12 @@ mixin _$CommentModel {
   @JsonKey(name: 'user')
   CommentUser? get user => throw _privateConstructorUsedError;
 
+  /// Serializes this CommentModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommentModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentModelCopyWith<CommentModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$CommentModelCopyWithImpl<$Res, $Val extends CommentModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommentModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class _$CommentModelCopyWithImpl<$Res, $Val extends CommentModel>
     ) as $Val);
   }
 
+  /// Create a copy of CommentModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentUserCopyWith<$Res>? get user {
@@ -140,6 +148,8 @@ class __$$CommentModelImplCopyWithImpl<$Res>
       _$CommentModelImpl _value, $Res Function(_$CommentModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommentModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -244,12 +254,14 @@ class _$CommentModelImpl with DiagnosticableTreeMixin implements _CommentModel {
             (identical(other.user, user) || other.user == user));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, isApproved, content,
       const DeepCollectionEquality().hash(_comments), user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommentModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentModelImplCopyWith<_$CommentModelImpl> get copyWith =>
@@ -291,8 +303,11 @@ abstract class _CommentModel implements CommentModel {
   @override
   @JsonKey(name: 'user')
   CommentUser? get user;
+
+  /// Create a copy of CommentModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentModelImplCopyWith<_$CommentModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -314,8 +329,12 @@ mixin _$CommentUser {
   @JsonKey(name: 'image')
   String? get image => throw _privateConstructorUsedError;
 
+  /// Serializes this CommentUser to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommentUser
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentUserCopyWith<CommentUser> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -344,6 +363,8 @@ class _$CommentUserCopyWithImpl<$Res, $Val extends CommentUser>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommentUser
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -402,6 +423,8 @@ class __$$CommentUserImplCopyWithImpl<$Res>
       _$CommentUserImpl _value, $Res Function(_$CommentUserImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommentUser
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -497,12 +520,14 @@ class _$CommentUserImpl extends _CommentUser with DiagnosticableTreeMixin {
             (identical(other.image, image) || other.image == image));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, firstName, lastName, email, image);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommentUser
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentUserImplCopyWith<_$CommentUserImpl> get copyWith =>
@@ -543,8 +568,11 @@ abstract class _CommentUser extends CommentUser {
   @override
   @JsonKey(name: 'image')
   String? get image;
+
+  /// Create a copy of CommentUser
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentUserImplCopyWith<_$CommentUserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

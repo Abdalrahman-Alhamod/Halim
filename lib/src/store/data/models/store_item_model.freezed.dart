@@ -31,8 +31,12 @@ mixin _$StoreItemModel {
   @JsonKey(name: 'points_cost')
   int? get pointsCost => throw _privateConstructorUsedError;
 
+  /// Serializes this StoreItemModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StoreItemModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StoreItemModelCopyWith<StoreItemModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$StoreItemModelCopyWithImpl<$Res, $Val extends StoreItemModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StoreItemModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$StoreItemModelImplCopyWithImpl<$Res>
       _$StoreItemModelImpl _value, $Res Function(_$StoreItemModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StoreItemModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,12 +223,14 @@ class _$StoreItemModelImpl
                 other.pointsCost == pointsCost));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, name, description, image, pointsCost);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StoreItemModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StoreItemModelImplCopyWith<_$StoreItemModelImpl> get copyWith =>
@@ -262,8 +272,11 @@ abstract class _StoreItemModel implements StoreItemModel {
   @override
   @JsonKey(name: 'points_cost')
   int? get pointsCost;
+
+  /// Create a copy of StoreItemModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StoreItemModelImplCopyWith<_$StoreItemModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

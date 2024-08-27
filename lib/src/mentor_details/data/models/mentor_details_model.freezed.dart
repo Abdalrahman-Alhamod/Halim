@@ -45,8 +45,12 @@ mixin _$MentorDetailsModel {
   @JsonKey(name: 'reviews_avg')
   num? get reviewsAvg => throw _privateConstructorUsedError;
 
+  /// Serializes this MentorDetailsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MentorDetailsModelCopyWith<MentorDetailsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -82,6 +86,8 @@ class _$MentorDetailsModelCopyWithImpl<$Res, $Val extends MentorDetailsModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MentorDetailsModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -182,6 +188,8 @@ class __$$MentorDetailsModelImplCopyWithImpl<$Res>
       $Res Function(_$MentorDetailsModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -361,7 +369,7 @@ class _$MentorDetailsModelImpl extends _MentorDetailsModel
                 other.reviewsAvg == reviewsAvg));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -378,7 +386,9 @@ class _$MentorDetailsModelImpl extends _MentorDetailsModel
       reviewsCount,
       reviewsAvg);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MentorDetailsModelImplCopyWith<_$MentorDetailsModelImpl> get copyWith =>
@@ -449,8 +459,11 @@ abstract class _MentorDetailsModel extends MentorDetailsModel {
   @override
   @JsonKey(name: 'reviews_avg')
   num? get reviewsAvg;
+
+  /// Create a copy of MentorDetailsModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MentorDetailsModelImplCopyWith<_$MentorDetailsModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

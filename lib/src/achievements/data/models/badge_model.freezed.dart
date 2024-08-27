@@ -33,8 +33,12 @@ mixin _$BadgeModel {
   @JsonKey(name: 'is_earned')
   bool? get isEarned => throw _privateConstructorUsedError;
 
+  /// Serializes this BadgeModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BadgeModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BadgeModelCopyWith<BadgeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -64,6 +68,8 @@ class _$BadgeModelCopyWithImpl<$Res, $Val extends BadgeModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BadgeModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,6 +134,8 @@ class __$$BadgeModelImplCopyWithImpl<$Res>
       _$BadgeModelImpl _value, $Res Function(_$BadgeModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BadgeModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -234,12 +242,14 @@ class _$BadgeModelImpl with DiagnosticableTreeMixin implements _BadgeModel {
                 other.isEarned == isEarned));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, name, image, requiredNumber, numberAchieved, isEarned);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BadgeModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BadgeModelImplCopyWith<_$BadgeModelImpl> get copyWith =>
@@ -283,8 +293,11 @@ abstract class _BadgeModel implements BadgeModel {
   @override
   @JsonKey(name: 'is_earned')
   bool? get isEarned;
+
+  /// Create a copy of BadgeModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BadgeModelImplCopyWith<_$BadgeModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

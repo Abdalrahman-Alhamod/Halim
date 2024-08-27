@@ -46,8 +46,12 @@ mixin _$AchievementsSummeryModel {
   @JsonKey(name: 'courses_count')
   int? get coursesCount => throw _privateConstructorUsedError;
 
+  /// Serializes this AchievementsSummeryModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsSummeryModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AchievementsSummeryModelCopyWith<AchievementsSummeryModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -84,6 +88,8 @@ class _$AchievementsSummeryModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AchievementsSummeryModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -187,6 +193,8 @@ class __$$AchievementsSummeryModelImplCopyWithImpl<$Res>
       $Res Function(_$AchievementsSummeryModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsSummeryModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -368,7 +376,7 @@ class _$AchievementsSummeryModelImpl
                 other.coursesCount == coursesCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -385,7 +393,9 @@ class _$AchievementsSummeryModelImpl
       courses,
       coursesCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsSummeryModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AchievementsSummeryModelImplCopyWith<_$AchievementsSummeryModelImpl>
@@ -455,8 +465,11 @@ abstract class _AchievementsSummeryModel implements AchievementsSummeryModel {
   @override
   @JsonKey(name: 'courses_count')
   int? get coursesCount;
+
+  /// Create a copy of AchievementsSummeryModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AchievementsSummeryModelImplCopyWith<_$AchievementsSummeryModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

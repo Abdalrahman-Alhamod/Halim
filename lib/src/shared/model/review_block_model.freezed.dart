@@ -30,8 +30,12 @@ mixin _$ReviewBlockModel {
   @JsonKey(name: 'is_reviewed')
   bool? get isReviewed => throw _privateConstructorUsedError;
 
+  /// Serializes this ReviewBlockModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReviewBlockModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReviewBlockModelCopyWith<ReviewBlockModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63,6 +67,8 @@ class _$ReviewBlockModelCopyWithImpl<$Res, $Val extends ReviewBlockModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReviewBlockModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -101,6 +107,8 @@ class _$ReviewBlockModelCopyWithImpl<$Res, $Val extends ReviewBlockModel>
     ) as $Val);
   }
 
+  /// Create a copy of ReviewBlockModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StudentCardModelCopyWith<$Res>? get student {
@@ -142,6 +150,8 @@ class __$$ReviewBlockModelImplCopyWithImpl<$Res>
       $Res Function(_$ReviewBlockModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReviewBlockModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,12 +256,14 @@ class _$ReviewBlockModelImpl
                 other.isReviewed == isReviewed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, student, comment, rating, createdAt, isReviewed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReviewBlockModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReviewBlockModelImplCopyWith<_$ReviewBlockModelImpl> get copyWith =>
@@ -294,8 +306,11 @@ abstract class _ReviewBlockModel implements ReviewBlockModel {
   @override
   @JsonKey(name: 'is_reviewed')
   bool? get isReviewed;
+
+  /// Create a copy of ReviewBlockModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReviewBlockModelImplCopyWith<_$ReviewBlockModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

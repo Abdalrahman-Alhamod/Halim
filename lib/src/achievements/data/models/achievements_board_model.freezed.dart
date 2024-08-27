@@ -36,8 +36,12 @@ mixin _$AchievementsBoardModel {
   @JsonKey(name: 'rank')
   String? get rank => throw _privateConstructorUsedError;
 
+  /// Serializes this AchievementsBoardModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementsBoardModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AchievementsBoardModelCopyWith<AchievementsBoardModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -71,6 +75,8 @@ class _$AchievementsBoardModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AchievementsBoardModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class _$AchievementsBoardModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of AchievementsBoardModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AvatarModelCopyWith<$Res>? get avatar {
@@ -159,6 +167,8 @@ class __$$AchievementsBoardModelImplCopyWithImpl<$Res>
       $Res Function(_$AchievementsBoardModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementsBoardModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -278,12 +288,14 @@ class _$AchievementsBoardModelImpl
             (identical(other.rank, rank) || other.rank == rank));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, avatar, points, coursesCount,
       numberOfHours, contributions, avgTime, rank);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementsBoardModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AchievementsBoardModelImplCopyWith<_$AchievementsBoardModelImpl>
@@ -333,8 +345,11 @@ abstract class _AchievementsBoardModel implements AchievementsBoardModel {
   @override
   @JsonKey(name: 'rank')
   String? get rank;
+
+  /// Create a copy of AchievementsBoardModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AchievementsBoardModelImplCopyWith<_$AchievementsBoardModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

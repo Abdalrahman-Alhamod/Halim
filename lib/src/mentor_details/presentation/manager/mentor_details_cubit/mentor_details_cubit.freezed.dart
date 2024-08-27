@@ -235,6 +235,9 @@ class _$MentorDetailsStateCopyWithImpl<$Res, $Val extends MentorDetailsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -251,6 +254,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -519,6 +525,9 @@ class __$$FetchMentorDetailsLoadingImplCopyWithImpl<$Res>
       _$FetchMentorDetailsLoadingImpl _value,
       $Res Function(_$FetchMentorDetailsLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -793,6 +802,8 @@ class __$$FetchMentorDetailsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchMentorDetailsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -806,6 +817,8 @@ class __$$FetchMentorDetailsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -844,7 +857,9 @@ class _$FetchMentorDetailsFailureImpl implements _FetchMentorDetailsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchMentorDetailsFailureImplCopyWith<_$FetchMentorDetailsFailureImpl>
@@ -1083,7 +1098,10 @@ abstract class _FetchMentorDetailsFailure implements MentorDetailsState {
       _$FetchMentorDetailsFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchMentorDetailsFailureImplCopyWith<_$FetchMentorDetailsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1110,6 +1128,8 @@ class __$$FetchMentorDetailsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchMentorDetailsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1128,6 +1148,8 @@ class __$$FetchMentorDetailsSuccessImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MentorDetailsModelCopyWith<$Res> get mentorDetailsModel {
@@ -1166,7 +1188,9 @@ class _$FetchMentorDetailsSuccessImpl implements _FetchMentorDetailsSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, mentorDetailsModel, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchMentorDetailsSuccessImplCopyWith<_$FetchMentorDetailsSuccessImpl>
@@ -1406,7 +1430,10 @@ abstract class _FetchMentorDetailsSuccess implements MentorDetailsState {
 
   MentorDetailsModel get mentorDetailsModel;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchMentorDetailsSuccessImplCopyWith<_$FetchMentorDetailsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1428,6 +1455,9 @@ class __$$LoadingMentorCoursesPaginationImplCopyWithImpl<$Res>
       _$LoadingMentorCoursesPaginationImpl _value,
       $Res Function(_$LoadingMentorCoursesPaginationImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1704,6 +1734,8 @@ class __$$FailureMentorCoursesPaginationImplCopyWithImpl<$Res>
       $Res Function(_$FailureMentorCoursesPaginationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1717,6 +1749,8 @@ class __$$FailureMentorCoursesPaginationImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1756,7 +1790,9 @@ class _$FailureMentorCoursesPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureMentorCoursesPaginationImplCopyWith<
@@ -1996,7 +2032,10 @@ abstract class _FailureMentorCoursesPagination implements MentorDetailsState {
       _$FailureMentorCoursesPaginationImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureMentorCoursesPaginationImplCopyWith<
           _$FailureMentorCoursesPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2022,6 +2061,8 @@ class __$$SuccessMentorCoursesPaginationImplCopyWithImpl<$Res>
       $Res Function(_$SuccessMentorCoursesPaginationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2061,7 +2102,9 @@ class _$SuccessMentorCoursesPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessMentorCoursesPaginationImplCopyWith<
@@ -2300,7 +2343,10 @@ abstract class _SuccessMentorCoursesPagination implements MentorDetailsState {
       _$SuccessMentorCoursesPaginationImpl;
 
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessMentorCoursesPaginationImplCopyWith<
           _$SuccessMentorCoursesPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2323,6 +2369,9 @@ class __$$FetchMentorCoursesPageLoadingImplCopyWithImpl<$Res>
       _$FetchMentorCoursesPageLoadingImpl _value,
       $Res Function(_$FetchMentorCoursesPageLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2599,6 +2648,8 @@ class __$$FetchMentorCoursesPageFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchMentorCoursesPageFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2612,6 +2663,8 @@ class __$$FetchMentorCoursesPageFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -2651,7 +2704,9 @@ class _$FetchMentorCoursesPageFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchMentorCoursesPageFailureImplCopyWith<
@@ -2891,7 +2946,10 @@ abstract class _FetchMentorCoursesPageFailure implements MentorDetailsState {
       _$FetchMentorCoursesPageFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchMentorCoursesPageFailureImplCopyWith<
           _$FetchMentorCoursesPageFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2917,6 +2975,8 @@ class __$$FetchMentorCoursesPageSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchMentorCoursesPageSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2973,7 +3033,9 @@ class _$FetchMentorCoursesPageSuccessImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_courses), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchMentorCoursesPageSuccessImplCopyWith<
@@ -3214,7 +3276,10 @@ abstract class _FetchMentorCoursesPageSuccess implements MentorDetailsState {
 
   List<CourseCardModel> get courses;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchMentorCoursesPageSuccessImplCopyWith<
           _$FetchMentorCoursesPageSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3237,6 +3302,9 @@ class __$$FetchMentorLastReviewsLoadingImplCopyWithImpl<$Res>
       _$FetchMentorLastReviewsLoadingImpl _value,
       $Res Function(_$FetchMentorLastReviewsLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3508,6 +3576,9 @@ class __$$FetchMentorLastReviewsEmptyImplCopyWithImpl<$Res>
       _$FetchMentorLastReviewsEmptyImpl _value,
       $Res Function(_$FetchMentorLastReviewsEmptyImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3784,6 +3855,8 @@ class __$$FetchMentorLastReviewsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchMentorLastReviewsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3797,6 +3870,8 @@ class __$$FetchMentorLastReviewsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -3836,7 +3911,9 @@ class _$FetchMentorLastReviewsFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchMentorLastReviewsFailureImplCopyWith<
@@ -4076,7 +4153,10 @@ abstract class _FetchMentorLastReviewsFailure implements MentorDetailsState {
       _$FetchMentorLastReviewsFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchMentorLastReviewsFailureImplCopyWith<
           _$FetchMentorLastReviewsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4102,6 +4182,8 @@ class __$$FetchMentorLastReviewsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchMentorLastReviewsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4158,7 +4240,9 @@ class _$FetchMentorLastReviewsSuccessImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchMentorLastReviewsSuccessImplCopyWith<
@@ -4399,7 +4483,10 @@ abstract class _FetchMentorLastReviewsSuccess implements MentorDetailsState {
 
   List<ReviewBlockModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchMentorLastReviewsSuccessImplCopyWith<
           _$FetchMentorLastReviewsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4422,6 +4509,9 @@ class __$$LoadingMentorReviewsPaginationImplCopyWithImpl<$Res>
       _$LoadingMentorReviewsPaginationImpl _value,
       $Res Function(_$LoadingMentorReviewsPaginationImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4698,6 +4788,8 @@ class __$$FailureMentorReviewsPaginationImplCopyWithImpl<$Res>
       $Res Function(_$FailureMentorReviewsPaginationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4711,6 +4803,8 @@ class __$$FailureMentorReviewsPaginationImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -4750,7 +4844,9 @@ class _$FailureMentorReviewsPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureMentorReviewsPaginationImplCopyWith<
@@ -4990,7 +5086,10 @@ abstract class _FailureMentorReviewsPagination implements MentorDetailsState {
       _$FailureMentorReviewsPaginationImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureMentorReviewsPaginationImplCopyWith<
           _$FailureMentorReviewsPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5016,6 +5115,8 @@ class __$$SuccessMentorReviewsPaginationImplCopyWithImpl<$Res>
       $Res Function(_$SuccessMentorReviewsPaginationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5055,7 +5156,9 @@ class _$SuccessMentorReviewsPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessMentorReviewsPaginationImplCopyWith<
@@ -5294,7 +5397,10 @@ abstract class _SuccessMentorReviewsPagination implements MentorDetailsState {
       _$SuccessMentorReviewsPaginationImpl;
 
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MentorDetailsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessMentorReviewsPaginationImplCopyWith<
           _$SuccessMentorReviewsPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;

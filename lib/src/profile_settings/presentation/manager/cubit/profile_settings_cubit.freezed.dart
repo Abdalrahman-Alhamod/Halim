@@ -176,6 +176,9 @@ class _$ProfileSettingsStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -192,6 +195,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -400,6 +406,9 @@ class __$$UpdateInformationStudentLoadingImplCopyWithImpl<$Res>
       _$UpdateInformationStudentLoadingImpl _value,
       $Res Function(_$UpdateInformationStudentLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -616,6 +625,8 @@ class __$$UpdateInformationStudentFailureImplCopyWithImpl<$Res>
       $Res Function(_$UpdateInformationStudentFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -629,6 +640,8 @@ class __$$UpdateInformationStudentFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -668,7 +681,9 @@ class _$UpdateInformationStudentFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateInformationStudentFailureImplCopyWith<
@@ -848,7 +863,10 @@ abstract class UpdateInformationStudentFailure implements ProfileSettingsState {
       _$UpdateInformationStudentFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateInformationStudentFailureImplCopyWith<
           _$UpdateInformationStudentFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -876,6 +894,8 @@ class __$$UpdateInformationStudentSuccessImplCopyWithImpl<$Res>
       $Res Function(_$UpdateInformationStudentSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -894,6 +914,8 @@ class __$$UpdateInformationStudentSuccessImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StudentInfomationsModelCopyWith<$Res> get data {
@@ -931,7 +953,9 @@ class _$UpdateInformationStudentSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateInformationStudentSuccessImplCopyWith<
@@ -1112,7 +1136,10 @@ abstract class UpdateInformationStudentSuccess implements ProfileSettingsState {
 
   StudentInfomationsModel get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateInformationStudentSuccessImplCopyWith<
           _$UpdateInformationStudentSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1135,6 +1162,9 @@ class __$$FetchTransactionsLoadingImplCopyWithImpl<$Res>
       _$FetchTransactionsLoadingImpl _value,
       $Res Function(_$FetchTransactionsLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1349,6 +1379,8 @@ class __$$FetchTransactionsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchTransactionsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1362,6 +1394,8 @@ class __$$FetchTransactionsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1400,7 +1434,9 @@ class _$FetchTransactionsFailureImpl implements FetchTransactionsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchTransactionsFailureImplCopyWith<_$FetchTransactionsFailureImpl>
@@ -1579,7 +1615,10 @@ abstract class FetchTransactionsFailure implements ProfileSettingsState {
       _$FetchTransactionsFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchTransactionsFailureImplCopyWith<_$FetchTransactionsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1604,6 +1643,8 @@ class __$$FetchTransactionsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchTransactionsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1659,7 +1700,9 @@ class _$FetchTransactionsSuccessImpl implements FetchTransactionsSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchTransactionsSuccessImplCopyWith<_$FetchTransactionsSuccessImpl>
@@ -1839,7 +1882,10 @@ abstract class FetchTransactionsSuccess implements ProfileSettingsState {
 
   List<TransactionModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchTransactionsSuccessImplCopyWith<_$FetchTransactionsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1861,6 +1907,9 @@ class __$$FetchLeadrboardsLoadingImplCopyWithImpl<$Res>
       _$FetchLeadrboardsLoadingImpl _value,
       $Res Function(_$FetchLeadrboardsLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2075,6 +2124,8 @@ class __$$FetchLeadrboardsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchLeadrboardsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2088,6 +2139,8 @@ class __$$FetchLeadrboardsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -2126,7 +2179,9 @@ class _$FetchLeadrboardsFailureImpl implements FetchLeadrboardsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchLeadrboardsFailureImplCopyWith<_$FetchLeadrboardsFailureImpl>
@@ -2305,7 +2360,10 @@ abstract class FetchLeadrboardsFailure implements ProfileSettingsState {
       _$FetchLeadrboardsFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchLeadrboardsFailureImplCopyWith<_$FetchLeadrboardsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2330,6 +2388,8 @@ class __$$FetchLeadrboardsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchLeadrboardsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2385,7 +2445,9 @@ class _$FetchLeadrboardsSuccessImpl implements FetchLeadrboardsSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchLeadrboardsSuccessImplCopyWith<_$FetchLeadrboardsSuccessImpl>
@@ -2565,7 +2627,10 @@ abstract class FetchLeadrboardsSuccess implements ProfileSettingsState {
 
   List<StudentLeaderboards> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchLeadrboardsSuccessImplCopyWith<_$FetchLeadrboardsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2584,6 +2649,9 @@ class __$$FetchReceiptLoadingImplCopyWithImpl<$Res>
   __$$FetchReceiptLoadingImplCopyWithImpl(_$FetchReceiptLoadingImpl _value,
       $Res Function(_$FetchReceiptLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2795,6 +2863,8 @@ class __$$FetchReceiptFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchReceiptFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2808,6 +2878,8 @@ class __$$FetchReceiptFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -2846,7 +2918,9 @@ class _$FetchReceiptFailureImpl implements FetchReceiptFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchReceiptFailureImplCopyWith<_$FetchReceiptFailureImpl> get copyWith =>
@@ -3024,7 +3098,10 @@ abstract class FetchReceiptFailure implements ProfileSettingsState {
       _$FetchReceiptFailureImpl;
 
   NetworkExceptions? get networkException;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchReceiptFailureImplCopyWith<_$FetchReceiptFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3046,6 +3123,8 @@ class __$$FetchReceiptSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchReceiptSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3100,7 +3179,9 @@ class _$FetchReceiptSuccessImpl implements FetchReceiptSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchReceiptSuccessImplCopyWith<_$FetchReceiptSuccessImpl> get copyWith =>
@@ -3280,7 +3361,10 @@ abstract class FetchReceiptSuccess implements ProfileSettingsState {
 
   List<ReceiptModel> get data;
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileSettingsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchReceiptSuccessImplCopyWith<_$FetchReceiptSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

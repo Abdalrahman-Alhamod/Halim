@@ -25,8 +25,12 @@ mixin _$SocketDataModel {
   @JsonKey(name: 'activity_timeout')
   int? get activityTimeout => throw _privateConstructorUsedError;
 
+  /// Serializes this SocketDataModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SocketDataModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SocketDataModelCopyWith<SocketDataModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$SocketDataModelCopyWithImpl<$Res, $Val extends SocketDataModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SocketDataModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$SocketDataModelImplCopyWithImpl<$Res>
       _$SocketDataModelImpl _value, $Res Function(_$SocketDataModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SocketDataModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,11 +163,13 @@ class _$SocketDataModelImpl
                 other.activityTimeout == activityTimeout));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, socketId, activityTimeout);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SocketDataModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SocketDataModelImplCopyWith<_$SocketDataModelImpl> get copyWith =>
@@ -189,8 +199,11 @@ abstract class _SocketDataModel implements SocketDataModel {
   @override
   @JsonKey(name: 'activity_timeout')
   int? get activityTimeout;
+
+  /// Create a copy of SocketDataModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SocketDataModelImplCopyWith<_$SocketDataModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

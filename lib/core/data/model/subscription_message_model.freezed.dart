@@ -24,8 +24,12 @@ mixin _$SubscriptionMessageModel {
   String? get event => throw _privateConstructorUsedError;
   SubscriptionDataModel? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this SubscriptionMessageModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SubscriptionMessageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SubscriptionMessageModelCopyWith<SubscriptionMessageModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$SubscriptionMessageModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SubscriptionMessageModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,6 +76,8 @@ class _$SubscriptionMessageModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of SubscriptionMessageModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SubscriptionDataModelCopyWith<$Res>? get data {
@@ -108,6 +116,8 @@ class __$$SubscriptionMessageModelImplCopyWithImpl<$Res>
       $Res Function(_$SubscriptionMessageModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SubscriptionMessageModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -165,11 +175,13 @@ class _$SubscriptionMessageModelImpl
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, event, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SubscriptionMessageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SubscriptionMessageModelImplCopyWith<_$SubscriptionMessageModelImpl>
@@ -196,8 +208,11 @@ abstract class _SubscriptionMessageModel implements SubscriptionMessageModel {
   String? get event;
   @override
   SubscriptionDataModel? get data;
+
+  /// Create a copy of SubscriptionMessageModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SubscriptionMessageModelImplCopyWith<_$SubscriptionMessageModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
