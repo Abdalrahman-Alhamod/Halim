@@ -60,12 +60,8 @@ dependencies:
   form_field_validator: ^1.1.0
   # For tracking progress
   percent_indicator: ^4.2.3
-  # For sliding ads
-  carousel_slider: ^4.2.1
   # For fingerprint auth
   local_auth: ^2.2.0
-  # For entering verifying key
-  # pinput:
   # For rating
   flutter_rating_bar: ^4.0.1
   # For localization
@@ -124,6 +120,7 @@ dependencies:
   firebase_auth: ^4.16.0
   rxdart: ^0.28.0
   google_sign_in: ^6.2.1
+  supabase_flutter: ^2.6.0
   
   
 dev_dependencies:

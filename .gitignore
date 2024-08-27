@@ -45,13 +45,15 @@ app.*.map.json
 
 pubspec.lock
 
-# TODO uncomment .env 
-*.env
+
+
 
 # "JSON to Dart Model" generator tracker files locations.
 /.json_models/
 models.jsonc
 
+# TODO uncomment production files 
+# *.env
 # google-services.json
 # GoogleService-Info.plist
 # firebase_options.dart

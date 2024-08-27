@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../translations/locale_keys.g.dart';
@@ -12,13 +13,13 @@ part 'network_exceptions.freezed.dart';
 @freezed
 abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
   const factory NetworkExceptions.requestCancelled() = RequestCancelled;
-  // TODO: IMPLEMENT FIREBASE EXCEPTIONS
 
-  // const factory NetworkExceptions.firebaseAuthException(String message) =
-  //     FireBaseAuthException;
 
-  // const factory NetworkExceptions.firebaseException(String message) =
-  //     FireBaseException;
+  const factory NetworkExceptions.firebaseAuthException(String message) =
+      FireBaseAuthException;
+
+  const factory NetworkExceptions.firebaseException(String message) =
+      FireBaseException;
 
   const factory NetworkExceptions.unauthorizedRequest(String reason) =
       UnauthorizedRequest;
@@ -156,13 +157,12 @@ abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
           }
         } else if (error is SocketException) {
           networkExceptions = const NetworkExceptions.noInternetConnection();
-          // TODO: IMPLEMENT FIREBASE EXCEPTIONS
-          // } else if (error is FirebaseAuthException) {
-          //   networkExceptions =
-          //       NetworkExceptions.firebaseAuthException(error.message!);
-          // } else if (error is FirebaseException) {
-          //   networkExceptions =
-          //       NetworkExceptions.firebaseException(error.message!);
+        } else if (error is FirebaseAuthException) {
+          networkExceptions =
+              NetworkExceptions.firebaseAuthException(error.message!);
+        } else if (error is FirebaseException) {
+          networkExceptions =
+              NetworkExceptions.firebaseException(error.message!);
         } else {
           networkExceptions = const NetworkExceptions.unexpectedError();
         }
@@ -242,13 +242,12 @@ abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
           notAcceptable: () {
             errorMessage = "Not acceptable";
           },
-          // TODO: IMPLEMENT FIREBASE EXCEPTIONS
-          // firebaseAuthException: (String message) {
-          //   errorMessage = message;
-          // },
-          // firebaseException: (String message) {
-          //   errorMessage = message;
-          // },
+          firebaseAuthException: (String message) {
+            errorMessage = message;
+          },
+          firebaseException: (String message) {
+            errorMessage = message;
+          },
         ) ??
         '';
     return errorMessage;
@@ -328,12 +327,12 @@ abstract class NetworkExceptions with _$NetworkExceptions implements Exception {
         notAcceptable: () {
           errorMessage = errorMessage = tr(LocaleKeys.Errors_notAcceptable);
         },
-        // firebaseAuthException: (String message) {
-        //   errorMessage = message;
-        // },
-        // firebaseException: (String message) {
-        //   errorMessage = message;
-        // },
+        firebaseAuthException: (String message) {
+          errorMessage = message;
+        },
+        firebaseException: (String message) {
+          errorMessage = message;
+        },
       );
       return errorMessage;
     } else {

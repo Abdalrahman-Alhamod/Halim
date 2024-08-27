@@ -13,4 +13,5 @@ abstract class HomeRepo {
   Future<ApiResponse<BaseModel>> getAllMentors({
     required int? pageKay,
   });
+  Future<ApiResponse<BaseModel>> getNotifications();
 }

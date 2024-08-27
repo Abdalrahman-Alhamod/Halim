@@ -88,4 +88,20 @@ class HomeRepoImpl extends HomeRepo {
       );
     }
   }
+
+  @override
+  Future<ApiResponse<BaseModel>> getNotifications() async {
+    try {
+      final response = await _homeRemoteDateSource.getNotifications();
+      return ApiResponse.success(
+        response,
+      );
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(
+          error,
+        ),
+      );
+    }
+  }
 }

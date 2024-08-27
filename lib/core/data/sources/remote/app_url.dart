@@ -35,6 +35,7 @@ abstract final class AppUrl {
 
   static final googleRedirect = "${auth}google";
   static final googleCallback = "${auth}google/callback";
+  static final googleSignIn = "${auth}google/submit";
 
   ///<------------------------------------------------------------------------------
 

@@ -28,7 +28,7 @@ mixin _$CourseLessonModel {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'duration')
   int? get duration => throw _privateConstructorUsedError;
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   bool? get isPreview => throw _privateConstructorUsedError;
   @JsonKey(name: 'quiz')
   Quiz? get quiz => throw _privateConstructorUsedError;
@@ -56,8 +56,7 @@ abstract class $CourseLessonModelCopyWith<$Res> {
       @JsonKey(name: 'lesson_type') LessonType? lessonType,
       @JsonKey(name: 'title') String? title,
       @JsonKey(name: 'duration') int? duration,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      bool? isPreview,
+      @JsonKey(name: 'is_preview') bool? isPreview,
       @JsonKey(name: 'quiz') Quiz? quiz,
       @JsonKey(name: 'is_completed') bool? isCompleted,
       @JsonKey(name: 'video') Video? video,
@@ -194,8 +193,7 @@ abstract class _$$CourseLessonModelImplCopyWith<$Res>
       @JsonKey(name: 'lesson_type') LessonType? lessonType,
       @JsonKey(name: 'title') String? title,
       @JsonKey(name: 'duration') int? duration,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      bool? isPreview,
+      @JsonKey(name: 'is_preview') bool? isPreview,
       @JsonKey(name: 'quiz') Quiz? quiz,
       @JsonKey(name: 'is_completed') bool? isCompleted,
       @JsonKey(name: 'video') Video? video,
@@ -283,8 +281,7 @@ class _$CourseLessonModelImpl
       @JsonKey(name: 'lesson_type') this.lessonType,
       @JsonKey(name: 'title') this.title,
       @JsonKey(name: 'duration') this.duration,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      this.isPreview,
+      @JsonKey(name: 'is_preview') this.isPreview,
       @JsonKey(name: 'quiz') this.quiz,
       @JsonKey(name: 'is_completed') this.isCompleted,
       @JsonKey(name: 'video') this.video,
@@ -306,7 +303,7 @@ class _$CourseLessonModelImpl
   @JsonKey(name: 'duration')
   final int? duration;
   @override
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   final bool? isPreview;
   @override
   @JsonKey(name: 'quiz')
@@ -384,17 +381,16 @@ class _$CourseLessonModelImpl
 
 abstract class _CourseLessonModel implements CourseLessonModel {
   const factory _CourseLessonModel(
-      {@JsonKey(name: 'id') final int? id,
-      @JsonKey(name: 'lesson_type') final LessonType? lessonType,
-      @JsonKey(name: 'title') final String? title,
-      @JsonKey(name: 'duration') final int? duration,
-      @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
-      final bool? isPreview,
-      @JsonKey(name: 'quiz') final Quiz? quiz,
-      @JsonKey(name: 'is_completed') final bool? isCompleted,
-      @JsonKey(name: 'video') final Video? video,
-      @JsonKey(name: 'reading')
-      final Reading? reading}) = _$CourseLessonModelImpl;
+          {@JsonKey(name: 'id') final int? id,
+          @JsonKey(name: 'lesson_type') final LessonType? lessonType,
+          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'duration') final int? duration,
+          @JsonKey(name: 'is_preview') final bool? isPreview,
+          @JsonKey(name: 'quiz') final Quiz? quiz,
+          @JsonKey(name: 'is_completed') final bool? isCompleted,
+          @JsonKey(name: 'video') final Video? video,
+          @JsonKey(name: 'reading') final Reading? reading}) =
+      _$CourseLessonModelImpl;
 
   factory _CourseLessonModel.fromJson(Map<String, dynamic> json) =
       _$CourseLessonModelImpl.fromJson;
@@ -412,7 +408,7 @@ abstract class _CourseLessonModel implements CourseLessonModel {
   @JsonKey(name: 'duration')
   int? get duration;
   @override
-  @JsonKey(name: 'is_preview', fromJson: _boolFromJson, toJson: _boolToJson)
+  @JsonKey(name: 'is_preview')
   bool? get isPreview;
   @override
   @JsonKey(name: 'quiz')

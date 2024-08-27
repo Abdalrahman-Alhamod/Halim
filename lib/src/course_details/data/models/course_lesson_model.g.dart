@@ -15,7 +15,7 @@ _$CourseLessonModelImpl _$$CourseLessonModelImplFromJson(
           : LessonType.fromJson(json['lesson_type'] as Map<String, dynamic>),
       title: json['title'] as String?,
       duration: (json['duration'] as num?)?.toInt(),
-      isPreview: _boolFromJson(json['is_preview']),
+      isPreview: json['is_preview'] as bool?,
       quiz: json['quiz'] == null
           ? null
           : Quiz.fromJson(json['quiz'] as Map<String, dynamic>),
@@ -35,7 +35,7 @@ Map<String, dynamic> _$$CourseLessonModelImplToJson(
       'lesson_type': instance.lessonType,
       'title': instance.title,
       'duration': instance.duration,
-      'is_preview': _boolToJson(instance.isPreview),
+      'is_preview': instance.isPreview,
       'quiz': instance.quiz,
       'is_completed': instance.isCompleted,
       'video': instance.video,

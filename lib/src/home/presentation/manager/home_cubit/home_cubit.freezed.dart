@@ -52,6 +52,11 @@ mixin _$HomeState {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -88,6 +93,11 @@ mixin _$HomeState {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -124,6 +134,11 @@ mixin _$HomeState {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -166,6 +181,12 @@ mixin _$HomeState {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -201,6 +222,12 @@ mixin _$HomeState {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -236,6 +263,12 @@ mixin _$HomeState {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -330,6 +363,11 @@ class _$InitialImpl implements Initial {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return initial();
   }
@@ -369,6 +407,11 @@ class _$InitialImpl implements Initial {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return initial?.call();
   }
@@ -408,6 +451,11 @@ class _$InitialImpl implements Initial {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -456,6 +504,12 @@ class _$InitialImpl implements Initial {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return initial(this);
   }
@@ -494,6 +548,12 @@ class _$InitialImpl implements Initial {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return initial?.call(this);
   }
@@ -532,6 +592,12 @@ class _$InitialImpl implements Initial {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -620,6 +686,11 @@ class _$FetchSubcategoriesLoadingImpl implements FetchSubcategoriesLoading {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesLoading();
   }
@@ -659,6 +730,11 @@ class _$FetchSubcategoriesLoadingImpl implements FetchSubcategoriesLoading {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesLoading?.call();
   }
@@ -698,6 +774,11 @@ class _$FetchSubcategoriesLoadingImpl implements FetchSubcategoriesLoading {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesLoading != null) {
@@ -746,6 +827,12 @@ class _$FetchSubcategoriesLoadingImpl implements FetchSubcategoriesLoading {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesLoading(this);
   }
@@ -784,6 +871,12 @@ class _$FetchSubcategoriesLoadingImpl implements FetchSubcategoriesLoading {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesLoading?.call(this);
   }
@@ -822,6 +915,12 @@ class _$FetchSubcategoriesLoadingImpl implements FetchSubcategoriesLoading {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesLoading != null) {
@@ -951,6 +1050,11 @@ class _$FetchSubcategoriesFailureImpl implements FetchSubcategoriesFailure {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesFailure(networkException);
   }
@@ -990,6 +1094,11 @@ class _$FetchSubcategoriesFailureImpl implements FetchSubcategoriesFailure {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesFailure?.call(networkException);
   }
@@ -1029,6 +1138,11 @@ class _$FetchSubcategoriesFailureImpl implements FetchSubcategoriesFailure {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesFailure != null) {
@@ -1077,6 +1191,12 @@ class _$FetchSubcategoriesFailureImpl implements FetchSubcategoriesFailure {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesFailure(this);
   }
@@ -1115,6 +1235,12 @@ class _$FetchSubcategoriesFailureImpl implements FetchSubcategoriesFailure {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesFailure?.call(this);
   }
@@ -1153,6 +1279,12 @@ class _$FetchSubcategoriesFailureImpl implements FetchSubcategoriesFailure {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesFailure != null) {
@@ -1291,6 +1423,11 @@ class _$FetchSubcategoriesSuccessImpl implements FetchSubcategoriesSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesSuccess(data, message);
   }
@@ -1330,6 +1467,11 @@ class _$FetchSubcategoriesSuccessImpl implements FetchSubcategoriesSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesSuccess?.call(data, message);
   }
@@ -1369,6 +1511,11 @@ class _$FetchSubcategoriesSuccessImpl implements FetchSubcategoriesSuccess {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesSuccess != null) {
@@ -1417,6 +1564,12 @@ class _$FetchSubcategoriesSuccessImpl implements FetchSubcategoriesSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesSuccess(this);
   }
@@ -1455,6 +1608,12 @@ class _$FetchSubcategoriesSuccessImpl implements FetchSubcategoriesSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchSubcategoriesSuccess?.call(this);
   }
@@ -1493,6 +1652,12 @@ class _$FetchSubcategoriesSuccessImpl implements FetchSubcategoriesSuccess {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchSubcategoriesSuccess != null) {
@@ -1589,6 +1754,11 @@ class _$FetchInfStudentLoadingImpl implements FetchInfStudentLoading {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentLoading();
   }
@@ -1628,6 +1798,11 @@ class _$FetchInfStudentLoadingImpl implements FetchInfStudentLoading {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentLoading?.call();
   }
@@ -1667,6 +1842,11 @@ class _$FetchInfStudentLoadingImpl implements FetchInfStudentLoading {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchInfStudentLoading != null) {
@@ -1715,6 +1895,12 @@ class _$FetchInfStudentLoadingImpl implements FetchInfStudentLoading {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentLoading(this);
   }
@@ -1753,6 +1939,12 @@ class _$FetchInfStudentLoadingImpl implements FetchInfStudentLoading {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentLoading?.call(this);
   }
@@ -1791,6 +1983,12 @@ class _$FetchInfStudentLoadingImpl implements FetchInfStudentLoading {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchInfStudentLoading != null) {
@@ -1920,6 +2118,11 @@ class _$FetchInfStudentFailureImpl implements FetchInfStudentFailure {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentFailure(networkException);
   }
@@ -1959,6 +2162,11 @@ class _$FetchInfStudentFailureImpl implements FetchInfStudentFailure {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentFailure?.call(networkException);
   }
@@ -1998,6 +2206,11 @@ class _$FetchInfStudentFailureImpl implements FetchInfStudentFailure {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchInfStudentFailure != null) {
@@ -2046,6 +2259,12 @@ class _$FetchInfStudentFailureImpl implements FetchInfStudentFailure {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentFailure(this);
   }
@@ -2084,6 +2303,12 @@ class _$FetchInfStudentFailureImpl implements FetchInfStudentFailure {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentFailure?.call(this);
   }
@@ -2122,6 +2347,12 @@ class _$FetchInfStudentFailureImpl implements FetchInfStudentFailure {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchInfStudentFailure != null) {
@@ -2250,6 +2481,11 @@ class _$FetchInfStudentSuccessImpl implements FetchInfStudentSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentSuccess(data, message);
   }
@@ -2289,6 +2525,11 @@ class _$FetchInfStudentSuccessImpl implements FetchInfStudentSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentSuccess?.call(data, message);
   }
@@ -2328,6 +2569,11 @@ class _$FetchInfStudentSuccessImpl implements FetchInfStudentSuccess {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchInfStudentSuccess != null) {
@@ -2376,6 +2622,12 @@ class _$FetchInfStudentSuccessImpl implements FetchInfStudentSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentSuccess(this);
   }
@@ -2414,6 +2666,12 @@ class _$FetchInfStudentSuccessImpl implements FetchInfStudentSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchInfStudentSuccess?.call(this);
   }
@@ -2452,6 +2710,12 @@ class _$FetchInfStudentSuccessImpl implements FetchInfStudentSuccess {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchInfStudentSuccess != null) {
@@ -2546,6 +2810,11 @@ class _$FetchCoursesLoadingImpl implements FetchCoursesLoading {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesLoading();
   }
@@ -2585,6 +2854,11 @@ class _$FetchCoursesLoadingImpl implements FetchCoursesLoading {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesLoading?.call();
   }
@@ -2624,6 +2898,11 @@ class _$FetchCoursesLoadingImpl implements FetchCoursesLoading {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchCoursesLoading != null) {
@@ -2672,6 +2951,12 @@ class _$FetchCoursesLoadingImpl implements FetchCoursesLoading {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesLoading(this);
   }
@@ -2710,6 +2995,12 @@ class _$FetchCoursesLoadingImpl implements FetchCoursesLoading {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesLoading?.call(this);
   }
@@ -2748,6 +3039,12 @@ class _$FetchCoursesLoadingImpl implements FetchCoursesLoading {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchCoursesLoading != null) {
@@ -2875,6 +3172,11 @@ class _$FetchCoursesFailureImpl implements FetchCoursesFailure {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesFailure(networkException);
   }
@@ -2914,6 +3216,11 @@ class _$FetchCoursesFailureImpl implements FetchCoursesFailure {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesFailure?.call(networkException);
   }
@@ -2953,6 +3260,11 @@ class _$FetchCoursesFailureImpl implements FetchCoursesFailure {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchCoursesFailure != null) {
@@ -3001,6 +3313,12 @@ class _$FetchCoursesFailureImpl implements FetchCoursesFailure {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesFailure(this);
   }
@@ -3039,6 +3357,12 @@ class _$FetchCoursesFailureImpl implements FetchCoursesFailure {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesFailure?.call(this);
   }
@@ -3077,6 +3401,12 @@ class _$FetchCoursesFailureImpl implements FetchCoursesFailure {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchCoursesFailure != null) {
@@ -3212,6 +3542,11 @@ class _$FetchCoursesSuccessImpl implements FetchCoursesSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesSuccess(data, message);
   }
@@ -3251,6 +3586,11 @@ class _$FetchCoursesSuccessImpl implements FetchCoursesSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesSuccess?.call(data, message);
   }
@@ -3290,6 +3630,11 @@ class _$FetchCoursesSuccessImpl implements FetchCoursesSuccess {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchCoursesSuccess != null) {
@@ -3338,6 +3683,12 @@ class _$FetchCoursesSuccessImpl implements FetchCoursesSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesSuccess(this);
   }
@@ -3376,6 +3727,12 @@ class _$FetchCoursesSuccessImpl implements FetchCoursesSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchCoursesSuccess?.call(this);
   }
@@ -3414,6 +3771,12 @@ class _$FetchCoursesSuccessImpl implements FetchCoursesSuccess {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchCoursesSuccess != null) {
@@ -3510,6 +3873,11 @@ class _$FetchPopularCoursesLoadingImpl implements FetchPopularCoursesLoading {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesLoading();
   }
@@ -3549,6 +3917,11 @@ class _$FetchPopularCoursesLoadingImpl implements FetchPopularCoursesLoading {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesLoading?.call();
   }
@@ -3588,6 +3961,11 @@ class _$FetchPopularCoursesLoadingImpl implements FetchPopularCoursesLoading {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchPopularCoursesLoading != null) {
@@ -3636,6 +4014,12 @@ class _$FetchPopularCoursesLoadingImpl implements FetchPopularCoursesLoading {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesLoading(this);
   }
@@ -3674,6 +4058,12 @@ class _$FetchPopularCoursesLoadingImpl implements FetchPopularCoursesLoading {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesLoading?.call(this);
   }
@@ -3712,6 +4102,12 @@ class _$FetchPopularCoursesLoadingImpl implements FetchPopularCoursesLoading {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchPopularCoursesLoading != null) {
@@ -3841,6 +4237,11 @@ class _$FetchPopularCoursesFailureImpl implements FetchPopularCoursesFailure {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesFailure(networkException);
   }
@@ -3880,6 +4281,11 @@ class _$FetchPopularCoursesFailureImpl implements FetchPopularCoursesFailure {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesFailure?.call(networkException);
   }
@@ -3919,6 +4325,11 @@ class _$FetchPopularCoursesFailureImpl implements FetchPopularCoursesFailure {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchPopularCoursesFailure != null) {
@@ -3967,6 +4378,12 @@ class _$FetchPopularCoursesFailureImpl implements FetchPopularCoursesFailure {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesFailure(this);
   }
@@ -4005,6 +4422,12 @@ class _$FetchPopularCoursesFailureImpl implements FetchPopularCoursesFailure {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesFailure?.call(this);
   }
@@ -4043,6 +4466,12 @@ class _$FetchPopularCoursesFailureImpl implements FetchPopularCoursesFailure {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchPopularCoursesFailure != null) {
@@ -4164,6 +4593,11 @@ class _$FetchPopularCoursesSuccessImpl implements FetchPopularCoursesSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesSuccess(message);
   }
@@ -4203,6 +4637,11 @@ class _$FetchPopularCoursesSuccessImpl implements FetchPopularCoursesSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesSuccess?.call(message);
   }
@@ -4242,6 +4681,11 @@ class _$FetchPopularCoursesSuccessImpl implements FetchPopularCoursesSuccess {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchPopularCoursesSuccess != null) {
@@ -4290,6 +4734,12 @@ class _$FetchPopularCoursesSuccessImpl implements FetchPopularCoursesSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesSuccess(this);
   }
@@ -4328,6 +4778,12 @@ class _$FetchPopularCoursesSuccessImpl implements FetchPopularCoursesSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchPopularCoursesSuccess?.call(this);
   }
@@ -4366,6 +4822,12 @@ class _$FetchPopularCoursesSuccessImpl implements FetchPopularCoursesSuccess {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchPopularCoursesSuccess != null) {
@@ -4458,6 +4920,11 @@ class _$FetchMentorsLoadingImpl implements FetchMentorsLoading {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsLoading();
   }
@@ -4497,6 +4964,11 @@ class _$FetchMentorsLoadingImpl implements FetchMentorsLoading {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsLoading?.call();
   }
@@ -4536,6 +5008,11 @@ class _$FetchMentorsLoadingImpl implements FetchMentorsLoading {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchMentorsLoading != null) {
@@ -4584,6 +5061,12 @@ class _$FetchMentorsLoadingImpl implements FetchMentorsLoading {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsLoading(this);
   }
@@ -4622,6 +5105,12 @@ class _$FetchMentorsLoadingImpl implements FetchMentorsLoading {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsLoading?.call(this);
   }
@@ -4660,6 +5149,12 @@ class _$FetchMentorsLoadingImpl implements FetchMentorsLoading {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchMentorsLoading != null) {
@@ -4787,6 +5282,11 @@ class _$FetchMentorsFailureImpl implements FetchMentorsFailure {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsFailure(networkException);
   }
@@ -4826,6 +5326,11 @@ class _$FetchMentorsFailureImpl implements FetchMentorsFailure {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsFailure?.call(networkException);
   }
@@ -4865,6 +5370,11 @@ class _$FetchMentorsFailureImpl implements FetchMentorsFailure {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchMentorsFailure != null) {
@@ -4913,6 +5423,12 @@ class _$FetchMentorsFailureImpl implements FetchMentorsFailure {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsFailure(this);
   }
@@ -4951,6 +5467,12 @@ class _$FetchMentorsFailureImpl implements FetchMentorsFailure {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsFailure?.call(this);
   }
@@ -4989,6 +5511,12 @@ class _$FetchMentorsFailureImpl implements FetchMentorsFailure {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchMentorsFailure != null) {
@@ -5124,6 +5652,11 @@ class _$FetchMentorsSuccessImpl implements FetchMentorsSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsSuccess(data, message);
   }
@@ -5163,6 +5696,11 @@ class _$FetchMentorsSuccessImpl implements FetchMentorsSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsSuccess?.call(data, message);
   }
@@ -5202,6 +5740,11 @@ class _$FetchMentorsSuccessImpl implements FetchMentorsSuccess {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchMentorsSuccess != null) {
@@ -5250,6 +5793,12 @@ class _$FetchMentorsSuccessImpl implements FetchMentorsSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsSuccess(this);
   }
@@ -5288,6 +5837,12 @@ class _$FetchMentorsSuccessImpl implements FetchMentorsSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchMentorsSuccess?.call(this);
   }
@@ -5326,6 +5881,12 @@ class _$FetchMentorsSuccessImpl implements FetchMentorsSuccess {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchMentorsSuccess != null) {
@@ -5422,6 +5983,11 @@ class _$FetchTopMentorsLoadingImpl implements FetchTopMentorsLoading {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsLoading();
   }
@@ -5461,6 +6027,11 @@ class _$FetchTopMentorsLoadingImpl implements FetchTopMentorsLoading {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsLoading?.call();
   }
@@ -5500,6 +6071,11 @@ class _$FetchTopMentorsLoadingImpl implements FetchTopMentorsLoading {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchTopMentorsLoading != null) {
@@ -5548,6 +6124,12 @@ class _$FetchTopMentorsLoadingImpl implements FetchTopMentorsLoading {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsLoading(this);
   }
@@ -5586,6 +6168,12 @@ class _$FetchTopMentorsLoadingImpl implements FetchTopMentorsLoading {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsLoading?.call(this);
   }
@@ -5624,6 +6212,12 @@ class _$FetchTopMentorsLoadingImpl implements FetchTopMentorsLoading {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchTopMentorsLoading != null) {
@@ -5753,6 +6347,11 @@ class _$FetchTopMentorsFailureImpl implements FetchTopMentorsFailure {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsFailure(networkException);
   }
@@ -5792,6 +6391,11 @@ class _$FetchTopMentorsFailureImpl implements FetchTopMentorsFailure {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsFailure?.call(networkException);
   }
@@ -5831,6 +6435,11 @@ class _$FetchTopMentorsFailureImpl implements FetchTopMentorsFailure {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchTopMentorsFailure != null) {
@@ -5879,6 +6488,12 @@ class _$FetchTopMentorsFailureImpl implements FetchTopMentorsFailure {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsFailure(this);
   }
@@ -5917,6 +6532,12 @@ class _$FetchTopMentorsFailureImpl implements FetchTopMentorsFailure {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsFailure?.call(this);
   }
@@ -5955,6 +6576,12 @@ class _$FetchTopMentorsFailureImpl implements FetchTopMentorsFailure {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchTopMentorsFailure != null) {
@@ -6075,6 +6702,11 @@ class _$FetchTopMentorsSuccessImpl implements FetchTopMentorsSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsSuccess(message);
   }
@@ -6114,6 +6746,11 @@ class _$FetchTopMentorsSuccessImpl implements FetchTopMentorsSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsSuccess?.call(message);
   }
@@ -6153,6 +6790,11 @@ class _$FetchTopMentorsSuccessImpl implements FetchTopMentorsSuccess {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchTopMentorsSuccess != null) {
@@ -6201,6 +6843,12 @@ class _$FetchTopMentorsSuccessImpl implements FetchTopMentorsSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsSuccess(this);
   }
@@ -6239,6 +6887,12 @@ class _$FetchTopMentorsSuccessImpl implements FetchTopMentorsSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchTopMentorsSuccess?.call(this);
   }
@@ -6277,6 +6931,12 @@ class _$FetchTopMentorsSuccessImpl implements FetchTopMentorsSuccess {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchTopMentorsSuccess != null) {
@@ -6371,6 +7031,11 @@ class _$FetchAdvertisementsLoadingImpl implements FetchAdvertisementsLoading {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsLoading();
   }
@@ -6410,6 +7075,11 @@ class _$FetchAdvertisementsLoadingImpl implements FetchAdvertisementsLoading {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsLoading?.call();
   }
@@ -6449,6 +7119,11 @@ class _$FetchAdvertisementsLoadingImpl implements FetchAdvertisementsLoading {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchAdvertisementsLoading != null) {
@@ -6497,6 +7172,12 @@ class _$FetchAdvertisementsLoadingImpl implements FetchAdvertisementsLoading {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsLoading(this);
   }
@@ -6535,6 +7216,12 @@ class _$FetchAdvertisementsLoadingImpl implements FetchAdvertisementsLoading {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsLoading?.call(this);
   }
@@ -6573,6 +7260,12 @@ class _$FetchAdvertisementsLoadingImpl implements FetchAdvertisementsLoading {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchAdvertisementsLoading != null) {
@@ -6702,6 +7395,11 @@ class _$FetchAdvertisementsFailureImpl implements FetchAdvertisementsFailure {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsFailure(networkException);
   }
@@ -6741,6 +7439,11 @@ class _$FetchAdvertisementsFailureImpl implements FetchAdvertisementsFailure {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsFailure?.call(networkException);
   }
@@ -6780,6 +7483,11 @@ class _$FetchAdvertisementsFailureImpl implements FetchAdvertisementsFailure {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchAdvertisementsFailure != null) {
@@ -6828,6 +7536,12 @@ class _$FetchAdvertisementsFailureImpl implements FetchAdvertisementsFailure {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsFailure(this);
   }
@@ -6866,6 +7580,12 @@ class _$FetchAdvertisementsFailureImpl implements FetchAdvertisementsFailure {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsFailure?.call(this);
   }
@@ -6904,6 +7624,12 @@ class _$FetchAdvertisementsFailureImpl implements FetchAdvertisementsFailure {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchAdvertisementsFailure != null) {
@@ -7042,6 +7768,11 @@ class _$FetchAdvertisementsSuccessImpl implements FetchAdvertisementsSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(List<AdvModel> data, String? message)
         fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsSuccess(data, message);
   }
@@ -7081,6 +7812,11 @@ class _$FetchAdvertisementsSuccessImpl implements FetchAdvertisementsSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsSuccess?.call(data, message);
   }
@@ -7120,6 +7856,11 @@ class _$FetchAdvertisementsSuccessImpl implements FetchAdvertisementsSuccess {
         fetchAdvertisementsFailure,
     TResult Function(List<AdvModel> data, String? message)?
         fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchAdvertisementsSuccess != null) {
@@ -7168,6 +7909,12 @@ class _$FetchAdvertisementsSuccessImpl implements FetchAdvertisementsSuccess {
         fetchAdvertisementsFailure,
     required TResult Function(FetchAdvertisementsSuccess value)
         fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsSuccess(this);
   }
@@ -7206,6 +7953,12 @@ class _$FetchAdvertisementsSuccessImpl implements FetchAdvertisementsSuccess {
         fetchAdvertisementsFailure,
     TResult? Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
   }) {
     return fetchAdvertisementsSuccess?.call(this);
   }
@@ -7244,6 +7997,12 @@ class _$FetchAdvertisementsSuccessImpl implements FetchAdvertisementsSuccess {
         fetchAdvertisementsFailure,
     TResult Function(FetchAdvertisementsSuccess value)?
         fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
     required TResult orElse(),
   }) {
     if (fetchAdvertisementsSuccess != null) {
@@ -7262,5 +8021,1073 @@ abstract class FetchAdvertisementsSuccess implements HomeState {
   String? get message;
   @JsonKey(ignore: true)
   _$$FetchAdvertisementsSuccessImplCopyWith<_$FetchAdvertisementsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchNotificationsLoadingImplCopyWith<$Res> {
+  factory _$$FetchNotificationsLoadingImplCopyWith(
+          _$FetchNotificationsLoadingImpl value,
+          $Res Function(_$FetchNotificationsLoadingImpl) then) =
+      __$$FetchNotificationsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchNotificationsLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$FetchNotificationsLoadingImpl>
+    implements _$$FetchNotificationsLoadingImplCopyWith<$Res> {
+  __$$FetchNotificationsLoadingImplCopyWithImpl(
+      _$FetchNotificationsLoadingImpl _value,
+      $Res Function(_$FetchNotificationsLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FetchNotificationsLoadingImpl implements _FetchNotificationsLoading {
+  const _$FetchNotificationsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.fetchNotificationsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchNotificationsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchSubcategoriesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchSubcategoriesFailure,
+    required TResult Function(List<SubcategoryModel> data, String? message)
+        fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(StudentProfileModel data, String? message)
+        fetchInfStudentSuccess,
+    required TResult Function() fetchCoursesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCoursesFailure,
+    required TResult Function(List<CourseCardModel> data, String? message)
+        fetchCoursesSuccess,
+    required TResult Function() fetchPopularCoursesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchPopularCoursesFailure,
+    required TResult Function(String? message) fetchPopularCoursesSuccess,
+    required TResult Function() fetchMentorsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchMentorsFailure,
+    required TResult Function(List<MentorCardModel> data, String? message)
+        fetchMentorsSuccess,
+    required TResult Function() fetchTopMentorsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTopMentorsFailure,
+    required TResult Function(String? message) fetchTopMentorsSuccess,
+    required TResult Function() fetchAdvertisementsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchAdvertisementsFailure,
+    required TResult Function(List<AdvModel> data, String? message)
+        fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchSubcategoriesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult? Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(StudentProfileModel data, String? message)?
+        fetchInfStudentSuccess,
+    TResult? Function()? fetchCoursesLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchCoursesFailure,
+    TResult? Function(List<CourseCardModel> data, String? message)?
+        fetchCoursesSuccess,
+    TResult? Function()? fetchPopularCoursesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchPopularCoursesFailure,
+    TResult? Function(String? message)? fetchPopularCoursesSuccess,
+    TResult? Function()? fetchMentorsLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchMentorsFailure,
+    TResult? Function(List<MentorCardModel> data, String? message)?
+        fetchMentorsSuccess,
+    TResult? Function()? fetchTopMentorsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTopMentorsFailure,
+    TResult? Function(String? message)? fetchTopMentorsSuccess,
+    TResult? Function()? fetchAdvertisementsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchAdvertisementsFailure,
+    TResult? Function(List<AdvModel> data, String? message)?
+        fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchSubcategoriesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(StudentProfileModel data, String? message)?
+        fetchInfStudentSuccess,
+    TResult Function()? fetchCoursesLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchCoursesFailure,
+    TResult Function(List<CourseCardModel> data, String? message)?
+        fetchCoursesSuccess,
+    TResult Function()? fetchPopularCoursesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchPopularCoursesFailure,
+    TResult Function(String? message)? fetchPopularCoursesSuccess,
+    TResult Function()? fetchMentorsLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchMentorsFailure,
+    TResult Function(List<MentorCardModel> data, String? message)?
+        fetchMentorsSuccess,
+    TResult Function()? fetchTopMentorsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTopMentorsFailure,
+    TResult Function(String? message)? fetchTopMentorsSuccess,
+    TResult Function()? fetchAdvertisementsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchAdvertisementsFailure,
+    TResult Function(List<AdvModel> data, String? message)?
+        fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchNotificationsLoading != null) {
+      return fetchNotificationsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(FetchSubcategoriesLoading value)
+        fetchSubcategoriesLoading,
+    required TResult Function(FetchSubcategoriesFailure value)
+        fetchSubcategoriesFailure,
+    required TResult Function(FetchSubcategoriesSuccess value)
+        fetchSubcategoriesSuccess,
+    required TResult Function(FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
+    required TResult Function(FetchCoursesLoading value) fetchCoursesLoading,
+    required TResult Function(FetchCoursesFailure value) fetchCoursesFailure,
+    required TResult Function(FetchCoursesSuccess value) fetchCoursesSuccess,
+    required TResult Function(FetchPopularCoursesLoading value)
+        fetchPopularCoursesLoading,
+    required TResult Function(FetchPopularCoursesFailure value)
+        fetchPopularCoursesFailure,
+    required TResult Function(FetchPopularCoursesSuccess value)
+        fetchPopularCoursesSuccess,
+    required TResult Function(FetchMentorsLoading value) fetchMentorsLoading,
+    required TResult Function(FetchMentorsFailure value) fetchMentorsFailure,
+    required TResult Function(FetchMentorsSuccess value) fetchMentorsSuccess,
+    required TResult Function(FetchTopMentorsLoading value)
+        fetchTopMentorsLoading,
+    required TResult Function(FetchTopMentorsFailure value)
+        fetchTopMentorsFailure,
+    required TResult Function(FetchTopMentorsSuccess value)
+        fetchTopMentorsSuccess,
+    required TResult Function(FetchAdvertisementsLoading value)
+        fetchAdvertisementsLoading,
+    required TResult Function(FetchAdvertisementsFailure value)
+        fetchAdvertisementsFailure,
+    required TResult Function(FetchAdvertisementsSuccess value)
+        fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult? Function(FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult? Function(FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult? Function(FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    TResult? Function(FetchCoursesLoading value)? fetchCoursesLoading,
+    TResult? Function(FetchCoursesFailure value)? fetchCoursesFailure,
+    TResult? Function(FetchCoursesSuccess value)? fetchCoursesSuccess,
+    TResult? Function(FetchPopularCoursesLoading value)?
+        fetchPopularCoursesLoading,
+    TResult? Function(FetchPopularCoursesFailure value)?
+        fetchPopularCoursesFailure,
+    TResult? Function(FetchPopularCoursesSuccess value)?
+        fetchPopularCoursesSuccess,
+    TResult? Function(FetchMentorsLoading value)? fetchMentorsLoading,
+    TResult? Function(FetchMentorsFailure value)? fetchMentorsFailure,
+    TResult? Function(FetchMentorsSuccess value)? fetchMentorsSuccess,
+    TResult? Function(FetchTopMentorsLoading value)? fetchTopMentorsLoading,
+    TResult? Function(FetchTopMentorsFailure value)? fetchTopMentorsFailure,
+    TResult? Function(FetchTopMentorsSuccess value)? fetchTopMentorsSuccess,
+    TResult? Function(FetchAdvertisementsLoading value)?
+        fetchAdvertisementsLoading,
+    TResult? Function(FetchAdvertisementsFailure value)?
+        fetchAdvertisementsFailure,
+    TResult? Function(FetchAdvertisementsSuccess value)?
+        fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult Function(FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult Function(FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult Function(FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    TResult Function(FetchCoursesLoading value)? fetchCoursesLoading,
+    TResult Function(FetchCoursesFailure value)? fetchCoursesFailure,
+    TResult Function(FetchCoursesSuccess value)? fetchCoursesSuccess,
+    TResult Function(FetchPopularCoursesLoading value)?
+        fetchPopularCoursesLoading,
+    TResult Function(FetchPopularCoursesFailure value)?
+        fetchPopularCoursesFailure,
+    TResult Function(FetchPopularCoursesSuccess value)?
+        fetchPopularCoursesSuccess,
+    TResult Function(FetchMentorsLoading value)? fetchMentorsLoading,
+    TResult Function(FetchMentorsFailure value)? fetchMentorsFailure,
+    TResult Function(FetchMentorsSuccess value)? fetchMentorsSuccess,
+    TResult Function(FetchTopMentorsLoading value)? fetchTopMentorsLoading,
+    TResult Function(FetchTopMentorsFailure value)? fetchTopMentorsFailure,
+    TResult Function(FetchTopMentorsSuccess value)? fetchTopMentorsSuccess,
+    TResult Function(FetchAdvertisementsLoading value)?
+        fetchAdvertisementsLoading,
+    TResult Function(FetchAdvertisementsFailure value)?
+        fetchAdvertisementsFailure,
+    TResult Function(FetchAdvertisementsSuccess value)?
+        fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchNotificationsLoading != null) {
+      return fetchNotificationsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchNotificationsLoading implements HomeState {
+  const factory _FetchNotificationsLoading() = _$FetchNotificationsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchNotificationsFailureImplCopyWith<$Res> {
+  factory _$$FetchNotificationsFailureImplCopyWith(
+          _$FetchNotificationsFailureImpl value,
+          $Res Function(_$FetchNotificationsFailureImpl) then) =
+      __$$FetchNotificationsFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$FetchNotificationsFailureImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$FetchNotificationsFailureImpl>
+    implements _$$FetchNotificationsFailureImplCopyWith<$Res> {
+  __$$FetchNotificationsFailureImplCopyWithImpl(
+      _$FetchNotificationsFailureImpl _value,
+      $Res Function(_$FetchNotificationsFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$FetchNotificationsFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$FetchNotificationsFailureImpl implements _FetchNotificationsFailure {
+  const _$FetchNotificationsFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'HomeState.fetchNotificationsFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchNotificationsFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchNotificationsFailureImplCopyWith<_$FetchNotificationsFailureImpl>
+      get copyWith => __$$FetchNotificationsFailureImplCopyWithImpl<
+          _$FetchNotificationsFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchSubcategoriesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchSubcategoriesFailure,
+    required TResult Function(List<SubcategoryModel> data, String? message)
+        fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(StudentProfileModel data, String? message)
+        fetchInfStudentSuccess,
+    required TResult Function() fetchCoursesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCoursesFailure,
+    required TResult Function(List<CourseCardModel> data, String? message)
+        fetchCoursesSuccess,
+    required TResult Function() fetchPopularCoursesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchPopularCoursesFailure,
+    required TResult Function(String? message) fetchPopularCoursesSuccess,
+    required TResult Function() fetchMentorsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchMentorsFailure,
+    required TResult Function(List<MentorCardModel> data, String? message)
+        fetchMentorsSuccess,
+    required TResult Function() fetchTopMentorsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTopMentorsFailure,
+    required TResult Function(String? message) fetchTopMentorsSuccess,
+    required TResult Function() fetchAdvertisementsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchAdvertisementsFailure,
+    required TResult Function(List<AdvModel> data, String? message)
+        fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchSubcategoriesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult? Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(StudentProfileModel data, String? message)?
+        fetchInfStudentSuccess,
+    TResult? Function()? fetchCoursesLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchCoursesFailure,
+    TResult? Function(List<CourseCardModel> data, String? message)?
+        fetchCoursesSuccess,
+    TResult? Function()? fetchPopularCoursesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchPopularCoursesFailure,
+    TResult? Function(String? message)? fetchPopularCoursesSuccess,
+    TResult? Function()? fetchMentorsLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchMentorsFailure,
+    TResult? Function(List<MentorCardModel> data, String? message)?
+        fetchMentorsSuccess,
+    TResult? Function()? fetchTopMentorsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTopMentorsFailure,
+    TResult? Function(String? message)? fetchTopMentorsSuccess,
+    TResult? Function()? fetchAdvertisementsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchAdvertisementsFailure,
+    TResult? Function(List<AdvModel> data, String? message)?
+        fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchSubcategoriesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(StudentProfileModel data, String? message)?
+        fetchInfStudentSuccess,
+    TResult Function()? fetchCoursesLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchCoursesFailure,
+    TResult Function(List<CourseCardModel> data, String? message)?
+        fetchCoursesSuccess,
+    TResult Function()? fetchPopularCoursesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchPopularCoursesFailure,
+    TResult Function(String? message)? fetchPopularCoursesSuccess,
+    TResult Function()? fetchMentorsLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchMentorsFailure,
+    TResult Function(List<MentorCardModel> data, String? message)?
+        fetchMentorsSuccess,
+    TResult Function()? fetchTopMentorsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTopMentorsFailure,
+    TResult Function(String? message)? fetchTopMentorsSuccess,
+    TResult Function()? fetchAdvertisementsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchAdvertisementsFailure,
+    TResult Function(List<AdvModel> data, String? message)?
+        fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchNotificationsFailure != null) {
+      return fetchNotificationsFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(FetchSubcategoriesLoading value)
+        fetchSubcategoriesLoading,
+    required TResult Function(FetchSubcategoriesFailure value)
+        fetchSubcategoriesFailure,
+    required TResult Function(FetchSubcategoriesSuccess value)
+        fetchSubcategoriesSuccess,
+    required TResult Function(FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
+    required TResult Function(FetchCoursesLoading value) fetchCoursesLoading,
+    required TResult Function(FetchCoursesFailure value) fetchCoursesFailure,
+    required TResult Function(FetchCoursesSuccess value) fetchCoursesSuccess,
+    required TResult Function(FetchPopularCoursesLoading value)
+        fetchPopularCoursesLoading,
+    required TResult Function(FetchPopularCoursesFailure value)
+        fetchPopularCoursesFailure,
+    required TResult Function(FetchPopularCoursesSuccess value)
+        fetchPopularCoursesSuccess,
+    required TResult Function(FetchMentorsLoading value) fetchMentorsLoading,
+    required TResult Function(FetchMentorsFailure value) fetchMentorsFailure,
+    required TResult Function(FetchMentorsSuccess value) fetchMentorsSuccess,
+    required TResult Function(FetchTopMentorsLoading value)
+        fetchTopMentorsLoading,
+    required TResult Function(FetchTopMentorsFailure value)
+        fetchTopMentorsFailure,
+    required TResult Function(FetchTopMentorsSuccess value)
+        fetchTopMentorsSuccess,
+    required TResult Function(FetchAdvertisementsLoading value)
+        fetchAdvertisementsLoading,
+    required TResult Function(FetchAdvertisementsFailure value)
+        fetchAdvertisementsFailure,
+    required TResult Function(FetchAdvertisementsSuccess value)
+        fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult? Function(FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult? Function(FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult? Function(FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    TResult? Function(FetchCoursesLoading value)? fetchCoursesLoading,
+    TResult? Function(FetchCoursesFailure value)? fetchCoursesFailure,
+    TResult? Function(FetchCoursesSuccess value)? fetchCoursesSuccess,
+    TResult? Function(FetchPopularCoursesLoading value)?
+        fetchPopularCoursesLoading,
+    TResult? Function(FetchPopularCoursesFailure value)?
+        fetchPopularCoursesFailure,
+    TResult? Function(FetchPopularCoursesSuccess value)?
+        fetchPopularCoursesSuccess,
+    TResult? Function(FetchMentorsLoading value)? fetchMentorsLoading,
+    TResult? Function(FetchMentorsFailure value)? fetchMentorsFailure,
+    TResult? Function(FetchMentorsSuccess value)? fetchMentorsSuccess,
+    TResult? Function(FetchTopMentorsLoading value)? fetchTopMentorsLoading,
+    TResult? Function(FetchTopMentorsFailure value)? fetchTopMentorsFailure,
+    TResult? Function(FetchTopMentorsSuccess value)? fetchTopMentorsSuccess,
+    TResult? Function(FetchAdvertisementsLoading value)?
+        fetchAdvertisementsLoading,
+    TResult? Function(FetchAdvertisementsFailure value)?
+        fetchAdvertisementsFailure,
+    TResult? Function(FetchAdvertisementsSuccess value)?
+        fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult Function(FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult Function(FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult Function(FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    TResult Function(FetchCoursesLoading value)? fetchCoursesLoading,
+    TResult Function(FetchCoursesFailure value)? fetchCoursesFailure,
+    TResult Function(FetchCoursesSuccess value)? fetchCoursesSuccess,
+    TResult Function(FetchPopularCoursesLoading value)?
+        fetchPopularCoursesLoading,
+    TResult Function(FetchPopularCoursesFailure value)?
+        fetchPopularCoursesFailure,
+    TResult Function(FetchPopularCoursesSuccess value)?
+        fetchPopularCoursesSuccess,
+    TResult Function(FetchMentorsLoading value)? fetchMentorsLoading,
+    TResult Function(FetchMentorsFailure value)? fetchMentorsFailure,
+    TResult Function(FetchMentorsSuccess value)? fetchMentorsSuccess,
+    TResult Function(FetchTopMentorsLoading value)? fetchTopMentorsLoading,
+    TResult Function(FetchTopMentorsFailure value)? fetchTopMentorsFailure,
+    TResult Function(FetchTopMentorsSuccess value)? fetchTopMentorsSuccess,
+    TResult Function(FetchAdvertisementsLoading value)?
+        fetchAdvertisementsLoading,
+    TResult Function(FetchAdvertisementsFailure value)?
+        fetchAdvertisementsFailure,
+    TResult Function(FetchAdvertisementsSuccess value)?
+        fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchNotificationsFailure != null) {
+      return fetchNotificationsFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchNotificationsFailure implements HomeState {
+  const factory _FetchNotificationsFailure(
+          final NetworkExceptions? networkException) =
+      _$FetchNotificationsFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$FetchNotificationsFailureImplCopyWith<_$FetchNotificationsFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchNotificationsSuccessImplCopyWith<$Res> {
+  factory _$$FetchNotificationsSuccessImplCopyWith(
+          _$FetchNotificationsSuccessImpl value,
+          $Res Function(_$FetchNotificationsSuccessImpl) then) =
+      __$$FetchNotificationsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<NotificationModel> data, String? message});
+}
+
+/// @nodoc
+class __$$FetchNotificationsSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$FetchNotificationsSuccessImpl>
+    implements _$$FetchNotificationsSuccessImplCopyWith<$Res> {
+  __$$FetchNotificationsSuccessImplCopyWithImpl(
+      _$FetchNotificationsSuccessImpl _value,
+      $Res Function(_$FetchNotificationsSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$FetchNotificationsSuccessImpl(
+      null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<NotificationModel>,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchNotificationsSuccessImpl implements _FetchNotificationsSuccess {
+  const _$FetchNotificationsSuccessImpl(
+      final List<NotificationModel> data, this.message)
+      : _data = data;
+
+  final List<NotificationModel> _data;
+  @override
+  List<NotificationModel> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'HomeState.fetchNotificationsSuccess(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchNotificationsSuccessImpl &&
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_data), message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchNotificationsSuccessImplCopyWith<_$FetchNotificationsSuccessImpl>
+      get copyWith => __$$FetchNotificationsSuccessImplCopyWithImpl<
+          _$FetchNotificationsSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchSubcategoriesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchSubcategoriesFailure,
+    required TResult Function(List<SubcategoryModel> data, String? message)
+        fetchSubcategoriesSuccess,
+    required TResult Function() fetchInfStudentLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchInfStudentFailure,
+    required TResult Function(StudentProfileModel data, String? message)
+        fetchInfStudentSuccess,
+    required TResult Function() fetchCoursesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchCoursesFailure,
+    required TResult Function(List<CourseCardModel> data, String? message)
+        fetchCoursesSuccess,
+    required TResult Function() fetchPopularCoursesLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchPopularCoursesFailure,
+    required TResult Function(String? message) fetchPopularCoursesSuccess,
+    required TResult Function() fetchMentorsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchMentorsFailure,
+    required TResult Function(List<MentorCardModel> data, String? message)
+        fetchMentorsSuccess,
+    required TResult Function() fetchTopMentorsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchTopMentorsFailure,
+    required TResult Function(String? message) fetchTopMentorsSuccess,
+    required TResult Function() fetchAdvertisementsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchAdvertisementsFailure,
+    required TResult Function(List<AdvModel> data, String? message)
+        fetchAdvertisementsSuccess,
+    required TResult Function() fetchNotificationsLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        fetchNotificationsFailure,
+    required TResult Function(List<NotificationModel> data, String? message)
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsSuccess(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchSubcategoriesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult? Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult? Function()? fetchInfStudentLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult? Function(StudentProfileModel data, String? message)?
+        fetchInfStudentSuccess,
+    TResult? Function()? fetchCoursesLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchCoursesFailure,
+    TResult? Function(List<CourseCardModel> data, String? message)?
+        fetchCoursesSuccess,
+    TResult? Function()? fetchPopularCoursesLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchPopularCoursesFailure,
+    TResult? Function(String? message)? fetchPopularCoursesSuccess,
+    TResult? Function()? fetchMentorsLoading,
+    TResult? Function(NetworkExceptions? networkException)? fetchMentorsFailure,
+    TResult? Function(List<MentorCardModel> data, String? message)?
+        fetchMentorsSuccess,
+    TResult? Function()? fetchTopMentorsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchTopMentorsFailure,
+    TResult? Function(String? message)? fetchTopMentorsSuccess,
+    TResult? Function()? fetchAdvertisementsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchAdvertisementsFailure,
+    TResult? Function(List<AdvModel> data, String? message)?
+        fetchAdvertisementsSuccess,
+    TResult? Function()? fetchNotificationsLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult? Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsSuccess?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchSubcategoriesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchSubcategoriesFailure,
+    TResult Function(List<SubcategoryModel> data, String? message)?
+        fetchSubcategoriesSuccess,
+    TResult Function()? fetchInfStudentLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchInfStudentFailure,
+    TResult Function(StudentProfileModel data, String? message)?
+        fetchInfStudentSuccess,
+    TResult Function()? fetchCoursesLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchCoursesFailure,
+    TResult Function(List<CourseCardModel> data, String? message)?
+        fetchCoursesSuccess,
+    TResult Function()? fetchPopularCoursesLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchPopularCoursesFailure,
+    TResult Function(String? message)? fetchPopularCoursesSuccess,
+    TResult Function()? fetchMentorsLoading,
+    TResult Function(NetworkExceptions? networkException)? fetchMentorsFailure,
+    TResult Function(List<MentorCardModel> data, String? message)?
+        fetchMentorsSuccess,
+    TResult Function()? fetchTopMentorsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchTopMentorsFailure,
+    TResult Function(String? message)? fetchTopMentorsSuccess,
+    TResult Function()? fetchAdvertisementsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchAdvertisementsFailure,
+    TResult Function(List<AdvModel> data, String? message)?
+        fetchAdvertisementsSuccess,
+    TResult Function()? fetchNotificationsLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        fetchNotificationsFailure,
+    TResult Function(List<NotificationModel> data, String? message)?
+        fetchNotificationsSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchNotificationsSuccess != null) {
+      return fetchNotificationsSuccess(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(FetchSubcategoriesLoading value)
+        fetchSubcategoriesLoading,
+    required TResult Function(FetchSubcategoriesFailure value)
+        fetchSubcategoriesFailure,
+    required TResult Function(FetchSubcategoriesSuccess value)
+        fetchSubcategoriesSuccess,
+    required TResult Function(FetchInfStudentLoading value)
+        fetchInfStudentLoading,
+    required TResult Function(FetchInfStudentFailure value)
+        fetchInfStudentFailure,
+    required TResult Function(FetchInfStudentSuccess value)
+        fetchInfStudentSuccess,
+    required TResult Function(FetchCoursesLoading value) fetchCoursesLoading,
+    required TResult Function(FetchCoursesFailure value) fetchCoursesFailure,
+    required TResult Function(FetchCoursesSuccess value) fetchCoursesSuccess,
+    required TResult Function(FetchPopularCoursesLoading value)
+        fetchPopularCoursesLoading,
+    required TResult Function(FetchPopularCoursesFailure value)
+        fetchPopularCoursesFailure,
+    required TResult Function(FetchPopularCoursesSuccess value)
+        fetchPopularCoursesSuccess,
+    required TResult Function(FetchMentorsLoading value) fetchMentorsLoading,
+    required TResult Function(FetchMentorsFailure value) fetchMentorsFailure,
+    required TResult Function(FetchMentorsSuccess value) fetchMentorsSuccess,
+    required TResult Function(FetchTopMentorsLoading value)
+        fetchTopMentorsLoading,
+    required TResult Function(FetchTopMentorsFailure value)
+        fetchTopMentorsFailure,
+    required TResult Function(FetchTopMentorsSuccess value)
+        fetchTopMentorsSuccess,
+    required TResult Function(FetchAdvertisementsLoading value)
+        fetchAdvertisementsLoading,
+    required TResult Function(FetchAdvertisementsFailure value)
+        fetchAdvertisementsFailure,
+    required TResult Function(FetchAdvertisementsSuccess value)
+        fetchAdvertisementsSuccess,
+    required TResult Function(_FetchNotificationsLoading value)
+        fetchNotificationsLoading,
+    required TResult Function(_FetchNotificationsFailure value)
+        fetchNotificationsFailure,
+    required TResult Function(_FetchNotificationsSuccess value)
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult? Function(FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult? Function(FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult? Function(FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult? Function(FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult? Function(FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    TResult? Function(FetchCoursesLoading value)? fetchCoursesLoading,
+    TResult? Function(FetchCoursesFailure value)? fetchCoursesFailure,
+    TResult? Function(FetchCoursesSuccess value)? fetchCoursesSuccess,
+    TResult? Function(FetchPopularCoursesLoading value)?
+        fetchPopularCoursesLoading,
+    TResult? Function(FetchPopularCoursesFailure value)?
+        fetchPopularCoursesFailure,
+    TResult? Function(FetchPopularCoursesSuccess value)?
+        fetchPopularCoursesSuccess,
+    TResult? Function(FetchMentorsLoading value)? fetchMentorsLoading,
+    TResult? Function(FetchMentorsFailure value)? fetchMentorsFailure,
+    TResult? Function(FetchMentorsSuccess value)? fetchMentorsSuccess,
+    TResult? Function(FetchTopMentorsLoading value)? fetchTopMentorsLoading,
+    TResult? Function(FetchTopMentorsFailure value)? fetchTopMentorsFailure,
+    TResult? Function(FetchTopMentorsSuccess value)? fetchTopMentorsSuccess,
+    TResult? Function(FetchAdvertisementsLoading value)?
+        fetchAdvertisementsLoading,
+    TResult? Function(FetchAdvertisementsFailure value)?
+        fetchAdvertisementsFailure,
+    TResult? Function(FetchAdvertisementsSuccess value)?
+        fetchAdvertisementsSuccess,
+    TResult? Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult? Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult? Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
+  }) {
+    return fetchNotificationsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(FetchSubcategoriesLoading value)?
+        fetchSubcategoriesLoading,
+    TResult Function(FetchSubcategoriesFailure value)?
+        fetchSubcategoriesFailure,
+    TResult Function(FetchSubcategoriesSuccess value)?
+        fetchSubcategoriesSuccess,
+    TResult Function(FetchInfStudentLoading value)? fetchInfStudentLoading,
+    TResult Function(FetchInfStudentFailure value)? fetchInfStudentFailure,
+    TResult Function(FetchInfStudentSuccess value)? fetchInfStudentSuccess,
+    TResult Function(FetchCoursesLoading value)? fetchCoursesLoading,
+    TResult Function(FetchCoursesFailure value)? fetchCoursesFailure,
+    TResult Function(FetchCoursesSuccess value)? fetchCoursesSuccess,
+    TResult Function(FetchPopularCoursesLoading value)?
+        fetchPopularCoursesLoading,
+    TResult Function(FetchPopularCoursesFailure value)?
+        fetchPopularCoursesFailure,
+    TResult Function(FetchPopularCoursesSuccess value)?
+        fetchPopularCoursesSuccess,
+    TResult Function(FetchMentorsLoading value)? fetchMentorsLoading,
+    TResult Function(FetchMentorsFailure value)? fetchMentorsFailure,
+    TResult Function(FetchMentorsSuccess value)? fetchMentorsSuccess,
+    TResult Function(FetchTopMentorsLoading value)? fetchTopMentorsLoading,
+    TResult Function(FetchTopMentorsFailure value)? fetchTopMentorsFailure,
+    TResult Function(FetchTopMentorsSuccess value)? fetchTopMentorsSuccess,
+    TResult Function(FetchAdvertisementsLoading value)?
+        fetchAdvertisementsLoading,
+    TResult Function(FetchAdvertisementsFailure value)?
+        fetchAdvertisementsFailure,
+    TResult Function(FetchAdvertisementsSuccess value)?
+        fetchAdvertisementsSuccess,
+    TResult Function(_FetchNotificationsLoading value)?
+        fetchNotificationsLoading,
+    TResult Function(_FetchNotificationsFailure value)?
+        fetchNotificationsFailure,
+    TResult Function(_FetchNotificationsSuccess value)?
+        fetchNotificationsSuccess,
+    required TResult orElse(),
+  }) {
+    if (fetchNotificationsSuccess != null) {
+      return fetchNotificationsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchNotificationsSuccess implements HomeState {
+  const factory _FetchNotificationsSuccess(
+          final List<NotificationModel> data, final String? message) =
+      _$FetchNotificationsSuccessImpl;
+
+  List<NotificationModel> get data;
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$FetchNotificationsSuccessImplCopyWith<_$FetchNotificationsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

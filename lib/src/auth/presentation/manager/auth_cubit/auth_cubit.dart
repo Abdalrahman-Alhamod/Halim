@@ -21,7 +21,7 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit(this._authRepo) : super(const AuthState.initial());
   final AuthRepo _authRepo;
   UserModel? user;
-  void saveUser(){
+  void saveUser() {
     _authRepo.saveToken(user!);
   }
 
@@ -285,6 +285,413 @@ class AuthCubit extends Cubit<AuthState> {
           title: '$title Success',
         );
         GoRouter.of(context).go(AppRoute.kFillProfile);
+      },
+      orElse: () {},
+    );
+  }
+
+  Future<void> signInWithGoogle() async {
+    emit(const AuthState.signInWithGoogleLoading());
+    final response = await _authRepo.signInWithGoogle();
+    response.when(
+      success: (data) {
+        user = data.data;
+        if (user!.accessToken != null) {
+          emit(
+            AuthState.signInWithGoogleSuccessLogin(user!, data.message),
+          );
+          saveUser();
+          emit(
+            const AuthState.save(),
+          );
+        } else {
+          emit(
+            AuthState.signInWithGoogleSuccessRegister(user!, data.message),
+          );
+        }
+      },
+      failure: (networkException) {
+        emit(
+          AuthState.signInWithGoogleFailure(networkException),
+        );
+      },
+    );
+  }
+
+  bool listenSignInWithGoogleWhen(AuthState previous, AuthState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      signInWithGoogleLoading: () => true,
+      signInWithGoogleSuccessLogin: (_, __) => true,
+      signInWithGoogleSuccessRegister: (_, __) => true,
+      signInWithGoogleFailure: (_) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenSignInWithGoogle(BuildContext context, AuthState state) {
+    const title = 'Sign in with google';
+    state.maybeWhen(
+      signInWithGoogleLoading: () {
+        showLoadingDialog(context);
+
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      signInWithGoogleFailure: (NetworkExceptions? networkException) {
+        context.pop();
+
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      signInWithGoogleSuccessLogin: (data, message) {
+        context.pop();
+
+        logger.print(
+          data,
+          color: PrintColor.pink,
+          title: '$title Success Login',
+        );
+        GoRouter.of(context).go(AppRoute.kHome);
+      },
+      signInWithGoogleSuccessRegister: (data, message) {
+        context.pop();
+
+        logger.print(
+          data,
+          color: PrintColor.pink,
+          title: '$title Success Register',
+        );
+        GoRouter.of(context).go(AppRoute.kFillProfile);
+      },
+      orElse: () {},
+    );
+  }
+
+  Future<void> sendVerificationCode({
+    required String email,
+  }) async {
+    emit(const AuthState.sendVerificationCodeLoading());
+    final response = await _authRepo.sendVerificationCode(
+      email: email,
+    );
+    response.when(
+      success: (data) {
+        emit(
+          AuthState.sendVerificationCodeSuccess(data.message),
+        );
+      },
+      failure: (networkException) {
+        emit(
+          AuthState.sendVerificationCodeFailure(networkException),
+        );
+      },
+    );
+  }
+
+  bool listenSendVerificationCodeWhen(AuthState previous, AuthState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      sendVerificationCodeLoading: () => true,
+      sendVerificationCodeSuccess: (_) => true,
+      sendVerificationCodeFailure: (_) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenSendVerificationCode(BuildContext context, AuthState state) {
+    const title = 'Send Verification Code';
+    state.maybeWhen(
+      sendVerificationCodeLoading: () {
+        showLoadingDialog(context);
+
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      sendVerificationCodeFailure: (NetworkExceptions? networkException) {
+        context.pop();
+
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      sendVerificationCodeSuccess: (message) {
+        context.pop();
+
+        logger.print(
+          "Verification code sent successfully",
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+
+        GoRouter.of(context).go(AppRoute.kEnterCode);
+      },
+      orElse: () {},
+    );
+  }
+
+  Future<void> confirmEmail({
+    required String code,
+  }) async {
+    emit(const AuthState.confirmEmailLoading());
+    final response = await _authRepo.confirmEmail(
+      code: code,
+    );
+    response.when(
+      success: (data) {
+        user = data.data;
+        emit(
+          AuthState.confirmEmailSuccess(user!, data.message),
+        );
+      },
+      failure: (networkException) {
+        emit(
+          AuthState.confirmEmailFailure(networkException),
+        );
+      },
+    );
+  }
+
+  bool listenConfirmEmailWhen(AuthState previous, AuthState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      confirmEmailLoading: () => true,
+      confirmEmailFailure: (_) => true,
+      confirmEmailSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenConfirmEmail(
+    BuildContext context,
+    AuthState state,
+    String successRoute,
+  ) {
+    const title = 'Confirm Email';
+    state.maybeWhen(
+      confirmEmailLoading: () {
+        showLoadingDialog(context);
+
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      confirmEmailFailure: (NetworkExceptions? networkException) {
+        context.pop();
+
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      confirmEmailSuccess: (data, message) {
+        context.pop();
+
+        logger.print(
+          data,
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+
+        GoRouter.of(context).go(successRoute);
+      },
+      orElse: () {},
+    );
+  }
+
+  Future<void> resetPassword({
+    required String oldPassword,
+    required String newPassword,
+  }) async {
+    emit(const AuthState.resetPasswordLoading());
+    final response = await _authRepo.resetPassword(
+      id: user?.id ?? 0,
+      oldPassword: oldPassword,
+      newPassword: newPassword,
+    );
+    response.when(
+      success: (data) {
+        user = data.data;
+        emit(
+          AuthState.resetPasswordSuccess(user!, data.message),
+        );
+        saveUser();
+        emit(
+          const AuthState.save(),
+        );
+      },
+      failure: (networkException) {
+        emit(
+          AuthState.resetPasswordFailure(networkException),
+        );
+      },
+    );
+  }
+
+  bool listenResetPasswordWhen(AuthState previous, AuthState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      resetPasswordLoading: () => true,
+      resetPasswordFailure: (_) => true,
+      resetPasswordSuccess: (_, __) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenResetPassword(
+    BuildContext context,
+    AuthState state,
+  ) {
+    const title = 'Reset Password';
+    state.maybeWhen(
+      resetPasswordLoading: () {
+        showLoadingDialog(context);
+
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      resetPasswordFailure: (NetworkExceptions? networkException) {
+        context.pop();
+
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      resetPasswordSuccess: (data, message) {
+        context.pop();
+
+        logger.print(
+          data,
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+
+        GoRouter.of(context).go(AppRoute.kHome);
+      },
+      orElse: () {},
+    );
+  }
+
+  Future<void> registerFCM({
+    required String fcmToken,
+  }) async {
+    emit(const AuthState.registerFCMLoading());
+    final response = await _authRepo.registerFCM(
+      fcmToken: fcmToken,
+    );
+    response.when(
+      success: (data) {
+        emit(
+          AuthState.registerFCMSuccess(data.message),
+        );
+      },
+      failure: (networkException) {
+        emit(
+          AuthState.registerFCMFailure(networkException),
+        );
+      },
+    );
+  }
+
+  bool listenRegisterFCMWhen(AuthState previous, AuthState current) {
+    if (current == previous) return false;
+    return current.maybeWhen(
+      registerFCMLoading: () => true,
+      registerFCMFailure: (_) => true,
+      registerFCMSuccess: (_) => true,
+      orElse: () => false,
+    );
+  }
+
+  listenRegisterFCM(
+    BuildContext context,
+    AuthState state,
+    String successRoute,
+  ) {
+    const title = 'Register FCM';
+    state.maybeWhen(
+      registerFCMLoading: () {
+        showLoadingDialog(context);
+
+        logger.print(
+          'Loading...',
+          color: PrintColor.orange,
+          title: '$title Loading',
+        );
+      },
+      registerFCMFailure: (NetworkExceptions? networkException) {
+        context.pop();
+
+        showTOAST(
+          context,
+          textToast: NetworkExceptions.getErrorMessageTr(networkException),
+          title: LocaleKeys.Errors_error.tr(),
+          status: ToastStatus.failure,
+        );
+
+        logger.print(
+          NetworkExceptions.getErrorMessageTr(networkException),
+          color: PrintColor.red,
+          title: '$title Error',
+        );
+      },
+      registerFCMSuccess: (message) {
+        context.pop();
+
+        logger.print(
+          "FCM registered successfully",
+          color: PrintColor.pink,
+          title: '$title Success',
+        );
+
+        GoRouter.of(context).go(successRoute);
       },
       orElse: () {},
     );

@@ -7,7 +7,6 @@ import 'package:halim/core/data/model/base_model.dart';
 import 'package:halim/core/data/model/base_models.dart';
 import 'package:halim/core/data/sources/remote/app_url.dart';
 import 'package:halim/core/data/sources/remote/services/api_services.dart';
-import 'package:halim/core/functions/fake_delay.dart';
 import 'package:halim/core/helpers/date_time_helper.dart';
 import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
 import 'package:halim/src/profile_settings/data/models/receipt_model.dart';
@@ -25,7 +24,6 @@ class ProfileSettingsRemoteDataSource {
       AppUrl.transaction,
       hasToken: true,
     );
-    await fakeDelay();
     return BaseModel<BaseModels>.fromJson(
       response,
       (json) => BaseModels.fromJson(
@@ -42,7 +40,6 @@ class ProfileSettingsRemoteDataSource {
       AppUrl.receipt,
       hasToken: true,
     );
-    await fakeDelay();
     return BaseModel<BaseModels>.fromJson(
       response,
       (json) => BaseModels.fromJson(

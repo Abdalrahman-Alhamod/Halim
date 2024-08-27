@@ -12,12 +12,25 @@ abstract class AuthRepo {
   void saveUserEmail(UserModel user);
   String? getUserEmail();
   bool isUserLoggedIn();
-
   Future<ApiResponse<BaseModel>> logout();
   void deleteToken();
-
   Future<ApiResponse<BaseModel>> register({
     required String email,
     required String password,
+  });
+  Future<ApiResponse<BaseModel>> signInWithGoogle();
+  Future<ApiResponse<BaseModel>> sendVerificationCode({
+    required String email,
+  });
+  Future<ApiResponse<BaseModel>> confirmEmail({
+    required String code,
+  });
+  Future<ApiResponse<BaseModel>> resetPassword({
+    required int id,
+    required String oldPassword,
+    required String newPassword,
+  });
+  Future<ApiResponse<BaseModel>> registerFCM({
+    required String fcmToken,
   });
 }

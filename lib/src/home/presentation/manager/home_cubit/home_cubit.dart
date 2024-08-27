@@ -14,6 +14,7 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
 import '../../../../../core/utils/pagination_adapter.dart';
 import '../../../../mentor_details/presentation/views/widgets/mentor_card_loading_list.dart';
+import '../../../data/models/notification_model.dart';
 import '../../views/widgets/card_course_loading_list.dart';
 
 part 'home_state.dart';

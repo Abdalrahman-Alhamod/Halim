@@ -7,6 +7,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:halim/core/data/sources/local/app_storage.dart';
 import 'package:halim/core/data/sources/remote/firebase_util.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../core/constants/app_strings.dart';
 import '../core/utils/custom_bloc_observer.dart';
@@ -33,6 +34,10 @@ Future<void> initAppConfig() async {
     await Hive.initFlutter(AppStrings.appTitle);
     await AppStorage.instance.init();
     await dotenv.load(fileName: ".env");
+     await Supabase.initialize(
+      url: dotenv.env['SUPABASE_URL'] ?? '',
+      anonKey: dotenv.env['SUPABASE_API_KEY'] ?? '',
+    );
   } catch (error, stackTrace) {
     logger.e(
       'Initialization error: $error',

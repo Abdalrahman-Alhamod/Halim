@@ -31,6 +31,31 @@ mixin _$AuthState {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,6 +71,27 @@ mixin _$AuthState {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,6 +107,26 @@ mixin _$AuthState {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -77,6 +143,29 @@ mixin _$AuthState {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -92,6 +181,27 @@ mixin _$AuthState {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -107,6 +217,27 @@ mixin _$AuthState {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -180,6 +311,31 @@ class _$InitialImpl implements _Initial {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return initial();
   }
@@ -198,6 +354,27 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return initial?.call();
   }
@@ -216,6 +393,26 @@ class _$InitialImpl implements _Initial {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -238,6 +435,29 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return initial(this);
   }
@@ -256,6 +476,27 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return initial?.call(this);
   }
@@ -274,6 +515,27 @@ class _$InitialImpl implements _Initial {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -338,6 +600,31 @@ class _$LoginSaveImpl implements _LoginSave {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return save();
   }
@@ -356,6 +643,27 @@ class _$LoginSaveImpl implements _LoginSave {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return save?.call();
   }
@@ -374,6 +682,26 @@ class _$LoginSaveImpl implements _LoginSave {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -396,6 +724,29 @@ class _$LoginSaveImpl implements _LoginSave {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return save(this);
   }
@@ -414,6 +765,27 @@ class _$LoginSaveImpl implements _LoginSave {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return save?.call(this);
   }
@@ -432,6 +804,27 @@ class _$LoginSaveImpl implements _LoginSave {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -496,6 +889,31 @@ class _$LoginLoadingImpl implements _LoginLoading {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return loginLoading();
   }
@@ -514,6 +932,27 @@ class _$LoginLoadingImpl implements _LoginLoading {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return loginLoading?.call();
   }
@@ -532,6 +971,26 @@ class _$LoginLoadingImpl implements _LoginLoading {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (loginLoading != null) {
@@ -554,6 +1013,29 @@ class _$LoginLoadingImpl implements _LoginLoading {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return loginLoading(this);
   }
@@ -572,6 +1054,27 @@ class _$LoginLoadingImpl implements _LoginLoading {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return loginLoading?.call(this);
   }
@@ -590,6 +1093,27 @@ class _$LoginLoadingImpl implements _LoginLoading {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (loginLoading != null) {
@@ -695,6 +1219,31 @@ class _$LoginFailureImpl implements _LoginFailure {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return loginFailure(networkException);
   }
@@ -713,6 +1262,27 @@ class _$LoginFailureImpl implements _LoginFailure {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return loginFailure?.call(networkException);
   }
@@ -731,6 +1301,26 @@ class _$LoginFailureImpl implements _LoginFailure {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (loginFailure != null) {
@@ -753,6 +1343,29 @@ class _$LoginFailureImpl implements _LoginFailure {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return loginFailure(this);
   }
@@ -771,6 +1384,27 @@ class _$LoginFailureImpl implements _LoginFailure {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return loginFailure?.call(this);
   }
@@ -789,6 +1423,27 @@ class _$LoginFailureImpl implements _LoginFailure {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (loginFailure != null) {
@@ -903,6 +1558,31 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return loginSuccess(data, message);
   }
@@ -921,6 +1601,27 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return loginSuccess?.call(data, message);
   }
@@ -939,6 +1640,26 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (loginSuccess != null) {
@@ -961,6 +1682,29 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return loginSuccess(this);
   }
@@ -979,6 +1723,27 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return loginSuccess?.call(this);
   }
@@ -997,6 +1762,27 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (loginSuccess != null) {
@@ -1068,6 +1854,31 @@ class _$RegisterLoadingImpl implements _RegisterLoading {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return registerLoading();
   }
@@ -1086,6 +1897,27 @@ class _$RegisterLoadingImpl implements _RegisterLoading {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return registerLoading?.call();
   }
@@ -1104,6 +1936,26 @@ class _$RegisterLoadingImpl implements _RegisterLoading {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (registerLoading != null) {
@@ -1126,6 +1978,29 @@ class _$RegisterLoadingImpl implements _RegisterLoading {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return registerLoading(this);
   }
@@ -1144,6 +2019,27 @@ class _$RegisterLoadingImpl implements _RegisterLoading {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return registerLoading?.call(this);
   }
@@ -1162,6 +2058,27 @@ class _$RegisterLoadingImpl implements _RegisterLoading {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (registerLoading != null) {
@@ -1268,6 +2185,31 @@ class _$RegisterFailureImpl implements _RegisterFailure {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return registerFailure(networkException);
   }
@@ -1286,6 +2228,27 @@ class _$RegisterFailureImpl implements _RegisterFailure {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return registerFailure?.call(networkException);
   }
@@ -1304,6 +2267,26 @@ class _$RegisterFailureImpl implements _RegisterFailure {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (registerFailure != null) {
@@ -1326,6 +2309,29 @@ class _$RegisterFailureImpl implements _RegisterFailure {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return registerFailure(this);
   }
@@ -1344,6 +2350,27 @@ class _$RegisterFailureImpl implements _RegisterFailure {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return registerFailure?.call(this);
   }
@@ -1362,6 +2389,27 @@ class _$RegisterFailureImpl implements _RegisterFailure {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (registerFailure != null) {
@@ -1477,6 +2525,31 @@ class _$RegisterSuccessImpl implements _RegisterSuccess {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return registerSuccess(data, message);
   }
@@ -1495,6 +2568,27 @@ class _$RegisterSuccessImpl implements _RegisterSuccess {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return registerSuccess?.call(data, message);
   }
@@ -1513,6 +2607,26 @@ class _$RegisterSuccessImpl implements _RegisterSuccess {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (registerSuccess != null) {
@@ -1535,6 +2649,29 @@ class _$RegisterSuccessImpl implements _RegisterSuccess {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return registerSuccess(this);
   }
@@ -1553,6 +2690,27 @@ class _$RegisterSuccessImpl implements _RegisterSuccess {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return registerSuccess?.call(this);
   }
@@ -1571,6 +2729,27 @@ class _$RegisterSuccessImpl implements _RegisterSuccess {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (registerSuccess != null) {
@@ -1642,6 +2821,31 @@ class _$LogoutLoadingImpl implements _LogoutLoading {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return logoutLoading();
   }
@@ -1660,6 +2864,27 @@ class _$LogoutLoadingImpl implements _LogoutLoading {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return logoutLoading?.call();
   }
@@ -1678,6 +2903,26 @@ class _$LogoutLoadingImpl implements _LogoutLoading {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (logoutLoading != null) {
@@ -1700,6 +2945,29 @@ class _$LogoutLoadingImpl implements _LogoutLoading {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return logoutLoading(this);
   }
@@ -1718,6 +2986,27 @@ class _$LogoutLoadingImpl implements _LogoutLoading {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return logoutLoading?.call(this);
   }
@@ -1736,6 +3025,27 @@ class _$LogoutLoadingImpl implements _LogoutLoading {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (logoutLoading != null) {
@@ -1841,6 +3151,31 @@ class _$LogoutFailureImpl implements _LogoutFailure {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return logoutFailure(networkException);
   }
@@ -1859,6 +3194,27 @@ class _$LogoutFailureImpl implements _LogoutFailure {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return logoutFailure?.call(networkException);
   }
@@ -1877,6 +3233,26 @@ class _$LogoutFailureImpl implements _LogoutFailure {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (logoutFailure != null) {
@@ -1899,6 +3275,29 @@ class _$LogoutFailureImpl implements _LogoutFailure {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return logoutFailure(this);
   }
@@ -1917,6 +3316,27 @@ class _$LogoutFailureImpl implements _LogoutFailure {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return logoutFailure?.call(this);
   }
@@ -1935,6 +3355,27 @@ class _$LogoutFailureImpl implements _LogoutFailure {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (logoutFailure != null) {
@@ -2031,6 +3472,31 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     required TResult Function(NetworkExceptions? networkException)
         logoutFailure,
     required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
   }) {
     return logoutSuccess(message);
   }
@@ -2049,6 +3515,27 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     TResult? Function()? logoutLoading,
     TResult? Function(NetworkExceptions? networkException)? logoutFailure,
     TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
   }) {
     return logoutSuccess?.call(message);
   }
@@ -2067,6 +3554,26 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     TResult Function()? logoutLoading,
     TResult Function(NetworkExceptions? networkException)? logoutFailure,
     TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (logoutSuccess != null) {
@@ -2089,6 +3596,29 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     required TResult Function(_LogoutLoading value) logoutLoading,
     required TResult Function(_LogoutFailure value) logoutFailure,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
   }) {
     return logoutSuccess(this);
   }
@@ -2107,6 +3637,27 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     TResult? Function(_LogoutLoading value)? logoutLoading,
     TResult? Function(_LogoutFailure value)? logoutFailure,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
   }) {
     return logoutSuccess?.call(this);
   }
@@ -2125,6 +3676,27 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     TResult Function(_LogoutLoading value)? logoutLoading,
     TResult Function(_LogoutFailure value)? logoutFailure,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
     required TResult orElse(),
   }) {
     if (logoutSuccess != null) {
@@ -2140,5 +3712,5173 @@ abstract class _LogoutSuccess implements AuthState {
   String? get message;
   @JsonKey(ignore: true)
   _$$LogoutSuccessImplCopyWith<_$LogoutSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignInWithGoogleLoadingImplCopyWith<$Res> {
+  factory _$$SignInWithGoogleLoadingImplCopyWith(
+          _$SignInWithGoogleLoadingImpl value,
+          $Res Function(_$SignInWithGoogleLoadingImpl) then) =
+      __$$SignInWithGoogleLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SignInWithGoogleLoadingImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SignInWithGoogleLoadingImpl>
+    implements _$$SignInWithGoogleLoadingImplCopyWith<$Res> {
+  __$$SignInWithGoogleLoadingImplCopyWithImpl(
+      _$SignInWithGoogleLoadingImpl _value,
+      $Res Function(_$SignInWithGoogleLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SignInWithGoogleLoadingImpl implements _SignInWithGoogleLoading {
+  const _$SignInWithGoogleLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.signInWithGoogleLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignInWithGoogleLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return signInWithGoogleLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return signInWithGoogleLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogleLoading != null) {
+      return signInWithGoogleLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return signInWithGoogleLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return signInWithGoogleLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogleLoading != null) {
+      return signInWithGoogleLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SignInWithGoogleLoading implements AuthState {
+  const factory _SignInWithGoogleLoading() = _$SignInWithGoogleLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SignInWithGoogleFailureImplCopyWith<$Res> {
+  factory _$$SignInWithGoogleFailureImplCopyWith(
+          _$SignInWithGoogleFailureImpl value,
+          $Res Function(_$SignInWithGoogleFailureImpl) then) =
+      __$$SignInWithGoogleFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$SignInWithGoogleFailureImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SignInWithGoogleFailureImpl>
+    implements _$$SignInWithGoogleFailureImplCopyWith<$Res> {
+  __$$SignInWithGoogleFailureImplCopyWithImpl(
+      _$SignInWithGoogleFailureImpl _value,
+      $Res Function(_$SignInWithGoogleFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$SignInWithGoogleFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SignInWithGoogleFailureImpl implements _SignInWithGoogleFailure {
+  const _$SignInWithGoogleFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'AuthState.signInWithGoogleFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignInWithGoogleFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignInWithGoogleFailureImplCopyWith<_$SignInWithGoogleFailureImpl>
+      get copyWith => __$$SignInWithGoogleFailureImplCopyWithImpl<
+          _$SignInWithGoogleFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return signInWithGoogleFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return signInWithGoogleFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogleFailure != null) {
+      return signInWithGoogleFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return signInWithGoogleFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return signInWithGoogleFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogleFailure != null) {
+      return signInWithGoogleFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SignInWithGoogleFailure implements AuthState {
+  const factory _SignInWithGoogleFailure(
+          final NetworkExceptions? networkException) =
+      _$SignInWithGoogleFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$SignInWithGoogleFailureImplCopyWith<_$SignInWithGoogleFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignInWithGoogleSuccessLoginImplCopyWith<$Res> {
+  factory _$$SignInWithGoogleSuccessLoginImplCopyWith(
+          _$SignInWithGoogleSuccessLoginImpl value,
+          $Res Function(_$SignInWithGoogleSuccessLoginImpl) then) =
+      __$$SignInWithGoogleSuccessLoginImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserModel data, String? message});
+
+  $UserModelCopyWith<$Res> get data;
+}
+
+/// @nodoc
+class __$$SignInWithGoogleSuccessLoginImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SignInWithGoogleSuccessLoginImpl>
+    implements _$$SignInWithGoogleSuccessLoginImplCopyWith<$Res> {
+  __$$SignInWithGoogleSuccessLoginImplCopyWithImpl(
+      _$SignInWithGoogleSuccessLoginImpl _value,
+      $Res Function(_$SignInWithGoogleSuccessLoginImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$SignInWithGoogleSuccessLoginImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as UserModel,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserModelCopyWith<$Res> get data {
+    return $UserModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SignInWithGoogleSuccessLoginImpl
+    implements _SignInWithGoogleSuccessLogin {
+  const _$SignInWithGoogleSuccessLoginImpl(this.data, this.message);
+
+  @override
+  final UserModel data;
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'AuthState.signInWithGoogleSuccessLogin(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignInWithGoogleSuccessLoginImpl &&
+            (identical(other.data, data) || other.data == data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignInWithGoogleSuccessLoginImplCopyWith<
+          _$SignInWithGoogleSuccessLoginImpl>
+      get copyWith => __$$SignInWithGoogleSuccessLoginImplCopyWithImpl<
+          _$SignInWithGoogleSuccessLoginImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return signInWithGoogleSuccessLogin(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return signInWithGoogleSuccessLogin?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogleSuccessLogin != null) {
+      return signInWithGoogleSuccessLogin(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return signInWithGoogleSuccessLogin(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return signInWithGoogleSuccessLogin?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogleSuccessLogin != null) {
+      return signInWithGoogleSuccessLogin(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SignInWithGoogleSuccessLogin implements AuthState {
+  const factory _SignInWithGoogleSuccessLogin(
+          final UserModel data, final String? message) =
+      _$SignInWithGoogleSuccessLoginImpl;
+
+  UserModel get data;
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$SignInWithGoogleSuccessLoginImplCopyWith<
+          _$SignInWithGoogleSuccessLoginImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignInWithGoogleSuccessRegisterImplCopyWith<$Res> {
+  factory _$$SignInWithGoogleSuccessRegisterImplCopyWith(
+          _$SignInWithGoogleSuccessRegisterImpl value,
+          $Res Function(_$SignInWithGoogleSuccessRegisterImpl) then) =
+      __$$SignInWithGoogleSuccessRegisterImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserModel data, String? message});
+
+  $UserModelCopyWith<$Res> get data;
+}
+
+/// @nodoc
+class __$$SignInWithGoogleSuccessRegisterImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SignInWithGoogleSuccessRegisterImpl>
+    implements _$$SignInWithGoogleSuccessRegisterImplCopyWith<$Res> {
+  __$$SignInWithGoogleSuccessRegisterImplCopyWithImpl(
+      _$SignInWithGoogleSuccessRegisterImpl _value,
+      $Res Function(_$SignInWithGoogleSuccessRegisterImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$SignInWithGoogleSuccessRegisterImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as UserModel,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserModelCopyWith<$Res> get data {
+    return $UserModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SignInWithGoogleSuccessRegisterImpl
+    implements _SignInWithGoogleSuccessRegister {
+  const _$SignInWithGoogleSuccessRegisterImpl(this.data, this.message);
+
+  @override
+  final UserModel data;
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'AuthState.signInWithGoogleSuccessRegister(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignInWithGoogleSuccessRegisterImpl &&
+            (identical(other.data, data) || other.data == data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignInWithGoogleSuccessRegisterImplCopyWith<
+          _$SignInWithGoogleSuccessRegisterImpl>
+      get copyWith => __$$SignInWithGoogleSuccessRegisterImplCopyWithImpl<
+          _$SignInWithGoogleSuccessRegisterImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return signInWithGoogleSuccessRegister(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return signInWithGoogleSuccessRegister?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogleSuccessRegister != null) {
+      return signInWithGoogleSuccessRegister(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return signInWithGoogleSuccessRegister(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return signInWithGoogleSuccessRegister?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogleSuccessRegister != null) {
+      return signInWithGoogleSuccessRegister(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SignInWithGoogleSuccessRegister implements AuthState {
+  const factory _SignInWithGoogleSuccessRegister(
+          final UserModel data, final String? message) =
+      _$SignInWithGoogleSuccessRegisterImpl;
+
+  UserModel get data;
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$SignInWithGoogleSuccessRegisterImplCopyWith<
+          _$SignInWithGoogleSuccessRegisterImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SendVerificationLoadingImplCopyWith<$Res> {
+  factory _$$SendVerificationLoadingImplCopyWith(
+          _$SendVerificationLoadingImpl value,
+          $Res Function(_$SendVerificationLoadingImpl) then) =
+      __$$SendVerificationLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SendVerificationLoadingImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SendVerificationLoadingImpl>
+    implements _$$SendVerificationLoadingImplCopyWith<$Res> {
+  __$$SendVerificationLoadingImplCopyWithImpl(
+      _$SendVerificationLoadingImpl _value,
+      $Res Function(_$SendVerificationLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SendVerificationLoadingImpl implements _SendVerificationLoading {
+  const _$SendVerificationLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.sendVerificationCodeLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SendVerificationLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return sendVerificationCodeLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return sendVerificationCodeLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (sendVerificationCodeLoading != null) {
+      return sendVerificationCodeLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return sendVerificationCodeLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return sendVerificationCodeLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (sendVerificationCodeLoading != null) {
+      return sendVerificationCodeLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SendVerificationLoading implements AuthState {
+  const factory _SendVerificationLoading() = _$SendVerificationLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SendVerificationFailureImplCopyWith<$Res> {
+  factory _$$SendVerificationFailureImplCopyWith(
+          _$SendVerificationFailureImpl value,
+          $Res Function(_$SendVerificationFailureImpl) then) =
+      __$$SendVerificationFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$SendVerificationFailureImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SendVerificationFailureImpl>
+    implements _$$SendVerificationFailureImplCopyWith<$Res> {
+  __$$SendVerificationFailureImplCopyWithImpl(
+      _$SendVerificationFailureImpl _value,
+      $Res Function(_$SendVerificationFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$SendVerificationFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SendVerificationFailureImpl implements _SendVerificationFailure {
+  const _$SendVerificationFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'AuthState.sendVerificationCodeFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SendVerificationFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SendVerificationFailureImplCopyWith<_$SendVerificationFailureImpl>
+      get copyWith => __$$SendVerificationFailureImplCopyWithImpl<
+          _$SendVerificationFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return sendVerificationCodeFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return sendVerificationCodeFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (sendVerificationCodeFailure != null) {
+      return sendVerificationCodeFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return sendVerificationCodeFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return sendVerificationCodeFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (sendVerificationCodeFailure != null) {
+      return sendVerificationCodeFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SendVerificationFailure implements AuthState {
+  const factory _SendVerificationFailure(
+          final NetworkExceptions? networkException) =
+      _$SendVerificationFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$SendVerificationFailureImplCopyWith<_$SendVerificationFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SendVerificationSuccessImplCopyWith<$Res> {
+  factory _$$SendVerificationSuccessImplCopyWith(
+          _$SendVerificationSuccessImpl value,
+          $Res Function(_$SendVerificationSuccessImpl) then) =
+      __$$SendVerificationSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$SendVerificationSuccessImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SendVerificationSuccessImpl>
+    implements _$$SendVerificationSuccessImplCopyWith<$Res> {
+  __$$SendVerificationSuccessImplCopyWithImpl(
+      _$SendVerificationSuccessImpl _value,
+      $Res Function(_$SendVerificationSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$SendVerificationSuccessImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SendVerificationSuccessImpl implements _SendVerificationSuccess {
+  const _$SendVerificationSuccessImpl(this.message);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'AuthState.sendVerificationCodeSuccess(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SendVerificationSuccessImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SendVerificationSuccessImplCopyWith<_$SendVerificationSuccessImpl>
+      get copyWith => __$$SendVerificationSuccessImplCopyWithImpl<
+          _$SendVerificationSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return sendVerificationCodeSuccess(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return sendVerificationCodeSuccess?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (sendVerificationCodeSuccess != null) {
+      return sendVerificationCodeSuccess(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return sendVerificationCodeSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return sendVerificationCodeSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (sendVerificationCodeSuccess != null) {
+      return sendVerificationCodeSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SendVerificationSuccess implements AuthState {
+  const factory _SendVerificationSuccess(final String? message) =
+      _$SendVerificationSuccessImpl;
+
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$SendVerificationSuccessImplCopyWith<_$SendVerificationSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ConfirmEmailLoadingImplCopyWith<$Res> {
+  factory _$$ConfirmEmailLoadingImplCopyWith(_$ConfirmEmailLoadingImpl value,
+          $Res Function(_$ConfirmEmailLoadingImpl) then) =
+      __$$ConfirmEmailLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ConfirmEmailLoadingImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$ConfirmEmailLoadingImpl>
+    implements _$$ConfirmEmailLoadingImplCopyWith<$Res> {
+  __$$ConfirmEmailLoadingImplCopyWithImpl(_$ConfirmEmailLoadingImpl _value,
+      $Res Function(_$ConfirmEmailLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ConfirmEmailLoadingImpl implements _ConfirmEmailLoading {
+  const _$ConfirmEmailLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.confirmEmailLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ConfirmEmailLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return confirmEmailLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return confirmEmailLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (confirmEmailLoading != null) {
+      return confirmEmailLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return confirmEmailLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return confirmEmailLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (confirmEmailLoading != null) {
+      return confirmEmailLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ConfirmEmailLoading implements AuthState {
+  const factory _ConfirmEmailLoading() = _$ConfirmEmailLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$ConfirmEmailFailureImplCopyWith<$Res> {
+  factory _$$ConfirmEmailFailureImplCopyWith(_$ConfirmEmailFailureImpl value,
+          $Res Function(_$ConfirmEmailFailureImpl) then) =
+      __$$ConfirmEmailFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$ConfirmEmailFailureImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$ConfirmEmailFailureImpl>
+    implements _$$ConfirmEmailFailureImplCopyWith<$Res> {
+  __$$ConfirmEmailFailureImplCopyWithImpl(_$ConfirmEmailFailureImpl _value,
+      $Res Function(_$ConfirmEmailFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$ConfirmEmailFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ConfirmEmailFailureImpl implements _ConfirmEmailFailure {
+  const _$ConfirmEmailFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'AuthState.confirmEmailFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ConfirmEmailFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ConfirmEmailFailureImplCopyWith<_$ConfirmEmailFailureImpl> get copyWith =>
+      __$$ConfirmEmailFailureImplCopyWithImpl<_$ConfirmEmailFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return confirmEmailFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return confirmEmailFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (confirmEmailFailure != null) {
+      return confirmEmailFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return confirmEmailFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return confirmEmailFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (confirmEmailFailure != null) {
+      return confirmEmailFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ConfirmEmailFailure implements AuthState {
+  const factory _ConfirmEmailFailure(
+      final NetworkExceptions? networkException) = _$ConfirmEmailFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$ConfirmEmailFailureImplCopyWith<_$ConfirmEmailFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ConfirmEmailSuccessImplCopyWith<$Res> {
+  factory _$$ConfirmEmailSuccessImplCopyWith(_$ConfirmEmailSuccessImpl value,
+          $Res Function(_$ConfirmEmailSuccessImpl) then) =
+      __$$ConfirmEmailSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserModel data, String? message});
+
+  $UserModelCopyWith<$Res> get data;
+}
+
+/// @nodoc
+class __$$ConfirmEmailSuccessImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$ConfirmEmailSuccessImpl>
+    implements _$$ConfirmEmailSuccessImplCopyWith<$Res> {
+  __$$ConfirmEmailSuccessImplCopyWithImpl(_$ConfirmEmailSuccessImpl _value,
+      $Res Function(_$ConfirmEmailSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$ConfirmEmailSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as UserModel,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserModelCopyWith<$Res> get data {
+    return $UserModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ConfirmEmailSuccessImpl implements _ConfirmEmailSuccess {
+  const _$ConfirmEmailSuccessImpl(this.data, this.message);
+
+  @override
+  final UserModel data;
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'AuthState.confirmEmailSuccess(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ConfirmEmailSuccessImpl &&
+            (identical(other.data, data) || other.data == data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ConfirmEmailSuccessImplCopyWith<_$ConfirmEmailSuccessImpl> get copyWith =>
+      __$$ConfirmEmailSuccessImplCopyWithImpl<_$ConfirmEmailSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return confirmEmailSuccess(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return confirmEmailSuccess?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (confirmEmailSuccess != null) {
+      return confirmEmailSuccess(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return confirmEmailSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return confirmEmailSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (confirmEmailSuccess != null) {
+      return confirmEmailSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ConfirmEmailSuccess implements AuthState {
+  const factory _ConfirmEmailSuccess(
+      final UserModel data, final String? message) = _$ConfirmEmailSuccessImpl;
+
+  UserModel get data;
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$ConfirmEmailSuccessImplCopyWith<_$ConfirmEmailSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ResetPasswordLoadingImplCopyWith<$Res> {
+  factory _$$ResetPasswordLoadingImplCopyWith(_$ResetPasswordLoadingImpl value,
+          $Res Function(_$ResetPasswordLoadingImpl) then) =
+      __$$ResetPasswordLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ResetPasswordLoadingImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$ResetPasswordLoadingImpl>
+    implements _$$ResetPasswordLoadingImplCopyWith<$Res> {
+  __$$ResetPasswordLoadingImplCopyWithImpl(_$ResetPasswordLoadingImpl _value,
+      $Res Function(_$ResetPasswordLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ResetPasswordLoadingImpl implements _ResetPasswordLoading {
+  const _$ResetPasswordLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.resetPasswordLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResetPasswordLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return resetPasswordLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return resetPasswordLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (resetPasswordLoading != null) {
+      return resetPasswordLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return resetPasswordLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return resetPasswordLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (resetPasswordLoading != null) {
+      return resetPasswordLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResetPasswordLoading implements AuthState {
+  const factory _ResetPasswordLoading() = _$ResetPasswordLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$ResetPasswordFailureImplCopyWith<$Res> {
+  factory _$$ResetPasswordFailureImplCopyWith(_$ResetPasswordFailureImpl value,
+          $Res Function(_$ResetPasswordFailureImpl) then) =
+      __$$ResetPasswordFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$ResetPasswordFailureImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$ResetPasswordFailureImpl>
+    implements _$$ResetPasswordFailureImplCopyWith<$Res> {
+  __$$ResetPasswordFailureImplCopyWithImpl(_$ResetPasswordFailureImpl _value,
+      $Res Function(_$ResetPasswordFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$ResetPasswordFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ResetPasswordFailureImpl implements _ResetPasswordFailure {
+  const _$ResetPasswordFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'AuthState.resetPasswordFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResetPasswordFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResetPasswordFailureImplCopyWith<_$ResetPasswordFailureImpl>
+      get copyWith =>
+          __$$ResetPasswordFailureImplCopyWithImpl<_$ResetPasswordFailureImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return resetPasswordFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return resetPasswordFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (resetPasswordFailure != null) {
+      return resetPasswordFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return resetPasswordFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return resetPasswordFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (resetPasswordFailure != null) {
+      return resetPasswordFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResetPasswordFailure implements AuthState {
+  const factory _ResetPasswordFailure(
+      final NetworkExceptions? networkException) = _$ResetPasswordFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$ResetPasswordFailureImplCopyWith<_$ResetPasswordFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ResetPasswordSuccessImplCopyWith<$Res> {
+  factory _$$ResetPasswordSuccessImplCopyWith(_$ResetPasswordSuccessImpl value,
+          $Res Function(_$ResetPasswordSuccessImpl) then) =
+      __$$ResetPasswordSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserModel data, String? message});
+
+  $UserModelCopyWith<$Res> get data;
+}
+
+/// @nodoc
+class __$$ResetPasswordSuccessImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$ResetPasswordSuccessImpl>
+    implements _$$ResetPasswordSuccessImplCopyWith<$Res> {
+  __$$ResetPasswordSuccessImplCopyWithImpl(_$ResetPasswordSuccessImpl _value,
+      $Res Function(_$ResetPasswordSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? message = freezed,
+  }) {
+    return _then(_$ResetPasswordSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as UserModel,
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserModelCopyWith<$Res> get data {
+    return $UserModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ResetPasswordSuccessImpl implements _ResetPasswordSuccess {
+  const _$ResetPasswordSuccessImpl(this.data, this.message);
+
+  @override
+  final UserModel data;
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'AuthState.resetPasswordSuccess(data: $data, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResetPasswordSuccessImpl &&
+            (identical(other.data, data) || other.data == data) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResetPasswordSuccessImplCopyWith<_$ResetPasswordSuccessImpl>
+      get copyWith =>
+          __$$ResetPasswordSuccessImplCopyWithImpl<_$ResetPasswordSuccessImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return resetPasswordSuccess(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return resetPasswordSuccess?.call(data, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (resetPasswordSuccess != null) {
+      return resetPasswordSuccess(data, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return resetPasswordSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return resetPasswordSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (resetPasswordSuccess != null) {
+      return resetPasswordSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResetPasswordSuccess implements AuthState {
+  const factory _ResetPasswordSuccess(
+      final UserModel data, final String? message) = _$ResetPasswordSuccessImpl;
+
+  UserModel get data;
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$ResetPasswordSuccessImplCopyWith<_$ResetPasswordSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RegisterFCMLoadingImplCopyWith<$Res> {
+  factory _$$RegisterFCMLoadingImplCopyWith(_$RegisterFCMLoadingImpl value,
+          $Res Function(_$RegisterFCMLoadingImpl) then) =
+      __$$RegisterFCMLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RegisterFCMLoadingImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$RegisterFCMLoadingImpl>
+    implements _$$RegisterFCMLoadingImplCopyWith<$Res> {
+  __$$RegisterFCMLoadingImplCopyWithImpl(_$RegisterFCMLoadingImpl _value,
+      $Res Function(_$RegisterFCMLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$RegisterFCMLoadingImpl implements _RegisterFCMLoading {
+  const _$RegisterFCMLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.registerFCMLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RegisterFCMLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return registerFCMLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return registerFCMLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (registerFCMLoading != null) {
+      return registerFCMLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return registerFCMLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return registerFCMLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (registerFCMLoading != null) {
+      return registerFCMLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RegisterFCMLoading implements AuthState {
+  const factory _RegisterFCMLoading() = _$RegisterFCMLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$RegisterFCMFailureImplCopyWith<$Res> {
+  factory _$$RegisterFCMFailureImplCopyWith(_$RegisterFCMFailureImpl value,
+          $Res Function(_$RegisterFCMFailureImpl) then) =
+      __$$RegisterFCMFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NetworkExceptions? networkException});
+
+  $NetworkExceptionsCopyWith<$Res>? get networkException;
+}
+
+/// @nodoc
+class __$$RegisterFCMFailureImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$RegisterFCMFailureImpl>
+    implements _$$RegisterFCMFailureImplCopyWith<$Res> {
+  __$$RegisterFCMFailureImplCopyWithImpl(_$RegisterFCMFailureImpl _value,
+      $Res Function(_$RegisterFCMFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? networkException = freezed,
+  }) {
+    return _then(_$RegisterFCMFailureImpl(
+      freezed == networkException
+          ? _value.networkException
+          : networkException // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res>? get networkException {
+    if (_value.networkException == null) {
+      return null;
+    }
+
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkException!, (value) {
+      return _then(_value.copyWith(networkException: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$RegisterFCMFailureImpl implements _RegisterFCMFailure {
+  const _$RegisterFCMFailureImpl(this.networkException);
+
+  @override
+  final NetworkExceptions? networkException;
+
+  @override
+  String toString() {
+    return 'AuthState.registerFCMFailure(networkException: $networkException)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RegisterFCMFailureImpl &&
+            (identical(other.networkException, networkException) ||
+                other.networkException == networkException));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, networkException);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RegisterFCMFailureImplCopyWith<_$RegisterFCMFailureImpl> get copyWith =>
+      __$$RegisterFCMFailureImplCopyWithImpl<_$RegisterFCMFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return registerFCMFailure(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return registerFCMFailure?.call(networkException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (registerFCMFailure != null) {
+      return registerFCMFailure(networkException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return registerFCMFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return registerFCMFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (registerFCMFailure != null) {
+      return registerFCMFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RegisterFCMFailure implements AuthState {
+  const factory _RegisterFCMFailure(final NetworkExceptions? networkException) =
+      _$RegisterFCMFailureImpl;
+
+  NetworkExceptions? get networkException;
+  @JsonKey(ignore: true)
+  _$$RegisterFCMFailureImplCopyWith<_$RegisterFCMFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RegisterFCMSuccessImplCopyWith<$Res> {
+  factory _$$RegisterFCMSuccessImplCopyWith(_$RegisterFCMSuccessImpl value,
+          $Res Function(_$RegisterFCMSuccessImpl) then) =
+      __$$RegisterFCMSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$RegisterFCMSuccessImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$RegisterFCMSuccessImpl>
+    implements _$$RegisterFCMSuccessImplCopyWith<$Res> {
+  __$$RegisterFCMSuccessImplCopyWithImpl(_$RegisterFCMSuccessImpl _value,
+      $Res Function(_$RegisterFCMSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$RegisterFCMSuccessImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$RegisterFCMSuccessImpl implements _RegisterFCMSuccess {
+  const _$RegisterFCMSuccessImpl(this.message);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'AuthState.registerFCMSuccess(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RegisterFCMSuccessImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RegisterFCMSuccessImplCopyWith<_$RegisterFCMSuccessImpl> get copyWith =>
+      __$$RegisterFCMSuccessImplCopyWithImpl<_$RegisterFCMSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() save,
+    required TResult Function() loginLoading,
+    required TResult Function(NetworkExceptions? networkException) loginFailure,
+    required TResult Function(UserModel data, String? message) loginSuccess,
+    required TResult Function() registerLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFailure,
+    required TResult Function(UserModel data, String? message) registerSuccess,
+    required TResult Function() logoutLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        logoutFailure,
+    required TResult Function(String? message) logoutSuccess,
+    required TResult Function() signInWithGoogleLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        signInWithGoogleFailure,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(UserModel data, String? message)
+        signInWithGoogleSuccessRegister,
+    required TResult Function() sendVerificationCodeLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        sendVerificationCodeFailure,
+    required TResult Function(String? message) sendVerificationCodeSuccess,
+    required TResult Function() confirmEmailLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        confirmEmailFailure,
+    required TResult Function(UserModel data, String? message)
+        confirmEmailSuccess,
+    required TResult Function() resetPasswordLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        resetPasswordFailure,
+    required TResult Function(UserModel data, String? message)
+        resetPasswordSuccess,
+    required TResult Function() registerFCMLoading,
+    required TResult Function(NetworkExceptions? networkException)
+        registerFCMFailure,
+    required TResult Function(String? message) registerFCMSuccess,
+  }) {
+    return registerFCMSuccess(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? save,
+    TResult? Function()? loginLoading,
+    TResult? Function(NetworkExceptions? networkException)? loginFailure,
+    TResult? Function(UserModel data, String? message)? loginSuccess,
+    TResult? Function()? registerLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFailure,
+    TResult? Function(UserModel data, String? message)? registerSuccess,
+    TResult? Function()? logoutLoading,
+    TResult? Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult? Function(String? message)? logoutSuccess,
+    TResult? Function()? signInWithGoogleLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function()? sendVerificationCodeLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult? Function(String? message)? sendVerificationCodeSuccess,
+    TResult? Function()? confirmEmailLoading,
+    TResult? Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult? Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult? Function()? resetPasswordLoading,
+    TResult? Function(NetworkExceptions? networkException)?
+        resetPasswordFailure,
+    TResult? Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult? Function()? registerFCMLoading,
+    TResult? Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult? Function(String? message)? registerFCMSuccess,
+  }) {
+    return registerFCMSuccess?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? save,
+    TResult Function()? loginLoading,
+    TResult Function(NetworkExceptions? networkException)? loginFailure,
+    TResult Function(UserModel data, String? message)? loginSuccess,
+    TResult Function()? registerLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFailure,
+    TResult Function(UserModel data, String? message)? registerSuccess,
+    TResult Function()? logoutLoading,
+    TResult Function(NetworkExceptions? networkException)? logoutFailure,
+    TResult Function(String? message)? logoutSuccess,
+    TResult Function()? signInWithGoogleLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        signInWithGoogleFailure,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(UserModel data, String? message)?
+        signInWithGoogleSuccessRegister,
+    TResult Function()? sendVerificationCodeLoading,
+    TResult Function(NetworkExceptions? networkException)?
+        sendVerificationCodeFailure,
+    TResult Function(String? message)? sendVerificationCodeSuccess,
+    TResult Function()? confirmEmailLoading,
+    TResult Function(NetworkExceptions? networkException)? confirmEmailFailure,
+    TResult Function(UserModel data, String? message)? confirmEmailSuccess,
+    TResult Function()? resetPasswordLoading,
+    TResult Function(NetworkExceptions? networkException)? resetPasswordFailure,
+    TResult Function(UserModel data, String? message)? resetPasswordSuccess,
+    TResult Function()? registerFCMLoading,
+    TResult Function(NetworkExceptions? networkException)? registerFCMFailure,
+    TResult Function(String? message)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (registerFCMSuccess != null) {
+      return registerFCMSuccess(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoginSave value) save,
+    required TResult Function(_LoginLoading value) loginLoading,
+    required TResult Function(_LoginFailure value) loginFailure,
+    required TResult Function(_LoginSuccess value) loginSuccess,
+    required TResult Function(_RegisterLoading value) registerLoading,
+    required TResult Function(_RegisterFailure value) registerFailure,
+    required TResult Function(_RegisterSuccess value) registerSuccess,
+    required TResult Function(_LogoutLoading value) logoutLoading,
+    required TResult Function(_LogoutFailure value) logoutFailure,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SignInWithGoogleLoading value)
+        signInWithGoogleLoading,
+    required TResult Function(_SignInWithGoogleFailure value)
+        signInWithGoogleFailure,
+    required TResult Function(_SignInWithGoogleSuccessLogin value)
+        signInWithGoogleSuccessLogin,
+    required TResult Function(_SignInWithGoogleSuccessRegister value)
+        signInWithGoogleSuccessRegister,
+    required TResult Function(_SendVerificationLoading value)
+        sendVerificationCodeLoading,
+    required TResult Function(_SendVerificationFailure value)
+        sendVerificationCodeFailure,
+    required TResult Function(_SendVerificationSuccess value)
+        sendVerificationCodeSuccess,
+    required TResult Function(_ConfirmEmailLoading value) confirmEmailLoading,
+    required TResult Function(_ConfirmEmailFailure value) confirmEmailFailure,
+    required TResult Function(_ConfirmEmailSuccess value) confirmEmailSuccess,
+    required TResult Function(_ResetPasswordLoading value) resetPasswordLoading,
+    required TResult Function(_ResetPasswordFailure value) resetPasswordFailure,
+    required TResult Function(_ResetPasswordSuccess value) resetPasswordSuccess,
+    required TResult Function(_RegisterFCMLoading value) registerFCMLoading,
+    required TResult Function(_RegisterFCMFailure value) registerFCMFailure,
+    required TResult Function(_RegisterFCMSuccess value) registerFCMSuccess,
+  }) {
+    return registerFCMSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoginSave value)? save,
+    TResult? Function(_LoginLoading value)? loginLoading,
+    TResult? Function(_LoginFailure value)? loginFailure,
+    TResult? Function(_LoginSuccess value)? loginSuccess,
+    TResult? Function(_RegisterLoading value)? registerLoading,
+    TResult? Function(_RegisterFailure value)? registerFailure,
+    TResult? Function(_RegisterSuccess value)? registerSuccess,
+    TResult? Function(_LogoutLoading value)? logoutLoading,
+    TResult? Function(_LogoutFailure value)? logoutFailure,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult? Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult? Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult? Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult? Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult? Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult? Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult? Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult? Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult? Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult? Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult? Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult? Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult? Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult? Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult? Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+  }) {
+    return registerFCMSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoginSave value)? save,
+    TResult Function(_LoginLoading value)? loginLoading,
+    TResult Function(_LoginFailure value)? loginFailure,
+    TResult Function(_LoginSuccess value)? loginSuccess,
+    TResult Function(_RegisterLoading value)? registerLoading,
+    TResult Function(_RegisterFailure value)? registerFailure,
+    TResult Function(_RegisterSuccess value)? registerSuccess,
+    TResult Function(_LogoutLoading value)? logoutLoading,
+    TResult Function(_LogoutFailure value)? logoutFailure,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SignInWithGoogleLoading value)? signInWithGoogleLoading,
+    TResult Function(_SignInWithGoogleFailure value)? signInWithGoogleFailure,
+    TResult Function(_SignInWithGoogleSuccessLogin value)?
+        signInWithGoogleSuccessLogin,
+    TResult Function(_SignInWithGoogleSuccessRegister value)?
+        signInWithGoogleSuccessRegister,
+    TResult Function(_SendVerificationLoading value)?
+        sendVerificationCodeLoading,
+    TResult Function(_SendVerificationFailure value)?
+        sendVerificationCodeFailure,
+    TResult Function(_SendVerificationSuccess value)?
+        sendVerificationCodeSuccess,
+    TResult Function(_ConfirmEmailLoading value)? confirmEmailLoading,
+    TResult Function(_ConfirmEmailFailure value)? confirmEmailFailure,
+    TResult Function(_ConfirmEmailSuccess value)? confirmEmailSuccess,
+    TResult Function(_ResetPasswordLoading value)? resetPasswordLoading,
+    TResult Function(_ResetPasswordFailure value)? resetPasswordFailure,
+    TResult Function(_ResetPasswordSuccess value)? resetPasswordSuccess,
+    TResult Function(_RegisterFCMLoading value)? registerFCMLoading,
+    TResult Function(_RegisterFCMFailure value)? registerFCMFailure,
+    TResult Function(_RegisterFCMSuccess value)? registerFCMSuccess,
+    required TResult orElse(),
+  }) {
+    if (registerFCMSuccess != null) {
+      return registerFCMSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RegisterFCMSuccess implements AuthState {
+  const factory _RegisterFCMSuccess(final String? message) =
+      _$RegisterFCMSuccessImpl;
+
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$RegisterFCMSuccessImplCopyWith<_$RegisterFCMSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

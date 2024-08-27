@@ -1,6 +1,5 @@
 // ignore_for_file: unused_field
 
-import 'package:halim/core/functions/fake_delay.dart';
 import 'package:halim/src/home/data/models/adv_model.dart';
 import 'package:halim/src/home/data/models/student_profile_model.dart';
 import 'package:halim/src/shared/model/course_card_model.dart';
@@ -11,6 +10,7 @@ import '../../../../core/data/model/base_model.dart';
 import '../../../../core/data/model/base_models.dart';
 import '../../../../core/data/sources/remote/app_url.dart';
 import '../../../../core/data/sources/remote/services/api_services.dart';
+import '../models/notification_model.dart';
 
 class HomeRemoteDataSource {
   final ApiServices _apiServices;
@@ -44,7 +44,6 @@ class HomeRemoteDataSource {
       AppUrl.advertisements,
       hasToken: true,
     );
-    await fakeDelay();
     return BaseModel<BaseModels>.fromJson(
       response,
       (json) => BaseModels.fromJson(
@@ -154,5 +153,36 @@ class HomeRemoteDataSource {
         await _apiServices.get("${AppUrl.student}/$studentId", hasToken: true);
     return BaseModel.fromJson(
         response, (json) => StudentProfileModel.fromJson(json));
+  }
+
+  Future<BaseModel> getNotifications() async {
+    // TODO add get notification url with model
+    final response = await _apiServices.get(
+      AppUrl.advertisements,
+      hasToken: true,
+    );
+    return BaseModel<BaseModels>.fromJson(
+      response,
+      (json) => BaseModels.fromJson(
+        json,
+        (itemJson) => AdvModel.fromJson(
+          itemJson,
+        ),
+      ),
+    );
+  }
+
+  Future<BaseModel> markReadNotification() async {
+    // TODO add mark Read notification url
+    final response = await _apiServices.post(
+      AppUrl.advertisements,
+      hasToken: true,
+    );
+    return BaseModel.fromJson(
+      response,
+      (json) => NotificationModel.fromJson(
+        json,
+      ),
+    );
   }
 }

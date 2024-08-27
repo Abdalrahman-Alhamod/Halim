@@ -6,6 +6,7 @@ import 'package:halim/src/auth/data/data_sources/auth_local_data_source.dart';
 import 'package:halim/src/auth/data/data_sources/auth_remote_data_source.dart';
 import 'package:halim/src/auth/domain/repos/auth_repo.dart';
 
+import '../../../../core/data/sources/remote/supabase_util.dart';
 import '../../../../core/domain/error_handler/network_exceptions.dart';
 import '../../../shared/model/user_model.dart';
 
@@ -60,8 +61,8 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<ApiResponse<BaseModel>> logout() async {
     try {
+      await SupabaseUtil.signOut();
       final response = await _authRemoteDataSource.logout();
-
       return ApiResponse.success(response);
     } catch (error) {
       return ApiResponse.failure(
@@ -84,6 +85,100 @@ class AuthRepoImpl extends AuthRepo {
       final response = await _authRemoteDataSource.register(
         email: email,
         password: password,
+      );
+
+      return ApiResponse.success(response);
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(error),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> signInWithGoogle() async {
+    try {
+      await SupabaseUtil.googleSignIn();
+      final user = SupabaseUtil.supabase.auth.currentUser;
+      final profileImageUrl = user?.userMetadata?['avatar_url'];
+      final fullName = user?.userMetadata?['full_name'];
+      final email = user?.userMetadata?['email'];
+      final response = await _authRemoteDataSource.signInWithGoogle(
+        email: email,
+        name: fullName,
+        image: profileImageUrl,
+      );
+
+      return ApiResponse.success(response);
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(error),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> confirmEmail({
+    required String code,
+  }) async {
+    try {
+      final response = await _authRemoteDataSource.confirmEmail(
+        code: code,
+      );
+
+      return ApiResponse.success(response);
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(error),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> registerFCM({
+    required String fcmToken,
+  }) async {
+    try {
+      final response = await _authRemoteDataSource.registerFCM(
+        fcmToken: fcmToken,
+      );
+
+      return ApiResponse.success(response);
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(error),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> resetPassword({
+    required int id,
+    required String oldPassword,
+    required String newPassword,
+  }) async {
+    try {
+      final response = await _authRemoteDataSource.resetPassword(
+        id: id,
+        oldPassword: oldPassword,
+        newPassword: newPassword,
+      );
+
+      return ApiResponse.success(response);
+    } catch (error) {
+      return ApiResponse.failure(
+        NetworkExceptions.getException(error),
+      );
+    }
+  }
+
+  @override
+  Future<ApiResponse<BaseModel>> sendVerificationCode({
+    required String email,
+  }) async {
+    try {
+      final response = await _authRemoteDataSource.sendVerificationCode(
+        email: email,
       );
 
       return ApiResponse.success(response);

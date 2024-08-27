@@ -48,4 +48,11 @@ class HomeState with _$HomeState {
       NetworkExceptions? networkException) = FetchAdvertisementsFailure;
   const factory HomeState.fetchAdvertisementsSuccess(
       List<AdvModel> data, String? message) = FetchAdvertisementsSuccess;
+
+       const factory HomeState.fetchNotificationsLoading() =
+      _FetchNotificationsLoading;
+  const factory HomeState.fetchNotificationsFailure(
+      NetworkExceptions? networkException) = _FetchNotificationsFailure;
+  const factory HomeState.fetchNotificationsSuccess(
+      List<NotificationModel> data, String? message) = _FetchNotificationsSuccess;
 }
