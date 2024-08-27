@@ -58,5 +58,5 @@ models.jsonc
 # GoogleService-Info.plist
 # firebase_options.dart
 # firebase.json
-# generated_plugins.cmake
-# generated_plugin_registrant.cc
+generated_plugins.cmake
+generated_plugin_registrant.cc
