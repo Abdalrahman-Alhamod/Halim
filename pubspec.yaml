@@ -1,12 +1,12 @@
 name: halim
 description: "Online courses app"
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.1 <4.0.0'
+  sdk: ">=3.3.1 <4.0.0"
 
 dependencies:
   flutter:
@@ -35,9 +35,9 @@ dependencies:
   # For responsive text size
   auto_size_text: ^3.0.0
   # For firebase services
-  # firebase_core: 
+  # firebase_core:
   # For notifactions
-  # firebase_messaging: 
+  # firebase_messaging:
   # For local notifications
   awesome_notifications: ^0.9.3
   # For viewing svg images
@@ -77,7 +77,7 @@ dependencies:
   # For main bottom bar
   salomon_bottom_bar: ^3.3.2
   # For auth textfields
-  intl_phone_number_input: 
+  intl_phone_number_input:
   # For animating texts
   animated_text_kit: ^4.2.2
   # For converting tools
@@ -121,12 +121,13 @@ dependencies:
   rxdart: ^0.28.0
   google_sign_in: ^6.2.1
   supabase_flutter: ^2.6.0
-  
-  
+  # For sliding ads
+  carousel_slider: ^5.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  
+
   flutter_lints: ^4.0.0
   flutter_launcher_icons: ^0.13.1
   build_runner: ^2.4.10
@@ -148,7 +149,6 @@ flutter_native_splash:
   web: false
 
 flutter:
-
   uses-material-design: true
 
   assets:
@@ -224,7 +224,7 @@ flutter:
     - family: Zahey
       fonts:
         - asset: assets/fonts/Zahey/Zahey-Regular.ttf
-          weight: 400  
+          weight: 400
     - family: Satisfy
       fonts:
         - asset: assets/fonts/Satisfy/Satisfy-Regular.ttf
