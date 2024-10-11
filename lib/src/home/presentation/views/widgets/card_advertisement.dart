@@ -14,7 +14,8 @@ class CardAdvertisement extends StatefulWidget {
 }
 
 class _CardAdvertisementState extends State<CardAdvertisement> {
-  final CarouselController _carouselController = CarouselController();
+  final CarouselSliderController _carouselController =
+      CarouselSliderController();
   int _currentIndex = 0;
 
   @override

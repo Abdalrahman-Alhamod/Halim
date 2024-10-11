@@ -10,7 +10,8 @@ class CardAdvertisementLocal extends StatefulWidget {
 }
 
 class _CardAdvertisementLocalState extends State<CardAdvertisementLocal> {
-  final CarouselController _carouselController = CarouselController();
+  final CarouselSliderController _carouselController =
+      CarouselSliderController();
   final List<String> _imageUrls = [
     AppImages.testCourseCover,
     AppImages.testCertificate,

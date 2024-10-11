@@ -17,7 +17,6 @@ import '../../../../core/translations/locale_keys.g.dart';
 import '../../../../core/utils/context_extensions.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
-import '../../../achievements/data/models/achievements_board_model.dart';
 import '../../../achievements/presentation/manager/achievements_cubit/achievements_cubit.dart';
 import 'widgets/counter_widget.dart';
 import 'widgets/welcome_card.dart';
@@ -44,9 +43,6 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
       context.read<AchievementsCubit>().getAchievementsBoard();
-    AchievementsBoardModel achievementsBoardModel =
-     context.read<AchievementsCubit>().achievementsBoardModel ??
-            const AchievementsBoardModel();
     homeCubit = context.read<HomeCubit>();
     homeCubit.getHomeCourses();
     homeCubit.getAllMentors();
