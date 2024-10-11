@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/widgets/refresh_base.dart';
-import 'package:halim/src/my_courses/presentation/views/widget/my_course_card.dart';
+import '../../../../../core/widgets/refresh_base.dart';
+import 'my_course_card.dart';
 import '../../manager/my_courses_cubit/my_courses_cubit.dart';
 
 class OngoingCoursesPage extends StatelessWidget {

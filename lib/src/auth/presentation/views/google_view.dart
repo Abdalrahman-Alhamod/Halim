@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:halim/core/data/sources/remote/firebase_util.dart';
-import 'package:halim/core/utils/logger.dart';
+import '../../../../core/data/sources/remote/firebase_util.dart';
+import '../../../../core/utils/logger.dart';
 
 class GoogleSignInScreen extends StatefulWidget {
   const GoogleSignInScreen({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/helpers/date_time_helper.dart';
-import 'package:halim/core/widgets/avatar_image_loader.dart';
-import 'package:halim/src/course_details/data/models/anouncement_box_model.dart';
+import '../../../../../../../../../core/helpers/date_time_helper.dart';
+import '../../../../../../../../../core/widgets/avatar_image_loader.dart';
+import '../../../../../../../data/models/anouncement_box_model.dart';
 
 import '../../../../../../../../../core/themes/app_colors.dart';
 

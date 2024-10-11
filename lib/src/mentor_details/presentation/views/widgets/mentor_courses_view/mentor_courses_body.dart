@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/home/presentation/views/widgets/card_course.dart';
-import 'package:halim/src/mentor_details/presentation/manager/mentor_details_cubit/mentor_details_cubit.dart';
+import '../../../../../home/presentation/views/widgets/card_course.dart';
+import '../../../manager/mentor_details_cubit/mentor_details_cubit.dart';
 
 class MentorCoursesBody extends StatelessWidget {
   const MentorCoursesBody({super.key});

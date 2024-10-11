@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/shared/app_data.dart';
+import '../../../../../../shared/app_data.dart';
 
 import '../../../../../../home/presentation/views/widgets/category_widget.dart';
 import '../../../../../../shared/model/subcategory_model.dart';

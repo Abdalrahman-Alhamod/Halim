@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/translations/app_locales.dart';
-import 'package:halim/core/translations/codegen_loader.g.dart';
+import 'core/translations/app_locales.dart';
+import 'core/translations/codegen_loader.g.dart';
 
 import 'src/app.dart';
 import 'src/config.dart';

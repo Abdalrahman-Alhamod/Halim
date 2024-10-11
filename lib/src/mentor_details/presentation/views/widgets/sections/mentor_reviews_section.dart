@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/mentor_details/presentation/manager/mentor_details_cubit/mentor_details_cubit.dart';
-import 'package:halim/src/mentor_details/presentation/views/widgets/sections/widgets/mentor_reviews/mentor_last_reviews.dart';
-import 'package:halim/src/mentor_details/presentation/views/widgets/sections/widgets/mentor_reviews/mentor_reviews_section_header.dart';
+import '../../../manager/mentor_details_cubit/mentor_details_cubit.dart';
+import 'widgets/mentor_reviews/mentor_last_reviews.dart';
+import 'widgets/mentor_reviews/mentor_reviews_section_header.dart';
 import '../../../../../course_details/presentation/views/widgets/more_details_section/reviews/review_stars_bar/reviews_stars_bar.dart';
 
 class MentorReviewsSection extends StatelessWidget {

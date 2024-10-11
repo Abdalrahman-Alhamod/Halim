@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/achievements/data/models/achievements_board_model.dart';
-import 'package:halim/src/achievements/data/models/avatar_model.dart';
-import 'package:halim/src/achievements/presentation/manager/achievements_cubit/achievements_cubit.dart';
+import '../../../data/models/achievements_board_model.dart';
+import '../../../data/models/avatar_model.dart';
+import '../../manager/achievements_cubit/achievements_cubit.dart';
 
 import 'achievemenets_numbers.dart';
 import 'achievements_avatar.dart';

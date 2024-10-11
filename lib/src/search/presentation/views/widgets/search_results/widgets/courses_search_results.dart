@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
+import '../../../../manager/search_cubit/search_cubit.dart';
 
 import '../../../../../../home/presentation/views/widgets/card_course.dart';
 

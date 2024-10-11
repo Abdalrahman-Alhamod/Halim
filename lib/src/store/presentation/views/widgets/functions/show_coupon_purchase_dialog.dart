@@ -2,8 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/data/sources/remote/app_url.dart';
-import 'package:halim/src/store/presentation/manager/store_cubit/store_cubit.dart';
+import '../../../../../../core/data/sources/remote/app_url.dart';
+import '../../../manager/store_cubit/store_cubit.dart';
 import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/functions/show_confirm_dialog.dart';

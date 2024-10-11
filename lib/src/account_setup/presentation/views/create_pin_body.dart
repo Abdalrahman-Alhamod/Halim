@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/account_setup/presentation/manager/account_setup_cubit/account_setup_cubit.dart';
-import 'package:halim/src/account_setup/presentation/views/functions/show_choose_interests_bottom_sheet.dart';
-import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
+import '../manager/account_setup_cubit/account_setup_cubit.dart';
+import 'functions/show_choose_interests_bottom_sheet.dart';
+import '../../../search/presentation/manager/search_cubit/search_cubit.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/themes/app_colors.dart';
 import '../../../../core/utils/context_extensions.dart';

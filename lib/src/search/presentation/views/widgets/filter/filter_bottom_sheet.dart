@@ -2,11 +2,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/functions/show_custom_dialog.dart';
-import 'package:halim/src/search/data/models/search_filter_model.dart';
-import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
-import 'package:halim/src/search/presentation/views/widgets/filter/widgets/select_category_dialog.dart';
-import 'package:halim/src/shared/app_data.dart';
+import '../../../../../../core/functions/show_custom_dialog.dart';
+import '../../../../data/models/search_filter_model.dart';
+import '../../../manager/search_cubit/search_cubit.dart';
+import 'widgets/select_category_dialog.dart';
+import '../../../../../shared/app_data.dart';
 import '../../../../../../core/utils/context_extensions.dart';
 import 'level_bar/level_bar.dart';
 

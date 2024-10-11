@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/widgets/avatar_image_loader.dart';
-import 'package:halim/src/achievements/data/models/avatar_model.dart';
+import '../../../../../core/widgets/avatar_image_loader.dart';
+import '../../../data/models/avatar_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/assets/app_font.dart';

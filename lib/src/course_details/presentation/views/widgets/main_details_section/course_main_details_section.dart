@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/course_details/data/models/course_main_section_model.dart';
-import 'package:halim/src/course_details/data/models/level_model.dart';
-import 'package:halim/src/shared/model/course_card_model.dart';
-import 'package:halim/src/shared/model/subcategory_model.dart';
+import '../../../../data/models/course_main_section_model.dart';
+import '../../../../data/models/level_model.dart';
+import '../../../../../shared/model/course_card_model.dart';
+import '../../../../../shared/model/subcategory_model.dart';
 
 import '../../../manager/course_details_cubit/course_details_cubit.dart';
 import 'bookmark_button.dart';

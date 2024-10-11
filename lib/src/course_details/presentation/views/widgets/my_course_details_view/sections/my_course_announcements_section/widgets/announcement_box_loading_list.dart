@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/my_course_details_view/sections/my_course_announcements_section/widgets/announcement_box_loading.dart';
+import 'announcement_box_loading.dart';
 
 class AnnouncementBoxLoadingList extends StatelessWidget {
   const AnnouncementBoxLoadingList({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/review_block_loading.dart';
+import 'review_block_loading.dart';
 
 class ReviewBlockLoadingList extends StatelessWidget {
   const ReviewBlockLoadingList({super.key});

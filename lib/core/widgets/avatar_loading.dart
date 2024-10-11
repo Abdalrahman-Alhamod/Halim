@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/widgets/shimmer_box.dart';
+import 'shimmer_box.dart';
 
 class AvatarLoading extends StatelessWidget {
   const AvatarLoading({super.key, required this.radius});

@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
-import 'package:halim/src/shared/model/mentor_card_model.dart';
+import '../../../shared/model/mentor_card_model.dart';
 part 'anouncement_box_model.freezed.dart';
 part 'anouncement_box_model.g.dart';
 

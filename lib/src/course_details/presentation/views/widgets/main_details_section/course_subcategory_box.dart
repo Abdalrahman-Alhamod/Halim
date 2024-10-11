@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/widgets.dart';
-import 'package:halim/src/shared/model/subcategory_model.dart';
+import '../../../../../shared/model/subcategory_model.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/my_courses/presentation/views/widget/my_course_card_loading.dart';
+import 'my_course_card_loading.dart';
 
 
 class MyCourseCardLoadingList extends StatelessWidget {

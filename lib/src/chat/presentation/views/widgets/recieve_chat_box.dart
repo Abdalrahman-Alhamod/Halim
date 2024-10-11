@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/chat/data/models/chat_message_model.dart';
+import '../../../data/models/chat_message_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../core/themes/app_colors.dart';

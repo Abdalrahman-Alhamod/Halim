@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/helpers/string_helper.dart';
-import 'package:halim/src/course_details/data/models/wallet_model.dart';
-import 'package:halim/src/shared/model/discount_model.dart';
+import '../../../../../../../core/helpers/string_helper.dart';
+import '../../../../../data/models/wallet_model.dart';
+import '../../../../../../shared/model/discount_model.dart';
 
 import '../../../../../../../core/themes/app_colors.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';

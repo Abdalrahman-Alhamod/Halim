@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/shimmer_box.dart';
+import '../../../../../core/utils/context_extensions.dart';
+import '../../../../../core/widgets/shimmer_box.dart';
 
 class WelcomeCardLoading extends StatelessWidget {
   const WelcomeCardLoading({super.key});

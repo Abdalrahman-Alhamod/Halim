@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:halim/core/widgets/refresh_base.dart';
-import 'package:halim/src/search/presentation/manager/search_keywords_cubit/search_keywords_cubit.dart';
+import '../../../../../../core/widgets/refresh_base.dart';
+import '../../../manager/search_keywords_cubit/search_keywords_cubit.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../../../core/utils/context_extensions.dart';
 

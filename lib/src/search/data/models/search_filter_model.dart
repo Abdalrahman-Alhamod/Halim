@@ -1,5 +1,5 @@
-import 'package:halim/src/shared/model/category_model.dart';
-import 'package:halim/src/shared/model/subcategory_model.dart';
+import '../../../shared/model/category_model.dart';
+import '../../../shared/model/subcategory_model.dart';
 
 class SearchFilterModel {
   CategoryModel category;

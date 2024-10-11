@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/widgets/avatar_image_loader.dart';
+import '../../../../../../../../../core/widgets/avatar_image_loader.dart';
 
 import '../../../../../../../data/models/comment_model.dart';
 

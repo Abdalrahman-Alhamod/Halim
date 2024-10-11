@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/data/sources/remote/app_url.dart';
+import '../../../../../../../../core/data/sources/remote/app_url.dart';
 import '../../../../../../../../core/translations/locale_keys.g.dart';
 
 import 'reviews_stars_button.dart';

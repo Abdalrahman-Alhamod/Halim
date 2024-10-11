@@ -1,5 +1,5 @@
-import 'package:halim/core/data/model/base_model.dart';
-import 'package:halim/core/data/sources/remote/api_response.dart';
+import '../../../../core/data/model/base_model.dart';
+import '../../../../core/data/sources/remote/api_response.dart';
 
 abstract class MyCoursesRepo {
   Future<ApiResponse<BaseModel>> getOngoingCourses({

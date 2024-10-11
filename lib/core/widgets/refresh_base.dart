@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/themes/app_colors.dart';
+import '../themes/app_colors.dart';
 
 class RefreshBase extends StatelessWidget {
   const RefreshBase({super.key, required this.child, required this.onRefresh});

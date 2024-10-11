@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../core/helpers/string_helper.dart';
 import '../../../../../../../core/translations/locale_keys.g.dart';

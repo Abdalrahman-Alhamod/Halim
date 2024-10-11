@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/utils/logger.dart';
+import 'logger.dart';
 
 class CustomBlocObserver implements BlocObserver {
   @override

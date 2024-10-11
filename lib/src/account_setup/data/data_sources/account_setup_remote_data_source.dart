@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:halim/core/data/model/base_model.dart';
-import 'package:halim/core/data/sources/remote/app_url.dart';
-import 'package:halim/core/data/sources/remote/services/api_services.dart';
-import 'package:halim/core/utils/logger.dart';
-import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
+import '../../../../core/data/model/base_model.dart';
+import '../../../../core/data/sources/remote/app_url.dart';
+import '../../../../core/data/sources/remote/services/api_services.dart';
+import '../../../../core/utils/logger.dart';
+import '../models/student_infomations_model.dart';
 
 class AccountSetupRemoteDataSource {
   final ApiServices _apiServices;

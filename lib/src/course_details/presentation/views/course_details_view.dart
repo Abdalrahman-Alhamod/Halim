@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../manager/course_details_cubit/course_details_cubit.dart';
 import 'package:provider/provider.dart';
 import 'widgets/course_details_app_bar.dart';
 import 'widgets/course_details_bottom_sheet.dart';

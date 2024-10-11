@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/lessons/course_lessons_sub_section_loading.dart';
+import 'course_lessons_sub_section_loading.dart';
 
 class CourseLessonsSubSectionLoadList extends StatelessWidget {
   const CourseLessonsSubSectionLoadList({super.key, this.itemCount = 10});

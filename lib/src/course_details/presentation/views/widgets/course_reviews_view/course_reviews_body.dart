@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/course_reviews_list.dart';
+import '../more_details_section/reviews/course_reviews_list.dart';
 
 import '../../../manager/reviews_cubit/reviews_cubit.dart';
 import '../more_details_section/reviews/review_stars_bar/reviews_stars_bar.dart';

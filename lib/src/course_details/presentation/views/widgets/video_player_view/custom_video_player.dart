@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:chewie/chewie.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../../../manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../../../core/functions/show_toast.dart';
 import '../../../../../../core/functions/toast_status.dart';
 import '../../../../../../core/themes/app_colors.dart';

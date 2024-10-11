@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/course_details/data/models/comment_model.dart';
+import '../../../../../../data/models/comment_model.dart';
 
 import '../../../../../../../../core/themes/app_colors.dart';
 import 'functions/build_comment_avatar.dart';

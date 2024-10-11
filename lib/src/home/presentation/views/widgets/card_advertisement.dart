@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/widgets/network_image_loader.dart';
-import 'package:halim/src/home/data/models/adv_model.dart';
+import '../../../../../core/widgets/network_image_loader.dart';
+import '../../../data/models/adv_model.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../../../core/utils/context_extensions.dart';
 

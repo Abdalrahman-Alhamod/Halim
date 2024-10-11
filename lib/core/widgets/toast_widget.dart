@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/utils/context_extensions.dart';
+import '../themes/app_colors.dart';
+import '../utils/context_extensions.dart';
 
 class ToastWidget extends StatelessWidget {
   const ToastWidget({

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:halim/core/functions/fake_delay.dart';
+import '../../../../functions/fake_delay.dart';
 import '../../../../utils/logger.dart';
 import 'package:http/http.dart' as http;
 

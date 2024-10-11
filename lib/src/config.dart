@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:halim/core/data/sources/local/app_storage.dart';
-import 'package:halim/core/data/sources/remote/firebase_util.dart';
+import '../core/data/sources/local/app_storage.dart';
+import '../core/data/sources/remote/firebase_util.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

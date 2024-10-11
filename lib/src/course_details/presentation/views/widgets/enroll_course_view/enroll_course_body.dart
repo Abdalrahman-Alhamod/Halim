@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../../../manager/course_details_cubit/course_details_cubit.dart';
 import 'widgets/coupon_text_field.dart';
 
 import 'course_box/course_box.dart';

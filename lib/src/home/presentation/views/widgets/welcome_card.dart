@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/widgets/avatar_image_loader.dart';
+import '../../../../../core/widgets/avatar_image_loader.dart';
 // ignore: unused_import
 import '../../../../../core/assets/app_images.dart';
 import '../../../../../core/translations/locale_keys.g.dart';

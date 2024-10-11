@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:halim/src/course_details/domain/entities/quiz_status.dart';
+import 'quiz_status.dart';
 import 'package:flutter/foundation.dart';
 
 part 'quiz_result.freezed.dart';

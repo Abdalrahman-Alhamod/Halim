@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/chat/presentation/manager/chat_cubit/chat_cubit.dart';
+import '../manager/chat_cubit/chat_cubit.dart';
 import 'widgets/chat_app_bar.dart';
 import 'widgets/chat_body.dart';
 

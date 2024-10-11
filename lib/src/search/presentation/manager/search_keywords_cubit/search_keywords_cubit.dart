@@ -2,8 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:halim/src/search/data/models/search_keyword_model.dart';
-import 'package:halim/src/search/presentation/views/widgets/recent_search/recent_search_loading_items_list.dart';
+import '../../../data/models/search_keyword_model.dart';
+import '../../views/widgets/recent_search/recent_search_loading_items_list.dart';
 
 import '../../../../../core/domain/error_handler/network_exceptions.dart';
 import '../../../../../core/functions/show_toast.dart';

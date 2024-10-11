@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/widgets/refresh_base.dart';
+import '../../../../../core/widgets/refresh_base.dart';
 
 import '../../manager/my_courses_cubit/my_courses_cubit.dart';
 import 'my_course_card.dart';

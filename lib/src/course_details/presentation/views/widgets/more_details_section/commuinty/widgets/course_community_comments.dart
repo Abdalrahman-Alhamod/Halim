@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/widgets/refresh_base.dart';
-import 'package:halim/src/course_details/data/models/comment_model.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../../../../../../../../core/widgets/refresh_base.dart';
+import '../../../../../../data/models/comment_model.dart';
+import '../../../../../manager/course_details_cubit/course_details_cubit.dart';
 
 import '../comments_tree/comments_tree.dart';
 import 'enter_comment_bottom_sheet.dart';

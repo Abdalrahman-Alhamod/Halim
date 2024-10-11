@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../core/widgets/sections_view/data/section_page.dart';
 import '../../../../core/widgets/sections_view/sections_view.dart';
 import 'widgets/more_details_section/commuinty/course_community_section.dart';

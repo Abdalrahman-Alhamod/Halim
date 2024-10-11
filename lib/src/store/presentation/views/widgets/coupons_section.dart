@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:halim/src/store/presentation/manager/store_cubit/store_cubit.dart';
+import '../../manager/store_cubit/store_cubit.dart';
 import 'functions/show_filter_coupons_bottomsheet.dart';
 
 import '../../../../../core/assets/app_svgs.dart';

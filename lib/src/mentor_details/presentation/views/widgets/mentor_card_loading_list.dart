@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/mentor_details/presentation/views/widgets/mentor_card_loading.dart';
+import 'mentor_card_loading.dart';
 
 class MentorCardLoadingList extends StatelessWidget {
   const MentorCardLoadingList({super.key, this.itemCount = 10});

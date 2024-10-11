@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/data/sources/remote/app_url.dart';
-import 'package:halim/src/achievements/data/models/badge_model.dart';
+import '../../../../../../core/data/sources/remote/app_url.dart';
+import '../../../../data/models/badge_model.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';
 import '../../../../data/models/achievements_summery_model.dart';

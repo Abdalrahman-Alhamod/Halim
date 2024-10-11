@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/mentor_details/presentation/views/widgets/mentor_courses_view/mentor_courses_app_bar.dart';
-import 'package:halim/src/mentor_details/presentation/views/widgets/mentor_courses_view/mentor_courses_body.dart';
+import 'widgets/mentor_courses_view/mentor_courses_app_bar.dart';
+import 'widgets/mentor_courses_view/mentor_courses_body.dart';
 
 import '../manager/mentor_details_cubit/mentor_details_cubit.dart';
 

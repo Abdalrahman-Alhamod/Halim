@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/course_details/presentation/manager/reviews_cubit/reviews_cubit.dart';
+import '../../../../manager/reviews_cubit/reviews_cubit.dart';
 import 'course_review_block.dart';
 
 class CourseReviewsList extends StatelessWidget {

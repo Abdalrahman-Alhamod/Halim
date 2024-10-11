@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
-import 'package:halim/src/course_details/presentation/manager/reviews_cubit/reviews_cubit.dart';
+import '../../../../manager/course_details_cubit/course_details_cubit.dart';
+import '../../../../manager/reviews_cubit/reviews_cubit.dart';
 import 'package:provider/provider.dart';
 import 'course_reviews_section_header.dart';
 

@@ -1,9 +1,9 @@
-import 'package:halim/core/data/model/base_models.dart';
-import 'package:halim/src/search/data/models/search_filter_model.dart';
-import 'package:halim/src/search/data/models/search_keyword_model.dart';
-import 'package:halim/src/shared/app_data.dart';
-import 'package:halim/src/shared/model/course_card_model.dart';
-import 'package:halim/src/shared/model/mentor_card_model.dart';
+import '../../../../core/data/model/base_models.dart';
+import '../models/search_filter_model.dart';
+import '../models/search_keyword_model.dart';
+import '../../../shared/app_data.dart';
+import '../../../shared/model/course_card_model.dart';
+import '../../../shared/model/mentor_card_model.dart';
 
 import '../../../../core/data/model/base_model.dart';
 import '../../../../core/data/sources/remote/app_url.dart';

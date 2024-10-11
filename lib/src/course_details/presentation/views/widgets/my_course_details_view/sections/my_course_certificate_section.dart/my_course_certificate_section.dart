@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/test/app_test.dart';
-import 'package:halim/core/widgets/refresh_base.dart';
-import 'package:halim/src/course_details/data/models/certificate_model.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../../../../../../../../core/test/app_test.dart';
+import '../../../../../../../../core/widgets/refresh_base.dart';
+import '../../../../../../data/models/certificate_model.dart';
+import '../../../../../manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../../../../../core/functions/open_url.dart';
 import '../../../../../../../../core/translations/locale_keys.g.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';

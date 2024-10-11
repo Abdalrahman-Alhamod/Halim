@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/widgets/shimmer_box.dart';
-import 'package:halim/core/widgets/toast_widget.dart';
-import 'package:halim/src/profile_settings/presentation/manager/cubit/profile_settings_cubit.dart';
+import '../../../../core/widgets/shimmer_box.dart';
+import '../../../../core/widgets/toast_widget.dart';
+import '../manager/cubit/profile_settings_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import '../../../../core/utils/context_extensions.dart';
 import '../../../../core/themes/app_colors.dart';

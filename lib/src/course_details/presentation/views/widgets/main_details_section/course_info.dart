@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/helpers/string_helper.dart';
-import 'package:halim/src/course_details/data/models/level_model.dart';
+import '../../../../../../core/helpers/string_helper.dart';
+import '../../../../data/models/level_model.dart';
 
 import '../../../../../../core/themes/app_colors.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';

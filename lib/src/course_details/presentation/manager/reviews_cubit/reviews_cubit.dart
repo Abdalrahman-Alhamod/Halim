@@ -3,8 +3,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/functions/show_loading_dialog.dart';
-import 'package:halim/src/course_details/presentation/views/widgets/more_details_section/reviews/review_block_loading_list.dart';
+import '../../../../../core/functions/show_loading_dialog.dart';
+import '../../views/widgets/more_details_section/reviews/review_block_loading_list.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 import '../../../../../core/data/sources/remote/app_url.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/widgets/refresh_base.dart';
-import 'package:halim/src/course_details/data/models/anouncement_box_model.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../../../../../../../../core/widgets/refresh_base.dart';
+import '../../../../../../data/models/anouncement_box_model.dart';
+import '../../../../../manager/course_details_cubit/course_details_cubit.dart';
 import 'widgets/announcement_box.dart';
 
 class MyCourseAnnouncementsSection extends StatelessWidget {

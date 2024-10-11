@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/chat/data/models/chat_message_model.dart';
-import 'package:halim/src/chat/presentation/manager/chat_cubit/chat_cubit.dart';
+import '../../../data/models/chat_message_model.dart';
+import '../../manager/chat_cubit/chat_cubit.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import 'chat_text_field.dart';
 import 'send_chat_box.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/data/sources/remote/app_url.dart';
+import '../../../../../../../core/data/sources/remote/app_url.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../../../core/themes/app_colors.dart';

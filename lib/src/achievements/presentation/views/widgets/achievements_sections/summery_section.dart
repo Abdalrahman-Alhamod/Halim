@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/achievements/data/models/achievements_summery_model.dart';
+import '../../../../data/models/achievements_summery_model.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/themes/app_colors.dart';
 

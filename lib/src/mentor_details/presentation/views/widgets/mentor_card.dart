@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/src/shared/model/mentor_card_model.dart';
+import '../../../../shared/model/mentor_card_model.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import '../../../../../core/utils/navigation_extra_keys.dart';

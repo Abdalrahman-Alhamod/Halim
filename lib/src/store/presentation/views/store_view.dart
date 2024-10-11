@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
-import 'package:halim/src/store/data/models/student_points_model.dart';
+import '../../../auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import '../../data/models/student_points_model.dart';
 import '../../../../core/translations/locale_keys.g.dart';
 import '../manager/store_cubit/store_cubit.dart';
 import 'widgets/store_app_bar.dart';

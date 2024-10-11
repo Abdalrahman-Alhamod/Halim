@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/helpers/string_helper.dart';
-import 'package:halim/src/shared/model/discount_model.dart';
+import '../../../../../../core/helpers/string_helper.dart';
+import '../../../../../shared/model/discount_model.dart';
 import '../../../../../../core/utils/context_extensions.dart';
 
 import '../../../../../../core/themes/app_colors.dart';

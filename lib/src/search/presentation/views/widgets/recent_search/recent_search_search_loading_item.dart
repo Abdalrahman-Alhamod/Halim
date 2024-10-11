@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/themes/app_colors.dart';
-import 'package:halim/core/widgets/shimmer_base.dart';
+import '../../../../../../core/themes/app_colors.dart';
+import '../../../../../../core/widgets/shimmer_base.dart';
 
 class RecentSearchLoadingItem extends StatelessWidget {
   const RecentSearchLoadingItem({super.key});

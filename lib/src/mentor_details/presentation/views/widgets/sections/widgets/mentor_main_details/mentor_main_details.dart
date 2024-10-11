@@ -2,9 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
-import 'package:halim/src/mentor_details/presentation/manager/mentor_details_cubit/mentor_details_cubit.dart';
+import '../../../../../../../../core/utils/context_extensions.dart';
+import '../../../../../../../auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import '../../../../../manager/mentor_details_cubit/mentor_details_cubit.dart';
 import '../../../../../../../../core/utils/app_route.dart';
 import 'package:url_launcher/url_launcher.dart';
 

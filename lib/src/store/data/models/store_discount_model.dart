@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
-import 'package:halim/src/shared/model/discount_model.dart';
-import 'package:halim/src/shared/model/subcategory_model.dart';
+import '../../../shared/model/discount_model.dart';
+import '../../../shared/model/subcategory_model.dart';
 part 'store_discount_model.freezed.dart';
 part 'store_discount_model.g.dart';
 

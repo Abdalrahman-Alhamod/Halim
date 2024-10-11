@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/widgets/network_image_loader.dart';
+import '../../../../../core/widgets/network_image_loader.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 

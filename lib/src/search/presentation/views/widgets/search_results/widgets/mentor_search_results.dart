@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/mentor_details/presentation/views/widgets/mentor_card.dart';
-import 'package:halim/src/search/presentation/manager/search_cubit/search_cubit.dart';
+import '../../../../../../mentor_details/presentation/views/widgets/mentor_card.dart';
+import '../../../../manager/search_cubit/search_cubit.dart';
 
 class MentorsSearchResults extends StatelessWidget {
   const MentorsSearchResults({

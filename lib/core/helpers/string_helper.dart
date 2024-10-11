@@ -1,4 +1,4 @@
-import 'package:halim/src/shared/model/discount_model.dart';
+import '../../src/shared/model/discount_model.dart';
 
 class StringHelper {
   StringHelper._();

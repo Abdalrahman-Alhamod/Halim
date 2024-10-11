@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/widgets/shimmer_box.dart';
+import '../../../../../../../core/widgets/shimmer_box.dart';
 
 class SubcategoriesButtonsLoadingList extends StatelessWidget {
   const SubcategoriesButtonsLoadingList({super.key});

@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/auth/presentation/manager/auth_cubit/auth_cubit.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../../../../../auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import '../../../manager/course_details_cubit/course_details_cubit.dart';
 import '../../../../../../core/functions/show_custom_dialog.dart';
 import 'widgets/authenticate_using_dialog.dart';
 

@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
-import 'package:halim/src/shared/model/subcategory_model.dart';
+import '../../../shared/model/subcategory_model.dart';
 part 'receipt_model.freezed.dart';
 part 'receipt_model.g.dart';
 

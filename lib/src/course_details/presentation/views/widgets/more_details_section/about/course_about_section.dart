@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/course_details/data/models/course_about_section_model.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
-import 'package:halim/src/shared/model/mentor_card_model.dart';
+import '../../../../../data/models/course_about_section_model.dart';
+import '../../../../manager/course_details_cubit/course_details_cubit.dart';
+import '../../../../../../shared/model/mentor_card_model.dart';
 import '../../../../../../../core/utils/context_extensions.dart';
 import 'package:readmore/readmore.dart';
 

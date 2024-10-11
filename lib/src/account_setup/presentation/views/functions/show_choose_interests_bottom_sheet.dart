@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/core/widgets/custome_flat_button.dart';
-import 'package:halim/src/account_setup/data/models/student_infomations_model.dart';
-import 'package:halim/src/shared/model/subcategory_model.dart';
+import '../../../../../core/widgets/custome_flat_button.dart';
+import '../../../data/models/student_infomations_model.dart';
+import '../../../../shared/model/subcategory_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import '../../manager/account_setup_cubit/account_setup_cubit.dart';
 import '../widgets/interests_widget.dart';

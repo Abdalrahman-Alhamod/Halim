@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:halim/core/widgets/refresh_base.dart';
-import 'package:halim/src/course_details/presentation/manager/course_details_cubit/course_details_cubit.dart';
+import '../../../../core/widgets/refresh_base.dart';
+import '../manager/course_details_cubit/course_details_cubit.dart';
 import 'widgets/course_reading_view/course_reading_app_bar.dart';
 
 class CourseReadingView extends StatelessWidget {

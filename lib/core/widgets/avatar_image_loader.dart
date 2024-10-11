@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/widgets/avatar_error_widget.dart';
-import 'package:halim/core/widgets/shimmer_box.dart';
+import 'avatar_error_widget.dart';
+import 'shimmer_box.dart';
 
 class AvatarImageLoader extends StatelessWidget {
   const AvatarImageLoader({

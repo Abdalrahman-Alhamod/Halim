@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:halim/core/utils/context_extensions.dart';
-import 'package:halim/core/widgets/custom_loading_indicator.dart';
+import 'context_extensions.dart';
+import '../widgets/custom_loading_indicator.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import '../data/model/base_model.dart';
 import '../widgets/empty_view.dart';

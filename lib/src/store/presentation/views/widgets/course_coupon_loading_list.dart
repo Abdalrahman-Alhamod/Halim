@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halim/src/store/presentation/views/widgets/course_coupon_loading.dart';
+import 'course_coupon_loading.dart';
 
 class CourseCouponLoadingList extends StatelessWidget {
   const CourseCouponLoadingList({super.key, this.itemCount = 10});

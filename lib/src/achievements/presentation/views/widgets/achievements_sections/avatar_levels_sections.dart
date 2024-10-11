@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/achievements/data/models/avatar_model.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/achievements_progress_indicator_loading.dart';
-import 'package:halim/src/achievements/presentation/views/widgets/avatar_progress_bar.dart';
+import '../../../../data/models/avatar_model.dart';
+import '../achievements_progress_indicator_loading.dart';
+import '../avatar_progress_bar.dart';
 
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/translations/locale_keys.g.dart';

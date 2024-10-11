@@ -1,5 +1,5 @@
-import 'package:halim/core/data/sources/local/app_storage_keys.dart';
-import 'package:halim/src/shared/model/user_model.dart';
+import '../../../../core/data/sources/local/app_storage_keys.dart';
+import '../../../shared/model/user_model.dart';
 
 import '../../../../core/data/sources/local/app_storage.dart';
 

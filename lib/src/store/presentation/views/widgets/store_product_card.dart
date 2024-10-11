@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:halim/core/widgets/network_image_loader.dart';
-import 'package:halim/src/store/data/models/store_item_model.dart';
+import '../../../../../core/widgets/network_image_loader.dart';
+import '../../../data/models/store_item_model.dart';
 import '../../../../../core/utils/context_extensions.dart';
 import 'functions/show_product_purchase_dialog.dart';
 import '../../../../../core/themes/app_colors.dart';

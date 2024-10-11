@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:halim/src/store/presentation/views/widgets/products_grid_view_loading.dart';
+import 'products_grid_view_loading.dart';
 import '../../manager/store_cubit/store_cubit.dart';
 import 'store_product_card.dart';
 

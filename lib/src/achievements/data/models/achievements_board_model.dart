@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
-import 'package:halim/src/achievements/data/models/avatar_model.dart';
+import 'avatar_model.dart';
 part 'achievements_board_model.freezed.dart';
 part 'achievements_board_model.g.dart';
 

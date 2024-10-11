@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:halim/core/widgets/shimmer_box.dart';
+import '../../../../../core/widgets/shimmer_box.dart';
 
 class MentorCardLoadingListHorizontal extends StatelessWidget {
   const MentorCardLoadingListHorizontal({super.key, this.itemCount = 10});

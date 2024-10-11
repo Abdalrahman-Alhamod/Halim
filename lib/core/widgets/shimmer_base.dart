@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:halim/core/utils/context_extensions.dart';
+import '../utils/context_extensions.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ShimmerBase extends StatelessWidget {

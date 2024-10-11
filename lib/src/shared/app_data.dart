@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:halim/src/shared/model/category_model.dart';
-import 'package:halim/src/shared/model/subcategory_model.dart';
+import 'model/category_model.dart';
+import 'model/subcategory_model.dart';
 
 import '../../core/translations/locale_keys.g.dart';
 
