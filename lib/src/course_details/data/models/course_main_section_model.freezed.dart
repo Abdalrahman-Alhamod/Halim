@@ -48,12 +48,8 @@ mixin _$CourseMainSectionModel {
   int? get sectionsCount => throw _privateConstructorUsedError;
   DiscountModel? get discount => throw _privateConstructorUsedError;
 
-  /// Serializes this CourseMainSectionModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CourseMainSectionModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CourseMainSectionModelCopyWith<CourseMainSectionModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -99,8 +95,6 @@ class _$CourseMainSectionModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CourseMainSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -194,8 +188,6 @@ class _$CourseMainSectionModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of CourseMainSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SubcategoryModelCopyWith<$Res>? get subcategory {
@@ -208,8 +200,6 @@ class _$CourseMainSectionModelCopyWithImpl<$Res,
     });
   }
 
-  /// Create a copy of CourseMainSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LevelModelCopyWith<$Res>? get level {
@@ -222,8 +212,6 @@ class _$CourseMainSectionModelCopyWithImpl<$Res,
     });
   }
 
-  /// Create a copy of CourseMainSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DiscountModelCopyWith<$Res>? get discount {
@@ -283,8 +271,6 @@ class __$$CourseMainSectionModelImplCopyWithImpl<$Res>
       $Res Function(_$CourseMainSectionModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseMainSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -513,7 +499,7 @@ class _$CourseMainSectionModelImpl
                 other.discount == discount));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -535,9 +521,7 @@ class _$CourseMainSectionModelImpl
       sectionsCount,
       discount);
 
-  /// Create a copy of CourseMainSectionModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CourseMainSectionModelImplCopyWith<_$CourseMainSectionModelImpl>
@@ -618,11 +602,8 @@ abstract class _CourseMainSectionModel implements CourseMainSectionModel {
   int? get sectionsCount;
   @override
   DiscountModel? get discount;
-
-  /// Create a copy of CourseMainSectionModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CourseMainSectionModelImplCopyWith<_$CourseMainSectionModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

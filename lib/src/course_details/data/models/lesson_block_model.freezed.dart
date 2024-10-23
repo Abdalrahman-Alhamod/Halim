@@ -60,8 +60,6 @@ mixin _$LessonBlockModel {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this LessonBlockModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -81,9 +79,6 @@ class _$LessonBlockModelCopyWithImpl<$Res, $Val extends LessonBlockModel>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -105,8 +100,6 @@ class __$$VideoImplCopyWithImpl<$Res>
       _$VideoImpl _value, $Res Function(_$VideoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -120,8 +113,6 @@ class __$$VideoImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VideoBlockModelCopyWith<$Res> get video {
@@ -164,13 +155,11 @@ class _$VideoImpl with DiagnosticableTreeMixin implements _Video {
             (identical(other.video, video) || other.video == video));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, video);
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$VideoImplCopyWith<_$VideoImpl> get copyWith =>
@@ -256,10 +245,7 @@ abstract class _Video implements LessonBlockModel {
   const factory _Video(final VideoBlockModel video) = _$VideoImpl;
 
   VideoBlockModel get video;
-
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$VideoImplCopyWith<_$VideoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -283,8 +269,6 @@ class __$$ReadingImplCopyWithImpl<$Res>
       _$ReadingImpl _value, $Res Function(_$ReadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -298,8 +282,6 @@ class __$$ReadingImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReadingBlockModelCopyWith<$Res> get reading {
@@ -342,13 +324,11 @@ class _$ReadingImpl with DiagnosticableTreeMixin implements _Reading {
             (identical(other.reading, reading) || other.reading == reading));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, reading);
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReadingImplCopyWith<_$ReadingImpl> get copyWith =>
@@ -434,10 +414,7 @@ abstract class _Reading implements LessonBlockModel {
   const factory _Reading(final ReadingBlockModel reading) = _$ReadingImpl;
 
   ReadingBlockModel get reading;
-
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReadingImplCopyWith<_$ReadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -460,8 +437,6 @@ class __$$QuizImplCopyWithImpl<$Res>
   __$$QuizImplCopyWithImpl(_$QuizImpl _value, $Res Function(_$QuizImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -475,8 +450,6 @@ class __$$QuizImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuizBlockModelCopyWith<$Res> get quiz {
@@ -518,13 +491,11 @@ class _$QuizImpl with DiagnosticableTreeMixin implements _Quiz {
             (identical(other.quiz, quiz) || other.quiz == quiz));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, quiz);
 
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$QuizImplCopyWith<_$QuizImpl> get copyWith =>
@@ -610,10 +581,7 @@ abstract class _Quiz implements LessonBlockModel {
   const factory _Quiz(final QuizBlockModel quiz) = _$QuizImpl;
 
   QuizBlockModel get quiz;
-
-  /// Create a copy of LessonBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$QuizImplCopyWith<_$QuizImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -632,12 +600,8 @@ mixin _$VideoBlockModel {
   @JsonKey(name: 'is_preview')
   bool? get isPreview => throw _privateConstructorUsedError;
 
-  /// Serializes this VideoBlockModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of VideoBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $VideoBlockModelCopyWith<VideoBlockModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -666,8 +630,6 @@ class _$VideoBlockModelCopyWithImpl<$Res, $Val extends VideoBlockModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of VideoBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -726,8 +688,6 @@ class __$$VideoBlockModelImplCopyWithImpl<$Res>
       _$VideoBlockModelImpl _value, $Res Function(_$VideoBlockModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of VideoBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -822,14 +782,12 @@ class _$VideoBlockModelImpl
                 other.isPreview == isPreview));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, title, duration, isCompleted, isPreview);
 
-  /// Create a copy of VideoBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$VideoBlockModelImplCopyWith<_$VideoBlockModelImpl> get copyWith =>
@@ -868,11 +826,8 @@ abstract class _VideoBlockModel implements VideoBlockModel {
   @override
   @JsonKey(name: 'is_preview')
   bool? get isPreview;
-
-  /// Create a copy of VideoBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$VideoBlockModelImplCopyWith<_$VideoBlockModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -891,12 +846,8 @@ mixin _$ReadingBlockModel {
   @JsonKey(name: 'is_preview')
   bool? get isPreview => throw _privateConstructorUsedError;
 
-  /// Serializes this ReadingBlockModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ReadingBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ReadingBlockModelCopyWith<ReadingBlockModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -925,8 +876,6 @@ class _$ReadingBlockModelCopyWithImpl<$Res, $Val extends ReadingBlockModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ReadingBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -985,8 +934,6 @@ class __$$ReadingBlockModelImplCopyWithImpl<$Res>
       $Res Function(_$ReadingBlockModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReadingBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1081,14 +1028,12 @@ class _$ReadingBlockModelImpl
                 other.isPreview == isPreview));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, title, duration, isCompleted, isPreview);
 
-  /// Create a copy of ReadingBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReadingBlockModelImplCopyWith<_$ReadingBlockModelImpl> get copyWith =>
@@ -1127,11 +1072,8 @@ abstract class _ReadingBlockModel implements ReadingBlockModel {
   @override
   @JsonKey(name: 'is_preview')
   bool? get isPreview;
-
-  /// Create a copy of ReadingBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReadingBlockModelImplCopyWith<_$ReadingBlockModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1152,12 +1094,8 @@ mixin _$QuizBlockModel {
   @JsonKey(name: 'quiz')
   QuizBlockDetailsModel? get quizDetails => throw _privateConstructorUsedError;
 
-  /// Serializes this QuizBlockModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of QuizBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $QuizBlockModelCopyWith<QuizBlockModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1189,8 +1127,6 @@ class _$QuizBlockModelCopyWithImpl<$Res, $Val extends QuizBlockModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of QuizBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1229,8 +1165,6 @@ class _$QuizBlockModelCopyWithImpl<$Res, $Val extends QuizBlockModel>
     ) as $Val);
   }
 
-  /// Create a copy of QuizBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuizBlockDetailsModelCopyWith<$Res>? get quizDetails {
@@ -1272,8 +1206,6 @@ class __$$QuizBlockModelImplCopyWithImpl<$Res>
       _$QuizBlockModelImpl _value, $Res Function(_$QuizBlockModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of QuizBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1380,14 +1312,12 @@ class _$QuizBlockModelImpl
                 other.quizDetails == quizDetails));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, title, duration, isCompleted, isPreview, quizDetails);
 
-  /// Create a copy of QuizBlockModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$QuizBlockModelImplCopyWith<_$QuizBlockModelImpl> get copyWith =>
@@ -1430,11 +1360,8 @@ abstract class _QuizBlockModel implements QuizBlockModel {
   @override
   @JsonKey(name: 'quiz')
   QuizBlockDetailsModel? get quizDetails;
-
-  /// Create a copy of QuizBlockModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$QuizBlockModelImplCopyWith<_$QuizBlockModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1449,12 +1376,8 @@ mixin _$QuizBlockDetailsModel {
   @JsonKey(name: 'questions_number')
   int? get questionsNumber => throw _privateConstructorUsedError;
 
-  /// Serializes this QuizBlockDetailsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of QuizBlockDetailsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $QuizBlockDetailsModelCopyWith<QuizBlockDetailsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1479,8 +1402,6 @@ class _$QuizBlockDetailsModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of QuizBlockDetailsModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1516,8 +1437,6 @@ class __$$QuizBlockDetailsModelImplCopyWithImpl<$Res>
       $Res Function(_$QuizBlockDetailsModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of QuizBlockDetailsModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1569,13 +1488,11 @@ class _$QuizBlockDetailsModelImpl
                 other.questionsNumber == questionsNumber));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, questionsNumber);
 
-  /// Create a copy of QuizBlockDetailsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$QuizBlockDetailsModelImplCopyWith<_$QuizBlockDetailsModelImpl>
@@ -1601,11 +1518,8 @@ abstract class _QuizBlockDetailsModel implements QuizBlockDetailsModel {
   @override
   @JsonKey(name: 'questions_number')
   int? get questionsNumber;
-
-  /// Create a copy of QuizBlockDetailsModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$QuizBlockDetailsModelImplCopyWith<_$QuizBlockDetailsModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

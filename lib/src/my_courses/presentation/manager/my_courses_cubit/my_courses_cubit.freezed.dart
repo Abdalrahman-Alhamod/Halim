@@ -157,9 +157,6 @@ class _$MyCoursesStateCopyWithImpl<$Res, $Val extends MyCoursesState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -176,9 +173,6 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -369,9 +363,6 @@ class __$$LoadingOngoingCoursesPaginationImplCopyWithImpl<$Res>
       _$LoadingOngoingCoursesPaginationImpl _value,
       $Res Function(_$LoadingOngoingCoursesPaginationImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -570,8 +561,6 @@ class __$$FailureOngoingCoursesPaginationImplCopyWithImpl<$Res>
       $Res Function(_$FailureOngoingCoursesPaginationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -585,8 +574,6 @@ class __$$FailureOngoingCoursesPaginationImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -626,9 +613,7 @@ class _$FailureOngoingCoursesPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureOngoingCoursesPaginationImplCopyWith<
@@ -790,10 +775,7 @@ abstract class _FailureOngoingCoursesPagination implements MyCoursesState {
       _$FailureOngoingCoursesPaginationImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailureOngoingCoursesPaginationImplCopyWith<
           _$FailureOngoingCoursesPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -819,8 +801,6 @@ class __$$SuccessOngoingCoursesPaginationImplCopyWithImpl<$Res>
       $Res Function(_$SuccessOngoingCoursesPaginationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -860,9 +840,7 @@ class _$SuccessOngoingCoursesPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessOngoingCoursesPaginationImplCopyWith<
@@ -1023,10 +1001,7 @@ abstract class _SuccessOngoingCoursesPagination implements MyCoursesState {
       _$SuccessOngoingCoursesPaginationImpl;
 
   String? get message;
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessOngoingCoursesPaginationImplCopyWith<
           _$SuccessOngoingCoursesPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1049,9 +1024,6 @@ class __$$LoadingCompletedCoursesPaginationImplCopyWithImpl<$Res>
       _$LoadingCompletedCoursesPaginationImpl _value,
       $Res Function(_$LoadingCompletedCoursesPaginationImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1250,8 +1222,6 @@ class __$$FailureCompletedCoursesPaginationImplCopyWithImpl<$Res>
       $Res Function(_$FailureCompletedCoursesPaginationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1265,8 +1235,6 @@ class __$$FailureCompletedCoursesPaginationImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1306,9 +1274,7 @@ class _$FailureCompletedCoursesPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureCompletedCoursesPaginationImplCopyWith<
@@ -1470,10 +1436,7 @@ abstract class _FailureCompletedCoursesPagination implements MyCoursesState {
       _$FailureCompletedCoursesPaginationImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailureCompletedCoursesPaginationImplCopyWith<
           _$FailureCompletedCoursesPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1499,8 +1462,6 @@ class __$$SuccessCompletedCoursesPaginationImplCopyWithImpl<$Res>
       $Res Function(_$SuccessCompletedCoursesPaginationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1540,9 +1501,7 @@ class _$SuccessCompletedCoursesPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessCompletedCoursesPaginationImplCopyWith<
@@ -1703,10 +1662,7 @@ abstract class _SuccessCompletedCoursesPagination implements MyCoursesState {
       _$SuccessCompletedCoursesPaginationImpl;
 
   String? get message;
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessCompletedCoursesPaginationImplCopyWith<
           _$SuccessCompletedCoursesPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1729,9 +1685,6 @@ class __$$LoadingSavedCoursesPaginationImplCopyWithImpl<$Res>
       _$LoadingSavedCoursesPaginationImpl _value,
       $Res Function(_$LoadingSavedCoursesPaginationImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1930,8 +1883,6 @@ class __$$FailureSavedCoursesPaginationImplCopyWithImpl<$Res>
       $Res Function(_$FailureSavedCoursesPaginationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1945,8 +1896,6 @@ class __$$FailureSavedCoursesPaginationImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1986,9 +1935,7 @@ class _$FailureSavedCoursesPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureSavedCoursesPaginationImplCopyWith<
@@ -2150,10 +2097,7 @@ abstract class _FailureSavedCoursesPagination implements MyCoursesState {
       _$FailureSavedCoursesPaginationImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailureSavedCoursesPaginationImplCopyWith<
           _$FailureSavedCoursesPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2179,8 +2123,6 @@ class __$$SuccessSavedCoursesPaginationImplCopyWithImpl<$Res>
       $Res Function(_$SuccessSavedCoursesPaginationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2220,9 +2162,7 @@ class _$SuccessSavedCoursesPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessSavedCoursesPaginationImplCopyWith<
@@ -2383,10 +2323,7 @@ abstract class _SuccessSavedCoursesPagination implements MyCoursesState {
       _$SuccessSavedCoursesPaginationImpl;
 
   String? get message;
-
-  /// Create a copy of MyCoursesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessSavedCoursesPaginationImplCopyWith<
           _$SuccessSavedCoursesPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;

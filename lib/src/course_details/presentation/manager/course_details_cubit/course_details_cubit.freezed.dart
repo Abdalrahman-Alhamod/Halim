@@ -493,9 +493,6 @@ class _$CourseDetailsStateCopyWithImpl<$Res, $Val extends CourseDetailsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -512,9 +509,6 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1041,9 +1035,6 @@ class __$$FetchCourseMainSectionLoadingImplCopyWithImpl<$Res>
       _$FetchCourseMainSectionLoadingImpl _value,
       $Res Function(_$FetchCourseMainSectionLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1578,8 +1569,6 @@ class __$$FetchCourseMainSectionFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseMainSectionFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1593,8 +1582,6 @@ class __$$FetchCourseMainSectionFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1634,9 +1621,7 @@ class _$FetchCourseMainSectionFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseMainSectionFailureImplCopyWith<
@@ -2134,10 +2119,7 @@ abstract class _FetchCourseMainSectionFailure implements CourseDetailsState {
       _$FetchCourseMainSectionFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseMainSectionFailureImplCopyWith<
           _$FetchCourseMainSectionFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2165,8 +2147,6 @@ class __$$FetchCourseMainSectionSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseMainSectionSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2185,8 +2165,6 @@ class __$$FetchCourseMainSectionSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CourseMainSectionModelCopyWith<$Res> get data {
@@ -2224,9 +2202,7 @@ class _$FetchCourseMainSectionSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseMainSectionSuccessImplCopyWith<
@@ -2725,10 +2701,7 @@ abstract class _FetchCourseMainSectionSuccess implements CourseDetailsState {
 
   CourseMainSectionModel get data;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseMainSectionSuccessImplCopyWith<
           _$FetchCourseMainSectionSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2751,9 +2724,6 @@ class __$$FetchCourseAboutSectionLoadingImplCopyWithImpl<$Res>
       _$FetchCourseAboutSectionLoadingImpl _value,
       $Res Function(_$FetchCourseAboutSectionLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3288,8 +3258,6 @@ class __$$FetchCourseAboutSectionFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseAboutSectionFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3303,8 +3271,6 @@ class __$$FetchCourseAboutSectionFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -3344,9 +3310,7 @@ class _$FetchCourseAboutSectionFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseAboutSectionFailureImplCopyWith<
@@ -3844,10 +3808,7 @@ abstract class _FetchCourseAboutSectionFailure implements CourseDetailsState {
       _$FetchCourseAboutSectionFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseAboutSectionFailureImplCopyWith<
           _$FetchCourseAboutSectionFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3875,8 +3836,6 @@ class __$$FetchCourseAboutSectionSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseAboutSectionSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3895,8 +3854,6 @@ class __$$FetchCourseAboutSectionSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CourseAboutSectionModelCopyWith<$Res> get data {
@@ -3934,9 +3891,7 @@ class _$FetchCourseAboutSectionSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseAboutSectionSuccessImplCopyWith<
@@ -4435,10 +4390,7 @@ abstract class _FetchCourseAboutSectionSuccess implements CourseDetailsState {
 
   CourseAboutSectionModel get data;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseAboutSectionSuccessImplCopyWith<
           _$FetchCourseAboutSectionSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4461,9 +4413,6 @@ class __$$LoadingCourseLessonsSectionPaginationImplCopyWithImpl<$Res>
       _$LoadingCourseLessonsSectionPaginationImpl _value,
       $Res Function(_$LoadingCourseLessonsSectionPaginationImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4999,8 +4948,6 @@ class __$$FailureCourseLessonsSectionPaginationImplCopyWithImpl<$Res>
       $Res Function(_$FailureCourseLessonsSectionPaginationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5014,8 +4961,6 @@ class __$$FailureCourseLessonsSectionPaginationImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -5055,9 +5000,7 @@ class _$FailureCourseLessonsSectionPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureCourseLessonsSectionPaginationImplCopyWith<
@@ -5556,10 +5499,7 @@ abstract class _FailureCourseLessonsSectionPagination
       _$FailureCourseLessonsSectionPaginationImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailureCourseLessonsSectionPaginationImplCopyWith<
           _$FailureCourseLessonsSectionPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5585,8 +5525,6 @@ class __$$SuccessCourseLessonsSectionPaginationImplCopyWithImpl<$Res>
       $Res Function(_$SuccessCourseLessonsSectionPaginationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5626,9 +5564,7 @@ class _$SuccessCourseLessonsSectionPaginationImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessCourseLessonsSectionPaginationImplCopyWith<
@@ -6126,10 +6062,7 @@ abstract class _SuccessCourseLessonsSectionPagination
       _$SuccessCourseLessonsSectionPaginationImpl;
 
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessCourseLessonsSectionPaginationImplCopyWith<
           _$SuccessCourseLessonsSectionPaginationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -6152,9 +6085,6 @@ class __$$FetchCourseLessonDetailsLoadingImplCopyWithImpl<$Res>
       _$FetchCourseLessonDetailsLoadingImpl _value,
       $Res Function(_$FetchCourseLessonDetailsLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -6689,8 +6619,6 @@ class __$$FetchCourseLessonDetailsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseLessonDetailsFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6704,8 +6632,6 @@ class __$$FetchCourseLessonDetailsFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -6745,9 +6671,7 @@ class _$FetchCourseLessonDetailsFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseLessonDetailsFailureImplCopyWith<
@@ -7245,10 +7169,7 @@ abstract class _FetchCourseLessonDetailsFailure implements CourseDetailsState {
       _$FetchCourseLessonDetailsFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseLessonDetailsFailureImplCopyWith<
           _$FetchCourseLessonDetailsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -7276,8 +7197,6 @@ class __$$FetchCourseLessonDetailsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseLessonDetailsSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7296,8 +7215,6 @@ class __$$FetchCourseLessonDetailsSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CourseLessonModelCopyWith<$Res> get data {
@@ -7335,9 +7252,7 @@ class _$FetchCourseLessonDetailsSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseLessonDetailsSuccessImplCopyWith<
@@ -7836,10 +7751,7 @@ abstract class _FetchCourseLessonDetailsSuccess implements CourseDetailsState {
 
   CourseLessonModel get data;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseLessonDetailsSuccessImplCopyWith<
           _$FetchCourseLessonDetailsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -7862,9 +7774,6 @@ class __$$FetchCourseLessonsSectionsPageLoadingImplCopyWithImpl<$Res>
       _$FetchCourseLessonsSectionsPageLoadingImpl _value,
       $Res Function(_$FetchCourseLessonsSectionsPageLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -8400,8 +8309,6 @@ class __$$FetchCourseLessonsSectionsPageFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseLessonsSectionsPageFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8415,8 +8322,6 @@ class __$$FetchCourseLessonsSectionsPageFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -8456,9 +8361,7 @@ class _$FetchCourseLessonsSectionsPageFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseLessonsSectionsPageFailureImplCopyWith<
@@ -8957,10 +8860,7 @@ abstract class _FetchCourseLessonsSectionsPageFailure
       _$FetchCourseLessonsSectionsPageFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseLessonsSectionsPageFailureImplCopyWith<
           _$FetchCourseLessonsSectionsPageFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -8987,8 +8887,6 @@ class __$$FetchCourseLessonsSectionsPageSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseLessonsSectionsPageSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9047,9 +8945,7 @@ class _$FetchCourseLessonsSectionsPageSuccessImpl
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_courseLessonsSectionsPage), message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseLessonsSectionsPageSuccessImplCopyWith<
@@ -9552,10 +9448,7 @@ abstract class _FetchCourseLessonsSectionsPageSuccess
 
   List<LessonsSectionModel> get courseLessonsSectionsPage;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseLessonsSectionsPageSuccessImplCopyWith<
           _$FetchCourseLessonsSectionsPageSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -9578,9 +9471,6 @@ class __$$SubmitCourseLessonCompletionLoadingImplCopyWithImpl<$Res>
       _$SubmitCourseLessonCompletionLoadingImpl _value,
       $Res Function(_$SubmitCourseLessonCompletionLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -10116,8 +10006,6 @@ class __$$SubmitCourseLessonCompletionFailureImplCopyWithImpl<$Res>
       $Res Function(_$SubmitCourseLessonCompletionFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10131,8 +10019,6 @@ class __$$SubmitCourseLessonCompletionFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -10172,9 +10058,7 @@ class _$SubmitCourseLessonCompletionFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SubmitCourseLessonCompletionFailureImplCopyWith<
@@ -10673,10 +10557,7 @@ abstract class _SubmitCourseLessonCompletionFailure
       _$SubmitCourseLessonCompletionFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SubmitCourseLessonCompletionFailureImplCopyWith<
           _$SubmitCourseLessonCompletionFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -10702,8 +10583,6 @@ class __$$SubmitCourseLessonCompletionSuccessImplCopyWithImpl<$Res>
       $Res Function(_$SubmitCourseLessonCompletionSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10743,9 +10622,7 @@ class _$SubmitCourseLessonCompletionSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SubmitCourseLessonCompletionSuccessImplCopyWith<
@@ -11243,10 +11120,7 @@ abstract class _SubmitCourseLessonCompletionSuccess
       _$SubmitCourseLessonCompletionSuccessImpl;
 
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SubmitCourseLessonCompletionSuccessImplCopyWith<
           _$SubmitCourseLessonCompletionSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -11269,8 +11143,6 @@ class __$$SaveCourseLoadingImplCopyWithImpl<$Res>
       $Res Function(_$SaveCourseLoadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11310,9 +11182,7 @@ class _$SaveCourseLoadingImpl implements _SaveCourseLoading {
   @override
   int get hashCode => Object.hash(runtimeType, courseId);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveCourseLoadingImplCopyWith<_$SaveCourseLoadingImpl> get copyWith =>
@@ -11808,10 +11678,7 @@ abstract class _SaveCourseLoading implements CourseDetailsState {
       _$SaveCourseLoadingImpl;
 
   int get courseId;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SaveCourseLoadingImplCopyWith<_$SaveCourseLoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -11835,8 +11702,6 @@ class __$$SaveCourseFailureImplCopyWithImpl<$Res>
       $Res Function(_$SaveCourseFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11855,8 +11720,6 @@ class __$$SaveCourseFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -11899,9 +11762,7 @@ class _$SaveCourseFailureImpl implements _SaveCourseFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException, courseId);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveCourseFailureImplCopyWith<_$SaveCourseFailureImpl> get copyWith =>
@@ -12399,10 +12260,7 @@ abstract class _SaveCourseFailure implements CourseDetailsState {
 
   NetworkExceptions? get networkException;
   int get courseId;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SaveCourseFailureImplCopyWith<_$SaveCourseFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12424,8 +12282,6 @@ class __$$SaveCourseSuccessImplCopyWithImpl<$Res>
       $Res Function(_$SaveCourseSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12473,9 +12329,7 @@ class _$SaveCourseSuccessImpl implements _SaveCourseSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message, courseId);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveCourseSuccessImplCopyWith<_$SaveCourseSuccessImpl> get copyWith =>
@@ -12972,10 +12826,7 @@ abstract class _SaveCourseSuccess implements CourseDetailsState {
 
   String? get message;
   int get courseId;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SaveCourseSuccessImplCopyWith<_$SaveCourseSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12997,8 +12848,6 @@ class __$$UnsaveCourseSuccessImplCopyWithImpl<$Res>
       $Res Function(_$UnsaveCourseSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13046,9 +12895,7 @@ class _$UnsaveCourseSuccessImpl implements _UnsaveCourseSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message, courseId);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UnsaveCourseSuccessImplCopyWith<_$UnsaveCourseSuccessImpl> get copyWith =>
@@ -13545,10 +13392,7 @@ abstract class _UnsaveCourseSuccess implements CourseDetailsState {
 
   String? get message;
   int get courseId;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UnsaveCourseSuccessImplCopyWith<_$UnsaveCourseSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -13570,9 +13414,6 @@ class __$$FetchCourseAnnouncementsSectionLoadingImplCopyWithImpl<$Res>
       _$FetchCourseAnnouncementsSectionLoadingImpl _value,
       $Res Function(_$FetchCourseAnnouncementsSectionLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -14108,8 +13949,6 @@ class __$$FetchCourseAnnouncementsSectionFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseAnnouncementsSectionFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14123,8 +13962,6 @@ class __$$FetchCourseAnnouncementsSectionFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -14164,9 +14001,7 @@ class _$FetchCourseAnnouncementsSectionFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseAnnouncementsSectionFailureImplCopyWith<
@@ -14666,10 +14501,7 @@ abstract class _FetchCourseAnnouncementsSectionFailure
       _$FetchCourseAnnouncementsSectionFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseAnnouncementsSectionFailureImplCopyWith<
           _$FetchCourseAnnouncementsSectionFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -14695,8 +14527,6 @@ class __$$FetchCourseAnnouncementsSectionSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseAnnouncementsSectionSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14753,9 +14583,7 @@ class _$FetchCourseAnnouncementsSectionSuccessImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseAnnouncementsSectionSuccessImplCopyWith<
@@ -15256,10 +15084,7 @@ abstract class _FetchCourseAnnouncementsSectionSuccess
 
   List<AnnouncementBoxModel> get data;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseAnnouncementsSectionSuccessImplCopyWith<
           _$FetchCourseAnnouncementsSectionSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -15282,9 +15107,6 @@ class __$$FetchCourseCertificateLoadingImplCopyWithImpl<$Res>
       _$FetchCourseCertificateLoadingImpl _value,
       $Res Function(_$FetchCourseCertificateLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -15819,8 +15641,6 @@ class __$$FetchCourseCertificateFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseCertificateFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -15834,8 +15654,6 @@ class __$$FetchCourseCertificateFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -15875,9 +15693,7 @@ class _$FetchCourseCertificateFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseCertificateFailureImplCopyWith<
@@ -16375,10 +16191,7 @@ abstract class _FetchCourseCertificateFailure implements CourseDetailsState {
       _$FetchCourseCertificateFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseCertificateFailureImplCopyWith<
           _$FetchCourseCertificateFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -16406,8 +16219,6 @@ class __$$FetchCourseCertificateSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseCertificateSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -16426,8 +16237,6 @@ class __$$FetchCourseCertificateSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CertificateModelCopyWith<$Res> get data {
@@ -16465,9 +16274,7 @@ class _$FetchCourseCertificateSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseCertificateSuccessImplCopyWith<
@@ -16966,10 +16773,7 @@ abstract class _FetchCourseCertificateSuccess implements CourseDetailsState {
 
   CertificateModel get data;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseCertificateSuccessImplCopyWith<
           _$FetchCourseCertificateSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -16992,9 +16796,6 @@ class __$$FetchCourseCodeDetailsLoadingImplCopyWithImpl<$Res>
       _$FetchCourseCodeDetailsLoadingImpl _value,
       $Res Function(_$FetchCourseCodeDetailsLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -17529,8 +17330,6 @@ class __$$FetchCourseCodeDetailsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseCodeDetailsFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -17544,8 +17343,6 @@ class __$$FetchCourseCodeDetailsFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -17585,9 +17382,7 @@ class _$FetchCourseCodeDetailsFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseCodeDetailsFailureImplCopyWith<
@@ -18085,10 +17880,7 @@ abstract class _FetchCourseCodeDetailsFailure implements CourseDetailsState {
       _$FetchCourseCodeDetailsFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseCodeDetailsFailureImplCopyWith<
           _$FetchCourseCodeDetailsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -18116,8 +17908,6 @@ class __$$FetchCourseCodeDetailsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseCodeDetailsSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -18136,8 +17926,6 @@ class __$$FetchCourseCodeDetailsSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DiscountModelCopyWith<$Res> get discount {
@@ -18176,9 +17964,7 @@ class _$FetchCourseCodeDetailsSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, discount, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseCodeDetailsSuccessImplCopyWith<
@@ -18677,10 +18463,7 @@ abstract class _FetchCourseCodeDetailsSuccess implements CourseDetailsState {
 
   DiscountModel get discount;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseCodeDetailsSuccessImplCopyWith<
           _$FetchCourseCodeDetailsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -18700,9 +18483,6 @@ class __$$EnrollCourseLoadingImplCopyWithImpl<$Res>
   __$$EnrollCourseLoadingImplCopyWithImpl(_$EnrollCourseLoadingImpl _value,
       $Res Function(_$EnrollCourseLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -19232,8 +19012,6 @@ class __$$EnrollCourseFailureImplCopyWithImpl<$Res>
       $Res Function(_$EnrollCourseFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -19247,8 +19025,6 @@ class __$$EnrollCourseFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -19287,9 +19063,7 @@ class _$EnrollCourseFailureImpl implements _EnrollCourseFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EnrollCourseFailureImplCopyWith<_$EnrollCourseFailureImpl> get copyWith =>
@@ -19785,10 +19559,7 @@ abstract class _EnrollCourseFailure implements CourseDetailsState {
       final NetworkExceptions? networkException) = _$EnrollCourseFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EnrollCourseFailureImplCopyWith<_$EnrollCourseFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -19810,8 +19581,6 @@ class __$$EnrollCourseSuccessImplCopyWithImpl<$Res>
       $Res Function(_$EnrollCourseSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -19850,9 +19619,7 @@ class _$EnrollCourseSuccessImpl implements _EnrollCourseSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EnrollCourseSuccessImplCopyWith<_$EnrollCourseSuccessImpl> get copyWith =>
@@ -20348,10 +20115,7 @@ abstract class _EnrollCourseSuccess implements CourseDetailsState {
       _$EnrollCourseSuccessImpl;
 
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EnrollCourseSuccessImplCopyWith<_$EnrollCourseSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -20370,9 +20134,6 @@ class __$$FetchWalletLoadingImplCopyWithImpl<$Res>
   __$$FetchWalletLoadingImplCopyWithImpl(_$FetchWalletLoadingImpl _value,
       $Res Function(_$FetchWalletLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -20901,8 +20662,6 @@ class __$$FetchWalletFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchWalletFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -20916,8 +20675,6 @@ class __$$FetchWalletFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -20956,9 +20713,7 @@ class _$FetchWalletFailureImpl implements _FetchWalletFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchWalletFailureImplCopyWith<_$FetchWalletFailureImpl> get copyWith =>
@@ -21454,10 +21209,7 @@ abstract class _FetchWalletFailure implements CourseDetailsState {
       _$FetchWalletFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchWalletFailureImplCopyWith<_$FetchWalletFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -21481,8 +21233,6 @@ class __$$FetchWalletSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchWalletSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -21501,8 +21251,6 @@ class __$$FetchWalletSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $WalletModelCopyWith<$Res> get wallet {
@@ -21539,9 +21287,7 @@ class _$FetchWalletSuccessImpl implements _FetchWalletSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, wallet, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchWalletSuccessImplCopyWith<_$FetchWalletSuccessImpl> get copyWith =>
@@ -22039,10 +21785,7 @@ abstract class _FetchWalletSuccess implements CourseDetailsState {
 
   WalletModel get wallet;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchWalletSuccessImplCopyWith<_$FetchWalletSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -22064,9 +21807,6 @@ class __$$FetchCourseCommunityCommentsLoadingImplCopyWithImpl<$Res>
       _$FetchCourseCommunityCommentsLoadingImpl _value,
       $Res Function(_$FetchCourseCommunityCommentsLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -22602,8 +22342,6 @@ class __$$FetchCourseCommunityCommentsFailureImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseCommunityCommentsFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -22617,8 +22355,6 @@ class __$$FetchCourseCommunityCommentsFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -22658,9 +22394,7 @@ class _$FetchCourseCommunityCommentsFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseCommunityCommentsFailureImplCopyWith<
@@ -23159,10 +22893,7 @@ abstract class _FetchCourseCommunityCommentsFailure
       _$FetchCourseCommunityCommentsFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseCommunityCommentsFailureImplCopyWith<
           _$FetchCourseCommunityCommentsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -23188,8 +22919,6 @@ class __$$FetchCourseCommunityCommentsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$FetchCourseCommunityCommentsSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -23246,9 +22975,7 @@ class _$FetchCourseCommunityCommentsSuccessImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchCourseCommunityCommentsSuccessImplCopyWith<
@@ -23748,10 +23475,7 @@ abstract class _FetchCourseCommunityCommentsSuccess
 
   List<CommentModel> get data;
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FetchCourseCommunityCommentsSuccessImplCopyWith<
           _$FetchCourseCommunityCommentsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -23774,9 +23498,6 @@ class __$$PostCommunityCommentLoadingImplCopyWithImpl<$Res>
       _$PostCommunityCommentLoadingImpl _value,
       $Res Function(_$PostCommunityCommentLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -24311,8 +24032,6 @@ class __$$PostCommunityCommentFailureImplCopyWithImpl<$Res>
       $Res Function(_$PostCommunityCommentFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -24326,8 +24045,6 @@ class __$$PostCommunityCommentFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -24367,9 +24084,7 @@ class _$PostCommunityCommentFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PostCommunityCommentFailureImplCopyWith<_$PostCommunityCommentFailureImpl>
@@ -24866,10 +24581,7 @@ abstract class _PostCommunityCommentFailure implements CourseDetailsState {
       _$PostCommunityCommentFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PostCommunityCommentFailureImplCopyWith<_$PostCommunityCommentFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -24894,8 +24606,6 @@ class __$$PostCommunityCommentSuccessImplCopyWithImpl<$Res>
       $Res Function(_$PostCommunityCommentSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -24935,9 +24645,7 @@ class _$PostCommunityCommentSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PostCommunityCommentSuccessImplCopyWith<_$PostCommunityCommentSuccessImpl>
@@ -25433,10 +25141,7 @@ abstract class _PostCommunityCommentSuccess implements CourseDetailsState {
       _$PostCommunityCommentSuccessImpl;
 
   String? get message;
-
-  /// Create a copy of CourseDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PostCommunityCommentSuccessImplCopyWith<_$PostCommunityCommentSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

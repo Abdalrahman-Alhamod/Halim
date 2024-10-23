@@ -31,12 +31,8 @@ mixin _$AnnouncementBoxModel {
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
-  /// Serializes this AnnouncementBoxModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of AnnouncementBoxModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AnnouncementBoxModelCopyWith<AnnouncementBoxModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,8 +64,6 @@ class _$AnnouncementBoxModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AnnouncementBoxModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,8 +97,6 @@ class _$AnnouncementBoxModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of AnnouncementBoxModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MentorCardModelCopyWith<$Res>? get mentor {
@@ -145,8 +137,6 @@ class __$$AnnouncementBoxModelImplCopyWithImpl<$Res>
       $Res Function(_$AnnouncementBoxModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AnnouncementBoxModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -242,14 +232,12 @@ class _$AnnouncementBoxModelImpl
                 other.createdAt == createdAt));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, mentor, title, content, createdAt);
 
-  /// Create a copy of AnnouncementBoxModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementBoxModelImplCopyWith<_$AnnouncementBoxModelImpl>
@@ -292,11 +280,8 @@ abstract class _AnnouncementBoxModel implements AnnouncementBoxModel {
   @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-
-  /// Create a copy of AnnouncementBoxModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AnnouncementBoxModelImplCopyWith<_$AnnouncementBoxModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

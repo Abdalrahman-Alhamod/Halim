@@ -22,9 +22,7 @@ mixin _$QuizResult {
   num get grade => throw _privateConstructorUsedError;
   QuizStatus get quizStatus => throw _privateConstructorUsedError;
 
-  /// Create a copy of QuizResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $QuizResultCopyWith<QuizResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,8 +51,6 @@ class _$QuizResultCopyWithImpl<$Res, $Val extends QuizResult>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of QuizResult
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -113,8 +109,6 @@ class __$$QuizResultImplCopyWithImpl<$Res>
       _$QuizResultImpl _value, $Res Function(_$QuizResultImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of QuizResult
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -207,9 +201,7 @@ class _$QuizResultImpl with DiagnosticableTreeMixin implements _QuizResult {
   int get hashCode => Object.hash(runtimeType, totalQuestions, correctAnswers,
       wrongAnswers, grade, quizStatus);
 
-  /// Create a copy of QuizResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$QuizResultImplCopyWith<_$QuizResultImpl> get copyWith =>
@@ -234,11 +226,8 @@ abstract class _QuizResult implements QuizResult {
   num get grade;
   @override
   QuizStatus get quizStatus;
-
-  /// Create a copy of QuizResult
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$QuizResultImplCopyWith<_$QuizResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -258,9 +258,6 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -277,9 +274,6 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -569,9 +563,6 @@ class __$$LoginSaveImplCopyWithImpl<$Res>
   __$$LoginSaveImplCopyWithImpl(
       _$LoginSaveImpl _value, $Res Function(_$LoginSaveImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -861,9 +852,6 @@ class __$$LoginLoadingImplCopyWithImpl<$Res>
   __$$LoginLoadingImplCopyWithImpl(
       _$LoginLoadingImpl _value, $Res Function(_$LoginLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1158,8 +1146,6 @@ class __$$LoginFailureImplCopyWithImpl<$Res>
       _$LoginFailureImpl _value, $Res Function(_$LoginFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1173,8 +1159,6 @@ class __$$LoginFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -1213,9 +1197,7 @@ class _$LoginFailureImpl implements _LoginFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginFailureImplCopyWith<_$LoginFailureImpl> get copyWith =>
@@ -1476,10 +1458,7 @@ abstract class _LoginFailure implements AuthState {
       _$LoginFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LoginFailureImplCopyWith<_$LoginFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1493,8 +1472,6 @@ abstract class _$$LoginSuccessImplCopyWith<$Res> {
   $Res call({UserModel data, String? message});
 
   $UserModelCopyWith<$Res> get data;
-
-  $UserModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -1505,8 +1482,6 @@ class __$$LoginSuccessImplCopyWithImpl<$Res>
       _$LoginSuccessImpl _value, $Res Function(_$LoginSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1561,9 +1536,7 @@ class _$LoginSuccessImpl implements _LoginSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginSuccessImplCopyWith<_$LoginSuccessImpl> get copyWith =>
@@ -1825,10 +1798,7 @@ abstract class _LoginSuccess implements AuthState {
 
   UserModel get data;
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LoginSuccessImplCopyWith<_$LoginSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1847,9 +1817,6 @@ class __$$RegisterLoadingImplCopyWithImpl<$Res>
   __$$RegisterLoadingImplCopyWithImpl(
       _$RegisterLoadingImpl _value, $Res Function(_$RegisterLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2144,8 +2111,6 @@ class __$$RegisterFailureImplCopyWithImpl<$Res>
       _$RegisterFailureImpl _value, $Res Function(_$RegisterFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2159,8 +2124,6 @@ class __$$RegisterFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -2199,9 +2162,7 @@ class _$RegisterFailureImpl implements _RegisterFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RegisterFailureImplCopyWith<_$RegisterFailureImpl> get copyWith =>
@@ -2463,10 +2424,7 @@ abstract class _RegisterFailure implements AuthState {
       _$RegisterFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RegisterFailureImplCopyWith<_$RegisterFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2490,8 +2448,6 @@ class __$$RegisterSuccessImplCopyWithImpl<$Res>
       _$RegisterSuccessImpl _value, $Res Function(_$RegisterSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2546,9 +2502,7 @@ class _$RegisterSuccessImpl implements _RegisterSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RegisterSuccessImplCopyWith<_$RegisterSuccessImpl> get copyWith =>
@@ -2811,10 +2765,7 @@ abstract class _RegisterSuccess implements AuthState {
 
   UserModel get data;
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RegisterSuccessImplCopyWith<_$RegisterSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2833,9 +2784,6 @@ class __$$LogoutLoadingImplCopyWithImpl<$Res>
   __$$LogoutLoadingImplCopyWithImpl(
       _$LogoutLoadingImpl _value, $Res Function(_$LogoutLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3130,8 +3078,6 @@ class __$$LogoutFailureImplCopyWithImpl<$Res>
       _$LogoutFailureImpl _value, $Res Function(_$LogoutFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3145,8 +3091,6 @@ class __$$LogoutFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -3185,9 +3129,7 @@ class _$LogoutFailureImpl implements _LogoutFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LogoutFailureImplCopyWith<_$LogoutFailureImpl> get copyWith =>
@@ -3448,10 +3390,7 @@ abstract class _LogoutFailure implements AuthState {
       _$LogoutFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LogoutFailureImplCopyWith<_$LogoutFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3473,8 +3412,6 @@ class __$$LogoutSuccessImplCopyWithImpl<$Res>
       _$LogoutSuccessImpl _value, $Res Function(_$LogoutSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3513,9 +3450,7 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LogoutSuccessImplCopyWith<_$LogoutSuccessImpl> get copyWith =>
@@ -3775,10 +3710,7 @@ abstract class _LogoutSuccess implements AuthState {
   const factory _LogoutSuccess(final String? message) = _$LogoutSuccessImpl;
 
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LogoutSuccessImplCopyWith<_$LogoutSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3799,9 +3731,6 @@ class __$$SignInWithGoogleLoadingImplCopyWithImpl<$Res>
       _$SignInWithGoogleLoadingImpl _value,
       $Res Function(_$SignInWithGoogleLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4099,8 +4028,6 @@ class __$$SignInWithGoogleFailureImplCopyWithImpl<$Res>
       $Res Function(_$SignInWithGoogleFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4114,8 +4041,6 @@ class __$$SignInWithGoogleFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -4154,9 +4079,7 @@ class _$SignInWithGoogleFailureImpl implements _SignInWithGoogleFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SignInWithGoogleFailureImplCopyWith<_$SignInWithGoogleFailureImpl>
@@ -4419,10 +4342,7 @@ abstract class _SignInWithGoogleFailure implements AuthState {
       _$SignInWithGoogleFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SignInWithGoogleFailureImplCopyWith<_$SignInWithGoogleFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4448,8 +4368,6 @@ class __$$SignInWithGoogleSuccessLoginImplCopyWithImpl<$Res>
       $Res Function(_$SignInWithGoogleSuccessLoginImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4468,8 +4386,6 @@ class __$$SignInWithGoogleSuccessLoginImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserModelCopyWith<$Res> get data {
@@ -4507,9 +4423,7 @@ class _$SignInWithGoogleSuccessLoginImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SignInWithGoogleSuccessLoginImplCopyWith<
@@ -4774,10 +4688,7 @@ abstract class _SignInWithGoogleSuccessLogin implements AuthState {
 
   UserModel get data;
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SignInWithGoogleSuccessLoginImplCopyWith<
           _$SignInWithGoogleSuccessLoginImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4804,8 +4715,6 @@ class __$$SignInWithGoogleSuccessRegisterImplCopyWithImpl<$Res>
       $Res Function(_$SignInWithGoogleSuccessRegisterImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4824,8 +4733,6 @@ class __$$SignInWithGoogleSuccessRegisterImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserModelCopyWith<$Res> get data {
@@ -4863,9 +4770,7 @@ class _$SignInWithGoogleSuccessRegisterImpl
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SignInWithGoogleSuccessRegisterImplCopyWith<
@@ -5130,10 +5035,7 @@ abstract class _SignInWithGoogleSuccessRegister implements AuthState {
 
   UserModel get data;
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SignInWithGoogleSuccessRegisterImplCopyWith<
           _$SignInWithGoogleSuccessRegisterImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5155,9 +5057,6 @@ class __$$SendVerificationLoadingImplCopyWithImpl<$Res>
       _$SendVerificationLoadingImpl _value,
       $Res Function(_$SendVerificationLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5455,8 +5354,6 @@ class __$$SendVerificationFailureImplCopyWithImpl<$Res>
       $Res Function(_$SendVerificationFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5470,8 +5367,6 @@ class __$$SendVerificationFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -5510,9 +5405,7 @@ class _$SendVerificationFailureImpl implements _SendVerificationFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SendVerificationFailureImplCopyWith<_$SendVerificationFailureImpl>
@@ -5775,10 +5668,7 @@ abstract class _SendVerificationFailure implements AuthState {
       _$SendVerificationFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SendVerificationFailureImplCopyWith<_$SendVerificationFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5802,8 +5692,6 @@ class __$$SendVerificationSuccessImplCopyWithImpl<$Res>
       $Res Function(_$SendVerificationSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5842,9 +5730,7 @@ class _$SendVerificationSuccessImpl implements _SendVerificationSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SendVerificationSuccessImplCopyWith<_$SendVerificationSuccessImpl>
@@ -6106,10 +5992,7 @@ abstract class _SendVerificationSuccess implements AuthState {
       _$SendVerificationSuccessImpl;
 
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SendVerificationSuccessImplCopyWith<_$SendVerificationSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -6128,9 +6011,6 @@ class __$$ConfirmEmailLoadingImplCopyWithImpl<$Res>
   __$$ConfirmEmailLoadingImplCopyWithImpl(_$ConfirmEmailLoadingImpl _value,
       $Res Function(_$ConfirmEmailLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -6426,8 +6306,6 @@ class __$$ConfirmEmailFailureImplCopyWithImpl<$Res>
       $Res Function(_$ConfirmEmailFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6441,8 +6319,6 @@ class __$$ConfirmEmailFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -6481,9 +6357,7 @@ class _$ConfirmEmailFailureImpl implements _ConfirmEmailFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ConfirmEmailFailureImplCopyWith<_$ConfirmEmailFailureImpl> get copyWith =>
@@ -6745,10 +6619,7 @@ abstract class _ConfirmEmailFailure implements AuthState {
       final NetworkExceptions? networkException) = _$ConfirmEmailFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ConfirmEmailFailureImplCopyWith<_$ConfirmEmailFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6772,8 +6643,6 @@ class __$$ConfirmEmailSuccessImplCopyWithImpl<$Res>
       $Res Function(_$ConfirmEmailSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6792,8 +6661,6 @@ class __$$ConfirmEmailSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserModelCopyWith<$Res> get data {
@@ -6830,9 +6697,7 @@ class _$ConfirmEmailSuccessImpl implements _ConfirmEmailSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ConfirmEmailSuccessImplCopyWith<_$ConfirmEmailSuccessImpl> get copyWith =>
@@ -7095,10 +6960,7 @@ abstract class _ConfirmEmailSuccess implements AuthState {
 
   UserModel get data;
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ConfirmEmailSuccessImplCopyWith<_$ConfirmEmailSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7117,9 +6979,6 @@ class __$$ResetPasswordLoadingImplCopyWithImpl<$Res>
   __$$ResetPasswordLoadingImplCopyWithImpl(_$ResetPasswordLoadingImpl _value,
       $Res Function(_$ResetPasswordLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -7415,8 +7274,6 @@ class __$$ResetPasswordFailureImplCopyWithImpl<$Res>
       $Res Function(_$ResetPasswordFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7430,8 +7287,6 @@ class __$$ResetPasswordFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -7470,9 +7325,7 @@ class _$ResetPasswordFailureImpl implements _ResetPasswordFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ResetPasswordFailureImplCopyWith<_$ResetPasswordFailureImpl>
@@ -7735,10 +7588,7 @@ abstract class _ResetPasswordFailure implements AuthState {
       final NetworkExceptions? networkException) = _$ResetPasswordFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ResetPasswordFailureImplCopyWith<_$ResetPasswordFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7762,8 +7612,6 @@ class __$$ResetPasswordSuccessImplCopyWithImpl<$Res>
       $Res Function(_$ResetPasswordSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7782,8 +7630,6 @@ class __$$ResetPasswordSuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserModelCopyWith<$Res> get data {
@@ -7820,9 +7666,7 @@ class _$ResetPasswordSuccessImpl implements _ResetPasswordSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ResetPasswordSuccessImplCopyWith<_$ResetPasswordSuccessImpl>
@@ -8086,10 +7930,7 @@ abstract class _ResetPasswordSuccess implements AuthState {
 
   UserModel get data;
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ResetPasswordSuccessImplCopyWith<_$ResetPasswordSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -8108,9 +7949,6 @@ class __$$RegisterFCMLoadingImplCopyWithImpl<$Res>
   __$$RegisterFCMLoadingImplCopyWithImpl(_$RegisterFCMLoadingImpl _value,
       $Res Function(_$RegisterFCMLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -8405,8 +8243,6 @@ class __$$RegisterFCMFailureImplCopyWithImpl<$Res>
       $Res Function(_$RegisterFCMFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8420,8 +8256,6 @@ class __$$RegisterFCMFailureImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NetworkExceptionsCopyWith<$Res>? get networkException {
@@ -8460,9 +8294,7 @@ class _$RegisterFCMFailureImpl implements _RegisterFCMFailure {
   @override
   int get hashCode => Object.hash(runtimeType, networkException);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RegisterFCMFailureImplCopyWith<_$RegisterFCMFailureImpl> get copyWith =>
@@ -8724,10 +8556,7 @@ abstract class _RegisterFCMFailure implements AuthState {
       _$RegisterFCMFailureImpl;
 
   NetworkExceptions? get networkException;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RegisterFCMFailureImplCopyWith<_$RegisterFCMFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8749,8 +8578,6 @@ class __$$RegisterFCMSuccessImplCopyWithImpl<$Res>
       $Res Function(_$RegisterFCMSuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8789,9 +8616,7 @@ class _$RegisterFCMSuccessImpl implements _RegisterFCMSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RegisterFCMSuccessImplCopyWith<_$RegisterFCMSuccessImpl> get copyWith =>
@@ -9053,10 +8878,7 @@ abstract class _RegisterFCMSuccess implements AuthState {
       _$RegisterFCMSuccessImpl;
 
   String? get message;
-
-  /// Create a copy of AuthState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RegisterFCMSuccessImplCopyWith<_$RegisterFCMSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

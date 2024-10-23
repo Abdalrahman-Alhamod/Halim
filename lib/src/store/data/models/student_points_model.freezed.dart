@@ -25,12 +25,8 @@ mixin _$StudentPointsModel {
   @JsonKey(name: 'points_balance')
   int? get pointsBalance => throw _privateConstructorUsedError;
 
-  /// Serializes this StudentPointsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of StudentPointsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StudentPointsModelCopyWith<StudentPointsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,8 +52,6 @@ class _$StudentPointsModelCopyWithImpl<$Res, $Val extends StudentPointsModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StudentPointsModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,8 +92,6 @@ class __$$StudentPointsModelImplCopyWithImpl<$Res>
       $Res Function(_$StudentPointsModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StudentPointsModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -162,13 +154,11 @@ class _$StudentPointsModelImpl
                 other.pointsBalance == pointsBalance));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, pointsBalance);
 
-  /// Create a copy of StudentPointsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StudentPointsModelImplCopyWith<_$StudentPointsModelImpl> get copyWith =>
@@ -198,11 +188,8 @@ abstract class _StudentPointsModel implements StudentPointsModel {
   @override
   @JsonKey(name: 'points_balance')
   int? get pointsBalance;
-
-  /// Create a copy of StudentPointsModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StudentPointsModelImplCopyWith<_$StudentPointsModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

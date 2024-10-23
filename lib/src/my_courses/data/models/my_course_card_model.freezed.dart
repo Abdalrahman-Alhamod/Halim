@@ -33,12 +33,8 @@ mixin _$MyCourseCardModel {
   @JsonKey(name: 'completed_lessons')
   int? get completedLessons => throw _privateConstructorUsedError;
 
-  /// Serializes this MyCourseCardModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MyCourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MyCourseCardModelCopyWith<MyCourseCardModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,8 +64,6 @@ class _$MyCourseCardModelCopyWithImpl<$Res, $Val extends MyCourseCardModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MyCourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,8 +128,6 @@ class __$$MyCourseCardModelImplCopyWithImpl<$Res>
       $Res Function(_$MyCourseCardModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MyCourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -244,14 +236,12 @@ class _$MyCourseCardModelImpl
                 other.completedLessons == completedLessons));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, title, image, numberOfHours,
       lessonsCount, completedLessons);
 
-  /// Create a copy of MyCourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MyCourseCardModelImplCopyWith<_$MyCourseCardModelImpl> get copyWith =>
@@ -297,11 +287,8 @@ abstract class _MyCourseCardModel implements MyCourseCardModel {
   @override
   @JsonKey(name: 'completed_lessons')
   int? get completedLessons;
-
-  /// Create a copy of MyCourseCardModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MyCourseCardModelImplCopyWith<_$MyCourseCardModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

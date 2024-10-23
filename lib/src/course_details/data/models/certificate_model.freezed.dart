@@ -23,12 +23,8 @@ mixin _$CertificateModel {
   @JsonKey(name: 'url')
   String? get url => throw _privateConstructorUsedError;
 
-  /// Serializes this CertificateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CertificateModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CertificateModelCopyWith<CertificateModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,8 +48,6 @@ class _$CertificateModelCopyWithImpl<$Res, $Val extends CertificateModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CertificateModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,8 +81,6 @@ class __$$CertificateModelImplCopyWithImpl<$Res>
       $Res Function(_$CertificateModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CertificateModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,13 +130,11 @@ class _$CertificateModelImpl
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, url);
 
-  /// Create a copy of CertificateModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CertificateModelImplCopyWith<_$CertificateModelImpl> get copyWith =>
@@ -169,11 +159,8 @@ abstract class _CertificateModel implements CertificateModel {
   @override
   @JsonKey(name: 'url')
   String? get url;
-
-  /// Create a copy of CertificateModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CertificateModelImplCopyWith<_$CertificateModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

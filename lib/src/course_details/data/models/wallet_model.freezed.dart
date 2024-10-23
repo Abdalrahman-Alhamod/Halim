@@ -25,12 +25,8 @@ mixin _$WalletModel {
   @JsonKey(name: 'balance')
   num? get balance => throw _privateConstructorUsedError;
 
-  /// Serializes this WalletModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of WalletModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $WalletModelCopyWith<WalletModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,8 +51,6 @@ class _$WalletModelCopyWithImpl<$Res, $Val extends WalletModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of WalletModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -96,8 +90,6 @@ class __$$WalletModelImplCopyWithImpl<$Res>
       _$WalletModelImpl _value, $Res Function(_$WalletModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of WalletModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,13 +148,11 @@ class _$WalletModelImpl with DiagnosticableTreeMixin implements _WalletModel {
             (identical(other.balance, balance) || other.balance == balance));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, balance);
 
-  /// Create a copy of WalletModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$WalletModelImplCopyWith<_$WalletModelImpl> get copyWith =>
@@ -190,11 +180,8 @@ abstract class _WalletModel implements WalletModel {
   @override
   @JsonKey(name: 'balance')
   num? get balance;
-
-  /// Create a copy of WalletModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$WalletModelImplCopyWith<_$WalletModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

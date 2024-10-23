@@ -35,12 +35,8 @@ mixin _$StoreDiscountModel {
   @JsonKey(name: 'course')
   StoreDiscountCourseCard? get course => throw _privateConstructorUsedError;
 
-  /// Serializes this StoreDiscountModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of StoreDiscountModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StoreDiscountModelCopyWith<StoreDiscountModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,8 +70,6 @@ class _$StoreDiscountModelCopyWithImpl<$Res, $Val extends StoreDiscountModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StoreDiscountModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,8 +113,6 @@ class _$StoreDiscountModelCopyWithImpl<$Res, $Val extends StoreDiscountModel>
     ) as $Val);
   }
 
-  /// Create a copy of StoreDiscountModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DiscountModelCopyWith<$Res>? get discount {
@@ -133,8 +125,6 @@ class _$StoreDiscountModelCopyWithImpl<$Res, $Val extends StoreDiscountModel>
     });
   }
 
-  /// Create a copy of StoreDiscountModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StoreDiscountCourseCardCopyWith<$Res>? get course {
@@ -179,8 +169,6 @@ class __$$StoreDiscountModelImplCopyWithImpl<$Res>
       $Res Function(_$StoreDiscountModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StoreDiscountModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -300,14 +288,12 @@ class _$StoreDiscountModelImpl
             (identical(other.course, course) || other.course == course));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, name, description, image, pointsCost, discount, course);
 
-  /// Create a copy of StoreDiscountModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StoreDiscountModelImplCopyWith<_$StoreDiscountModelImpl> get copyWith =>
@@ -357,11 +343,8 @@ abstract class _StoreDiscountModel implements StoreDiscountModel {
   @override
   @JsonKey(name: 'course')
   StoreDiscountCourseCard? get course;
-
-  /// Create a copy of StoreDiscountModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StoreDiscountModelImplCopyWith<_$StoreDiscountModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -388,12 +371,8 @@ mixin _$StoreDiscountCourseCard {
   @JsonKey(name: 'reviews_avg')
   int? get reviewsAvg => throw _privateConstructorUsedError;
 
-  /// Serializes this StoreDiscountCourseCard to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of StoreDiscountCourseCard
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StoreDiscountCourseCardCopyWith<StoreDiscountCourseCard> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -428,8 +407,6 @@ class _$StoreDiscountCourseCardCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StoreDiscountCourseCard
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -473,8 +450,6 @@ class _$StoreDiscountCourseCardCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of StoreDiscountCourseCard
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StoreDiscountCourseMentorCopyWith<$Res>? get mentor {
@@ -487,8 +462,6 @@ class _$StoreDiscountCourseCardCopyWithImpl<$Res,
     });
   }
 
-  /// Create a copy of StoreDiscountCourseCard
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SubcategoryModelCopyWith<$Res>? get subcategory {
@@ -536,8 +509,6 @@ class __$$StoreDiscountCourseCardImplCopyWithImpl<$Res>
       $Res Function(_$StoreDiscountCourseCardImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StoreDiscountCourseCard
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -656,14 +627,12 @@ class _$StoreDiscountCourseCardImpl
                 other.reviewsAvg == reviewsAvg));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, title, image, mentor, price, subcategory, reviewsAvg);
 
-  /// Create a copy of StoreDiscountCourseCard
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StoreDiscountCourseCardImplCopyWith<_$StoreDiscountCourseCardImpl>
@@ -713,11 +682,8 @@ abstract class _StoreDiscountCourseCard implements StoreDiscountCourseCard {
   @override
   @JsonKey(name: 'reviews_avg')
   int? get reviewsAvg;
-
-  /// Create a copy of StoreDiscountCourseCard
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StoreDiscountCourseCardImplCopyWith<_$StoreDiscountCourseCardImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -736,12 +702,8 @@ mixin _$StoreDiscountCourseMentor {
   @JsonKey(name: 'last_name')
   String? get lastName => throw _privateConstructorUsedError;
 
-  /// Serializes this StoreDiscountCourseMentor to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of StoreDiscountCourseMentor
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StoreDiscountCourseMentorCopyWith<StoreDiscountCourseMentor> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -769,8 +731,6 @@ class _$StoreDiscountCourseMentorCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StoreDiscountCourseMentor
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -820,8 +780,6 @@ class __$$StoreDiscountCourseMentorImplCopyWithImpl<$Res>
       $Res Function(_$StoreDiscountCourseMentorImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StoreDiscountCourseMentor
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -896,13 +854,11 @@ class _$StoreDiscountCourseMentorImpl extends _StoreDiscountCourseMentor
                 other.lastName == lastName));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, firstName, lastName);
 
-  /// Create a copy of StoreDiscountCourseMentor
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StoreDiscountCourseMentorImplCopyWith<_$StoreDiscountCourseMentorImpl>
@@ -937,11 +893,8 @@ abstract class _StoreDiscountCourseMentor extends StoreDiscountCourseMentor {
   @override
   @JsonKey(name: 'last_name')
   String? get lastName;
-
-  /// Create a copy of StoreDiscountCourseMentor
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StoreDiscountCourseMentorImplCopyWith<_$StoreDiscountCourseMentorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
