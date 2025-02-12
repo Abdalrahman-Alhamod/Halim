@@ -33,9 +33,10 @@ mixin PagingMixin<T> {
         newPageProgressIndicatorBuilder: (_) =>
             loadBuilder ?? const CustomLoadingIndicator(),
         noItemsFoundIndicatorBuilder: (_) =>
-            noItemsFoundIndicatorBuilder ??  EmptyView(
-          width: context.width * 0.85,
-        ),
+            noItemsFoundIndicatorBuilder ??
+            EmptyView(
+              width: context.width * 0.85,
+            ),
         itemBuilder: itemBuilder,
       ),
     );
@@ -46,7 +47,8 @@ mixin PagingMixin<T> {
       {ScrollPhysics? physics,
       Axis scrollDirection = Axis.vertical,
       Widget? loadBuilder,
-      Widget? noItemsFoundIndicatorBuilder,required SliverGridDelegate gridDelegate}) {
+      Widget? noItemsFoundIndicatorBuilder,
+      required SliverGridDelegate gridDelegate}) {
     return PagedGridView<int, T>(
       scrollDirection: scrollDirection,
       physics: physics,
@@ -62,11 +64,11 @@ mixin PagingMixin<T> {
         newPageProgressIndicatorBuilder: (_) =>
             loadBuilder ?? const CustomLoadingIndicator(),
         noItemsFoundIndicatorBuilder: (_) =>
-            noItemsFoundIndicatorBuilder ??  EmptyView(
-          width: context.width * 0.85,
-        ),
+            noItemsFoundIndicatorBuilder ??
+            EmptyView(
+              width: context.width * 0.85,
+            ),
         itemBuilder: itemBuilder,
-        
       ),
       gridDelegate: gridDelegate,
     );
@@ -77,7 +79,9 @@ mixin PagingMixin<T> {
   }
 
   void initPageRequestListener(
-      BuildContext context, PagingController<int, T> pagingController) {
+    BuildContext context,
+    PagingController<int, T> pagingController,
+  ) {
     // ignore: invalid_use_of_protected_member
     if (!pagingController.hasListeners) {
       pagingController.addPageRequestListener((int? pageKey) async {

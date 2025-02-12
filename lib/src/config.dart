@@ -19,31 +19,48 @@ import '../firebase_options.dart';
 
 Future<void> initAppConfig() async {
   try {
+    // General Initialization
     WidgetsFlutterBinding.ensureInitialized();
     await EasyLocalization.ensureInitialized();
+    await dotenv.load(fileName: ".env");
+  } catch (error, stackTrace) {
+    logger.e('General Initialization error: $error',
+        error: error, stackTrace: stackTrace);
+  }
+
+  try {
+    // Firebase Initialization
     await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
+        options: DefaultFirebaseOptions.currentPlatform);
     FirebaseMessaging.onBackgroundMessage(
-      FirebaseUtil.firebaseMessagingBackgroundHandler,
-    );
+        FirebaseUtil.firebaseMessagingBackgroundHandler);
     await FirebaseUtil.requestPermissions();
     await FirebaseUtil.getRegisterationToken();
     FirebaseUtil.handleForgroundMessages();
+  } catch (error, stackTrace) {
+    logger.e('Firebase Initialization error: $error',
+        error: error, stackTrace: stackTrace);
+  }
+
+  try {
+    // Orientation and Local Storage
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     await Hive.initFlutter(AppStrings.appTitle);
     await AppStorage.instance.init();
-    await dotenv.load(fileName: ".env");
-     await Supabase.initialize(
+  } catch (error, stackTrace) {
+    logger.e('Orientation or Local Storage Initialization error: $error',
+        error: error, stackTrace: stackTrace);
+  }
+
+  try {
+    // Supabase Initialization
+    await Supabase.initialize(
       url: dotenv.env['SUPABASE_URL'] ?? '',
       anonKey: dotenv.env['SUPABASE_API_KEY'] ?? '',
     );
   } catch (error, stackTrace) {
-    logger.e(
-      'Initialization error: $error',
-      error: error,
-      stackTrace: stackTrace,
-    );
+    logger.e('Supabase Initialization error: $error',
+        error: error, stackTrace: stackTrace);
   }
 
   Bloc.observer = CustomBlocObserver();

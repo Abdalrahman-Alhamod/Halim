@@ -7,21 +7,25 @@ import 'src/app.dart';
 import 'src/config.dart';
 
 void main() async {
-  await initAppConfig();
+  try {
+    await initAppConfig();
 
-  runApp(
-    EasyLocalization(
-      supportedLocales: const [
-        Locale(AppLocales.en),
-        Locale(AppLocales.ar),
-      ],
-      path: AppLocales.translationsAssetsPath,
-      startLocale: const Locale(AppLocales.en),
-      fallbackLocale: const Locale(AppLocales.en),
-      assetLoader: const CodegenLoader(),
-      useOnlyLangCode: true,
-      saveLocale: false,
-      child: const HalimApp(),
-    ),
-  );
+    runApp(
+      EasyLocalization(
+        supportedLocales: const [
+          Locale(AppLocales.en),
+          Locale(AppLocales.ar),
+        ],
+        path: AppLocales.translationsAssetsPath,
+        startLocale: const Locale(AppLocales.en),
+        fallbackLocale: const Locale(AppLocales.en),
+        assetLoader: const CodegenLoader(),
+        useOnlyLangCode: true,
+        saveLocale: false,
+        child: const HalimApp(),
+      ),
+    );
+  } catch (e) {
+    debugPrint(e.toString());
+  }
 }
