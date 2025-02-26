@@ -10,15 +10,15 @@ Here are mockups of Halim in **Light Mode** and **Dark Mode**:
 
 ### Light Mode
 
-| Mockup 1                               | Mockup 2                               |
-| -------------------------------------- | -------------------------------------- |
-| ![Light Mockup 1](./images/light1.png) | ![Light Mockup 2](./images/light2.png) |
+| Mockup 1                                                    | Mockup 2                                                    |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="./images/light1.png" width="300" height="auto" /> | <img src="./images/light2.png" width="300" height="auto" /> |
 
 ### Dark Mode
 
-| Mockup 1                             | Mockup 2                             |
-| ------------------------------------ | ------------------------------------ |
-| ![Dark Mockup 1](./images/dark1.png) | ![Dark Mockup 2](./images/dark2.png) |
+| Mockup 1                                                   | Mockup 2                                                   |
+| ---------------------------------------------------------- | ---------------------------------------------------------- |
+| <img src="./images/dark1.png" width="300" height="auto" /> | <img src="./images/dark2.png" width="300" height="auto" /> |
 
 ---
 
